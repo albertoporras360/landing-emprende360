@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Términos y Condiciones | Emprende360</title>
+  <meta name="description" content="Términos y condiciones de uso y contratación de Emprende360, iniciativa operada por Albi System, LLC." />
+
+  <style>
+    :root{
+      --deep:#020617;
+      --navy:#071522;
+      --sky:#18A7FF;
+      --gold:#F4C542;
+      --text:#F8FAFC;
+      --muted:#94A3B8;
+      --soft:#CBD5E1;
+      --line:rgba(255,255,255,.13);
+      --glass:rgba(255,255,255,.065);
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+      --max:980px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%,rgba(24,167,255,.18),transparent 30%),
+        radial-gradient(circle at 85% 18%,rgba(244,197,66,.13),transparent 30%),
+        var(--deep);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    a{
+      color:#BFDBFE;
+      text-decoration:none;
+    }
+
+    a:hover{
+      color:white;
+      text-decoration:underline;
+      text-underline-offset:4px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+    header{
+      border-bottom:1px solid var(--line);
+      background:rgba(2,6,23,.76);
+      backdrop-filter:blur(18px);
+      position:sticky;
+      top:0;
+      z-index:20;
+    }
+
+    .nav{
+      max-width:1180px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 22px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:white;
+      text-decoration:none;
+    }
+
+    .brand:hover{
+      text-decoration:none;
+    }
+
+    .brand-mark{
+      width:42px;
+      height:42px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      box-shadow:0 18px 45px rgba(24,167,255,.25);
+      font-weight:950;
+    }
+
+    .brand-title{
+      font-weight:950;
+      line-height:1;
+    }
+
+    .brand-sub{
+      margin-top:4px;
+      color:var(--muted);
+      font-size:10px;
+      font-weight:850;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      color:#CBD5E1;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .hero{
+      padding:88px 0 44px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(24,167,255,.25);
+      background:rgba(24,167,255,.09);
+      color:#C8ECFF;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+    }
+
+    h1{
+      margin:24px auto 0;
+      font-size:clamp(38px,6vw,64px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      max-width:850px;
+    }
+
+    .grad-text{
+      background:linear-gradient(90deg,#fff,#c8ecff 42%,#ffe6a6);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .intro{
+      max-width:780px;
+      margin:22px auto 0;
+      color:#CBD5E1;
+      font-size:18px;
+      line-height:1.75;
+    }
+
+    main{
+      padding:36px 0 86px;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.055);
+      border-radius:34px;
+      padding:34px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(16px);
+    }
+
+    .notice{
+      border:1px solid rgba(244,197,66,.25);
+      background:
+        radial-gradient(circle at 20% 0%,rgba(244,197,66,.14),transparent 28%),
+        rgba(255,255,255,.055);
+      border-radius:24px;
+      padding:20px;
+      color:#FDE68A;
+      font-size:14px;
+      line-height:1.6;
+      margin-bottom:28px;
+    }
+
+    section{
+      padding:22px 0;
+      border-bottom:1px solid rgba(255,255,255,.09);
+    }
+
+    section:last-child{
+      border-bottom:0;
+    }
+
+    h2{
+      margin:0 0 12px;
+      font-size:25px;
+      line-height:1.18;
+      letter-spacing:-.03em;
+    }
+
+    h3{
+      margin:20px 0 8px;
+      font-size:18px;
+      line-height:1.25;
+      color:white;
+    }
+
+    p{
+      color:#CBD5E1;
+      margin:0 0 14px;
+    }
+
+    ul{
+      margin:0 0 16px;
+      padding-left:22px;
+      color:#CBD5E1;
+    }
+
+    li{
+      margin:6px 0;
+    }
+
+    .data-box{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      border-radius:22px;
+      padding:18px;
+      margin:16px 0;
+      color:#CBD5E1;
+      font-size:14px;
+    }
+
+    .data-box b{
+      color:white;
+    }
+
+    .toc{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+      margin:20px 0 8px;
+    }
+
+    .toc a{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      border-radius:16px;
+      padding:12px 14px;
+      color:#DBEAFE;
+      font-size:14px;
+      font-weight:760;
+      text-decoration:none;
+    }
+
+    .toc a:hover{
+      border-color:rgba(244,197,66,.35);
+      background:rgba(255,255,255,.08);
+      color:white;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background:#01040d;
+      padding:34px 0;
+      color:#94A3B8;
+      font-size:13px;
+    }
+
+    .footer-main{
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 22px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a{
+      color:#94A3B8;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    .updated{
+      color:#94A3B8;
+      font-size:14px;
+      margin-top:12px;
+    }
+
+    @media(max-width:760px){
+      .nav{
+        padding:12px 16px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        padding:64px 0 30px;
+      }
+
+      .wrap{
+        padding:0 16px;
+      }
+
+      .card{
+        padding:24px;
+        border-radius:28px;
+      }
+
+      .toc{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      h2{
+        font-size:23px;
+      }
+
+      .intro{
+        font-size:16px;
+      }
+
+      .footer-main{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="https://emprende360.club">
+        <div class="brand-mark">E</div>
+        <div>
+          <div class="brand-title">Emprende360</div>
+          <div class="brand-sub">Términos y condiciones</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="https://emprende360.club">Inicio</a>
+        <a href="https://emprende360.club/privacidad">Privacidad</a>
+        <a href="https://emprende360.club/aviso-legal">Aviso legal</a>
+        <a href="https://wa.me/34603153268" target="_blank" rel="noopener noreferrer">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="wrap">
+      <span class="pill">Información contractual</span>
+      <h1><span class="grad-text">Términos y Condiciones</span></h1>
+      <p class="intro">
+        Estos términos regulan el acceso, uso y contratación de servicios, programas, rondas, espacios de visibilidad, verticales y actividades vinculadas a Emprende360.
+      </p>
+      <p class="updated">Última actualización: mayo de 2026</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="wrap">
+      <div class="card">
+
+        <div class="notice">
+          Este documento es una base operativa para una actividad B2B. Puede ser conveniente revisarlo con un profesional legal antes de su publicación definitiva, especialmente si se modifican precios, jurisdicción, política de devoluciones o países de operación.
+        </div>
+
+        <div class="toc">
+          <a href="#titular">1. Titular</a>
+          <a href="#aceptacion">2. Aceptación</a>
+          <a href="#servicios">3. Servicios</a>
+          <a href="#contratacion">4. Contratación y pagos</a>
+          <a href="#seleccion">5. Selección y acceso</a>
+          <a href="#cancelaciones">6. Cancelaciones</a>
+          <a href="#obligaciones">7. Obligaciones del usuario</a>
+          <a href="#limitacion">8. Limitación de responsabilidad</a>
+          <a href="#propiedad">9. Propiedad intelectual</a>
+          <a href="#datos">10. Datos personales</a>
+          <a href="#modificaciones">11. Modificaciones</a>
+          <a href="#contacto">12. Contacto</a>
+        </div>
+
+        <section id="titular">
+          <h2>1. Titular del sitio y responsable de la actividad</h2>
+          <p>
+            El sitio web Emprende360 y las actividades asociadas son operadas por:
+          </p>
+
+          <div class="data-box">
+            <b>Albi System, LLC</b><br>
+            1209 MOUNTAIN ROAD PL NE STE R<br>
+            ALBUQUERQUE, NM 87110<br>
+            ID Entity: 0008028954<br>
+            EIN: 38-4360009<br>
+            Email: <a href="mailto:info@emprende360.club">info@emprende360.club</a><br>
+            WhatsApp: <a href="https://wa.me/34603153268" target="_blank" rel="noopener noreferrer">+34 603 153 268</a>
+          </div>
+
+          <p>
+            En adelante, “Emprende360”, “la plataforma”, “el ecosistema”, “nosotros” o “la empresa”.
+          </p>
+        </section>
+
+        <section id="aceptacion">
+          <h2>2. Aceptación de los términos</h2>
+          <p>
+            El acceso a este sitio web, la participación en actividades de Emprende360 o la contratación de cualquiera de sus servicios implica la aceptación de estos Términos y Condiciones.
+          </p>
+          <p>
+            Si no estás de acuerdo con estos términos, debes abstenerte de utilizar el sitio, participar en las actividades o contratar servicios.
+          </p>
+        </section>
+
+        <section id="servicios">
+          <h2>3. Naturaleza de los servicios</h2>
+          <p>
+            Emprende360 es un ecosistema B2B orientado a conectar perfiles profesionales, empresas, founders, directivos, consultores, advisors, expertos y partners mediante rondas, visibilidad, contexto, posibles matches, verticales y activación de relaciones profesionales.
+          </p>
+
+          <p>
+            Entre los servicios o iniciativas ofrecidas pueden encontrarse:
+          </p>
+
+          <ul>
+            <li>Rondas de Alianzas B2B.</li>
+            <li>Participación como Partner Activo.</li>
+            <li>Participación como Líder de Vertical.</li>
+            <li>Partner Hub o directorio de perfiles.</li>
+            <li>Espacios de visibilidad, publicaciones, entrevistas o menciones.</li>
+            <li>Sesiones temáticas, rondas verticales o encuentros privados.</li>
+            <li>Revisión de posicionamiento, presentación o pitch breve.</li>
+            <li>Facilitación de posibles conexiones profesionales cuando exista encaje razonable.</li>
+          </ul>
+
+          <p>
+            Emprende360 no es una agencia de empleo, marketplace regulado, entidad financiera, asesor legal, asesor fiscal, broker de inversión, firma de intermediación financiera ni garantiza resultados comerciales concretos.
+          </p>
+        </section>
+
+        <section id="contratacion">
+          <h2>4. Contratación, precios y pagos</h2>
+          <p>
+            Los precios, condiciones y alcance de cada servicio serán los indicados en la página comercial correspondiente, propuesta individual, mensaje de confirmación o enlace de pago facilitado.
+          </p>
+
+          <p>
+            Los pagos pueden realizarse mediante plataformas externas de pago, como Stripe u otras herramientas habilitadas. Emprende360 no almacena directamente los datos completos de tarjetas bancarias.
+          </p>
+
+          <p>
+            En caso de planes mensuales, el usuario se compromete a abonar las cantidades acordadas durante el periodo contratado, salvo pacto específico por escrito.
+          </p>
+
+          <p>
+            Los precios pueden variar en el futuro. Los cambios no afectarán a servicios ya pagados, salvo que se pacte expresamente una modificación.
+          </p>
+
+          <h3>Servicios actualmente ofrecidos</h3>
+          <ul>
+            <li><b>Partner Activo:</b> plaza activa durante 90 días, con acceso a rondas, visibilidad y participación ordenada dentro del ecosistema.</li>
+            <li><b>Líder de Vertical:</b> posición destacada durante 90 días, con liderazgo de categoría, ronda temática y mayor visibilidad dentro del ecosistema.</li>
+          </ul>
+
+          <p>
+            La disponibilidad de plazas puede ser limitada y estar sujeta a revisión de encaje.
+          </p>
+        </section>
+
+        <section id="seleccion">
+          <h2>5. Selección, acceso y participación</h2>
+          <p>
+            La participación en Emprende360 puede estar sujeta a criterios de selección, encaje profesional, disponibilidad, calidad del perfil, claridad de propuesta, categoría, vertical y comportamiento dentro del ecosistema.
+          </p>
+
+          <p>
+            Emprende360 se reserva el derecho de rechazar, limitar, pausar o cancelar la participación de un perfil si considera que no encaja con el objetivo del ecosistema, si existe conflicto con otros perfiles, si hay conducta inapropiada o si se incumplen estos términos.
+          </p>
+
+          <p>
+            La participación en rondas se organizará según criterios de tiempo, categoría, prioridad, formato, número de participantes y calidad de la dinámica. La contratación de una plaza activa no implica necesariamente hablar en todos los encuentros ni recibir tiempo ilimitado de exposición.
+          </p>
+        </section>
+
+        <section id="cancelaciones">
+          <h2>6. Cancelaciones, cambios y devoluciones</h2>
+          <p>
+            Al tratarse de servicios B2B, profesionales, digitales, de visibilidad, activación y organización, las condiciones de cancelación o devolución dependerán del tipo de servicio contratado y del estado de ejecución.
+          </p>
+
+          <h3>Pago único por 90 días</h3>
+          <p>
+            El pago único reserva una posición durante el periodo contratado. Una vez iniciado el proceso de revisión, onboarding, preparación de ficha, participación o activación, no se garantiza devolución, salvo error de cobro, imposibilidad de prestación atribuible a Emprende360 o pacto específico por escrito.
+          </p>
+
+          <h3>Pago mensual</h3>
+          <p>
+            En planes mensuales, la cancelación debe comunicarse antes del siguiente periodo de facturación. La cancelación evita nuevos cargos, pero no implica devolución automática de cantidades ya abonadas por periodos iniciados.
+          </p>
+
+          <h3>No aceptación del perfil</h3>
+          <p>
+            Si un usuario realiza un pago y Emprende360 considera que no existe encaje suficiente para activar su plaza, podrá ofrecer una alternativa, dejar la plaza pendiente para una fase posterior o realizar la devolución del importe abonado, según el caso.
+          </p>
+
+          <h3>Cambios de fechas o formato</h3>
+          <p>
+            Emprende360 podrá modificar fechas, horarios, formato, número de participantes, dinámica o canal de una ronda o actividad por razones operativas, técnicas, estratégicas o de calidad.
+          </p>
+        </section>
+
+        <section id="obligaciones">
+          <h2>7. Obligaciones de usuarios, partners y participantes</h2>
+          <p>
+            Las personas que participen en Emprende360 se comprometen a:
+          </p>
+
+          <ul>
+            <li>Proporcionar información veraz, clara y actualizada sobre su perfil profesional.</li>
+            <li>No suplantar identidades ni presentar credenciales falsas.</li>
+            <li>No realizar spam, captación agresiva ni venta engañosa dentro del ecosistema.</li>
+            <li>Respetar la confidencialidad de conversaciones, datos y contactos cuando corresponda.</li>
+            <li>Respetar los tiempos, turnos y dinámicas de las rondas.</li>
+            <li>No utilizar datos de otros participantes de forma abusiva o no autorizada.</li>
+            <li>No compartir materiales internos sin autorización.</li>
+            <li>Mantener un comportamiento profesional, respetuoso y colaborativo.</li>
+          </ul>
+
+          <p>
+            El incumplimiento de estas obligaciones puede implicar la retirada de acceso, cancelación de participación o exclusión del ecosistema.
+          </p>
+        </section>
+
+        <section id="limitacion">
+          <h2>8. Limitación de responsabilidad</h2>
+          <p>
+            Emprende360 facilita contexto, visibilidad, espacios de relación, posibles conexiones y dinámicas de activación profesional, pero no garantiza resultados concretos.
+          </p>
+
+          <p>
+            En particular, Emprende360 no garantiza:
+          </p>
+
+          <ul>
+            <li>Obtención de clientes.</li>
+            <li>Cierre de ventas.</li>
+            <li>Inversión, financiación o acuerdos comerciales.</li>
+            <li>Contrataciones, colaboraciones o partnerships.</li>
+            <li>Asistencia mínima a eventos o rondas.</li>
+            <li>Resultados económicos específicos.</li>
+          </ul>
+
+          <p>
+            Cada usuario es responsable de evaluar cualquier oportunidad, contacto, colaboración, inversión, contratación o decisión comercial derivada de su participación.
+          </p>
+
+          <p>
+            Emprende360 no será responsable de decisiones tomadas por usuarios, partners o terceros a partir de conversaciones, conexiones o contenidos generados dentro del ecosistema.
+          </p>
+        </section>
+
+        <section id="propiedad">
+          <h2>9. Propiedad intelectual y uso de materiales</h2>
+          <p>
+            Los textos, diseños, metodologías, páginas, materiales, estructuras, presentaciones, documentos, marcas, contenidos y recursos creados por Emprende360 son propiedad de Albi System, LLC o se utilizan bajo autorización correspondiente.
+          </p>
+
+          <p>
+            No está permitida la copia, reproducción, distribución, adaptación o uso comercial de los materiales de Emprende360 sin autorización previa por escrito.
+          </p>
+
+          <p>
+            Los participantes autorizan a Emprende360 a mencionar su nombre, perfil profesional, empresa, categoría o participación dentro del contexto del ecosistema, salvo indicación expresa en contrario.
+          </p>
+
+          <p>
+            En caso de grabaciones, entrevistas, rondas o publicaciones, Emprende360 podrá utilizar fragmentos, imágenes o referencias con fines de comunicación, resumen, difusión o promoción del ecosistema, siempre dentro de un uso razonable y profesional.
+          </p>
+        </section>
+
+        <section id="datos">
+          <h2>10. Protección de datos y privacidad</h2>
+          <p>
+            El tratamiento de datos personales se regula en la Política de Privacidad disponible en:
+            <a href="https://emprende360.club/privacidad">https://emprende360.club/privacidad</a>
+          </p>
+
+          <p>
+            Al facilitar datos mediante formularios, WhatsApp, LinkedIn, email, Stripe u otros canales, el usuario acepta que Emprende360 pueda utilizarlos para gestionar su solicitud, participación, contratación, comunicación, facturación y seguimiento.
+          </p>
+
+          <p>
+            El usuario puede contactar para cuestiones relativas a privacidad en:
+            <a href="mailto:info@emprende360.club">info@emprende360.club</a>
+          </p>
+        </section>
+
+        <section id="terceros">
+          <h2>11. Plataformas y enlaces de terceros</h2>
+          <p>
+            Emprende360 puede utilizar herramientas externas como LinkedIn, Zoom, WhatsApp, Stripe, Google, formularios, calendarios, plataformas de email, alojamiento web u otras soluciones tecnológicas.
+          </p>
+
+          <p>
+            El uso de dichas plataformas estará sujeto también a sus propios términos, condiciones y políticas de privacidad. Emprende360 no controla ni responde por fallos, cambios, interrupciones o decisiones adoptadas por dichas plataformas externas.
+          </p>
+        </section>
+
+        <section id="modificaciones">
+          <h2>12. Modificaciones de estos términos</h2>
+          <p>
+            Emprende360 podrá modificar estos Términos y Condiciones cuando lo considere necesario para adaptarlos a cambios operativos, comerciales, legales, técnicos o estratégicos.
+          </p>
+
+          <p>
+            La versión vigente será la publicada en esta página. El uso continuado del sitio o servicios tras una modificación implica la aceptación de los nuevos términos.
+          </p>
+        </section>
+
+        <section id="legislacion">
+          <h2>13. Legislación aplicable y resolución de conflictos</h2>
+          <p>
+            Estos términos se interpretarán conforme a la legislación aplicable al titular de la actividad, sin perjuicio de las normas imperativas que pudieran resultar aplicables según el país de residencia del usuario o el lugar de prestación del servicio.
+          </p>
+
+          <p>
+            Antes de iniciar cualquier reclamación formal, las partes se comprometen a intentar resolver cualquier discrepancia de forma amistosa mediante comunicación directa.
+          </p>
+
+          <p>
+            Puedes contactar con Emprende360 para cualquier incidencia en:
+            <a href="mailto:info@emprende360.club">info@emprende360.club</a>
+          </p>
+        </section>
+
+        <section id="contacto">
+          <h2>14. Contacto</h2>
+          <p>
+            Para cualquier consulta relacionada con estos Términos y Condiciones, puedes contactar con:
+          </p>
+
+          <div class="data-box">
+            <b>Albi System, LLC</b><br>
+            Email: <a href="mailto:info@emprende360.club">info@emprende360.club</a><br>
+            WhatsApp: <a href="https://wa.me/34603153268" target="_blank" rel="noopener noreferrer">+34 603 153 268</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div>
+        <b style="color:white">Emprende360</b><br>
+        <span>Partners · Verticales · Rondas · Visibilidad · Activación B2B</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://emprende360.club">Inicio</a>
+        <a href="https://emprende360.club/privacidad">Privacidad</a>
+        <a href="https://emprende360.club/aviso-legal">Aviso legal</a>
+        <a href="https://emprende360.club/terminos-condiciones">Términos y condiciones</a>
+        <a href="https://wa.me/34603153268" target="_blank" rel="noopener noreferrer">Contacto</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
