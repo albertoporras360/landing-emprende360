@@ -1,0 +1,1291 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emprende360 | Rondas, Mesas y Conexiones B2B con Contexto</title>
+  <meta name="description" content="Emprende360: rondas generales, mesas verticales, match rooms y Partner Hub para conectar profesionales B2B con contexto." />
+
+  <style>
+    :root{
+      --bg:#020617;
+      --bg2:#06111f;
+      --card:rgba(255,255,255,.065);
+      --line:rgba(255,255,255,.14);
+      --text:#f8fafc;
+      --muted:#94a3b8;
+      --soft:#cbd5e1;
+      --gold:#f4c542;
+      --gold2:#ffe08a;
+      --blue:#18a7ff;
+      --green:#22c55e;
+      --red:#fb7185;
+      --shadow:0 34px 110px rgba(0,0,0,.42);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 8% 0%,rgba(24,167,255,.20),transparent 28%),
+        radial-gradient(circle at 88% 7%,rgba(244,197,66,.15),transparent 26%),
+        radial-gradient(circle at 52% 108%,rgba(34,197,94,.10),transparent 30%),
+        linear-gradient(180deg,#020617 0%,#06111f 52%,#020617 100%);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    .wrap{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+    .grad{
+      background:linear-gradient(90deg,#ffffff 0%,#c8ecff 45%,#ffe7a6 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .muted{color:var(--muted)}
+    .gold{color:var(--gold2)}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:99;
+      background:rgba(2,6,23,.84);
+      backdrop-filter:blur(22px);
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+
+    .topbar{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      min-width:220px;
+    }
+
+    .brand-mark{
+      width:42px;
+      height:42px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#f4c542,#18a7ff);
+      color:#06111f;
+      font-weight:950;
+      box-shadow:0 16px 45px rgba(24,167,255,.24);
+    }
+
+    .brand-title{
+      font-weight:950;
+      letter-spacing:-.02em;
+      line-height:1;
+    }
+
+    .brand-sub{
+      margin-top:3px;
+      color:var(--muted);
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.17em;
+      font-weight:900;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:#cbd5e1;
+      font-size:12px;
+      font-weight:900;
+      padding:8px 10px;
+      border-radius:999px;
+      transition:.2s ease;
+    }
+
+    nav a:hover{
+      color:white;
+      background:rgba(255,255,255,.07);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      border:0;
+      border-radius:999px;
+      padding:13px 17px;
+      font-size:13px;
+      font-weight:950;
+      cursor:pointer;
+      white-space:nowrap;
+      transition:.22s ease;
+      text-align:center;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+
+    .btn-primary{
+      color:#06111f;
+      background:linear-gradient(90deg,#ffe08a,#f4c542,#ffd76a);
+      box-shadow:0 18px 55px rgba(244,197,66,.20);
+    }
+
+    .btn-secondary{
+      color:white;
+      background:rgba(255,255,255,.075);
+      border:1px solid rgba(255,255,255,.15);
+    }
+
+    .btn-whatsapp{
+      color:#02150a;
+      background:linear-gradient(90deg,#25d366,#22c55e);
+      box-shadow:0 18px 55px rgba(34,197,94,.17);
+    }
+
+    .hero{
+      padding:44px 0 24px;
+    }
+
+    .hero-box{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:38px;
+      padding:42px;
+      background:
+        radial-gradient(circle at 15% 8%,rgba(24,167,255,.22),transparent 30%),
+        radial-gradient(circle at 85% 6%,rgba(244,197,66,.15),transparent 25%),
+        rgba(255,255,255,.055);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(20px);
+    }
+
+    .hero-box:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:54px 54px;
+      mask-image:linear-gradient(90deg,#000,transparent 86%);
+      pointer-events:none;
+    }
+
+    .hero-box:after{
+      content:"";
+      position:absolute;
+      width:560px;
+      height:560px;
+      border-radius:999px;
+      right:-260px;
+      top:-260px;
+      border:1px solid rgba(244,197,66,.22);
+      box-shadow:0 0 0 48px rgba(244,197,66,.035),0 0 0 96px rgba(24,167,255,.025);
+      pointer-events:none;
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(330px,.92fr);
+      gap:32px;
+      align-items:center;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(24,167,255,.26);
+      background:rgba(24,167,255,.095);
+      color:#bae6fd;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:11px;
+      font-weight:950;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:19px 0 0;
+      font-size:clamp(40px,5.8vw,74px);
+      line-height:.95;
+      letter-spacing:-.065em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:0;
+      font-size:clamp(30px,4vw,52px);
+      line-height:1.02;
+      letter-spacing:-.052em;
+      font-weight:950;
+    }
+
+    h3{
+      margin:0;
+      font-size:21px;
+      line-height:1.18;
+      letter-spacing:-.025em;
+    }
+
+    p{line-height:1.62}
+
+    .lead{
+      margin:18px 0 0;
+      color:#cbd5e1;
+      font-size:18px;
+      line-height:1.68;
+      max-width:800px;
+    }
+
+    .small{
+      font-size:14px;
+      line-height:1.6;
+      color:#cbd5e1;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+
+    .panel{
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(2,6,23,.44);
+      border-radius:30px;
+      padding:22px;
+      backdrop-filter:blur(20px);
+    }
+
+    .panel h3{
+      color:#fde68a;
+      margin-bottom:12px;
+    }
+
+    .mini-list{
+      display:grid;
+      gap:10px;
+      margin-top:17px;
+    }
+
+    .mini-row{
+      display:grid;
+      grid-template-columns:38px 1fr;
+      gap:12px;
+      align-items:start;
+      border:1px solid rgba(255,255,255,.11);
+      background:rgba(255,255,255,.055);
+      border-radius:18px;
+      padding:13px;
+    }
+
+    .mini-icon{
+      width:38px;
+      height:38px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      color:#06111f;
+      background:linear-gradient(135deg,#fde047,#7dd3fc);
+      font-weight:950;
+    }
+
+    .mini-row b{
+      display:block;
+      color:white;
+      font-size:14px;
+    }
+
+    .mini-row span{
+      display:block;
+      color:#94a3b8;
+      font-size:12px;
+      line-height:1.35;
+      margin-top:3px;
+    }
+
+    section{padding:34px 0}
+
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:18px;
+      flex-wrap:wrap;
+    }
+
+    .section-head p{
+      margin:10px 0 0;
+      color:#cbd5e1;
+      max-width:810px;
+    }
+
+    .module{
+      border:1px solid var(--line);
+      border-radius:34px;
+      padding:26px;
+      background:rgba(255,255,255,.055);
+      box-shadow:0 24px 85px rgba(0,0,0,.24);
+      backdrop-filter:blur(18px);
+    }
+
+    .notice{
+      border:1px solid rgba(244,197,66,.28);
+      background:
+        radial-gradient(circle at 15% 0%,rgba(244,197,66,.14),transparent 30%),
+        rgba(255,255,255,.055);
+      border-radius:28px;
+      padding:24px;
+    }
+
+    .notice h3{
+      color:white;
+      margin-bottom:8px;
+    }
+
+    .notice p{
+      margin:0;
+      color:#cbd5e1;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .grid-4{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .card{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      border-radius:28px;
+      padding:23px;
+      min-height:250px;
+      transition:.24s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(244,197,66,.36);
+      background:rgba(255,255,255,.088);
+      box-shadow:0 24px 85px rgba(0,0,0,.25);
+    }
+
+    .card:after{
+      content:"";
+      position:absolute;
+      width:190px;
+      height:190px;
+      border-radius:999px;
+      right:-95px;
+      top:-95px;
+      background:rgba(24,167,255,.105);
+      pointer-events:none;
+    }
+
+    .card > *{position:relative;z-index:2}
+
+    .icon{
+      width:56px;
+      height:56px;
+      border-radius:20px;
+      display:grid;
+      place-items:center;
+      font-size:26px;
+      color:#06111f;
+      background:linear-gradient(135deg,#fde047,#7dd3fc);
+      box-shadow:0 18px 50px rgba(24,167,255,.16);
+      margin-bottom:16px;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      font-size:14px;
+      margin:10px 0 0;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      width:max-content;
+      max-width:100%;
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(255,255,255,.06);
+      color:#dbeafe;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:11px;
+      line-height:1.1;
+      font-weight:900;
+      margin-bottom:14px;
+    }
+
+    .tag.gold{
+      border-color:rgba(244,197,66,.28);
+      background:rgba(244,197,66,.10);
+      color:#fde68a;
+    }
+
+    .tag.green{
+      border-color:rgba(34,197,94,.28);
+      background:rgba(34,197,94,.10);
+      color:#bbf7d0;
+    }
+
+    .tag.blue{
+      border-color:rgba(24,167,255,.28);
+      background:rgba(24,167,255,.10);
+      color:#bae6fd;
+    }
+
+    .list{
+      margin:16px 0 0;
+      padding:0;
+      list-style:none;
+      color:#cbd5e1;
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .list li{
+      position:relative;
+      padding-left:24px;
+      margin:9px 0;
+    }
+
+    .list li:before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      color:#22c55e;
+      font-weight:950;
+    }
+
+    .list.no li:before{
+      content:"✕";
+      color:#fb7185;
+    }
+
+    .steps{
+      counter-reset:step;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .step{
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(255,255,255,.06);
+      border-radius:28px;
+      padding:24px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .step:before{
+      counter-increment:step;
+      content:counter(step);
+      width:46px;
+      height:46px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      color:#06111f;
+      background:linear-gradient(135deg,#fde047,#7dd3fc);
+      font-weight:950;
+      margin-bottom:18px;
+    }
+
+    .step p{
+      color:#cbd5e1;
+      font-size:14px;
+    }
+
+    .distribution{
+      display:grid;
+      grid-template-columns:1fr 1.15fr;
+      gap:16px;
+      align-items:stretch;
+    }
+
+    .timeline{
+      display:grid;
+      gap:14px;
+    }
+
+    .timeline-item{
+      display:grid;
+      grid-template-columns:170px 1fr;
+      gap:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.055);
+      border-radius:24px;
+      padding:18px;
+    }
+
+    .datebox{
+      border:1px solid rgba(244,197,66,.28);
+      background:rgba(244,197,66,.10);
+      color:#fde68a;
+      border-radius:18px;
+      padding:14px;
+      font-weight:950;
+      text-align:center;
+      height:max-content;
+    }
+
+    .timeline-item p{
+      margin:8px 0 0;
+      color:#cbd5e1;
+      font-size:14px;
+    }
+
+    .cta{
+      margin-top:18px;
+      border:1px solid rgba(244,197,66,.30);
+      border-radius:34px;
+      padding:34px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 10% 10%,rgba(24,167,255,.15),transparent 30%),
+        radial-gradient(circle at 90% 0%,rgba(244,197,66,.16),transparent 30%),
+        rgba(255,255,255,.06);
+    }
+
+    .cta .lead{
+      margin-left:auto;
+      margin-right:auto;
+      max-width:780px;
+    }
+
+    .quote{
+      border-left:3px solid var(--gold);
+      padding-left:18px;
+      color:#dbeafe;
+      font-size:20px;
+      line-height:1.5;
+      margin:20px 0 0;
+      max-width:880px;
+    }
+
+    .negative-positive{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .no-card{border-color:rgba(251,113,133,.24)}
+    .yes-card{border-color:rgba(34,197,94,.24)}
+
+    .footer-note{
+      margin-top:18px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      border-radius:24px;
+      padding:18px;
+      color:#94a3b8;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .float-cta{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:100;
+      display:none;
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,.12);
+      background:#01040d;
+      padding:28px 0;
+      color:#94a3b8;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .footer-flex{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    footer a{
+      color:#bfdbfe;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    @media(max-width:1100px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid,.grid-4{grid-template-columns:repeat(2,1fr)}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .distribution{grid-template-columns:1fr}
+    }
+
+    @media(max-width:760px){
+      .wrap{padding:0 15px}
+
+      .topbar{
+        padding:10px 15px;
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .brand-sub{display:none}
+
+      nav{
+        justify-content:flex-start;
+        overflow:auto;
+        flex-wrap:nowrap;
+        scrollbar-width:none;
+      }
+
+      nav::-webkit-scrollbar{display:none}
+
+      .hero{padding:20px 0 12px}
+
+      .hero-box{
+        padding:26px;
+        border-radius:30px;
+      }
+
+      h1{
+        font-size:40px;
+        letter-spacing:-.047em;
+      }
+
+      .lead{font-size:16px}
+
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+        width:100%;
+      }
+
+      .btn{width:100%}
+
+      .grid,.grid-2,.grid-4,.negative-positive,.steps{
+        grid-template-columns:1fr;
+      }
+
+      .module{
+        padding:18px;
+        border-radius:28px;
+      }
+
+      .timeline-item{
+        grid-template-columns:1fr;
+      }
+
+      .float-cta{
+        display:block;
+        left:15px;
+        right:15px;
+      }
+
+      .float-cta .btn{
+        box-shadow:0 16px 50px rgba(34,197,94,.35);
+      }
+
+      .footer-flex{display:block}
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    ENLACES PRINCIPALES:
+    WhatsApp ALTA RONDAS: https://wa.me/34603153268?text=ALTA%20RONDAS
+    Partner Hub: https://emprende360.club/partner-hub
+    Evento LinkedIn: https://www.linkedin.com/events/rondadealianzasb2b7462710384672817152
+  -->
+
+  <header>
+    <div class="topbar">
+      <a class="brand" href="#inicio">
+        <div class="brand-mark">E</div>
+        <div>
+          <div class="brand-title">Emprende360</div>
+          <div class="brand-sub">Rondas · Mesas · Matches</div>
+        </div>
+      </a>
+
+      <nav>
+        <a href="#formatos">Formatos</a>
+        <a href="#distribucion">Distribución</a>
+        <a href="#hub">Partner Hub</a>
+        <a href="#participar">Participar</a>
+      </nav>
+
+      <a class="btn btn-whatsapp" href="https://wa.me/34603153268?text=ALTA%20RONDAS" target="_blank" rel="noopener noreferrer">ALTA RONDAS</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap">
+        <div class="hero-box">
+          <div class="hero-grid">
+            <div>
+              <span class="pill">Rondas · Mesas verticales · Match Rooms · Partner Hub</span>
+
+              <h1>
+                <span class="grad">Tres formas de participar en Emprende360.</span>
+              </h1>
+
+              <p class="lead">
+                Emprende360 está construyendo un ecosistema B2B para conectar profesionales, founders, directivos, advisors, expertos y empresas con más contexto.
+              </p>
+
+              <p class="small muted">
+                No se trata solo de asistir a una ronda o presentarse una vez. La idea es ordenar perfiles, verticales y posibles conexiones para que las conversaciones tengan más criterio y más posibilidades de generar colaboración real.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#formatos">
+                  Ver formatos →
+                </a>
+                <a class="btn btn-whatsapp" href="https://wa.me/34603153268?text=ALTA%20RONDAS" target="_blank" rel="noopener noreferrer">
+                  ALTA RONDAS por WhatsApp
+                </a>
+                <a class="btn btn-secondary" href="https://emprende360.club/partner-hub" target="_blank" rel="noopener noreferrer">
+                  Ver Partner Hub
+                </a>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Elige cómo quieres participar</h3>
+              <p class="small">
+                Cada formato tiene una función distinta: entrar, posicionarte o activar cruces concretos.
+              </p>
+
+              <div class="mini-list">
+                <div class="mini-row">
+                  <div class="mini-icon">1</div>
+                  <div>
+                    <b>Ronda General</b>
+                    <span>Para presentarte, explicar qué haces y entrar en el radar del ecosistema.</span>
+                  </div>
+                </div>
+
+                <div class="mini-row">
+                  <div class="mini-icon">2</div>
+                  <div>
+                    <b>Mesa Vertical</b>
+                    <span>Para participar en una temática concreta y aportar valor ante una audiencia afín.</span>
+                  </div>
+                </div>
+
+                <div class="mini-row">
+                  <div class="mini-icon">3</div>
+                  <div>
+                    <b>Match Room</b>
+                    <span>Para revisar posibles cruces con perfiles concretos y contexto previo.</span>
+                  </div>
+                </div>
+
+                <div class="mini-row">
+                  <div class="mini-icon">4</div>
+                  <div>
+                    <b>Partner Hub</b>
+                    <span>Para que perfiles, verticales, mesas y posibles matches queden ordenados.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="formatos">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Los 3 formatos de rondas de Emprende360</h2>
+            <p>
+              No todo tiene que ser una presentación rápida. Hay tres niveles: entrada, posicionamiento y conexión más curada.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="tag blue">Formato 1</span>
+            <div class="icon">🔁</div>
+            <h3>Ronda General de Alianzas B2B</h3>
+            <p>
+              La puerta de entrada para nuevos perfiles que quieren presentarse, explicar qué hacen, qué buscan y qué pueden aportar.
+            </p>
+            <ul class="list">
+              <li>Presentación breve y concreta.</li>
+              <li>Entrada al radar de Emprende360.</li>
+              <li>Detección de verticales y posibles cruces.</li>
+              <li>Ideal para quienes todavía no han participado.</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-secondary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20presentarme%20en%20una%20pr%C3%B3xima%20ronda%20general%20de%20Emprende360" target="_blank" rel="noopener noreferrer">
+                Quiero presentarme
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="tag gold">Formato 2</span>
+            <div class="icon">🎙️</div>
+            <h3>Mesa Vertical</h3>
+            <p>
+              Una mesa temática con perfiles seleccionados alrededor de una vertical concreta. Más foco, más contexto y más valor.
+            </p>
+            <ul class="list">
+              <li>IA, datos y automatización.</li>
+              <li>CFO, caja, margen y financiación.</li>
+              <li>M&A, empresa familiar e inversión.</li>
+              <li>Industria, retail, talento, legal o growth.</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-secondary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20participar%20en%20una%20mesa%20vertical%20de%20Emprende360" target="_blank" rel="noopener noreferrer">
+                Quiero mesa vertical
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="tag green">Formato 3</span>
+            <div class="icon">🤝</div>
+            <h3>Match Room</h3>
+            <p>
+              Un formato más pequeño y curado para cruzar perfiles que puedan tener un posible encaje real.
+            </p>
+            <ul class="list">
+              <li>No depende de gran audiencia.</li>
+              <li>Funciona por calidad y encaje.</li>
+              <li>Revisamos perfil, búsqueda y aportación.</li>
+              <li>Facilitamos conversaciones útiles, no reuniones vacías.</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-secondary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20que%20revis%C3%A9is%20posibles%20cruces%20para%20m%C3%AD%20dentro%20de%20Emprende360" target="_blank" rel="noopener noreferrer">
+                Revisar posibles cruces
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="distribucion">
+      <div class="wrap">
+        <div class="distribution">
+          <div class="notice">
+            <span class="tag gold">Clave diferencial</span>
+            <h2 style="margin-top:8px">Distribución colaborativa</h2>
+            <p>
+              En una mesa vertical, la audiencia no depende solo de Emprende360. Desde Emprende360 movemos cada evento entre nuestra red y perfiles afines, pero los participantes también pueden ayudar invitando contactos que encajen con la temática.
+            </p>
+            <p style="margin-top:14px">
+              No se trata de invitar a cualquiera. Se trata de invitar a personas que puedan tener interés real en esa conversación: posibles clientes, partners, empresas, decisores o profesionales de la misma vertical.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="tag green">Cómo funciona</span>
+            <h3>El encuentro gana valor cuando todos ayudan a moverlo bien</h3>
+            <ul class="list">
+              <li>Emprende360 crea el evento, la landing y la estructura.</li>
+              <li>El conductor guía la sesión para que sea ágil y útil.</li>
+              <li>Los expertos aportan contenido, criterio y visión.</li>
+              <li>Cada participante puede invitar contactos afines.</li>
+              <li>El Partner Hub recoge perfiles, verticales y posibles matches.</li>
+              <li>Después se revisan posibles cruces con contexto.</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20proponer%20una%20mesa%20vertical%20en%20Emprende360" target="_blank" rel="noopener noreferrer">
+                Proponer mesa vertical →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="valor">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Qué gana cada participante</h2>
+            <p>
+              El objetivo no es “hablar unos minutos”. El objetivo es quedar mejor ubicado dentro de una vertical, aparecer con contexto y abrir posibles relaciones después.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="icon">📍</div>
+            <h3>Posicionamiento</h3>
+            <p>Tu perfil queda asociado a una vertical concreta: IA, CFO, M&A, industria, retail, talento, legal o growth.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📣</div>
+            <h3>Distribución</h3>
+            <p>El encuentro se mueve desde Emprende360 y desde los propios participantes que invitan contactos afines.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🧩</div>
+            <h3>Contexto</h3>
+            <p>No eres una tarjeta perdida en LinkedIn. Apareces dentro de una temática, una mesa y una conversación concreta.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🎥</div>
+            <h3>Contenido</h3>
+            <p>Las mesas pueden generar clips, resumen, publicación, menciones y presencia posterior en el ecosistema.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🤝</div>
+            <h3>Relaciones</h3>
+            <p>Después de la mesa se pueden revisar posibles cruces con otros perfiles, asistentes o partners.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🧭</div>
+            <h3>Partner Hub</h3>
+            <p>El movimiento se va registrando en una plataforma visible para ordenar perfiles, verticales y oportunidades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hub">
+      <div class="wrap">
+        <div class="module">
+          <div class="section-head">
+            <div>
+              <h2>Partner Hub: la capa visible del ecosistema</h2>
+              <p>
+                Todo este movimiento se va ordenando en el Partner Hub: participantes, verticales, posibles matches, próximas rondas, mesas propuestas y evolución del ecosistema.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="notice">
+              <h3>No es una lista estática</h3>
+              <p>
+                Es una forma de ir mostrando quién está, qué aporta, qué busca, qué verticales se están activando y qué conexiones pueden tener sentido.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="https://emprende360.club/partner-hub" target="_blank" rel="noopener noreferrer">
+                  Ver Partner Hub →
+                </a>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="tag gold">Qué se irá registrando</span>
+              <h3>Movimiento visible</h3>
+              <ul class="list">
+                <li>Perfiles destacados.</li>
+                <li>Verticales activas.</li>
+                <li>Mesas propuestas.</li>
+                <li>Matches sugeridos.</li>
+                <li>Próximas rondas.</li>
+                <li>Roadmap del ecosistema.</li>
+                <li>Oportunidades de participación.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="movimiento">
+      <div class="wrap">
+        <div class="grid-2">
+          <div class="card">
+            <span class="tag gold">Movimiento inicial</span>
+            <h3>Emprende360 ya empezó a reunir perfiles por vertical</h3>
+            <p>
+              La primera ronda sirvió para abrir el movimiento y detectar perfiles de finanzas, IA, M&A, legal, industria, retail, talento, growth y consultoría.
+            </p>
+            <p>
+              Ahora el objetivo es hacerlo más útil: mejores verticales, mejores cruces, más contexto y más continuidad.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="tag blue">Ver referencia</span>
+            <h3>Evento en LinkedIn</h3>
+            <p>
+              Puedes ver el evento y parte del movimiento generado en LinkedIn. Lo importante ahora no es mirar números, sino construir continuidad.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-secondary" href="https://www.linkedin.com/events/rondadealianzasb2b7462710384672817152" target="_blank" rel="noopener noreferrer">
+                Ver evento en LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="participar">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Cómo participar en próximas rondas o mesas</h2>
+            <p>
+              Para no depender de mensajes sueltos en LinkedIn, vamos a centralizar el interés por WhatsApp directo.
+            </p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <h3>Escríbeme ALTA RONDAS</h3>
+            <p>
+              Pulsa el botón y se abrirá WhatsApp con el mensaje preparado.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>Te ordenamos por vertical</h3>
+            <p>
+              Te pediremos qué haces, desde dónde, qué buscas y qué puedes aportar.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>Te avisamos con contexto</h3>
+            <p>
+              Cuando haya una ronda, mesa o posible cruce donde puedas encajar, te avisaremos.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>Ayudas a mover la mesa</h3>
+            <p>
+              Si participas como experto, podrás invitar contactos afines para que el encuentro gane alcance y valor.
+            </p>
+          </div>
+        </div>
+
+        <div class="cta">
+          <span class="pill">Entrada principal</span>
+          <h2 style="margin-top:16px">¿Quieres estar en próximas rondas o mesas?</h2>
+          <p class="lead">
+            Escríbeme por WhatsApp con el texto ALTA RONDAS y te tendremos en cuenta para próximas rondas generales, mesas verticales o posibles cruces dentro de Emprende360.
+          </p>
+
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-whatsapp" href="https://wa.me/34603153268?text=ALTA%20RONDAS" target="_blank" rel="noopener noreferrer">
+              Enviar ALTA RONDAS por WhatsApp →
+            </a>
+            <a class="btn btn-secondary" href="https://emprende360.club/partner-hub" target="_blank" rel="noopener noreferrer">
+              Ver Partner Hub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="perfil">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Perfiles que encajan especialmente bien</h2>
+            <p>
+              No buscamos llenar una comunidad. Buscamos perfiles que puedan aportar valor real dentro de verticales concretas.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="icon">💼</div>
+            <h3>Finanzas / CFO</h3>
+            <p>CFOs, advisors, financiación, control, reporting, caja, margen y profesionalización.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🤖</div>
+            <h3>IA / Datos</h3>
+            <p>Automatización, agentes, BI, dashboards, no-code, CRM y sistemas aplicados a negocio.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🏛️</div>
+            <h3>M&A / Inversión</h3>
+            <p>Compraventa, empresa familiar, sucesión, inversión, distressed y operaciones corporativas.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">⚖️</div>
+            <h3>Legal / Compliance</h3>
+            <p>IA responsable, regulación, contratos, ciberseguridad, privacidad y gobierno.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🏭</div>
+            <h3>Industria / CAPEX</h3>
+            <p>Operaciones, productividad, expansión industrial, inversión, plantas e IoT.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🏨</div>
+            <h3>Retail / Hospitality</h3>
+            <p>Locales, restaurantes, hoteles, expansión física, experiencia cliente y margen por unidad.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🧑‍💼</div>
+            <h3>Talento / Liderazgo</h3>
+            <p>RRHH, formación, cultura, liderazgo, equipos, selección y transformación organizativa.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🚀</div>
+            <h3>Growth B2B</h3>
+            <p>Consultores, founders, CEOs, ventas, alianzas, partners, activación comercial y estrategia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="no-es">
+      <div class="wrap">
+        <div class="negative-positive">
+          <div class="card no-card">
+            <span class="tag" style="color:#fecdd3;border-color:rgba(251,113,133,.28);background:rgba(251,113,133,.10)">No es</span>
+            <h3>No es otro grupo de networking</h3>
+            <ul class="list no">
+              <li>No es una lista de contactos.</li>
+              <li>No es un grupo para vender sin contexto.</li>
+              <li>No es una ronda eterna de presentaciones.</li>
+              <li>No es una comunidad de autopromoción.</li>
+              <li>No prometemos clientes ni colaboraciones garantizadas.</li>
+            </ul>
+          </div>
+
+          <div class="card yes-card">
+            <span class="tag green">Sí es</span>
+            <h3>Una red B2B con contexto</h3>
+            <ul class="list">
+              <li>Rondas para descubrir perfiles.</li>
+              <li>Mesas verticales con distribución colaborativa.</li>
+              <li>Match Rooms para cruzar perfiles con criterio.</li>
+              <li>Partner Hub para ordenar el movimiento.</li>
+              <li>Una capa de confianza, contexto y activación.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-note">
+          Nota: Emprende360 facilita visibilidad, contexto, rondas, posibles matches y conversaciones útiles. No garantiza clientes, ventas, inversión, financiación, empleo, colaboraciones ni resultados concretos. Las posibles conexiones se revisan con criterio y, cuando procede, con permiso de las partes.
+        </div>
+      </div>
+    </section>
+
+    <section id="cierre">
+      <div class="wrap">
+        <div class="cta">
+          <span class="pill">Esto acaba de empezar</span>
+          <h2 style="margin-top:16px"><span class="grad">Menos ruido. Más contexto. Más relaciones útiles.</span></h2>
+          <p class="lead">
+            Emprende360 no va de estar en otro grupo más. Va de estar mejor ubicado, participar en mesas con sentido y facilitar relaciones B2B que puedan convertirse en colaboración, clientes, partners, aprendizaje o nuevas oportunidades.
+          </p>
+
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-whatsapp" href="https://wa.me/34603153268?text=ALTA%20RONDAS" target="_blank" rel="noopener noreferrer">
+              Enviar ALTA RONDAS →
+            </a>
+            <a class="btn btn-secondary" href="https://emprende360.club/partner-hub" target="_blank" rel="noopener noreferrer">
+              Ver Partner Hub
+            </a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/events/rondadealianzasb2b7462710384672817152" target="_blank" rel="noopener noreferrer">
+              Ver LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="float-cta">
+    <a class="btn btn-whatsapp" href="https://wa.me/34603153268?text=ALTA%20RONDAS" target="_blank" rel="noopener noreferrer">
+      ALTA RONDAS por WhatsApp
+    </a>
+  </div>
+
+  <footer>
+    <div class="wrap footer-flex">
+      <div>
+        <b style="color:white">Emprende360</b><br>
+        <span>Rondas · Mesas verticales · Match Rooms · Partner Hub · Relaciones B2B con contexto</span>
+      </div>
+      <div>
+        <a href="https://emprende360.club/privacidad" target="_blank" rel="noopener noreferrer">Privacidad</a> ·
+        <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer">Aviso legal</a> ·
+        <a href="https://emprende360.club/terminos-condiciones" target="_blank" rel="noopener noreferrer">Términos y condiciones</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
