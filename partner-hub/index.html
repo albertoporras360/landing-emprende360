@@ -1,0 +1,2034 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emprende360 Partner Hub | Red inteligente de relaciones B2B</title>
+  <meta name="description" content="Partner Hub de Emprende360: red inteligente de relaciones B2B, rondas, perfiles senior, matches, verticales y oportunidades con contexto." />
+
+  <style>
+    :root{
+      --bg:#020617;
+      --bg2:#06111f;
+      --card:rgba(255,255,255,.065);
+      --card2:rgba(255,255,255,.095);
+      --line:rgba(255,255,255,.14);
+      --line2:rgba(244,197,66,.32);
+      --text:#f8fafc;
+      --muted:#94a3b8;
+      --soft:#cbd5e1;
+      --gold:#f4c542;
+      --gold2:#ffe08a;
+      --blue:#18a7ff;
+      --green:#22c55e;
+      --red:#fb7185;
+      --violet:#a855f7;
+      --shadow:0 34px 110px rgba(0,0,0,.42);
+      --max:1220px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 8% 0%,rgba(24,167,255,.20),transparent 28%),
+        radial-gradient(circle at 88% 7%,rgba(244,197,66,.15),transparent 26%),
+        radial-gradient(circle at 52% 108%,rgba(34,197,94,.10),transparent 30%),
+        linear-gradient(180deg,#020617 0%,#06111f 52%,#020617 100%);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    button,input,select{font:inherit}
+
+    .wrap{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+    .grad{
+      background:linear-gradient(90deg,#ffffff 0%,#c8ecff 45%,#ffe7a6 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .muted{color:var(--muted)}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:99;
+      background:rgba(2,6,23,.84);
+      backdrop-filter:blur(22px);
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+
+    .topbar{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:11px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      min-width:220px;
+    }
+
+    .brand-mark{
+      width:40px;
+      height:40px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#f4c542,#18a7ff);
+      color:#06111f;
+      font-weight:950;
+      box-shadow:0 16px 45px rgba(24,167,255,.24);
+    }
+
+    .brand-title{
+      font-weight:950;
+      letter-spacing:-.02em;
+      line-height:1;
+    }
+
+    .brand-sub{
+      margin-top:3px;
+      color:var(--muted);
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.17em;
+      font-weight:900;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:7px;
+      flex:1;
+      overflow:auto;
+      scrollbar-width:none;
+    }
+
+    .nav::-webkit-scrollbar{display:none}
+
+    .tab{
+      border:1px solid transparent;
+      background:transparent;
+      color:#cbd5e1;
+      border-radius:999px;
+      padding:8px 10px;
+      font-size:12px;
+      font-weight:900;
+      cursor:pointer;
+      white-space:nowrap;
+      transition:.2s ease;
+    }
+
+    .tab:hover{
+      color:white;
+      background:rgba(255,255,255,.07);
+      border-color:rgba(255,255,255,.12);
+    }
+
+    .tab.active{
+      color:white;
+      background:linear-gradient(90deg,rgba(244,197,66,.18),rgba(24,167,255,.13));
+      border-color:rgba(244,197,66,.32);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      border:0;
+      border-radius:999px;
+      padding:12px 16px;
+      font-size:13px;
+      font-weight:950;
+      cursor:pointer;
+      white-space:nowrap;
+      transition:.22s ease;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+
+    .btn-primary{
+      color:#06111f;
+      background:linear-gradient(90deg,#ffe08a,#f4c542,#ffd76a);
+      box-shadow:0 18px 55px rgba(244,197,66,.20);
+    }
+
+    .btn-secondary{
+      color:white;
+      background:rgba(255,255,255,.075);
+      border:1px solid rgba(255,255,255,.15);
+    }
+
+    .btn-whatsapp{
+      color:#02150a;
+      background:linear-gradient(90deg,#25d366,#22c55e);
+      box-shadow:0 18px 55px rgba(34,197,94,.17);
+    }
+
+    .page{padding:30px 0 72px}
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:38px;
+      padding:40px;
+      background:
+        radial-gradient(circle at 15% 8%,rgba(24,167,255,.22),transparent 30%),
+        radial-gradient(circle at 85% 6%,rgba(244,197,66,.15),transparent 25%),
+        rgba(255,255,255,.055);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(20px);
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:54px 54px;
+      mask-image:linear-gradient(90deg,#000,transparent 86%);
+      pointer-events:none;
+    }
+
+    .hero:after{
+      content:"";
+      position:absolute;
+      width:560px;
+      height:560px;
+      border-radius:999px;
+      right:-260px;
+      top:-260px;
+      border:1px solid rgba(244,197,66,.22);
+      box-shadow:0 0 0 48px rgba(244,197,66,.035),0 0 0 96px rgba(24,167,255,.025);
+      pointer-events:none;
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(330px,.92fr);
+      gap:28px;
+      align-items:center;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(24,167,255,.26);
+      background:rgba(24,167,255,.095);
+      color:#bae6fd;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:11px;
+      font-weight:950;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:19px 0 0;
+      font-size:clamp(39px,5.7vw,74px);
+      line-height:.95;
+      letter-spacing:-.065em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:0;
+      font-size:clamp(30px,4vw,52px);
+      line-height:1.02;
+      letter-spacing:-.052em;
+      font-weight:950;
+    }
+
+    h3{
+      margin:0;
+      font-size:21px;
+      line-height:1.18;
+      letter-spacing:-.025em;
+    }
+
+    p{line-height:1.62}
+
+    .lead{
+      margin:18px 0 0;
+      color:#cbd5e1;
+      font-size:18px;
+      line-height:1.68;
+      max-width:810px;
+    }
+
+    .small{
+      font-size:14px;
+      line-height:1.6;
+      color:#cbd5e1;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+
+    .signal-panel{
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(2,6,23,.44);
+      border-radius:30px;
+      padding:22px;
+      backdrop-filter:blur(20px);
+    }
+
+    .signal-panel h3{
+      color:#fde68a;
+      margin-bottom:12px;
+    }
+
+    .logic{
+      display:grid;
+      gap:10px;
+      margin-top:17px;
+    }
+
+    .logic-row{
+      display:grid;
+      grid-template-columns:35px 1fr auto;
+      align-items:center;
+      gap:11px;
+      border:1px solid rgba(255,255,255,.11);
+      background:rgba(255,255,255,.055);
+      border-radius:18px;
+      padding:12px;
+    }
+
+    .logic-num{
+      width:35px;
+      height:35px;
+      border-radius:13px;
+      display:grid;
+      place-items:center;
+      color:#06111f;
+      background:linear-gradient(135deg,#fde047,#7dd3fc);
+      font-weight:950;
+      font-size:13px;
+    }
+
+    .logic-row b{
+      display:block;
+      font-size:14px;
+      color:white;
+    }
+
+    .logic-row span{
+      display:block;
+      color:#94a3b8;
+      font-size:12px;
+      line-height:1.35;
+      margin-top:2px;
+    }
+
+    .logic-tag{
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(255,255,255,.06);
+      color:#dbeafe;
+      border-radius:999px;
+      padding:5px 8px;
+      font-size:10.5px;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .stats{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:20px;
+    }
+
+    .stat{
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(255,255,255,.055);
+      border-radius:24px;
+      padding:19px;
+    }
+
+    .stat b{
+      display:block;
+      font-size:32px;
+      letter-spacing:-.045em;
+    }
+
+    .stat span{
+      display:block;
+      color:#94a3b8;
+      font-size:13px;
+      line-height:1.38;
+      margin-top:5px;
+    }
+
+    .section-head{
+      margin-top:30px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .section-head p{
+      margin:10px 0 0;
+      color:#cbd5e1;
+      max-width:790px;
+    }
+
+    .controls{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+
+    .input,.select{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.065);
+      color:var(--text);
+      border-radius:999px;
+      padding:12px 14px;
+      outline:none;
+      min-width:190px;
+    }
+
+    .select option{
+      background:#020617;
+      color:white;
+    }
+
+    .input::placeholder{color:#64748b}
+
+    .module{
+      margin-top:18px;
+      border:1px solid var(--line);
+      border-radius:34px;
+      padding:24px;
+      background:rgba(255,255,255,.055);
+      box-shadow:0 24px 85px rgba(0,0,0,.24);
+      backdrop-filter:blur(18px);
+    }
+
+    .notice{
+      border:1px solid rgba(244,197,66,.28);
+      background:
+        radial-gradient(circle at 15% 0%,rgba(244,197,66,.14),transparent 30%),
+        rgba(255,255,255,.055);
+      border-radius:28px;
+      padding:22px;
+      margin-bottom:18px;
+    }
+
+    .notice h3{
+      color:white;
+      margin-bottom:8px;
+    }
+
+    .notice p{
+      margin:0;
+      color:#cbd5e1;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .grid-4{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .card{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      border-radius:28px;
+      padding:22px;
+      min-height:268px;
+      transition:.24s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(244,197,66,.36);
+      background:rgba(255,255,255,.088);
+      box-shadow:0 24px 85px rgba(0,0,0,.25);
+    }
+
+    .card:after{
+      content:"";
+      position:absolute;
+      width:190px;
+      height:190px;
+      border-radius:999px;
+      right:-95px;
+      top:-95px;
+      background:rgba(24,167,255,.105);
+      pointer-events:none;
+    }
+
+    .card > *{position:relative;z-index:2}
+
+    .icon{
+      width:54px;
+      height:54px;
+      border-radius:20px;
+      display:grid;
+      place-items:center;
+      font-size:25px;
+      color:#06111f;
+      background:linear-gradient(135deg,#fde047,#7dd3fc);
+      box-shadow:0 18px 50px rgba(24,167,255,.16);
+      margin-bottom:16px;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      font-size:14px;
+      margin:9px 0 0;
+    }
+
+    .card-link{
+      display:inline-flex;
+      margin-top:17px;
+      color:#fde68a;
+      font-size:13px;
+      font-weight:950;
+    }
+
+    .topline{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:14px;
+    }
+
+    .avatar{
+      width:56px;
+      height:56px;
+      border-radius:20px;
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+      color:#06111f;
+      background:linear-gradient(135deg,#f4c542,#18a7ff);
+      font-size:18px;
+      font-weight:950;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      width:max-content;
+      max-width:100%;
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(255,255,255,.06);
+      color:#dbeafe;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:11px;
+      line-height:1.1;
+      font-weight:900;
+    }
+
+    .tag.gold{
+      border-color:rgba(244,197,66,.28);
+      background:rgba(244,197,66,.10);
+      color:#fde68a;
+    }
+
+    .tag.green{
+      border-color:rgba(34,197,94,.28);
+      background:rgba(34,197,94,.10);
+      color:#bbf7d0;
+    }
+
+    .tag.blue{
+      border-color:rgba(24,167,255,.28);
+      background:rgba(24,167,255,.10);
+      color:#bae6fd;
+    }
+
+    .tag.violet{
+      border-color:rgba(168,85,247,.28);
+      background:rgba(168,85,247,.11);
+      color:#e9d5ff;
+    }
+
+    .tag.red{
+      border-color:rgba(251,113,133,.28);
+      background:rgba(251,113,133,.10);
+      color:#fecdd3;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+      margin:12px 0 0;
+    }
+
+    .score{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-top:16px;
+    }
+
+    .score-bar{
+      height:8px;
+      flex:1;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      overflow:hidden;
+    }
+
+    .score-fill{
+      height:100%;
+      width:var(--w);
+      border-radius:999px;
+      background:linear-gradient(90deg,#22c55e,#f4c542);
+    }
+
+    .score strong{
+      color:#fde68a;
+      font-size:12px;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:18px;
+    }
+
+    .mini{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      padding:10px 12px;
+      font-size:12px;
+      font-weight:950;
+      background:rgba(255,255,255,.075);
+      color:white;
+      border:1px solid rgba(255,255,255,.14);
+      transition:.2s ease;
+    }
+
+    .mini:hover{
+      transform:translateY(-2px);
+      color:#06111f;
+      background:linear-gradient(90deg,#ffe08a,#f4c542);
+      border-color:transparent;
+    }
+
+    .timeline{
+      display:grid;
+      gap:14px;
+    }
+
+    .timeline-item{
+      display:grid;
+      grid-template-columns:160px 1fr;
+      gap:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.055);
+      border-radius:24px;
+      padding:18px;
+    }
+
+    .datebox{
+      border:1px solid rgba(244,197,66,.28);
+      background:rgba(244,197,66,.10);
+      color:#fde68a;
+      border-radius:18px;
+      padding:14px;
+      font-weight:950;
+      text-align:center;
+      height:max-content;
+    }
+
+    .timeline-item p{
+      margin:8px 0 0;
+      color:#cbd5e1;
+      font-size:14px;
+    }
+
+    .final{
+      margin-top:18px;
+      border:1px solid rgba(244,197,66,.30);
+      border-radius:34px;
+      padding:30px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 10% 10%,rgba(24,167,255,.15),transparent 30%),
+        radial-gradient(circle at 90% 0%,rgba(244,197,66,.16),transparent 30%),
+        rgba(255,255,255,.06);
+    }
+
+    .final .lead{
+      margin-left:auto;
+      margin-right:auto;
+      max-width:780px;
+    }
+
+    .legal{
+      margin-top:18px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      border-radius:24px;
+      padding:18px;
+      color:#94a3b8;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,.12);
+      background:#01040d;
+      padding:28px 0;
+      color:#94a3b8;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .footer-flex{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    footer a{
+      color:#bfdbfe;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    @media(max-width:1100px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid,.grid-4{grid-template-columns:repeat(2,1fr)}
+      .brand{min-width:auto}
+      .nav{justify-content:flex-start}
+    }
+
+    @media(max-width:760px){
+      .wrap{padding:0 15px}
+
+      .topbar{
+        padding:10px 15px;
+        display:grid;
+        grid-template-columns:1fr auto;
+      }
+
+      .brand-sub{display:none}
+
+      .nav{
+        grid-column:1/-1;
+        order:3;
+        width:100%;
+      }
+
+      .brand-title{font-size:14px}
+
+      .page{padding:18px 0 56px}
+
+      .hero{
+        padding:26px;
+        border-radius:30px;
+      }
+
+      h1{
+        font-size:40px;
+        letter-spacing:-.047em;
+      }
+
+      .lead{font-size:16px}
+
+      .hero-actions,.controls{
+        display:grid;
+        grid-template-columns:1fr;
+        width:100%;
+      }
+
+      .btn,.input,.select{
+        width:100%;
+        min-width:0;
+      }
+
+      .stats,.grid,.grid-2,.grid-4{
+        grid-template-columns:1fr;
+      }
+
+      .module{
+        padding:18px;
+        border-radius:28px;
+      }
+
+      .timeline-item{
+        grid-template-columns:1fr;
+      }
+
+      .logic-row{
+        grid-template-columns:35px 1fr;
+      }
+
+      .logic-tag{
+        grid-column:2;
+        width:max-content;
+      }
+
+      .footer-flex{
+        display:block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="topbar">
+      <a class="brand" href="#hub" data-route="hub">
+        <div class="brand-mark">E</div>
+        <div>
+          <div class="brand-title">Emprende360</div>
+          <div class="brand-sub">Partner Hub</div>
+        </div>
+      </a>
+
+      <nav class="nav" id="tabs"></nav>
+
+      <a class="btn btn-whatsapp" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20participar%20en%20Emprende360" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="wrap">
+      <section id="hero"></section>
+
+      <section class="section-head">
+        <div>
+          <h2 id="pageTitle">Partner Hub Emprende360</h2>
+          <p id="pageSubtitle">La capa visible del ecosistema: perfiles, rondas, matches, verticales y oportunidades con contexto.</p>
+        </div>
+        <div class="controls" id="controls"></div>
+      </section>
+
+      <section class="module" id="app"></section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-flex">
+      <div>
+        <b style="color:white">Emprende360 Partner Hub</b><br>
+        <span>Red inteligente de relaciones B2B · Rondas · Partners · Matches · Verticales · AI Match Desk · Decision Desk</span>
+      </div>
+      <div>
+        <a href="https://emprende360.club/privacidad" target="_blank" rel="noopener noreferrer">Privacidad</a> ·
+        <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer">Aviso legal</a> ·
+        <a href="https://emprende360.club/terminos-condiciones" target="_blank" rel="noopener noreferrer">Términos y condiciones</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const LINKS = {
+      home:"https://emprende360.club",
+      ronda:"https://emprende360.club/ronda-alianzas",
+      bolsa:"https://emprende360.club/bolsa-partners",
+      hub:"https://emprende360.club/partner-hub",
+      gracias:"https://emprende360.club/gracias-ronda",
+      channel:"https://whatsapp.com/channel/0029VbD0r5BAInPpCxjdUD47",
+      whatsapp:"https://wa.me/34603153268"
+    };
+
+    const DATA = {
+      partners:[
+        {
+          name:"Alberto Porras Moreno",
+          initials:"AP",
+          role:"Founder de Emprende360",
+          city:"Mijas / España",
+          vertical:"Ecosistema B2B",
+          type:"Organizador",
+          level:"Founder",
+          status:"Núcleo",
+          linkedin:"https://www.linkedin.com/in/albertoporrasmoreno/",
+          value:"Construye y opera Emprende360 como red inteligente de relaciones B2B, rondas, partners, señales, oportunidades y activación con contexto.",
+          seeks:"Líderes de vertical, sponsors, seniors, partners estratégicos y perfiles B2B que quieran construir el ecosistema.",
+          gives:"Red, activación, criterio comercial, rondas, Partner Hub, AI Match Desk y conexión entre perfiles con timing.",
+          score:98
+        },
+        {
+          name:"Alberto Rodilla García",
+          initials:"AR",
+          role:"Mentor e inversor de negocios",
+          city:"Vilanova i la Geltrú / España",
+          vertical:"Mentoría e inversión",
+          type:"Conductor",
+          level:"Senior",
+          status:"Conductor",
+          linkedin:"https://www.linkedin.com/in/alberto-rodilla-garc%C3%ADa-/",
+          value:"Empresario, inversor, mentor y comunicador con fuerza para conducir la ronda y elevar energía, claridad y ritmo.",
+          seeks:"Founders, empresarios, proyectos con potencial y alianzas con perfiles senior.",
+          gives:"Conducción, criterio de negocio, mentalidad de ejecución y visión de crecimiento.",
+          score:96
+        },
+        {
+          name:"Antonio Caminiti, CFA",
+          initials:"AC",
+          role:"Strategic CFO & Finance Business Partner",
+          city:"Barcelona / España",
+          vertical:"CFO / Finance",
+          type:"Participante",
+          level:"Senior",
+          status:"Top perfil",
+          linkedin:"https://www.linkedin.com/in/antoniocaminiti/",
+          value:"CFO senior con experiencia en PE-backed, founder-led, growth-stage, M&A, governance, finance functions e investor-grade reporting.",
+          seeks:"Mandatos CFO, advisory, interim, growth-stage, post-acquisition e inversión.",
+          gives:"Criterio financiero senior, gobierno, reporting, capital allocation, commercial finance y visión board-facing.",
+          score:96
+        },
+        {
+          name:"Víctor Amaro",
+          initials:"VA",
+          role:"CFO | PE-Backed & International",
+          city:"Málaga / España",
+          vertical:"CFO / M&A / Restructuring",
+          type:"Participante",
+          level:"Senior",
+          status:"Top perfil",
+          linkedin:"https://www.linkedin.com/in/victoramaro/",
+          value:"CFO C-Level con experiencia internacional en EBITDA, cash flow, value creation, M&A, restructuring, industrial, pharma, tech y energía.",
+          seeks:"Oportunidades CFO/CEO, PE, transformación financiera, mejora de margen, cash flow y value creation.",
+          gives:"Experiencia en situaciones complejas, finanzas, M&A, restructuring, reporting, cash y control.",
+          score:95
+        },
+        {
+          name:"Antonio Martínez Descalzo",
+          initials:"AMD",
+          role:"Biotech Venture Builder | CEO Novella",
+          city:"Valencia / España",
+          vertical:"Biotech / Venture Building",
+          type:"Participante",
+          level:"Senior",
+          status:"Top perfil",
+          linkedin:"https://www.linkedin.com/in/martinezdescalzo",
+          value:"Founder de Niche Bioventures y CEO de Novella. Perfil internacional en biotech, microbiome, bioactives, functional ingredients, partnerships e investor readiness.",
+          seeks:"Founders, VCs, corporates, science-based ventures, partners e inversores.",
+          gives:"Visión sectorial muy diferencial, venture building, ciencia a mercado, estrategia, comercialización y credibilidad internacional.",
+          score:94
+        },
+        {
+          name:"Pablo Sáez Hurtado",
+          initials:"PS",
+          role:"AI Senior Counsel | LegalTech | IA responsable",
+          city:"Madrid / España",
+          vertical:"Legal / IA / Compliance",
+          type:"Participante",
+          level:"Senior",
+          status:"Top perfil",
+          linkedin:"https://www.linkedin.com/in/pablosaezhurtado",
+          value:"AI Senior Counsel en Delvy, ENATIC, OdiseIA, BeAI, Women in AI y referente en derecho digital, IA responsable, gobernanza y compliance tecnológico.",
+          seeks:"Empresas, despachos, startups, instituciones y proyectos que usen IA con necesidad de marco legal, ética y seguridad.",
+          gives:"Criterio jurídico, IA responsable, compliance, reputación, docencia, comunidad y visión regulatoria.",
+          score:93
+        },
+        {
+          name:"Jose A Díaz Infante",
+          initials:"JD",
+          role:"Founder @ Matrits AI",
+          city:"Madrid / España",
+          vertical:"IA aplicada",
+          type:"Participante",
+          level:"Founder",
+          status:"Top perfil",
+          linkedin:"https://www.linkedin.com/in/joseadiazinfante",
+          value:"Ayuda a empresas a aumentar ventas y reducir carga de trabajo mediante sistemas de IA en 60 días. Ex-Globant, formación IA y automatización.",
+          seeks:"PYMEs, CEOs, equipos comerciales, operaciones y empresas que quieran aplicar IA con ROI.",
+          gives:"IA aplicada, automatización, formación, sistemas, agentes, transformación digital y enfoque práctico.",
+          score:92
+        },
+        {
+          name:"Arnout Bouma",
+          initials:"AB",
+          role:"M&A Distressed & Special Situations",
+          city:"Sevilla / España",
+          vertical:"M&A / Special Situations",
+          type:"Participante",
+          level:"Senior",
+          status:"Top perfil",
+          linkedin:"https://www.linkedin.com/in/arnoutbouma/",
+          value:"Ayuda a encontrar inversores y compradores para negocios complejos, distressed, insolvency, sale of production units y situaciones especiales.",
+          seeks:"Law firms, insolvency practitioners, corporate finance boutiques y operaciones complejas.",
+          gives:"Deal sourcing, distressed M&A, experiencia operativa real, compradores estratégicos e inversores.",
+          score:91
+        },
+        {
+          name:"Paco López-Cerón",
+          initials:"PL",
+          role:"Consultor Senior M&A | ICB Consulting",
+          city:"Barcelona / España",
+          vertical:"M&A / Deals",
+          type:"Participante",
+          level:"Senior",
+          status:"Top perfil",
+          linkedin:"https://www.linkedin.com/in/pacolopez-ceron-comprayventadeempresas-deals",
+          value:"Más de 15 años en compraventa, valoración, financiación y M&A desde ICB Consulting, con presencia internacional y foco en empresas.",
+          seeks:"Empresarios que quieran vender, comprar, valorar o financiar empresas.",
+          gives:"M&A, deals, valoración, financiación, estrategia, red amplia y posicionamiento de operaciones.",
+          score:90
+        },
+        {
+          name:"Josep Pere Gutiérrez",
+          initials:"JPG",
+          role:"Corporate Finance / M&A",
+          city:"España",
+          vertical:"Corporate Finance",
+          type:"Participante",
+          level:"Senior",
+          status:"Muy valioso",
+          linkedin:"https://www.linkedin.com/in/josepperegutierrez/",
+          value:"Perfil corporate finance/M&A. Muy útil para reforzar la ronda con visión de operaciones corporativas y transacciones.",
+          seeks:"Operaciones, empresas, M&A, capital y colaboración con advisors.",
+          gives:"Criterio de corporate finance, transacciones, análisis y conexión con ecosistema M&A.",
+          score:89
+        },
+        {
+          name:"Tatiana Larina",
+          initials:"TL",
+          role:"Consultora estratégica | Método Black Rabbit",
+          city:"Valencia / España",
+          vertical:"Empresa familiar / M&A",
+          type:"Participante",
+          level:"Senior",
+          status:"Muy valioso",
+          linkedin:"https://www.linkedin.com/in/tatiana-larina-a057a4181",
+          value:"Diagnóstico estructural para empresas familiares, M&A, financiación y software propio para decidir con datos reales en tiempo real.",
+          seeks:"Empresas familiares, inversores, fondos, operaciones de financiación, venta, sucesión o reestructuración.",
+          gives:"Diagnóstico estructural, software propio, margen, caja, riesgos, empresa familiar, M&A y financiación.",
+          score:89
+        },
+        {
+          name:"David de la Calle Armesto",
+          initials:"DC",
+          role:"Agroalimentario / M&A / Crecimiento",
+          city:"España",
+          vertical:"Agroalimentario / M&A",
+          type:"Participante",
+          level:"Senior",
+          status:"Muy valioso",
+          linkedin:"https://www.linkedin.com/in/daviddelacallearmesto",
+          value:"Perfil interesante para vertical agroalimentario, profesionalización, crecimiento y operaciones corporativas.",
+          seeks:"Empresas agroalimentarias, operaciones, partners, crecimiento y profesionalización.",
+          gives:"Visión sectorial, experiencia en agro, M&A, negocio real y enfoque empresarial.",
+          score:86
+        },
+        {
+          name:"Santiago Cavero",
+          initials:"SC",
+          role:"Fundador de BALANZIA",
+          city:"España",
+          vertical:"Financiación bancaria",
+          type:"Participante",
+          level:"Senior",
+          status:"Muy valioso",
+          linkedin:"https://www.linkedin.com/in/santiago-cavero/",
+          value:"Ayuda a pymes a llegar al banco con los deberes hechos, interpretando datos financieros con criterio bancario.",
+          seeks:"Pymes que necesitan financiación, preparación bancaria, reporting o claridad financiera.",
+          gives:"Criterio bancario, análisis financiero, preparación para financiación y lectura de riesgo.",
+          score:86
+        },
+        {
+          name:"Luis Redrado Vaquero",
+          initials:"LR",
+          role:"Auditoría, consultoría estratégica y M&A",
+          city:"España",
+          vertical:"Auditoría / M&A",
+          type:"Participante",
+          level:"Senior",
+          status:"Muy valioso",
+          linkedin:"https://www.linkedin.com/in/luis-redrado-vaquero-458b181b/",
+          value:"Socio de auditoría, consultoría estratégica y M&A. Posiciona financieramente a pymes para afrontar retos estratégicos.",
+          seeks:"Pymes con retos estratégicos, auditoría, M&A, financiación y profesionalización.",
+          gives:"Auditoría, consultoría estratégica, M&A, finanzas y estructura para pymes.",
+          score:85
+        },
+        {
+          name:"Diego López García",
+          initials:"DL",
+          role:"CAPEX & Industrial Strategy Lead",
+          city:"España",
+          vertical:"Industria / CAPEX",
+          type:"Participante",
+          level:"Senior",
+          status:"Muy valioso",
+          linkedin:"https://www.linkedin.com/in/diego-l-62790b344/",
+          value:"CAPEX, industrialization, manufacturing engineering, plant engineering, global equipment y process owner.",
+          seeks:"Proyectos industriales, CAPEX, expansión productiva, procesos, plantas y eficiencia.",
+          gives:"Visión industrial real, CAPEX, operaciones, manufactura, tecnología de proceso y ejecución.",
+          score:85
+        },
+        {
+          name:"Beatriz Morales Gil de la Torre",
+          initials:"BM",
+          role:"Real estate estratégico",
+          city:"España",
+          vertical:"Real Estate / Expansión",
+          type:"Participante",
+          level:"Senior",
+          status:"Muy valioso",
+          linkedin:"https://www.linkedin.com/in/beatriz-morales-gil-de-la-torre",
+          value:"Ayuda a decidir qué conviene construir y dónde antes de invertir: parques industriales, centros comerciales, hoteles, sucursales y desarrollos.",
+          seeks:"Promotores, inversores, operadores, expansión física y proyectos inmobiliarios.",
+          gives:"Criterio de localización, inversión, desarrollo, expansión por activos y análisis previo.",
+          score:84
+        },
+        {
+          name:"Noemy Suárez",
+          initials:"NS",
+          role:"Strategic Commercial Interior Design",
+          city:"España",
+          vertical:"Retail / Hospitality",
+          type:"Participante",
+          level:"Especialista",
+          status:"Muy valioso",
+          linkedin:"https://www.linkedin.com/in/noemysuarez",
+          value:"Diseña entornos para hospitality, restaurantes y retail que elevan percepción, flujo, customer spend y rendimiento por metro cuadrado.",
+          seeks:"Restaurantes, hoteles, retail, franquicias y negocios físicos con crecimiento o reforma.",
+          gives:"Diseño estratégico, experiencia cliente, performance por metro cuadrado, posicionamiento y visión comercial del espacio.",
+          score:84
+        },
+        {
+          name:"Raúl Hernández I Sales",
+          initials:"RH",
+          role:"Industrial IoT | GTM | Partnerships",
+          city:"España",
+          vertical:"Industrial IoT / Ventas B2B",
+          type:"Participante",
+          level:"Senior",
+          status:"Muy valioso",
+          linkedin:"https://www.linkedin.com/in/raulhernandez-sales",
+          value:"Head of Sales & Partnerships en Awayter. Convierte tecnología B2B compleja en claridad comercial e inversión.",
+          seeks:"Fabricantes, industria, partners tecnológicos, integradores, GTM y revenue.",
+          gives:"Industrial IoT, partnerships, ventas complejas, claridad comercial, GTM y tecnología aplicada.",
+          score:84
+        },
+        {
+          name:"Alejandra Nuño",
+          initials:"AN",
+          role:"Sustainable Growth / Speaker",
+          city:"España / internacional",
+          vertical:"Sostenibilidad / Comunicación",
+          type:"Participante",
+          level:"Senior",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/alejandranuno",
+          value:"Perfil de crecimiento sostenible, comunicación, liderazgo, visibilidad y contenido.",
+          seeks:"Alianzas, empresas, eventos, formación, comunicación y proyectos con impacto.",
+          gives:"Reputación, contenido, comunicación, sostenibilidad, liderazgo y visibilidad.",
+          score:81
+        },
+        {
+          name:"Alejandro Martín",
+          initials:"AM",
+          role:"Growth comercial / mentoría",
+          city:"España",
+          vertical:"Growth B2B",
+          type:"Participante",
+          level:"Senior",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/alejandromartinmentor",
+          value:"Ayuda a negocios con hambre de crecer a estructurar ventas, enfoque comercial y desarrollo.",
+          seeks:"Empresas que quieren crecer, vender más, estructurar ventas o encontrar partners.",
+          gives:"Ventas, growth, enfoque comercial, ejecución y mentalidad de desarrollo.",
+          score:81
+        },
+        {
+          name:"Rod Paniagua",
+          initials:"RP",
+          role:"Estratega comercial y arquitecto de negocios",
+          city:"España / LATAM",
+          vertical:"Growth / Estrategia comercial",
+          type:"Participante",
+          level:"Founder",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/rodpaniaguap/",
+          value:"Fundador y CEO con foco en estrategia comercial y arquitectura de negocios en industria, deporte y media.",
+          seeks:"Empresas que necesitan crecimiento, estrategia comercial, partners y estructura.",
+          gives:"Arquitectura de negocio, estrategia comercial, ventas B2B y visión España-LATAM.",
+          score:80
+        },
+        {
+          name:"Ignacio del Hierro",
+          initials:"IDH",
+          role:"CFO / Dirección financiera / Operaciones",
+          city:"España",
+          vertical:"CFO / Operaciones",
+          type:"Participante",
+          level:"Senior",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/ignaciodelhierro-cfo-director-financiero-operaciones/",
+          value:"Perfil financiero-operativo para dirección financiera, control, operaciones y profesionalización.",
+          seeks:"Pymes, empresas en crecimiento, proyectos financieros y de operaciones.",
+          gives:"CFO, finanzas, operaciones, control, reporting y ejecución.",
+          score:79
+        },
+        {
+          name:"Lourdes J. Moreno",
+          initials:"LM",
+          role:"IA / Transformación / Liderazgo",
+          city:"España",
+          vertical:"IA / Liderazgo",
+          type:"Participante",
+          level:"Senior",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/lourdes-j-moreno/",
+          value:"Perfil útil para vertical IA, liderazgo, transformación, formación y participación en rondas temáticas.",
+          seeks:"Empresas, líderes, profesionales y proyectos de transformación.",
+          gives:"IA, liderazgo, formación, transformación y comunidad.",
+          score:77
+        },
+        {
+          name:"Sebastián Romano",
+          initials:"SR",
+          role:"IA / Marketing digital / formación",
+          city:"España",
+          vertical:"IA / Marketing",
+          type:"Participante",
+          level:"Especialista",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/sebastian-romano",
+          value:"Perfil útil para IA, marketing digital, educación y contenidos aplicados.",
+          seeks:"Empresas, formación, alianzas y proyectos digitales.",
+          gives:"Marketing digital, IA, formación, estrategia y contenido.",
+          score:76
+        },
+        {
+          name:"Jose Gámez",
+          initials:"JG",
+          role:"Software / Sistemas / ISO",
+          city:"España",
+          vertical:"Software / Procesos",
+          type:"Participante",
+          level:"Especialista",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/gamez",
+          value:"Perfil técnico y de procesos, útil para vertical de sistemas, calidad, software y operaciones.",
+          seeks:"Empresas con necesidad de software, procesos, sistemas y mejora.",
+          gives:"Software, sistemas, ISO, procesos y soporte técnico-operativo.",
+          score:75
+        },
+        {
+          name:"César Marcé",
+          initials:"CM",
+          role:"Transformación digital PYME con IA",
+          city:"La Habana / Cuba",
+          vertical:"IA / PYME",
+          type:"Participante",
+          level:"Founder",
+          status:"Historia potente",
+          linkedin:"https://www.linkedin.com/in/cesar-marce-bazarmarce-calzado-artesanal/",
+          value:"Transformó su PYME con IA desde Cuba. Puede aportar historia real, transformación digital y visión práctica para pymes.",
+          seeks:"Pymes, transformación digital, IA aplicada y alianzas.",
+          gives:"Caso real, IA práctica, transformación de pyme, aprendizaje y narrativa diferencial.",
+          score:75
+        },
+        {
+          name:"Sandra Cabrera",
+          initials:"SCB",
+          role:"Consultora estratégica para pymes",
+          city:"España",
+          vertical:"Estrategia PYME",
+          type:"Participante",
+          level:"Founder",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/sandra-cabrera-aragunde",
+          value:"Fundadora y consultora estratégica para pymes con foco en propósito, estructura y crecimiento.",
+          seeks:"Pymes, founders y empresas que necesitan estructura y dirección.",
+          gives:"Estrategia, claridad, estructura, propósito y crecimiento.",
+          score:74
+        },
+        {
+          name:"Adrián Jorge Vagnozzi",
+          initials:"AV",
+          role:"Founder & CEO en Fuego Compartido",
+          city:"España / LATAM",
+          vertical:"RSE / Impacto",
+          type:"Participante",
+          level:"Founder",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/adrian-jorge-vagnozzi-2914028a/",
+          value:"Trabaja responsabilidad social empresarial, comunicación y proyectos con impacto.",
+          seeks:"Empresas, marcas, proyectos de impacto, RSE y alianzas.",
+          gives:"RSE, comunicación, impacto, comunidad y visión social.",
+          score:73
+        },
+        {
+          name:"Manuel Cobos Gallardo",
+          initials:"MC",
+          role:"Consultoría / Desarrollo de negocio",
+          city:"España",
+          vertical:"Growth / Leads",
+          type:"Participante",
+          level:"Especialista",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/manuelcobosgallardo/",
+          value:"Perfil útil para growth, leads, conversión y desarrollo de negocio.",
+          seeks:"Empresas, partners y proyectos de crecimiento.",
+          gives:"Desarrollo comercial, captación y colaboración B2B.",
+          score:72
+        },
+        {
+          name:"Sergio Viniegra",
+          initials:"SV",
+          role:"Business case / Análisis de proyectos",
+          city:"España",
+          vertical:"Inversión / Decisión",
+          type:"Participante",
+          level:"Especialista",
+          status:"Valioso",
+          linkedin:"https://www.linkedin.com/in/sergio-viniegra",
+          value:"Perfil útil para business case, análisis de proyectos, inversión y toma de decisiones.",
+          seeks:"Proyectos, inversión, análisis y colaboración.",
+          gives:"Análisis, estructura, business case y criterio de decisión.",
+          score:72
+        }
+      ],
+
+      matches:[
+        {
+          title:"Mesa CFO & Funding Readiness",
+          type:"Finanzas",
+          priority:"Alta",
+          people:"Antonio Caminiti · Víctor Amaro · Santiago Cavero · Luis Redrado · Ignacio del Hierro",
+          reason:"Hay masa crítica para una mesa de caja, financiación, reporting, margen, M&A y control de crecimiento.",
+          next:"Activar ronda vertical CFO / financiación y convertirla en línea premium dentro de Emprende360.",
+          score:94
+        },
+        {
+          title:"IA aplicada + IA responsable",
+          type:"IA / Legal",
+          priority:"Alta",
+          people:"Jose A Díaz Infante · Pablo Sáez Hurtado · Lourdes Moreno · Sebastián Romano",
+          reason:"Combina implementación práctica, automatización, regulación, AI Act, gobierno y formación. Muy vendible para empresas.",
+          next:"Diseñar una ronda IA con ROI + seguridad + adopción real.",
+          score:91
+        },
+        {
+          title:"M&A, empresa familiar y situaciones especiales",
+          type:"M&A",
+          priority:"Alta",
+          people:"Arnout Bouma · Paco López-Cerón · Josep Pere · Tatiana Larina · David de la Calle",
+          reason:"Bloque muy senior para sucesión, venta, compra, distressed, empresa familiar, preparación y financiación.",
+          next:"Crear vertical M&A / Investor Readiness con mesa privada.",
+          score:90
+        },
+        {
+          title:"Retail, hospitality y espacios físicos rentables",
+          type:"Retail / Hospitality",
+          priority:"Media-alta",
+          people:"Noemy Suárez · Beatriz Morales · perfiles CFO · Growth B2B",
+          reason:"Cruza ubicación, espacio, ticket medio, margen, inversión, experiencia y expansión por sedes.",
+          next:"Ronda temática: crecimiento rentable en negocios con locales.",
+          score:86
+        },
+        {
+          title:"Industria, CAPEX e IoT",
+          type:"Industria",
+          priority:"Media-alta",
+          people:"Diego López · Raúl Hernández · perfiles CFO / financiación",
+          reason:"Hay puente claro entre inversión industrial, financiación, tecnología, productividad, IoT y control.",
+          next:"Diseñar vertical industria/CAPEX/productividad.",
+          score:85
+        },
+        {
+          title:"Growth B2B y activación comercial",
+          type:"Growth",
+          priority:"Media",
+          people:"Alejandro Martín · Rod Paniagua · Manuel Cobos · Alberto Porras",
+          reason:"Puede servir para estructurar oferta, activación, mensajes, colaboraciones y crecimiento dentro del ecosistema.",
+          next:"Activar bloque de growth y oportunidades B2B.",
+          score:80
+        }
+      ],
+
+      verticals:[
+        {
+          name:"CFO, Caja y Financiación",
+          icon:"💼",
+          status:"Lista para activar",
+          people:"Antonio Caminiti, Víctor Amaro, Santiago Cavero, Luis Redrado, Ignacio del Hierro",
+          text:"La vertical más alineada con Decision Desk: caja, margen, reporting, financiación, control y crecimiento rentable.",
+          score:96
+        },
+        {
+          name:"IA aplicada a negocio",
+          icon:"🤖",
+          status:"Muy atractiva",
+          people:"Jose A Díaz Infante, Pablo Sáez, Lourdes Moreno, Sebastián Romano",
+          text:"IA práctica, automatización, adopción, regulación, seguridad, formación y ROI empresarial.",
+          score:92
+        },
+        {
+          name:"M&A, empresa familiar e inversión",
+          icon:"🏛️",
+          status:"Alta autoridad",
+          people:"Arnout Bouma, Paco López-Cerón, Josep Pere, Tatiana Larina, David de la Calle",
+          text:"Compraventa, sucesión, distressed, preparación financiera, entrada de inversores y situaciones especiales.",
+          score:91
+        },
+        {
+          name:"Retail, hospitality y expansión física",
+          icon:"🏨",
+          status:"Diferencial",
+          people:"Noemy Suárez, Beatriz Morales, CFOs y perfiles growth",
+          text:"Locales, hoteles, restaurantes, expansión, inversión, experiencia cliente, margen por unidad y rendimiento por m².",
+          score:86
+        },
+        {
+          name:"Industria, CAPEX y productividad",
+          icon:"🏭",
+          status:"Potencial alto",
+          people:"Diego López, Raúl Hernández, CFOs, financiación",
+          text:"Plantas, CAPEX, ingeniería, IoT, productividad, procesos, financiación e inversión industrial.",
+          score:85
+        },
+        {
+          name:"Growth B2B y alianzas",
+          icon:"🚀",
+          status:"Activable",
+          people:"Alberto Porras, Alejandro Martín, Rod Paniagua, Manuel Cobos",
+          text:"Activación comercial, mensajes, colaboraciones, partners, clientes potenciales y ecosistema B2B.",
+          score:82
+        }
+      ],
+
+      rounds:[
+        {
+          date:"Hoy",
+          title:"Ronda de Alianzas B2B",
+          status:"Activa",
+          format:"Mesa guiada + LinkedIn Live",
+          text:"Primera ronda para presentar perfiles senior, detectar sinergias y mostrar que Emprende360 ya tiene movimiento real.",
+          cta:"Ver landing de la ronda",
+          url:"https://emprende360.club/ronda-alianzas"
+        },
+        {
+          date:"Junio",
+          title:"Ronda CFO, Caja y Financiación",
+          status:"Propuesta",
+          format:"Vertical temática",
+          text:"Mesa para pymes, CFOs, financiación, reporting, control, margen y preparación para banco o inversores.",
+          cta:"Solicitar plaza",
+          url:"https://wa.me/34603153268?text=Hola%20Alberto%2C%20me%20interesa%20la%20ronda%20CFO%20y%20Financiaci%C3%B3n"
+        },
+        {
+          date:"Junio",
+          title:"Ronda IA aplicada con criterio",
+          status:"Propuesta",
+          format:"Vertical temática",
+          text:"Mesa para separar IA útil de humo: ROI, automatización, procesos, adopción, legal, seguridad y gobierno.",
+          cta:"Solicitar plaza",
+          url:"https://wa.me/34603153268?text=Hola%20Alberto%2C%20me%20interesa%20la%20ronda%20de%20IA%20aplicada"
+        },
+        {
+          date:"Junio",
+          title:"Ronda M&A, empresa familiar e inversión",
+          status:"Propuesta",
+          format:"Mesa privada",
+          text:"Para empresarios, advisors, inversores, M&A, sucesión, compra/venta, financiación y situaciones especiales.",
+          cta:"Solicitar plaza",
+          url:"https://wa.me/34603153268?text=Hola%20Alberto%2C%20me%20interesa%20la%20ronda%20M%26A%20y%20empresa%20familiar"
+        }
+      ],
+
+      movement:[
+        {
+          date:"Ahora",
+          title:"Primera Ronda de Alianzas B2B activada",
+          text:"Perfiles senior confirmados en finanzas, M&A, IA, legal, biotech, real estate, retail, industria y growth.",
+          metric:"Mesa con autoridad"
+        },
+        {
+          date:"Ahora",
+          title:"Partner Hub como escaparate del ecosistema",
+          text:"El hub ordena perfiles, verticales, matches, rondas y oportunidades para que la gente vea que aquí hay movimiento real.",
+          metric:"Contexto visible"
+        },
+        {
+          date:"Junio",
+          title:"Núcleo activo de participantes",
+          text:"Entrada para quienes quieren quedar mejor posicionados, participar con prioridad o liderar una vertical.",
+          metric:"Calidad + foco"
+        },
+        {
+          date:"Siguiente",
+          title:"AI Match Desk interno",
+          text:"Cruzar perfiles, intención, verticales y señales para detectar con quién tiene sentido hablar, por qué y con qué ángulo.",
+          metric:"IA + curación humana"
+        },
+        {
+          date:"Después",
+          title:"Decision Desk premium",
+          text:"Cuando haya empresas con señales reales, activar una mesa senior para caja, margen, control, financiación y crecimiento rentable.",
+          metric:"Ticket alto"
+        }
+      ]
+    };
+
+    const PAGES = [
+      {id:"hub", label:"Hub", title:"Partner Hub Emprende360", subtitle:"La capa visible del ecosistema: perfiles, rondas, matches, verticales, oportunidades y movimiento real."},
+      {id:"participantes", label:"Participantes", title:"Participantes y perfiles destacados", subtitle:"Perfiles ordenados por seniority, vertical, aportación y potencial de conexión dentro del ecosistema."},
+      {id:"matches", label:"Matches", title:"Matches sugeridos", subtitle:"Hipótesis de conexión entre perfiles. No son intros automáticas: se validan con contexto y permiso."},
+      {id:"verticales", label:"Verticales", title:"Verticales activables", subtitle:"Categorías donde ya hay masa crítica para crear rondas, mesas, sponsors o líderes de vertical."},
+      {id:"rondas", label:"Rondas", title:"Rondas y mesas temáticas", subtitle:"Próximas rondas generales y verticales para activar relaciones B2B con más contexto."},
+      {id:"movimiento", label:"Movimiento", title:"Movimiento + Roadmap", subtitle:"Qué está pasando ahora, hacia dónde va Emprende360 y cómo se convierte en red inteligente B2B."}
+    ];
+
+    let state = {
+      page:"hub",
+      q:"",
+      filters:{}
+    };
+
+    function esc(str){
+      return String(str ?? "").replace(/[&<>"']/g, s => ({
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#039;"
+      }[s]));
+    }
+
+    function wa(text){
+      return LINKS.whatsapp + "?text=" + encodeURIComponent(text);
+    }
+
+    function unique(arr,key){
+      return [...new Set(arr.map(x=>x[key]).filter(Boolean))].sort();
+    }
+
+    function matchText(item){
+      const q = state.q.trim().toLowerCase();
+      if(!q) return true;
+      return JSON.stringify(item).toLowerCase().includes(q);
+    }
+
+    function matchFilters(item){
+      for(const [k,v] of Object.entries(state.filters)){
+        if(v && v !== "Todos" && item[k] !== v) return false;
+      }
+      return true;
+    }
+
+    function tags(arr){
+      return `<div class="tags">${arr.filter(Boolean).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div>`;
+    }
+
+    function setPage(id){
+      state.page = id;
+      state.q = "";
+      state.filters = {};
+      location.hash = id;
+      render();
+      window.scrollTo({top:0, behavior:"smooth"});
+    }
+
+    function currentPage(){
+      return PAGES.find(p=>p.id===state.page) || PAGES[0];
+    }
+
+    function renderTabs(){
+      const el = document.getElementById("tabs");
+      el.innerHTML = PAGES.map(p=>`
+        <button class="tab ${p.id===state.page ? "active":""}" data-page="${p.id}">${esc(p.label)}</button>
+      `).join("");
+
+      el.querySelectorAll("[data-page]").forEach(btn=>{
+        btn.addEventListener("click",()=>setPage(btn.dataset.page));
+      });
+    }
+
+    function renderHero(){
+      const el = document.getElementById("hero");
+      if(state.page !== "hub"){
+        el.innerHTML = "";
+        return;
+      }
+
+      el.innerHTML = `
+        <div class="hero">
+          <div class="hero-grid">
+            <div>
+              <span class="pill">AI Relationship Network · Emprende360</span>
+              <h1><span class="grad">La red B2B donde el contexto vale más que el contacto.</span></h1>
+              <p class="lead">
+                Emprende360 no quiere ser otro grupo de networking. Estamos construyendo una red inteligente para ordenar perfiles, intención, verticales, señales y posibles relaciones útiles.
+              </p>
+              <p class="small muted">
+                LinkedIn muestra perfiles. Emprende360 ayuda a entender con quién tiene sentido hablar, por qué motivo y qué siguiente paso puede activar una conversación real.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#participantes" data-route="participantes">Ver perfiles destacados →</a>
+                <a class="btn btn-secondary" href="#matches" data-route="matches">Ver matches sugeridos</a>
+                <a class="btn btn-whatsapp" href="${LINKS.channel}" target="_blank" rel="noopener noreferrer">Canal WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="signal-panel">
+              <h3>La lógica del nuevo Emprende360</h3>
+              <p class="small">
+                La IA ordena. La curación humana valida. Las rondas activan. El Partner Hub hace visible el movimiento.
+              </p>
+
+              <div class="logic">
+                <div class="logic-row">
+                  <div class="logic-num">1</div>
+                  <div><b>Perfil</b><span>Qué hace, qué busca, qué aporta y dónde encaja.</span></div>
+                  <div class="logic-tag">Contexto</div>
+                </div>
+                <div class="logic-row">
+                  <div class="logic-num">2</div>
+                  <div><b>Intención</b><span>Clientes, partners, inversión, talento, sponsors, verticales.</span></div>
+                  <div class="logic-tag">Timing</div>
+                </div>
+                <div class="logic-row">
+                  <div class="logic-num">3</div>
+                  <div><b>Match</b><span>Conexiones sugeridas con motivo claro y permiso.</span></div>
+                  <div class="logic-tag">Relación</div>
+                </div>
+                <div class="logic-row">
+                  <div class="logic-num">4</div>
+                  <div><b>Activación</b><span>Rondas, mesas, verticales, sponsors y Decision Desk.</span></div>
+                  <div class="logic-tag">Negocio</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><b>30+</b><span>perfiles participantes o candidatos priorizados</span></div>
+            <div class="stat"><b>6</b><span>verticales claras para activar en junio</span></div>
+            <div class="stat"><b>20+</b><span>matches potenciales con contexto</span></div>
+            <div class="stat"><b>1</b><span>núcleo inicial de relaciones B2B</span></div>
+          </div>
+        </div>
+      `;
+
+      el.querySelectorAll("[data-route]").forEach(x=>{
+        x.addEventListener("click",e=>{
+          e.preventDefault();
+          setPage(x.dataset.route);
+        });
+      });
+    }
+
+    function selectHTML(key,label,options){
+      return `
+        <select class="select" data-filter="${esc(key)}">
+          <option value="Todos">${esc(label)}: todos</option>
+          ${options.map(o=>`<option value="${esc(o)}" ${state.filters[key]===o ? "selected":""}>${esc(o)}</option>`).join("")}
+        </select>
+      `;
+    }
+
+    function renderControls(){
+      const el = document.getElementById("controls");
+      let html = "";
+
+      if(["participantes","matches","verticales"].includes(state.page)){
+        html += `<input id="search" class="input" placeholder="Buscar..." value="${esc(state.q)}">`;
+      }
+
+      if(state.page === "participantes"){
+        html += selectHTML("vertical","Vertical",unique(DATA.partners,"vertical"));
+        html += selectHTML("status","Estado",unique(DATA.partners,"status"));
+      }
+
+      if(state.page === "matches"){
+        html += selectHTML("type","Tipo",unique(DATA.matches,"type"));
+        html += selectHTML("priority","Prioridad",unique(DATA.matches,"priority"));
+      }
+
+      if(state.page === "verticales"){
+        html += selectHTML("status","Estado",unique(DATA.verticals,"status"));
+      }
+
+      el.innerHTML = html;
+
+      const search = document.getElementById("search");
+      if(search){
+        search.addEventListener("input",e=>{
+          state.q = e.target.value;
+          renderApp();
+        });
+      }
+
+      el.querySelectorAll("[data-filter]").forEach(sel=>{
+        sel.addEventListener("change",e=>{
+          state.filters[e.target.dataset.filter] = e.target.value;
+          renderApp();
+        });
+      });
+    }
+
+    function render(){
+      const p = currentPage();
+      document.getElementById("pageTitle").textContent = p.title;
+      document.getElementById("pageSubtitle").textContent = p.subtitle;
+      renderTabs();
+      renderHero();
+      renderControls();
+      renderApp();
+    }
+
+    function renderApp(){
+      const pages = {
+        hub: hubHTML,
+        participantes: participantesHTML,
+        matches: matchesHTML,
+        verticales: verticalesHTML,
+        rondas: rondasHTML,
+        movimiento: movimientoHTML
+      };
+
+      document.getElementById("app").innerHTML = (pages[state.page] || hubHTML)();
+
+      document.querySelectorAll("[data-route]").forEach(x=>{
+        x.addEventListener("click",e=>{
+          e.preventDefault();
+          setPage(x.dataset.route);
+        });
+      });
+    }
+
+    function hubHTML(){
+      const tiles = [
+        {icon:"👥", title:"Participantes destacados", text:"Perfiles senior y especialistas ordenados por vertical, valor y posible aportación.", route:"participantes"},
+        {icon:"🤝", title:"Matches sugeridos", text:"Hipótesis de conexión entre perfiles con contexto, no intros automáticas.", route:"matches"},
+        {icon:"🧭", title:"Verticales activables", text:"CFO, IA, M&A, retail/hospitality, industria, growth y más.", route:"verticales"},
+        {icon:"🔁", title:"Rondas y mesas", text:"Rondas generales y temáticas para activar confianza, conversación y oportunidades.", route:"rondas"},
+        {icon:"📈", title:"Movimiento + Roadmap", text:"Qué está pasando ahora y hacia dónde va la red inteligente B2B.", route:"movimiento"}
+      ];
+
+      return `
+        <div class="notice">
+          <h3>Esto no es una lista de asistentes. Es el primer mapa vivo de una red B2B con contexto.</h3>
+          <p>
+            El Partner Hub muestra quién está, qué verticales empiezan a tener densidad, qué conexiones pueden tener sentido y cómo alguien puede participar de forma más activa.
+          </p>
+        </div>
+
+        <div class="grid">
+          ${tiles.map(t=>`
+            <article class="card">
+              <div class="icon">${t.icon}</div>
+              <h3>${esc(t.title)}</h3>
+              <p>${esc(t.text)}</p>
+              <a class="card-link" href="#${esc(t.route)}" data-route="${esc(t.route)}">Abrir →</a>
+            </article>
+          `).join("")}
+        </div>
+
+        <div class="final">
+          <span class="pill">Núcleo activo</span>
+          <h2 style="margin-top:16px"><span class="grad">Si quieres estar mejor ubicado, hay que entrar con contexto.</span></h2>
+          <p class="lead">
+            No buscamos llenar una comunidad. Buscamos perfiles que aporten, encajen en verticales concretas y puedan activar relaciones útiles dentro del ecosistema.
+          </p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-primary" href="${wa("Hola Alberto, quiero valorar cómo participar de forma más activa en Emprende360. Te paso mi perfil: ")}" target="_blank" rel="noopener noreferrer">Solicitar participación activa →</a>
+            <a class="btn btn-secondary" href="${LINKS.bolsa}" target="_blank" rel="noopener noreferrer">Entrar en Bolsa</a>
+            <a class="btn btn-whatsapp" href="${LINKS.channel}" target="_blank" rel="noopener noreferrer">Seguir canal</a>
+          </div>
+        </div>
+
+        <div class="legal">
+          Nota: Emprende360 facilita visibilidad, contexto, rondas, posibles matches y conversaciones útiles. No garantiza clientes, ventas, inversión, financiación, empleo, colaboraciones ni resultados concretos.
+        </div>
+      `;
+    }
+
+    function participantesHTML(){
+      const list = DATA.partners.filter(matchText).filter(matchFilters).sort((a,b)=>b.score-a.score);
+
+      return `
+        <div class="notice">
+          <h3>Orden visual recomendado</h3>
+          <p>
+            Primero autoridad y seniority. Después verticales concretas. Luego growth, comunidad y perfiles complementarios. Así la ronda transmite nivel desde el minuto uno.
+          </p>
+        </div>
+
+        <div class="grid">
+          ${list.map(partnerCard).join("")}
+        </div>
+      `;
+    }
+
+    function partnerCard(p){
+      return `
+        <article class="card">
+          <div class="topline">
+            <div class="avatar">${esc(p.initials)}</div>
+            <span class="tag ${p.status.includes("Top") || p.status==="Núcleo" || p.status==="Conductor" ? "gold" : p.status.includes("Muy") ? "green" : "blue"}">${esc(p.status)}</span>
+          </div>
+
+          <h3>${esc(p.name)}</h3>
+          <p><strong>${esc(p.role)}</strong><br>${esc(p.city)}</p>
+          ${tags([p.vertical,p.type,p.level])}
+
+          <p><strong>Valor:</strong> ${esc(p.value)}</p>
+          <p><strong>Busca:</strong> ${esc(p.seeks)}</p>
+          <p><strong>Aporta:</strong> ${esc(p.gives)}</p>
+
+          <div class="score">
+            <div class="score-bar"><div class="score-fill" style="--w:${Math.max(5,Math.min(100,p.score))}%"></div></div>
+            <strong>${p.score}</strong>
+          </div>
+
+          <div class="actions">
+            ${p.linkedin ? `<a class="mini" href="${esc(p.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn</a>` : ""}
+            <a class="mini" href="${wa("Hola Alberto, me interesa solicitar una intro o revisar posible colaboración con " + p.name + ". Mi contexto es: ")}" target="_blank" rel="noopener noreferrer">Solicitar intro</a>
+          </div>
+        </article>
+      `;
+    }
+
+    function matchesHTML(){
+      const list = DATA.matches.filter(matchText).filter(matchFilters).sort((a,b)=>b.score-a.score);
+
+      return `
+        <div class="notice">
+          <h3>AI Match Desk + curación humana</h3>
+          <p>
+            Estos matches son hipótesis estratégicas. La IA ayuda a cruzar perfiles, pero la introducción debe validarse con criterio, permiso y motivo claro.
+          </p>
+        </div>
+
+        <div class="grid">
+          ${list.map(m=>`
+            <article class="card">
+              <div class="topline">
+                <span class="tag gold">${esc(m.type)}</span>
+                <span class="tag green">${esc(m.priority)}</span>
+              </div>
+              <h3>${esc(m.title)}</h3>
+              <p><strong>Perfiles:</strong> ${esc(m.people)}</p>
+              <p><strong>Por qué puede tener sentido:</strong> ${esc(m.reason)}</p>
+              <p><strong>Siguiente acción:</strong> ${esc(m.next)}</p>
+              <div class="score">
+                <div class="score-bar"><div class="score-fill" style="--w:${Math.max(5,Math.min(100,m.score))}%"></div></div>
+                <strong>${m.score}</strong>
+              </div>
+              <div class="actions">
+                <a class="mini" href="${wa("Hola Alberto, me interesa este match del Partner Hub: " + m.title + ". Quiero revisarlo.")}" target="_blank" rel="noopener noreferrer">Me interesa</a>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function verticalesHTML(){
+      const list = DATA.verticals.filter(matchText).filter(matchFilters).sort((a,b)=>b.score-a.score);
+
+      return `
+        <div class="notice">
+          <h3>Las verticales donde puede haber negocio</h3>
+          <p>
+            No hay que abrir 20 líneas. Hay que empezar por las verticales con densidad, seniority, capacidad de pago y conexión directa con rondas o Decision Desk.
+          </p>
+        </div>
+
+        <div class="grid">
+          ${list.map(v=>`
+            <article class="card">
+              <div class="icon">${v.icon}</div>
+              <span class="tag gold">${esc(v.status)}</span>
+              <h3 style="margin-top:12px">${esc(v.name)}</h3>
+              <p>${esc(v.text)}</p>
+              <p><strong>Perfiles base:</strong> ${esc(v.people)}</p>
+              <div class="score">
+                <div class="score-bar"><div class="score-fill" style="--w:${Math.max(5,Math.min(100,v.score))}%"></div></div>
+                <strong>${v.score}</strong>
+              </div>
+              <div class="actions">
+                <a class="mini" href="${wa("Hola Alberto, me interesa participar o liderar la vertical: " + v.name + ". Mi perfil es: ")}" target="_blank" rel="noopener noreferrer">Participar</a>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function rondasHTML(){
+      return `
+        <div class="notice">
+          <h3>La ronda es la puerta. La vertical es la monetización. El hub es la prueba social.</h3>
+          <p>
+            Cada ronda debe dejar datos: quién asistió, qué busca, qué aporta, qué match puede tener sentido y quién está dispuesto a participar de forma más activa.
+          </p>
+        </div>
+
+        <div class="timeline">
+          ${DATA.rounds.map(r=>`
+            <article class="timeline-item">
+              <div class="datebox">${esc(r.date)}</div>
+              <div>
+                <div class="tags">
+                  <span class="tag gold">${esc(r.status)}</span>
+                  <span class="tag blue">${esc(r.format)}</span>
+                </div>
+                <h3 style="margin-top:10px">${esc(r.title)}</h3>
+                <p>${esc(r.text)}</p>
+                <div class="actions">
+                  <a class="mini" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.cta)}</a>
+                </div>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function movimientoHTML(){
+      return `
+        <div class="notice">
+          <h3>El objetivo es que se vea movimiento, dirección y futuro.</h3>
+          <p>
+            La gente tiene que sentir que Emprende360 no es una ronda aislada. Es una red que está empezando a ordenar relaciones B2B con IA, contexto y curación humana.
+          </p>
+        </div>
+
+        <div class="timeline">
+          ${DATA.movement.map(m=>`
+            <article class="timeline-item">
+              <div class="datebox">${esc(m.date)}</div>
+              <div>
+                <div class="tags"><span class="tag gold">${esc(m.metric)}</span></div>
+                <h3 style="margin-top:10px">${esc(m.title)}</h3>
+                <p>${esc(m.text)}</p>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+
+        <div class="notice" style="margin-top:22px">
+          <h3>Roadmap resumido</h3>
+          <p>
+            Rondas → Partner Hub → AI Match Desk → verticales → sponsors → Decision Desk → red inteligente B2B con datos propios de intención, confianza, señales y resultados.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card">
+            <span class="tag gold">Fase 1</span>
+            <h3 style="margin-top:14px">Rondas y confianza</h3>
+            <p>Activar encuentros, captar perfiles, generar presencia y demostrar que hay gente buena en movimiento.</p>
+          </article>
+          <article class="card">
+            <span class="tag gold">Fase 2</span>
+            <h3 style="margin-top:14px">Partner Hub</h3>
+            <p>Ordenar perfiles, verticales, matches, oportunidades y prueba social visible.</p>
+          </article>
+          <article class="card">
+            <span class="tag gold">Fase 3</span>
+            <h3 style="margin-top:14px">AI Match Desk</h3>
+            <p>Cruzar perfiles, intención y señales para sugerir relaciones útiles con contexto.</p>
+          </article>
+          <article class="card">
+            <span class="tag gold">Fase 4</span>
+            <h3 style="margin-top:14px">Decision Desk</h3>
+            <p>Activar mesas senior cuando aparezcan empresas con señales reales de crecimiento, tensión o decisión.</p>
+          </article>
+        </div>
+
+        <div class="final">
+          <span class="pill">Participación activa</span>
+          <h2 style="margin-top:16px">¿Quieres quedar mejor ubicado dentro del ecosistema?</h2>
+          <p class="lead">
+            Si tu perfil encaja, podemos valorar cómo participar con más prioridad, abrir una vertical, aparecer mejor posicionado o activar una ronda temática.
+          </p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn btn-primary" href="${wa("Hola Alberto, quiero valorar cómo participar de forma más activa en Emprende360. Te paso mi perfil: ")}" target="_blank" rel="noopener noreferrer">Solicitar participación activa →</a>
+            <a class="btn btn-secondary" href="${LINKS.channel}" target="_blank" rel="noopener noreferrer">Seguir canal</a>
+          </div>
+        </div>
+      `;
+    }
+
+    function init(){
+      const hash = location.hash.replace("#","");
+      if(PAGES.some(p=>p.id===hash)) state.page = hash;
+
+      window.addEventListener("hashchange",()=>{
+        const h = location.hash.replace("#","");
+        if(PAGES.some(p=>p.id===h)){
+          state.page = h;
+          state.q = "";
+          state.filters = {};
+          render();
+        }
+      });
+
+      render();
+    }
+
+    init();
+  </script>
+</body>
+</html>
