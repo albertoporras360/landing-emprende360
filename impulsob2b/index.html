@@ -1,0 +1,1751 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impulso B2B | Emprende360</title>
+  <meta name="description" content="Impulso B2B: sprint de 21 días para profesionales B2B con oferta clara. Evento o mesa dirigida, hasta 500 invitaciones filtradas, hasta 100 DMs contextuales y seguimiento posterior." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Impulso B2B | Emprende360" />
+  <meta property="og:description" content="Mueve tu oferta B2B con contexto: evento, invitaciones filtradas, DMs contextuales y seguimiento posterior." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --deep:#020617;
+      --navy:#071522;
+      --sky:#18A7FF;
+      --gold:#F4C542;
+      --green:#22C55E;
+      --red:#FB7185;
+      --text:#F8FAFC;
+      --muted:#94A3B8;
+      --soft:#CBD5E1;
+      --line:rgba(255,255,255,.13);
+      --glass:rgba(255,255,255,.065);
+      --glass2:rgba(255,255,255,.105);
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--deep);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    b,strong{color:#fff}
+    .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+    .section{position:relative;padding:96px 0;overflow:hidden}
+    .center{text-align:center;margin-left:auto;margin-right:auto}
+    .max-860{max-width:860px}
+    .lead{font-size:18px;line-height:1.72;color:var(--soft)}
+    .small{font-size:14px;line-height:1.62;color:var(--soft)}
+    .muted{color:var(--muted)}
+
+    .grad-text{
+      background:linear-gradient(90deg,#fff,#c8ecff 42%,#ffe6a6);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(24,167,255,.25);
+      background:rgba(24,167,255,.09);
+      color:#C8ECFF;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:#DBEAFE;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      font-weight:850;
+      backdrop-filter:blur(16px);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:999px;
+      padding:14px 22px;
+      font-weight:950;
+      font-size:14px;
+      transition:.25s ease;
+      cursor:pointer;
+      border:0;
+      white-space:nowrap;
+    }
+
+    .btn-primary{
+      background:linear-gradient(90deg,#ffd95a,#F4C542,#ffd15a);
+      color:#06111F;
+      box-shadow:0 18px 60px rgba(244,197,66,.25);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 24px 80px rgba(244,197,66,.40);
+    }
+
+    .btn-secondary{
+      color:white;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(16px);
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-3px);
+      background:rgba(255,255,255,.10);
+      border-color:rgba(24,167,255,.45);
+    }
+
+    .btn-whatsapp{
+      color:#03130A;
+      background:linear-gradient(90deg,#25D366,#22C55E);
+      box-shadow:0 18px 60px rgba(34,197,94,.18);
+    }
+
+    .btn-whatsapp:hover{
+      transform:translateY(-3px);
+      box-shadow:0 24px 80px rgba(34,197,94,.30);
+    }
+
+    .grid-bg{
+      position:absolute;
+      inset:0;
+      opacity:.075;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.65) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.65) 1px,transparent 1px);
+      background-size:54px 54px;
+    }
+
+    .blob{
+      position:absolute;
+      border-radius:999px;
+      filter:blur(60px);
+      pointer-events:none;
+      opacity:.55;
+      animation:float 10s ease-in-out infinite;
+    }
+
+    .blob.one{width:300px;height:300px;background:rgba(24,167,255,.22);left:5%;top:13%}
+    .blob.two{width:330px;height:330px;background:rgba(244,197,66,.16);right:7%;top:20%;animation-delay:-3s}
+    .blob.three{width:280px;height:280px;background:rgba(34,197,94,.13);left:43%;bottom:2%;animation-delay:-5s}
+
+    @keyframes float{
+      0%,100%{transform:translate(0,0)}
+      50%{transform:translate(28px,22px)}
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity .7s ease,transform .7s ease;
+    }
+
+    .reveal.on{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    header{
+      position:fixed;
+      left:0;
+      right:0;
+      top:0;
+      z-index:50;
+      border-bottom:1px solid rgba(255,255,255,.10);
+      background:rgba(2,6,23,.74);
+      backdrop-filter:blur(22px);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 22px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:42px;
+      height:42px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      box-shadow:0 18px 45px rgba(24,167,255,.25);
+      font-weight:950;
+    }
+
+    .brand-title{font-weight:950;line-height:1}
+
+    .brand-sub{
+      margin-top:4px;
+      color:var(--muted);
+      font-size:10px;
+      font-weight:850;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:22px;
+      color:#CBD5E1;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .nav-links a:hover{color:white}
+
+    .hero{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:126px 0 84px;
+      background:
+        radial-gradient(circle at 15% 15%,rgba(24,167,255,.23),transparent 28%),
+        radial-gradient(circle at 84% 22%,rgba(244,197,66,.16),transparent 29%),
+        radial-gradient(circle at 50% 90%,rgba(34,197,94,.12),transparent 34%),
+        var(--deep);
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.03fr .97fr;
+      gap:44px;
+      align-items:center;
+    }
+
+    h1{
+      margin:26px 0 0;
+      font-size:clamp(42px,6vw,76px);
+      line-height:.96;
+      letter-spacing:-.06em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:14px 0 0;
+      font-size:clamp(34px,4.7vw,58px);
+      line-height:1.02;
+      letter-spacing:-.045em;
+      font-weight:950;
+    }
+
+    h3{
+      margin:0;
+      font-size:24px;
+      line-height:1.15;
+    }
+
+    .hero p{
+      font-size:19px;
+      line-height:1.7;
+      color:#CBD5E1;
+      max-width:720px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .hero-mini{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      max-width:720px;
+      margin-top:30px;
+    }
+
+    .mini{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.055);
+      border-radius:18px;
+      padding:13px 15px;
+      color:#DBEAFE;
+      font-size:14px;
+      font-weight:700;
+      backdrop-filter:blur(16px);
+    }
+
+    .panel{
+      position:relative;
+      border-radius:42px;
+      padding:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      box-shadow:0 40px 120px rgba(0,0,0,.42);
+      backdrop-filter:blur(22px);
+    }
+
+    .window-dots{
+      display:flex;
+      gap:7px;
+      margin:0 0 13px 3px;
+    }
+
+    .dot{width:11px;height:11px;border-radius:999px}
+    .dot.red{background:#FB7185}
+    .dot.yellow{background:#FACC15}
+    .dot.green{background:#34D399}
+
+    .hub-card{
+      border:1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(circle at 20% 10%,rgba(244,197,66,.18),transparent 32%),
+        radial-gradient(circle at 90% 20%,rgba(24,167,255,.14),transparent 30%),
+        rgba(2,6,23,.58);
+      border-radius:34px;
+      padding:26px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hub-card:after{
+      content:"";
+      position:absolute;
+      width:430px;
+      height:430px;
+      border-radius:999px;
+      right:-180px;
+      bottom:-190px;
+      border:1px solid rgba(244,197,66,.18);
+      box-shadow:0 0 0 38px rgba(244,197,66,.035),0 0 0 78px rgba(24,167,255,.025);
+    }
+
+    .hub-inner{position:relative;z-index:2}
+
+    .hub-label{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(244,197,66,.30);
+      background:rgba(244,197,66,.10);
+      color:#FDE68A;
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:12px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    .hub-title{
+      margin-top:20px;
+      font-size:32px;
+      line-height:1.03;
+      letter-spacing:-.04em;
+      font-weight:950;
+    }
+
+    .hub-sub{
+      margin-top:12px;
+      color:#CBD5E1;
+      font-size:14px;
+      line-height:1.58;
+      max-width:92%;
+    }
+
+    .hub-flow{
+      margin-top:24px;
+      display:grid;
+      gap:12px;
+    }
+
+    .hub-row{
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.055);
+      border-radius:20px;
+      padding:14px;
+    }
+
+    .hub-num{
+      width:36px;
+      height:36px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-weight:950;
+      font-size:14px;
+    }
+
+    .hub-row b{
+      display:block;
+      font-size:15px;
+      color:white;
+      line-height:1.15;
+    }
+
+    .hub-row span{
+      display:block;
+      color:#94A3B8;
+      font-size:12px;
+      margin-top:3px;
+      line-height:1.35;
+    }
+
+    .hub-pill{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      color:#DBEAFE;
+      border-radius:999px;
+      padding:6px 9px;
+      font-size:11px;
+      font-weight:850;
+      white-space:nowrap;
+    }
+
+    .stats{
+      position:relative;
+      z-index:4;
+      margin-top:-54px;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      background:rgba(15,23,42,.90);
+      border:1px solid var(--line);
+      border-radius:32px;
+      padding:16px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(18px);
+    }
+
+    .stat{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.045);
+      border-radius:24px;
+      padding:24px;
+    }
+
+    .stat b{
+      display:block;
+      font-size:34px;
+      letter-spacing:-.04em;
+    }
+
+    .stat span{
+      display:block;
+      margin-top:7px;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:650;
+    }
+
+    .contrast{
+      background:
+        radial-gradient(circle at 15% 20%,rgba(24,167,255,.14),transparent 32%),
+        radial-gradient(circle at 85% 40%,rgba(244,197,66,.12),transparent 28%),
+        var(--navy);
+    }
+
+    .contrast-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      margin-top:42px;
+    }
+
+    .contrast-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:34px;
+      padding:32px;
+      box-shadow:0 22px 80px rgba(0,0,0,.24);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .contrast-card.hot{
+      border-color:rgba(244,197,66,.30);
+      background:
+        radial-gradient(circle at 20% 0%,rgba(244,197,66,.13),transparent 34%),
+        rgba(255,255,255,.06);
+    }
+
+    .contrast-badge{
+      display:inline-flex;
+      border:1px solid rgba(244,197,66,.24);
+      background:rgba(244,197,66,.10);
+      color:#FDE68A;
+      border-radius:999px;
+      padding:7px 11px;
+      font-size:12px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+      margin-bottom:18px;
+    }
+
+    .contrast-card h3{
+      font-size:32px;
+      letter-spacing:-.04em;
+      margin-bottom:12px;
+    }
+
+    .contrast-card p{
+      color:#CBD5E1;
+      line-height:1.68;
+      font-size:16px;
+    }
+
+    .problem{background:var(--deep)}
+
+    .problem-grid{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:34px;
+      align-items:center;
+      margin-top:44px;
+    }
+
+    .copy-box{
+      border:1px solid rgba(244,197,66,.22);
+      background:
+        radial-gradient(circle at 12% 10%,rgba(244,197,66,.14),transparent 32%),
+        rgba(255,255,255,.055);
+      border-radius:36px;
+      padding:34px;
+      box-shadow:var(--shadow);
+    }
+
+    .copy-box h3{
+      font-size:34px;
+      letter-spacing:-.045em;
+      line-height:1.04;
+      margin-bottom:18px;
+    }
+
+    .copy-box p{
+      color:#CBD5E1;
+      line-height:1.7;
+      font-size:16px;
+    }
+
+    .feature-list{
+      display:grid;
+      gap:16px;
+    }
+
+    .feature-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:28px;
+      padding:24px;
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:18px;
+      align-items:start;
+      transition:.25s ease;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-4px);
+      background:var(--glass2);
+      border-color:rgba(24,167,255,.32);
+    }
+
+    .feature-icon{
+      width:52px;
+      height:52px;
+      border-radius:20px;
+      display:grid;
+      place-items:center;
+      font-size:24px;
+      color:#06111F;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+    }
+
+    .feature-card h3{
+      font-size:22px;
+      margin-bottom:8px;
+      letter-spacing:-.025em;
+    }
+
+    .feature-card p{
+      margin:0;
+      color:#CBD5E1;
+      line-height:1.58;
+      font-size:14px;
+    }
+
+    .video-section{background:var(--navy)}
+
+    .video-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:34px;
+      align-items:center;
+      margin-top:42px;
+    }
+
+    .video-box{
+      min-height:390px;
+      border-radius:36px;
+      border:1px solid rgba(244,197,66,.22);
+      background:
+        radial-gradient(circle at center,rgba(244,197,66,.12),transparent 36%),
+        radial-gradient(circle at 80% 10%,rgba(24,167,255,.16),transparent 30%),
+        rgba(255,255,255,.055);
+      box-shadow:var(--shadow);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:30px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .video-box iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
+    .play-circle{
+      width:86px;
+      height:86px;
+      margin:0 auto 20px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-size:34px;
+      font-weight:950;
+      box-shadow:0 20px 55px rgba(244,197,66,.24);
+      border:0;
+      cursor:pointer;
+    }
+
+    .play-block h3{
+      font-size:30px;
+      letter-spacing:-.045em;
+    }
+
+    .play-block p{
+      margin:12px 0 0;
+      color:#CBD5E1;
+      line-height:1.55;
+    }
+
+    .offers{
+      background:
+        radial-gradient(circle at 10% 10%,rgba(24,167,255,.16),transparent 32%),
+        radial-gradient(circle at 90% 20%,rgba(244,197,66,.13),transparent 34%),
+        var(--deep);
+    }
+
+    .price-card{
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(244,197,66,.32);
+      background:
+        radial-gradient(circle at 15% 0%,rgba(244,197,66,.16),transparent 34%),
+        rgba(255,255,255,.07);
+      border-radius:36px;
+      padding:34px;
+      box-shadow:0 26px 90px rgba(0,0,0,.30);
+      backdrop-filter:blur(20px);
+    }
+
+    .price-card:after{
+      content:"";
+      position:absolute;
+      width:320px;
+      height:320px;
+      border-radius:999px;
+      right:-150px;
+      top:-150px;
+      background:rgba(24,167,255,.10);
+      pointer-events:none;
+    }
+
+    .price-content{position:relative;z-index:2}
+
+    .price-tag{
+      display:inline-flex;
+      align-items:center;
+      width:max-content;
+      border:1px solid rgba(244,197,66,.28);
+      background:rgba(244,197,66,.10);
+      color:#FDE68A;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      font-weight:950;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      margin-bottom:18px;
+    }
+
+    .price-card h3{
+      font-size:40px;
+      letter-spacing:-.045em;
+      line-height:1.03;
+      margin-bottom:12px;
+    }
+
+    .price-main{
+      display:flex;
+      align-items:flex-end;
+      gap:8px;
+      margin:20px 0 6px;
+    }
+
+    .price-main b{
+      font-size:68px;
+      line-height:.90;
+      letter-spacing:-.07em;
+    }
+
+    .price-main span{
+      color:#CBD5E1;
+      font-weight:800;
+      padding-bottom:6px;
+    }
+
+    .pay-once{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.055);
+      border-radius:20px;
+      padding:14px 16px;
+      margin:16px 0 24px;
+      color:#DBEAFE;
+      font-weight:850;
+      line-height:1.5;
+    }
+
+    .includes{
+      list-style:none;
+      padding:0;
+      margin:24px 0 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:11px 18px;
+    }
+
+    .includes li{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:10px;
+      align-items:start;
+      color:#CBD5E1;
+      font-size:14px;
+      line-height:1.45;
+    }
+
+    .check{
+      width:22px;
+      height:22px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:rgba(34,197,94,.14);
+      color:#86EFAC;
+      font-size:13px;
+      font-weight:950;
+    }
+
+    .price-actions{
+      position:relative;
+      z-index:3;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .note{
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.55;
+      margin-top:14px;
+    }
+
+    .timeline{background:var(--navy)}
+
+    .week-grid{
+      display:grid;
+      grid-template-columns:repeat(7,1fr);
+      gap:12px;
+      margin-top:42px;
+    }
+
+    .week-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:22px;
+      padding:18px;
+      min-height:150px;
+    }
+
+    .week-card b{
+      display:block;
+      font-size:24px;
+      color:#FDE68A;
+      margin-bottom:10px;
+    }
+
+    .week-card span{
+      display:block;
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    .verticals{background:var(--deep)}
+
+    .vertical-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:42px;
+    }
+
+    .vertical-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:24px;
+      padding:20px;
+      min-height:130px;
+      transition:.25s ease;
+    }
+
+    .vertical-card:hover{
+      transform:translateY(-4px);
+      background:var(--glass2);
+      border-color:rgba(244,197,66,.30);
+    }
+
+    .vertical-card .emoji{font-size:26px;margin-bottom:12px}
+
+    .vertical-card b{
+      display:block;
+      font-size:16px;
+      letter-spacing:-.02em;
+      margin-bottom:6px;
+    }
+
+    .vertical-card span{
+      display:block;
+      color:#94A3B8;
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    .compare{background:var(--navy)}
+
+    .table-wrap{
+      margin-top:42px;
+      border:1px solid var(--line);
+      border-radius:30px;
+      overflow:hidden;
+      background:rgba(255,255,255,.045);
+      box-shadow:0 22px 80px rgba(0,0,0,.24);
+    }
+
+    table{width:100%;border-collapse:collapse}
+
+    th,td{
+      padding:18px;
+      border-bottom:1px solid rgba(255,255,255,.09);
+      text-align:left;
+      vertical-align:top;
+      color:#CBD5E1;
+      font-size:14px;
+      line-height:1.45;
+    }
+
+    th{
+      color:white;
+      background:rgba(255,255,255,.07);
+      font-size:14px;
+      letter-spacing:.02em;
+    }
+
+    tr:last-child td{border-bottom:0}
+    td:first-child{color:white;font-weight:850;width:34%}
+
+    .honest{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(251,113,133,.10),transparent 28%),
+        radial-gradient(circle at 80% 30%,rgba(244,197,66,.11),transparent 34%),
+        var(--deep);
+    }
+
+    .honest-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      margin-top:42px;
+    }
+
+    .honest-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:32px;
+      padding:30px;
+    }
+
+    .honest-card.no{border-color:rgba(251,113,133,.25)}
+    .honest-card.yes{border-color:rgba(34,197,94,.25)}
+
+    .honest-card h3{
+      font-size:28px;
+      letter-spacing:-.035em;
+      margin-bottom:18px;
+    }
+
+    .honest-card ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:12px;
+    }
+
+    .honest-card li{
+      color:#CBD5E1;
+      line-height:1.55;
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:10px;
+    }
+
+    .guarantee{background:var(--navy)}
+
+    .guarantee-box{
+      border:1px solid rgba(244,197,66,.25);
+      background:
+        radial-gradient(circle at 20% 20%,rgba(244,197,66,.12),transparent 30%),
+        rgba(255,255,255,.055);
+      border-radius:36px;
+      padding:34px;
+      box-shadow:var(--shadow);
+    }
+
+    .rules{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+      margin-top:26px;
+    }
+
+    .rule{
+      border:1px solid rgba(255,255,255,.11);
+      background:rgba(255,255,255,.05);
+      border-radius:20px;
+      padding:16px;
+      color:#DBEAFE;
+      font-size:13px;
+      line-height:1.45;
+      font-weight:760;
+    }
+
+    .faq{background:var(--deep)}
+
+    details{
+      border-radius:18px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      overflow:hidden;
+      margin-bottom:12px;
+    }
+
+    summary{
+      cursor:pointer;
+      padding:20px 22px;
+      font-weight:900;
+      list-style:none;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    summary::-webkit-details-marker{display:none}
+
+    summary::after{
+      content:"+";
+      color:var(--gold);
+      font-size:24px;
+      line-height:1;
+    }
+
+    details[open] summary::after{content:"–"}
+
+    details p{
+      color:var(--muted);
+      margin:0;
+      padding:0 22px 22px;
+      line-height:1.58;
+    }
+
+    .final{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(24,167,255,.16),transparent 32%),
+        radial-gradient(circle at 80% 40%,rgba(244,197,66,.14),transparent 30%),
+        var(--deep);
+      text-align:center;
+    }
+
+    .final-box{
+      border:1px solid rgba(244,197,66,.25);
+      background:rgba(255,255,255,.045);
+      border-radius:38px;
+      padding:42px;
+      box-shadow:var(--shadow);
+    }
+
+    .cta-buttons{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .legal-note{
+      border-top:1px solid var(--line);
+      background:#01040d;
+      padding:28px 0;
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .legal-note a{
+      color:#BFDBFE;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background:var(--deep);
+      padding:35px 0;
+      color:#94A3B8;
+      font-size:14px;
+    }
+
+    .footer-main{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .footer-company{
+      margin-top:10px;
+      font-size:12px;
+      color:#64748B;
+      line-height:1.55;
+    }
+
+    .footer-company a,
+    .footer-legal a{
+      color:#94A3B8;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    .footer-right{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:12px;
+    }
+
+    .footer-links,
+    .footer-legal{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .sticky-mobile{
+      display:none;
+      position:fixed;
+      left:14px;
+      right:14px;
+      bottom:14px;
+      z-index:80;
+      padding:10px;
+      border-radius:20px;
+      background:rgba(2,6,23,.84);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(18px);
+      box-shadow:0 18px 50px rgba(0,0,0,.42);
+    }
+
+    .sticky-mobile .btn{width:100%}
+
+    @media(max-width:1080px){
+      .hero-grid,
+      .problem-grid,
+      .video-grid,
+      .contrast-grid,
+      .honest-grid{
+        grid-template-columns:1fr;
+      }
+
+      .stats-grid,
+      .vertical-grid,
+      .rules{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .week-grid{grid-template-columns:repeat(2,1fr)}
+      .nav-links{display:none}
+      .includes{grid-template-columns:1fr}
+    }
+
+    @media(max-width:760px){
+      .wrap{padding:0 16px}
+      .section{padding:72px 0}
+      .nav{padding:11px 16px}
+      .brand-sub{display:none}
+
+      .brand-title{
+        font-size:14px;
+        max-width:145px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+
+      .brand-mark{
+        width:38px;
+        height:38px;
+        border-radius:15px;
+      }
+
+      .nav .btn{
+        padding:9px 11px;
+        font-size:11px;
+        width:auto;
+      }
+
+      .hero{
+        min-height:auto;
+        padding:98px 0 62px;
+        align-items:flex-start;
+      }
+
+      h1{
+        font-size:clamp(34px,11vw,48px);
+        line-height:1.04;
+        letter-spacing:-.04em;
+      }
+
+      h2{
+        font-size:clamp(31px,9vw,42px);
+        line-height:1.06;
+      }
+
+      .hero p,
+      .lead{
+        font-size:16px;
+        line-height:1.62;
+      }
+
+      .hero-actions,
+      .price-actions,
+      .cta-buttons{
+        display:grid;
+        grid-template-columns:1fr;
+        width:100%;
+      }
+
+      .hero-actions .btn,
+      .price-actions .btn,
+      .cta-buttons .btn{
+        width:100%;
+      }
+
+      .hero-mini,
+      .stats-grid,
+      .vertical-grid,
+      .rules,
+      .week-grid{
+        grid-template-columns:1fr;
+      }
+
+      .panel{
+        border-radius:28px;
+        padding:12px;
+      }
+
+      .hub-card{
+        border-radius:26px;
+        padding:22px;
+      }
+
+      .hub-title{font-size:27px}
+      .hub-sub{max-width:100%}
+      .hub-row{grid-template-columns:auto 1fr}
+      .hub-pill{grid-column:2;width:max-content}
+      .copy-box{padding:24px;border-radius:30px}
+      .copy-box h3{font-size:28px}
+      .feature-card{grid-template-columns:1fr}
+      .price-card{padding:25px;border-radius:30px}
+      .price-card h3{font-size:30px}
+      .price-main b{font-size:54px}
+      .table-wrap{overflow-x:auto}
+      table{min-width:760px}
+      .final-box{padding:26px;border-radius:30px}
+      .footer-main{flex-direction:column;align-items:flex-start}
+      .footer-right{align-items:flex-start}
+      .sticky-mobile{display:block}
+      body{padding-bottom:84px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <a href="#top" class="brand">
+        <div class="brand-mark">E</div>
+        <div>
+          <div class="brand-title">Emprende360</div>
+          <div class="brand-sub">Impulso B2B</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#que-es">Qué es</a>
+        <a href="#video">Video</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn-primary" href="#oferta">Ver plaza →</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="grid-bg"></div>
+      <div class="blob one"></div>
+      <div class="blob two"></div>
+      <div class="blob three"></div>
+
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <span class="pill">🔥 21 días · evento · red B2B · 100 DMs · seguimiento</span>
+          <h1><span class="grad-text">Dale un impulso real a tu oferta B2B.</span></h1>
+          <p>
+            Si tienes un servicio B2B claro, podemos ayudarte a moverlo con una activación concreta:
+            mesa o evento dirigido, invitaciones filtradas, DMs contextuales y seguimiento posterior de interesados.
+          </p>
+          <p class="muted">
+            No se trata de publicar más por publicar ni de mandar mensajes fríos. Se trata de poner tu tema delante de perfiles adecuados y no perder las conversaciones que puedan salir.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20Impulso%20B2B%20para%20mi%20oferta." target="_blank" rel="noopener noreferrer">Valorar mi caso por WhatsApp</a>
+            <a class="btn btn-secondary" href="#video">Ver cómo funciona</a>
+          </div>
+
+          <div class="hero-mini">
+            <div class="mini">✅ Hasta 500 invitaciones</div>
+            <div class="mini">✅ Hasta 100 DMs contextuales</div>
+            <div class="mini">✅ Refuerzo si no hay señal</div>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <div class="window-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <div class="hub-card">
+            <div class="hub-inner">
+              <span class="hub-label">Activación en 21 días</span>
+              <div class="hub-title">Tu oferta entra con contexto, no como venta fría.</div>
+              <div class="hub-sub">
+                Creamos una excusa legítima para abrir conversación: un tema útil, una mesa dirigida y una activación ordenada.
+              </div>
+
+              <div class="hub-flow">
+                <div class="hub-row"><div class="hub-num">1</div><div><b>Convertimos tu servicio en un tema</b><span>Un enfoque que pueda interesar a decisores, partners o clientes potenciales.</span></div><div class="hub-pill">Foco</div></div>
+                <div class="hub-row"><div class="hub-num">2</div><div><b>Montamos una mesa dirigida</b><span>Un espacio donde apareces como experto, no como vendedor.</span></div><div class="hub-pill">Autoridad</div></div>
+                <div class="hub-row"><div class="hub-num">3</div><div><b>Activamos red y DMs</b><span>Invitaciones filtradas y mensajes contextuales alrededor del tema.</span></div><div class="hub-pill">Movimiento</div></div>
+                <div class="hub-row"><div class="hub-num">4</div><div><b>Ordenamos próximos pasos</b><span>Revisamos interesados, respuestas y perfiles que merecen seguimiento.</span></div><div class="hub-pill">Seguimiento</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="wrap">
+        <div class="stats-grid reveal">
+          <div class="stat"><b>21</b><span>días de activación</span></div>
+          <div class="stat"><b>500</b><span>invitaciones filtradas si encaja</span></div>
+          <div class="stat"><b>200</b><span>DMs contextuales</span></div>
+          <div class="stat"><b>390€</b><span>precio de lanzamiento</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="que-es" class="section contrast">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Qué cambia</span>
+          <h2>Tu oferta no necesita más ruido. Necesita una entrada con contexto.</h2>
+          <p class="lead">
+            En B2B, muchas conversaciones no empiezan porque alguien reciba una propuesta en frío.
+            Empiezan porque hay un tema relevante, un anfitrión, una invitación razonable y un seguimiento bien hecho.
+          </p>
+        </div>
+
+        <div class="contrast-grid reveal">
+          <div class="contrast-card">
+            <span class="contrast-badge">Lo habitual</span>
+            <h3>Publicar, esperar y perder seguimiento.</h3>
+            <p>
+              Puedes tener una buena oferta y aun así depender de comentarios sueltos, referidos ocasionales,
+              mensajes dispersos y conversaciones que nadie vuelve a tocar.
+            </p>
+          </div>
+
+          <div class="contrast-card hot">
+            <span class="contrast-badge">Impulso B2B</span>
+            <h3>Crear un motivo para conversar.</h3>
+            <p>
+              Convertimos tu servicio en un tema B2B, lo movemos con evento, invitaciones y DMs contextuales,
+              y después ordenamos las señales para que no se pierdan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section problem">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">El problema real</span>
+          <h2>El contacto no vale mucho si no hay siguiente paso.</h2>
+          <p class="lead">
+            Dar visibilidad a una oferta sin seguimiento es fácil. Convertir esa visibilidad en conversaciones ordenadas es lo que casi nadie hace bien.
+          </p>
+        </div>
+
+        <div class="problem-grid reveal">
+          <div class="copy-box">
+            <h3>El evento no es el final. Es el punto de entrada.</h3>
+            <p>
+              Una mesa dirigida te permite invitar sin sonar agresivo, explicar tu criterio y detectar quién responde, asiste, comenta o muestra interés.
+            </p>
+            <p>
+              Después revisamos las señales generadas: asistentes, respuestas, interesados y perfiles con potencial para continuar conversación.
+            </p>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-card"><div class="feature-icon">🎯</div><div><h3>Un tema que atrae</h3><p>No movemos “compra mi servicio”. Movemos un tema útil para un público concreto.</p></div></div>
+            <div class="feature-card"><div class="feature-icon">📣</div><div><h3>Volumen suficiente</h3><p>Hasta 500 invitaciones y hasta 100 DMs contextuales para no quedarnos en una prueba simbólica.</p></div></div>
+            <div class="feature-card"><div class="feature-icon">🧭</div><div><h3>Seguimiento posterior</h3><p>Lo que responda, asista o muestre interés se revisa para decidir qué conversación merece continuar.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="section video-section">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Explicación rápida</span>
+          <h2>En 90 segundos verás si encaja contigo.</h2>
+          <p class="lead">
+            El video explica el flujo completo: tema, evento, invitaciones, DMs contextuales y seguimiento posterior.
+          </p>
+        </div>
+
+        <div class="video-grid reveal">
+          <div class="video-box" id="videoBox">
+            <div class="play-block">
+              <button class="play-circle" id="playDemo" aria-label="Ver video">▶</button>
+              <h3>Ver explicación de Impulso B2B</h3>
+              <p>Una explicación breve para entender qué se hace, qué no se promete y cómo se trabaja el seguimiento.</p>
+            </div>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-card"><div class="feature-icon">1</div><div><h3>Tu servicio se convierte en tema</h3><p>Para que la entrada sea natural y no parezca una propuesta fría.</p></div></div>
+            <div class="feature-card"><div class="feature-icon">2</div><div><h3>Se mueve con distribución real</h3><p>Invitaciones filtradas, DMs contextuales y difusión cuando el caso encaja.</p></div></div>
+            <div class="feature-card"><div class="feature-icon">3</div><div><h3>Se ordena el seguimiento</h3><p>Las señales no se quedan sueltas: se priorizan y se convierten en próximos pasos.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="oferta" class="section offers">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Oferta única</span>
+          <h2>Impulso B2B</h2>
+          <p class="lead">
+            Un sprint de 21 días para profesionales B2B con una oferta clara y capacidad de atender conversaciones si aparecen.
+          </p>
+        </div>
+
+        <article class="price-card reveal">
+          <div class="price-content">
+            <span class="price-tag">Precio de lanzamiento · plazas limitadas</span>
+            <h3>Una activación comercial B2B con evento, red y seguimiento.</h3>
+            <p class="lead" style="margin-top:12px">
+              Pensado para servicios B2B donde una sola conversación buena puede justificar la inversión.
+            </p>
+
+            <div class="price-main"><b>390€</b><span>pago único</span></div>
+            <div class="pay-once">
+              Incluye 21 días de activación y, si no hay densidad suficiente de señal, un refuerzo sin coste.
+            </div>
+
+            <ul class="includes">
+              <li><span class="check">✓</span><span><b>Conversión de tu oferta en un tema comercial potente.</b></span></li>
+              <li><span class="check">✓</span><span><b>Evento o mesa dirigida</b> donde apareces como experto.</span></li>
+              <li><span class="check">✓</span><span>Texto, estructura e imagen básica de convocatoria.</span></li>
+              <li><span class="check">✓</span><span><b>Hasta 500 invitaciones filtradas</b> si el tema lo permite.</span></li>
+              <li><span class="check">✓</span><span><b>Hasta 100 DMs contextuales</b> de invitación, apertura y seguimiento.</span></li>
+              <li><span class="check">✓</span><span>Difusión en entorno Emprende360 cuando encaje.</span></li>
+              <li><span class="check">✓</span><span><b>Seguimiento posterior</b> de asistentes, respuestas e interesados.</span></li>
+              <li><span class="check">✓</span><span>Priorización de perfiles y señales al cierre del sprint.</span></li>
+              <li><span class="check">✓</span><span>Mensajes sugeridos para continuar conversaciones.</span></li>
+              <li><span class="check">✓</span><span>Revisión final de próximos pasos.</span></li>
+              <li><span class="check">✓</span><span>Refuerzo sin coste si no hay densidad suficiente.</span></li>
+              <li><span class="check">✓</span><span>Filtro previo: si no lo vemos claro, te lo decimos.</span></li>
+            </ul>
+
+            <div class="price-actions">
+              <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20una%20plaza%20de%20Impulso%20B2B.%20Te%20paso%20mi%20oferta%3A" target="_blank" rel="noopener noreferrer">Valorar plaza por WhatsApp</a>
+              <a class="btn btn-secondary" href="#faq">Resolver dudas</a>
+            </div>
+
+            <div class="note">
+              No prometemos clientes, reuniones ni ventas. Sí entregamos una activación comercial real, medible y con seguimiento.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="proceso" class="section timeline">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Proceso</span>
+          <h2>Qué pasa durante los 21 días.</h2>
+          <p class="lead">
+            Todo el sprint está diseñado para avanzar rápido, mantener foco y no dejar las conversaciones sueltas.
+          </p>
+        </div>
+
+        <div class="week-grid reveal">
+          <div class="week-card"><b>1</b><span>Revisamos oferta, ticket, público y capacidad real de generar conversación.</span></div>
+          <div class="week-card"><b>2</b><span>Convertimos el servicio en un tema comercial que se pueda invitar.</span></div>
+          <div class="week-card"><b>3</b><span>Preparamos evento, texto, imagen y mensajes.</span></div>
+          <div class="week-card"><b>4</b><span>Activamos invitaciones filtradas y primeros DMs contextuales.</span></div>
+          <div class="week-card"><b>5</b><span>Celebramos la mesa o evento y capturamos señales.</span></div>
+          <div class="week-card"><b>6</b><span>Ordenamos respuestas, interesados y perfiles con prioridad.</span></div>
+          <div class="week-card"><b>7</b><span>Revisión final: qué mover, qué seguir, qué descartar y si hace falta refuerzo.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sectores" class="section verticals">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Dónde encaja mejor</span>
+          <h2>Mejor para ofertas B2B donde una conversación buena puede valer mucho.</h2>
+        </div>
+
+        <div class="vertical-grid reveal">
+          <div class="vertical-card"><div class="emoji">🤖</div><b>IA aplicada a negocio</b><span>Automatización, productividad, ventas, procesos y sistemas.</span></div>
+          <div class="vertical-card"><div class="emoji">💼</div><b>CFO / Finanzas</b><span>Caja, margen, reporting, control, financiación y decisiones.</span></div>
+          <div class="vertical-card"><div class="emoji">🛡️</div><b>Ciberseguridad</b><span>Compliance, riesgos, protección y continuidad.</span></div>
+          <div class="vertical-card"><div class="emoji">🎓</div><b>Formación corporativa</b><span>Learning B2B, RRHH, talento y KPIs reales.</span></div>
+          <div class="vertical-card"><div class="emoji">📈</div><b>Ventas B2B / Growth</b><span>Prospección, partnerships, mensajes y activación de mercado.</span></div>
+          <div class="vertical-card"><div class="emoji">⚙️</div><b>Operaciones</b><span>Procesos, eficiencia, productividad, costes y mejora continua.</span></div>
+          <div class="vertical-card"><div class="emoji">⚖️</div><b>Legal / Fiscal B2B</b><span>Empresas, compliance, fiscalidad, datos y gobierno.</span></div>
+          <div class="vertical-card"><div class="emoji">🌱</div><b>Energía / renovables</b><span>Eficiencia, autoconsumo, industrial, hospitality y real estate.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compare">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Comparativa</span>
+          <h2>Por qué no es otro servicio de LinkedIn.</h2>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr><th>Opción</th><th>Qué suele pasar</th><th>Impulso B2B</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Publicar más</td><td>Puede dar visibilidad, pero no asegura conversaciones ni seguimiento.</td><td>Publicación + evento + invitaciones + DMs + seguimiento.</td></tr>
+              <tr><td>Evento suelto</td><td>Se celebra y se olvida si no hay proceso posterior.</td><td>El evento se usa como excusa de entrada y se conecta con seguimiento.</td></tr>
+              <tr><td>Prospección fría</td><td>Mensajes agresivos, baja respuesta y daño reputacional.</td><td>DMs contextuales alrededor de un tema y una invitación.</td></tr>
+              <tr><td>Networking genérico</td><td>Mucha gente, poco foco y pocas próximas acciones.</td><td>Perfiles filtrados, tema concreto y seguimiento priorizado.</td></tr>
+              <tr><td>Campaña sin contexto</td><td>Puede generar impactos, pero poca conversación útil.</td><td>Entramos desde un tema concreto y medimos señales reales.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section honest">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Sin humo</span>
+          <h2>Lo que sí hacemos y lo que no prometemos.</h2>
+        </div>
+
+        <div class="honest-grid reveal">
+          <div class="honest-card no">
+            <h3>Qué no prometemos</h3>
+            <ul>
+              <li><span>✕</span><span>No prometemos clientes garantizados.</span></li>
+              <li><span>✕</span><span>No prometemos reuniones garantizadas.</span></li>
+              <li><span>✕</span><span>No prometemos ventas.</span></li>
+              <li><span>✕</span><span>No vendemos una base de datos.</span></li>
+              <li><span>✕</span><span>No hacemos spam ni automatización agresiva.</span></li>
+            </ul>
+          </div>
+
+          <div class="honest-card yes">
+            <h3>Qué sí entregamos</h3>
+            <ul>
+              <li><span>✓</span><span>Una activación comercial real durante 21 días.</span></li>
+              <li><span>✓</span><span>Un tema y escenario para entrar con contexto.</span></li>
+              <li><span>✓</span><span>Distribución suficiente para generar señal.</span></li>
+              <li><span>✓</span><span>Seguimiento posterior de interesados y respuestas.</span></li>
+              <li><span>✓</span><span>Refuerzo sin coste si no hay densidad suficiente.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section guarantee">
+      <div class="wrap">
+        <div class="guarantee-box reveal">
+          <span class="kicker">Garantía de densidad</span>
+          <h2>Si no hay suficiente señal, ajustamos y hacemos un refuerzo sin coste.</h2>
+          <p class="lead">
+            Señal puede ser: personas que dan a asistir, respuestas a DMs, comentarios, asistentes reales, perfiles interesados, partners que proponen cruce o conversaciones claras para seguimiento.
+          </p>
+
+          <div class="rules">
+            <div class="rule">Ajuste de tema y ángulo.</div>
+            <div class="rule">Nueva difusión.</div>
+            <div class="rule">Nueva tanda de invitaciones filtradas.</div>
+            <div class="rule">Nuevos DMs contextuales.</div>
+            <div class="rule">Seguimiento actualizado.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">FAQ</span>
+          <h2>Preguntas claras. Respuestas claras.</h2>
+        </div>
+
+        <div class="reveal" style="max-width:900px;margin:42px auto 0">
+          <details open>
+            <summary>¿Esto garantiza clientes?</summary>
+            <p>No. Sería poco serio prometer clientes. Lo que sí se entrega es una activación comercial real: evento, invitaciones, DMs contextuales, seguimiento y revisión de señales. Si no hay suficiente señal, hacemos un refuerzo sin coste.</p>
+          </details>
+
+          <details>
+            <summary>¿Los DMs son venta fría?</summary>
+            <p>No. Son mensajes contextuales alrededor del evento o mesa. El enfoque es invitar, abrir conversación y detectar interés, no vender agresivamente.</p>
+          </details>
+
+          <details>
+            <summary>¿Siempre se harán 500 invitaciones y 100 DMs?</summary>
+            <p>La oferta incluye hasta esos límites cuando el tema, el perfil y la plataforma lo permiten. No se hacen acciones sin filtro ni por volumen vacío.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué necesito aportar?</summary>
+            <p>Una oferta B2B clara, disponibilidad para preparar el tema, participación en la mesa/evento y capacidad para atender conversaciones si aparecen.</p>
+          </details>
+
+          <details>
+            <summary>¿Usáis IA?</summary>
+            <p>Sí, como apoyo interno para ordenar respuestas, preparar mensajes y revisar próximos pasos. Pero no te vendemos una herramienta ni te obligamos a aprender una plataforma nueva.</p>
+          </details>
+
+          <details>
+            <summary>¿Por qué plazas limitadas?</summary>
+            <p>Porque cada impulso consume red, reputación, tiempo de activación y seguimiento. Es mejor mover pocos casos bien que aceptar volumen sin criterio.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservar" class="section final">
+      <div class="wrap">
+        <div class="final-box reveal">
+          <span class="kicker">Siguiente paso</span>
+          <h2>Si tienes una oferta B2B clara, podemos moverla este mes.</h2>
+          <p class="lead" style="max-width:800px;margin:20px auto 0">
+            Primero revisamos tu caso. Si tiene sentido para la red, el tema y el tipo de perfiles a los que quieres llegar, reservamos una plaza.
+          </p>
+
+          <div class="cta-buttons">
+            <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20Impulso%20B2B.%20Mi%20oferta%20es%3A" target="_blank" rel="noopener noreferrer">Solicitar revisión de encaje</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20hablar%20por%20WhatsApp%20sobre%20Impulso%20B2B." target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+          </div>
+
+      <p class="small muted" style="max-width:720px;margin:24px auto 0">
+  Al solicitar una plaza aceptas los
+  <a href="https://emprende360.club/terminos-condiciones" target="_blank" rel="noopener noreferrer" style="color:#BFDBFE;text-decoration:underline;text-underline-offset:3px;">Términos y condiciones</a>,
+  la
+  <a href="https://emprende360.club/privacidad" target="_blank" rel="noopener noreferrer" style="color:#BFDBFE;text-decoration:underline;text-underline-offset:3px;">Política de privacidad</a>,
+  la
+  <a href="https://emprende360.club/cookies" target="_blank" rel="noopener noreferrer" style="color:#BFDBFE;text-decoration:underline;text-underline-offset:3px;">Política de cookies</a>
+  y el
+  <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer" style="color:#BFDBFE;text-decoration:underline;text-underline-offset:3px;">Aviso legal</a>.
+</p>
+          <p class="small muted" style="max-width:720px;margin:14px auto 0">
+            Si después de revisar tu perfil vemos que no hay encaje, te lo diremos con claridad. Preferimos pocos casos buenos antes que volumen sin sentido.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-note">
+      <div class="wrap">
+        <p>
+          Nota: Impulso B2B es una iniciativa de activación comercial B2B. No garantiza clientes, ventas, financiación, inversión, reuniones ni resultados concretos. El objetivo es facilitar visibilidad cualificada, contexto, distribución, seguimiento y organización comercial.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-main">
+      <div>
+        <b style="color:white">Emprende360 · Impulso B2B</b><br>
+        <span>Evento · Red B2B · DMs contextuales · Seguimiento</span>
+
+        <div class="footer-company">
+          Operado por Albi System, LLC.<br>
+          Contacto directo: <a href="https://wa.me/34603153268" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="#que-es">Qué es</a>
+          <a href="#oferta">Oferta</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#faq">FAQ</a>
+          <a href="#reservar">Reservar</a>
+        </div>
+
+<div class="footer-legal">
+  <a href="https://emprende360.club/privacidad" target="_blank" rel="noopener noreferrer">Privacidad</a>
+  <a href="https://emprende360.club/cookies" target="_blank" rel="noopener noreferrer">Cookies</a>
+  <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer">Aviso legal</a>
+  <a href="https://emprende360.club/terminos-condiciones" target="_blank" rel="noopener noreferrer">Términos</a>
+</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-mobile">
+    <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20Impulso%20B2B." target="_blank" rel="noopener noreferrer">Valorar mi caso por WhatsApp</a>
+  </div>
+
+  <script>
+    const DEMO_EMBED_URL = "";
+
+    const play = document.getElementById("playDemo");
+    const box = document.getElementById("videoBox");
+
+    if(play){
+      play.addEventListener("click", () => {
+        if(DEMO_EMBED_URL){
+          box.innerHTML = `<iframe src="${DEMO_EMBED_URL}" title="Video Impulso B2B" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+        } else {
+          window.open("https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20ver%20el%20video%20de%20Impulso%20B2B.", "_blank");
+        }
+      });
+    }
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){ entry.target.classList.add("on"); }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
