@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emprende360 Círculo de Referencias B2B | Red B2B operada con método</title>
+  <meta name="description" content="Primera edición del Círculo de Referencias B2B de Emprende360: 90 días para activar red, mesas, invitaciones, DMs, intros, referencias y seguimiento entre perfiles B2B complementarios." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Emprende360 Círculo de Referencias B2B" />
+  <meta property="og:description" content="Deja de abrir puertas solo. Entra en un círculo B2B diseñado para generar referencias con contexto, mesas, DMs, invitados y seguimiento." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --deep:#020617;
+      --navy:#071522;
+      --card:#0B1728;
+      --sky:#18A7FF;
+      --gold:#F4C542;
+      --green:#22C55E;
+      --red:#FB7185;
+      --text:#F8FAFC;
+      --muted:#94A3B8;
+      --soft:#CBD5E1;
+      --line:rgba(255,255,255,.13);
+      --glass:rgba(255,255,255,.065);
+      --glass2:rgba(255,255,255,.105);
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--deep);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    strong{color:#fff}
+    .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+    .section{position:relative;padding:92px 0;overflow:hidden}
+    .center{text-align:center;margin-left:auto;margin-right:auto}
+    .max-860{max-width:860px}
+    .lead{font-size:18px;line-height:1.72;color:var(--soft)}
+    .small{font-size:14px;line-height:1.62;color:var(--soft)}
+    .muted{color:var(--muted)}
+
+    .grad-text{
+      background:linear-gradient(90deg,#fff,#c8ecff 42%,#ffe6a6);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(24,167,255,.25);
+      background:rgba(24,167,255,.09);
+      color:#C8ECFF;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:#DBEAFE;
+      border-radius:999px;
+      padding:8px 13px;
+      font-size:12px;
+      font-weight:850;
+      backdrop-filter:blur(16px);
+      line-height:1.25;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:999px;
+      padding:14px 22px;
+      font-weight:950;
+      font-size:14px;
+      transition:.25s ease;
+      cursor:pointer;
+      border:0;
+      white-space:nowrap;
+    }
+
+    .btn-primary{
+      background:linear-gradient(90deg,#ffd95a,#F4C542,#ffd15a);
+      color:#06111F;
+      box-shadow:0 18px 60px rgba(244,197,66,.25);
+    }
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 24px 80px rgba(244,197,66,.40)}
+
+    .btn-secondary{
+      color:white;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(16px);
+    }
+    .btn-secondary:hover{transform:translateY(-3px);background:rgba(255,255,255,.10);border-color:rgba(24,167,255,.45)}
+
+    .btn-whatsapp{
+      color:#03130A;
+      background:linear-gradient(90deg,#25D366,#22C55E);
+      box-shadow:0 18px 60px rgba(34,197,94,.18);
+    }
+    .btn-whatsapp:hover{transform:translateY(-3px);box-shadow:0 24px 80px rgba(34,197,94,.30)}
+
+    .grid-bg{
+      position:absolute;
+      inset:0;
+      opacity:.075;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.65) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.65) 1px,transparent 1px);
+      background-size:54px 54px;
+    }
+
+    .blob{position:absolute;border-radius:999px;filter:blur(60px);pointer-events:none;opacity:.55;animation:float 10s ease-in-out infinite}
+    .blob.one{width:300px;height:300px;background:rgba(24,167,255,.22);left:5%;top:13%}
+    .blob.two{width:330px;height:330px;background:rgba(244,197,66,.16);right:7%;top:20%;animation-delay:-3s}
+    .blob.three{width:280px;height:280px;background:rgba(34,197,94,.13);left:43%;bottom:2%;animation-delay:-5s}
+    @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(28px,22px)}}
+
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.on{opacity:1;transform:translateY(0)}
+
+    header{
+      position:fixed;left:0;right:0;top:0;z-index:50;
+      border-bottom:1px solid rgba(255,255,255,.10);
+      background:rgba(2,6,23,.78);
+      backdrop-filter:blur(22px);
+    }
+    .nav{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 22px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .brand-mark{width:42px;height:42px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,#7DD3FC,#0A66C2);box-shadow:0 18px 45px rgba(24,167,255,.25);font-weight:950}
+    .brand-title{font-weight:950;line-height:1}
+    .brand-sub{margin-top:4px;color:var(--muted);font-size:10px;font-weight:850;letter-spacing:.18em;text-transform:uppercase}
+    .nav-links{display:flex;gap:20px;color:#CBD5E1;font-size:14px;font-weight:800}
+    .nav-links a:hover{color:white}
+
+    .hero{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:126px 0 84px;
+      background:
+        radial-gradient(circle at 15% 15%,rgba(24,167,255,.23),transparent 28%),
+        radial-gradient(circle at 84% 22%,rgba(244,197,66,.16),transparent 29%),
+        radial-gradient(circle at 50% 90%,rgba(34,197,94,.12),transparent 34%),
+        var(--deep);
+    }
+    .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.03fr .97fr;gap:44px;align-items:center}
+    h1{margin:24px 0 0;font-size:clamp(42px,6vw,74px);line-height:.96;letter-spacing:-.06em;font-weight:950}
+    h2{margin:14px 0 0;font-size:clamp(34px,4.7vw,58px);line-height:1.02;letter-spacing:-.045em;font-weight:950}
+    h3{margin:0;font-size:24px;line-height:1.15}
+    .hero p{font-size:19px;line-height:1.7;color:#CBD5E1;max-width:720px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .hero-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:720px;margin-top:30px}
+    .mini{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.055);border-radius:18px;padding:13px 15px;color:#DBEAFE;font-size:14px;font-weight:700;backdrop-filter:blur(16px)}
+
+    .panel{position:relative;border-radius:42px;padding:18px;border:1px solid var(--line);background:rgba(255,255,255,.06);box-shadow:0 40px 120px rgba(0,0,0,.42);backdrop-filter:blur(22px)}
+    .window-dots{display:flex;gap:7px;margin:0 0 13px 3px}
+    .dot{width:11px;height:11px;border-radius:999px}.dot.red{background:#FB7185}.dot.yellow{background:#FACC15}.dot.green{background:#34D399}
+    .hub-card{border:1px solid rgba(255,255,255,.10);background:radial-gradient(circle at 20% 10%,rgba(244,197,66,.18),transparent 32%),radial-gradient(circle at 90% 20%,rgba(24,167,255,.14),transparent 30%),rgba(2,6,23,.58);border-radius:34px;padding:26px;position:relative;overflow:hidden}
+    .hub-card:after{content:"";position:absolute;width:430px;height:430px;border-radius:999px;right:-180px;bottom:-190px;border:1px solid rgba(244,197,66,.18);box-shadow:0 0 0 38px rgba(244,197,66,.035),0 0 0 78px rgba(24,167,255,.025)}
+    .hub-inner{position:relative;z-index:2}
+    .hub-label{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(244,197,66,.30);background:rgba(244,197,66,.10);color:#FDE68A;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:950;text-transform:uppercase;letter-spacing:.12em}
+    .hub-title{margin-top:20px;font-size:32px;line-height:1.03;letter-spacing:-.04em;font-weight:950}
+    .hub-sub{margin-top:12px;color:#CBD5E1;font-size:14px;line-height:1.58;max-width:92%}
+    .hub-flow{margin-top:24px;display:grid;gap:12px}
+    .hub-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);border-radius:20px;padding:14px}
+    .hub-num{width:36px;height:36px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#FDE047,#7DD3FC);color:#06111F;font-weight:950;font-size:14px}
+    .hub-row b{display:block;font-size:15px;color:white;line-height:1.15}
+    .hub-row span{display:block;color:#94A3B8;font-size:12px;margin-top:3px;line-height:1.35}
+    .hub-pill{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#DBEAFE;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:850;white-space:nowrap}
+
+    .overview{position:relative;z-index:4;margin-top:-54px}
+    .overview-box{background:rgba(15,23,42,.93);border:1px solid var(--line);border-radius:34px;padding:18px;box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+    .overview-head{padding:18px 18px 4px;text-align:center}
+    .overview-head h2{font-size:clamp(30px,4vw,46px)}
+    .overview-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:22px}
+    .overview-card{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:24px;padding:20px;min-height:150px}
+    .overview-card b{display:block;font-size:31px;letter-spacing:-.04em;color:#fff}
+    .overview-card span{display:block;margin-top:8px;color:var(--muted);font-size:13px;line-height:1.42;font-weight:650}
+    .overview-card.gold{border-color:rgba(244,197,66,.32);background:rgba(244,197,66,.08)}
+    .overview-card.gold b{color:#FDE68A}
+    .disclaimer{margin:18px auto 0;max-width:850px;text-align:center;color:#94A3B8;font-size:13px;line-height:1.6}
+
+    .contrast{background:radial-gradient(circle at 15% 20%,rgba(24,167,255,.14),transparent 32%),radial-gradient(circle at 85% 40%,rgba(244,197,66,.12),transparent 28%),var(--navy)}
+    .contrast-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:42px}
+    .contrast-card{border:1px solid var(--line);background:var(--glass);border-radius:34px;padding:32px;box-shadow:0 22px 80px rgba(0,0,0,.24);position:relative;overflow:hidden}
+    .contrast-card.hot{border-color:rgba(244,197,66,.30);background:radial-gradient(circle at 20% 0%,rgba(244,197,66,.13),transparent 34%),rgba(255,255,255,.06)}
+    .contrast-badge{display:inline-flex;border:1px solid rgba(244,197,66,.24);background:rgba(244,197,66,.10);color:#FDE68A;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:950;text-transform:uppercase;letter-spacing:.11em;margin-bottom:18px}
+    .contrast-card h3{font-size:31px;letter-spacing:-.04em;margin-bottom:12px}
+    .contrast-card p{color:#CBD5E1;line-height:1.68;font-size:16px}
+    .check-list{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px}
+    .check-list li{color:#CBD5E1;line-height:1.45;display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:14px}
+    .yes{color:#86EFAC;font-weight:950}.no{color:#FB7185;font-weight:950}
+
+    .video-section{background:var(--deep)}
+    .video-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;margin-top:42px}
+    .video-shell{border-radius:36px;border:1px solid rgba(244,197,66,.22);background:radial-gradient(circle at center,rgba(244,197,66,.12),transparent 36%),radial-gradient(circle at 80% 10%,rgba(24,167,255,.16),transparent 30%),rgba(255,255,255,.055);box-shadow:var(--shadow);padding:14px;position:relative;overflow:hidden}
+    .video-ratio{position:relative;width:100%;aspect-ratio:16/9;border-radius:26px;overflow:hidden;background:#000;border:1px solid rgba(255,255,255,.12)}
+    .video-ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .video-points{display:grid;gap:14px}
+    .point-card{border:1px solid var(--line);background:var(--glass);border-radius:24px;padding:20px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+    .point-icon{width:42px;height:42px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#FDE047,#7DD3FC);color:#06111F;font-weight:950}
+    .point-card b{display:block;font-size:17px;margin-bottom:5px}
+    .point-card span{display:block;color:#CBD5E1;font-size:14px;line-height:1.5}
+
+    .problem{background:var(--deep)}
+    .problem-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:center;margin-top:44px}
+    .copy-box{border:1px solid rgba(244,197,66,.22);background:radial-gradient(circle at 12% 10%,rgba(244,197,66,.14),transparent 32%),rgba(255,255,255,.055);border-radius:36px;padding:34px;box-shadow:var(--shadow)}
+    .copy-box h3{font-size:34px;letter-spacing:-.045em;line-height:1.04;margin-bottom:18px}
+    .copy-box p{color:#CBD5E1;line-height:1.7;font-size:16px}
+    .feature-list{display:grid;gap:16px}
+    .feature-card{border:1px solid var(--line);background:var(--glass);border-radius:28px;padding:24px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;transition:.25s ease}
+    .feature-card:hover{transform:translateY(-4px);background:var(--glass2);border-color:rgba(24,167,255,.32)}
+    .feature-icon{width:52px;height:52px;border-radius:20px;display:grid;place-items:center;font-size:22px;color:#06111F;background:linear-gradient(135deg,#FDE047,#7DD3FC);font-weight:950}
+    .feature-card h3{font-size:22px;margin-bottom:8px;letter-spacing:-.025em}
+    .feature-card p{margin:0;color:#CBD5E1;line-height:1.58;font-size:14px}
+
+    .math-section{background:radial-gradient(circle at 15% 10%,rgba(34,197,94,.11),transparent 28%),radial-gradient(circle at 85% 30%,rgba(244,197,66,.13),transparent 34%),var(--navy)}
+    .math-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:42px}
+    .math-card{border:1px solid var(--line);background:var(--glass);border-radius:30px;padding:28px;box-shadow:0 22px 80px rgba(0,0,0,.22)}
+    .math-card.highlight{border-color:rgba(244,197,66,.32);background:radial-gradient(circle at 20% 0%,rgba(244,197,66,.14),transparent 34%),rgba(255,255,255,.06)}
+    .math-card h3{font-size:28px;letter-spacing:-.035em;margin-bottom:14px}
+    .math-list{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+    .math-list li{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:12px;color:#CBD5E1;line-height:1.45;font-size:14px}
+    .math-list li:last-child{border-bottom:0;padding-bottom:0}.math-list b{font-size:20px;white-space:nowrap;color:#FDE68A}
+
+    .orchestrator{background:var(--deep)}
+    .orchestrator-box{border:1px solid rgba(244,197,66,.25);background:radial-gradient(circle at 20% 10%,rgba(244,197,66,.14),transparent 30%),radial-gradient(circle at 80% 20%,rgba(24,167,255,.13),transparent 34%),rgba(255,255,255,.055);border-radius:38px;padding:34px;box-shadow:var(--shadow)}
+    .orchestrator-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:30px;align-items:start;margin-top:26px}
+    .support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .support-card{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);border-radius:20px;padding:16px;color:#DBEAFE;font-size:13px;line-height:1.45;font-weight:800}
+    .support-card span{display:block;font-size:24px;margin-bottom:8px}
+
+    .profiles{background:var(--navy)}
+    .profile-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}
+    .profile-card{border:1px solid var(--line);background:var(--glass);border-radius:25px;padding:20px;min-height:150px;transition:.25s ease}
+    .profile-card:hover{transform:translateY(-4px);border-color:rgba(244,197,66,.32);background:var(--glass2)}
+    .profile-card .emoji{font-size:28px;margin-bottom:12px}.profile-card b{display:block;font-size:16px;line-height:1.2;margin-bottom:8px}.profile-card span{display:block;color:#94A3B8;font-size:13px;line-height:1.45}
+    .expand-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px}
+    .expand-card{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);border-radius:20px;padding:16px;color:#DBEAFE;font-size:13px;line-height:1.45;font-weight:760;text-align:center}
+
+    .verticals{background:var(--deep)}
+    .vertical-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}
+    .vertical-card{border:1px solid var(--line);background:var(--glass);border-radius:24px;padding:20px;min-height:130px;transition:.25s ease}
+    .vertical-card:hover{transform:translateY(-4px);background:var(--glass2);border-color:rgba(244,197,66,.30)}
+    .vertical-card .emoji{font-size:26px;margin-bottom:12px}.vertical-card b{display:block;font-size:16px;letter-spacing:-.02em;margin-bottom:6px}.vertical-card span{display:block;color:#94A3B8;font-size:13px;line-height:1.45}
+
+    .honest{background:radial-gradient(circle at 20% 20%,rgba(251,113,133,.10),transparent 28%),radial-gradient(circle at 80% 30%,rgba(244,197,66,.11),transparent 34%),var(--navy)}
+    .honest-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:42px}
+    .honest-card{border:1px solid var(--line);background:var(--glass);border-radius:32px;padding:30px}.honest-card.nope{border-color:rgba(251,113,133,.25)}.honest-card.good{border-color:rgba(34,197,94,.25)}
+    .honest-card h3{font-size:28px;letter-spacing:-.035em;margin-bottom:18px}.honest-card ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}.honest-card li{color:#CBD5E1;line-height:1.55;display:grid;grid-template-columns:auto 1fr;gap:10px}
+
+    .offers{background:radial-gradient(circle at 10% 10%,rgba(24,167,255,.16),transparent 32%),radial-gradient(circle at 90% 20%,rgba(244,197,66,.13),transparent 34%),var(--deep)}
+    .price-card{position:relative;overflow:hidden;border:1px solid rgba(244,197,66,.32);background:radial-gradient(circle at 15% 0%,rgba(244,197,66,.16),transparent 34%),rgba(255,255,255,.07);border-radius:36px;padding:34px;box-shadow:0 26px 90px rgba(0,0,0,.30);backdrop-filter:blur(20px)}
+    .price-card:after{content:"";position:absolute;width:320px;height:320px;border-radius:999px;right:-150px;top:-150px;background:rgba(24,167,255,.10);pointer-events:none}.price-content{position:relative;z-index:2}
+    .price-tag{display:inline-flex;align-items:center;width:max-content;border:1px solid rgba(244,197,66,.28);background:rgba(244,197,66,.10);color:#FDE68A;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:950;letter-spacing:.10em;text-transform:uppercase;margin-bottom:18px}
+    .price-card h3{font-size:40px;letter-spacing:-.045em;line-height:1.03;margin-bottom:12px}.price-main{display:flex;align-items:flex-end;gap:8px;margin:20px 0 6px}.price-main b{font-size:68px;line-height:.90;letter-spacing:-.07em}.price-main span{color:#CBD5E1;font-weight:800;padding-bottom:6px}
+    .pay-once{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);border-radius:20px;padding:14px 16px;margin:16px 0 24px;color:#DBEAFE;font-weight:850;line-height:1.5}
+    .includes{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:11px 18px}.includes li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;color:#CBD5E1;font-size:14px;line-height:1.45}.check{width:22px;height:22px;border-radius:999px;display:grid;place-items:center;background:rgba(34,197,94,.14);color:#86EFAC;font-size:13px;font-weight:950}
+    .price-actions{position:relative;z-index:3;display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.note{color:#94A3B8;font-size:12px;line-height:1.55;margin-top:14px}
+
+    .faq{background:var(--deep)}
+    details{border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);overflow:hidden;margin-bottom:12px}summary{cursor:pointer;padding:20px 22px;font-weight:900;list-style:none;display:flex;justify-content:space-between;gap:20px}summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--gold);font-size:24px;line-height:1}details[open] summary::after{content:"–"}details p{color:var(--muted);margin:0;padding:0 22px 22px;line-height:1.58}
+
+    .final{background:radial-gradient(circle at 20% 20%,rgba(24,167,255,.16),transparent 32%),radial-gradient(circle at 80% 40%,rgba(244,197,66,.14),transparent 30%),var(--deep);text-align:center}.final-box{border:1px solid rgba(244,197,66,.25);background:rgba(255,255,255,.045);border-radius:38px;padding:42px;box-shadow:var(--shadow)}.cta-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .legal-note{border-top:1px solid var(--line);background:#01040d;padding:28px 0;color:#94A3B8;font-size:12px;line-height:1.6}.legal-note a{color:#BFDBFE;text-decoration:underline;text-underline-offset:3px}
+    footer{border-top:1px solid var(--line);background:var(--deep);padding:35px 0;color:#94A3B8;font-size:14px}.footer-main{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}.footer-company{margin-top:10px;font-size:12px;color:#64748B;line-height:1.55}.footer-company a,.footer-legal a{color:#94A3B8;text-decoration:underline;text-underline-offset:3px}.footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:12px}.footer-links,.footer-legal{display:flex;gap:16px;flex-wrap:wrap}
+    .sticky-mobile{display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:80;padding:10px;border-radius:20px;background:rgba(2,6,23,.84);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(18px);box-shadow:0 18px 50px rgba(0,0,0,.42)}.sticky-mobile .btn{width:100%}
+
+    @media(max-width:1080px){
+      .hero-grid,.problem-grid,.video-grid,.contrast-grid,.honest-grid,.math-grid,.orchestrator-grid{grid-template-columns:1fr}
+      .overview-grid{grid-template-columns:repeat(3,1fr)}
+      .vertical-grid,.support-grid{grid-template-columns:repeat(2,1fr)}
+      .profile-grid,.expand-grid{grid-template-columns:repeat(2,1fr)}
+      .nav-links{display:none}.includes{grid-template-columns:1fr}
+    }
+    @media(max-width:760px){
+      .wrap{padding:0 16px}.section{padding:72px 0}.nav{padding:11px 16px}.brand-sub{display:none}.brand-title{font-size:14px;max-width:145px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.brand-mark{width:38px;height:38px;border-radius:15px}.nav .btn{padding:9px 11px;font-size:11px;width:auto}.hero{min-height:auto;padding:98px 0 62px;align-items:flex-start}h1{font-size:clamp(34px,11vw,48px);line-height:1.04;letter-spacing:-.04em}h2{font-size:clamp(31px,9vw,42px);line-height:1.06}.hero p,.lead{font-size:16px;line-height:1.62}.hero-actions,.price-actions,.cta-buttons{display:grid;grid-template-columns:1fr;width:100%}.hero-actions .btn,.price-actions .btn,.cta-buttons .btn{width:100%}.hero-mini,.overview-grid,.vertical-grid,.support-grid,.profile-grid,.expand-grid{grid-template-columns:1fr}.panel{border-radius:28px;padding:12px}.hub-card{border-radius:26px;padding:22px}.hub-title{font-size:27px}.hub-sub{max-width:100%}.hub-row{grid-template-columns:auto 1fr}.hub-pill{grid-column:2;width:max-content}.copy-box,.orchestrator-box{padding:24px;border-radius:30px}.copy-box h3{font-size:28px}.feature-card{grid-template-columns:1fr}.price-card{padding:25px;border-radius:30px}.price-card h3{font-size:30px}.price-main b{font-size:54px}.final-box{padding:26px;border-radius:30px}.footer-main{flex-direction:column;align-items:flex-start}.footer-right{align-items:flex-start}.sticky-mobile{display:block}body{padding-bottom:84px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <a href="#top" class="brand">
+        <div class="brand-mark">E</div>
+        <div>
+          <div class="brand-title">Emprende360</div>
+          <div class="brand-sub">Círculo B2B</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#resumen">Resumen</a>
+        <a href="#video">Vídeo</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#perfiles">Perfiles</a>
+        <a href="#oferta">Precio</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn-primary" href="#solicitar">Quiero valorar si encajo</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="grid-bg"></div>
+      <div class="blob one"></div>
+      <div class="blob two"></div>
+      <div class="blob three"></div>
+
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <span class="pill">Primera edición · 90 días · plazas revisadas una a una</span>
+          <h1><span class="grad-text">Deja de abrir puertas solo. Entra en un círculo B2B diseñado para generar referencias con contexto.</span></h1>
+          <p>
+            Durante 90 días, un grupo pequeño de profesionales B2B complementarios activa redes, mesas, invitaciones, DMs, intros y seguimiento para abrir más conversaciones con menos fricción.
+          </p>
+          <p class="muted">
+            No es otro grupo de networking. Es una red B2B operada con método, foco y compromiso semanal.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20si%20encajo%20en%20el%20C%C3%ADrculo%20de%20Referencias%20B2B%20de%20Emprende360.%20Mi%20perfil%20es%3A" target="_blank" rel="noopener noreferrer">Quiero valorar si encajo</a>
+            <a class="btn btn-secondary" href="#video">Ver explicación</a>
+          </div>
+
+          <div class="hero-mini">
+            <div class="mini">✅ 390€ / 90 días</div>
+            <div class="mini">✅ 5-6 perfiles iniciales</div>
+            <div class="mini">✅ 2-3 horas semanales</div>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <div class="window-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <div class="hub-card">
+            <div class="hub-inner">
+              <span class="hub-label">Referencias · mesas · DMs · seguimiento</span>
+              <div class="hub-title">La diferencia no está en tener contactos. Está en activarlos bien.</div>
+              <div class="hub-sub">
+                Cada miembro entra con una oferta clara, un cliente ideal definido y capacidad real de aportar valor al resto del círculo.
+              </div>
+
+              <div class="hub-flow">
+                <div class="hub-row"><div class="hub-num">1</div><div><b>Perfil claro</b><span>Qué vendes, a quién ayudas y cuándo tiene sentido recomendarte.</span></div><div class="hub-pill">Foco</div></div>
+                <div class="hub-row"><div class="hub-num">2</div><div><b>Petición semanal</b><span>Qué contactos, empresas, sectores o perfiles quieres activar.</span></div><div class="hub-pill">Demanda</div></div>
+                <div class="hub-row"><div class="hub-num">3</div><div><b>Acción con contexto</b><span>Invitaciones, DMs, intros, invitados, mesas y oportunidades.</span></div><div class="hub-pill">Movimiento</div></div>
+                <div class="hub-row"><div class="hub-num">4</div><div><b>Seguimiento</b><span>Qué se hizo, qué respondió, qué sigue vivo y qué se descarta.</span></div><div class="hub-pill">Sistema</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resumen" class="overview">
+      <div class="wrap">
+        <div class="overview-box reveal">
+          <div class="overview-head">
+            <span class="kicker">Lo importante de un vistazo</span>
+            <h2>El potencial no está en un miembro. Está en 5 redes activándose a la vez.</h2>
+            <p class="lead" style="max-width:900px;margin:16px auto 0">
+              El valor del círculo está en la red combinada: varios perfiles B2B complementarios moviendo contactos, mesas, invitaciones, DMs, intros y seguimiento durante 90 días.
+            </p>
+          </div>
+
+          <div class="overview-grid">
+            <div class="overview-card gold"><b>5</b><span>perfiles B2B activos en el círculo inicial</span></div>
+            <div class="overview-card"><b>5.000+</b><span>contactos profesionales combinados como base de partida</span></div>
+            <div class="overview-card"><b>1.000</b><span>invitaciones potenciales por semana entre todos</span></div>
+            <div class="overview-card"><b>250</b><span>DMs seleccionados por semana entre todos</span></div>
+            <div class="overview-card gold"><b>12.000</b><span>invitaciones potenciales en 90 días</span></div>
+            <div class="overview-card gold"><b>3.000</b><span>DMs potenciales con contexto en 90 días</span></div>
+          </div>
+
+          <div class="disclaimer">
+            Cálculo orientativo sobre 5 miembros activos, 12 semanas operativas, hasta 200 invitaciones y hasta 50 DMs por miembro/semana. No es una promesa de resultados; es el potencial de actividad si el círculo participa con constancia y criterio. Además de esto: intros, referencias, invitados, mesas y seguimiento.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="section video-section">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Te lo explico en pocos minutos</span>
+          <h2>En pocos minutos verás cómo se mueve el círculo cada semana.</h2>
+          <p class="lead">
+            Te explico la dinámica práctica: qué se pide, cómo se activan contactos, cómo se usan las mesas, qué DMs tienen sentido y cómo se hace seguimiento para que las oportunidades no se pierdan.
+          </p>
+        </div>
+
+        <div class="video-grid reveal">
+          <div class="video-shell">
+            <div class="video-ratio">
+              <iframe src="https://www.youtube.com/embed/CEotn6DlGHo" title="Círculo de Referencias B2B Emprende360" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="video-points">
+            <div class="point-card"><div class="point-icon">1</div><div><b>Qué se pide cada semana</b><span>Cada miembro aterriza qué contactos, empresas o sectores quiere activar.</span></div></div>
+            <div class="point-card"><div class="point-icon">2</div><div><b>Cómo se activan contactos</b><span>Con invitaciones, mensajes seleccionados, intros y mesas temáticas.</span></div></div>
+            <div class="point-card"><div class="point-icon">3</div><div><b>Qué convierte una referencia en útil</b><span>No basta con pasar un nombre. Tiene que haber persona, contexto y siguiente paso.</span></div></div>
+            <div class="point-card"><div class="point-icon">4</div><div><b>Por qué hace falta seguimiento</b><span>Las oportunidades no se pierden en el grupo: se ordenan, se revisan y se empujan.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contrast">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Qué cambia</span>
+          <h2>No es lo mismo entrar en frío que llegar con contexto.</h2>
+          <p class="lead">
+            Una presentación bien hecha reduce fricción, aumenta confianza y convierte una conversación comercial en algo mucho más natural.
+          </p>
+        </div>
+
+        <div class="contrast-grid reveal">
+          <div class="contrast-card">
+            <span class="contrast-badge">Trabajando solo</span>
+            <h3>Todo depende de tu propia red.</h3>
+            <p>Publicas, escribes, invitas, haces seguimiento y generas confianza desde cero.</p>
+            <ul class="check-list">
+              <li><span class="no">✕</span><span>Menos contexto al contactar.</span></li>
+              <li><span class="no">✕</span><span>Más fricción para abrir conversaciones.</span></li>
+              <li><span class="no">✕</span><span>Menos autoridad percibida.</span></li>
+              <li><span class="no">✕</span><span>Seguimiento más difícil de sostener.</span></li>
+            </ul>
+          </div>
+
+          <div class="contrast-card hot">
+            <span class="contrast-badge">Dentro del círculo</span>
+            <h3>Tu red se combina con otras redes útiles.</h3>
+            <p>Entras en una dinámica donde otros profesionales complementarios pueden abrirte puertas y tú haces lo mismo por ellos.</p>
+            <ul class="check-list">
+              <li><span class="yes">✓</span><span>Mesas y eventos como excusa natural.</span></li>
+              <li><span class="yes">✓</span><span>DMs con razón clara para hablar.</span></li>
+              <li><span class="yes">✓</span><span>Introducciones con contexto.</span></li>
+              <li><span class="yes">✓</span><span>Más visibilidad, autoridad y confianza.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section problem">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Cómo funciona</span>
+          <h2>Una dinámica semanal sencilla: pedir, activar, medir y mejorar.</h2>
+          <p class="lead">
+            El valor no está en una reunión aislada. Está en sostener una rutina semanal donde cada miembro aporta movimiento real.
+          </p>
+        </div>
+
+        <div class="problem-grid reveal">
+          <div class="copy-box">
+            <h3>Tu red deja de trabajar sola.</h3>
+            <p>
+              Muchos profesionales B2B tienen contactos valiosos, pero no tienen una dinámica semanal para activarlos con criterio.
+            </p>
+            <p>
+              El círculo convierte esa red en acciones concretas: referencias, invitados, conversaciones, eventos, mesas y oportunidades con seguimiento.
+            </p>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-card"><div class="feature-icon">L</div><div><h3>Petición semanal</h3><p>Cada miembro dice qué tipo de contacto, empresa, sector o decisor le interesa activar.</p></div></div>
+            <div class="feature-card"><div class="feature-icon">M</div><div><h3>Activación de red</h3><p>Se proponen cruces, se invitan contactos, se preparan DMs y se abren conversaciones.</p></div></div>
+            <div class="feature-card"><div class="feature-icon">J</div><div><h3>Reunión de valor</h3><p>Revisamos peticiones, referencias, posibles mesas, respuestas y próximos pasos.</p></div></div>
+            <div class="feature-card"><div class="feature-icon">V</div><div><h3>Seguimiento</h3><p>Qué se hizo, qué respondió, qué oportunidad sigue abierta y qué hay que empujar.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section math-section">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Potencial en 90 días</span>
+          <h2>La lógica es simple: más contexto, más distribución y más seguimiento.</h2>
+          <p class="lead">
+            No prometemos clientes. Construimos acceso, visibilidad, autoridad, conversaciones y oportunidades de colaboración.
+          </p>
+        </div>
+
+        <div class="math-grid reveal">
+          <div class="math-card">
+            <h3>Por miembro en 90 días</h3>
+            <p class="small">Con 12 semanas operativas de actividad constante:</p>
+            <ul class="math-list">
+              <li><span>Hasta 200 invitaciones por semana</span><b>2.400</b></li>
+              <li><span>Hasta 50 DMs seleccionados por semana</span><b>600</b></li>
+              <li><span>Acciones útiles, intros, invitados o referencias</span><b>12+</b></li>
+              <li><span>Potencial de movimiento comercial</span><b>3.000+</b></li>
+            </ul>
+          </div>
+
+          <div class="math-card highlight">
+            <h3>Con 5 miembros activos</h3>
+            <p class="small">La fuerza está en la combinación de redes.</p>
+            <ul class="math-list">
+              <li><span>Invitaciones potenciales a mesas/eventos</span><b>12.000+</b></li>
+              <li><span>DMs seleccionados con contexto</span><b>3.000+</b></li>
+              <li><span>Intros, invitados, señales y oportunidades</span><b>60+</b></li>
+              <li><span>Acciones combinadas aproximadas</span><b>15.000+</b></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="center max-860 reveal" style="margin-top:38px">
+          <p class="lead">
+            Si de toda esa actividad sale una venta, la inversión puede tener sentido. Si además salen partners, invitados, visibilidad y relaciones útiles, el valor va más allá de una operación puntual.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section orchestrator">
+      <div class="wrap">
+        <div class="orchestrator-box reveal">
+          <span class="kicker">El papel de Emprende360</span>
+          <h2>Emprende360 se encarga de que el círculo no se quede en teoría.</h2>
+          <div class="orchestrator-grid">
+            <div>
+              <p class="lead">
+                Emprende360 no ocupa una plaza del círculo. Su papel es coordinar la dinámica, organizar mesas, ordenar peticiones, apoyar mensajes, activar red y dar seguimiento para que las oportunidades no se pierdan.
+              </p>
+              <p class="small muted">
+                La diferencia está en tener una red operada: no solo contactos, sino estructura, activación y seguimiento.
+              </p>
+            </div>
+            <div class="support-grid">
+              <div class="support-card"><span>🎯</span>Filtro de perfiles y complementariedad</div>
+              <div class="support-card"><span>🎙️</span>Mesas y eventos como excusa de contacto</div>
+              <div class="support-card"><span>✉️</span>Apoyo con mensajes e invitaciones</div>
+              <div class="support-card"><span>📌</span>Seguimiento semanal de acciones</div>
+              <div class="support-card"><span>🤝</span>Activación de intros y referencias</div>
+              <div class="support-card"><span>⚙️</span>Organización y criterio comercial</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="perfiles" class="section profiles">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Perfiles complementarios</span>
+          <h2>Primer círculo: 5 perfiles B2B que venden a empresas, pero no compiten entre sí.</h2>
+          <p class="lead">
+            La clave es sencilla: mismo mercado, diferentes puertas de entrada. Todos pueden hablar con CEOs, founders, pymes o directivos, pero cada uno aporta una solución distinta.
+          </p>
+        </div>
+
+        <div class="profile-grid reveal">
+          <div class="profile-card"><div class="emoji">🤖</div><b>IA / automatización</b><span>Procesos, agentes IA, productividad, automatización y eficiencia.</span></div>
+          <div class="profile-card"><div class="emoji">👥</div><b>Talento / RRHH</b><span>Liderazgo, selección, formación, cultura y equipos.</span></div>
+          <div class="profile-card"><div class="emoji">📈</div><b>Ventas B2B</b><span>LinkedIn, desarrollo comercial, social selling, growth y BD.</span></div>
+          <div class="profile-card"><div class="emoji">⚙️</div><b>Operaciones</b><span>Procesos, productividad, control operativo y mejora continua.</span></div>
+          <div class="profile-card"><div class="emoji">💶</div><b>Finanzas</b><span>Financiación, subvenciones, control, caja y dirección financiera.</span></div>
+        </div>
+
+        <div class="center max-860 reveal" style="margin-top:44px">
+          <h3 style="font-size:34px;letter-spacing:-.04em">Después, solo si aporta valor, se podrá ampliar hasta 10 perfiles.</h3>
+          <p class="lead">
+            No se ampliará por llenar plazas. Solo si el nuevo perfil abre una categoría útil y no compite con los miembros existentes.
+          </p>
+        </div>
+
+        <div class="expand-grid reveal">
+          <div class="expand-card">Legal / fiscal / compliance</div>
+          <div class="expand-card">Marketing B2B / posicionamiento</div>
+          <div class="expand-card">CRM / ERP / IT</div>
+          <div class="expand-card">Estrategia pyme / empresa familiar</div>
+          <div class="expand-card">Riesgos / seguros / PRL</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section verticals">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Filtro de calidad</span>
+          <h2>No buscamos llenar plazas. Buscamos que el círculo funcione.</h2>
+          <p class="lead">
+            La primera edición será pequeña y revisada. La calidad del círculo depende de quién entra y de cómo participa.
+          </p>
+        </div>
+
+        <div class="vertical-grid reveal">
+          <div class="vertical-card"><div class="emoji">🔗</div><b>Red real</b><span>Preferiblemente 1.000+ contactos profesionales de calidad.</span></div>
+          <div class="vertical-card"><div class="emoji">💼</div><b>Servicio B2B claro</b><span>Vendiendo a empresas, CEOs, founders, directivos o pymes.</span></div>
+          <div class="vertical-card"><div class="emoji">🎯</div><b>Cliente ideal definido</b><span>Saber qué contacto interesa y cuándo tiene sentido recomendarte.</span></div>
+          <div class="vertical-card"><div class="emoji">🤝</div><b>Mentalidad de aportar</b><span>Primero aportar valor, después pedir ayuda al círculo.</span></div>
+          <div class="vertical-card"><div class="emoji">🧩</div><b>Complementariedad</b><span>No aceptamos perfiles que compitan directamente en la misma categoría.</span></div>
+          <div class="vertical-card"><div class="emoji">📌</div><b>Compromiso semanal</b><span>Participar, activar contactos y dar seguimiento.</span></div>
+          <div class="vertical-card"><div class="emoji">📈</div><b>Ticket suficiente</b><span>Debe tener sentido económico abrir oportunidades B2B de calidad.</span></div>
+          <div class="vertical-card"><div class="emoji">🚫</div><b>Sin venta agresiva</b><span>El círculo no es para vender al resto. Es para abrir puertas bien.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section honest">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Sin humo</span>
+          <h2>Lo que sí construimos y lo que no prometemos.</h2>
+        </div>
+
+        <div class="honest-grid reveal">
+          <div class="honest-card nope">
+            <h3>No prometemos</h3>
+            <ul>
+              <li><span>✕</span><span>Clientes garantizados.</span></li>
+              <li><span>✕</span><span>Resultados sin participación activa.</span></li>
+              <li><span>✕</span><span>Que todos los contactos respondan.</span></li>
+              <li><span>✕</span><span>Entrada automática por pagar.</span></li>
+              <li><span>✕</span><span>Bases de datos abiertas ni spam.</span></li>
+            </ul>
+          </div>
+
+          <div class="honest-card good">
+            <h3>Sí construimos</h3>
+            <ul>
+              <li><span>✓</span><span>Acceso a redes complementarias.</span></li>
+              <li><span>✓</span><span>Mesas, invitados e invitaciones con contexto.</span></li>
+              <li><span>✓</span><span>DMs seleccionados e introducciones útiles.</span></li>
+              <li><span>✓</span><span>Más visibilidad, autoridad y confianza.</span></li>
+              <li><span>✓</span><span>Seguimiento para que las oportunidades no se pierdan.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="oferta" class="section offers">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">Primera edición</span>
+          <h2>Participa durante 90 días en un círculo B2B pequeño, filtrado y operado.</h2>
+          <p class="lead">
+            Acceso al círculo, dinámica semanal, mesas, DMs, referencias, seguimiento y apoyo de Emprende360.
+          </p>
+        </div>
+
+        <article class="price-card reveal">
+          <div class="price-content">
+            <span class="price-tag">Precio fundador · plazas revisadas</span>
+            <h3>Para profesionales B2B que ya tienen red, pero quieren activarla mejor junto a otros perfiles seleccionados.</h3>
+
+            <div class="price-main"><b>390€</b><span>/ 90 días</span></div>
+            <div class="pay-once">
+              Incluye onboarding, ficha de referencia, grupo privado, reunión semanal, mesas/eventos, dinámicas de activación, DMs con contexto, intros y seguimiento.
+            </div>
+
+            <ul class="includes">
+              <li><span class="check">✓</span><span><strong>Revisión de encaje</strong> antes de confirmar plaza.</span></li>
+              <li><span class="check">✓</span><span><strong>Onboarding comercial</strong> para saber cuándo recomendarte.</span></li>
+              <li><span class="check">✓</span><span><strong>Ficha de referencia</strong> para que el resto entienda tu valor.</span></li>
+              <li><span class="check">✓</span><span><strong>Grupo privado</strong> operativo, sin ruido ni autopromoción.</span></li>
+              <li><span class="check">✓</span><span><strong>Reunión semanal</strong> de seguimiento y activación.</span></li>
+              <li><span class="check">✓</span><span><strong>Mesas y eventos</strong> para invitar contactos con una excusa natural.</span></li>
+              <li><span class="check">✓</span><span><strong>DMs seleccionados</strong> cuando exista un ángulo claro.</span></li>
+              <li><span class="check">✓</span><span><strong>Apoyo de Emprende360</strong> con estructura, mensajes y coordinación.</span></li>
+            </ul>
+
+            <div class="price-actions">
+              <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20si%20encajo%20en%20el%20C%C3%ADrculo%20de%20Referencias%20B2B.%20Mi%20categor%C3%ADa%20es%3A%20%0ACliente%20ideal%3A%20%0AContactos%20LinkedIn%20aprox.%3A%20%0AQu%C3%A9%20puedo%20aportar%3A" target="_blank" rel="noopener noreferrer">Quiero valorar si encajo</a>
+              <a class="btn btn-secondary" href="#faq">Resolver dudas</a>
+            </div>
+
+            <div class="note">
+              Plazas revisadas una a una. No aceptamos perfiles que no encajen con la dinámica o compitan directamente con miembros existentes.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq">
+      <div class="wrap">
+        <div class="center max-860 reveal">
+          <span class="kicker">FAQ</span>
+          <h2>Preguntas claras. Respuestas claras.</h2>
+        </div>
+
+        <div class="reveal" style="max-width:900px;margin:42px auto 0">
+          <details open>
+            <summary>¿Esto es como BNI?</summary>
+            <p>Comparte una idea importante: la disciplina de generar referencias. Pero aquí el formato es más pequeño, más curado, más B2B y más conectado con LinkedIn, mesas, eventos, DMs seleccionados y seguimiento.</p>
+          </details>
+
+          <details>
+            <summary>¿Garantiza clientes?</summary>
+            <p>No. Lo que se construye es acceso, visibilidad cualificada, contexto, conversaciones, referencias y seguimiento. Los clientes dependerán del encaje, la oferta, el mercado y la calidad de cada relación.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué tengo que hacer cada semana?</summary>
+            <p>Participar con una petición clara y aportar al menos una acción útil: invitar contactos, enviar DMs seleccionados, hacer una intro, traer un invitado, recomendar a otro miembro o dar seguimiento a una oportunidad.</p>
+          </details>
+
+          <details>
+            <summary>¿Tengo que invitar siempre a 200 personas o enviar 50 DMs?</summary>
+            <p>No. Son capacidades potenciales, no obligaciones rígidas. Mejor 10 contactos buenos que 200 sin encaje. La clave es mover la red con criterio.</p>
+          </details>
+
+          <details>
+            <summary>¿Cómo sé si encajo?</summary>
+            <p>Encajas si vendes a empresas, tienes una red profesional real, puedes dedicar tiempo cada semana, tienes una oferta clara y puedes aportar valor antes de pedir.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué pasa después de los 90 días?</summary>
+            <p>Si el círculo funciona y hay valor real, se podrá continuar con una cuota mensual o abrir círculos verticales por áreas: IA, ventas, finanzas, legal, operaciones, marketing B2B, empresa familiar o internacionalización.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="solicitar" class="section final">
+      <div class="wrap">
+        <div class="final-box reveal">
+          <span class="kicker">Siguiente paso</span>
+          <h2>Valora si tu perfil encaja en la primera edición.</h2>
+          <p class="lead" style="max-width:800px;margin:20px auto 0">
+            Cuéntanos tu categoría, cliente ideal, número aproximado de contactos en LinkedIn y qué tipo de referencias podrías aportar o recibir.
+          </p>
+
+          <div class="cta-buttons">
+            <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20si%20encajo%20en%20el%20C%C3%ADrculo%20de%20Referencias%20B2B.%20Mi%20categor%C3%ADa%20es%3A%20%0ACliente%20ideal%3A%20%0AContactos%20LinkedIn%20aprox.%3A%20%0AQu%C3%A9%20puedo%20aportar%3A%20%0AQu%C3%A9%20me%20gustar%C3%ADa%20recibir%3A" target="_blank" rel="noopener noreferrer">Quiero valorar si encajo</a>
+            <a class="btn btn-whatsapp" href="mailto:info@emprende360.club?subject=Solicitud%20C%C3%ADrculo%20de%20Referencias%20B2B%20Emprende360&body=Hola%20Alberto%2C%20quiero%20valorar%20si%20encajo%20en%20el%20C%C3%ADrculo%20de%20Referencias%20B2B.%0A%0AMi%20categor%C3%ADa%20es%3A%0ACliente%20ideal%3A%0AContactos%20LinkedIn%20aprox.%3A%0AQu%C3%A9%20puedo%20aportar%3A%0AQu%C3%A9%20me%20gustar%C3%ADa%20recibir%3A">Enviar solicitud por email</a>
+          </div>
+
+          <p class="small muted" style="max-width:720px;margin:24px auto 0">
+            Al solicitar una plaza aceptas los
+            <a href="https://emprende360.club/terminos-condiciones" target="_blank" rel="noopener noreferrer" style="color:#BFDBFE;text-decoration:underline;text-underline-offset:3px;">Términos y condiciones</a>,
+            la
+            <a href="https://emprende360.club/privacidad" target="_blank" rel="noopener noreferrer" style="color:#BFDBFE;text-decoration:underline;text-underline-offset:3px;">Política de privacidad</a>,
+            la
+            <a href="https://emprende360.club/cookies" target="_blank" rel="noopener noreferrer" style="color:#BFDBFE;text-decoration:underline;text-underline-offset:3px;">Política de cookies</a>
+            y el
+            <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer" style="color:#BFDBFE;text-decoration:underline;text-underline-offset:3px;">Aviso legal</a>.
+          </p>
+          <p class="small muted" style="max-width:720px;margin:14px auto 0">
+            Si no vemos encaje, te lo diremos con claridad. La prioridad es proteger la calidad del círculo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-note">
+      <div class="wrap">
+        <p>
+          Nota: Emprende360 Círculo de Referencias B2B es una iniciativa privada de referencias, alianzas y activación comercial B2B. No garantiza clientes, ventas, financiación, inversión, reuniones ni resultados concretos. El objetivo es facilitar acceso cualificado, contexto, distribución, seguimiento y colaboración entre perfiles seleccionados.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-main">
+      <div>
+        <strong>Emprende360 · Círculo de Referencias B2B</strong><br>
+        <span>Red privada · Referencias B2B · Mesas · DMs · Seguimiento</span>
+
+        <div class="footer-company">
+          Operado por Albi System, LLC.<br>
+          Contacto directo: <a href="https://wa.me/34603153268" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="#resumen">Resumen</a>
+          <a href="#video">Vídeo</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#perfiles">Perfiles</a>
+          <a href="#oferta">Precio</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+        <div class="footer-legal">
+          <a href="https://emprende360.club/privacidad" target="_blank" rel="noopener noreferrer">Privacidad</a>
+          <a href="https://emprende360.club/cookies" target="_blank" rel="noopener noreferrer">Cookies</a>
+          <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer">Aviso legal</a>
+          <a href="https://emprende360.club/terminos-condiciones" target="_blank" rel="noopener noreferrer">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-mobile">
+    <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20si%20encajo%20en%20el%20C%C3%ADrculo%20de%20Referencias%20B2B." target="_blank" rel="noopener noreferrer">Quiero valorar si encajo</a>
+  </div>
+
+  <script>
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){ entry.target.classList.add("on"); }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
