@@ -1,0 +1,1329 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ronda de Alianzas B2B | Emprende360</title>
+  <meta name="description" content="Ronda de Alianzas B2B de Emprende360: un encuentro para profesionales, consultores, founders y empresarios que quieren colaborar, conectar y activar oportunidades reales." />
+
+  <style>
+    :root{
+      --deep:#020617;
+      --navy:#061826;
+      --navy2:#071522;
+      --blue:#0A66C2;
+      --sky:#18A7FF;
+      --gold:#F4C542;
+      --green:#22C55E;
+      --violet:#A855F7;
+      --red:#FB7185;
+      --text:#F8FAFC;
+      --muted:#94A3B8;
+      --line:rgba(255,255,255,.13);
+      --glass:rgba(255,255,255,.065);
+      --glass2:rgba(255,255,255,.105);
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+      --max:1180px;
+      --radius:30px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--deep);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    button,input,select,textarea{font:inherit}
+    .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+    .section{position:relative;padding:96px 0;overflow:hidden}
+    .lead{font-size:18px;line-height:1.72;color:#CBD5E1}
+    .small{font-size:14px;line-height:1.6;color:#CBD5E1}
+    .muted{color:var(--muted)}
+    .center{text-align:center;margin-left:auto;margin-right:auto}
+    .max-850{max-width:850px}
+
+    .grad-text{
+      background:linear-gradient(90deg,#fff,#c8ecff 42%,#ffe6a6);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(24,167,255,.25);
+      background:rgba(24,167,255,.09);
+      color:#C8ECFF;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:#DBEAFE;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      font-weight:800;
+      backdrop-filter:blur(16px);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:999px;
+      padding:14px 22px;
+      font-weight:950;
+      font-size:14px;
+      transition:.25s ease;
+      cursor:pointer;
+      border:0;
+      white-space:nowrap;
+    }
+
+    .btn-primary{
+      background:linear-gradient(90deg,#ffd95a,#F4C542,#ffd15a);
+      color:#06111F;
+      box-shadow:0 18px 60px rgba(244,197,66,.25);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 24px 80px rgba(244,197,66,.40);
+    }
+
+    .btn-secondary{
+      color:white;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(16px);
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-3px);
+      background:rgba(255,255,255,.10);
+      border-color:rgba(24,167,255,.45);
+    }
+
+    .grid-bg{
+      position:absolute;
+      inset:0;
+      opacity:.075;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.65) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.65) 1px,transparent 1px);
+      background-size:54px 54px;
+    }
+
+    .blob{
+      position:absolute;
+      border-radius:999px;
+      filter:blur(60px);
+      pointer-events:none;
+      opacity:.55;
+      animation:float 10s ease-in-out infinite;
+    }
+
+    .blob.one{width:300px;height:300px;background:rgba(24,167,255,.22);left:5%;top:13%}
+    .blob.two{width:330px;height:330px;background:rgba(244,197,66,.16);right:7%;top:20%;animation-delay:-3s}
+    .blob.three{width:280px;height:280px;background:rgba(34,197,94,.13);left:43%;bottom:2%;animation-delay:-5s}
+
+    @keyframes float{
+      0%,100%{transform:translate(0,0)}
+      50%{transform:translate(28px,22px)}
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity .7s ease,transform .7s ease;
+    }
+
+    .reveal.on{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    header{
+      position:fixed;
+      left:0;
+      right:0;
+      top:0;
+      z-index:50;
+      border-bottom:1px solid rgba(255,255,255,.10);
+      background:rgba(2,6,23,.74);
+      backdrop-filter:blur(22px);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 22px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:42px;
+      height:42px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      box-shadow:0 18px 45px rgba(24,167,255,.25);
+      font-weight:950;
+    }
+
+    .brand-title{font-weight:950;line-height:1}
+    .brand-sub{
+      margin-top:4px;
+      color:var(--muted);
+      font-size:10px;
+      font-weight:850;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:22px;
+      color:#CBD5E1;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .nav-links a:hover{color:white}
+
+    .hero{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:132px 0 90px;
+      background:
+        radial-gradient(circle at 15% 15%,rgba(24,167,255,.23),transparent 28%),
+        radial-gradient(circle at 84% 22%,rgba(244,197,66,.16),transparent 29%),
+        radial-gradient(circle at 50% 90%,rgba(34,197,94,.12),transparent 34%),
+        var(--deep);
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:52px;
+      align-items:center;
+    }
+
+    h1{
+      margin:26px 0 0;
+      font-size:clamp(42px,6vw,74px);
+      line-height:.96;
+      letter-spacing:-.06em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:14px 0 0;
+      font-size:clamp(34px,4.7vw,56px);
+      line-height:1.02;
+      letter-spacing:-.045em;
+      font-weight:950;
+    }
+
+    h3{
+      margin:0;
+      font-size:24px;
+      line-height:1.15;
+    }
+
+    .hero p{
+      font-size:19px;
+      line-height:1.7;
+      color:#CBD5E1;
+      max-width:710px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .hero-mini{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      max-width:710px;
+      margin-top:30px;
+    }
+
+    .mini{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.055);
+      border-radius:18px;
+      padding:13px 15px;
+      color:#DBEAFE;
+      font-size:14px;
+      font-weight:700;
+      backdrop-filter:blur(16px);
+    }
+
+    .panel{
+      position:relative;
+      border-radius:42px;
+      padding:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      box-shadow:0 40px 120px rgba(0,0,0,.42);
+      backdrop-filter:blur(22px);
+    }
+
+    .window-dots{
+      display:flex;
+      gap:7px;
+      margin:0 0 13px 3px;
+    }
+
+    .dot{width:11px;height:11px;border-radius:999px}
+    .dot.red{background:#FB7185}
+    .dot.yellow{background:#FACC15}
+    .dot.green{background:#34D399}
+
+    .round-card{
+      border:1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(circle at 20% 10%,rgba(244,197,66,.18),transparent 32%),
+        radial-gradient(circle at 90% 20%,rgba(24,167,255,.14),transparent 30%),
+        rgba(2,6,23,.58);
+      border-radius:34px;
+      padding:28px;
+      min-height:540px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .round-card:after{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      border-radius:999px;
+      right:-160px;
+      bottom:-180px;
+      border:1px solid rgba(244,197,66,.18);
+      box-shadow:0 0 0 38px rgba(244,197,66,.035),0 0 0 78px rgba(24,167,255,.025);
+    }
+
+    .round-inner{
+      position:relative;
+      z-index:2;
+    }
+
+    .round-label{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(244,197,66,.30);
+      background:rgba(244,197,66,.10);
+      color:#FDE68A;
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:12px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    .round-title{
+      margin-top:24px;
+      font-size:38px;
+      line-height:1.02;
+      letter-spacing:-.04em;
+      font-weight:950;
+    }
+
+    .round-flow{
+      display:grid;
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .flow-item{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.055);
+      border-radius:22px;
+      padding:18px;
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:14px;
+      align-items:start;
+    }
+
+    .flow-num{
+      width:38px;
+      height:38px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-weight:950;
+    }
+
+    .flow-item b{
+      display:block;
+      font-size:17px;
+      color:white;
+    }
+
+    .flow-item span{
+      display:block;
+      margin-top:5px;
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    .stats{
+      position:relative;
+      z-index:4;
+      margin-top:-54px;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      background:rgba(15,23,42,.90);
+      border:1px solid var(--line);
+      border-radius:32px;
+      padding:16px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(18px);
+    }
+
+    .stat{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.045);
+      border-radius:24px;
+      padding:24px;
+    }
+
+    .stat b{
+      display:block;
+      font-size:36px;
+      letter-spacing:-.04em;
+    }
+
+    .stat span{
+      display:block;
+      margin-top:7px;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:650;
+    }
+
+    .what{background:var(--deep)}
+
+    .two-path{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      margin-top:44px;
+    }
+
+    .path-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:34px;
+      padding:32px;
+      box-shadow:0 22px 80px rgba(0,0,0,.25);
+      backdrop-filter:blur(18px);
+      transition:.25s ease;
+    }
+
+    .path-card:hover{
+      transform:translateY(-5px);
+      background:var(--glass2);
+      border-color:rgba(244,197,66,.35);
+    }
+
+    .path-icon{
+      width:64px;
+      height:64px;
+      border-radius:23px;
+      display:grid;
+      place-items:center;
+      font-size:29px;
+      margin-bottom:20px;
+      color:#06111F;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+    }
+
+    .path-card h3{
+      font-size:30px;
+      letter-spacing:-.035em;
+    }
+
+    .path-card p{
+      color:#CBD5E1;
+      line-height:1.65;
+      font-size:15px;
+    }
+
+    .path-card ul{
+      padding:0;
+      margin:20px 0 0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+
+    .path-card li{
+      border:1px solid rgba(255,255,255,.09);
+      background:rgba(255,255,255,.045);
+      border-radius:16px;
+      padding:11px 13px;
+      font-size:14px;
+      color:#DBEAFE;
+      line-height:1.45;
+    }
+
+    .value{background:var(--navy2)}
+
+    .three-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:42px;
+    }
+
+    .simple-card{
+      padding:26px;
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:30px;
+      box-shadow:0 20px 70px rgba(0,0,0,.22);
+      backdrop-filter:blur(18px);
+      transition:.25s ease;
+    }
+
+    .simple-card:hover{
+      transform:translateY(-5px);
+      background:var(--glass2);
+      border-color:rgba(24,167,255,.35);
+    }
+
+    .simple-card .ico{
+      width:56px;
+      height:56px;
+      border-radius:20px;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      display:grid;
+      place-items:center;
+      font-size:25px;
+      margin-bottom:18px;
+    }
+
+    .simple-card h3{font-size:21px}
+    .simple-card p{
+      color:#CBD5E1;
+      line-height:1.62;
+      font-size:14px;
+    }
+
+    .format{background:var(--deep)}
+
+    .format-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:42px;
+    }
+
+    .format-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:30px;
+      padding:24px;
+      min-height:230px;
+      box-shadow:0 20px 70px rgba(0,0,0,.24);
+    }
+
+    .format-card .num{
+      font-size:44px;
+      font-weight:950;
+      color:rgba(255,255,255,.13);
+      line-height:1;
+      margin-bottom:15px;
+    }
+
+    .format-card h3{
+      font-size:21px;
+    }
+
+    .format-card p{
+      color:#CBD5E1;
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    .rules{background:var(--navy2)}
+
+    .rules-box{
+      margin-top:42px;
+      border:1px solid rgba(244,197,66,.22);
+      background:rgba(244,197,66,.075);
+      border-radius:34px;
+      padding:32px;
+      box-shadow:var(--shadow);
+    }
+
+    .rules-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .rule-card{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.045);
+      border-radius:26px;
+      padding:22px;
+    }
+
+    .rule-card h3{
+      font-size:22px;
+    }
+
+    .rule-card ul{
+      padding:0;
+      list-style:none;
+      margin:18px 0 0;
+      display:grid;
+      gap:10px;
+    }
+
+    .rule-card li{
+      color:#DBEAFE;
+      font-size:14px;
+      line-height:1.45;
+    }
+
+    .apply{background:var(--deep)}
+
+    .form-wrap{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:42px;
+      align-items:start;
+    }
+
+    .form-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:34px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(22px);
+    }
+
+    form{
+      display:grid;
+      gap:14px;
+    }
+
+    .form-row{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+
+    label{
+      display:grid;
+      gap:7px;
+      color:#E2E8F0;
+      font-size:14px;
+      font-weight:750;
+    }
+
+    input,select,textarea{
+      width:100%;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(2,6,23,.68);
+      color:#fff;
+      outline:0;
+      border-radius:18px;
+      padding:13px 15px;
+      transition:.2s ease;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:rgba(24,167,255,.55);
+      box-shadow:0 0 0 4px rgba(24,167,255,.08);
+    }
+
+    textarea{
+      min-height:112px;
+      resize:vertical;
+    }
+
+    .note-box{
+      border:1px solid rgba(24,167,255,.22);
+      background:rgba(24,167,255,.075);
+      border-radius:28px;
+      padding:24px;
+      margin-top:24px;
+    }
+
+    .note-box h3{
+      font-size:22px;
+    }
+
+    .note-box p{
+      color:#DBEAFE;
+      line-height:1.62;
+      font-size:15px;
+    }
+
+    .final{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(24,167,255,.16),transparent 32%),
+        radial-gradient(circle at 80% 40%,rgba(244,197,66,.14),transparent 30%),
+        var(--deep);
+      text-align:center;
+    }
+
+    .final-box{
+      border:1px solid rgba(244,197,66,.25);
+      background:rgba(255,255,255,.045);
+      border-radius:38px;
+      padding:38px;
+      box-shadow:var(--shadow);
+    }
+
+    .cta-buttons{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .legal{
+      border-top:1px solid var(--line);
+      background:#01040d;
+      padding:28px 0;
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background:var(--deep);
+      padding:35px 0;
+      color:#94A3B8;
+      font-size:14px;
+    }
+
+    .footer-flex{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a:hover{color:white}
+
+    @media(max-width:1080px){
+      .hero-grid,.form-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .panel{
+        max-width:720px;
+        margin:0 auto;
+        width:100%;
+      }
+
+      .stats-grid,.three-grid,.format-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .nav-links{display:none}
+    }
+
+    @media(max-width:760px){
+      .wrap{padding:0 16px}
+      .section{padding:72px 0}
+
+      .nav{padding:11px 16px}
+      .brand-sub{display:none}
+      .brand-title{
+        font-size:14px;
+        max-width:145px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+      .brand-mark{
+        width:38px;
+        height:38px;
+        border-radius:15px;
+      }
+      .nav .btn{
+        padding:9px 11px;
+        font-size:11px;
+        width:auto;
+      }
+
+      .hero{
+        min-height:auto;
+        padding:98px 0 62px;
+        align-items:flex-start;
+      }
+
+      h1{
+        font-size:clamp(34px,11vw,46px);
+        line-height:1.04;
+        letter-spacing:-.04em;
+      }
+
+      h2{
+        font-size:clamp(31px,9vw,42px);
+        line-height:1.06;
+      }
+
+      .hero p,.lead{
+        font-size:16px;
+        line-height:1.62;
+      }
+
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+        width:100%;
+      }
+
+      .hero-actions .btn{width:100%}
+
+      .hero-mini,.stats-grid,.two-path,.three-grid,.format-grid,.rules-grid,.form-row{
+        grid-template-columns:1fr;
+      }
+
+      .panel{
+        border-radius:28px;
+        padding:12px;
+      }
+
+      .round-card{
+        min-height:auto;
+        border-radius:26px;
+        padding:22px;
+      }
+
+      .round-title{
+        font-size:29px;
+      }
+
+      .path-card{
+        padding:24px;
+        border-radius:28px;
+      }
+
+      .path-card h3{
+        font-size:25px;
+      }
+
+      .form-card{
+        padding:20px;
+        border-radius:28px;
+      }
+
+      .final-box{
+        padding:26px;
+        border-radius:30px;
+      }
+
+      .cta-buttons{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .cta-buttons .btn{
+        width:100%;
+      }
+    }
+
+    @media(max-width:460px){
+      .nav{padding:10px 12px}
+      .brand-title{max-width:112px;font-size:13px}
+      .brand-mark{width:34px;height:34px;border-radius:13px}
+      .nav .btn{font-size:10.5px;padding:8px 9px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <a href="#top" class="brand">
+        <div class="brand-mark">E</div>
+        <div>
+          <div class="brand-title">Emprende360</div>
+          <div class="brand-sub">Ronda Alianzas</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#que-es">Qué es</a>
+        <a href="#para-quien">Para quién</a>
+        <a href="#formato">Formato</a>
+        <a href="#reglas">Reglas</a>
+        <a href="#participar">Participar</a>
+      </nav>
+
+      <a class="btn btn-primary" href="#participar">Solicitar plaza →</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="grid-bg"></div>
+      <div class="blob one"></div>
+      <div class="blob two"></div>
+      <div class="blob three"></div>
+
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <span class="pill">🤝 Alianzas · Partners · Networking B2B · Oportunidades</span>
+          <h1><span class="grad-text">Una ronda para conectar profesionales que pueden ayudarse de verdad.</span></h1>
+
+          <p>
+            La Ronda de Alianzas B2B es un encuentro reducido para profesionales, consultores, founders, empresarios y expertos que quieren presentarse mejor, encontrar partners y activar colaboraciones reales.
+          </p>
+
+          <p class="muted">
+            No es un evento masivo ni una sesión para vender en frío. Es una dinámica con contexto para que cada persona explique qué hace, qué busca y qué puede aportar.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#participar">Quiero participar →</a>
+            <a class="btn btn-secondary" href="#formato">Ver dinámica ›</a>
+            <a class="btn btn-secondary" href="https://equipo360.com/emprende360" target="_blank" rel="noopener noreferrer">Ver ecosistema ›</a>
+          </div>
+
+          <div class="hero-mini">
+            <div class="mini">✅ Grupos reducidos</div>
+            <div class="mini">✅ Presentaciones breves</div>
+            <div class="mini">✅ Alianzas con contexto</div>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+
+          <div class="round-card">
+            <div class="round-inner">
+              <span class="round-label">Cómo funciona</span>
+              <div class="round-title">Un espacio simple para decir quién eres, qué buscas y qué alianza tendría sentido.</div>
+
+              <div class="round-flow">
+                <div class="flow-item">
+                  <div class="flow-num">1</div>
+                  <div>
+                    <b>Te presentas</b>
+                    <span>Explicas de forma breve qué haces, a quién ayudas y dónde tienes foco.</span>
+                  </div>
+                </div>
+
+                <div class="flow-item">
+                  <div class="flow-num">2</div>
+                  <div>
+                    <b>Dices qué buscas</b>
+                    <span>Partners, clientes, referidores, ponentes, canales, colaboradores o proyectos.</span>
+                  </div>
+                </div>
+
+                <div class="flow-item">
+                  <div class="flow-num">3</div>
+                  <div>
+                    <b>Compartes qué aportas</b>
+                    <span>Red, experiencia, comunidad, servicios, conocimiento, clientes, contenido o contactos.</span>
+                  </div>
+                </div>
+
+                <div class="flow-item">
+                  <div class="flow-num">4</div>
+                  <div>
+                    <b>Se abren conversaciones</b>
+                    <span>Después de la ronda, se facilitan conexiones si hay interés real entre perfiles.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <section class="stats">
+      <div class="wrap">
+        <div class="stats-grid reveal">
+          <div class="stat"><b>6-10</b><span>participantes por ronda</span></div>
+          <div class="stat"><b>60</b><span>minutos aproximados</span></div>
+          <div class="stat"><b>3</b><span>preguntas clave por persona</span></div>
+          <div class="stat"><b>1</b><span>objetivo: conversaciones útiles</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="que-es" class="section what">
+      <div class="wrap">
+        <div class="center max-850 reveal">
+          <span class="kicker">Qué es</span>
+          <h2>Una ronda para pasar del networking suelto a conversaciones con intención.</h2>
+          <p class="lead">
+            Muchas conexiones profesionales se quedan en “encantado de conectar”. La Ronda de Alianzas B2B busca ir un paso más allá: crear un espacio donde cada persona pueda explicar de forma clara qué hace, qué busca y con quién tendría sentido colaborar.
+          </p>
+        </div>
+
+        <div class="two-path reveal">
+          <div class="path-card">
+            <div class="path-icon">🤝</div>
+            <h3>Para conectar mejor</h3>
+            <p>
+              Participas con otros perfiles que también vienen con intención de colaborar, presentarse, conocer oportunidades y abrir puertas.
+            </p>
+            <ul>
+              <li>Presentación breve y enfocada.</li>
+              <li>Contexto profesional desde el inicio.</li>
+              <li>Menos ruido y más claridad.</li>
+              <li>Posibilidad de seguimiento posterior.</li>
+            </ul>
+          </div>
+
+          <div class="path-card">
+            <div class="path-icon">🚀</div>
+            <h3>Para activar oportunidades</h3>
+            <p>
+              La ronda no busca solo “conocer gente”. Busca detectar posibles alianzas, colaboraciones, referidos, proyectos, eventos o clientes potenciales.
+            </p>
+            <ul>
+              <li>Partners estratégicos.</li>
+              <li>Referidores o canales.</li>
+              <li>Colaboradores para proyectos.</li>
+              <li>Posibles clientes o oportunidades compartidas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="para-quien" class="section value">
+      <div class="wrap">
+        <div class="center max-850 reveal">
+          <span class="kicker">Para quién</span>
+          <h2>La ronda está pensada para perfiles B2B que pueden aportar y recibir valor.</h2>
+          <p class="lead">
+            No hace falta ser una gran empresa. Sí hace falta tener una propuesta clara, actitud de colaboración y capacidad de aportar algo al ecosistema.
+          </p>
+        </div>
+
+        <div class="three-grid reveal">
+          <div class="simple-card">
+            <div class="ico">👔</div>
+            <h3>Consultores y advisors</h3>
+            <p>Perfiles que ayudan a empresas en estrategia, finanzas, operaciones, ventas, tecnología, RRHH o crecimiento.</p>
+          </div>
+
+          <div class="simple-card">
+            <div class="ico">🚀</div>
+            <h3>Founders y empresarios</h3>
+            <p>Personas que están construyendo negocio y quieren encontrar aliados, canales, expertos o colaboraciones.</p>
+          </div>
+
+          <div class="simple-card">
+            <div class="ico">📈</div>
+            <h3>Agencias y proveedores B2B</h3>
+            <p>Equipos que ofrecen servicios a empresas y quieren conectar con otros perfiles complementarios.</p>
+          </div>
+
+          <div class="simple-card">
+            <div class="ico">🎤</div>
+            <h3>Ponentes y formadores</h3>
+            <p>Profesionales que pueden aportar contenido, sesiones, eventos, formación o dinámicas dentro del ecosistema.</p>
+          </div>
+
+          <div class="simple-card">
+            <div class="ico">💸</div>
+            <h3>Inversores y perfiles financieros</h3>
+            <p>Personas que pueden aportar capital, criterio, financiación, contactos o lectura de oportunidades.</p>
+          </div>
+
+          <div class="simple-card">
+            <div class="ico">🌐</div>
+            <h3>Conectores y community builders</h3>
+            <p>Perfiles con red, comunidad o capacidad de conectar personas que pueden colaborar entre sí.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formato" class="section format">
+      <div class="wrap">
+        <div class="center max-850 reveal">
+          <span class="kicker">Formato</span>
+          <h2>Una dinámica muy simple para que todos salgan con más claridad.</h2>
+          <p class="lead">
+            La ronda se estructura para que cada persona pueda presentarse sin extenderse y para que sea fácil detectar encajes.
+          </p>
+        </div>
+
+        <div class="format-grid reveal">
+          <div class="format-card">
+            <div class="num">01</div>
+            <h3>Bienvenida</h3>
+            <p>Contexto rápido de la ronda, reglas básicas y objetivo: conectar con intención.</p>
+          </div>
+
+          <div class="format-card">
+            <div class="num">02</div>
+            <h3>Presentación</h3>
+            <p>Cada participante explica qué hace, a quién ayuda y qué tipo de colaboración busca.</p>
+          </div>
+
+          <div class="format-card">
+            <div class="num">03</div>
+            <h3>Conexiones</h3>
+            <p>Se detectan posibles alianzas, colaboraciones, referidos o conversaciones posteriores.</p>
+          </div>
+
+          <div class="format-card">
+            <div class="num">04</div>
+            <h3>Seguimiento</h3>
+            <p>Después de la sesión, se pueden facilitar intros o próximos pasos si hay interés real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reglas" class="section rules">
+      <div class="wrap">
+        <div class="max-850 reveal">
+          <span class="kicker">Reglas de calidad</span>
+          <h2>Para que la ronda funcione, necesitamos contexto, respeto y foco.</h2>
+          <p class="lead">
+            La idea no es crear una sala de venta agresiva. La idea es construir confianza y detectar colaboraciones reales.
+          </p>
+        </div>
+
+        <div class="rules-box reveal">
+          <h3>Qué buscamos y qué evitamos</h3>
+
+          <div class="rules-grid">
+            <div class="rule-card">
+              <h3>✅ Buscamos</h3>
+              <ul>
+                <li>Perfiles con propuesta clara.</li>
+                <li>Personas que puedan aportar valor.</li>
+                <li>Actitud de colaboración.</li>
+                <li>Presentaciones breves y concretas.</li>
+                <li>Gente que quiera construir relaciones reales.</li>
+                <li>Interés en alianzas, partners, eventos u oportunidades.</li>
+              </ul>
+            </div>
+
+            <div class="rule-card">
+              <h3>🛡️ Evitamos</h3>
+              <ul>
+                <li>Venta agresiva o discursos eternos.</li>
+                <li>Promesas exageradas.</li>
+                <li>Publicar por publicar.</li>
+                <li>Entrar solo a captar sin aportar.</li>
+                <li>Spam o mensajes masivos sin contexto.</li>
+                <li>Forzar colaboraciones donde no hay encaje.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="participar" class="section apply">
+      <div class="wrap form-wrap">
+        <div class="reveal">
+          <span class="kicker">Solicitar plaza</span>
+          <h2>Cuéntanos quién eres y qué tipo de alianza buscas.</h2>
+          <p class="lead">
+            Las plazas son reducidas para mantener la ronda útil. Revisamos el encaje y, si tiene sentido, te indicamos la próxima fecha disponible.
+          </p>
+          <p class="lead">
+            Puedes participar como consultor, founder, empresario, experto, proveedor B2B, inversor, formador, creador de contenido, conector o partner estratégico.
+          </p>
+
+          <div class="note-box">
+            <h3>Qué preparar antes de participar</h3>
+            <p>
+              Ten clara una presentación breve: qué haces, a quién ayudas, qué buscas y qué puedes aportar. Con eso la ronda funciona mucho mejor.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-card reveal">
+          <form action="mailto:info@premiumb2b.com?subject=Solicitud%20Ronda%20de%20Alianzas%20B2B" method="post" enctype="text/plain">
+            <h3>Formulario de interés</h3>
+            <p class="small">Formulario visual. Puedes conectarlo después a Tally, Make, Google Sheets o tu CRM.</p>
+
+            <div class="form-row">
+              <label>Nombre
+                <input required name="nombre" placeholder="Tu nombre" />
+              </label>
+
+              <label>Email
+                <input required type="email" name="email" placeholder="tu@email.com" />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>LinkedIn / web
+                <input name="perfil" placeholder="URL de LinkedIn o web" />
+              </label>
+
+              <label>Perfil
+                <select name="perfil_tipo">
+                  <option>Consultor / advisor</option>
+                  <option>Founder / empresario</option>
+                  <option>Agencia / proveedor B2B</option>
+                  <option>Inversor / financiero</option>
+                  <option>Formador / ponente</option>
+                  <option>Conector / community builder</option>
+                  <option>Otro perfil</option>
+                </select>
+              </label>
+            </div>
+
+            <label>Qué estás buscando
+              <select name="busca">
+                <option>Buscar partners o colaboradores</option>
+                <option>Encontrar clientes o referidores</option>
+                <option>Participar en eventos o rondas</option>
+                <option>Aportar contenido o ponencias</option>
+                <option>Explorar alianzas con Emprende360</option>
+                <option>Conocer oportunidades B2B</option>
+              </select>
+            </label>
+
+            <label>Describe brevemente qué haces y qué alianza buscas
+              <textarea name="descripcion" placeholder="Ej. Ayudo a empresas B2B con..., busco partners que..., puedo aportar..."></textarea>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Enviar solicitud →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final">
+      <div class="wrap">
+        <div class="final-box reveal">
+          <span class="kicker">Ronda de Alianzas B2B</span>
+          <h2>No vengas solo a hacer networking. Ven a abrir conversaciones que puedan convertirse en algo real.</h2>
+          <p class="lead" style="max-width:780px;margin:20px auto 0">
+            Si tienes una propuesta clara, buscas partners o puedes aportar valor a otros profesionales, esta ronda puede ser una buena puerta de entrada al ecosistema Emprende360.
+          </p>
+
+          <div class="cta-buttons">
+            <a class="btn btn-primary" href="#participar">Solicitar plaza →</a>
+            <a class="btn btn-secondary" href="https://equipo360.com/emprende360" target="_blank" rel="noopener noreferrer">Ver ecosistema Emprende360 ›</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal">
+      <div class="wrap">
+        <p>
+          Nota: la Ronda de Alianzas B2B es una dinámica de networking, presentación y conexión profesional dentro del ecosistema Emprende360. La participación no garantiza clientes, ventas, acuerdos, colaboraciones ni resultados concretos. El objetivo es facilitar contexto, visibilidad y conversaciones útiles entre perfiles que puedan tener afinidad profesional.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-flex">
+      <div>
+        <b style="color:white">Emprende360 Ecosistema B2B</b><br>
+        <span>Ronda de Alianzas B2B.</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="#que-es">Qué es</a>
+        <a href="#para-quien">Para quién</a>
+        <a href="#formato">Formato</a>
+        <a href="#reglas">Reglas</a>
+        <a href="#participar">Participar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("on");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
