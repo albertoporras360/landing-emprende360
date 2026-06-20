@@ -1,0 +1,1328 @@
+Sí, te lo paso de nuevo **en una casilla de código copiable**.
+
+```html
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bolsa de Partners Emprende360 | Ecosistema B2B</title>
+  <meta name="description" content="Bolsa de Partners Emprende360: una red para profesionales, consultores, founders, empresarios y expertos B2B que quieren colaborar, ganar visibilidad y activar oportunidades." />
+
+  <style>
+    :root{
+      --deep:#020617;
+      --navy:#061826;
+      --navy2:#071522;
+      --blue:#0A66C2;
+      --sky:#18A7FF;
+      --gold:#F4C542;
+      --green:#22C55E;
+      --violet:#A855F7;
+      --red:#FB7185;
+      --text:#F8FAFC;
+      --muted:#94A3B8;
+      --line:rgba(255,255,255,.13);
+      --glass:rgba(255,255,255,.065);
+      --glass2:rgba(255,255,255,.105);
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+      --max:1180px;
+      --radius:30px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--deep);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    button,input,select,textarea{font:inherit}
+    .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+    .section{position:relative;padding:96px 0;overflow:hidden}
+    .lead{font-size:18px;line-height:1.72;color:#CBD5E1}
+    .small{font-size:14px;line-height:1.6;color:#CBD5E1}
+    .muted{color:var(--muted)}
+    .center{text-align:center;margin-left:auto;margin-right:auto}
+    .max-850{max-width:850px}
+
+    .grad-text{
+      background:linear-gradient(90deg,#fff,#c8ecff 42%,#ffe6a6);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(24,167,255,.25);
+      background:rgba(24,167,255,.09);
+      color:#C8ECFF;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:#DBEAFE;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      font-weight:800;
+      backdrop-filter:blur(16px);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:999px;
+      padding:14px 22px;
+      font-weight:950;
+      font-size:14px;
+      transition:.25s ease;
+      cursor:pointer;
+      border:0;
+      white-space:nowrap;
+    }
+
+    .btn-primary{
+      background:linear-gradient(90deg,#ffd95a,#F4C542,#ffd15a);
+      color:#06111F;
+      box-shadow:0 18px 60px rgba(244,197,66,.25);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 24px 80px rgba(244,197,66,.40);
+    }
+
+    .btn-secondary{
+      color:white;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(16px);
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-3px);
+      background:rgba(255,255,255,.10);
+      border-color:rgba(24,167,255,.45);
+    }
+
+    .grid-bg{
+      position:absolute;
+      inset:0;
+      opacity:.075;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.65) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.65) 1px,transparent 1px);
+      background-size:54px 54px;
+    }
+
+    .blob{
+      position:absolute;
+      border-radius:999px;
+      filter:blur(60px);
+      pointer-events:none;
+      opacity:.55;
+      animation:float 10s ease-in-out infinite;
+    }
+
+    .blob.one{width:300px;height:300px;background:rgba(24,167,255,.22);left:5%;top:13%}
+    .blob.two{width:330px;height:330px;background:rgba(244,197,66,.16);right:7%;top:20%;animation-delay:-3s}
+    .blob.three{width:280px;height:280px;background:rgba(34,197,94,.13);left:43%;bottom:2%;animation-delay:-5s}
+
+    @keyframes float{
+      0%,100%{transform:translate(0,0)}
+      50%{transform:translate(28px,22px)}
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity .7s ease,transform .7s ease;
+    }
+
+    .reveal.on{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    header{
+      position:fixed;
+      left:0;
+      right:0;
+      top:0;
+      z-index:50;
+      border-bottom:1px solid rgba(255,255,255,.10);
+      background:rgba(2,6,23,.74);
+      backdrop-filter:blur(22px);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 22px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:42px;
+      height:42px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      box-shadow:0 18px 45px rgba(24,167,255,.25);
+      font-weight:950;
+    }
+
+    .brand-title{font-weight:950;line-height:1}
+    .brand-sub{
+      margin-top:4px;
+      color:var(--muted);
+      font-size:10px;
+      font-weight:850;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:22px;
+      color:#CBD5E1;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .nav-links a:hover{color:white}
+
+    .hero{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:132px 0 90px;
+      background:
+        radial-gradient(circle at 15% 15%,rgba(24,167,255,.23),transparent 28%),
+        radial-gradient(circle at 84% 22%,rgba(244,197,66,.16),transparent 29%),
+        radial-gradient(circle at 50% 90%,rgba(34,197,94,.12),transparent 34%),
+        var(--deep);
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:52px;
+      align-items:center;
+    }
+
+    h1{
+      margin:26px 0 0;
+      font-size:clamp(42px,6vw,74px);
+      line-height:.96;
+      letter-spacing:-.06em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:14px 0 0;
+      font-size:clamp(34px,4.7vw,56px);
+      line-height:1.02;
+      letter-spacing:-.045em;
+      font-weight:950;
+    }
+
+    h3{
+      margin:0;
+      font-size:24px;
+      line-height:1.15;
+    }
+
+    .hero p{
+      font-size:19px;
+      line-height:1.7;
+      color:#CBD5E1;
+      max-width:710px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .hero-mini{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      max-width:710px;
+      margin-top:30px;
+    }
+
+    .mini{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.055);
+      border-radius:18px;
+      padding:13px 15px;
+      color:#DBEAFE;
+      font-size:14px;
+      font-weight:700;
+      backdrop-filter:blur(16px);
+    }
+
+    .panel{
+      position:relative;
+      border-radius:42px;
+      padding:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      box-shadow:0 40px 120px rgba(0,0,0,.42);
+      backdrop-filter:blur(22px);
+    }
+
+    .window-dots{
+      display:flex;
+      gap:7px;
+      margin:0 0 13px 3px;
+    }
+
+    .dot{width:11px;height:11px;border-radius:999px}
+    .dot.red{background:#FB7185}
+    .dot.yellow{background:#FACC15}
+    .dot.green{background:#34D399}
+
+    .network-card{
+      border:1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(circle at 20% 10%,rgba(244,197,66,.18),transparent 32%),
+        radial-gradient(circle at 90% 20%,rgba(24,167,255,.14),transparent 30%),
+        rgba(2,6,23,.58);
+      border-radius:34px;
+      padding:28px;
+      min-height:540px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .network-card:after{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      border-radius:999px;
+      right:-170px;
+      bottom:-180px;
+      border:1px solid rgba(244,197,66,.18);
+      box-shadow:0 0 0 38px rgba(244,197,66,.035),0 0 0 78px rgba(24,167,255,.025);
+    }
+
+    .network-inner{
+      position:relative;
+      z-index:2;
+    }
+
+    .network-label{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(244,197,66,.30);
+      background:rgba(244,197,66,.10);
+      color:#FDE68A;
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:12px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    .network-title{
+      margin-top:24px;
+      font-size:38px;
+      line-height:1.02;
+      letter-spacing:-.04em;
+      font-weight:950;
+    }
+
+    .network-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .network-box{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.055);
+      border-radius:22px;
+      padding:18px;
+    }
+
+    .network-box small{
+      display:block;
+      color:#94A3B8;
+      font-size:10px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:950;
+      margin-bottom:8px;
+    }
+
+    .network-box b{
+      display:block;
+      font-size:28px;
+      color:white;
+    }
+
+    .network-box span{
+      display:block;
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.45;
+      margin-top:6px;
+    }
+
+    .stats{
+      position:relative;
+      z-index:4;
+      margin-top:-54px;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      background:rgba(15,23,42,.90);
+      border:1px solid var(--line);
+      border-radius:32px;
+      padding:16px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(18px);
+    }
+
+    .stat{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.045);
+      border-radius:24px;
+      padding:24px;
+    }
+
+    .stat b{
+      display:block;
+      font-size:36px;
+      letter-spacing:-.04em;
+    }
+
+    .stat span{
+      display:block;
+      margin-top:7px;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:650;
+    }
+
+    .what{background:var(--deep)}
+
+    .two-path{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      margin-top:44px;
+    }
+
+    .path-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:34px;
+      padding:32px;
+      box-shadow:0 22px 80px rgba(0,0,0,.25);
+      backdrop-filter:blur(18px);
+      transition:.25s ease;
+    }
+
+    .path-card:hover{
+      transform:translateY(-5px);
+      background:var(--glass2);
+      border-color:rgba(244,197,66,.35);
+    }
+
+    .path-icon{
+      width:64px;
+      height:64px;
+      border-radius:23px;
+      display:grid;
+      place-items:center;
+      font-size:29px;
+      margin-bottom:20px;
+      color:#06111F;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+    }
+
+    .path-card h3{
+      font-size:30px;
+      letter-spacing:-.035em;
+    }
+
+    .path-card p{
+      color:#CBD5E1;
+      line-height:1.65;
+      font-size:15px;
+    }
+
+    .path-card ul{
+      padding:0;
+      margin:20px 0 0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+
+    .path-card li{
+      border:1px solid rgba(255,255,255,.09);
+      background:rgba(255,255,255,.045);
+      border-radius:16px;
+      padding:11px 13px;
+      font-size:14px;
+      color:#DBEAFE;
+      line-height:1.45;
+    }
+
+    .categories{background:var(--navy2)}
+
+    .three-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:42px;
+    }
+
+    .simple-card{
+      padding:26px;
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:30px;
+      box-shadow:0 20px 70px rgba(0,0,0,.22);
+      backdrop-filter:blur(18px);
+      transition:.25s ease;
+    }
+
+    .simple-card:hover{
+      transform:translateY(-5px);
+      background:var(--glass2);
+      border-color:rgba(24,167,255,.35);
+    }
+
+    .simple-card .ico{
+      width:56px;
+      height:56px;
+      border-radius:20px;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      display:grid;
+      place-items:center;
+      font-size:25px;
+      margin-bottom:18px;
+    }
+
+    .simple-card h3{font-size:21px}
+    .simple-card p{
+      color:#CBD5E1;
+      line-height:1.62;
+      font-size:14px;
+    }
+
+    .how{background:var(--deep)}
+
+    .format-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:42px;
+    }
+
+    .format-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:30px;
+      padding:24px;
+      min-height:230px;
+      box-shadow:0 20px 70px rgba(0,0,0,.24);
+    }
+
+    .format-card .num{
+      font-size:44px;
+      font-weight:950;
+      color:rgba(255,255,255,.13);
+      line-height:1;
+      margin-bottom:15px;
+    }
+
+    .format-card h3{
+      font-size:21px;
+    }
+
+    .format-card p{
+      color:#CBD5E1;
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    .quality{background:var(--navy2)}
+
+    .quality-box{
+      margin-top:42px;
+      border:1px solid rgba(244,197,66,.22);
+      background:rgba(244,197,66,.075);
+      border-radius:34px;
+      padding:32px;
+      box-shadow:var(--shadow);
+    }
+
+    .quality-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .quality-card{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.045);
+      border-radius:26px;
+      padding:22px;
+    }
+
+    .quality-card h3{
+      font-size:22px;
+    }
+
+    .quality-card ul{
+      padding:0;
+      list-style:none;
+      margin:18px 0 0;
+      display:grid;
+      gap:10px;
+    }
+
+    .quality-card li{
+      color:#DBEAFE;
+      font-size:14px;
+      line-height:1.45;
+    }
+
+    .apply{background:var(--deep)}
+
+    .form-wrap{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:42px;
+      align-items:start;
+    }
+
+    .form-card{
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:34px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(22px);
+    }
+
+    form{
+      display:grid;
+      gap:14px;
+    }
+
+    .form-row{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+
+    label{
+      display:grid;
+      gap:7px;
+      color:#E2E8F0;
+      font-size:14px;
+      font-weight:750;
+    }
+
+    input,select,textarea{
+      width:100%;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(2,6,23,.68);
+      color:#fff;
+      outline:0;
+      border-radius:18px;
+      padding:13px 15px;
+      transition:.2s ease;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:rgba(24,167,255,.55);
+      box-shadow:0 0 0 4px rgba(24,167,255,.08);
+    }
+
+    textarea{
+      min-height:112px;
+      resize:vertical;
+    }
+
+    .note-box{
+      border:1px solid rgba(24,167,255,.22);
+      background:rgba(24,167,255,.075);
+      border-radius:28px;
+      padding:24px;
+      margin-top:24px;
+    }
+
+    .note-box h3{
+      font-size:22px;
+    }
+
+    .note-box p{
+      color:#DBEAFE;
+      line-height:1.62;
+      font-size:15px;
+    }
+
+    .final{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(24,167,255,.16),transparent 32%),
+        radial-gradient(circle at 80% 40%,rgba(244,197,66,.14),transparent 30%),
+        var(--deep);
+      text-align:center;
+    }
+
+    .final-box{
+      border:1px solid rgba(244,197,66,.25);
+      background:rgba(255,255,255,.045);
+      border-radius:38px;
+      padding:38px;
+      box-shadow:var(--shadow);
+    }
+
+    .cta-buttons{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .legal{
+      border-top:1px solid var(--line);
+      background:#01040d;
+      padding:28px 0;
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background:var(--deep);
+      padding:35px 0;
+      color:#94A3B8;
+      font-size:14px;
+    }
+
+    .footer-flex{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a:hover{color:white}
+
+    @media(max-width:1080px){
+      .hero-grid,.form-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .panel{
+        max-width:720px;
+        margin:0 auto;
+        width:100%;
+      }
+
+      .stats-grid,.three-grid,.format-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .nav-links{display:none}
+    }
+
+    @media(max-width:760px){
+      .wrap{padding:0 16px}
+      .section{padding:72px 0}
+
+      .nav{padding:11px 16px}
+      .brand-sub{display:none}
+      .brand-title{
+        font-size:14px;
+        max-width:145px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+      .brand-mark{
+        width:38px;
+        height:38px;
+        border-radius:15px;
+      }
+      .nav .btn{
+        padding:9px 11px;
+        font-size:11px;
+        width:auto;
+      }
+
+      .hero{
+        min-height:auto;
+        padding:98px 0 62px;
+        align-items:flex-start;
+      }
+
+      h1{
+        font-size:clamp(34px,11vw,46px);
+        line-height:1.04;
+        letter-spacing:-.04em;
+      }
+
+      h2{
+        font-size:clamp(31px,9vw,42px);
+        line-height:1.06;
+      }
+
+      .hero p,.lead{
+        font-size:16px;
+        line-height:1.62;
+      }
+
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+        width:100%;
+      }
+
+      .hero-actions .btn{width:100%}
+
+      .hero-mini,.stats-grid,.two-path,.three-grid,.format-grid,.quality-grid,.form-row,.network-grid{
+        grid-template-columns:1fr;
+      }
+
+      .panel{
+        border-radius:28px;
+        padding:12px;
+      }
+
+      .network-card{
+        min-height:auto;
+        border-radius:26px;
+        padding:22px;
+      }
+
+      .network-title{
+        font-size:29px;
+      }
+
+      .path-card{
+        padding:24px;
+        border-radius:28px;
+      }
+
+      .path-card h3{
+        font-size:25px;
+      }
+
+      .form-card{
+        padding:20px;
+        border-radius:28px;
+      }
+
+      .final-box{
+        padding:26px;
+        border-radius:30px;
+      }
+
+      .cta-buttons{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .cta-buttons .btn{
+        width:100%;
+      }
+    }
+
+    @media(max-width:460px){
+      .nav{padding:10px 12px}
+      .brand-title{max-width:112px;font-size:13px}
+      .brand-mark{width:34px;height:34px;border-radius:13px}
+      .nav .btn{font-size:10.5px;padding:8px 9px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <a href="#top" class="brand">
+        <div class="brand-mark">E</div>
+        <div>
+          <div class="brand-title">Emprende360</div>
+          <div class="brand-sub">Bolsa Partners</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#que-es">Qué es</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#funciona">Cómo funciona</a>
+        <a href="#calidad">Calidad</a>
+        <a href="#entrar">Entrar</a>
+      </nav>
+
+      <a class="btn btn-primary" href="#entrar">Entrar en la bolsa →</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="grid-bg"></div>
+      <div class="blob one"></div>
+      <div class="blob two"></div>
+      <div class="blob three"></div>
+
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <span class="pill">🤝 Partners · Colaboraciones · Rondas · Oportunidades B2B</span>
+          <h1><span class="grad-text">Una bolsa de partners para conectar perfiles que pueden crecer juntos.</span></h1>
+
+          <p>
+            La Bolsa de Partners Emprende360 reúne profesionales, consultores, founders, empresarios, expertos y perfiles B2B que quieren colaborar, ganar visibilidad y activar oportunidades con más contexto.
+          </p>
+
+          <p class="muted">
+            No es una base de datos pública ni un grupo de spam. Es una red curada para entender quién eres, qué haces, qué buscas y qué puedes aportar al ecosistema.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#entrar">Quiero entrar →</a>
+            <a class="btn btn-secondary" href="#funciona">Ver cómo funciona ›</a>
+            <a class="btn btn-secondary" href="https://equipo360.com/emprende360" target="_blank" rel="noopener noreferrer">Ver ecosistema ›</a>
+          </div>
+
+          <div class="hero-mini">
+            <div class="mini">✅ Partners B2B</div>
+            <div class="mini">✅ Matches con contexto</div>
+            <div class="mini">✅ Rondas y oportunidades</div>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+
+          <div class="network-card">
+            <div class="network-inner">
+              <span class="network-label">Partner Network</span>
+              <div class="network-title">Dinos qué haces, qué buscas y qué puedes aportar.</div>
+
+              <div class="network-grid">
+                <div class="network-box">
+                  <small>Para quién</small>
+                  <b>B2B</b>
+                  <span>Consultores, founders, empresarios, expertos y perfiles profesionales.</span>
+                </div>
+
+                <div class="network-box">
+                  <small>Qué busca</small>
+                  <b>Encaje</b>
+                  <span>Partners, clientes, referidos, eventos, contenido y colaboraciones.</span>
+                </div>
+
+                <div class="network-box">
+                  <small>Cómo se mueve</small>
+                  <b>Contexto</b>
+                  <span>Rondas, comunidades, eventos, oportunidades y presentaciones.</span>
+                </div>
+
+                <div class="network-box">
+                  <small>Qué evita</small>
+                  <b>Ruido</b>
+                  <span>No queremos spam, promesas vacías ni publicaciones sin foco.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <section class="stats">
+      <div class="wrap">
+        <div class="stats-grid reveal">
+          <div class="stat"><b>300+</b><span>partners ya interesados en colaborar</span></div>
+          <div class="stat"><b>5</b><span>comunidades conectadas</span></div>
+          <div class="stat"><b>4</b><span>rondas y líneas activables</span></div>
+          <div class="stat"><b>1</b><span>ecosistema B2B en crecimiento</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="que-es" class="section what">
+      <div class="wrap">
+        <div class="center max-850 reveal">
+          <span class="kicker">Qué es</span>
+          <h2>Una red para que las colaboraciones no dependan solo de la casualidad.</h2>
+          <p class="lead">
+            La Bolsa de Partners ayuda a ordenar perfiles profesionales dentro del ecosistema Emprende360 para facilitar futuras rondas, presentaciones, colaboraciones, eventos, oportunidades y matches con sentido.
+          </p>
+        </div>
+
+        <div class="two-path reveal">
+          <div class="path-card">
+            <div class="path-icon">🧭</div>
+            <h3>Para tener contexto</h3>
+            <p>
+              Queremos saber quién eres, qué haces, a quién ayudas, qué tipo de perfiles buscas y dónde puedes aportar más valor.
+            </p>
+            <ul>
+              <li>Qué servicios o experiencia tienes.</li>
+              <li>Qué tipo de clientes o partners buscas.</li>
+              <li>Qué comunidades encajan contigo.</li>
+              <li>Qué oportunidades podrían interesarte.</li>
+            </ul>
+          </div>
+
+          <div class="path-card">
+            <div class="path-icon">⚡</div>
+            <h3>Para activar mejor</h3>
+            <p>
+              Cuando hay contexto, es más fácil invitarte a una ronda, presentarte a otro partner, proponerte una colaboración o activar una oportunidad.
+            </p>
+            <ul>
+              <li>Rondas de alianzas.</li>
+              <li>Rondas de inversión y crecimiento.</li>
+              <li>Eventos, entrevistas o paneles.</li>
+              <li>Matches con otros perfiles del ecosistema.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categorias" class="section categories">
+      <div class="wrap">
+        <div class="center max-850 reveal">
+          <span class="kicker">Categorías</span>
+          <h2>Buscamos perfiles que puedan aportar valor desde distintas áreas.</h2>
+          <p class="lead">
+            No tienes que encajar en todas. Lo importante es que tu perfil tenga una propuesta clara y pueda aportar al ecosistema desde una línea concreta.
+          </p>
+        </div>
+
+        <div class="three-grid reveal">
+          <div class="simple-card">
+            <div class="ico">👔</div>
+            <h3>Consultores y advisors</h3>
+            <p>Estrategia, finanzas, operaciones, ventas, marketing, tecnología, datos, legal, fiscal o crecimiento.</p>
+          </div>
+
+          <div class="simple-card">
+            <div class="ico">🚀</div>
+            <h3>Founders y empresarios</h3>
+            <p>Personas que están construyendo negocio y buscan partners, clientes, financiación, talento o alianzas.</p>
+          </div>
+
+          <div class="simple-card">
+            <div class="ico">📈</div>
+            <h3>Agencias y proveedores B2B</h3>
+            <p>Equipos que venden servicios a empresas y pueden colaborar con otros perfiles complementarios.</p>
+          </div>
+
+          <div class="simple-card">
+            <div class="ico">💸</div>
+            <h3>Inversores y financiación</h3>
+            <p>Perfiles que pueden aportar capital, criterio, deuda, advisory, corporate finance o deal flow.</p>
+          </div>
+
+          <div class="simple-card">
+            <div class="ico">💼</div>
+            <h3>Talento y RRHH</h3>
+            <p>Recruiters, formadores, coaches, consultores de talento, desarrollo organizacional o liderazgo.</p>
+          </div>
+
+          <div class="simple-card">
+            <div class="ico">🎤</div>
+            <h3>Ponentes y creadores</h3>
+            <p>Personas que pueden aportar contenido, vídeos, sesiones, entrevistas, eventos o dinámicas de comunidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="funciona" class="section how">
+      <div class="wrap">
+        <div class="center max-850 reveal">
+          <span class="kicker">Cómo funciona</span>
+          <h2>Entrar en la bolsa no significa esperar. Significa quedar visible para futuras activaciones.</h2>
+          <p class="lead">
+            El objetivo es que el ecosistema sepa dónde puedes aportar y qué tipo de conexión puede tener sentido contigo.
+          </p>
+        </div>
+
+        <div class="format-grid reveal">
+          <div class="format-card">
+            <div class="num">01</div>
+            <h3>Te registras</h3>
+            <p>Completas tus datos básicos, LinkedIn, área de especialidad, qué haces y qué buscas.</p>
+          </div>
+
+          <div class="format-card">
+            <div class="num">02</div>
+            <h3>Te clasificamos</h3>
+            <p>Ubicamos tu perfil en la comunidad o línea donde puedes aportar más valor.</p>
+          </div>
+
+          <div class="format-card">
+            <div class="num">03</div>
+            <h3>Te activamos</h3>
+            <p>Podemos invitarte a rondas, eventos, matches, oportunidades o conversaciones concretas.</p>
+          </div>
+
+          <div class="format-card">
+            <div class="num">04</div>
+            <h3>Colaboras</h3>
+            <p>Si hay encaje, puedes abrir alianzas, clientes, referidos, contenido, eventos o proyectos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calidad" class="section quality">
+      <div class="wrap">
+        <div class="max-850 reveal">
+          <span class="kicker">Criterio de calidad</span>
+          <h2>La bolsa funciona si atrae perfiles buenos y evita ruido.</h2>
+          <p class="lead">
+            No queremos crear un directorio lleno de gente que solo quiere vender. Queremos una red donde las personas activas reciban más visibilidad, acceso y oportunidades porque también aportan valor.
+          </p>
+        </div>
+
+        <div class="quality-box reveal">
+          <h3>Qué buscamos y qué evitamos</h3>
+
+          <div class="quality-grid">
+            <div class="quality-card">
+              <h3>✅ Buscamos</h3>
+              <ul>
+                <li>Perfiles con propuesta clara.</li>
+                <li>Profesionales B2B con experiencia real.</li>
+                <li>Personas que quieran colaborar.</li>
+                <li>Consultores, expertos, founders y empresarios activos.</li>
+                <li>Gente que pueda aportar contenido, contactos o criterio.</li>
+                <li>Interés en rondas, eventos, partners u oportunidades.</li>
+              </ul>
+            </div>
+
+            <div class="quality-card">
+              <h3>🛡️ Evitamos</h3>
+              <ul>
+                <li>Spam o venta agresiva.</li>
+                <li>Promesas exageradas.</li>
+                <li>Perfiles sin foco ni propuesta clara.</li>
+                <li>Gente que solo quiere captar sin aportar.</li>
+                <li>Mensajes masivos sin contexto.</li>
+                <li>Colaboraciones forzadas donde no hay encaje.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="entrar" class="section apply">
+      <div class="wrap form-wrap">
+        <div class="reveal">
+          <span class="kicker">Entrar en la bolsa</span>
+          <h2>Cuéntanos qué haces, qué buscas y qué puedes aportar.</h2>
+          <p class="lead">
+            Cuanto más claro lo expliques, más fácil será detectar si encajas en una ronda, una comunidad, una colaboración, un evento o una oportunidad concreta.
+          </p>
+          <p class="lead">
+            La bolsa no es pública ni automática. Se usa para ordenar perfiles y activar conexiones con más contexto dentro del ecosistema Emprende360.
+          </p>
+
+          <div class="note-box">
+            <h3>Principio clave</h3>
+            <p>
+              Si aportas valor al ecosistema, el ecosistema puede devolverte visibilidad, relaciones, acceso y oportunidades.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-card reveal">
+          <form action="mailto:info@premiumb2b.com?subject=Registro%20Bolsa%20de%20Partners%20Emprende360" method="post" enctype="text/plain">
+            <h3>Formulario de interés</h3>
+            <p class="small">Formulario visual. Puedes conectarlo después a Tally, Make, Google Sheets o tu CRM.</p>
+
+            <div class="form-row">
+              <label>Nombre
+                <input required name="nombre" placeholder="Tu nombre" />
+              </label>
+
+              <label>Email
+                <input required type="email" name="email" placeholder="tu@email.com" />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>LinkedIn / web
+                <input name="perfil" placeholder="URL de LinkedIn o web" />
+              </label>
+
+              <label>País / ciudad
+                <input name="ubicacion" placeholder="España, México, LATAM..." />
+              </label>
+            </div>
+
+            <label>Tipo de perfil
+              <select name="perfil_tipo">
+                <option>Consultor / advisor</option>
+                <option>Founder / empresario</option>
+                <option>Agencia / proveedor B2B</option>
+                <option>Inversor / financiero</option>
+                <option>Recruiter / talento / RRHH</option>
+                <option>Formador / ponente / creador</option>
+                <option>Conector / community builder</option>
+                <option>Otro perfil</option>
+              </select>
+            </label>
+
+            <label>Qué buscas
+              <select name="busca">
+                <option>Buscar partners o colaboradores</option>
+                <option>Encontrar clientes o referidores</option>
+                <option>Participar en rondas o eventos</option>
+                <option>Aportar contenido o ponencias</option>
+                <option>Buscar inversión o financiación</option>
+                <option>Conocer oportunidades B2B</option>
+                <option>Explorar colaboración con Emprende360</option>
+              </select>
+            </label>
+
+            <label>Qué haces y qué puedes aportar
+              <textarea name="descripcion" placeholder="Ej. Ayudo a empresas B2B con..., busco partners que..., puedo aportar contactos, contenido, experiencia, clientes, capital, eventos..."></textarea>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Enviar solicitud →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final">
+      <div class="wrap">
+        <div class="final-box reveal">
+          <span class="kicker">Bolsa de Partners Emprende360</span>
+          <h2>No entres solo a estar en una lista. Entra para formar parte de un ecosistema en movimiento.</h2>
+          <p class="lead" style="max-width:780px;margin:20px auto 0">
+            Si tienes una propuesta clara, quieres colaborar y puedes aportar valor a otros perfiles B2B, esta bolsa puede ayudarte a estar visible para futuras rondas, matches, eventos y oportunidades.
+          </p>
+
+          <div class="cta-buttons">
+            <a class="btn btn-primary" href="#entrar">Entrar en la bolsa →</a>
+            <a class="btn btn-secondary" href="https://equipo360.com/emprende360" target="_blank" rel="noopener noreferrer">Ver ecosistema Emprende360 ›</a>
+            <a class="btn btn-secondary" href="https://equipo360.com/ronda-alianzas" target="_blank" rel="noopener noreferrer">Ver Ronda de Alianzas ›</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal">
+      <div class="wrap">
+        <p>
+          Nota: la Bolsa de Partners Emprende360 es una iniciativa de networking, comunidad y conexión profesional dentro del ecosistema Emprende360. El registro no garantiza clientes, ventas, acuerdos, colaboraciones, inversión ni resultados concretos. El objetivo es facilitar contexto, visibilidad y posibles conexiones entre perfiles que puedan tener afinidad profesional.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-flex">
+      <div>
+        <b style="color:white">Emprende360 Ecosistema B2B</b><br>
+        <span>Bolsa de Partners Emprende360.</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="#que-es">Qué es</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#funciona">Cómo funciona</a>
+        <a href="#calidad">Calidad</a>
+        <a href="#entrar">Entrar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("on");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
+```
