@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programa de Partners · Lead Recovery System | Emprende360</title>
+  <meta name="description" content="Programa de partners de Lead Recovery System. Tú generas demanda para tus clientes. Nosotros respondemos, cualificamos y hacemos seguimiento para que se pierdan menos oportunidades. Participación recurrente por clientes referidos." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#071522" />
+  <link rel="canonical" href="https://emprende360.club/leads-recovery/partners/" />
+
+  <meta property="og:title" content="Programa de Partners · Lead Recovery System" />
+  <meta property="og:description" content="Añade una capa de Lead Recovery a tus clientes sin tener que implantarla ni mantenerla tú." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://emprende360.club/leads-recovery/partners/" />
+
+  <style>
+    :root{
+      --bg:#071522;
+      --bg-2:#0a1b2b;
+      --panel:#0d2234;
+      --panel-2:#102a40;
+      --line:rgba(255,255,255,.10);
+      --text:#f7fafc;
+      --muted:#a9bbca;
+      --gold:#f4d78d;
+      --gold-2:#d7b45e;
+      --green:#55d6a9;
+      --blue:#71b7ff;
+      --danger:#ff8c8c;
+      --white:#fff;
+      --shadow:0 24px 70px rgba(0,0,0,.30);
+      --radius:22px;
+      --radius-sm:14px;
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 85% 5%, rgba(113,183,255,.12), transparent 28%),
+        radial-gradient(circle at 8% 15%, rgba(85,214,169,.08), transparent 25%),
+        var(--bg);
+      color:var(--text);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%}
+    button,input{font:inherit}
+    .container{width:min(var(--max), calc(100% - 40px));margin-inline:auto}
+    .section{padding:88px 0}
+    .section-sm{padding:54px 0}
+    .muted{color:var(--muted)}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border:1px solid rgba(244,215,141,.28);
+      border-radius:999px;
+      color:var(--gold);
+      background:rgba(244,215,141,.06);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+    }
+    .eyebrow .dot{width:7px;height:7px;border-radius:99px;background:var(--green);box-shadow:0 0 18px rgba(85,214,169,.75)}
+
+    h1,h2,h3{line-height:1.08;margin:0 0 16px;letter-spacing:-.035em}
+    h1{font-size:clamp(44px,7vw,82px);max-width:1000px}
+    h2{font-size:clamp(34px,5vw,58px);max-width:900px}
+    h3{font-size:22px}
+    p{margin:0 0 18px}
+    .lead{font-size:clamp(19px,2.3vw,25px);max-width:850px;color:#dbe6ee;line-height:1.5}
+    .sublead{font-size:17px;color:var(--muted);max-width:800px}
+
+    .nav-wrap{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(7,21,34,.80);
+      border-bottom:1px solid var(--line);
+    }
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.02em}
+    .brand-mark{
+      width:36px;height:36px;border-radius:10px;
+      display:grid;place-items:center;
+      border:1px solid rgba(244,215,141,.35);
+      background:linear-gradient(145deg,rgba(244,215,141,.18),rgba(244,215,141,.04));
+      color:var(--gold);font-weight:950
+    }
+    .brand small{display:block;color:var(--muted);font-weight:650;font-size:11px;letter-spacing:.02em}
+    .nav-links{display:flex;align-items:center;gap:22px;font-size:14px;color:#c5d2dd}
+    .nav-links a:hover{color:#fff}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      min-height:48px;padding:0 19px;border-radius:12px;
+      border:1px solid transparent;font-weight:850;cursor:pointer;
+      transition:.18s ease;white-space:nowrap
+    }
+    .btn-primary{background:var(--gold);color:#101923;box-shadow:0 14px 34px rgba(244,215,141,.18)}
+    .btn-primary:hover{transform:translateY(-1px);background:#ffe5a0}
+    .btn-secondary{border-color:var(--line);background:rgba(255,255,255,.04);color:#fff}
+    .btn-secondary:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18)}
+    .btn-green{background:var(--green);color:#082119}
+    .btn-sm{min-height:42px;padding:0 15px;font-size:14px}
+
+    .hero{padding:84px 0 58px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.14fr .86fr;gap:56px;align-items:center}
+    .hero h1 span{color:var(--gold)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 24px}
+    .hero-notes{display:flex;flex-wrap:wrap;gap:10px 20px;color:var(--muted);font-size:14px}
+    .hero-notes span{display:flex;align-items:center;gap:8px}
+    .check{color:var(--green);font-weight:900}
+
+    .partner-card{
+      border:1px solid rgba(255,255,255,.11);
+      background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+      border-radius:28px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden
+    }
+    .partner-card:before{
+      content:"";position:absolute;inset:-1px auto auto -1px;width:180px;height:180px;
+      background:radial-gradient(circle,rgba(85,214,169,.14),transparent 65%);pointer-events:none
+    }
+    .mini-label{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+    .money{font-size:56px;line-height:1;font-weight:950;letter-spacing:-.05em;color:var(--green);margin:10px 0 4px}
+    .money small{font-size:17px;color:#b9c9d5;letter-spacing:0;font-weight:700}
+    .split{height:1px;background:var(--line);margin:24px 0}
+    .steps-mini{display:grid;gap:12px}
+    .step-mini{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+    .step-mini b{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:rgba(113,183,255,.10);color:var(--blue);font-size:13px;border:1px solid rgba(113,183,255,.18)}
+    .step-mini strong{display:block;margin-top:1px}
+    .step-mini span{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+
+    .trustbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .trustgrid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .trustitem{padding:26px 22px;border-right:1px solid var(--line)}
+    .trustitem:last-child{border-right:0}
+    .trustitem strong{display:block;font-size:16px;margin-bottom:3px}
+    .trustitem span{color:var(--muted);font-size:13px}
+
+    .heading-row{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:34px}
+    .heading-row p{max-width:520px;color:var(--muted);margin:0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{
+      padding:25px;border:1px solid var(--line);border-radius:var(--radius);
+      background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.022));
+    }
+    .card .icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;margin-bottom:20px;background:rgba(244,215,141,.10);color:var(--gold);font-size:20px;border:1px solid rgba(244,215,141,.16)}
+    .card p{color:var(--muted);margin-bottom:0}
+
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+    .flow-card{position:relative;padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035)}
+    .flow-card .n{color:var(--gold);font-weight:950;font-size:13px;letter-spacing:.08em;margin-bottom:14px}
+    .flow-card p{color:var(--muted);font-size:14px;margin:0}
+    .flow-card:not(:last-child):after{content:"→";position:absolute;right:-13px;top:50%;transform:translateY(-50%);z-index:3;color:#6e8394;font-weight:900}
+
+    .economics{background:linear-gradient(180deg,rgba(255,255,255,.025),transparent)}
+    .econ-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+    .calc{
+      padding:30px;border-radius:26px;border:1px solid rgba(85,214,169,.24);
+      background:linear-gradient(160deg,rgba(85,214,169,.08),rgba(255,255,255,.025));
+    }
+    .calc-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+    .calc-row:last-child{border-bottom:0}
+    .calc-row strong{font-size:18px}
+    .calc-row span{color:var(--muted)}
+    .calc-total{font-size:40px!important;color:var(--green)}
+    .range-wrap{margin-top:26px}
+    input[type="range"]{width:100%;accent-color:var(--green)}
+    .range-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:8px;color:var(--muted);font-size:14px}
+    .range-head strong{color:#fff}
+
+    .terms{
+      display:grid;grid-template-columns:1fr 1fr;gap:16px;
+    }
+    .term{
+      padding:19px 20px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.025)
+    }
+    .term strong{display:block;margin-bottom:6px}
+    .term span{color:var(--muted);font-size:14px}
+
+    .comparison{overflow:hidden;border:1px solid var(--line);border-radius:20px}
+    .compare-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+    .compare-row:last-child{border-bottom:0}
+    .compare-row > div{padding:17px 20px}
+    .compare-row > div:first-child{border-right:1px solid var(--line)}
+    .compare-head{font-weight:900;background:rgba(255,255,255,.04)}
+    .yes{color:#cdeee2}.no{color:#e6c1c1}
+
+    .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .fit-card{padding:28px;border-radius:var(--radius);border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .fit-card.good{border-color:rgba(85,214,169,.22)}
+    .fit-card.bad{border-color:rgba(255,140,140,.18)}
+    .fit-card ul{padding:0;margin:20px 0 0;list-style:none;display:grid;gap:12px}
+    .fit-card li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:#dbe6ee}
+    .fit-card.good li:before{content:"✓";color:var(--green);font-weight:950}
+    .fit-card.bad li:before{content:"×";color:var(--danger);font-weight:950}
+
+    .faq{display:grid;gap:12px}
+    details{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);padding:0 20px}
+    summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:850;display:flex;justify-content:space-between;gap:20px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";color:var(--gold);font-size:22px;line-height:1}
+    details[open] summary:after{content:"–"}
+    details p{color:var(--muted);padding:0 0 20px;margin:0;max-width:900px}
+
+    .cta-box{
+      padding:48px;border-radius:30px;border:1px solid rgba(244,215,141,.23);
+      background:
+        radial-gradient(circle at 90% 10%,rgba(244,215,141,.12),transparent 30%),
+        linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.025));
+      display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center
+    }
+    .cta-box h2{font-size:clamp(32px,4vw,48px);margin-bottom:12px}
+    .cta-box p{color:var(--muted);max-width:720px;margin:0}
+
+    .legal-note{font-size:12px;color:#7f95a6;line-height:1.6;margin-top:22px}
+    footer{border-top:1px solid var(--line);padding:34px 0 100px;color:#8298a8;font-size:13px}
+    .footer-grid{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}
+    .footer-links{display:flex;flex-wrap:wrap;gap:16px}
+
+    .mobile-cta{display:none}
+
+    @media(max-width:980px){
+      .nav-links{display:none}
+      .hero-grid,.econ-grid{grid-template-columns:1fr}
+      .hero{padding-top:62px}
+      .partner-card{max-width:650px}
+      .grid-3{grid-template-columns:1fr 1fr}
+      .flow{grid-template-columns:1fr 1fr}
+      .flow-card:nth-child(2):after{display:none}
+      .trustgrid{grid-template-columns:1fr 1fr}
+      .trustitem:nth-child(2){border-right:0}
+      .trustitem:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .cta-box{grid-template-columns:1fr}
+    }
+
+    @media(max-width:680px){
+      .container{width:min(100% - 28px,var(--max))}
+      .section{padding:68px 0}
+      nav{height:64px}
+      .brand small{display:none}
+      nav .btn{display:none}
+      .hero{padding:52px 0 40px}
+      h1{font-size:44px}
+      h2{font-size:36px}
+      .lead{font-size:19px}
+      .hero-actions{display:grid}
+      .hero-actions .btn{width:100%}
+      .grid-3,.grid-2,.fit-grid,.terms,.flow{grid-template-columns:1fr}
+      .flow-card:after{display:none!important}
+      .trustgrid{grid-template-columns:1fr}
+      .trustitem{border-right:0;border-bottom:1px solid var(--line)}
+      .trustitem:last-child{border-bottom:0}
+      .heading-row{display:block}
+      .heading-row p{margin-top:12px}
+      .compare-row{grid-template-columns:1fr}
+      .compare-row > div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+      .cta-box{padding:30px 24px}
+      .footer-grid{display:grid}
+      .mobile-cta{
+        display:block;position:fixed;left:0;right:0;bottom:0;z-index:80;
+        padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+        background:rgba(7,21,34,.94);backdrop-filter:blur(18px);border-top:1px solid var(--line)
+      }
+      .mobile-cta .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <div class="container">
+      <nav>
+        <a class="brand" href="#top" aria-label="Emprende360 Lead Recovery Partners">
+          <span class="brand-mark">E</span>
+          <span>Emprende360 <small>Lead Recovery · Partners</small></span>
+        </a>
+        <div class="nav-links">
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#condiciones">Condiciones</a>
+          <a href="#encaje">Para quién</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <a class="btn btn-primary btn-sm" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20la%20colaboraci%C3%B3n%20como%20partner%20de%20Lead%20Recovery." target="_blank" rel="noopener">Quiero ser partner</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Programa de Partners · Founding 2026</div>
+          <h1 style="margin-top:20px">Tú generas demanda. <span>Nosotros evitamos que tus clientes pierdan oportunidades.</span></h1>
+          <p class="lead">Añade Lead Recovery a tu cartera sin tener que diseñar, implantar ni mantener la automatización tú.</p>
+          <p class="sublead">Cuando detectas un cliente que genera leads pero pierde parte de ellos por respuesta tardía, falta de cualificación o seguimiento inconsistente, nos lo presentas. Nosotros hacemos el resto.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20la%20colaboraci%C3%B3n%20como%20partner%20de%20Lead%20Recovery." target="_blank" rel="noopener">Quiero valorar la colaboración</a>
+            <a class="btn btn-secondary" href="#como-funciona">Ver cómo funciona</a>
+          </div>
+          <div class="hero-notes">
+            <span><b class="check">✓</b> Sin coste para el partner</span>
+            <span><b class="check">✓</b> Sin mínimos</span>
+            <span><b class="check">✓</b> Sin implementación técnica por tu parte</span>
+            <span><b class="check">✓</b> Participación recurrente</span>
+          </div>
+        </div>
+
+        <aside class="partner-card">
+          <div class="mini-label">Condición Founding</div>
+          <div class="money">100 € <small>/ mes</small></div>
+          <p class="muted">Por cada cliente referido que esté activo y al corriente de pago, durante sus primeros 12 meses.</p>
+          <div class="split"></div>
+          <div class="steps-mini">
+            <div class="step-mini"><b>1</b><div><strong>Detectas el caso</strong><span>Un cliente genera leads pero el seguimiento no es consistente.</span></div></div>
+            <div class="step-mini"><b>2</b><div><strong>Nos presentas</strong><span>Una introducción breve y con contexto. Nada de pasar bases.</span></div></div>
+            <div class="step-mini"><b>3</b><div><strong>Nosotros vendemos y ejecutamos</strong><span>Diagnóstico, implantación, operación, soporte y optimización.</span></div></div>
+            <div class="step-mini"><b>4</b><div><strong>Tú participas</strong><span>Mientras el cliente siga activo dentro del periodo acordado.</span></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trustbar">
+      <div class="container trustgrid">
+        <div class="trustitem"><strong>490 € + IVA / mes</strong><span>Precio Founding actual del cliente final</span></div>
+        <div class="trustitem"><strong>100 € / mes</strong><span>Participación Founding del partner por cliente activo</span></div>
+        <div class="trustitem"><strong>Hasta 12 meses</strong><span>Periodo máximo de participación por referral</span></div>
+        <div class="trustitem"><strong>0 carga técnica</strong><span>Emprende360 implanta, opera y mantiene</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="heading-row">
+          <div>
+            <div class="eyebrow">Por qué existe</div>
+            <h2 style="margin-top:16px">El problema empieza muchas veces después de que tú ya hayas hecho bien tu trabajo.</h2>
+          </div>
+          <p>Una agencia puede generar demanda. Un consultor puede mejorar el funnel. Un implantador puede dejar el CRM funcionando. Pero si el lead entra y nadie responde, cualifica o sigue con consistencia, el cliente sigue perdiendo oportunidades.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card"><div class="icon">↗</div><h3>Proteges el valor de tu servicio</h3><p>Si tú generas leads, tráfico, formularios o demanda, Lead Recovery ayuda a que el cliente aproveche mejor lo que ya está pagando.</p></article>
+          <article class="card"><div class="icon">＋</div><h3>Añades una solución sin construirla</h3><p>No necesitas contratar técnico, aprender automatización ni convertir tu agencia en un equipo de soporte.</p></article>
+          <article class="card"><div class="icon">€</div><h3>Creas ingreso recurrente</h3><p>Cuando un cliente referido entra y permanece activo, recibes la participación acordada durante el periodo Founding.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section" style="background:rgba(255,255,255,.018)">
+      <div class="container">
+        <div class="eyebrow">Cómo trabajamos</div>
+        <h2 style="margin-top:16px">No necesitas “vender automatización”. Solo detectar una fuga clara.</h2>
+        <p class="lead" style="font-size:20px">El partner aporta contexto y confianza. Emprende360 se encarga del diagnóstico, la venta y toda la operación técnica.</p>
+
+        <div class="flow">
+          <div class="flow-card"><div class="n">01 · DETECTAS</div><h3>Ves el problema</h3><p>Tu cliente genera leads, pero responde tarde, abandona pronto, no cualifica o deja oportunidades dormidas.</p></div>
+          <div class="flow-card"><div class="n">02 · INTRODUCES</div><h3>Haces una presentación</h3><p>Nos conectas con el cliente con una frase de contexto. No tienes que explicar arquitectura ni cerrar nada.</p></div>
+          <div class="flow-card"><div class="n">03 · EJECUTAMOS</div><h3>Nosotros nos encargamos</h3><p>Revisamos el flujo, validamos encaje, cerramos, implantamos, monitorizamos y optimizamos el sistema.</p></div>
+          <div class="flow-card"><div class="n">04 · PARTICIPAS</div><h3>Si entra, cobras</h3><p>El referral queda registrado y recibes tu participación mientras el cliente cumpla las condiciones acordadas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="heading-row">
+          <div>
+            <div class="eyebrow">Reparto de responsabilidades</div>
+            <h2 style="margin-top:16px">Tu relación sigue siendo tuya. La operación, nuestra.</h2>
+          </div>
+          <p>Queremos que el partnership te haga quedar mejor delante del cliente, no añadirte una nueva línea de trabajo.</p>
+        </div>
+
+        <div class="comparison">
+          <div class="compare-row compare-head"><div>Lo que hace el partner</div><div>Lo que hace Emprende360</div></div>
+          <div class="compare-row"><div class="yes">✓ Detectar un cliente donde exista el problema</div><div class="yes">✓ Validar volumen, margen, proceso y encaje técnico</div></div>
+          <div class="compare-row"><div class="yes">✓ Hacer una introducción con contexto</div><div class="yes">✓ Hacer la demo y gestionar la conversación comercial</div></div>
+          <div class="compare-row"><div class="yes">✓ Mantener su relación habitual con el cliente</div><div class="yes">✓ Diseñar e implantar el flujo</div></div>
+          <div class="compare-row"><div class="no">× No tiene que programar</div><div class="yes">✓ Configurar respuesta, cualificación y seguimiento</div></div>
+          <div class="compare-row"><div class="no">× No tiene que dar soporte técnico</div><div class="yes">✓ Monitorizar, mantener y optimizar</div></div>
+          <div class="compare-row"><div class="no">× No tiene que cerrar la venta</div><div class="yes">✓ Dar soporte operativo al cliente</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="condiciones" class="section economics">
+      <div class="container econ-grid">
+        <div>
+          <div class="eyebrow">Condiciones Founding</div>
+          <h2 style="margin-top:16px">Un modelo simple para empezar. Sin contratos comerciales imposibles de entender.</h2>
+          <p class="lead" style="font-size:20px">Queremos validar un canal pequeño de partners que realmente generen clientes, no llenar una web de logos.</p>
+
+          <div class="terms" style="margin-top:30px">
+            <div class="term"><strong>Participación</strong><span>100 € por mes y cliente referido activo, durante un máximo de 12 meses desde su primer pago.</span></div>
+            <div class="term"><strong>Cuándo se genera</strong><span>Solo después de que el cliente haya pagado su mensualidad y el cobro esté confirmado.</span></div>
+            <div class="term"><strong>Sin mínimos</strong><span>No hay cuota de referrals, objetivos de venta ni obligación de traer un número mínimo de clientes.</span></div>
+            <div class="term"><strong>Sin exclusividad</strong><span>Puedes trabajar con otras soluciones. Nosotros tampoco pedimos exclusividad territorial o sectorial.</span></div>
+            <div class="term"><strong>Atribución</strong><span>El referral debe quedar registrado antes de que exista una oportunidad comercial activa entre ese cliente y Emprende360.</span></div>
+            <div class="term"><strong>Cliente cancelado</strong><span>Si el cliente cancela o deja de pagar, la participación se detiene desde ese momento.</span></div>
+            <div class="term"><strong>Qué entra</strong><span>La participación Founding se aplica al servicio core Lead Recovery. Extras, desarrollos o módulos se pactan aparte si procede.</span></div>
+            <div class="term"><strong>Costes externos</strong><span>No se calcula comisión sobre IVA, mensajería, telefonía, APIs, licencias u otros costes de terceros.</span></div>
+          </div>
+        </div>
+
+        <div class="calc">
+          <div class="mini-label">Calculadora orientativa de partner</div>
+          <h3 style="font-size:30px;margin-top:10px">¿Qué ocurre si activas varios clientes?</h3>
+          <div class="range-wrap">
+            <div class="range-head"><span>Clientes activos referidos</span><strong id="clientCount">5</strong></div>
+            <input id="clientRange" type="range" min="1" max="25" value="5" step="1" aria-label="Clientes activos referidos" />
+          </div>
+          <div style="margin-top:20px">
+            <div class="calc-row"><span>Participación por cliente</span><strong>100 €/mes</strong></div>
+            <div class="calc-row"><span>Total mensual</span><strong id="monthlyTotal" class="calc-total">500 €</strong></div>
+            <div class="calc-row"><span>Máximo anual si los mismos clientes siguen activos 12 meses</span><strong id="yearlyTotal">6.000 €</strong></div>
+          </div>
+          <p class="legal-note">Cálculo puramente aritmético. No representa una previsión ni garantía de clientes, permanencia o ingresos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="encaje" class="section">
+      <div class="container">
+        <div class="eyebrow">Quién encaja mejor</div>
+        <h2 style="margin-top:16px">El mejor partner ya está delante de empresas que generan demanda.</h2>
+        <div class="fit-grid" style="margin-top:34px">
+          <div class="fit-card good">
+            <h3>Buen encaje</h3>
+            <ul>
+              <li>Agencias de performance, Google Ads, Meta Ads o lead generation.</li>
+              <li>Consultores e implantadores CRM, HubSpot, Pipedrive o RevOps.</li>
+              <li>Especialistas en funnels, CRO y marketing automation.</li>
+              <li>Agencias web o digitales cuyos clientes reciben formularios y consultas.</li>
+              <li>Consultores comerciales que detectan problemas de seguimiento.</li>
+              <li>Agencias B2B que quieran añadir una capa post-lead sin construirla.</li>
+            </ul>
+          </div>
+          <div class="fit-card bad">
+            <h3>Probablemente no encaja</h3>
+            <ul>
+              <li>No tienes relación real con empresas que generen leads.</li>
+              <li>Quieres pasar bases de datos sin contexto o sin consentimiento.</li>
+              <li>Buscas una comisión por presentar contactos que ya están hablando con nosotros.</li>
+              <li>Ya vendes exactamente un sistema equivalente y competiríamos directamente.</li>
+              <li>Quieres que prometamos ventas, clientes o ROI a tu cliente.</li>
+              <li>Esperas un modelo white-label completo desde el primer día.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:rgba(255,255,255,.018)">
+      <div class="container">
+        <div class="heading-row">
+          <div>
+            <div class="eyebrow">El cliente final</div>
+            <h2 style="margin-top:16px">¿Qué tiene que tener el cliente para que merezca la pena presentarlo?</h2>
+          </div>
+          <p>No necesitamos cien referrals. Necesitamos casos donde la economía sea suficientemente buena para que Lead Recovery tenga sentido.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card"><div class="icon">1</div><h3>Ya genera leads</h3><p>Idealmente tiene una entrada recurrente de oportunidades o una base histórica aprovechable. Lead Recovery no crea demanda desde cero.</p></article>
+          <article class="card"><div class="icon">2</div><h3>El lead tiene valor</h3><p>Su ticket o margen permite que una buena oportunidad valga claramente más que la mensualidad del sistema.</p></article>
+          <article class="card"><div class="icon">3</div><h3>Hay una fuga real</h3><p>Respuesta lenta, seguimiento irregular, falta de cualificación, no-shows, conversaciones dormidas o CRM infrautilizado.</p></article>
+        </div>
+
+        <div style="margin-top:22px">
+          <a class="btn btn-secondary" href="https://emprende360.club/leads-recovery/" target="_blank" rel="noopener">Ver la landing del cliente final</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow">Protección de la relación</div>
+        <h2 style="margin-top:16px">No queremos convertirnos en un competidor de la agencia que nos abre la puerta.</h2>
+        <div class="grid-3" style="margin-top:32px">
+          <article class="card"><div class="icon">◎</div><h3>Contexto compartido</h3><p>Antes de hablar con el cliente sabemos qué haces tú, qué hacemos nosotros y dónde empieza y termina cada servicio.</p></article>
+          <article class="card"><div class="icon">↔</div><h3>Sin desintermediación</h3><p>No utilizamos una introducción para intentar sustituir el servicio principal del partner. Lead Recovery complementa, no absorbe.</p></article>
+          <article class="card"><div class="icon">⚙</div><h3>Otros proyectos, coordinados</h3><p>Si aparece una necesidad adicional de automatización, la hablamos primero con el partner y definimos el mejor modo de abordarla.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section" style="background:rgba(255,255,255,.018)">
+      <div class="container">
+        <div class="eyebrow">FAQ</div>
+        <h2 style="margin-top:16px">Preguntas claras antes de empezar.</h2>
+        <div class="faq" style="margin-top:30px">
+          <details><summary>¿Tengo que vender yo Lead Recovery?</summary><p>No. Lo ideal es que detectes el caso y hagas una introducción con contexto. Emprende360 hace la demo, valida el encaje, explica el alcance, cierra e implanta.</p></details>
+          <details><summary>¿Cuánto recibe el partner?</summary><p>Durante la fase Founding: 100 € por mes por cada cliente referido activo y al corriente de pago, durante un máximo de 12 meses desde el primer pago del cliente. Las condiciones de nuevas oportunidades pueden revisarse en el futuro, pero cualquier referral registrado conserva las condiciones acordadas para ese caso.</p></details>
+          <details><summary>¿Cuándo se paga?</summary><p>Mensualmente y siempre después de confirmar el cobro del cliente correspondiente. No se genera participación sobre mensualidades no cobradas, devoluciones, IVA, licencias, mensajería, telefonía, APIs o costes de terceros.</p></details>
+          <details><summary>¿Qué ocurre si el cliente deja de pagar?</summary><p>La participación se detiene desde la mensualidad que no ha sido cobrada. Si posteriormente el servicio se reactiva, revisamos el caso conforme a las condiciones del referral registrado.</p></details>
+          <details><summary>¿Cómo se atribuye un cliente?</summary><p>La forma más sencilla es una introducción por email, LinkedIn o WhatsApp donde queden identificados partner y cliente antes de iniciar nuestra conversación comercial. Si el cliente ya estaba en una oportunidad activa con Emprende360, no se considera un referral nuevo.</p></details>
+          <details><summary>¿Hay exclusividad?</summary><p>No. No pedimos exclusividad. Tampoco existe un mínimo de clientes, cuota de acceso o compromiso de volumen.</p></details>
+          <details><summary>¿Puedo venderlo como white label?</summary><p>No por defecto durante la fase Founding. Primero estamos validando un modelo sencillo de referral: tú presentas, nosotros ejecutamos. Si más adelante existe suficiente volumen, podemos estudiar modelos de colaboración más integrados.</p></details>
+          <details><summary>¿Qué cuesta al cliente final?</summary><p>Actualmente la condición Founding del sistema estándar es 490 € + IVA al mes, con implantación estándar incluida dentro de los límites definidos. Integraciones especiales, consumos y desarrollos fuera de alcance se valoran aparte.</p></details>
+          <details><summary>¿Qué pasa si mi cliente necesita voz IA u otra automatización?</summary><p>Lead Recovery es la puerta de entrada. Voz IA, integraciones avanzadas u otros desarrollos no forman parte del core de 490 €. Si aparece una necesidad adicional, la revisamos y la coordinamos contigo antes de presupuestarla.</p></details>
+          <details><summary>¿Garantizáis resultados al cliente?</summary><p>No. Lead Recovery puede mejorar velocidad, consistencia, cualificación y seguimiento, pero no prometemos clientes, ventas, reuniones, facturación ni ROI. Garantizamos la ejecución del alcance acordado y el mantenimiento de aquello que depende de nosotros.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <div class="eyebrow">Siguiente paso</div>
+            <h2 style="margin-top:16px">No necesitamos firmar un partnership vacío. Busquemos el primer caso.</h2>
+            <p>Si te encaja el modelo, dime qué tipo de clientes gestionas y si ahora mismo te viene a la cabeza alguna empresa que genere leads pero tenga un problema evidente de respuesta o seguimiento.</p>
+          </div>
+          <div style="display:grid;gap:10px;min-width:min(100%,260px)">
+            <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20la%20colaboraci%C3%B3n%20como%20partner%20de%20Lead%20Recovery.%0A%0ATipo%20de%20clientes%20que%20gestiono%3A%20%0ATipo%20de%20servicio%20que%20ofrezco%3A%20%0ACliente%20que%20podr%C3%ADa%20encajar%3A%20" target="_blank" rel="noopener">Hablar con Alberto</a>
+            <a class="btn btn-secondary" href="https://emprende360.club/leads-recovery/" target="_blank" rel="noopener">Ver Lead Recovery</a>
+          </div>
+        </div>
+        <p class="legal-note">Programa sujeto a aceptación del partner y a registro previo de cada referral. Las condiciones comerciales aquí mostradas corresponden a la fase Founding y pueden cambiar para nuevas oportunidades. Cualquier condición especial se acuerda por escrito antes de la introducción correspondiente. El partner debe respetar la normativa aplicable de privacidad y comunicaciones comerciales; no se aceptan bases de datos o contactos compartidos sin una base legítima para hacerlo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong style="color:#dbe6ee">Emprende360 · Lead Recovery Partner Program</strong><br />
+        Operado por Albi System, LLC.
+      </div>
+      <div class="footer-links">
+        <a href="https://emprende360.club/leads-recovery/" target="_blank" rel="noopener">Lead Recovery</a>
+        <a href="https://emprende360.club/privacidad/" target="_blank" rel="noopener">Privacidad</a>
+        <a href="https://emprende360.club/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a>
+        <a href="https://emprende360.club/terminos-condiciones/" target="_blank" rel="noopener">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto%2C%20quiero%20valorar%20la%20colaboraci%C3%B3n%20como%20partner%20de%20Lead%20Recovery." target="_blank" rel="noopener">Quiero ser partner</a>
+  </div>
+
+  <script>
+    const range = document.getElementById('clientRange');
+    const clientCount = document.getElementById('clientCount');
+    const monthly = document.getElementById('monthlyTotal');
+    const yearly = document.getElementById('yearlyTotal');
+
+    const euro = new Intl.NumberFormat('es-ES', {
+      style: 'currency',
+      currency: 'EUR',
+      maximumFractionDigits: 0
+    });
+
+    function updateCalculator(){
+      const clients = Number(range.value || 1);
+      const monthlyValue = clients * 100;
+      clientCount.textContent = clients;
+      monthly.textContent = euro.format(monthlyValue);
+      yearly.textContent = euro.format(monthlyValue * 12);
+    }
+
+    range.addEventListener('input', updateCalculator);
+    updateCalculator();
+  </script>
+</body>
+</html>
