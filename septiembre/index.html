@@ -1,31 +1,31 @@
 <!doctype html>
 <html lang="es">
-
 <head>
-
   <meta charset="utf-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Agenda B2B · Septiembre 2026 | Emprende360</title>
 
   <meta
     name="description"
-    content="Agenda de eventos B2B de Emprende360 para septiembre de 2026. Mesas, entrevistas, debates y conversaciones gratuitas con profesionales B2B."
+    content="Foros Ejecutivos y Rondas B2B de Emprende360 en septiembre de 2026. Elige las conversaciones que te interesen y marca tu asistencia directamente en LinkedIn."
   />
 
   <meta name="robots" content="index,follow" />
 
   <style>
-
     :root{
-
       --deep:#020617;
+      --deep2:#040B16;
       --navy:#071522;
       --navy2:#0B1728;
 
       --sky:#18A7FF;
+      --sky-soft:#7DD3FC;
+
       --gold:#F4C542;
+      --gold-soft:#FDE68A;
+
       --green:#22C55E;
 
       --text:#F8FAFC;
@@ -39,22 +39,17 @@
       --shadow:0 30px 100px rgba(0,0,0,.38);
 
       --max:1180px;
-
     }
-
 
     *{
       box-sizing:border-box;
     }
 
-
     html{
       scroll-behavior:smooth;
     }
 
-
     body{
-
       margin:0;
 
       font-family:
@@ -67,85 +62,59 @@
         sans-serif;
 
       background:var(--deep);
-
       color:var(--text);
 
       overflow-x:hidden;
 
+      line-height:1.5;
     }
-
 
     a{
-      text-decoration:none;
       color:inherit;
+      text-decoration:none;
     }
 
-
-    strong{
-      color:white;
+    strong,
+    b{
+      color:#fff;
     }
 
+    img{
+      display:block;
+      max-width:100%;
+    }
 
     .wrap{
-
       width:100%;
-
       max-width:var(--max);
-
       margin:0 auto;
-
       padding:0 22px;
-
     }
-
 
     .section{
-
       position:relative;
-
-      padding:88px 0;
-
+      padding:78px 0;
       overflow:hidden;
-
     }
-
 
     .center{
-
-      max-width:880px;
-
+      max-width:850px;
       margin-left:auto;
-
       margin-right:auto;
-
       text-align:center;
-
     }
-
 
     .lead{
-
       color:var(--soft);
-
       font-size:18px;
-
-      line-height:1.7;
-
+      line-height:1.68;
     }
-
 
     .muted{
       color:var(--muted);
     }
 
-
-    /* =========================================
-       TEXTOS / LABELS
-    ========================================= */
-
-
     .grad-text{
-
       background:
         linear-gradient(
           90deg,
@@ -155,108 +124,75 @@
         );
 
       -webkit-background-clip:text;
-
       background-clip:text;
 
       color:transparent;
-
     }
 
-
     .pill{
-
       display:inline-flex;
-
       align-items:center;
-
       gap:8px;
 
-      border:
-        1px solid rgba(255,255,255,.13);
-
-      background:
-        rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(255,255,255,.055);
 
       color:#DBEAFE;
 
       border-radius:999px;
-
       padding:8px 13px;
 
-      font-size:12px;
+      font-size:11px;
+      font-weight:900;
 
-      font-weight:850;
-
-      backdrop-filter:blur(16px);
-
+      letter-spacing:.08em;
+      text-transform:uppercase;
     }
 
-
     .kicker{
-
       display:inline-flex;
-
       align-items:center;
-
       gap:8px;
 
-      border:
-        1px solid rgba(24,167,255,.25);
-
-      background:
-        rgba(24,167,255,.09);
+      border:1px solid rgba(24,167,255,.25);
+      background:rgba(24,167,255,.09);
 
       color:#C8ECFF;
 
       border-radius:999px;
-
       padding:7px 12px;
 
-      font-size:12px;
-
-      font-weight:900;
+      font-size:11px;
+      font-weight:950;
 
       text-transform:uppercase;
-
-      letter-spacing:.15em;
-
+      letter-spacing:.14em;
     }
 
-
-    /* =========================================
-       BOTONES
-    ========================================= */
-
-
     .btn{
-
       display:inline-flex;
-
       align-items:center;
-
       justify-content:center;
-
       gap:9px;
 
       border-radius:999px;
 
       padding:13px 19px;
 
+      font-size:13px;
       font-weight:900;
 
-      font-size:13px;
-
       border:0;
-
       cursor:pointer;
 
-      transition:.25s ease;
-
+      transition:.24s ease;
     }
 
+    .btn:hover{
+      transform:translateY(-3px);
+    }
 
     .btn-primary{
-
       color:#06111F;
 
       background:
@@ -269,23 +205,15 @@
 
       box-shadow:
         0 18px 60px rgba(244,197,66,.20);
-
     }
-
 
     .btn-primary:hover{
-
-      transform:translateY(-3px);
-
       box-shadow:
         0 24px 70px rgba(244,197,66,.34);
-
     }
 
-
     .btn-linkedin{
-
-      color:white;
+      color:#fff;
 
       background:
         linear-gradient(
@@ -296,99 +224,68 @@
 
       box-shadow:
         0 18px 55px rgba(24,167,255,.18);
-
     }
-
 
     .btn-linkedin:hover{
-
-      transform:translateY(-3px);
-
       box-shadow:
         0 24px 70px rgba(24,167,255,.30);
-
     }
-
-
-    .btn-whatsapp{
-
-      color:#03130A;
-
-      background:
-        linear-gradient(
-          90deg,
-          #25D366,
-          #22C55E
-        );
-
-      box-shadow:
-        0 18px 55px rgba(34,197,94,.18);
-
-    }
-
-
-    .btn-whatsapp:hover{
-
-      transform:translateY(-3px);
-
-      box-shadow:
-        0 24px 70px rgba(34,197,94,.30);
-
-    }
-
 
     .btn-secondary{
-
-      color:white;
+      color:#fff;
 
       background:
         rgba(255,255,255,.055);
 
       border:
         1px solid rgba(255,255,255,.14);
-
     }
-
-
-    .btn-secondary:hover{
-
-      transform:translateY(-3px);
-
-      background:
-        rgba(255,255,255,.09);
-
-    }
-
 
     .btn-disabled{
+      color:#94A3B8;
 
       cursor:default;
-
       pointer-events:none;
-
-      color:#94A3B8;
 
       background:
         rgba(255,255,255,.045);
 
       border:
         1px solid rgba(255,255,255,.10);
-
     }
 
+    .grid-bg{
+      position:absolute;
+      inset:0;
 
-    /* =========================================
+      opacity:.055;
+
+      pointer-events:none;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,.65) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.65) 1px,
+          transparent 1px
+        );
+
+      background-size:54px 54px;
+    }
+
+    /* =========================================================
        HEADER
-    ========================================= */
-
+    ========================================================= */
 
     header{
-
       position:fixed;
 
+      top:0;
       left:0;
       right:0;
-      top:0;
 
       z-index:100;
 
@@ -396,16 +293,13 @@
         1px solid rgba(255,255,255,.09);
 
       background:
-        rgba(2,6,23,.82);
+        rgba(2,6,23,.84);
 
       backdrop-filter:
         blur(22px);
-
     }
 
-
     .nav{
-
       max-width:var(--max);
 
       margin:0 auto;
@@ -413,37 +307,26 @@
       padding:12px 22px;
 
       display:flex;
-
       align-items:center;
-
       justify-content:space-between;
 
       gap:18px;
-
     }
-
 
     .brand{
-
       display:flex;
-
       align-items:center;
-
       gap:11px;
-
     }
 
-
     .brand-mark{
-
       width:41px;
       height:41px;
 
-      border-radius:16px;
-
       display:grid;
-
       place-items:center;
+
+      border-radius:16px;
 
       font-weight:950;
 
@@ -456,21 +339,14 @@
 
       box-shadow:
         0 18px 45px rgba(24,167,255,.25);
-
     }
-
 
     .brand-title{
-
       font-weight:950;
-
       line-height:1;
-
     }
 
-
     .brand-sub{
-
       margin-top:4px;
 
       color:#94A3B8;
@@ -478,427 +354,409 @@
       font-size:10px;
 
       letter-spacing:.17em;
-
       text-transform:uppercase;
 
       font-weight:850;
-
     }
 
-
     .nav-links{
-
       display:flex;
-
       align-items:center;
-
       gap:19px;
 
       color:#CBD5E1;
 
       font-size:13px;
-
       font-weight:800;
-
     }
-
 
     .nav-links a:hover{
-      color:white;
+      color:#fff;
     }
 
-
-    /* =========================================
+    /* =========================================================
        HERO
-    ========================================= */
-
+    ========================================================= */
 
     .hero{
-
       position:relative;
 
       padding:
-        145px 0 95px;
-
-      display:flex;
-
-      align-items:center;
-
-      min-height:72vh;
+        112px 0 46px;
 
       background:
-
         radial-gradient(
-          circle at 15% 15%,
-          rgba(24,167,255,.23),
+          circle at 15% 12%,
+          rgba(24,167,255,.22),
           transparent 29%
         ),
-
         radial-gradient(
-          circle at 84% 22%,
-          rgba(244,197,66,.15),
+          circle at 84% 16%,
+          rgba(244,197,66,.14),
           transparent 29%
         ),
-
-        radial-gradient(
-          circle at 50% 90%,
-          rgba(34,197,94,.08),
-          transparent 34%
-        ),
-
         var(--deep);
-
     }
-
-
-    .grid-bg{
-
-      position:absolute;
-
-      inset:0;
-
-      opacity:.06;
-
-      pointer-events:none;
-
-      background-image:
-
-        linear-gradient(
-          rgba(255,255,255,.65) 1px,
-          transparent 1px
-        ),
-
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,.65) 1px,
-          transparent 1px
-        );
-
-      background-size:
-        54px 54px;
-
-    }
-
 
     .hero-inner{
-
       position:relative;
-
       z-index:2;
 
-      max-width:940px;
+      max-width:920px;
 
       margin:0 auto;
 
       text-align:center;
-
     }
-
 
     h1{
-
-      margin:24px 0 0;
+      margin:19px 0 0;
 
       font-size:
-        clamp(
-          44px,
-          6.2vw,
-          76px
-        );
+        clamp(42px,5.9vw,70px);
 
-      line-height:.97;
+      line-height:.98;
 
-      letter-spacing:-.06em;
+      letter-spacing:-.058em;
 
       font-weight:950;
-
     }
 
-
     h2{
-
       margin:14px 0 0;
 
       font-size:
-        clamp(
-          34px,
-          4.7vw,
-          56px
-        );
+        clamp(33px,4.5vw,53px);
 
       line-height:1.03;
 
       letter-spacing:-.045em;
 
       font-weight:950;
-
     }
-
 
     h3{
-
       margin:0;
-
       line-height:1.15;
-
     }
 
-
     .hero p{
+      max-width:760px;
 
-      max-width:790px;
-
-      margin:24px auto 0;
+      margin:19px auto 0;
 
       color:#CBD5E1;
 
-      font-size:19px;
-
-      line-height:1.7;
-
+      font-size:17px;
+      line-height:1.67;
     }
-
 
     .hero-actions{
-
-      margin-top:29px;
+      margin-top:25px;
 
       display:flex;
-
       justify-content:center;
-
       flex-wrap:wrap;
 
-      gap:12px;
-
+      gap:11px;
     }
 
+    .hero-note{
+      margin-top:14px !important;
 
-    .hero-stats{
+      color:#94A3B8 !important;
 
-      max-width:850px;
+      font-size:12px !important;
+    }
 
-      margin:34px auto 0;
+    /* =========================================================
+       ACTIVE AGENDA — ABOVE THE FOLD
+    ========================================================= */
 
+    .active-agenda{
+      position:relative;
+
+      padding:
+        34px 0 74px;
+
+      background:var(--deep);
+    }
+
+    .active-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+
+      gap:24px;
+
+      margin-bottom:23px;
+    }
+
+    .active-head h2{
+      margin:8px 0 0;
+
+      font-size:
+        clamp(29px,3.5vw,43px);
+    }
+
+    .active-head p{
+      max-width:560px;
+
+      margin:0;
+
+      color:#94A3B8;
+
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .active-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(2,1fr);
+
+      gap:17px;
+    }
+
+    .event-card{
+      position:relative;
+
+      overflow:hidden;
+
+      min-height:360px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+
+      border:
+        1px solid rgba(255,255,255,.13);
+
+      border-radius:29px;
+
+      background:#071522;
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.20);
+
+      transition:.25s ease;
+    }
+
+    .event-card:hover{
+      transform:translateY(-5px);
+
+      border-color:
+        rgba(24,167,255,.36);
+
+      box-shadow:
+        0 28px 78px rgba(0,0,0,.28);
+    }
+
+    .event-media{
+      position:absolute;
+      inset:0;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(2,6,23,.08) 0%,
+          rgba(2,6,23,.18) 36%,
+          rgba(2,6,23,.94) 79%,
+          rgba(2,6,23,.99) 100%
+        ),
+        var(--event-image),
+        radial-gradient(
+          circle at 18% 18%,
+          rgba(24,167,255,.34),
+          transparent 34%
+        ),
+        radial-gradient(
+          circle at 80% 55%,
+          rgba(244,197,66,.16),
+          transparent 38%
+        ),
+        #071522;
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    .event-placeholder{
+      position:absolute;
+
+      top:24px;
+      left:24px;
+      right:24px;
+
+      color:
+        rgba(255,255,255,.17);
+
+      font-size:
+        clamp(34px,4vw,48px);
+
+      line-height:.9;
+
+      font-weight:950;
+
+      letter-spacing:-.055em;
+
+      text-transform:uppercase;
+    }
+
+    .event-content{
+      position:relative;
+      z-index:2;
+
+      padding:26px;
+    }
+
+    .event-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+
+      margin-bottom:12px;
+    }
+
+    .badge-live{
+      display:inline-flex;
+
+      padding:6px 9px;
+
+      border:
+        1px solid rgba(34,197,94,.28);
+
+      border-radius:999px;
+
+      background:
+        rgba(34,197,94,.10);
+
+      color:#86EFAC;
+
+      font-size:9px;
+      font-weight:950;
+
+      letter-spacing:.10em;
+      text-transform:uppercase;
+    }
+
+    .badge-type{
+      display:inline-flex;
+
+      padding:6px 9px;
+
+      border:
+        1px solid rgba(24,167,255,.28);
+
+      border-radius:999px;
+
+      background:
+        rgba(24,167,255,.10);
+
+      color:#BAE6FD;
+
+      font-size:9px;
+      font-weight:950;
+
+      letter-spacing:.10em;
+      text-transform:uppercase;
+    }
+
+    .event-card h3{
+      max-width:520px;
+
+      font-size:
+        clamp(23px,2.4vw,30px);
+
+      letter-spacing:-.034em;
+    }
+
+    .event-description{
+      max-width:540px;
+
+      margin:
+        10px 0 0;
+
+      color:#CBD5E1;
+
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .event-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+
+      margin-top:15px;
+    }
+
+    .meta{
+      padding:6px 9px;
+
+      border:
+        1px solid rgba(255,255,255,.10);
+
+      border-radius:999px;
+
+      background:
+        rgba(255,255,255,.04);
+
+      color:#94A3B8;
+
+      font-size:10px;
+      font-weight:750;
+    }
+
+    .event-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+
+      margin-top:20px;
+    }
+
+    /* =========================================================
+       WHY
+    ========================================================= */
+
+    .why{
+      background:var(--navy);
+    }
+
+    .why-grid{
       display:grid;
 
       grid-template-columns:
         repeat(3,1fr);
 
-      gap:12px;
+      gap:14px;
 
+      margin-top:35px;
     }
 
-
-    .hero-stat{
-
-      padding:16px;
-
-      border:
-        1px solid rgba(255,255,255,.11);
-
-      background:
-        rgba(255,255,255,.045);
-
-      border-radius:20px;
-
-    }
-
-
-    .hero-stat b{
-
-      display:block;
-
-      color:white;
-
-      font-size:16px;
-
-      margin-bottom:4px;
-
-    }
-
-
-    .hero-stat span{
-
-      color:#94A3B8;
-
-      font-size:12px;
-
-      line-height:1.45;
-
-    }
-
-
-    /* =========================================
-       WEEK NAV
-    ========================================= */
-
-
-    .week-nav-section{
-
-      position:relative;
-
-      z-index:5;
-
-      margin-top:-35px;
-
-    }
-
-
-    .week-nav{
-
-      display:grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap:10px;
-
-      padding:12px;
+    .why-card{
+      padding:23px;
 
       border:
         1px solid var(--line);
 
-      background:
-        rgba(15,23,42,.94);
+      border-radius:23px;
 
-      border-radius:27px;
-
-      box-shadow:var(--shadow);
-
-      backdrop-filter:blur(20px);
-
+      background:var(--glass);
     }
 
-
-    .week-nav a{
-
-      padding:16px 14px;
-
-      border-radius:18px;
-
-      text-align:center;
-
-      background:
-        rgba(255,255,255,.045);
-
-      transition:.22s ease;
-
-    }
-
-
-    .week-nav a:hover{
-
-      background:
-        rgba(24,167,255,.10);
-
-      transform:
-        translateY(-2px);
-
-    }
-
-
-    .week-nav b{
-
-      display:block;
-
-      font-size:14px;
-
-      margin-bottom:4px;
-
-    }
-
-
-    .week-nav span{
-
-      display:block;
-
-      color:#94A3B8;
-
-      font-size:11px;
-
-    }
-
-
-    /* =========================================
-       INTRO AGENDA
-    ========================================= */
-
-
-    .agenda-intro{
-
-      background:
-        var(--navy);
-
-    }
-
-
-    /* =========================================
-       SEMANAS
-    ========================================= */
-
-
-    .week-section{
-
-      padding:
-        80px 0;
-
-      border-top:
-        1px solid rgba(255,255,255,.06);
-
-    }
-
-
-    .week-section:nth-child(odd){
-
-      background:
-        var(--deep);
-
-    }
-
-
-    .week-section:nth-child(even){
-
-      background:
-        var(--navy);
-
-    }
-
-
-    .week-header{
+    .why-icon{
+      width:45px;
+      height:45px;
 
       display:grid;
-
-      grid-template-columns:
-        auto 1fr;
-
-      gap:24px;
-
-      align-items:center;
-
-      margin-bottom:35px;
-
-    }
-
-
-    .week-number{
-
-      width:86px;
-      height:86px;
-
-      display:grid;
-
       place-items:center;
 
-      flex-shrink:0;
+      border-radius:15px;
 
-      border-radius:28px;
-
-      color:#06111F;
-
-      font-weight:950;
-
-      font-size:34px;
+      margin-bottom:15px;
 
       background:
         linear-gradient(
@@ -907,970 +765,513 @@
           #7DD3FC
         );
 
+      color:#06111F;
+
+      font-size:19px;
     }
 
-
-    .week-eyebrow{
-
-      color:#FDE68A;
-
-      font-size:11px;
-
-      font-weight:950;
-
-      letter-spacing:.14em;
-
-      text-transform:uppercase;
-
+    .why-card h3{
+      font-size:19px;
       margin-bottom:7px;
-
     }
 
-
-    .week-header h2{
-
-      font-size:
-        clamp(
-          31px,
-          4vw,
-          46px
-        );
-
+    .why-card p{
       margin:0;
-
-    }
-
-
-    .week-description{
 
       color:#94A3B8;
 
-      margin-top:10px;
-
-      font-size:14px;
-
-      line-height:1.55;
-
+      font-size:13px;
+      line-height:1.52;
     }
 
+    /* =========================================================
+       UPCOMING
+    ========================================================= */
 
-    /* =========================================
-       EVENT CARDS
-    ========================================= */
+    .upcoming{
+      background:var(--deep);
+    }
 
-
-    .events-grid{
-
+    .upcoming-grid{
       display:grid;
 
       grid-template-columns:
-        repeat(2,1fr);
-
-      gap:18px;
-
-    }
-
-
-    .event-card{
-
-      position:relative;
-
-      display:flex;
-
-      flex-direction:column;
-
-      min-height:380px;
-
-      padding:27px;
-
-      overflow:hidden;
-
-      border:
-        1px solid rgba(255,255,255,.13);
-
-      border-radius:30px;
-
-      background:
-
-        radial-gradient(
-          circle at 100% 0%,
-          rgba(24,167,255,.11),
-          transparent 36%
-        ),
-
-        rgba(255,255,255,.055);
-
-      box-shadow:
-        0 20px 60px rgba(0,0,0,.17);
-
-      transition:.25s ease;
-
-    }
-
-
-    .event-card:hover{
-
-      transform:
-        translateY(-5px);
-
-      border-color:
-        rgba(24,167,255,.32);
-
-      background:
-
-        radial-gradient(
-          circle at 100% 0%,
-          rgba(24,167,255,.15),
-          transparent 36%
-        ),
-
-        rgba(255,255,255,.075);
-
-    }
-
-
-    .event-card.mesa{
-
-      border-color:
-        rgba(244,197,66,.28);
-
-      background:
-
-        radial-gradient(
-          circle at 100% 0%,
-          rgba(244,197,66,.14),
-          transparent 38%
-        ),
-
-        rgba(255,255,255,.06);
-
-    }
-
-
-    .event-top{
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:space-between;
+        repeat(3,1fr);
 
       gap:14px;
 
-      margin-bottom:20px;
-
+      margin-top:36px;
     }
 
+    .upcoming-card{
+      min-height:218px;
 
-    .date-box{
-
-      width:75px;
-      height:75px;
+      padding:24px;
 
       display:flex;
-
       flex-direction:column;
-
-      justify-content:center;
-
-      align-items:center;
-
-      border-radius:21px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #FDE047,
-          #F4C542
-        );
-
-      color:#06111F;
-
-      flex-shrink:0;
-
-    }
-
-
-    .date-day{
-
-      font-size:29px;
-
-      line-height:1;
-
-      font-weight:950;
-
-    }
-
-
-    .date-month{
-
-      margin-top:4px;
-
-      font-size:10px;
-
-      letter-spacing:.12em;
-
-      text-transform:uppercase;
-
-      font-weight:950;
-
-    }
-
-
-    .type-badge{
-
-      display:inline-flex;
-
-      align-items:center;
-
-      border:
-        1px solid rgba(24,167,255,.26);
-
-      background:
-        rgba(24,167,255,.09);
-
-      color:#BAE6FD;
-
-      border-radius:999px;
-
-      padding:7px 11px;
-
-      font-size:10px;
-
-      font-weight:950;
-
-      letter-spacing:.10em;
-
-      text-transform:uppercase;
-
-    }
-
-
-    .event-card.mesa
-    .type-badge{
-
-      border-color:
-        rgba(244,197,66,.30);
-
-      background:
-        rgba(244,197,66,.09);
-
-      color:#FDE68A;
-
-    }
-
-
-    .event-card h3{
-
-      font-size:26px;
-
-      line-height:1.1;
-
-      letter-spacing:-.035em;
-
-      margin-bottom:13px;
-
-    }
-
-
-    .event-description{
-
-      color:#CBD5E1;
-
-      font-size:14px;
-
-      line-height:1.62;
-
-      margin:0;
-
-    }
-
-
-    .event-meta{
-
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:7px;
-
-      margin-top:18px;
-
-    }
-
-
-    .meta{
+      justify-content:flex-end;
 
       border:
         1px solid rgba(255,255,255,.10);
 
-      background:
-        rgba(255,255,255,.04);
+      border-radius:24px;
 
-      color:#94A3B8;
+      background:
+        radial-gradient(
+          circle at 100% 0,
+          rgba(24,167,255,.09),
+          transparent 37%
+        ),
+        rgba(255,255,255,.035);
+    }
+
+    .coming-label{
+      display:inline-flex;
+      align-self:flex-start;
+
+      margin-bottom:auto;
+
+      padding:6px 9px;
+
+      border:
+        1px solid rgba(244,197,66,.23);
 
       border-radius:999px;
 
-      padding:7px 10px;
-
-      font-size:11px;
-
-      font-weight:750;
-
-    }
-
-
-    .event-actions{
-
-      margin-top:auto;
-
-      padding-top:24px;
-
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:9px;
-
-    }
-
-
-    /* =========================================
-       SEPARADOR MESA
-    ========================================= */
-
-
-    .special-note{
-
-      margin-top:22px;
-
-      padding:18px 20px;
-
-      border:
-        1px solid rgba(244,197,66,.22);
-
       background:
-        rgba(244,197,66,.06);
+        rgba(244,197,66,.07);
 
-      border-radius:20px;
+      color:#FDE68A;
 
-      color:#CBD5E1;
+      font-size:9px;
+      font-weight:950;
 
-      font-size:13px;
-
-      line-height:1.6;
-
+      letter-spacing:.1em;
+      text-transform:uppercase;
     }
 
+    .upcoming-card h3{
+      margin-top:28px;
 
-    /* =========================================
-       WHATSAPP
-    ========================================= */
+      font-size:21px;
+      letter-spacing:-.025em;
+    }
 
+    .upcoming-card p{
+      margin:
+        8px 0 0;
 
-    .whatsapp-section{
+      color:#94A3B8;
 
+      font-size:12px;
+      line-height:1.48;
+    }
+
+    /* =========================================================
+       NOTIFICATIONS
+    ========================================================= */
+
+    .notifications{
       background:
-
         radial-gradient(
           circle at 15% 20%,
-          rgba(34,197,94,.13),
+          rgba(34,197,94,.10),
           transparent 32%
         ),
-
         radial-gradient(
           circle at 85% 30%,
           rgba(24,167,255,.10),
           transparent 32%
         ),
-
         var(--navy);
-
     }
 
-
-    .whatsapp-box{
-
+    .notify-box{
       display:grid;
 
       grid-template-columns:
-        1.15fr .85fr;
+        1.1fr .9fr;
 
       align-items:center;
 
       gap:34px;
 
-      padding:42px;
+      padding:40px;
 
       border:
-        1px solid rgba(34,197,94,.24);
+        1px solid rgba(24,167,255,.22);
+
+      border-radius:35px;
 
       background:
-        rgba(255,255,255,.05);
-
-      border-radius:38px;
+        rgba(255,255,255,.048);
 
       box-shadow:var(--shadow);
-
     }
 
-
-    .whatsapp-box h2{
-
-      margin-top:14px;
-
+    .notify-box h2{
+      margin-top:13px;
     }
 
-
-    .wa-points{
-
+    .notify-list{
       display:grid;
+      gap:9px;
 
-      gap:10px;
-
-      margin-top:22px;
-
+      margin-top:19px;
     }
 
-
-    .wa-point{
-
+    .notify-item{
       display:grid;
 
       grid-template-columns:
         auto 1fr;
 
-      gap:10px;
+      gap:9px;
 
       color:#CBD5E1;
 
-      font-size:14px;
-
-      line-height:1.5;
-
+      font-size:13px;
+      line-height:1.48;
     }
-
 
     .check{
-
       color:#86EFAC;
-
       font-weight:950;
-
     }
 
-
-    .wa-card{
-
-      padding:29px;
+    .notify-card{
+      padding:28px;
 
       border:
         1px solid rgba(255,255,255,.11);
 
+      border-radius:27px;
+
       background:
         rgba(255,255,255,.045);
 
-      border-radius:29px;
-
       text-align:center;
-
     }
 
-
-    .wa-icon{
-
-      width:70px;
-      height:70px;
+    .notify-icon{
+      width:64px;
+      height:64px;
 
       display:grid;
-
       place-items:center;
 
-      margin:0 auto 16px;
+      margin:
+        0 auto 15px;
 
-      border-radius:24px;
+      border-radius:22px;
 
       background:
-        rgba(34,197,94,.13);
+        rgba(24,167,255,.12);
 
-      font-size:34px;
-
+      font-size:30px;
     }
 
-
-    .wa-card b{
-
+    .notify-card b{
       display:block;
-
-      font-size:20px;
 
       margin-bottom:8px;
 
+      font-size:19px;
     }
 
-
-    .wa-card p{
+    .notify-card p{
+      margin:
+        0 0 18px;
 
       color:#94A3B8;
 
-      font-size:13px;
-
-      line-height:1.52;
-
-      margin:
-        0 0 20px;
-
+      font-size:12px;
+      line-height:1.48;
     }
 
+    /* =========================================================
+       ROUTING
+    ========================================================= */
 
-    /* =========================================
-       PREMIUM
-    ========================================= */
-
-
-    .premium{
-
-      background:
-        var(--deep);
-
+    .routing{
+      background:var(--deep);
     }
 
+    .routing-grid{
+      display:grid;
 
-    .premium-box{
+      grid-template-columns:
+        1fr 1fr;
 
-      padding:42px;
+      gap:17px;
 
-      text-align:center;
+      margin-top:36px;
+    }
+
+    .route-card{
+      padding:28px;
 
       border:
-        1px solid rgba(244,197,66,.24);
+        1px solid var(--line);
+
+      border-radius:27px;
+
+      background:var(--glass);
+    }
+
+    .route-card.impulso{
+      border-color:
+        rgba(244,197,66,.26);
 
       background:
-
         radial-gradient(
-          circle at 20% 10%,
-          rgba(244,197,66,.11),
-          transparent 36%
+          circle at 100% 0,
+          rgba(244,197,66,.09),
+          transparent 38%
         ),
-
-        radial-gradient(
-          circle at 80% 30%,
-          rgba(24,167,255,.09),
-          transparent 35%
-        ),
-
         rgba(255,255,255,.045);
-
-      border-radius:38px;
-
-      box-shadow:var(--shadow);
-
     }
 
+    .route-icon{
+      width:48px;
+      height:48px;
 
-    .premium-box h2{
+      display:grid;
+      place-items:center;
 
-      max-width:850px;
+      border-radius:16px;
 
-      margin:
-        15px auto 0;
+      margin-bottom:17px;
 
+      background:
+        linear-gradient(
+          135deg,
+          #FDE047,
+          #7DD3FC
+        );
+
+      color:#06111F;
+
+      font-size:20px;
     }
 
-
-    .premium-box p{
-
-      max-width:760px;
-
-      margin:
-        20px auto 0;
-
-      color:#CBD5E1;
-
-      font-size:16px;
-
-      line-height:1.68;
-
+    .route-card h3{
+      font-size:23px;
+      letter-spacing:-.03em;
     }
 
+    .route-card p{
+      color:#94A3B8;
 
-    .premium-actions{
-
-      margin-top:27px;
-
-      display:flex;
-
-      justify-content:center;
-
-      flex-wrap:wrap;
-
-      gap:11px;
-
+      font-size:13px;
+      line-height:1.55;
     }
 
+    .route-actions{
+      margin-top:19px;
+    }
 
-    /* =========================================
+    /* =========================================================
        FOOTER
-    ========================================= */
-
+    ========================================================= */
 
     footer{
-
-      padding:31px 0;
-
-      background:#01040d;
+      padding:30px 0;
 
       border-top:
         1px solid var(--line);
 
+      background:#01040d;
+
       color:#94A3B8;
 
-      font-size:13px;
-
+      font-size:12px;
     }
 
-
     .footer-inner{
-
       display:flex;
 
       justify-content:space-between;
-
       align-items:center;
 
       flex-wrap:wrap;
 
-      gap:18px;
-
+      gap:17px;
     }
-
 
     .footer-links{
-
       display:flex;
 
-      gap:16px;
+      gap:15px;
 
       flex-wrap:wrap;
-
     }
-
 
     .footer-links a:hover{
-      color:white;
+      color:#fff;
     }
 
-
-    /* =========================================
+    /* =========================================================
        RESPONSIVE
-    ========================================= */
-
+    ========================================================= */
 
     @media(max-width:1000px){
-
-
       .nav-links{
         display:none;
       }
 
-
-      .events-grid{
-
-        grid-template-columns:
-          1fr;
-
+      .active-grid{
+        grid-template-columns:1fr;
       }
 
-
-      .whatsapp-box{
-
-        grid-template-columns:
-          1fr;
-
+      .why-grid,
+      .upcoming-grid{
+        grid-template-columns:1fr;
       }
 
-
+      .notify-box{
+        grid-template-columns:1fr;
+      }
     }
 
-
     @media(max-width:760px){
-
-
       .wrap{
         padding:0 16px;
       }
 
-
       .section{
-        padding:68px 0;
+        padding:61px 0;
       }
-
 
       .nav{
         padding:10px 16px;
       }
 
-
       .brand-sub{
         display:none;
       }
 
-
       .nav .btn{
-
         padding:9px 11px;
-
-        font-size:11px;
-
+        font-size:10px;
       }
-
 
       .hero{
-
-        min-height:auto;
-
         padding:
-          108px 0 68px;
-
+          98px 0 31px;
       }
-
 
       h1{
-
         font-size:
-          clamp(
-            36px,
-            11vw,
-            50px
-          );
+          clamp(37px,11vw,50px);
 
-        line-height:1.03;
-
-        letter-spacing:-.045em;
-
+        line-height:1.02;
       }
-
 
       h2{
-
         font-size:
-          clamp(
-            30px,
-            9vw,
-            42px
-          );
-
+          clamp(29px,8.8vw,40px);
       }
-
 
       .hero p,
       .lead{
-
-        font-size:16px;
-
+        font-size:15px;
       }
-
 
       .hero-actions{
-
         display:grid;
-
-        grid-template-columns:
-          1fr;
-
+        grid-template-columns:1fr;
       }
-
 
       .hero-actions .btn{
         width:100%;
       }
 
-
-      .hero-stats{
-
-        grid-template-columns:
-          1fr;
-
+      .active-agenda{
+        padding:
+          24px 0 59px;
       }
 
-
-      .week-nav{
-
-        grid-template-columns:
-          repeat(2,1fr);
-
+      .active-head{
+        align-items:flex-start;
+        flex-direction:column;
       }
-
-
-      .week-header{
-
-        grid-template-columns:
-          1fr;
-
-        gap:16px;
-
-      }
-
-
-      .week-number{
-
-        width:70px;
-        height:70px;
-
-        border-radius:22px;
-
-        font-size:28px;
-
-      }
-
 
       .event-card{
-
-        min-height:auto;
-
-        padding:22px;
-
+        min-height:390px;
       }
 
-
-      .event-card h3{
-
-        font-size:23px;
-
+      .event-content{
+        padding:21px;
       }
-
 
       .event-actions{
-
         display:grid;
-
-        grid-template-columns:
-          1fr;
-
+        grid-template-columns:1fr;
       }
-
 
       .event-actions .btn{
         width:100%;
       }
 
-
-      .whatsapp-box,
-      .premium-box{
-
-        padding:25px;
-
-        border-radius:30px;
-
+      .notify-box{
+        padding:24px;
+        border-radius:28px;
       }
 
-
-      .premium-actions{
-
-        display:grid;
-
-        grid-template-columns:
-          1fr;
-
+      .routing-grid{
+        grid-template-columns:1fr;
       }
-
-
-      .premium-actions .btn{
-        width:100%;
-      }
-
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================================
+<!-- =========================================================
      HEADER
-========================================= -->
+========================================================= -->
 
 <header>
-
   <div class="nav">
 
-    <a
-      href="#top"
-      class="brand"
-    >
-
-      <div class="brand-mark">
-        E
-      </div>
+    <a href="#top" class="brand">
+      <div class="brand-mark">E</div>
 
       <div>
-
-        <div class="brand-title">
-          Emprende360
-        </div>
-
-        <div class="brand-sub">
-          Agenda B2B
-        </div>
-
+        <div class="brand-title">Emprende360</div>
+        <div class="brand-sub">Agenda B2B · Septiembre</div>
       </div>
-
     </a>
 
-
     <nav class="nav-links">
-
-      <a href="#semana1">
-        Semana 1
-      </a>
-
-      <a href="#semana2">
-        Semana 2
-      </a>
-
-      <a href="#semana3">
-        Semana 3
-      </a>
-
-      <a href="#semana4">
-        Semana 4
-      </a>
-
-      <a href="#whatsapp">
-        WhatsApp
-      </a>
-
+      <a href="#eventos">Eventos activos</a>
+      <a href="#proximamente">Próximamente</a>
+      <a href="#notificaciones">Recibir avisos</a>
+      <a href="#participar">Participar</a>
     </nav>
 
-
     <a
-      class="btn btn-primary"
-      href="#agenda"
+      class="btn btn-primary notify-link"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
     >
-      Ver agenda
+      Recibir próximos eventos
     </a>
 
   </div>
-
 </header>
-
 
 
 <main>
 
-
-<!-- =========================================
+<!-- =========================================================
      HERO
-========================================= -->
+========================================================= -->
 
-<section
-  id="top"
-  class="hero"
->
+<section id="top" class="hero">
 
   <div class="grid-bg"></div>
 
@@ -1882,95 +1283,44 @@
         Septiembre 2026 · Agenda abierta
       </span>
 
-
       <h1>
-
         <span class="grad-text">
-          Conversaciones B2B que merece la pena tener.
+          Elige una conversación. Entra. Participa.
         </span>
-
       </h1>
 
+      <p>
+        Foros Ejecutivos y Rondas B2B con especialistas, founders y directivos alrededor de problemas empresariales concretos.
+      </p>
 
       <p>
-
-        Durante septiembre iremos organizando
-        mesas, entrevistas, debates y conversaciones
-        con profesionales B2B de diferentes especialidades.
-
+        <strong>Acceso gratuito.</strong>
+        Elige el evento que te interese y marca tu asistencia directamente en LinkedIn.
       </p>
-
-
-      <p class="muted">
-
-        Elige los temas que te interesen,
-        accede directamente al evento en LinkedIn
-        y marca tu asistencia.
-
-      </p>
-
 
       <div class="hero-actions">
 
         <a
           class="btn btn-primary"
-          href="#agenda"
+          href="#eventos"
         >
-          Ver agenda de septiembre
+          Ver los 4 eventos activos
         </a>
-
 
         <a
-          class="btn btn-whatsapp"
-          href="#whatsapp"
+          class="btn btn-secondary notify-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Recibir próximos eventos
+          Avisarme de los próximos
         </a>
 
       </div>
 
-
-      <div class="hero-stats">
-
-        <div class="hero-stat">
-
-          <b>
-            ≈ 2 por semana
-          </b>
-
-          <span>
-            Eventos y conversaciones B2B.
-          </span>
-
-        </div>
-
-
-        <div class="hero-stat">
-
-          <b>
-            Gratuitos
-          </b>
-
-          <span>
-            Participa en los que realmente te interesen.
-          </span>
-
-        </div>
-
-
-        <div class="hero-stat">
-
-          <b>
-            Directo a LinkedIn
-          </b>
-
-          <span>
-            Un clic y puedes marcar tu asistencia.
-          </span>
-
-        </div>
-
-      </div>
+      <p class="hero-note">
+        No necesitas apuntarte a todo. Participa únicamente en las conversaciones que realmente te aporten.
+      </p>
 
     </div>
 
@@ -1979,67 +1329,250 @@
 </section>
 
 
+<!-- =========================================================
+     ACTIVE EVENTS
+========================================================= -->
 
-<!-- =========================================
-     NAV SEMANAS
-========================================= -->
-
-<section class="week-nav-section">
+<section id="eventos" class="active-agenda">
 
   <div class="wrap">
 
-    <div class="week-nav">
+    <div class="active-head">
 
-      <a href="#semana1">
+      <div>
+        <span class="kicker">Ya puedes apuntarte</span>
+        <h2>4 eventos activos</h2>
+      </div>
 
-        <b>
-          Semana 1
-        </b>
+      <p>
+        Haz clic en cualquiera de ellos para abrir el evento oficial en LinkedIn, consultar fecha y hora y marcar tu asistencia.
+      </p>
 
-        <span>
-          1–6 septiembre
-        </span>
-
-      </a>
-
-
-      <a href="#semana2">
-
-        <b>
-          Semana 2
-        </b>
-
-        <span>
-          7–13 septiembre
-        </span>
-
-      </a>
+    </div>
 
 
-      <a href="#semana3">
-
-        <b>
-          Semana 3
-        </b>
-
-        <span>
-          14–20 septiembre
-        </span>
-
-      </a>
+    <div class="active-grid">
 
 
-      <a href="#semana4">
+      <!-- =====================================================
+           EVENTO 1 · IA
+           Para utilizar la cabecera real, sube la imagen como:
+           /img/evento-ia.jpg
+      ====================================================== -->
 
-        <b>
-          Semana 4
-        </b>
+      <article
+        class="event-card"
+        style="--event-image:url('/img/evento-ia.jpg');"
+      >
 
-        <span>
-          21–30 septiembre
-        </span>
+        <div class="event-media"></div>
 
-      </a>
+        <div class="event-placeholder">
+          FORO<br>EJECUTIVO<br>IA
+        </div>
+
+        <div class="event-content">
+
+          <div class="event-badges">
+            <span class="badge-live">Inscripción abierta</span>
+            <span class="badge-type">Foro Ejecutivo</span>
+          </div>
+
+          <h3>
+            Foro Ejecutivo de IA
+          </h3>
+
+          <p class="event-description">
+            Una conversación ejecutiva sobre inteligencia artificial aplicada a empresa, decisiones, adopción y valor real para negocio.
+          </p>
+
+          <div class="event-meta">
+            <span class="meta">🔵 LinkedIn Event</span>
+            <span class="meta">Acceso gratuito</span>
+          </div>
+
+          <div class="event-actions">
+
+            <a
+              class="btn btn-linkedin"
+              href="https://www.linkedin.com/events/7491782425069621248/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver evento y asistir →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           EVENTO 2 · RONDA DE ALIANZAS
+           Imagen sugerida:
+           /img/ronda-alianzas.jpg
+      ====================================================== -->
+
+      <article
+        class="event-card"
+        style="--event-image:url('/img/ronda-alianzas.jpg');"
+      >
+
+        <div class="event-media"></div>
+
+        <div class="event-placeholder">
+          RONDA<br>DE ALIANZAS<br>B2B
+        </div>
+
+        <div class="event-content">
+
+          <div class="event-badges">
+            <span class="badge-live">Inscripción abierta</span>
+            <span class="badge-type">Ronda B2B</span>
+          </div>
+
+          <h3>
+            Ronda de Alianzas B2B
+          </h3>
+
+          <p class="event-description">
+            Una sesión orientada a detectar complementariedad, buyers compartidos y posibles colaboraciones entre profesionales B2B.
+          </p>
+
+          <div class="event-meta">
+            <span class="meta">🔵 LinkedIn Event</span>
+            <span class="meta">Acceso gratuito</span>
+          </div>
+
+          <div class="event-actions">
+
+            <a
+              class="btn btn-linkedin"
+              href="https://www.linkedin.com/events/7496395870095998976/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver evento y asistir →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           EVENTO 3 · CORPORATE FINANCE
+           Imagen sugerida:
+           /img/corporate-finance.jpg
+      ====================================================== -->
+
+      <article
+        class="event-card"
+        style="--event-image:url('/img/corporate-finance.jpg');"
+      >
+
+        <div class="event-media"></div>
+
+        <div class="event-placeholder">
+          CORPORATE<br>FINANCE
+        </div>
+
+        <div class="event-content">
+
+          <div class="event-badges">
+            <span class="badge-live">Inscripción abierta</span>
+            <span class="badge-type">Foro Ejecutivo</span>
+          </div>
+
+          <h3>
+            Foro Ejecutivo de Corporate Finance
+          </h3>
+
+          <p class="event-description">
+            Finanzas, crecimiento, financiación, M&A y decisiones que afectan al valor y al futuro de una empresa.
+          </p>
+
+          <div class="event-meta">
+            <span class="meta">🔵 LinkedIn Event</span>
+            <span class="meta">Acceso gratuito</span>
+          </div>
+
+          <div class="event-actions">
+
+            <a
+              class="btn btn-linkedin"
+              href="https://www.linkedin.com/events/7496399111244529665/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver evento y asistir →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           EVENTO 4 · VENTAS
+           Imagen sugerida:
+           /img/ventas-b2b.jpg
+      ====================================================== -->
+
+      <article
+        class="event-card"
+        style="--event-image:url('/img/ventas-b2b.jpg');"
+      >
+
+        <div class="event-media"></div>
+
+        <div class="event-placeholder">
+          VENTAS<br>B2B
+        </div>
+
+        <div class="event-content">
+
+          <div class="event-badges">
+            <span class="badge-live">Inscripción abierta</span>
+            <span class="badge-type">Foro Ejecutivo</span>
+          </div>
+
+          <h3>
+            Foro Ejecutivo de Ventas B2B
+          </h3>
+
+          <p class="event-description">
+            Diferentes perspectivas sobre prospección, generación de conversaciones, procesos comerciales y cómo vender mejor en B2B.
+          </p>
+
+          <div class="event-meta">
+            <span class="meta">🔵 LinkedIn Event</span>
+            <span class="meta">Acceso gratuito</span>
+          </div>
+
+          <div class="event-actions">
+
+            <a
+              class="btn btn-linkedin"
+              href="https://www.linkedin.com/events/7496401159276941314/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver evento y asistir →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
 
     </div>
 
@@ -2048,300 +1581,342 @@
 </section>
 
 
+<!-- =========================================================
+     WHY
+========================================================= -->
 
-<!-- =========================================
-     INTRO
-========================================= -->
+<section class="section why">
 
-<section
-  id="agenda"
-  class="section agenda-intro"
->
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Cómo planteamos la agenda</span>
+
+      <h2>
+        Menos webinar. Más conversación.
+      </h2>
+
+      <p class="lead">
+        Cada sesión parte de un tema empresarial concreto y busca reunir perspectivas que merezca la pena contrastar.
+      </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+
+        <h3>Temas concretos</h3>
+
+        <p>
+          IA, Corporate Finance, Ventas, alianzas y otras áreas que afectan directamente a empresas y profesionales B2B.
+        </p>
+      </div>
+
+
+      <div class="why-card">
+        <div class="why-icon">🧠</div>
+
+        <h3>Perspectivas complementarias</h3>
+
+        <p>
+          Seleccionamos especialistas con enfoques diferentes para evitar conversaciones repetitivas o puramente promocionales.
+        </p>
+      </div>
+
+
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+
+        <h3>Nuevas relaciones</h3>
+
+        <p>
+          Además del contenido, los eventos sirven para descubrir profesionales, partners y conversaciones que merece la pena continuar.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     UPCOMING
+========================================================= -->
+
+<section id="proximamente" class="section upcoming">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Próximamente</span>
+
+      <h2>
+        Septiembre seguirá creciendo.
+      </h2>
+
+      <p class="lead">
+        Publicaremos nuevas sesiones a medida que cerremos temática, especialistas y fecha definitiva.
+      </p>
+
+    </div>
+
+
+    <div class="upcoming-grid">
+
+      <article class="upcoming-card">
+        <span class="coming-label">Próximamente</span>
+
+        <h3>
+          Liderazgo y dirección
+        </h3>
+
+        <p>
+          Una conversación sobre liderazgo, personas, transformación y toma de decisiones.
+        </p>
+      </article>
+
+
+      <article class="upcoming-card">
+        <span class="coming-label">Próximamente</span>
+
+        <h3>
+          Founders & Capital
+        </h3>
+
+        <p>
+          Fundadores, crecimiento, capital y decisiones alrededor de la evolución de una compañía.
+        </p>
+      </article>
+
+
+      <article class="upcoming-card">
+        <span class="coming-label">Próximamente</span>
+
+        <h3>
+          Nuevas Rondas B2B
+        </h3>
+
+        <p>
+          Sesiones reducidas orientadas a detectar partners, complementariedad y siguientes conversaciones.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     NOTIFICATIONS
+========================================================= -->
+
+<section id="notificaciones" class="section notifications">
+
+  <div class="wrap">
+
+    <div class="notify-box">
+
+      <div>
+
+        <span class="kicker">
+          Recibir próximos eventos
+        </span>
+
+        <h2>
+          Te avisamos cuando publiquemos nuevas sesiones.
+        </h2>
+
+        <p class="lead">
+          Si no quieres depender de ver cada publicación en LinkedIn, puedes registrarte una vez y recibir las próximas convocatorias.
+        </p>
+
+        <div class="notify-list">
+
+          <div class="notify-item">
+            <span class="check">✓</span>
+            <span>Nuevos Foros Ejecutivos.</span>
+          </div>
+
+          <div class="notify-item">
+            <span class="check">✓</span>
+            <span>Rondas y mesas B2B.</span>
+          </div>
+
+          <div class="notify-item">
+            <span class="check">✓</span>
+            <span>Convocatorias cuando busquemos especialistas.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="notify-card">
+
+        <div class="notify-icon">
+          🔔
+        </div>
+
+        <b>
+          Agenda Emprende360
+        </b>
+
+        <p>
+          Regístrate para recibir nuevas fechas y enlaces directos cuando estén disponibles.
+        </p>
+
+        <a
+          class="btn btn-primary notify-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Quiero recibir próximos eventos
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ROUTING
+========================================================= -->
+
+<section id="participar" class="section routing">
 
   <div class="wrap">
 
     <div class="center">
 
       <span class="kicker">
-        Agenda septiembre
-      </span>
-
-
-      <h2>
-        Elige las conversaciones que tengan sentido para ti.
-      </h2>
-
-
-      <p class="lead">
-
-        No necesitas apuntarte a todo.
-
-        Cada semana iremos incorporando
-        nuevas conversaciones con especialistas,
-        directivos, consultores, founders
-        y otros profesionales B2B.
-
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================
-     LAS SEMANAS SE GENERAN AQUÍ
-========================================= -->
-
-<div id="weeksContainer"></div>
-
-
-
-<!-- =========================================
-     WHATSAPP
-========================================= -->
-
-<section
-  id="whatsapp"
-  class="section whatsapp-section"
->
-
-  <div class="wrap">
-
-    <div class="whatsapp-box">
-
-
-      <div>
-
-        <span class="kicker">
-          Agenda en tu WhatsApp
-        </span>
-
-
-        <h2>
-          No dependas del algoritmo de LinkedIn.
-        </h2>
-
-
-        <p class="lead">
-
-          Si quieres ir recibiendo los próximos
-          eventos, mesas y convocatorias,
-          puedes entrar en nuestro espacio privado de WhatsApp.
-
-        </p>
-
-
-        <div class="wa-points">
-
-          <div class="wa-point">
-
-            <span class="check">
-              ✓
-            </span>
-
-            <span>
-              Nuevos eventos y links directos.
-            </span>
-
-          </div>
-
-
-          <div class="wa-point">
-
-            <span class="check">
-              ✓
-            </span>
-
-            <span>
-              Mesas y conversaciones B2B.
-            </span>
-
-          </div>
-
-
-          <div class="wa-point">
-
-            <span class="check">
-              ✓
-            </span>
-
-            <span>
-              Convocatorias cuando busquemos expertos.
-            </span>
-
-          </div>
-
-
-          <div class="wa-point">
-
-            <span class="check">
-              ✓
-            </span>
-
-            <span>
-              Nuevas iniciativas y posibles colaboraciones.
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="wa-card">
-
-        <div class="wa-icon">
-          💬
-        </div>
-
-
-        <b>
-          Emprende360 | Activación B2B
-        </b>
-
-
-        <p>
-
-          Eventos, mesas, expertos,
-          conversaciones y nuevas iniciativas.
-
-        </p>
-
-
-        <!--
-        =========================================
-        CAMBIAR AQUÍ EL ENLACE DE WHATSAPP
-        =========================================
-        -->
-
-        <a
-          class="btn btn-whatsapp"
-          href="URL_WHATSAPP_AQUI"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Entrar al WhatsApp
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================
-     PREMIUM DISCRETO
-========================================= -->
-
-<section class="section premium">
-
-  <div class="wrap">
-
-    <div class="premium-box">
-
-
-      <span class="kicker">
         ¿Quieres participar de otra manera?
       </span>
 
-
       <h2>
-        También puedes ser uno de los profesionales alrededor de los que construimos una activación.
+        Dos puertas más.
       </h2>
 
-
-      <p>
-
-        La agenda y los eventos son gratuitos.
-
-        Si eres un profesional B2B
-        y quieres que trabajemos una conversación propia
-        alrededor de tu especialidad,
-        puedes conocer Impulso B2B.
-
+      <p class="lead">
+        La agenda es gratuita. Si además quieres aportar como especialista o activar tu propio mercado, estas son las vías adecuadas.
       </p>
 
-
-      <div class="premium-actions">
-
-        <a
-          class="btn btn-primary"
-          href="https://emprende360.club/impulsob2b"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Conocer Impulso B2B
-        </a>
-
-      </div>
+    </div>
 
 
-      <p
-        class="muted"
-        style="
-          margin-top:17px;
-          font-size:12px;
-        "
-      >
+    <div class="routing-grid">
 
-        No necesitas participar en Impulso B2B
-        para asistir a los eventos de esta página.
+      <article class="route-card">
 
-      </p>
+        <div class="route-icon">
+          🎙️
+        </div>
+
+        <h3>
+          ¿Quieres participar como experto?
+        </h3>
+
+        <p>
+          Si tienes experiencia relevante en alguna de las temáticas, puedes dejarnos tu perfil para futuras sesiones. La selección depende siempre de expertise, encaje y complementariedad.
+        </p>
+
+        <div class="route-actions">
+
+          <a
+            class="btn btn-secondary speaker-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Proponer mi perfil →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="route-card impulso">
+
+        <div class="route-icon">
+          ↗
+        </div>
+
+        <h3>
+          ¿Quieres activar tu propio mercado B2B?
+        </h3>
+
+        <p>
+          Impulso B2B trabaja durante Q4 una línea concreta de negocio: buyer, selección, activación, relaciones complementarias y seguimiento.
+        </p>
+
+        <div class="route-actions">
+
+          <a
+            class="btn btn-primary"
+            href="https://emprende360.club/impulsob2b"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conocer Impulso B2B →
+          </a>
+
+        </div>
+
+      </article>
 
     </div>
 
   </div>
 
 </section>
-
 
 </main>
 
 
-
-<!-- =========================================
+<!-- =========================================================
      FOOTER
-========================================= -->
+========================================================= -->
 
 <footer>
 
   <div class="wrap footer-inner">
 
     <div>
-
-      <strong>
-        Emprende360
-      </strong>
-
+      <strong>Emprende360</strong>
       <br>
-
-      Agenda · Eventos · Conversaciones B2B
-
+      Foros · Rondas · Conversaciones B2B
     </div>
 
 
     <div class="footer-links">
 
-      <a href="#agenda">
-        Agenda
+      <a href="#eventos">
+        Eventos
       </a>
 
-      <a href="#whatsapp">
-        WhatsApp
+      <a href="#notificaciones">
+        Recibir avisos
       </a>
 
       <a
         href="https://emprende360.club/impulsob2b"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Impulso B2B
       </a>
@@ -2349,6 +1924,7 @@
       <a
         href="https://emprende360.club/privacidad"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Privacidad
       </a>
@@ -2356,6 +1932,7 @@
       <a
         href="https://emprende360.club/aviso-legal"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Aviso legal
       </a>
@@ -2367,657 +1944,54 @@
 </footer>
 
 
+<!-- =========================================================
+     CONFIG
+========================================================= -->
 
 <script>
 
+  /*
+  =============================================================
+  SOLO TIENES QUE CAMBIAR ESTAS DOS URLS
+  =============================================================
 
-/*
-===============================================================
-===============================================================
+  NOTIFY_URL:
+  Google Form, WhatsApp o landing donde la gente se registra
+  para recibir próximas convocatorias.
 
-               AGENDA DE SEPTIEMBRE
+  SPEAKER_FORM_URL:
+  Google Form para potenciales ponentes / expertos.
+  */
 
-ESTE ES EL ÚNICO BLOQUE QUE TIENES QUE EDITAR
-PARA CAMBIAR LOS EVENTOS.
 
-Los eventos siguientes SON EJEMPLOS / MUESTRA.
+  const NOTIFY_URL =
+    "https://forms.gle/REEMPLAZAR_POR_FORMULARIO_NOTIFICACIONES";
 
-Cuando tengas los reales cambia:
 
-title
-day
-time
-type
-description
-linkedinUrl
+  const SPEAKER_FORM_URL =
+    "https://forms.gle/REEMPLAZAR_POR_FORMULARIO_PONENTES";
 
-Si todavía no tienes el enlace LinkedIn:
 
-linkedinUrl: ""
+  document
+    .querySelectorAll(".notify-link")
+    .forEach(link => {
 
-y automáticamente aparecerá:
+      link.href =
+        NOTIFY_URL;
 
-"Link próximamente"
+    });
 
-===============================================================
-===============================================================
-*/
 
+  document
+    .querySelectorAll(".speaker-link")
+    .forEach(link => {
 
-const agenda = [
+      link.href =
+        SPEAKER_FORM_URL;
 
-
-  /* =========================================================
-     SEMANA 1
-     1–6 SEPTIEMBRE
-  ========================================================= */
-
-
-  {
-
-    id:"semana1",
-
-    number:"01",
-
-    range:"1–6 septiembre",
-
-    title:"Abrimos septiembre",
-
-    description:
-      "Primeras conversaciones del mes: red, posicionamiento y nuevas formas de generar contexto B2B.",
-
-
-    events:[
-
-
-      {
-
-        day:"02",
-
-        month:"SEP",
-
-        dateText:"Miércoles 2 de septiembre",
-
-        time:"18:00 CET",
-
-        type:"Conversación B2B",
-
-        title:
-          "Tu red está dormida: cómo volver a activar conversaciones B2B sin hacer spam",
-
-        description:
-          "Una conversación práctica sobre cómo utilizar mejor una red profesional existente, recuperar relaciones y crear razones naturales para volver a hablar con contactos, partners y decisores.",
-
-        linkedinUrl:""
-
-      },
-
-
-      {
-
-        day:"04",
-
-        month:"SEP",
-
-        dateText:"Viernes 4 de septiembre",
-
-        time:"12:00 CET",
-
-        type:"Debate",
-
-        title:
-          "No necesitas 1.000 leads: necesitas mejores conversaciones",
-
-        description:
-          "Debatiremos qué está cambiando en captación B2B, por qué el volumen no siempre resuelve el problema comercial y dónde entran el contexto, la autoridad y las relaciones.",
-
-        linkedinUrl:""
-
-      }
-
-
-    ]
-
-  },
-
-
-
-  /* =========================================================
-     SEMANA 2
-     7–13 SEPTIEMBRE
-  ========================================================= */
-
-
-  {
-
-    id:"semana2",
-
-    number:"02",
-
-    range:"7–13 septiembre",
-
-    title:"Expertise aplicado a problemas reales",
-
-    description:
-      "Conversaciones con especialistas alrededor de decisiones que afectan directamente a empresas y equipos B2B.",
-
-
-    events:[
-
-
-      {
-
-        day:"08",
-
-        month:"SEP",
-
-        dateText:"Martes 8 de septiembre",
-
-        time:"18:00 CET",
-
-        type:"Mesa de expertos",
-
-        title:
-          "IA en empresa: dónde aporta valor de verdad y dónde estamos automatizando demasiado pronto",
-
-        description:
-          "Una mesa sobre IA aplicada al negocio, automatización, eficiencia y los errores que aparecen cuando una empresa empieza por la herramienta antes que por el problema.",
-
-        linkedinUrl:""
-
-      },
-
-
-      {
-
-        day:"10",
-
-        month:"SEP",
-
-        dateText:"Jueves 10 de septiembre",
-
-        time:"18:00 CET",
-
-        type:"Conversación B2B",
-
-        title:
-          "Crecer y no entender tu caja: el riesgo financiero detrás de muchas empresas en expansión",
-
-        description:
-          "Una conversación sobre crecimiento, caja, margen, control financiero y las decisiones que empiezan a ser críticas cuando una empresa deja de ser pequeña.",
-
-        linkedinUrl:""
-
-      }
-
-
-    ]
-
-  },
-
-
-
-  /* =========================================================
-     SEMANA 3
-     14–20 SEPTIEMBRE
-  ========================================================= */
-
-
-  {
-
-    id:"semana3",
-
-    number:"03",
-
-    range:"14–20 septiembre",
-
-    title:"Ventas, talento y primeras conexiones",
-
-    description:
-      "Además de las conversaciones temáticas, incorporamos una primera mesa grupal orientada a conectar necesidades y capacidades.",
-
-
-    events:[
-
-
-      {
-
-        day:"15",
-
-        month:"SEP",
-
-        dateText:"Martes 15 de septiembre",
-
-        time:"18:00 CET",
-
-        type:"Mesa de expertos",
-
-        title:
-          "Por qué muchos equipos comerciales tienen más herramientas que conversaciones útiles",
-
-        description:
-          "CRM, automatización, LinkedIn, IA y metodologías comerciales han multiplicado las herramientas. La pregunta es si también están multiplicando las conversaciones que realmente importan.",
-
-        linkedinUrl:""
-
-      },
-
-
-      {
-
-        day:"17",
-
-        month:"SEP",
-
-        dateText:"Jueves 17 de septiembre",
-
-        time:"18:00 CET",
-
-        type:"Debate",
-
-        title:
-          "Talento senior en la era de la IA: qué experiencia sigue teniendo valor diferencial",
-
-        description:
-          "Directivos, especialistas y consultores debatirán qué habilidades están perdiendo valor, cuáles ganan importancia y cómo combinar experiencia humana con nuevas herramientas de IA.",
-
-        linkedinUrl:""
-
-      },
-
-
-      {
-
-        day:"18",
-
-        month:"SEP",
-
-        dateText:"Viernes 18 de septiembre",
-
-        time:"12:00 CET",
-
-        type:"Mesa B2B",
-
-        isMesa:true,
-
-        title:
-          "Mesa B2B · Partners, necesidades y oportunidades de colaboración",
-
-        description:
-          "Una sesión reducida para poner encima de la mesa qué está buscando cada perfil, qué puede aportar y qué conexiones o colaboraciones pueden tener sentido.",
-
-        linkedinUrl:""
-
-      }
-
-
-    ]
-
-  },
-
-
-
-  /* =========================================================
-     SEMANA 4
-     21–30 SEPTIEMBRE
-  ========================================================= */
-
-
-  {
-
-    id:"semana4",
-
-    number:"04",
-
-    range:"21–30 septiembre",
-
-    title:"Estrategia, posicionamiento y nuevas relaciones",
-
-    description:
-      "Cerramos el mes con nuevas conversaciones y una segunda mesa para detectar conexiones que merezca la pena continuar.",
-
-
-    events:[
-
-
-      {
-
-        day:"22",
-
-        month:"SEP",
-
-        dateText:"Martes 22 de septiembre",
-
-        time:"18:00 CET",
-
-        type:"Conversación B2B",
-
-        title:
-          "Posicionamiento B2B: ser bueno ya no basta si nadie entiende por qué debería hablar contigo",
-
-        description:
-          "Cómo transformar experiencia y conocimiento en un posicionamiento más claro, relevante y fácil de recordar para clientes, partners y decisores.",
-
-        linkedinUrl:""
-
-      },
-
-
-      {
-
-        day:"24",
-
-        month:"SEP",
-
-        dateText:"Jueves 24 de septiembre",
-
-        time:"18:00 CET",
-
-        type:"Mesa de expertos",
-
-        title:
-          "Partners antes que leads: cómo construir relaciones que abran más de una puerta",
-
-        description:
-          "Una conversación sobre alianzas, complementariedad y por qué algunas relaciones B2B pueden generar mucho más recorrido que una única oportunidad comercial.",
-
-        linkedinUrl:""
-
-      },
-
-
-      {
-
-        day:"25",
-
-        month:"SEP",
-
-        dateText:"Viernes 25 de septiembre",
-
-        time:"12:00 CET",
-
-        type:"Mesa B2B",
-
-        isMesa:true,
-
-        title:
-          "Mesa B2B · Qué se ha movido y qué merece una segunda conversación",
-
-        description:
-          "Segunda mesa de septiembre para revisar relaciones, colaboraciones, necesidades y posibles cruces surgidos durante el mes, y decidir qué merece continuidad.",
-
-        linkedinUrl:""
-
-      }
-
-
-    ]
-
-  }
-
-
-];
-
-
-
-/*
-===============================================================
-NO NECESITAS EDITAR NADA DEBAJO DE ESTA LÍNEA
-===============================================================
-*/
-
-
-function createEventCard(event){
-
-
-  const button = event.linkedinUrl
-
-    ?
-
-    `
-      <a
-        class="btn btn-linkedin"
-        href="${event.linkedinUrl}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Ver evento en LinkedIn →
-      </a>
-    `
-
-    :
-
-    `
-      <span class="btn btn-disabled">
-        Link próximamente
-      </span>
-    `;
-
-
-  return `
-
-
-    <article
-      class="
-        event-card
-        ${event.isMesa ? "mesa" : ""}
-      "
-    >
-
-
-      <div class="event-top">
-
-
-        <div class="date-box">
-
-          <div class="date-day">
-            ${event.day}
-          </div>
-
-          <div class="date-month">
-            ${event.month}
-          </div>
-
-        </div>
-
-
-        <span class="type-badge">
-          ${event.type}
-        </span>
-
-
-      </div>
-
-
-      <h3>
-        ${event.title}
-      </h3>
-
-
-      <p class="event-description">
-
-        ${event.description}
-
-      </p>
-
-
-      <div class="event-meta">
-
-
-        <span class="meta">
-          📅 ${event.dateText}
-        </span>
-
-
-        <span class="meta">
-          🕒 ${event.time}
-        </span>
-
-
-        <span class="meta">
-          🔵 LinkedIn
-        </span>
-
-
-        <span class="meta">
-          Acceso gratuito
-        </span>
-
-
-      </div>
-
-
-      <div class="event-actions">
-
-        ${button}
-
-      </div>
-
-
-    </article>
-
-
-  `;
-
-}
-
-
-
-function renderAgenda(){
-
-
-  const container =
-    document.getElementById(
-      "weeksContainer"
-    );
-
-
-  container.innerHTML =
-    agenda.map(week => {
-
-
-      const cards =
-        week.events
-          .map(createEventCard)
-          .join("");
-
-
-      const mesas =
-        week.events
-          .some(event => event.isMesa);
-
-
-      return `
-
-
-        <section
-          id="${week.id}"
-          class="week-section"
-        >
-
-
-          <div class="wrap">
-
-
-            <div class="week-header">
-
-
-              <div class="week-number">
-                ${week.number}
-              </div>
-
-
-              <div>
-
-
-                <div class="week-eyebrow">
-
-                  Semana ${week.number}
-                  ·
-                  ${week.range}
-
-                </div>
-
-
-                <h2>
-                  ${week.title}
-                </h2>
-
-
-                <div class="week-description">
-
-                  ${week.description}
-
-                </div>
-
-
-              </div>
-
-
-            </div>
-
-
-            <div class="events-grid">
-
-              ${cards}
-
-            </div>
-
-
-            ${
-              mesas
-
-                ?
-
-                `
-
-                <div class="special-note">
-
-                  <strong>
-                    🤝 Esta semana también hay Mesa B2B.
-                  </strong>
-
-                  Las mesas tienen un formato más relacional:
-                  problemas concretos, contexto,
-                  aportaciones y posibles conexiones.
-
-                  No están planteadas como una ronda
-                  de presentaciones comerciales.
-
-                </div>
-
-                `
-
-                :
-
-                ""
-
-            }
-
-
-          </div>
-
-
-        </section>
-
-
-      `;
-
-
-    })
-    .join("");
-
-
-}
-
-
-
-renderAgenda();
-
+    });
 
 </script>
 
-
 </body>
-
 </html>
