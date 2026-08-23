@@ -684,12 +684,72 @@
       line-height:1.55;
     }
 
+    .event-date{
+      display:flex;
+      align-items:center;
+      gap:12px;
+
+      width:max-content;
+      max-width:100%;
+
+      margin-top:17px;
+      padding:11px 15px;
+
+      border:
+        1px solid rgba(244,197,66,.34);
+
+      border-radius:17px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(244,197,66,.14),
+          rgba(244,197,66,.055)
+        );
+
+      box-shadow:
+        0 12px 34px rgba(0,0,0,.16);
+    }
+
+    .event-date-day{
+      color:#FDE68A;
+
+      font-size:
+        clamp(18px,2vw,23px);
+
+      line-height:1;
+      font-weight:950;
+
+      letter-spacing:-.02em;
+      text-transform:uppercase;
+    }
+
+    .event-date-separator{
+      width:1px;
+      height:28px;
+
+      background:
+        rgba(244,197,66,.30);
+    }
+
+    .event-date-time{
+      color:#fff;
+
+      font-size:
+        clamp(18px,2vw,23px);
+
+      line-height:1;
+      font-weight:950;
+
+      letter-spacing:-.02em;
+    }
+
     .event-meta{
       display:flex;
       flex-wrap:wrap;
       gap:7px;
 
-      margin-top:15px;
+      margin-top:11px;
     }
 
     .meta{
@@ -707,13 +767,6 @@
 
       font-size:10px;
       font-weight:750;
-    }
-
-    .meta-date{
-      border-color:rgba(244,197,66,.28);
-      background:rgba(244,197,66,.09);
-      color:#FDE68A;
-      font-weight:900;
     }
 
     .event-actions{
@@ -1349,6 +1402,17 @@
         padding:21px;
       }
 
+      .event-date{
+        width:100%;
+        justify-content:center;
+        padding:12px 14px;
+      }
+
+      .event-date-day,
+      .event-date-time{
+        font-size:18px;
+      }
+
       .event-actions{
         display:grid;
         grid-template-columns:1fr;
@@ -1531,7 +1595,12 @@
           </p>
 
           <div class="event-meta">
-            <span class="meta meta-date">📅 10 septiembre · 16:00</span>
+            <div class="event-date">
+              <span class="event-date-day">📅 10 septiembre</span>
+              <span class="event-date-separator"></span>
+              <span class="event-date-time">16:00</span>
+            </div>
+
             <span class="meta">🔵 LinkedIn Event</span>
             <span class="meta">Acceso gratuito</span>
           </div>
@@ -1587,7 +1656,12 @@
           </p>
 
           <div class="event-meta">
-            <span class="meta meta-date">📅 16 septiembre · 18:00</span>
+            <div class="event-date">
+              <span class="event-date-day">📅 16 septiembre</span>
+              <span class="event-date-separator"></span>
+              <span class="event-date-time">18:00</span>
+            </div>
+
             <span class="meta">🔵 LinkedIn Event</span>
             <span class="meta">Acceso gratuito</span>
           </div>
@@ -1643,7 +1717,12 @@
           </p>
 
           <div class="event-meta">
-            <span class="meta meta-date">📅 24 septiembre · 16:00</span>
+            <div class="event-date">
+              <span class="event-date-day">📅 24 septiembre</span>
+              <span class="event-date-separator"></span>
+              <span class="event-date-time">16:00</span>
+            </div>
+
             <span class="meta">🔵 LinkedIn Event</span>
             <span class="meta">Acceso gratuito</span>
           </div>
@@ -1699,7 +1778,12 @@
           </p>
 
           <div class="event-meta">
-            <span class="meta meta-date">📅 29 septiembre · 16:00</span>
+            <div class="event-date">
+              <span class="event-date-day">📅 29 septiembre</span>
+              <span class="event-date-separator"></span>
+              <span class="event-date-time">16:00</span>
+            </div>
+
             <span class="meta">🔵 LinkedIn Event</span>
             <span class="meta">Acceso gratuito</span>
           </div>
