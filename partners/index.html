@@ -1,0 +1,1640 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Partners Emprende360 · Colabora con el ecosistema B2B</title>
+
+  <meta
+    name="description"
+    content="Partners Emprende360: empresas y profesionales que aportan tecnología, servicios, ventajas, distribución, conocimiento o relaciones al ecosistema B2B."
+  />
+
+  <meta name="robots" content="index,follow" />
+
+  <style>
+    :root{
+      --deep:#020617;
+      --navy:#071522;
+      --navy2:#0B1728;
+
+      --sky:#18A7FF;
+      --sky-soft:#7DD3FC;
+
+      --gold:#F4C542;
+      --gold-soft:#FDE68A;
+
+      --green:#22C55E;
+      --green-soft:#BBF7D0;
+
+      --text:#F8FAFC;
+      --soft:#CBD5E1;
+      --muted:#94A3B8;
+
+      --line:rgba(255,255,255,.12);
+      --glass:rgba(255,255,255,.05);
+
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background:var(--deep);
+      color:var(--text);
+      overflow-x:hidden;
+      line-height:1.5;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    strong,b{color:#fff}
+
+    .wrap{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+    .section{
+      position:relative;
+      padding:78px 0;
+      overflow:hidden;
+    }
+
+    .center{
+      max-width:850px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .lead{
+      color:var(--soft);
+      font-size:18px;
+      line-height:1.68;
+    }
+
+    .grad-text{
+      background:
+        linear-gradient(
+          90deg,
+          #fff,
+          #c8ecff 46%,
+          #ffe6a6
+        );
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .pill,
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border-radius:999px;
+      font-size:11px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    .pill{
+      padding:8px 13px;
+      border:1px solid rgba(24,167,255,.22);
+      background:rgba(24,167,255,.08);
+      color:#DBEAFE;
+    }
+
+    .kicker{
+      padding:7px 12px;
+      border:1px solid rgba(244,197,66,.23);
+      background:rgba(244,197,66,.07);
+      color:#FDE68A;
+    }
+
+    h1{
+      margin:18px 0 0;
+      font-size:clamp(43px,5.8vw,70px);
+      line-height:.99;
+      letter-spacing:-.058em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:14px 0 0;
+      font-size:clamp(31px,4.3vw,50px);
+      line-height:1.04;
+      letter-spacing:-.045em;
+      font-weight:950;
+    }
+
+    h3{
+      margin:0;
+      line-height:1.15;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      border-radius:999px;
+      padding:13px 19px;
+      font-size:13px;
+      font-weight:900;
+      border:0;
+      cursor:pointer;
+      transition:.22s ease;
+    }
+
+    .btn:hover{transform:translateY(-3px)}
+
+    .btn-primary{
+      color:#06111F;
+      background:
+        linear-gradient(
+          90deg,
+          #ffd95a,
+          #F4C542,
+          #ffd15a
+        );
+      box-shadow:0 18px 60px rgba(244,197,66,.20);
+    }
+
+    .btn-secondary{
+      color:#fff;
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .btn-blue{
+      color:#fff;
+      background:linear-gradient(90deg,#0A66C2,#18A7FF);
+      box-shadow:0 18px 55px rgba(24,167,255,.18);
+    }
+
+    .grid-bg{
+      position:absolute;
+      inset:0;
+      opacity:.05;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);
+      background-size:54px 54px;
+    }
+
+    /* HEADER */
+
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:100;
+      border-bottom:1px solid rgba(255,255,255,.09);
+      background:rgba(2,6,23,.86);
+      backdrop-filter:blur(22px);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:11px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      flex-shrink:0;
+    }
+
+    .brand-mark{
+      width:41px;
+      height:41px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      font-weight:950;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      box-shadow:0 18px 45px rgba(24,167,255,.25);
+    }
+
+    .brand-title{
+      font-weight:950;
+      line-height:1;
+    }
+
+    .brand-sub{
+      margin-top:4px;
+      color:#94A3B8;
+      font-size:10px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-weight:850;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-left:auto;
+      color:#CBD5E1;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .nav-links a:hover{color:#fff}
+
+    /* HERO */
+
+    .hero{
+      position:relative;
+      padding:122px 0 72px;
+      background:
+        radial-gradient(circle at 12% 10%,rgba(24,167,255,.18),transparent 30%),
+        radial-gradient(circle at 87% 15%,rgba(244,197,66,.12),transparent 30%),
+        var(--deep);
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:900px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .hero p{
+      max-width:780px;
+      margin:19px auto 0;
+      color:#CBD5E1;
+      font-size:17px;
+      line-height:1.68;
+    }
+
+    .hero-actions{
+      margin-top:25px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:11px;
+    }
+
+    .hero-note{
+      margin-top:14px!important;
+      color:#94A3B8!important;
+      font-size:12px!important;
+    }
+
+    /* VALUE */
+
+    .value{
+      background:var(--navy);
+    }
+
+    .value-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:13px;
+      margin-top:34px;
+    }
+
+    .value-card{
+      padding:23px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .value-icon{
+      width:43px;
+      height:43px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-size:18px;
+    }
+
+    .value-card h3{
+      margin-top:14px;
+      font-size:19px;
+    }
+
+    .value-card p{
+      margin:8px 0 0;
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.52;
+    }
+
+    /* CONTRIBUTION TYPES */
+
+    .types{
+      background:var(--deep);
+    }
+
+    .types-grid{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:14px;
+      margin-top:36px;
+    }
+
+    .type-card{
+      grid-column:span 2;
+      min-height:300px;
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      border:1px solid var(--line);
+      border-radius:25px;
+      background:rgba(255,255,255,.045);
+      transition:.23s ease;
+    }
+
+    .type-card:nth-child(4){grid-column:2 / span 2}
+    .type-card:nth-child(5){grid-column:4 / span 2}
+
+    .type-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(24,167,255,.28);
+    }
+
+    .type-card.perks{
+      border-color:rgba(34,197,94,.20);
+      background:
+        radial-gradient(circle at 100% 0,rgba(34,197,94,.08),transparent 38%),
+        rgba(255,255,255,.045);
+    }
+
+    .type-card.referrals{
+      border-color:rgba(244,197,66,.22);
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.08),transparent 38%),
+        rgba(255,255,255,.045);
+    }
+
+    .type-icon{
+      width:45px;
+      height:45px;
+      display:grid;
+      place-items:center;
+      border-radius:15px;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-size:19px;
+    }
+
+    .type-card h3{
+      margin-top:16px;
+      font-size:22px;
+      letter-spacing:-.03em;
+    }
+
+    .type-card p{
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.55;
+    }
+
+    .type-example{
+      margin-top:auto;
+      padding-top:14px;
+      color:#CBD5E1;
+      font-size:10px;
+      line-height:1.5;
+    }
+
+    /* CONDITIONS */
+
+    .conditions{
+      background:var(--navy);
+    }
+
+    .conditions-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:36px;
+    }
+
+    .condition-box{
+      padding:29px;
+      border:1px solid var(--line);
+      border-radius:27px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .condition-box.good{
+      border-color:rgba(34,197,94,.20);
+    }
+
+    .condition-box.no{
+      border-color:rgba(244,197,66,.19);
+    }
+
+    .condition-box h3{
+      font-size:22px;
+      letter-spacing:-.03em;
+    }
+
+    .condition-list{
+      display:grid;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .condition-item{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:9px;
+      color:#CBD5E1;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .ok{color:#86EFAC;font-weight:950}
+    .nope{color:#FDE68A;font-weight:950}
+
+    /* WHAT PARTNER GETS */
+
+    .benefits{
+      background:var(--deep);
+    }
+
+    .benefits-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:13px;
+      margin-top:34px;
+    }
+
+    .benefit{
+      padding:23px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .benefit b{
+      display:block;
+      font-size:16px;
+    }
+
+    .benefit p{
+      margin:8px 0 0;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.52;
+    }
+
+    .benefits-note{
+      max-width:850px;
+      margin:19px auto 0;
+      padding:13px 15px;
+      border:1px solid rgba(24,167,255,.17);
+      border-radius:15px;
+      background:rgba(24,167,255,.05);
+      color:#BAE6FD;
+      font-size:11px;
+      line-height:1.55;
+      text-align:center;
+    }
+
+    /* COMMERCIAL TERMS */
+
+    .commercial{
+      background:var(--navy);
+    }
+
+    .commercial-box{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:30px;
+      align-items:center;
+      padding:36px;
+      border:1px solid rgba(244,197,66,.20);
+      border-radius:31px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.08),transparent 35%),
+        rgba(255,255,255,.045);
+    }
+
+    .commercial-copy p{
+      color:#CBD5E1;
+      font-size:14px;
+      line-height:1.62;
+    }
+
+    .commercial-panel{
+      padding:26px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:23px;
+      background:rgba(2,6,23,.30);
+    }
+
+    .commercial-panel b{
+      display:block;
+      font-size:21px;
+    }
+
+    .commercial-panel p{
+      margin:10px 0 0;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    /* PROCESS */
+
+    .process{
+      background:var(--deep);
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:13px;
+      margin-top:34px;
+    }
+
+    .step{
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:21px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .step-num{
+      width:35px;
+      height:35px;
+      display:grid;
+      place-items:center;
+      border-radius:12px;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-size:12px;
+      font-weight:950;
+    }
+
+    .step h3{
+      margin-top:14px;
+      font-size:17px;
+    }
+
+    .step p{
+      margin:7px 0 0;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.5;
+    }
+
+    /* CURRENT PARTNERS */
+
+    .current{
+      background:var(--navy);
+    }
+
+    .partner-card{
+      max-width:720px;
+      margin:34px auto 0;
+      padding:24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
+      border:1px solid rgba(125,211,252,.18);
+      border-radius:23px;
+      background:rgba(255,255,255,.045);
+    }
+
+    .partner-name{
+      font-size:29px;
+      font-weight:950;
+      letter-spacing:-.04em;
+    }
+
+    .partner-meta{
+      color:#94A3B8;
+      font-size:11px;
+      text-align:right;
+      line-height:1.5;
+    }
+
+    /* CTA */
+
+    .cta{
+      background:
+        radial-gradient(circle at 15% 20%,rgba(24,167,255,.10),transparent 32%),
+        radial-gradient(circle at 85% 30%,rgba(244,197,66,.08),transparent 32%),
+        var(--deep);
+    }
+
+    .cta-box{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:30px;
+      align-items:center;
+      padding:39px;
+      border:1px solid rgba(24,167,255,.20);
+      border-radius:34px;
+      background:rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .cta-copy p{
+      color:#CBD5E1;
+      font-size:15px;
+      line-height:1.63;
+    }
+
+    .cta-panel{
+      padding:27px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:24px;
+      background:rgba(2,6,23,.30);
+      text-align:center;
+    }
+
+    .cta-panel b{
+      display:block;
+      font-size:23px;
+    }
+
+    .cta-panel p{
+      margin:10px 0 17px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.52;
+    }
+
+    /* FAQ */
+
+    .faq{
+      background:var(--navy);
+    }
+
+    .faq-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:13px;
+      margin-top:32px;
+    }
+
+    .faq-item{
+      padding:21px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .faq-item b{
+      display:block;
+      font-size:14px;
+    }
+
+    .faq-item p{
+      margin:7px 0 0;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.5;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:30px 0;
+      border-top:1px solid var(--line);
+      background:#01040d;
+      color:#94A3B8;
+      font-size:12px;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .footer-links a:hover{color:#fff}
+
+    @media(max-width:1000px){
+      .nav-links{display:none}
+
+      .value-grid,
+      .benefits-grid,
+      .steps{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .types-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .type-card,
+      .type-card:nth-child(4),
+      .type-card:nth-child(5){
+        grid-column:auto;
+      }
+
+      .commercial-box,
+      .cta-box{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:760px){
+      .wrap{padding:0 16px}
+
+      .section{padding:60px 0}
+
+      .nav{padding:10px 16px}
+
+      .brand-sub{display:none}
+
+      .nav .btn{
+        padding:9px 11px;
+        font-size:10px;
+      }
+
+      .hero{padding:100px 0 54px}
+
+      h1{
+        font-size:clamp(37px,11vw,50px);
+        line-height:1.02;
+      }
+
+      h2{font-size:clamp(29px,8.8vw,40px)}
+
+      .lead,
+      .hero p{
+        font-size:15px;
+      }
+
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .hero-actions .btn{width:100%}
+
+      .value-grid,
+      .types-grid,
+      .conditions-grid,
+      .benefits-grid,
+      .steps,
+      .faq-grid{
+        grid-template-columns:1fr;
+      }
+
+      .commercial-box,
+      .cta-box{
+        padding:24px;
+      }
+
+      .partner-card{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .partner-meta{text-align:left}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a href="https://emprende360.club/" class="brand">
+      <div class="brand-mark">E</div>
+      <div>
+        <div class="brand-title">Emprende360</div>
+        <div class="brand-sub">Partners · Ecosistema B2B</div>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#aportar">Cómo aportar</a>
+      <a href="#condiciones">Condiciones</a>
+      <a href="#beneficios">Qué aporta Emprende360</a>
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#proponer">Proponer colaboración</a>
+    </nav>
+
+    <a class="btn btn-secondary" href="https://emprende360.club/">
+      Volver a Emprende360
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="grid-bg"></div>
+
+  <div class="wrap">
+
+    <div class="hero-inner">
+
+      <span class="pill">
+        Partners · Emprende360
+      </span>
+
+      <h1>
+        <span class="grad-text">
+          Empresas y profesionales que ayudan a ampliar el ecosistema.
+        </span>
+      </h1>
+
+      <p>
+        Un Partner de Emprende360 aporta algo concreto: tecnología, servicios, ventajas, conocimiento, distribución, relaciones o capacidad comercial que puede generar valor dentro de la red.
+      </p>
+
+      <p>
+        <strong>No buscamos logos por acumular.</strong>
+        Buscamos colaboraciones donde ambas partes tengan una razón clara para trabajar juntas.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="btn btn-primary" href="#aportar">
+          Ver formas de colaborar
+        </a>
+
+        <a class="btn btn-secondary" href="#proponer">
+          Proponer una colaboración
+        </a>
+
+      </div>
+
+      <p class="hero-note">
+        Cada colaboración se define según el valor que aporta, el encaje con el ecosistema y el tipo de relación que tenga sentido.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT WE LOOK FOR
+========================================================= -->
+
+<section class="section value">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Qué buscamos</span>
+
+      <h2>
+        Una colaboración debe tener una lógica clara.
+      </h2>
+
+      <p class="lead">
+        Antes de hablar de visibilidad, comisiones o acciones, queremos entender qué puede aportar cada parte y a quién beneficia.
+      </p>
+
+    </div>
+
+
+    <div class="value-grid">
+
+      <article class="value-card">
+        <div class="value-icon">🎯</div>
+        <h3>Valor concreto</h3>
+        <p>
+          Una tecnología, servicio, ventaja, relación o capacidad que pueda ser útil para profesionales o empresas del ecosistema.
+        </p>
+      </article>
+
+      <article class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>Complementariedad</h3>
+        <p>
+          Preferimos partners que amplían capacidades y abren nuevas posibilidades antes que relaciones puramente promocionales.
+        </p>
+      </article>
+
+      <article class="value-card">
+        <div class="value-icon">✓</div>
+        <h3>Reputación y ejecución</h3>
+        <p>
+          La empresa o profesional debe poder cumplir lo que ofrece y cuidar la experiencia de las personas derivadas desde Emprende360.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     WAYS TO CONTRIBUTE
+========================================================= -->
+
+<section id="aportar" class="section types">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Formas de aportar</span>
+
+      <h2>
+        No existe un único tipo de Partner.
+      </h2>
+
+      <p class="lead">
+        Una colaboración puede empezar por una sola capa y evolucionar si ambas partes generan valor.
+      </p>
+
+    </div>
+
+
+    <div class="types-grid">
+
+      <article class="type-card">
+        <div class="type-icon">⚙️</div>
+        <h3>Tecnología y producto</h3>
+        <p>
+          Software, SaaS, plataformas, herramientas de IA, automatización, ERP, CRM u otras soluciones útiles para empresas y profesionales B2B.
+        </p>
+        <div class="type-example">
+          Ejemplo: acceso preferente, integración, demo, soporte especializado o colaboración tecnológica.
+        </div>
+      </article>
+
+
+      <article class="type-card perks">
+        <div class="type-icon">✦</div>
+        <h3>Perks y ventajas</h3>
+        <p>
+          Condiciones especiales para profesionales de Emprende360: descuentos, periodos adicionales, upgrades, diagnósticos o ventajas específicas.
+        </p>
+        <div class="type-example">
+          La ventaja debe ser clara y diferenciada de una promoción genérica.
+        </div>
+      </article>
+
+
+      <article class="type-card">
+        <div class="type-icon">🧠</div>
+        <h3>Conocimiento y expertise</h3>
+        <p>
+          Empresas o especialistas que pueden enriquecer determinadas conversaciones, aportar contenido o ayudar a desarrollar una vertical.
+        </p>
+        <div class="type-example">
+          Ser Partner no garantiza una plaza como ponente: la selección editorial sigue dependiendo de expertise, encaje y complementariedad.
+        </div>
+      </article>
+
+
+      <article class="type-card">
+        <div class="type-icon">🌐</div>
+        <h3>Distribución y acceso</h3>
+        <p>
+          Organizaciones, asociaciones, comunidades o empresas capaces de ampliar la distribución hacia una audiencia B2B relevante.
+        </p>
+        <div class="type-example">
+          Puede incluir difusión de iniciativas, colaboración por mercado o acceso a determinados perfiles.
+        </div>
+      </article>
+
+
+      <article class="type-card referrals">
+        <div class="type-icon">↗</div>
+        <h3>Referencias y colaboración comercial</h3>
+        <p>
+          Partners que detectan profesionales o empresas con una necesidad donde Impulso B2B u otra solución concreta de Emprende360 pueda tener sentido.
+        </p>
+        <div class="type-example">
+          Cuando exista una colaboración comercial, las condiciones se acuerdan expresamente antes de activarla. No asumimos una comisión estándar.
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONDITIONS
+========================================================= -->
+
+<section id="condiciones" class="section conditions">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Condiciones básicas</span>
+
+      <h2>
+        Claridad desde el principio.
+      </h2>
+
+      <p class="lead">
+        Queremos mantener el ecosistema útil, profesional y fácil de gestionar.
+      </p>
+
+    </div>
+
+
+    <div class="conditions-grid">
+
+      <article class="condition-box good">
+
+        <h3>Para colaborar</h3>
+
+        <div class="condition-list">
+
+          <div class="condition-item">
+            <span class="ok">✓</span>
+            <span>Producto, servicio o capacidad con encaje real en B2B.</span>
+          </div>
+
+          <div class="condition-item">
+            <span class="ok">✓</span>
+            <span>Propuesta clara sobre qué aporta el Partner y a quién.</span>
+          </div>
+
+          <div class="condition-item">
+            <span class="ok">✓</span>
+            <span>Responsabilidad directa sobre el producto, servicio o ventaja ofrecida.</span>
+          </div>
+
+          <div class="condition-item">
+            <span class="ok">✓</span>
+            <span>Uso respetuoso de contactos, datos y relaciones.</span>
+          </div>
+
+          <div class="condition-item">
+            <span class="ok">✓</span>
+            <span>Comunicación profesional y sin spam.</span>
+          </div>
+
+          <div class="condition-item">
+            <span class="ok">✓</span>
+            <span>Las acciones concretas, uso de marca y condiciones comerciales se acuerdan antes de ejecutarse.</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="condition-box no">
+
+        <h3>Lo que no implica ser Partner</h3>
+
+        <div class="condition-list">
+
+          <div class="condition-item">
+            <span class="nope">—</span>
+            <span>No compra una plaza como ponente en un Foro editorial.</span>
+          </div>
+
+          <div class="condition-item">
+            <span class="nope">—</span>
+            <span>No garantiza acceso indiscriminado a la base de contactos o miembros.</span>
+          </div>
+
+          <div class="condition-item">
+            <span class="nope">—</span>
+            <span>No garantiza leads, clientes, reuniones ni ventas.</span>
+          </div>
+
+          <div class="condition-item">
+            <span class="nope">—</span>
+            <span>No existe exclusividad automática por sector, país o categoría.</span>
+          </div>
+
+          <div class="condition-item">
+            <span class="nope">—</span>
+            <span>No autoriza el uso de la marca Emprende360 fuera de lo acordado.</span>
+          </div>
+
+          <div class="condition-item">
+            <span class="nope">—</span>
+            <span>No convierte cualquier acción comercial en una recomendación de Emprende360.</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     BENEFITS
+========================================================= -->
+
+<section id="beneficios" class="section benefits">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Qué puede aportar Emprende360</span>
+
+      <h2>
+        Una relación útil para ambas partes.
+      </h2>
+
+      <p class="lead">
+        No ofrecemos un paquete cerrado de “beneficios de Partner”. La colaboración depende del tipo de aportación y de lo que tenga sentido activar.
+      </p>
+
+    </div>
+
+
+    <div class="benefits-grid">
+
+      <article class="benefit">
+        <b>Presencia como Partner</b>
+        <p>
+          Inclusión en la sección de Partners o en iniciativas específicas cuando la colaboración esté activa y aprobada.
+        </p>
+      </article>
+
+      <article class="benefit">
+        <b>Acceso a iniciativas relevantes</b>
+        <p>
+          Posibilidad de participar en conversaciones, Rondas, acciones o colaboraciones cuando exista encaje real.
+        </p>
+      </article>
+
+      <article class="benefit">
+        <b>Perks y ventajas</b>
+        <p>
+          Publicación y difusión de una ventaja específica para el ecosistema cuando cumpla los criterios definidos.
+        </p>
+      </article>
+
+      <article class="benefit">
+        <b>Colaboraciones conjuntas</b>
+        <p>
+          Contenido, sesiones, acciones de mercado o iniciativas compartidas cuando ambas partes vean una razón clara.
+        </p>
+      </article>
+
+      <article class="benefit">
+        <b>Relaciones complementarias</b>
+        <p>
+          Posibilidad de detectar cruces con otros partners, especialistas o perfiles de la red cuando exista una lógica concreta.
+        </p>
+      </article>
+
+      <article class="benefit">
+        <b>Colaboración comercial</b>
+        <p>
+          En algunos casos puede existir prescripción o relación económica, siempre definida previamente y por escrito.
+        </p>
+      </article>
+
+    </div>
+
+
+    <div class="benefits-note">
+      La relación de Partner no es una membresía ni un patrocinio estándar. La lógica es: aportar valor → activar una colaboración concreta → medir si merece continuar.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     COMMERCIAL TERMS
+========================================================= -->
+
+<section class="section commercial">
+
+  <div class="wrap">
+
+    <div class="commercial-box">
+
+      <div class="commercial-copy">
+
+        <span class="kicker">Condiciones económicas</span>
+
+        <h2>
+          No existe una comisión universal para todos los Partners.
+        </h2>
+
+        <p>
+          Algunas relaciones pueden ser puramente estratégicas. Otras pueden incluir un Perk, una acción conjunta, una prestación de servicio o una referencia comercial.
+        </p>
+
+        <p>
+          Cuando exista una relación económica, se definirá antes de iniciar esa acción: qué se considera referencia válida, qué servicio aplica, cuándo se genera el derecho económico, importe o porcentaje y forma de pago.
+        </p>
+
+      </div>
+
+
+      <div class="commercial-panel">
+
+        <b>Regla simple</b>
+
+        <p>
+          Si hay dinero de por medio, las condiciones se acuerdan de forma explícita antes de activar la colaboración. No publicamos ni damos por supuesto un porcentaje estándar.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
+
+<section id="proceso" class="section process">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Cómo empezamos</span>
+
+      <h2>
+        Cuatro pasos. Sin burocracia innecesaria.
+      </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+      <article class="step">
+        <div class="step-num">1</div>
+        <h3>Nos cuentas qué aportas</h3>
+        <p>
+          Empresa, producto, servicio, red, ventaja o tipo de colaboración que propones.
+        </p>
+      </article>
+
+      <article class="step">
+        <div class="step-num">2</div>
+        <h3>Revisamos el encaje</h3>
+        <p>
+          Valor para la red, complementariedad, calidad, reputación y posibles acciones.
+        </p>
+      </article>
+
+      <article class="step">
+        <div class="step-num">3</div>
+        <h3>Definimos una primera acción</h3>
+        <p>
+          Un Perk, una colaboración, distribución, una iniciativa concreta o una prueba sencilla.
+        </p>
+      </article>
+
+      <article class="step">
+        <div class="step-num">4</div>
+        <h3>Medimos y continuamos</h3>
+        <p>
+          Si la relación genera valor, ampliamos la colaboración. Si no, no añadimos complejidad.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CURRENT PARTNERS
+========================================================= -->
+
+<section class="section current">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Partners del ecosistema</span>
+
+      <h2>
+        Colaboraciones que se van incorporando.
+      </h2>
+
+      <p class="lead">
+        Esta sección crecerá a medida que se formalicen nuevas relaciones y quede claro qué aporta cada Partner.
+      </p>
+
+    </div>
+
+
+    <div class="partner-card">
+      <div class="partner-name">MIAO</div>
+      <div class="partner-meta">
+        Partner del ecosistema<br>
+        SaaS · ERP
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section id="proponer" class="section cta">
+
+  <div class="wrap">
+
+    <div class="cta-box">
+
+      <div class="cta-copy">
+
+        <span class="kicker">Proponer una colaboración</span>
+
+        <h2>
+          ¿Tu empresa puede aportar algo útil a Emprende360?
+        </h2>
+
+        <p>
+          Cuéntanos brevemente quién eres, qué ofrece tu empresa y qué tipo de colaboración imaginas. No hace falta preparar una propuesta de diez páginas.
+        </p>
+
+      </div>
+
+
+      <div class="cta-panel">
+
+        <b>Quiero ser Partner</b>
+
+        <p>
+          Déjanos tu perfil, empresa, propuesta de valor y la forma concreta en la que crees que podríamos colaborar.
+        </p>
+
+        <!--
+          Sustituye "#" por tu Google Form, WhatsApp o formulario de Partners.
+        -->
+        <a
+          class="btn btn-primary"
+          href="#"
+          onclick="return false;"
+          style="width:100%;"
+        >
+          Proponer colaboración →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FAQ
+========================================================= -->
+
+<section class="section faq">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Preguntas rápidas</span>
+
+      <h2>
+        Lo importante antes de empezar.
+      </h2>
+
+    </div>
+
+
+    <div class="faq-grid">
+
+      <article class="faq-item">
+        <b>¿Ser Partner tiene una cuota?</b>
+        <p>
+          No existe una cuota estándar definida. Cada colaboración se plantea según su naturaleza y la acción concreta que tenga sentido.
+        </p>
+      </article>
+
+      <article class="faq-item">
+        <b>¿Ser Partner garantiza aparecer en eventos?</b>
+        <p>
+          No. Los Foros editoriales seleccionan especialistas por expertise, encaje, complementariedad y calidad de la conversación.
+        </p>
+      </article>
+
+      <article class="faq-item">
+        <b>¿Puedo ofrecer un descuento o ventaja?</b>
+        <p>
+          Sí. Puede publicarse como Perk cuando la condición sea clara, relevante y esté confirmada por la empresa responsable.
+        </p>
+      </article>
+
+      <article class="faq-item">
+        <b>¿Puede existir comisión por referencias?</b>
+        <p>
+          Sí, en determinados acuerdos. Las condiciones económicas se definen previamente para cada colaboración y no se presuponen.
+        </p>
+      </article>
+
+      <article class="faq-item">
+        <b>¿Hay exclusividad?</b>
+        <p>
+          No por defecto. Cualquier exclusividad tendría que negociarse y acordarse expresamente para un caso concreto.
+        </p>
+      </article>
+
+      <article class="faq-item">
+        <b>¿Un Activador es lo mismo que un Partner?</b>
+        <p>
+          No. El Activador ayuda principalmente a distribuir conversaciones y eventos. El Partner aporta una capacidad, producto, servicio, ventaja o colaboración más amplia. Una misma persona o empresa puede cumplir ambos roles.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="wrap footer-inner">
+
+    <div>
+      <strong>Emprende360</strong>
+      <br>
+      Partners · Ecosistema B2B
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="https://emprende360.club/">
+        Emprende360
+      </a>
+
+      <a
+        href="https://emprende360.club/septiembre"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Agenda
+      </a>
+
+      <a
+        href="https://emprende360.club/activadores"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Activadores
+      </a>
+
+      <a
+        href="https://emprende360.club/perks"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Perks
+      </a>
+
+      <a
+        href="https://emprende360.club/impulsob2b"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Impulso B2B
+      </a>
+
+      <a
+        href="https://emprende360.club/privacidad"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Privacidad
+      </a>
+
+      <a
+        href="https://emprende360.club/aviso-legal"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Aviso legal
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     CONFIG / EDICIÓN RÁPIDA
+========================================================= -->
+
+<script>
+  /*
+  =============================================================
+  PÁGINA PARTNERS · NOTAS DE EDICIÓN
+
+  1. FORMULARIO
+     Sustituye el href="#" del botón:
+     "Proponer colaboración"
+     por tu Google Form, WhatsApp o formulario de Partners.
+
+  2. PARTNERS ACTUALES
+     En la sección "Partners del ecosistema" puedes duplicar
+     el bloque .partner-card y añadir nuevos partners.
+
+  3. CONDICIONES ECONÓMICAS
+     Esta página NO publica una comisión estándar.
+     Si en el futuro decides una política general, actualiza
+     la sección "Condiciones económicas".
+
+  4. PONENTES
+     Mantener siempre separada la relación de Partner de la
+     selección editorial de Foros. Ser Partner no compra plaza.
+
+  5. ACTIVADORES
+     Activador y Partner son roles distintos.
+     Una persona/empresa puede ser ambos, pero no se mezclan
+     automáticamente sus condiciones.
+  =============================================================
+  */
+</script>
+
+</body>
+</html>
