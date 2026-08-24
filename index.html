@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Emprende360 | Foros, Rondas y Activación B2B</title>
+  <title>Emprende360 · Ecosistema B2B | Conversaciones, Activadores, Perks, Partners e Impulso</title>
 
   <meta
     name="description"
-    content="Emprende360 crea contexto para mejores conversaciones B2B mediante Foros Ejecutivos, Rondas, red propia y activación comercial."
+    content="Emprende360 crea contexto para mejores conversaciones B2B mediante Foros Ejecutivos, Rondas, Activadores, Partners, Perks y activación comercial relacional."
   />
 
   <meta name="robots" content="index,follow" />
@@ -32,9 +32,9 @@
       --soft:#CBD5E1;
       --muted:#94A3B8;
 
-      --line:rgba(255,255,255,.13);
-      --glass:rgba(255,255,255,.055);
-      --glass2:rgba(255,255,255,.09);
+      --line:rgba(255,255,255,.12);
+      --glass:rgba(255,255,255,.05);
+      --glass2:rgba(255,255,255,.08);
 
       --shadow:0 30px 100px rgba(0,0,0,.38);
 
@@ -55,7 +55,6 @@
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
-
       background:var(--deep);
       color:var(--text);
       overflow-x:hidden;
@@ -88,7 +87,7 @@
     }
 
     .center{
-      max-width:860px;
+      max-width:850px;
       margin-left:auto;
       margin-right:auto;
       text-align:center;
@@ -106,43 +105,64 @@
       background:
         linear-gradient(
           90deg,
-          #ffffff,
-          #c8ecff 44%,
-          #ffe7a6
+          #fff,
+          #c8ecff 46%,
+          #ffe6a6
         );
-
       -webkit-background-clip:text;
       background-clip:text;
       color:transparent;
     }
 
-    .pill,
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(255,255,255,.055);
+      color:#DBEAFE;
+      border-radius:999px;
+      padding:8px 13px;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
     .kicker{
       display:inline-flex;
       align-items:center;
       gap:8px;
-      border-radius:999px;
-      font-weight:900;
-    }
-
-    .pill{
-      border:1px solid rgba(255,255,255,.13);
-      background:rgba(255,255,255,.055);
-      color:#DBEAFE;
-      padding:8px 13px;
-      font-size:11px;
-      letter-spacing:.07em;
-      text-transform:uppercase;
-    }
-
-    .kicker{
       border:1px solid rgba(24,167,255,.25);
       background:rgba(24,167,255,.09);
       color:#C8ECFF;
+      border-radius:999px;
       padding:7px 12px;
       font-size:11px;
+      font-weight:950;
       text-transform:uppercase;
       letter-spacing:.14em;
+    }
+
+    h1{
+      margin:18px 0 0;
+      font-size:clamp(44px,5.7vw,72px);
+      line-height:.98;
+      letter-spacing:-.058em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:14px 0 0;
+      font-size:clamp(33px,4.5vw,54px);
+      line-height:1.03;
+      letter-spacing:-.045em;
+      font-weight:950;
+    }
+
+    h3{
+      margin:0;
+      line-height:1.15;
     }
 
     .btn{
@@ -151,9 +171,9 @@
       justify-content:center;
       gap:9px;
       border-radius:999px;
-      padding:14px 21px;
-      font-weight:950;
+      padding:13px 19px;
       font-size:13px;
+      font-weight:900;
       border:0;
       cursor:pointer;
       transition:.24s ease;
@@ -166,15 +186,15 @@
       background:
         linear-gradient(
           90deg,
-          #ffdc62,
+          #ffd95a,
           #F4C542,
           #ffd15a
         );
-      box-shadow:0 18px 60px rgba(244,197,66,.22);
+      box-shadow:0 18px 60px rgba(244,197,66,.20);
     }
 
     .btn-primary:hover{
-      box-shadow:0 24px 76px rgba(244,197,66,.36);
+      box-shadow:0 24px 70px rgba(244,197,66,.34);
     }
 
     .btn-secondary{
@@ -184,22 +204,8 @@
     }
 
     .btn-secondary:hover{
-      background:rgba(255,255,255,.09);
-    }
-
-    .btn-linkedin{
-      color:#fff;
-      background:
-        linear-gradient(
-          90deg,
-          #0A66C2,
-          #18A7FF
-        );
-      box-shadow:0 18px 55px rgba(24,167,255,.17);
-    }
-
-    .btn-linkedin:hover{
-      box-shadow:0 24px 70px rgba(24,167,255,.29);
+      background:rgba(255,255,255,.085);
+      border-color:rgba(255,255,255,.23);
     }
 
     .grid-bg{
@@ -213,56 +219,15 @@
       background-size:54px 54px;
     }
 
-    .blob{
-      position:absolute;
-      border-radius:999px;
-      filter:blur(65px);
-      opacity:.5;
-      pointer-events:none;
-    }
-
-    .blob.one{
-      width:310px;height:310px;
-      background:rgba(24,167,255,.22);
-      left:3%;top:12%;
-    }
-
-    .blob.two{
-      width:330px;height:330px;
-      background:rgba(244,197,66,.14);
-      right:4%;top:10%;
-    }
-
     .reveal{
       opacity:0;
-      transform:translateY(20px);
-      transition:opacity .65s ease, transform .65s ease;
+      transform:translateY(18px);
+      transition:opacity .65s ease,transform .65s ease;
     }
 
     .reveal.on{
       opacity:1;
-      transform:translateY(0);
-    }
-
-    h1{
-      margin:20px 0 0;
-      font-size:clamp(44px,5.8vw,72px);
-      line-height:.98;
-      letter-spacing:-.058em;
-      font-weight:950;
-    }
-
-    h2{
-      margin:13px 0 0;
-      font-size:clamp(32px,4.4vw,52px);
-      line-height:1.04;
-      letter-spacing:-.045em;
-      font-weight:950;
-    }
-
-    h3{
-      margin:0;
-      line-height:1.15;
+      transform:none;
     }
 
     /* =========================================================
@@ -271,19 +236,19 @@
 
     header{
       position:fixed;
+      top:0;
       left:0;
       right:0;
-      top:0;
       z-index:100;
       border-bottom:1px solid rgba(255,255,255,.09);
-      background:rgba(2,6,23,.84);
+      background:rgba(2,6,23,.86);
       backdrop-filter:blur(22px);
     }
 
     .nav{
       max-width:var(--max);
       margin:0 auto;
-      padding:12px 22px;
+      padding:11px 22px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -294,17 +259,18 @@
       display:flex;
       align-items:center;
       gap:11px;
+      flex-shrink:0;
     }
 
     .brand-mark{
       width:41px;
       height:41px;
-      border-radius:16px;
       display:grid;
       place-items:center;
-      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
-      box-shadow:0 18px 45px rgba(24,167,255,.24);
+      border-radius:16px;
       font-weight:950;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      box-shadow:0 18px 45px rgba(24,167,255,.25);
     }
 
     .brand-title{
@@ -316,18 +282,20 @@
       margin-top:4px;
       color:#94A3B8;
       font-size:10px;
-      font-weight:850;
-      letter-spacing:.16em;
+      letter-spacing:.14em;
       text-transform:uppercase;
+      font-weight:850;
     }
 
     .nav-links{
       display:flex;
       align-items:center;
-      gap:18px;
+      justify-content:flex-end;
+      gap:16px;
       color:#CBD5E1;
-      font-size:13px;
+      font-size:12px;
       font-weight:800;
+      margin-left:auto;
     }
 
     .nav-links a:hover{color:#fff}
@@ -338,10 +306,10 @@
 
     .hero{
       position:relative;
-      padding:112px 0 66px;
+      padding:122px 0 74px;
       background:
-        radial-gradient(circle at 12% 10%,rgba(24,167,255,.20),transparent 29%),
-        radial-gradient(circle at 88% 10%,rgba(244,197,66,.13),transparent 30%),
+        radial-gradient(circle at 12% 10%,rgba(24,167,255,.22),transparent 30%),
+        radial-gradient(circle at 88% 14%,rgba(244,197,66,.13),transparent 30%),
         var(--deep);
     }
 
@@ -349,375 +317,441 @@
       position:relative;
       z-index:2;
       display:grid;
-      grid-template-columns:1.03fr .97fr;
-      gap:44px;
-      align-items:start;
-    }
-
-    .hero-copy{
-      padding-top:8px;
+      grid-template-columns:1.08fr .92fr;
+      gap:42px;
+      align-items:center;
     }
 
     .hero-copy p{
-      max-width:690px;
+      max-width:720px;
       margin:19px 0 0;
-      color:#D3DCE6;
+      color:#CBD5E1;
       font-size:17px;
-      line-height:1.66;
+      line-height:1.68;
     }
 
-    .hero-thesis{
-      max-width:660px;
-      margin-top:20px;
-      padding-left:14px;
-      border-left:3px solid var(--gold);
+    .hero-claim{
+      margin-top:21px;
+      padding:16px 18px;
+      border:1px solid rgba(244,197,66,.26);
+      border-radius:18px;
+      background:rgba(244,197,66,.055);
       color:#FDE68A;
-      font-size:17px;
-      font-weight:850;
+      font-size:15px;
+      font-weight:900;
       line-height:1.5;
     }
 
     .hero-actions{
-      display:flex;
-      gap:11px;
-      flex-wrap:wrap;
       margin-top:25px;
-    }
-
-    .hero-mini{
       display:flex;
-      gap:8px;
       flex-wrap:wrap;
-      margin-top:18px;
+      gap:11px;
     }
 
-    .mini{
-      padding:8px 11px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:rgba(255,255,255,.05);
-      color:#DBEAFE;
+    .hero-scale{
+      margin-top:17px;
+      color:#94A3B8 !important;
+      font-size:12px !important;
+      line-height:1.55 !important;
+    }
+
+    /* =========================================================
+       HERO ROUTES / RIGHT COLUMN
+    ========================================================= */
+
+    .hero-routes{
+      display:grid;
+      gap:10px;
+    }
+
+    .hero-route{
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      gap:13px;
+      align-items:center;
+      padding:16px 17px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:19px;
+      background:rgba(255,255,255,.045);
+      transition:.22s ease;
+      box-shadow:0 14px 40px rgba(0,0,0,.14);
+    }
+
+    .hero-route:hover{
+      transform:translateY(-3px);
+      border-color:rgba(24,167,255,.30);
+      background:rgba(255,255,255,.07);
+      box-shadow:0 20px 52px rgba(0,0,0,.21);
+    }
+
+    .hero-route.gold{
+      border-color:rgba(244,197,66,.26);
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.09),transparent 45%),
+        rgba(255,255,255,.045);
+    }
+
+    .hero-route.green{
+      border-color:rgba(34,197,94,.22);
+    }
+
+    .route-icon{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-size:19px;
+      flex-shrink:0;
+    }
+
+    .hero-route-copy b{
+      display:block;
+      font-size:15px;
+      letter-spacing:-.015em;
+    }
+
+    .hero-route-copy span{
+      display:block;
+      margin-top:4px;
+      color:#94A3B8;
       font-size:11px;
+      line-height:1.42;
+    }
+
+    .hero-route-arrow{
+      color:#FDE68A;
+      font-size:18px;
+      font-weight:950;
+    }
+
+    /* =========================================================
+       SCALE / INFRASTRUCTURE
+    ========================================================= */
+
+    .scale{
+      background:var(--navy);
+      padding:34px 0 76px;
+    }
+
+    .scale-title{
+      text-align:center;
+      margin-bottom:24px;
+    }
+
+    .scale-title h2{
+      font-size:clamp(28px,3.6vw,44px);
+    }
+
+    .scale-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:13px;
+    }
+
+    .scale-card{
+      min-height:185px;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:23px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .scale-card strong{
+      display:block;
+      font-size:clamp(30px,3.7vw,46px);
+      line-height:1;
+      letter-spacing:-.05em;
+    }
+
+    .scale-card.blue strong{color:#7DD3FC}
+    .scale-card.gold strong{color:#FDE68A}
+
+    .scale-card b{
+      display:block;
+      margin-top:12px;
+      font-size:14px;
+    }
+
+    .scale-card p{
+      margin:8px 0 0;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.48;
+    }
+
+    .scale-note{
+      max-width:860px;
+      margin:18px auto 0;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.55;
+      text-align:center;
+    }
+
+    /* =========================================================
+       WHAT / SYSTEM
+    ========================================================= */
+
+    .what{
+      background:var(--deep);
+    }
+
+    .what-grid{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:32px;
+      align-items:start;
+      margin-top:38px;
+    }
+
+    .what-copy{
+      padding:29px;
+      border:1px solid var(--line);
+      border-radius:27px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .what-copy h3{
+      font-size:26px;
+      letter-spacing:-.035em;
+    }
+
+    .what-copy p{
+      color:#CBD5E1;
+      font-size:14px;
+      line-height:1.65;
+    }
+
+    .what-quote{
+      margin-top:17px;
+      padding:16px;
+      border:1px solid rgba(244,197,66,.22);
+      border-radius:17px;
+      background:rgba(244,197,66,.055);
+      color:#FDE68A;
+      font-weight:900;
+      line-height:1.5;
+    }
+
+    .system-flow{
+      display:grid;
+      gap:10px;
+    }
+
+    .flow-item{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:13px;
+      align-items:start;
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:21px;
+      background:rgba(255,255,255,.035);
+    }
+
+    .flow-num{
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-size:13px;
+      font-weight:950;
+    }
+
+    .flow-item b{
+      display:block;
+      font-size:16px;
+    }
+
+    .flow-item span{
+      display:block;
+      margin-top:5px;
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    /* =========================================================
+       DOORS
+    ========================================================= */
+
+    .doors{
+      background:var(--navy);
+    }
+
+    .doors-grid{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:14px;
+      margin-top:36px;
+    }
+
+    .door{
+      grid-column:span 2;
+      min-height:320px;
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      border:1px solid var(--line);
+      border-radius:25px;
+      background:rgba(255,255,255,.045);
+      transition:.23s ease;
+    }
+
+    .door:nth-child(4){grid-column:2 / span 2}
+    .door:nth-child(5){grid-column:4 / span 2}
+
+    .door:hover{
+      transform:translateY(-4px);
+      border-color:rgba(24,167,255,.30);
+    }
+
+    .door.perks{
+      border-color:rgba(34,197,94,.22);
+      background:
+        radial-gradient(circle at 100% 0,rgba(34,197,94,.08),transparent 38%),
+        rgba(255,255,255,.045);
+    }
+
+    .door.impulso{
+      border-color:rgba(244,197,66,.28);
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.10),transparent 38%),
+        rgba(255,255,255,.045);
+    }
+
+    .door h3{
+      margin-top:16px;
+      font-size:23px;
+      letter-spacing:-.03em;
+    }
+
+    .door p{
+      color:#94A3B8;
+      font-size:13px;
+      line-height:1.56;
+    }
+
+    .door-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+      margin-top:8px;
+    }
+
+    .door-tags span{
+      padding:6px 9px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:999px;
+      color:#94A3B8;
+      font-size:9px;
+      font-weight:800;
+    }
+
+    .door-actions{
+      margin-top:auto;
+      padding-top:18px;
+    }
+
+    /* =========================================================
+       NETWORK
+    ========================================================= */
+
+    .network{
+      background:var(--deep);
+    }
+
+    .network-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .network-visual{
+      min-height:500px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:34px;
+      border:1px solid rgba(24,167,255,.23);
+      border-radius:30px;
+      background:
+        radial-gradient(circle at 30% 15%,rgba(24,167,255,.15),transparent 34%),
+        radial-gradient(circle at 80% 85%,rgba(244,197,66,.08),transparent 30%),
+        rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .network-kpi{
+      font-size:clamp(54px,7vw,88px);
+      line-height:.9;
+      font-weight:950;
+      letter-spacing:-.07em;
+    }
+
+    .network-kpi-label{
+      margin-top:12px;
+      max-width:440px;
+      color:#BAE6FD;
+      font-size:15px;
+      font-weight:850;
+      line-height:1.45;
+    }
+
+    .network-sub{
+      margin-top:20px;
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.10);
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.55;
+    }
+
+    .network-copy p{
+      color:#CBD5E1;
+      font-size:15px;
+      line-height:1.65;
+    }
+
+    .network-note{
+      margin-top:16px;
+      padding:15px;
+      border:1px solid rgba(244,197,66,.18);
+      border-radius:16px;
+      background:rgba(244,197,66,.05);
+      color:#FDE68A;
+      font-size:12px;
+      line-height:1.5;
       font-weight:800;
     }
 
     /* =========================================================
-       HERO EVENTS
+       PROOF
     ========================================================= */
 
-    .hero-events{
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:30px;
-      padding:12px;
-      background:rgba(255,255,255,.045);
-      box-shadow:var(--shadow);
-    }
-
-    .hero-events-head{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding:4px 5px 11px;
-    }
-
-    .hero-events-head b{
-      color:#FDE68A;
-      font-size:11px;
-      letter-spacing:.10em;
-      text-transform:uppercase;
-    }
-
-    .hero-events-head span{
-      color:#94A3B8;
-      font-size:11px;
-    }
-
-    .hero-event-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:9px;
-    }
-
-    .hero-event{
-      position:relative;
-      min-height:167px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:20px;
-      background:#071522;
-      transition:.24s ease;
-    }
-
-    .hero-event:hover{
-      transform:translateY(-3px);
-      border-color:rgba(244,197,66,.30);
-    }
-
-    .hero-event-bg{
-      position:absolute;
-      inset:0;
+    .proof{
       background:
-        linear-gradient(
-          180deg,
-          rgba(2,6,23,.10),
-          rgba(2,6,23,.18) 42%,
-          rgba(2,6,23,.94) 100%
-        ),
-        var(--hero-image),
-        radial-gradient(circle at 20% 10%,rgba(24,167,255,.28),transparent 35%),
-        radial-gradient(circle at 80% 60%,rgba(244,197,66,.14),transparent 38%),
-        #071522;
-      background-size:cover;
-      background-position:center;
-    }
-
-    .hero-event-placeholder{
-      position:absolute;
-      top:16px;
-      left:16px;
-      color:rgba(255,255,255,.15);
-      font-size:24px;
-      line-height:.9;
-      font-weight:950;
-      letter-spacing:-.05em;
-      text-transform:uppercase;
-    }
-
-    .hero-event-content{
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:0;
-      z-index:2;
-      padding:14px;
-    }
-
-    .hero-event-content h3{
-      font-size:15px;
-      letter-spacing:-.02em;
-    }
-
-    .hero-event-content span{
-      display:inline-block;
-      margin-top:6px;
-      color:#FDE68A;
-      font-size:10px;
-      font-weight:900;
-    }
-
-    .hero-events-footer{
-      margin-top:10px;
-    }
-
-    .hero-events-footer .btn{
-      width:100%;
-    }
-
-    /* =========================================================
-       CREDIBILITY
-    ========================================================= */
-
-    .cred{
-      padding:0 0 28px;
-      background:var(--deep);
-    }
-
-    .cred-box{
-      border:1px solid var(--line);
-      background:rgba(15,23,42,.94);
-      border-radius:26px;
-      padding:12px;
-      box-shadow:var(--shadow);
-    }
-
-    .cred-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:9px;
-    }
-
-    .cred-item{
-      padding:18px;
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:rgba(255,255,255,.04);
-      text-align:center;
-    }
-
-    .cred-item b{
-      display:block;
-      font-size:25px;
-      letter-spacing:-.04em;
-    }
-
-    .cred-item span{
-      display:block;
-      margin-top:5px;
-      color:#94A3B8;
-      font-size:11px;
-      line-height:1.4;
-    }
-
-    .cred-item.gold{
-      border-color:rgba(244,197,66,.24);
-      background:rgba(244,197,66,.06);
-    }
-
-    .cred-item.gold b{color:#FDE68A}
-
-    .cred-item.blue{
-      border-color:rgba(24,167,255,.24);
-      background:rgba(24,167,255,.055);
-    }
-
-    .cred-item.blue b{color:#BAE6FD}
-
-    /* =========================================================
-       EVENTS
-    ========================================================= */
-
-    .events{
-      background:var(--navy);
-    }
-
-    .events-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:16px;
-      margin-top:36px;
-    }
-
-    .event-card{
-      position:relative;
-      min-height:330px;
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
-      border:1px solid var(--line);
-      border-radius:27px;
-      background:#071522;
-      transition:.24s ease;
-    }
-
-    .event-card:hover{
-      transform:translateY(-5px);
-      border-color:rgba(24,167,255,.33);
-    }
-
-    .event-card-bg{
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(
-          180deg,
-          rgba(2,6,23,.08),
-          rgba(2,6,23,.18) 38%,
-          rgba(2,6,23,.95) 82%,
-          rgba(2,6,23,.99) 100%
-        ),
-        var(--event-image),
-        radial-gradient(circle at 20% 15%,rgba(24,167,255,.34),transparent 35%),
-        radial-gradient(circle at 80% 65%,rgba(244,197,66,.18),transparent 37%),
-        #071522;
-      background-size:cover;
-      background-position:center;
-    }
-
-    .event-big{
-      position:absolute;
-      top:22px;
-      left:22px;
-      color:rgba(255,255,255,.13);
-      font-size:40px;
-      line-height:.9;
-      font-weight:950;
-      letter-spacing:-.055em;
-      text-transform:uppercase;
-    }
-
-    .event-content{
-      position:relative;
-      z-index:2;
-      padding:24px;
-    }
-
-    .event-badges{
-      display:flex;
-      flex-wrap:wrap;
-      gap:7px;
-      margin-bottom:10px;
-    }
-
-    .event-badge{
-      display:inline-flex;
-      padding:6px 9px;
-      border:1px solid rgba(34,197,94,.26);
-      border-radius:999px;
-      background:rgba(34,197,94,.09);
-      color:#86EFAC;
-      font-size:9px;
-      font-weight:950;
-      letter-spacing:.09em;
-      text-transform:uppercase;
-    }
-
-    .event-type{
-      display:inline-flex;
-      padding:6px 9px;
-      border:1px solid rgba(24,167,255,.26);
-      border-radius:999px;
-      background:rgba(24,167,255,.09);
-      color:#BAE6FD;
-      font-size:9px;
-      font-weight:950;
-      letter-spacing:.09em;
-      text-transform:uppercase;
-    }
-
-    .event-card h3{
-      font-size:24px;
-      letter-spacing:-.03em;
-    }
-
-    .event-card p{
-      max-width:520px;
-      margin:9px 0 0;
-      color:#CBD5E1;
-      font-size:13px;
-      line-height:1.55;
-    }
-
-    .event-actions{
-      margin-top:18px;
-    }
-
-    .agenda-cta{
-      margin-top:24px;
-      text-align:center;
-    }
-
-
-    /* =========================================================
-       EMPRENDE360 EN ACCIÓN
-    ========================================================= */
-
-    .previous{
-      background:
-        radial-gradient(circle at 12% 14%,rgba(24,167,255,.09),transparent 30%),
+        radial-gradient(circle at 12% 15%,rgba(24,167,255,.09),transparent 30%),
         radial-gradient(circle at 88% 20%,rgba(244,197,66,.08),transparent 30%),
-        var(--deep);
+        var(--navy);
     }
 
-    .previous-grid{
+    .proof-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:15px;
       margin-top:36px;
     }
 
-    .previous-card{
+    .proof-card{
       overflow:hidden;
       border:1px solid var(--line);
       border-radius:25px;
@@ -725,36 +759,33 @@
       transition:.24s ease;
     }
 
-    .previous-card:hover{
+    .proof-card:hover{
       transform:translateY(-4px);
       border-color:rgba(24,167,255,.28);
       background:rgba(255,255,255,.06);
     }
 
-    .previous-thumb{
+    .proof-thumb{
       position:relative;
       width:100%;
       aspect-ratio:16/9;
       overflow:hidden;
-      background:#071522;
+      background:
+        radial-gradient(circle at 20% 20%,rgba(24,167,255,.22),transparent 34%),
+        linear-gradient(135deg,#071522,#0B1728);
     }
 
-    .previous-thumb img{
+    .proof-thumb img{
       width:100%;
       height:100%;
       object-fit:cover;
     }
 
-    .previous-thumb:after{
+    .proof-thumb:after{
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(
-        180deg,
-        rgba(2,6,23,.02),
-        rgba(2,6,23,.14) 60%,
-        rgba(2,6,23,.56)
-      );
+      background:linear-gradient(180deg,rgba(2,6,23,.02),rgba(2,6,23,.15) 60%,rgba(2,6,23,.62));
       pointer-events:none;
     }
 
@@ -775,11 +806,9 @@
       box-shadow:0 12px 32px rgba(0,0,0,.28);
     }
 
-    .previous-body{
-      padding:21px;
-    }
+    .proof-body{padding:21px}
 
-    .previous-label{
+    .proof-label{
       display:inline-flex;
       padding:6px 9px;
       border:1px solid rgba(24,167,255,.22);
@@ -792,20 +821,20 @@
       text-transform:uppercase;
     }
 
-    .previous-card h3{
+    .proof-card h3{
       margin-top:12px;
       font-size:20px;
       letter-spacing:-.025em;
     }
 
-    .previous-card p{
+    .proof-card p{
       margin:9px 0 0;
       color:#94A3B8;
       font-size:12px;
       line-height:1.5;
     }
 
-    .previous-link{
+    .proof-link{
       display:inline-block;
       margin-top:15px;
       color:#FDE68A;
@@ -813,266 +842,146 @@
       font-weight:900;
     }
 
-    .playlist-cta{
-      margin-top:23px;
-      text-align:center;
-    }
-
     /* =========================================================
-       HOW
+       ACTIVATORS + PERKS + PARTNERS
     ========================================================= */
 
-    .how{
+    .split{
       background:var(--deep);
     }
 
-    .how-grid{
+    .split-grid{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:15px;
-      margin-top:36px;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
     }
 
-    .how-card{
-      padding:26px;
+    .feature-box{
+      padding:30px;
       border:1px solid var(--line);
-      border-radius:25px;
-      background:var(--glass);
+      border-radius:28px;
+      background:rgba(255,255,255,.045);
     }
 
-    .how-num{
-      width:45px;
-      height:45px;
-      display:grid;
-      place-items:center;
-      margin-bottom:17px;
-      border-radius:15px;
-      background:linear-gradient(135deg,#FDE047,#7DD3FC);
-      color:#06111F;
-      font-weight:950;
-    }
-
-    .how-card h3{
-      font-size:22px;
-      letter-spacing:-.03em;
-    }
-
-    .how-card p{
-      margin:10px 0 0;
-      color:#94A3B8;
-      font-size:13px;
-      line-height:1.55;
-    }
-
-    .how-principle{
-      max-width:850px;
-      margin:23px auto 0;
-      padding:17px 19px;
-      border:1px solid rgba(244,197,66,.23);
-      border-radius:19px;
-      background:rgba(244,197,66,.055);
-      color:#FDE68A;
-      text-align:center;
-      font-weight:850;
-      font-size:14px;
-    }
-
-    /* =========================================================
-       NETWORK
-    ========================================================= */
-
-    .network{
+    .feature-box.green{
+      border-color:rgba(34,197,94,.20);
       background:
-        radial-gradient(circle at 10% 20%,rgba(24,167,255,.10),transparent 31%),
-        var(--navy);
+        radial-gradient(circle at 100% 0,rgba(34,197,94,.08),transparent 38%),
+        rgba(255,255,255,.045);
     }
 
-    .network-grid{
-      display:grid;
-      grid-template-columns:.88fr 1.12fr;
-      gap:40px;
-      align-items:center;
+    .feature-box.gold{
+      border-color:rgba(244,197,66,.21);
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.08),transparent 38%),
+        rgba(255,255,255,.045);
     }
 
-    .network-image-wrap{
-      padding:12px;
-      border:1px solid rgba(24,167,255,.22);
-      border-radius:29px;
-      background:rgba(255,255,255,.04);
-      box-shadow:var(--shadow);
+    .feature-box h2{
+      font-size:clamp(28px,3.6vw,42px);
     }
 
-    .network-image{
-      overflow:hidden;
-      border-radius:20px;
-      background:#fff;
-    }
-
-    .network-image img{
-      width:100%;
-      height:auto;
-      object-fit:cover;
-    }
-
-    .network-copy p{
+    .feature-box p{
       color:#CBD5E1;
-      font-size:16px;
-      line-height:1.67;
+      font-size:14px;
+      line-height:1.62;
     }
 
-    .network-stats{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:10px;
-      margin-top:21px;
-    }
-
-    .network-stat{
-      padding:16px;
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:rgba(255,255,255,.04);
-    }
-
-    .network-stat b{
-      display:block;
-      color:#7DD3FC;
-      font-size:24px;
-      letter-spacing:-.04em;
-    }
-
-    .network-stat span{
-      display:block;
-      margin-top:4px;
-      color:#94A3B8;
-      font-size:11px;
-    }
-
-    .network-note{
-      margin-top:17px;
-      padding:15px 17px;
-      border:1px solid rgba(244,197,66,.23);
-      border-radius:17px;
-      background:rgba(244,197,66,.055);
+    .feature-quote{
+      margin-top:16px;
       color:#FDE68A;
-      font-size:13px;
-      font-weight:850;
+      font-size:15px;
+      font-weight:900;
       line-height:1.5;
     }
 
+    .partner-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      margin-top:19px;
+      padding:17px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:18px;
+      background:rgba(2,6,23,.28);
+    }
+
+    .partner-name{
+      font-size:25px;
+      font-weight:950;
+      letter-spacing:-.04em;
+    }
+
+    .partner-type{
+      color:#94A3B8;
+      font-size:10px;
+      text-align:right;
+    }
+
     /* =========================================================
-       ROUTES
+       GLOBAL / LOCAL
     ========================================================= */
 
-    .routes{
-      background:var(--deep);
+    .global{
+      background:var(--navy);
     }
 
-    .routes-grid{
+    .global-grid{
       display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
-      margin-top:37px;
+      grid-template-columns:1fr 1fr;
+      gap:32px;
+      align-items:center;
     }
 
-    .route-card{
-      padding:27px;
-      border:1px solid var(--line);
-      border-radius:26px;
-      background:var(--glass);
-      transition:.24s ease;
-    }
-
-    .route-card:hover{
-      transform:translateY(-4px);
-      background:var(--glass2);
-      border-color:rgba(24,167,255,.28);
-    }
-
-    .route-card.impulso{
-      border-color:rgba(244,197,66,.28);
-      background:
-        radial-gradient(circle at 100% 0,rgba(244,197,66,.09),transparent 38%),
-        rgba(255,255,255,.05);
-    }
-
-    .route-icon{
-      width:48px;
-      height:48px;
-      display:grid;
-      place-items:center;
-      border-radius:16px;
-      margin-bottom:17px;
-      background:linear-gradient(135deg,#FDE047,#7DD3FC);
-      color:#06111F;
-      font-size:20px;
-    }
-
-    .route-card h3{
-      font-size:23px;
-      letter-spacing:-.03em;
-    }
-
-    .route-card p{
-      color:#94A3B8;
-      font-size:13px;
-      line-height:1.55;
-    }
-
-    .route-meta{
-      display:flex;
-      gap:7px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
-
-    .route-meta span{
-      padding:6px 9px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:rgba(255,255,255,.04);
+    .global-copy p{
       color:#CBD5E1;
-      font-size:10px;
-      font-weight:800;
+      font-size:15px;
+      line-height:1.65;
     }
 
-    .route-actions{
-      margin-top:19px;
+    .countries{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .country{
+      padding:13px 15px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:999px;
+      background:rgba(255,255,255,.045);
+      color:#DBEAFE;
+      font-size:12px;
+      font-weight:850;
     }
 
     /* =========================================================
        IMPULSO
     ========================================================= */
 
-    .impulso-section{
-      background:
-        radial-gradient(circle at 10% 10%,rgba(24,167,255,.12),transparent 32%),
-        radial-gradient(circle at 90% 18%,rgba(244,197,66,.10),transparent 32%),
-        var(--navy);
+    .impulso{
+      background:var(--deep);
     }
 
     .impulso-box{
       display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:30px;
+      grid-template-columns:1.12fr .88fr;
+      gap:32px;
       align-items:center;
-      padding:38px;
-      border:1px solid rgba(244,197,66,.30);
-      border-radius:32px;
+      padding:39px;
+      border:1px solid rgba(244,197,66,.25);
+      border-radius:34px;
       background:
-        radial-gradient(circle at 12% 0,rgba(244,197,66,.11),transparent 34%),
-        rgba(255,255,255,.05);
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.09),transparent 35%),
+        rgba(255,255,255,.045);
       box-shadow:var(--shadow);
-    }
-
-    .impulso-box h2{
-      margin-top:12px;
     }
 
     .impulso-copy p{
       color:#CBD5E1;
       font-size:15px;
-      line-height:1.63;
+      line-height:1.65;
     }
 
     .impulso-list{
@@ -1083,138 +992,53 @@
     }
 
     .impulso-item{
-      padding:12px 13px;
-      border:1px solid var(--line);
-      border-radius:15px;
-      background:rgba(255,255,255,.04);
+      padding:11px 12px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:14px;
       color:#DBEAFE;
-      font-size:12px;
+      font-size:11px;
       font-weight:800;
     }
 
     .price-panel{
-      padding:27px;
-      border:1px solid rgba(255,255,255,.11);
+      padding:28px;
+      border:1px solid rgba(244,197,66,.22);
       border-radius:25px;
-      background:rgba(2,6,23,.42);
+      background:rgba(2,6,23,.36);
     }
 
     .price-panel small{
-      color:#FDE68A;
-      font-weight:950;
+      color:#94A3B8;
+      font-size:10px;
+      font-weight:850;
       letter-spacing:.08em;
       text-transform:uppercase;
     }
 
     .price{
-      margin-top:10px;
       display:flex;
       align-items:flex-end;
-      gap:7px;
+      gap:8px;
+      margin-top:12px;
     }
 
     .price b{
-      font-size:61px;
+      font-size:58px;
       line-height:.9;
       letter-spacing:-.06em;
+      color:#FDE68A;
     }
 
     .price span{
-      padding-bottom:6px;
       color:#CBD5E1;
+      font-size:12px;
       font-weight:800;
     }
 
     .price-panel p{
       color:#94A3B8;
       font-size:12px;
-      line-height:1.5;
-    }
-
-    /* =========================================================
-       ACTIVATORS
-    ========================================================= */
-
-    .activators{
-      background:var(--deep);
-    }
-
-    .activator-box{
-      display:grid;
-      grid-template-columns:.95fr 1.05fr;
-      gap:27px;
-      align-items:center;
-      padding:34px;
-      border:1px solid rgba(24,167,255,.23);
-      border-radius:30px;
-      background:
-        radial-gradient(circle at 100% 0,rgba(24,167,255,.10),transparent 35%),
-        rgba(255,255,255,.045);
-    }
-
-    .activator-visual{
-      min-height:250px;
-      position:relative;
-      display:grid;
-      place-items:center;
-    }
-
-    .orbit{
-      position:absolute;
-      width:230px;
-      height:230px;
-      border-radius:50%;
-      border:1px dashed rgba(244,197,66,.25);
-    }
-
-    .orbit:before,
-    .orbit:after{
-      content:"";
-      position:absolute;
-      border-radius:50%;
-      border:1px solid rgba(24,167,255,.12);
-    }
-
-    .orbit:before{inset:25px}
-    .orbit:after{inset:53px}
-
-    .activator-center{
-      position:relative;
-      z-index:2;
-      width:108px;
-      height:108px;
-      display:grid;
-      place-items:center;
-      text-align:center;
-      border-radius:29px;
-      border:1px solid rgba(244,197,66,.35);
-      background:linear-gradient(145deg,#16283b,#0d1925);
-      box-shadow:0 0 45px rgba(244,197,66,.13);
-      font-size:15px;
-      font-weight:950;
-    }
-
-    .activator-dot{
-      position:absolute;
-      width:52px;
-      height:52px;
-      display:grid;
-      place-items:center;
-      border-radius:17px;
-      border:1px solid var(--line);
-      background:var(--navy2);
-      font-size:18px;
-    }
-
-    .ad1{left:7%;top:15%}
-    .ad2{right:9%;top:18%}
-    .ad3{left:3%;bottom:17%}
-    .ad4{right:3%;bottom:14%}
-
-    .activator-copy p{
-      color:#CBD5E1;
-      font-size:14px;
-      line-height:1.6;
+      line-height:1.55;
     }
 
     /* =========================================================
@@ -1222,27 +1046,27 @@
     ========================================================= */
 
     .final{
-      text-align:center;
       background:
-        radial-gradient(circle at 20% 20%,rgba(24,167,255,.15),transparent 32%),
-        radial-gradient(circle at 80% 40%,rgba(244,197,66,.12),transparent 30%),
+        radial-gradient(circle at 15% 20%,rgba(24,167,255,.10),transparent 32%),
+        radial-gradient(circle at 85% 30%,rgba(244,197,66,.08),transparent 32%),
         var(--navy);
     }
 
     .final-box{
-      padding:40px;
-      border:1px solid rgba(244,197,66,.24);
-      border-radius:33px;
+      text-align:center;
+      padding:44px;
+      border:1px solid rgba(24,167,255,.22);
+      border-radius:35px;
       background:rgba(255,255,255,.045);
       box-shadow:var(--shadow);
     }
 
     .final-actions{
+      margin-top:24px;
       display:flex;
       justify-content:center;
-      gap:11px;
       flex-wrap:wrap;
-      margin-top:25px;
+      gap:10px;
     }
 
     /* =========================================================
@@ -1250,7 +1074,7 @@
     ========================================================= */
 
     footer{
-      padding:30px 0;
+      padding:31px 0;
       border-top:1px solid var(--line);
       background:#01040d;
       color:#94A3B8;
@@ -1261,114 +1085,114 @@
       display:flex;
       justify-content:space-between;
       align-items:flex-start;
-      gap:22px;
       flex-wrap:wrap;
+      gap:20px;
     }
 
-    .footer-links,
-    .community-links{
+    .footer-links{
       display:flex;
-      gap:14px;
+      gap:15px;
       flex-wrap:wrap;
+      max-width:650px;
+      justify-content:flex-end;
     }
 
-    .footer-links a:hover,
-    .community-links a:hover{
-      color:#fff;
-    }
-
-    .footer-communities{
-      margin-top:8px;
-      font-size:11px;
-    }
+    .footer-links a:hover{color:#fff}
 
     /* =========================================================
        RESPONSIVE
     ========================================================= */
 
-    @media(max-width:1040px){
+    @media(max-width:1060px){
       .nav-links{display:none}
 
       .hero-grid,
+      .what-grid,
       .network-grid,
-      .impulso-box,
-      .activator-box{
+      .global-grid,
+      .impulso-box{
         grid-template-columns:1fr;
       }
 
-      .events-grid,
-      .routes-grid{
+      .scale-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .doors-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .door,
+      .door:nth-child(4),
+      .door:nth-child(5){
+        grid-column:auto;
+      }
+
+      .proof-grid{
         grid-template-columns:1fr;
       }
 
-      .how-grid,
-      .previous-grid{
+      .split-grid{
         grid-template-columns:1fr;
-      }
-
-      .hero-events{
-        max-width:760px;
       }
     }
 
     @media(max-width:760px){
       .wrap{padding:0 16px}
-      .section{padding:60px 0}
+
+      .section{padding:62px 0}
 
       .nav{padding:10px 16px}
-      .brand-sub{display:none}
-      .nav .btn{padding:9px 11px;font-size:10px}
 
-      .hero{padding:98px 0 48px}
+      .brand-sub{display:none}
+
+      .nav .btn{
+        padding:9px 11px;
+        font-size:10px;
+      }
+
+      .hero{padding:101px 0 54px}
 
       h1{
-        font-size:clamp(38px,11vw,52px);
+        font-size:clamp(37px,11vw,51px);
         line-height:1.02;
       }
 
-      h2{
-        font-size:clamp(29px,8.8vw,40px);
-      }
+      h2{font-size:clamp(29px,8.8vw,40px)}
 
-      .hero-copy p,.lead{font-size:15px}
+      .lead,
+      .hero-copy p{
+        font-size:15px;
+      }
 
       .hero-actions{
         display:grid;
         grid-template-columns:1fr;
       }
 
-      .hero-actions .btn{width:100%}
-
-      .hero-event-grid{
-        grid-template-columns:1fr;
+      .hero-actions .btn{
+        width:100%;
       }
 
-      .hero-event{
-        min-height:150px;
+      .hero-route{
+        grid-template-columns:auto 1fr auto;
+        padding:14px;
       }
 
-      .cred-grid,
-      .network-stats,
+      .scale-grid,
+      .doors-grid,
       .impulso-list{
         grid-template-columns:1fr;
       }
 
-      .event-card{min-height:350px}
-
-      .event-actions .btn,
-      .agenda-cta .btn,
-      .route-actions .btn{
-        width:100%;
-      }
+      .scale{padding:27px 0 58px}
 
       .impulso-box,
-      .activator-box,
       .final-box{
         padding:24px;
-        border-radius:27px;
       }
 
-      .price b{font-size:54px}
+      .price b{font-size:48px}
 
       .final-actions{
         display:grid;
@@ -1382,36 +1206,29 @@
 
 <body>
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
 <header>
   <div class="nav">
 
     <a href="#top" class="brand">
       <div class="brand-mark">E</div>
-
       <div>
         <div class="brand-title">Emprende360</div>
-        <div class="brand-sub">Conversaciones B2B con contexto</div>
+        <div class="brand-sub">Ecosistema B2B · Conversaciones con contexto</div>
       </div>
     </a>
 
     <nav class="nav-links">
-      <a href="#eventos">Eventos</a>
-
-      <a href="#anteriores">En acción</a>
-      <a href="#anteriores">En acción</a>
-      <a href="#como-funciona">Cómo funciona</a>
-      <a href="#impulso">Impulso B2B</a>
-      <a href="#activadores">Activadores</a>
-      <a href="#participar">Participar</a>
+      <a href="#que-es">Qué es</a>
+      <a href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">Agenda</a>
+      <a href="https://emprende360.club/activadores" target="_blank" rel="noopener noreferrer">Activadores</a>
+      <a href="https://emprende360.club/perks" target="_blank" rel="noopener noreferrer">Perks</a>
+      <a href="#partners">Partners</a>
+      <a href="https://emprende360.club/impulsob2b" target="_blank" rel="noopener noreferrer">Impulso B2B</a>
     </nav>
 
     <a
-      class="btn btn-primary agenda-link"
-      href="#"
+      class="btn btn-primary"
+      href="https://emprende360.club/septiembre"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -1431,15 +1248,13 @@
 <section id="top" class="hero">
 
   <div class="grid-bg"></div>
-  <div class="blob one"></div>
-  <div class="blob two"></div>
 
   <div class="wrap hero-grid">
 
     <div class="hero-copy reveal">
 
       <span class="pill">
-        Emprende360 · Foros · Rondas · Activación B2B
+        Emprende360 · Ecosistema de relaciones B2B
       </span>
 
       <h1>
@@ -1449,506 +1264,112 @@
       </h1>
 
       <p>
-        Reunimos profesionales B2B senior alrededor de temas, problemas y relaciones concretas mediante Foros Ejecutivos, Rondas y activación comercial.
+        Conectamos profesionales, empresas y decisores mediante Foros Ejecutivos, Rondas, activación de red, partners y otras situaciones donde existe una razón concreta para hablar.
       </p>
 
-      <div class="hero-thesis">
-        No necesitas conocer a más gente. Necesitas mejores razones para hablar con la gente adecuada.
+      <div class="hero-claim">
+        No juntamos gente. Diseñamos razones para que la gente adecuada hable.
       </div>
 
       <div class="hero-actions">
 
         <a
-          class="btn btn-primary agenda-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
+          class="btn btn-primary"
+          href="#puertas"
         >
-          Ver agenda de septiembre →
+          Explorar Emprende360 →
         </a>
 
         <a
           class="btn btn-secondary"
-          href="https://emprende360.club/impulsob2b"
+          href="https://emprende360.club/septiembre"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Conocer Impulso B2B
+          Ver agenda actual
         </a>
 
       </div>
 
-      <div class="hero-mini">
-        <div class="mini">✓ Foros Ejecutivos</div>
-        <div class="mini">✓ Rondas B2B</div>
-        <div class="mini">✓ Activación comercial</div>
-      </div>
-
-    </div>
-
-
-    <div class="hero-events reveal">
-
-      <div class="hero-events-head">
-        <b>Ahora en Emprende360</b>
-        <span>4 eventos activos</span>
-      </div>
-
-      <div class="hero-event-grid">
-
-        <a
-          class="hero-event"
-          href="https://www.linkedin.com/events/7491782425069621248/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="--hero-image:url('/img/evento-ia.jpg');"
-        >
-          <div class="hero-event-bg"></div>
-          <div class="hero-event-placeholder">IA</div>
-          <div class="hero-event-content">
-            <h3>Foro Ejecutivo de IA</h3>
-            <span>Ver evento →</span>
-          </div>
-        </a>
-
-
-        <a
-          class="hero-event"
-          href="https://www.linkedin.com/events/7496395870095998976/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="--hero-image:url('/img/ronda-alianzas.jpg');"
-        >
-          <div class="hero-event-bg"></div>
-          <div class="hero-event-placeholder">ALIANZAS</div>
-          <div class="hero-event-content">
-            <h3>Ronda de Alianzas B2B</h3>
-            <span>Ver evento →</span>
-          </div>
-        </a>
-
-
-        <a
-          class="hero-event"
-          href="https://www.linkedin.com/events/7496399111244529665/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="--hero-image:url('/img/corporate-finance.jpg');"
-        >
-          <div class="hero-event-bg"></div>
-          <div class="hero-event-placeholder">FINANCE</div>
-          <div class="hero-event-content">
-            <h3>Corporate Finance</h3>
-            <span>Ver evento →</span>
-          </div>
-        </a>
-
-
-        <a
-          class="hero-event"
-          href="https://www.linkedin.com/events/7496401159276941314/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="--hero-image:url('/img/ventas-b2b.jpg');"
-        >
-          <div class="hero-event-bg"></div>
-          <div class="hero-event-placeholder">VENTAS</div>
-          <div class="hero-event-content">
-            <h3>Ventas B2B</h3>
-            <span>Ver evento →</span>
-          </div>
-        </a>
-
-      </div>
-
-      <div class="hero-events-footer">
-        <a
-          class="btn btn-secondary agenda-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ver agenda completa de septiembre →
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     CREDIBILITY
-========================================================= -->
-
-<section class="cred">
-
-  <div class="wrap">
-
-    <div class="cred-box reveal">
-
-      <div class="cred-grid">
-
-        <div class="cred-item blue">
-          <b>12.487</b>
-          <span>perfiles de decisión identificados en red propia</span>
-        </div>
-
-        <div class="cred-item">
-          <b>Foros + Rondas</b>
-          <span>contextos reales para reunir perfiles y abrir conversación</span>
-        </div>
-
-        <div class="cred-item gold">
-          <b>Red + criterio</b>
-          <span>selección, contexto, activación y seguimiento</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     EVENTS
-========================================================= -->
-
-<section id="eventos" class="section events">
-
-  <div class="wrap">
-
-    <div class="center reveal">
-      <span class="kicker">Próximas conversaciones</span>
-
-      <h2>
-        Participa solo en las que tengan sentido para ti.
-      </h2>
-
-      <p class="lead">
-        Los eventos son gratuitos. Abre el evento en LinkedIn, revisa los detalles y marca tu asistencia.
-      </p>
-    </div>
-
-
-    <div class="events-grid reveal">
-
-      <article
-        class="event-card"
-        style="--event-image:url('/img/evento-ia.jpg');"
-      >
-        <div class="event-card-bg"></div>
-        <div class="event-big">FORO<br>IA</div>
-
-        <div class="event-content">
-
-          <div class="event-badges">
-            <span class="event-badge">Inscripción abierta</span>
-            <span class="event-type">Foro Ejecutivo</span>
-          </div>
-
-          <h3>Foro Ejecutivo de IA</h3>
-
-          <p>
-            Inteligencia artificial aplicada a empresa, adopción, decisiones y creación de valor real.
-          </p>
-
-          <div class="event-actions">
-            <a
-              class="btn btn-linkedin"
-              href="https://www.linkedin.com/events/7491782425069621248/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver evento y asistir →
-            </a>
-          </div>
-
-        </div>
-      </article>
-
-
-      <article
-        class="event-card"
-        style="--event-image:url('/img/ronda-alianzas.jpg');"
-      >
-        <div class="event-card-bg"></div>
-        <div class="event-big">RONDA<br>B2B</div>
-
-        <div class="event-content">
-
-          <div class="event-badges">
-            <span class="event-badge">Inscripción abierta</span>
-            <span class="event-type">Ronda B2B</span>
-          </div>
-
-          <h3>Ronda de Alianzas B2B</h3>
-
-          <p>
-            Profesionales con buyers compartidos, servicios complementarios y posibles siguientes conversaciones.
-          </p>
-
-          <div class="event-actions">
-            <a
-              class="btn btn-linkedin"
-              href="https://www.linkedin.com/events/7496395870095998976/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver evento y asistir →
-            </a>
-          </div>
-
-        </div>
-      </article>
-
-
-      <article
-        class="event-card"
-        style="--event-image:url('/img/corporate-finance.jpg');"
-      >
-        <div class="event-card-bg"></div>
-        <div class="event-big">CORPORATE<br>FINANCE</div>
-
-        <div class="event-content">
-
-          <div class="event-badges">
-            <span class="event-badge">Inscripción abierta</span>
-            <span class="event-type">Foro Ejecutivo</span>
-          </div>
-
-          <h3>Foro Ejecutivo de Corporate Finance</h3>
-
-          <p>
-            Finanzas, crecimiento, financiación, M&A y decisiones que afectan al valor y al futuro de una empresa.
-          </p>
-
-          <div class="event-actions">
-            <a
-              class="btn btn-linkedin"
-              href="https://www.linkedin.com/events/7496399111244529665/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver evento y asistir →
-            </a>
-          </div>
-
-        </div>
-      </article>
-
-
-      <article
-        class="event-card"
-        style="--event-image:url('/img/ventas-b2b.jpg');"
-      >
-        <div class="event-card-bg"></div>
-        <div class="event-big">VENTAS<br>B2B</div>
-
-        <div class="event-content">
-
-          <div class="event-badges">
-            <span class="event-badge">Inscripción abierta</span>
-            <span class="event-type">Foro Ejecutivo</span>
-          </div>
-
-          <h3>Foro Ejecutivo de Ventas B2B</h3>
-
-          <p>
-            Prospección, conversaciones, procesos comerciales y diferentes formas de vender mejor en B2B.
-          </p>
-
-          <div class="event-actions">
-            <a
-              class="btn btn-linkedin"
-              href="https://www.linkedin.com/events/7496401159276941314/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver evento y asistir →
-            </a>
-          </div>
-
-        </div>
-      </article>
-
-    </div>
-
-
-    <div class="agenda-cta reveal">
-      <a
-        class="btn btn-primary agenda-link"
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Ver toda la agenda de septiembre →
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     EMPRENDE360 EN ACCIÓN
-========================================================= -->
-
-<section id="anteriores" class="section previous">
-
-  <div class="wrap">
-
-    <div class="center reveal">
-
-      <span class="kicker">
-        Emprende360 en acción
-      </span>
-
-      <h2>
-        Las conversaciones no son una idea. Ya las estamos ejecutando.
-      </h2>
-
-      <p class="lead">
-        Foros, Rondas y mesas anteriores sirven como prueba de ejecución: reunimos perfiles, moderamos conversaciones y creamos contexto para que aparezcan nuevas relaciones.
+      <p class="hero-scale">
+        Una red construida durante años entre España y Latinoamérica, con relaciones directas, comunidad, especialistas, partners y decisores B2B.
       </p>
 
     </div>
 
 
-    <div class="previous-grid reveal">
+    <div class="hero-routes reveal">
 
       <a
-        class="previous-card"
-        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
+        class="hero-route"
+        href="https://emprende360.club/septiembre"
         target="_blank"
         rel="noopener noreferrer"
       >
-
-        <div class="previous-thumb">
-          <img
-            src="data:image/jpeg;base64,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"
-            alt="Foro Ejecutivo B2B México de Emprende360"
-          >
-          <div class="play">▶</div>
+        <div class="route-icon">💬</div>
+        <div class="hero-route-copy">
+          <b>Agenda</b>
+          <span>Foros Ejecutivos, Rondas y sesiones B2B.</span>
         </div>
-
-        <div class="previous-body">
-
-          <span class="previous-label">
-            Foro Ejecutivo
-          </span>
-
-          <h3>
-            Foro Ejecutivo B2B México
-          </h3>
-
-          <p>
-            Especialistas B2B compartiendo perspectivas alrededor de negocio, relaciones y oportunidades.
-          </p>
-
-          <span class="previous-link">
-            Ver sesiones anteriores →
-          </span>
-
-        </div>
-
+        <div class="hero-route-arrow">→</div>
       </a>
 
 
       <a
-        class="previous-card"
-        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
+        class="hero-route"
+        href="https://emprende360.club/activadores"
         target="_blank"
         rel="noopener noreferrer"
       >
-
-        <div class="previous-thumb">
-          <img
-            src="data:image/jpeg;base64,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"
-            alt="Ronda de Alianzas México de Emprende360"
-          >
-          <div class="play">▶</div>
+        <div class="route-icon">🌐</div>
+        <div class="hero-route-copy">
+          <b>Activadores</b>
+          <span>Ayuda a llevar las conversaciones adecuadas a tu red.</span>
         </div>
-
-        <div class="previous-body">
-
-          <span class="previous-label">
-            Ronda de Alianzas
-          </span>
-
-          <h3>
-            Ronda de Alianzas México
-          </h3>
-
-          <p>
-            Una sesión orientada a detectar complementariedad, posibles cruces y siguientes conversaciones.
-          </p>
-
-          <span class="previous-link">
-            Ver sesiones anteriores →
-          </span>
-
-        </div>
-
+        <div class="hero-route-arrow">→</div>
       </a>
 
 
       <a
-        class="previous-card"
-        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
+        class="hero-route green"
+        href="https://emprende360.club/perks"
         target="_blank"
         rel="noopener noreferrer"
       >
-
-        <div class="previous-thumb">
-          <img
-            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwMDAgQDAwMEBAQFBgoGBgUFBgwICQcKDgwPDg4MDQ0PERYTDxAVEQ0NExoTFRcYGRkZDxIbHRsYHRYYGRj/2wBDAQQEBAYFBgsGBgsYEA0QGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBj/wAARCABlALUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmP2r/ANqz4iT/ABi1rwB8PvEd54c0XQ7hrGa405zDc3Vwh2ykyr8yqrblCqRnbk5yAPndPjl8asD/AIu/49J/7GC7/wDjlN+OPP7UXxI/7GnU/wD0rlrhguBXRGKsQ2eiH45fGZkj2fFnx4jBcOx8RXjb2z1x5nH09qli+NvxnaNifi7489P+Q/d//HK87gEW9jOJCm1sBGAO7B29QeAcEjuMjIzkWIWCDIGS3HNaRSuJux30fxp+NDTKn/C3/HYycZPiC7x+P7zpVqH4z/GVg/8Axd3xz3XnX7s8+o/ee1eeJnzGBZSAQMoe5Gf/AK31q6iCNdi4x79q2UURzM7A/HL4wqmw/Fnx2HHPmf2/dnPtjfTV+N3xl8vJ+Lnjon/sPXf/AMcrhmhcs7HbgNtOCM5q9oujz6vqP2SFvLjVd80xUsI06dB1YngDvTcUtWClJ7HTN8bvjPvO34veO8f9h+7/APjlH/C7PjUTgfF3x5/4P7v/AOOVv6d8M9Vu7XfpHw28T6ine6vQyq/uAMAZpmpfD/U9Mt2k1r4Y3dlERgy2TSoyfXDMMfUVyPE0e50LD1bXsZEfxo+NLBs/F/x0Cozg6/d//HKaPjb8Zj/zVzx3/wCFBdj/ANqVj6p4dS3sJNS0i5e8sIv9esqBZrU9vMUdV7Bxx6gVjiM/w4NddNRqK8Tnk5RdmdgPjX8Z85/4W747x/2H7v8A+OU//hdnxlP/ADVzx3/4P7v/AOOVxghZZVPBwfzq3Z6Vf6hqtvpemWk15d3sogtoIlJeV24Cj3//AF1r7FJXYlJtnSP8a/jOCSPi947/APCgu/8A45TD8bfjScY+L/jwcf8AQfu//jldt40/Zn8deCfh6/ijUNW0S/nt4/PvdKsWd5YI+5DlQshX+IDsCQTivFQsbDO9QCMjBBzXPTnSq3dNpmlSFSm/fVjtB8bfjPgg/F7x6Tnr/wAJBd//ABym/wDC7fjQAf8Ai7/jz/woLv8A+OVxTQMOoP4ioyhFW4LsZ8zO3/4Xd8af+ivePf8AwoLv/wCOU0/G/wCNI/5q949/8KG7/wDjlcSFzntgZpNu7gkgH0pci7D5mdofjh8as8fF/wAej/uYbv8A+OVLafHn43WVyl1H8XfG7vG24CbW7mVT9VdypHsRXBFBvIzSMmAeM+3rUSgmg5pH6tfshfHrVvjd8LdRj8U+U/iTQZ44Ly4hQItzHIGMUpUcKx2SAgADK5GM4BXin/BNgAf8LNwMf8gr/wBvKK4pqzsaxd0fJXxwG79pv4kMABt8VamCO5/0uXmuCfKnHB47V3nxyY/8NO/EUBBhfFGqZ9Tm8l61wiLvA5/+vW62IHqp28A+9OG/gYOKkQZDBmCkLkAgnccjj8iT+FAYY4NaqL0RLZLArichlPyDdjHOMZ/LHNaR5Qk8fLnms6JEY5G0HHWui0DTzqupsHQPFbwtcSqWxuVSowB3JZ0GPc+lbR91CWrNjwD8NPEPj7W7TTtN228d1KIxLJyDnq2P7oGST6Div0n+C/7PHw7+E3h6F7S0j1fWG/eT6pdqHZnx/AOgA5A74r5E+BXiGK113UdXv1eOx023EjeSu5tzHCoB6kKePau68R/tia7p3m2ejeFWSNBiOVyWZRnv2zXi4zETnJwWx6lPDxUFI+m/HmpxQOY4IUZsHHHB/KvIL66u3lJkjwCcYFeM/wDDQWr+KyJ7maSOVeqlCKoar8aruwRPtNwwRemF614k6E3OyPYpuMYLU9P1LwroOvXJlvNOhivQpC3kICSj2J/iB7q2Qa+b/ib8KZPCmufabVFtrG7YmDH+pz/EFPVPXa2R6HHTu9M/aH0OWdFu7K4L5xvjXH6Vs/FfX7XWfhUb63dZbeR45I3HIBBzx6GvQwdathZanDi6VOrG6ep82ro119vjsFt5JLqR1jSFR8zMTgAdjnIwc4Oa+ovhb+zpP4P8aaT4u8QeL9KfVbCVpIdIibbFFIVKgSznrgMc7RjI7jmvCvh3eR3/AMTdB065vIbNpNRiFnfXH3IJt4Kq57RuwCk/wlgw6HP15Y/Cy9W7a41jx8unteys6WE9pvniBJGJMsBuznpxXqZnmMnSUaez3OPL8JCU3zvbY1b6bQby6+1aovmkDy5LYXCvEMZBUheHB59iD6VyOo+G/goy+Qfhx4WkVj80a2/lk+4IPWuxuvhBoNnKttqev3FyFjMyJDeRwrKB975VBI65xmn6LafDzQtzWug6dHcL0nuAbiQH2aTdj8MV8xGcqd+R2PbqRjUVnqcDJ8Av2f8AxFbiWz8Palo8xPzLpt/Ioxjpj5hiuG8SfsXTai73Hw/8SvDCMlYfELfLJ/uyIu4fipFe96p8QtM0u4Ezw3Eyv8v+jtkHH8utSw/FC3/swb9G1FIiD/pMULtCnsXC7c+2a6KePrw2kcs8HSkrWPjDX/2W/iZ4dhY3F74WvLnaWjsLLU2NxN7IrxqGPtkZrxu8tLix1GexvLae2ubeQxTW9whjkicHBVlPII9K/Q240m28eONS2XsKRtlbh0aMn6ZFTeJPgt8N/inp8dl4puDb+IIotkOsW5WK7wOgJ6Sjp8rDp0Ir1MLm7btWOLEZclG9M/OMoQ3Q01lPfI9vWvcvi3+zV46+FFtNrMnk+IvDatzrGnqf3A7faIusf+9yue4rxVkDEN2I4IPWvahONRXgzypRcdGj7m/4Juf81N4x/wAgv/28oqT/AIJwrt/4WXznP9l/+3dFcVdWmzWGx8ifHKMf8NN/EdtxOfFGp8f9vcv/ANauGiX5U213Pxw3j9p34kANgHxRqf8A6Vy1xcWO4ycZz+Hp9c10QWhIHIOaBGxGQKnYK0YAUKR1OOtOgjYHcxKr0DY4J9K3ijJ7kcKsj5Jxkdc19LeDvghqVl8FtD8Y6nEtraeIb2y8+6WVfMW3uJBFBbwxj5g53+fI/QKUAB2sR87QWkd7dR2Uspj85xEX64zwf0zX1F8RPjzd63oHhfQ00i2sNG8OXbXdvbQMWExigZIN+SOFz0HqTg4FRVvFaFQetztPBGi3fiP4SeOvEvh/RUZta1+SK0gs4goW2tQtugXnjIXJ56kmvD/GNzrdjq6aevhuG3G0iUfavMIIPc9N3qBwK+xfgTfaZ4V/Zz8KWGsLHIZtPF1MSowzTO0pyPo4rgfiRD8HW16e8GnxR3BOSbFdrSMT0x0J6dfWvlqtduo2j6ajRlyJHi3w3+Huq+Mrm8nS3MFtZ25ubh88BR2+p4x9a5/x34cGg61NbXVu0iJyBtLbh2r6Vt/iR4F8DeC7zwpp8Sy3szol29tIGWLBDbM4yT0yemQe1cf40n0Txhp6amLpRDI4iEsihWV8fdOPXmsfayUuZm8Y3TizwHw9e+FJNY/s3UYZrIqpZpfs25U9yR29TXpOteHorn4Ca3c2vkiSGMzkxNlJSjZ3AepU9RV3Q/h5G2qRzpqCMo4+4Dx6ZI6V6R4g0Cw0n4W6vZpBAI20+feFGAcxk9q1dZOSsc9am1F6HzvpPhzwH/wyBq/ii58W6RF4vXWIpn0t5D9p+xMyxxrGn/PQlHlB6BSdxHFe3fEa/wDEeo/EhNS8OR6jqtnd+VJbmLJlBdVOyQdnycE9CenFfKWjrBcWKQ3ISRINOt1G8AlCyFmx6DBXp1r7n0LwhNqvw30DUoIDOJbCEM+M5KqAee//ANavdw2X08XNxqO3Y8Kpmc8DacI37nE219r/AIicLpulNFcW7PbzNeXiqRIpwwPoAR/+utofCn4l3MrLeXmnWRCCVir+eFQ98gjPNcjrHhL4jeH/ABi/9keGNXu4JHLo9lA8iOhOdrbfun/ex+NaN4nxWQxnSfAWv28gXbIZQd/064x7V4k8HUTceVn0DxdFpSjNanV2Hwmt5rSZNZ8a3kqHKsLVFgU/iCWH4GuJ8XeGfGPwpZW8LLqTaPExnW1kjmuLWVc7scdmwc42t19jVSDSfjdLqsD2vg3V1VZVdo3AAkAIyOuOma2bb4t/EHwT40mg8VR6/o9s0hWWCWKRV9tuRg/gcVlLB1YatMiNanWuoyR2egePdV1qW/TTPDvlwQTeQsFqZLraQiksWboSW+6OF4HXJM50zxjdanFdL4XuYUDbjcXLrBt/AnJq9ZfHfSr6zebS/s0ag5k3IqMxPUngZPvWDrPxFt0tRdW4tLSJzuBhkJLD0IJx+VYcruapcqPU9I8SQx2nkyTW01wRsMBYES5GCpB65GevBryTx1+y58GvHXn6poDXPgjVZiXf7AQ9ozkdWt34HP8AzzKD2qpp3xAsLqdLlJcTDvgV0UfiJdQheNJFyVOMnHNdNPE1KbvF2Oerh41N1c0v2Nvg/wCK/hHq/wAQLXxDcaZeWl8dPNjfafPvS4VPtO7Kn5kI3rww78Zorrf2adXOp3ni6LzN/wBnNov5+d/hRXr06rqxU5bs8mtSVKbguh+bPxux/wANP/Efdtx/wk+qcsSMH7XJXERnge9dt8cP+TnfiP8A9jRqf/pXJXEpHhlDYyVDAg54IzXp01ocsnYnHSnjJULnjOcdqaqfMBnA9TUqISAea6Ix7GTZo6ffrZ+INNvlhjjNtPC5MYxkq+Q5znJ6H0+XpXS+J45/9N8yQzZMj78Y3EhiTjtnOa4+OHe23Gc+vSusttdhm0oafqtm9wVi8tZo3AbGP4geDx39quVFzi0txKSi9T6f1nX7ix+E3he3t32bdHsxkHH/AC7pXkdlKdY8YwRXd0sVuZP300jcIvUknt0rrI9UTX/hTot1AzMYbNbaTcMENENmMfQLXJaZ4Jk1+7jvb/WpdN0+KbdMY0Lb1B5HHrXx8qfs5yjLc+toVuaC5Rni/QfCyeLLy68Naqht7k7nkKkMCRyuerAepqfS/D0Gm+A5hZaq0w80Trbhsxqe/J53c0utaV4YsZDaaVcx36IcCe6jMbvx3APU1hSaLr1oyzaZqlkLOQETxBHG4egP6U2uZWNWnHWx2PhrxZc2MqKZmJ+7gntXR+NPGBh+FuuXTMx22MijnPLDb/WvLNMAjulB7cVL8QpdQuPAH9l6ZZXl5Lcyo0qW0Dy7YkOSW2g4GcDn1qaVK8kYV6z5G5HldhNILad4ymFiRZTux8igLnHoOMkV+kfgPx7B4Y/Z68KWOkm11B4NPRXuCdylzknp0PPTrX52eBvD+sa548stKtbYwyu/743ULBIocHzHdSASgXOQOTnA5Ir6m8M+FbPw34ZvEsJ7aztpArEmJ4FlOeCFLMWJyPmJzgYr6zK8N7SonKN4nyGZz/d2i9TsPFXx28biSVbHUEtFzjFtEMn9MmvNNS+LHxh+zPexa9qYgY7VkllEajIPC7iMnr0BxiotZMVpqMtuFuLi+h3Ar5W8pIBwNgz09TXCahqQ1LXJLBpbma6dHEU88EgCkD59iHBcgD2U9z0FfSyjRgvcSPIo0pSs5biat8SPiM8rNP4w1fzNpJC6g6jpnGOBk4rl9Q+I/wASEh8m68T6zJbyIGEM148kbKe+0kqan121ljHklrkLMimDzVVTcjPDcYHTJGP7pHJrjtRF0olhu/PikgO3y7hJEZO4UK4yOCD9DmuatXTjaJ6FOioO63NS1+IGrxX6NdpBcwZxJGUCMw/3gRj8q3NN8WW2uym2uJG02b70bKxMBGe+eUPTrwc152WiWPAjxIc7mLnnpjjtjB+ufaolmeKYTROyOp4ZCQR+Irx6+FpVFrHU9CliqsHe57ILnVNLmBdnGeQS2Qw9Qe9alr451G1B2SkucjOa8lsvHWtaVfQSxzpcKnE9vOqvDcnqSV6Z5+8uCTgnJr2nT9K8K+LNAt/Eul2IjS5XLRqSpicfeRgOMj+RBr5/E5f7PU9mhjlU0Z9MfsT3b3g8cySEls2BOff7TRWh+x1pdvph8aLArLv+w5y5bp9o9enWinRjywSOPEy5qjZ+f3xuAP7T3xHz/wBDRqf/AKVyVxESYOfwr2/xD8J/H/xa/bA+JekeBNCe/WLxRqX2u9lbybW0Bu5cGSU8A9flGWODgGvoDwn/AME/9Bt7OKbx/wDEW9uLnhntdDgWGJfUeZJlm784H0r0VVjBanE4tnxHE6i2kiW3SQyBfnfcGTHUDBwc+/pT4keMBGRhnpkV+i0f7JX7OGjALceG9V1Rx3vNVlO4/RcCqz/AL4HpfGDRPg1YXkpHCS3FxIPqQXx+NVHH04sPZNn59BkiGJJEGQGxuGcY9Kv6XaS6nqcNlpsUl7dzMI4ba3Us8jHoABX6L6X8Fb6x2Hw/8P8AwT4bjUcSyW8bSKB0I4c/mRWJ4p8UWnw41S1k0a20rV9Zh/ezajcWUaomDjyoUQDbnHLkluRXRHM4a2iQ6EnszwB/DV98H9KsPDXjBBDqeqAaiYlbK2cZUL5RHPzHqSf4uBxWnbWGiatpODrC2kfOVyAMfSup+MemW3xyttP8QWet22la5HGYo1cmW2nzg+Wdo3IQeNwB75U4r5emm1uw8yzadWaNjG3lvvQkHB2t3Gc4PcV87ioupUdR9T28FUcIcp2moaXotrrUlvBqv2mHPyyqMVqbbG100hLhWUjHJrymTUb8cyLz6iqF5rN75JQOyj0BxWKoX6nS8Qz0vSrebWNe+waRCs0ijfLJLIIobdM43yyn5Y09z9ACeK9C1vx/pPw9+E97H8MPElpr9+b2FdeuJLF4ojERsQWswKs8SyEKeSMsWwOa8t0jVG0j9m+2vrGUSXeqardw3KPyFkhRWjOPQI3B9Sa1vBvhKTXvhFqVjLIxnvrRgrk8lt+8H8wK6aVL2clI4a9b2vunSaN8Y5PEGjQ6f4m02GS3tt8m+1dopdzlQFD9cDk4/wBkV6TofjPwN9vgvbQXsN5CAImnk80JgAAqp+VenXFfN0fhLVtK0WaNopDO0yttUg7toOBnty7fpWxp1vdwSrFOrBjyOc5FdU8bWScVJ2OaeGpaXR9caHPa6pL5+mXKFm5Z1UBm5ySSO+a6jUPh34d8Z6RJY+JNMguVlGGYqMk9mGMFWHUMpB968U+FkV1p7teGR8HjaelfQnh3WFnjUSAA9K41UmnzJ6kunG1kj4m+NnwH8TfDq7k1TTY7vWvDYYAXQUyXFgMHaJdoyYueJBxxg4Oa8Ru9Uu9SmN3qGoPdscb5riYySEHjkk5PC4HsPQV+tl9NLFpst3aytHNEjMjr15Byv0Pp0yBXM6H4f+Ffj3QY5fEnw98Mahcf6uaZtPiVi21Sxyqg8sWr2KOa+6ozRzulqfmjZeFra68ESa/H4j0reGMY0eV5VuZEyFaRCq7CoOOpBPAAPNczNYwRiXN8Ipg+I7eZDub5iG3Nn5SOOMc+1fp5ffsk/s439892nhebT/MJ8yK0vZY0cHkgjPI9q3fDv7NH7Ouhb/sPw70eZyeZL7fcn8N5OKt4+AvZM/J+S0RrbzEuoCyEIyBWz35yBjtjk7j2BFemfCvxE2ieJZfDsod9P1BiY5S3AlUfK/Jxhl4OMcBc8iv0qv8A9nz4B6mMXHw48OK3Z4LfymH4risOT9kj9nR1Yx+ALOGdm3rPFdSq6NnOV+bAwfaueriY1FZrQ1hHl1Of/ZLura5m8ZiBwWQ2QdM8qf3/AFHaitP9nj4cap8Mvit8S9DvpZbq0lGnT2F64H+kQk3WDx/EDlWHqD2IJK5krLQ0nLmdz1Sd9P0hrmy0uygtIpLiW4kS3jCCSaRy8jsB1ZmJYnqSaqH7TdptCsqnqxqzLbiTWbqSQjaJn6/7xq0JoVXYjLj61yttt3GkZKaRbpKHkh85hz85yAasyvpei6VNql9Lb2UEK5knk+TA9M+p9B1pmueINJ8N+H59Y1e6WG2iUnry7dlX1JOK+KPi58b9b8deIpdN011is4mPlW0Z+WH3OOC38qqEbjueofEn9opbud9I8LxyCzU7Pk4e57ZP91a8jvrnxV4p07S9OW1tZdc1W7a0t4ISdg3SHy9xPQKpBdugAJrC8J2c8c6Ndr5rM3zORliSefpX1Evw68FQaR/bfhkamdR+wzWaxzzr5cBniKyTA7dwYJvUc4G88ZxXbGkrXM27HxP408Y2/h1b/wCHXw9v2/slWaHVtdHFzrkxx5pB/wCWNsSNqxLguoBkLA4qnpGljUvDSiFCXgAUDrxjisPU/D7QalftLv8AMimkBPQHaSPywB+Fej/C20kF89vKhZJVHArz8XK2x6WGjocFPpu0lCuCDjBFbHhD4V3/AIxuZb2QLa6Paq01xdynauxR82D6DPJ9eACTXsOmfBjVvG/xQs9GsozaWdxIXvLrGRBAOXbn+LHAHqRXo/itvCUTL4H8DQRPoFjIrXl5v3NqEqZ2RoenlIcknozc9qeChKr73QnF1lT91bngniDwNpj+GrW6u9SXQfDdgpS2iSAyXV8zcu0cWeGbAA3HgDJ61qfBq+kvbnWoJ7Sa0gWUNZ21w4d44ioABI4z8vOOMmuj8ZWwvLpIJSsjwkCVx24wAPQD0+tYXh+0k07x3CluTH50ZjZMcnAyK9CpD3TzYyb1Oun8MafcSXTShmdZiyZb+EjI6flVTVvh1ey2mj3tpbmJXuXglfHRSu5Tj6hq7W80TU4LUalapG00YDmBzhZ16lCT0PXB9evBrrrPWdG1X4cyalbS4WymSWeOQYa3dWAdJFPKkKzH3AyK85s7p+8ueOwzSdCs9M0WKK2GBsGT3J9an0+WaPUNsTkKCOR1rVKW5t96OvkY++T0FZ58qCNpLdgC3G88H8BSsc7a2Ot/tSOe0t7cmSU/NuRWCg5BABP1IPHpXzX/AMJ/qOk/CbxHp1vO9vfQSEPLGxVlL3OxlHcEKMZr2K0nuI7hEEbk5zuPHT37fjXzD8cEk8L/ABC1yESA2mtJFqEeBgcuu8D1w6kk/wC3VR3JaJfDnhDxJ4u8F+IPFlj9nj03RIvOuZbmRlMx4ykeAdzAEE5wBkZPIrf1L4R+NbCACyksNXvY7iO0u9O02V5J7KV4TMqyhkVfuK3KswyCM5rF8F/Hmx0f4b6h4Q1nwlps9uui3NhYzW32gPJNNLHIzXGLhVKnZyyrv+RAPlyK6LxP8V/h/wCLdG1eOSHxTajxNqUGpapttIW+zGC3ZdlsfN/e7pT1cJxwASK6Kmj9zsvvvZ/hd+WncmGtr+f5afj+pg3HgzVrLwNpPi6/13Q7bTNRu1sw4ujcPbM0fmAzLCrlPlwSvLjI+Wrl9pOo+B9K0LxrpfjLTL9L24kWyk0s3MbkxEb2KzQxnZkhc8gnI7GuU/4Smxf4DW/gUrdjUP8AhIG1XzzEPJEJt1i2k7sh884xjHepPiH430vXb2wPh+K7h0LS7GHTtNtrlAsuxQdzuFJG55N7HB7iipa7Ue6+6yb/AB0/4YIra/Z/np+Gvy8z9IPBGq/2l9uRkRWiEfR952nfjJ/A0V4z+yz4r1HxX4t+INxfbgsP9nxxoei/8fOcfkKKcdhtWdmYv7R3jL4g/Dz4jWzeHPG19BYapB562XlRlbcqdrBWIJIJGfbJHSvGF+PHxcDceN77n/pnF/8AE0UV5GJnKNVpM/qfgHIssxuQ4avicLTnNp3bpwu7SaV3bV2W+76nVHxFrvj/AMOJ/wAJdq97qIV8AGUxAYAPAj2//XrBtPhv4Nsbk3FppUsch5yLyc/oXxRRXtNH898X0KdDOcTSoxUYqTskrJeiRv2+l2No6tBBtK8jLs3v3NdPJ4u8Qy6JcaQ2olbS4XZKiRIhYem4KGH4Giii7Pmzg7zwN4V1CeWa70oSPKMO3nSDdxjs1W9O8NaJpNws+nWXkSL0Kyuf5miiolCMt0Wqklszqj4j1r+wr7R1v3jtL6MQ3KxKsbSIP4d6gMBycgEZzzWPZ28Gn26QWcKRRpjaoHAx9aKKuL5VaOiIl7zuyGTTrKUkyQgljknccnnPXNWbdI7S3WG1hhiUMGykahiR6tjJ/E0UUOTfULF99Y1KSPY9zlemNi/4VQVQl1c3CfLJdWr2Vxt4E0LDBVx0bGTgnJXPykUUVPKuxUZOOzNC01nU7LSodNt7oi2hQIisquQB0yzAk/Uk0g1fUA+8TLu9fLX/AAoopcq7EinWtTMew3Py5yfkXk+/Fc54o8O6N4zNsfEtit8bVGjhJZoyqscsMoRkZGeaKKOVdgOeT4SfD6NcJoBA/wCvuf8A+LqRfhZ4EUYXRZAPQXs+P/Q6KKdgD/hVfgT/AKAr8nJ/0yfn6/PzU8Xw38FQXcdymiKZIyCheeVgMexYiiiiwH1j8AvBWi+F/hw+r6ZDsuNbl+03DZJ+5lFXkngYY9vvGiiimNu71P/Z"
-            alt="Mesa de Founders de Emprende360"
-          >
-          <div class="play">▶</div>
+        <div class="route-icon">✦</div>
+        <div class="hero-route-copy">
+          <b>Perks</b>
+          <span>Ventajas y condiciones especiales dentro del ecosistema.</span>
         </div>
-
-        <div class="previous-body">
-
-          <span class="previous-label">
-            Mesa de Founders
-          </span>
-
-          <h3>
-            Presentación de negocios y founders
-          </h3>
-
-          <p>
-            Founders presentando proyectos y abriendo conversación alrededor de negocio, colaboración y posibles relaciones.
-          </p>
-
-          <span class="previous-link">
-            Ver sesiones anteriores →
-          </span>
-
-        </div>
-
+        <div class="hero-route-arrow">→</div>
       </a>
 
-    </div>
-
-
-    <div class="playlist-cta reveal">
 
       <a
-        class="btn btn-secondary"
-        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
+        class="hero-route"
+        href="#partners"
+      >
+        <div class="route-icon">🤝</div>
+        <div class="hero-route-copy">
+          <b>Partners</b>
+          <span>Empresas y profesionales que aportan recursos y colaboración.</span>
+        </div>
+        <div class="hero-route-arrow">→</div>
+      </a>
+
+
+      <a
+        class="hero-route gold"
+        href="https://emprende360.club/impulsob2b"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Ver playlist completa en YouTube →
+        <div class="route-icon">↗</div>
+        <div class="hero-route-copy">
+          <b>Impulso B2B</b>
+          <span>Activa de forma dirigida tu propio mercado B2B.</span>
+        </div>
+        <div class="hero-route-arrow">→</div>
       </a>
 
     </div>
@@ -1959,65 +1380,331 @@
 
 
 <!-- =========================================================
-     HOW
+     SCALE
 ========================================================= -->
 
-<section id="como-funciona" class="section how">
+<section class="scale">
+
+  <div class="wrap">
+
+    <div class="scale-title reveal">
+
+      <span class="kicker">Una infraestructura B2B que ya existe</span>
+
+      <h2>
+        La escala importa. El criterio todavía más.
+      </h2>
+
+    </div>
+
+
+    <div class="scale-grid reveal">
+
+      <article class="scale-card blue">
+        <strong>12.487</strong>
+        <b>decisores B2B identificados en red directa</b>
+        <p>
+          CEO · Founder · Socio · Owner · Dirección General · C-Level dentro de la red de primer nivel de LinkedIn.
+        </p>
+      </article>
+
+
+      <article class="scale-card gold">
+        <strong>+70.000</strong>
+        <b>miembros en la comunidad principal</b>
+        <p>
+          Profesionales, founders, especialistas y empresas reunidos alrededor de emprendimiento y negocio.
+        </p>
+      </article>
+
+
+      <article class="scale-card blue">
+        <strong>ES + LATAM</strong>
+        <b>relaciones en distintos mercados</b>
+        <p>
+          España · México · Colombia · Argentina · Chile y otros ecosistemas B2B.
+        </p>
+      </article>
+
+
+      <article class="scale-card gold">
+        <strong>5 capas</strong>
+        <b>que trabajan sobre la misma red</b>
+        <p>
+          Conversaciones · Activadores · Perks · Partners · Activación comercial.
+        </p>
+      </article>
+
+    </div>
+
+    <p class="scale-note reveal">
+      No sumamos estas cifras como si fueran una única audiencia porque existe solapamiento entre redes y comunidades. El valor está en combinar alcance, selección, contexto y capacidad de activación.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT IS EMPRENDE360
+========================================================= -->
+
+<section id="que-es" class="section what">
 
   <div class="wrap">
 
     <div class="center reveal">
-      <span class="kicker">Cómo funciona Emprende360</span>
+
+      <span class="kicker">Qué estamos construyendo</span>
 
       <h2>
-        No juntamos gente. Diseñamos razones para que la gente adecuada hable.
+        No otra comunidad. Una infraestructura relacional B2B.
       </h2>
 
       <p class="lead">
-        La red por sí sola no crea valor. El valor aparece cuando hay selección, contexto y una siguiente acción clara.
+        La red, los eventos, los especialistas, los partners, los activadores y las distintas comunidades forman parte de un mismo sistema.
       </p>
-    </div>
-
-
-    <div class="how-grid reveal">
-
-      <article class="how-card">
-        <div class="how-num">1</div>
-
-        <h3>Seleccionamos</h3>
-
-        <p>
-          Temas, perfiles, buyers y situaciones donde existe una razón concreta para entrar en conversación.
-        </p>
-      </article>
-
-
-      <article class="how-card">
-        <div class="how-num">2</div>
-
-        <h3>Creamos contexto</h3>
-
-        <p>
-          Foros, Rondas, conversaciones, red propia y relaciones complementarias convierten un contacto frío en algo más natural.
-        </p>
-      </article>
-
-
-      <article class="how-card">
-        <div class="how-num">3</div>
-
-        <h3>Activamos</h3>
-
-        <p>
-          Cuando existe recorrido, seguimos la conversación, buscamos cruces y decidimos qué siguiente acción merece la pena.
-        </p>
-      </article>
 
     </div>
 
 
-    <div class="how-principle reveal">
-      El problema normalmente no es que falten contactos. Falta contexto para activar los contactos correctos.
+    <div class="what-grid">
+
+      <div class="what-copy reveal">
+
+        <h3>Tener contactos no significa tener relaciones activas.</h3>
+
+        <p>
+          Puedes conocer cientos o miles de profesionales y seguir sin tener una razón natural para iniciar una conversación.
+        </p>
+
+        <p>
+          Emprende360 trabaja precisamente en ese espacio: seleccionar quién debería hablar con quién, crear una razón para hacerlo y continuar las relaciones que muestran recorrido.
+        </p>
+
+        <div class="what-quote">
+          La ventaja no es acumular contactos. Es convertir red + criterio + contexto en mejores conversaciones.
+        </div>
+
+      </div>
+
+
+      <div class="system-flow reveal">
+
+        <div class="flow-item">
+          <div class="flow-num">1</div>
+          <div>
+            <b>Identificamos</b>
+            <span>Tema, mercado, buyer, especialidad, necesidad o complementariedad.</span>
+          </div>
+        </div>
+
+        <div class="flow-item">
+          <div class="flow-num">2</div>
+          <div>
+            <b>Creamos contexto</b>
+            <span>Foro, Ronda, entrevista, sesión, partner, activación o conversación.</span>
+          </div>
+        </div>
+
+        <div class="flow-item">
+          <div class="flow-num">3</div>
+          <div>
+            <b>Movemos la red</b>
+            <span>Seleccionamos e invitamos perfiles para los que esa conversación realmente puede tener sentido.</span>
+          </div>
+        </div>
+
+        <div class="flow-item">
+          <div class="flow-num">4</div>
+          <div>
+            <b>Continuamos</b>
+            <span>Las conversaciones buenas pueden evolucionar hacia relaciones, colaboraciones, partners, oportunidades o nuevos proyectos.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FIVE DOORS
+========================================================= -->
+
+<section id="puertas" class="section doors">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+
+      <span class="kicker">Cinco puertas de entrada</span>
+
+      <h2>
+        Entra por donde tenga sentido para ti.
+      </h2>
+
+      <p class="lead">
+        No todo el mundo llega a Emprende360 buscando lo mismo. El ecosistema está diseñado para que cada persona pueda participar desde el papel que realmente le encaja.
+      </p>
+
+    </div>
+
+
+    <div class="doors-grid reveal">
+
+      <article class="door">
+
+        <div class="route-icon">💬</div>
+
+        <h3>Conversaciones B2B</h3>
+
+        <p>
+          Foros Ejecutivos, Rondas, entrevistas y sesiones alrededor de problemas empresariales concretos.
+        </p>
+
+        <div class="door-tags">
+          <span>Foros</span>
+          <span>Rondas</span>
+          <span>Sesiones</span>
+        </div>
+
+        <div class="door-actions">
+          <a
+            class="btn btn-secondary"
+            href="https://emprende360.club/septiembre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver agenda →
+          </a>
+        </div>
+
+      </article>
+
+
+      <article class="door">
+
+        <div class="route-icon">🌐</div>
+
+        <h3>Activadores</h3>
+
+        <p>
+          Profesionales con relaciones B2B relevantes que ayudan a llevar determinadas conversaciones hacia las personas adecuadas.
+        </p>
+
+        <div class="door-tags">
+          <span>Red</span>
+          <span>Distribución</span>
+          <span>Criterio</span>
+        </div>
+
+        <div class="door-actions">
+          <a
+            class="btn btn-secondary"
+            href="https://emprende360.club/activadores"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conocer Activadores →
+          </a>
+        </div>
+
+      </article>
+
+
+      <article class="door perks">
+
+        <div class="route-icon">✦</div>
+
+        <h3>Perks</h3>
+
+        <p>
+          Ventajas, descuentos y condiciones especiales ofrecidas por empresas y partners para profesionales del ecosistema.
+        </p>
+
+        <div class="door-tags">
+          <span>Software</span>
+          <span>Servicios</span>
+          <span>Ventajas</span>
+        </div>
+
+        <div class="door-actions">
+          <a
+            class="btn btn-secondary"
+            href="https://emprende360.club/perks"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver Perks →
+          </a>
+        </div>
+
+      </article>
+
+
+      <article class="door">
+
+        <div class="route-icon">🤝</div>
+
+        <h3>Partners</h3>
+
+        <p>
+          Empresas y profesionales que amplían lo que Emprende360 puede aportar mediante tecnología, servicios, conocimiento, distribución o ventajas.
+        </p>
+
+        <div class="door-tags">
+          <span>Colaboración</span>
+          <span>Tecnología</span>
+          <span>Ecosistema</span>
+        </div>
+
+        <div class="door-actions">
+          <a
+            class="btn btn-secondary"
+            href="#partners"
+          >
+            Conocer Partners →
+          </a>
+        </div>
+
+      </article>
+
+
+      <article class="door impulso">
+
+        <div class="route-icon">↗</div>
+
+        <h3>Impulso B2B</h3>
+
+        <p>
+          Para profesionales y empresas que quieren pasar de participar en el ecosistema a trabajar de forma dirigida su buyer, su mercado y sus relaciones.
+        </p>
+
+        <div class="door-tags">
+          <span>Q4</span>
+          <span>90 días</span>
+          <span>990 € + IVA</span>
+        </div>
+
+        <div class="door-actions">
+          <a
+            class="btn btn-primary"
+            href="https://emprende360.club/impulsob2b"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conocer Impulso →
+          </a>
+        </div>
+
+      </article>
+
     </div>
 
   </div>
@@ -2033,24 +1720,16 @@
 
   <div class="wrap network-grid">
 
-    <div class="network-image-wrap reveal">
+    <div class="network-visual reveal">
 
-      <div class="network-image">
+      <div class="network-kpi">12.487</div>
 
-        <!--
-        ==========================================================
-        SUSTITUIR POR LA IMAGEN REAL DE LA RED DE DECISORES
+      <div class="network-kpi-label">
+        decisores B2B identificados dentro de la red directa de LinkedIn.
+      </div>
 
-        Ejemplo:
-        /img/red-decisores-emprende360.jpg
-        ==========================================================
-        -->
-
-        <img
-          src="https://emprende360.club/resumen-visual.jpeg"
-          alt="Resumen visual de la red de decisores B2B de Emprende360"
-        >
-
+      <div class="network-sub">
+        A esta capa directa se suman una comunidad principal de más de 70.000 miembros, grupos especializados, asistentes, expertos, partners y relaciones construidas en distintos mercados.
       </div>
 
     </div>
@@ -2058,48 +1737,22 @@
 
     <div class="network-copy reveal">
 
-      <span class="kicker">Una red que podemos ordenar</span>
+      <span class="kicker">Red + distribución + contexto</span>
 
       <h2>
-        Miles de perfiles con capacidad de decisión.
+        El activo no es la base de datos. Es lo que podemos hacer con la red.
       </h2>
 
       <p>
-        Dentro de la red propia hemos identificado perfiles de dirección que podemos cruzar con temas, buyers y conversaciones concretas.
+        Emprende360 no parte de cero cada vez que organiza una conversación o activa una relación. Existe una infraestructura previa de contactos, comunidades, especialistas y relaciones.
       </p>
 
       <p>
-        La ventaja no es poder contactar a todos. Es poder seleccionar <strong>los pocos que realmente encajan</strong> con cada situación.
+        La ventaja está en poder seleccionar por <strong>perfil, buyer, especialidad, mercado, país y contexto</strong> para decidir quién tiene sentido alrededor de cada conversación.
       </p>
 
-
-      <div class="network-stats">
-
-        <div class="network-stat">
-          <b>7.326</b>
-          <span>CEO / Founders</span>
-        </div>
-
-        <div class="network-stat">
-          <b>2.763</b>
-          <span>Socios / Owners</span>
-        </div>
-
-        <div class="network-stat">
-          <b>1.412</b>
-          <span>Directores Generales</span>
-        </div>
-
-        <div class="network-stat">
-          <b>986</b>
-          <span>otros perfiles C-Level</span>
-        </div>
-
-      </div>
-
-
       <div class="network-note">
-        No utilizamos la red de forma indiscriminada. El criterio de selección cambia según cada conversación y cada objetivo.
+        No buscamos alcance indiscriminado. Buscamos acceso con criterio.
       </div>
 
     </div>
@@ -2110,151 +1763,249 @@
 
 
 <!-- =========================================================
-     ROUTES
+     PROOF
 ========================================================= -->
 
-<section id="participar" class="section routes">
+<section class="section proof">
 
   <div class="wrap">
 
     <div class="center reveal">
 
-      <span class="kicker">Elige tu puerta</span>
+      <span class="kicker">Emprende360 en acción</span>
 
       <h2>
-        ¿Cómo quieres participar?
+        No es una idea. Ya está ocurriendo.
       </h2>
 
       <p class="lead">
-        No todo el mundo necesita lo mismo. Estas son las cuatro rutas principales de Emprende360.
+        Foros, Rondas y conversaciones reales con profesionales B2B. La prueba no es una promesa: es ver el sistema funcionando.
       </p>
 
     </div>
 
 
-    <div class="routes-grid reveal">
+    <div class="proof-grid reveal">
 
-
-      <article class="route-card">
-
-        <div class="route-icon">🎟️</div>
-
-        <h3>Quiero participar en conversaciones B2B</h3>
-
-        <p>
-          Foros Ejecutivos, Rondas y nuevas sesiones alrededor de temas concretos.
-        </p>
-
-        <div class="route-meta">
-          <span>Gratuito</span>
-          <span>LinkedIn</span>
-          <span>Septiembre</span>
+      <a
+        class="proof-card"
+        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="proof-thumb">
+          <div style="position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.17);font-size:30px;font-weight:950;letter-spacing:-.04em;text-align:center;padding:20px;">RONDA<br>DE ALIANZAS</div>
+          <div class="play">▶</div>
         </div>
 
-        <div class="route-actions">
-          <a
-            class="btn btn-secondary agenda-link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver agenda →
-          </a>
+        <div class="proof-body">
+          <span class="proof-label">Foro Ejecutivo</span>
+          <h3>Conversaciones ejecutivas B2B</h3>
+          <p>Especialistas compartiendo perspectivas alrededor de negocio, decisiones y relaciones.</p>
+          <span class="proof-link">Ver sesiones anteriores →</span>
+        </div>
+      </a>
+
+
+      <a
+        class="proof-card"
+        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="proof-thumb">
+          <div style="position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.17);font-size:30px;font-weight:950;letter-spacing:-.04em;text-align:center;padding:20px;">MESA<br>B2B</div>
+          <div class="play">▶</div>
         </div>
 
-      </article>
+        <div class="proof-body">
+          <span class="proof-label">Ronda de Alianzas</span>
+          <h3>Relaciones complementarias</h3>
+          <p>Sesiones orientadas a detectar complementariedad, buyers compartidos y siguientes conversaciones.</p>
+          <span class="proof-link">Ver sesiones anteriores →</span>
+        </div>
+      </a>
 
 
-      <article class="route-card impulso">
-
-        <div class="route-icon">↗</div>
-
-        <h3>Quiero activar mi propio mercado B2B</h3>
-
-        <p>
-          Impulso B2B trabaja durante Q4 una línea concreta de negocio: buyer, selección, activación, relaciones complementarias y seguimiento.
-        </p>
-
-        <div class="route-meta">
-          <span>90 días</span>
-          <span>Oct–Dic</span>
-          <span>990 € + IVA</span>
+      <a
+        class="proof-card"
+        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="proof-thumb">
+          <div style="position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.17);font-size:30px;font-weight:950;letter-spacing:-.04em;text-align:center;padding:20px;">FORO<br>EJECUTIVO B2B</div>
+          <div class="play">▶</div>
         </div>
 
-        <div class="route-actions">
-          <a
-            class="btn btn-primary"
-            href="https://emprende360.club/impulsob2b"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Conocer Impulso B2B →
-          </a>
+        <div class="proof-body">
+          <span class="proof-label">Mesa B2B</span>
+          <h3>Founders y negocio</h3>
+          <p>Presentación, conversación y posibles cruces entre profesionales y proyectos B2B.</p>
+          <span class="proof-link">Ver sesiones anteriores →</span>
         </div>
+      </a>
 
-      </article>
+    </div>
+
+  </div>
+
+</section>
 
 
-      <article class="route-card">
+<!-- =========================================================
+     ACTIVATORS / PERKS
+========================================================= -->
 
-        <div class="route-icon">🌐</div>
+<section class="section split">
 
-        <h3>Tengo una red y quiero aportar</h3>
+  <div class="wrap split-grid">
 
-        <p>
-          La Red de Activadores ayuda a llevar determinados Foros y Rondas hacia personas de su propia red cuando existe encaje.
-        </p>
+    <article id="activadores" class="feature-box reveal">
 
-        <div class="route-meta">
-          <span>Red B2B</span>
-          <span>Distribución</span>
-          <span>Colaboración</span>
+      <span class="kicker">Red de Activadores</span>
+
+      <h2>
+        La red también puede distribuir.
+      </h2>
+
+      <p>
+        Los Activadores son profesionales con relaciones B2B relevantes que ayudan a que determinadas conversaciones lleguen a personas para las que realmente pueden tener sentido.
+      </p>
+
+      <div class="feature-quote">
+        No buscamos alcance. Buscamos acceso con criterio.
+      </div>
+
+      <a
+        class="btn btn-secondary"
+        href="https://emprende360.club/activadores"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="margin-top:18px;"
+      >
+        Conocer la Red de Activadores →
+      </a>
+
+    </article>
+
+
+    <article id="perks" class="feature-box green reveal">
+
+      <span class="kicker">Perks del ecosistema</span>
+
+      <h2>
+        Ventajas que también crean valor.
+      </h2>
+
+      <p>
+        Empresas y partners pueden ofrecer condiciones especiales a profesionales de Emprende360 en software, tecnología, servicios B2B, formación, herramientas y otros recursos.
+      </p>
+
+      <div class="feature-quote">
+        No queremos un catálogo de cupones. Queremos ventajas que realmente tengan sentido.
+      </div>
+
+      <a
+        class="btn btn-secondary"
+        href="https://emprende360.club/perks"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="margin-top:18px;"
+      >
+        Ver Perks →
+      </a>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PARTNERS
+========================================================= -->
+
+<section id="partners" class="section split">
+
+  <div class="wrap">
+
+    <article class="feature-box gold reveal">
+
+      <span class="kicker">Partners del ecosistema</span>
+
+      <h2>
+        Un ecosistema también se construye con empresas que aportan.
+      </h2>
+
+      <p>
+        Colaboramos con empresas y profesionales capaces de aportar tecnología, conocimiento, distribución, recursos, ventajas o servicios complementarios.
+      </p>
+
+      <p>
+        Ser partner no significa comprar una plaza en un Foro ni visibilidad automática. La colaboración tiene que añadir valor real al ecosistema.
+      </p>
+
+      <div class="partner-row">
+        <div class="partner-name">MIAO</div>
+        <div class="partner-type">
+          Partner del ecosistema<br>
+          SaaS / ERP
         </div>
+      </div>
 
-        <div class="route-actions">
-          <a
-            class="btn btn-secondary activators-link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Conocer Activadores →
-          </a>
-        </div>
+      <div class="hero-actions">
+        <a class="btn btn-secondary" href="#contacto">
+          Explorar una colaboración →
+        </a>
+      </div>
 
-      </article>
+    </article>
 
+  </div>
 
-      <article class="route-card">
-
-        <div class="route-icon">🎙️</div>
-
-        <h3>Quiero participar como especialista</h3>
-
-        <p>
-          Si tienes experiencia relevante, puedes dejarnos tu perfil para futuras sesiones. La selección depende de expertise, encaje y complementariedad.
-        </p>
-
-        <div class="route-meta">
-          <span>Expertos</span>
-          <span>Ponentes</span>
-          <span>Selección editorial</span>
-        </div>
-
-        <div class="route-actions">
-          <a
-            class="btn btn-secondary speaker-link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Enviar mi perfil →
-          </a>
-        </div>
-
-      </article>
+</section>
 
 
+<!-- =========================================================
+     GLOBAL / LOCAL
+========================================================= -->
+
+<section class="section global">
+
+  <div class="wrap global-grid">
+
+    <div class="global-copy reveal">
+
+      <span class="kicker">Global en relaciones · local en contexto</span>
+
+      <h2>
+        Un ecosistema global necesita conversaciones locales.
+      </h2>
+
+      <p>
+        España, México, Colombia, Argentina o Chile comparten muchas oportunidades B2B, pero no necesariamente los mismos buyers, problemas, regulaciones o dinámicas.
+      </p>
+
+      <p>
+        Emprende360 desarrollará progresivamente Foros, Rondas y nodos adaptados a distintos mercados, apoyándose en profesionales capaces de ayudar a dinamizar cada ecosistema.
+      </p>
+
+      <div class="network-note">
+        La capa internacional crecerá según existan perfiles, temas y responsables con suficiente encaje.
+      </div>
+
+    </div>
+
+
+    <div class="countries reveal">
+      <div class="country">🇪🇸 España</div>
+      <div class="country">🇲🇽 México</div>
+      <div class="country">🇨🇴 Colombia</div>
+      <div class="country">🇦🇷 Argentina</div>
+      <div class="country">🇨🇱 Chile</div>
+      <div class="country">🌎 Latinoamérica</div>
     </div>
 
   </div>
@@ -2266,7 +2017,7 @@
      IMPULSO
 ========================================================= -->
 
-<section id="impulso" class="section impulso-section">
+<section id="impulso" class="section impulso">
 
   <div class="wrap">
 
@@ -2274,12 +2025,10 @@
 
       <div class="impulso-copy">
 
-        <span class="kicker">
-          Impulso B2B · Q4
-        </span>
+        <span class="kicker">Impulso B2B · Q4</span>
 
         <h2>
-          ¿Quieres que trabajemos tu mercado contigo?
+          ¿Quieres pasar de participar a activar tu propio mercado?
         </h2>
 
         <p>
@@ -2287,12 +2036,12 @@
         </p>
 
         <div class="impulso-list">
-
           <div class="impulso-item">✓ Mapa de Activación</div>
-          <div class="impulso-item">✓ 3 ciclos mensuales</div>
+          <div class="impulso-item">✓ Buyer, problema y ángulo</div>
           <div class="impulso-item">✓ Selección y activación</div>
+          <div class="impulso-item">✓ Relaciones complementarias</div>
+          <div class="impulso-item">✓ Contexto propio cuando aporta valor</div>
           <div class="impulso-item">✓ Seguimiento durante Q4</div>
-
         </div>
 
       </div>
@@ -2308,7 +2057,7 @@
         </div>
 
         <p>
-          Un único ciclo de 90 días. Sin promesas artificiales de clientes o reuniones: trabajamos aquello que sí depende de nosotros, desde la selección hasta la activación y el seguimiento.
+          90 días de activación comercial relacional B2B. No prometemos clientes, reuniones, leads ni ROI.
         </p>
 
         <a
@@ -2318,70 +2067,7 @@
           rel="noopener noreferrer"
           style="margin-top:12px;width:100%;"
         >
-          Ver Impulso B2B →
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     ACTIVATORS
-========================================================= -->
-
-<section id="activadores" class="section activators">
-
-  <div class="wrap">
-
-    <div class="activator-box reveal">
-
-      <div class="activator-visual" aria-hidden="true">
-
-        <div class="orbit"></div>
-
-        <div class="activator-center">
-          EMPRENDE<br>360
-        </div>
-
-        <div class="activator-dot ad1">👔</div>
-        <div class="activator-dot ad2">📈</div>
-        <div class="activator-dot ad3">🤝</div>
-        <div class="activator-dot ad4">🎯</div>
-
-      </div>
-
-
-      <div class="activator-copy">
-
-        <span class="kicker">
-          Red de Activadores
-        </span>
-
-        <h2>
-          La distribución también puede ser relacional.
-        </h2>
-
-        <p>
-          Estamos formando un pequeño núcleo de profesionales con buena red que ayudan a amplificar determinados Foros y Rondas hacia personas que realmente pueden obtener valor.
-        </p>
-
-        <p>
-          No buscamos promoción indiscriminada. Buscamos criterio, relaciones y afinidad con uno o varios territorios B2B.
-        </p>
-
-        <a
-          class="btn btn-secondary activators-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="margin-top:10px;"
-        >
-          Conocer la Red de Activadores →
+          Conocer Impulso B2B →
         </a>
 
       </div>
@@ -2397,37 +2083,56 @@
      FINAL CTA
 ========================================================= -->
 
-<section class="section final">
+<section id="contacto" class="section final">
 
   <div class="wrap">
 
     <div class="final-box reveal">
 
-      <span class="kicker">
-        Empieza por donde tenga sentido
-      </span>
+      <span class="kicker">¿Dónde quieres entrar?</span>
 
       <h2>
-        Una conversación correcta puede valer más que cientos de contactos.
+        Participa. Aporta. Colabora. O activa tu mercado.
       </h2>
 
-      <p
-        class="lead"
-        style="max-width:760px;margin:17px auto 0;"
-      >
-        Puedes empezar asistiendo a un evento, valorar Impulso B2B, entrar en la Red de Activadores o proponerte como especialista.
+      <p class="lead" style="max-width:790px;margin:17px auto 0;">
+        Emprende360 no tiene una única puerta de entrada. Elige la que tenga sentido para ti ahora.
       </p>
-
 
       <div class="final-actions">
 
         <a
-          class="btn btn-primary agenda-link"
-          href="#"
+          class="btn btn-primary"
+          href="https://emprende360.club/septiembre"
           target="_blank"
           rel="noopener noreferrer"
         >
           Ver agenda
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="https://emprende360.club/activadores"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Activadores
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="https://emprende360.club/perks"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Perks
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="#partners"
+        >
+          Partners
         </a>
 
         <a
@@ -2437,24 +2142,6 @@
           rel="noopener noreferrer"
         >
           Impulso B2B
-        </a>
-
-        <a
-          class="btn btn-secondary activators-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Activadores
-        </a>
-
-        <a
-          class="btn btn-secondary speaker-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Proponerme como experto
         </a>
 
       </div>
@@ -2468,37 +2155,46 @@
 </main>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
 <footer>
 
   <div class="wrap footer-inner">
 
     <div>
-
       <strong>Emprende360</strong>
       <br>
-      Foros · Rondas · Activación comercial B2B
-
-      <div class="footer-communities">
-        Comunidades LinkedIn:
-        <span class="community-links">
-          <a href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer">Principal</a>
-          <a href="https://www.linkedin.com/groups/5186182/" target="_blank" rel="noopener noreferrer">RRHH</a>
-          <a href="https://www.linkedin.com/groups/5185821/" target="_blank" rel="noopener noreferrer">Inversión</a>
-          <a href="https://www.linkedin.com/groups/4092149/" target="_blank" rel="noopener noreferrer">Alianzas</a>
-          <a href="https://www.linkedin.com/groups/4092093/" target="_blank" rel="noopener noreferrer">Liderazgo</a>
-        </span>
-      </div>
-
+      Ecosistema B2B · Conversaciones · Relaciones · Activación
     </div>
 
 
     <div class="footer-links">
 
-      <a href="#eventos">Eventos</a>
+      <a href="#que-es">Qué es</a>
+
+      <a
+        href="https://emprende360.club/septiembre"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Agenda
+      </a>
+
+      <a
+        href="https://emprende360.club/activadores"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Activadores
+      </a>
+
+      <a
+        href="https://emprende360.club/perks"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Perks
+      </a>
+
+      <a href="#partners">Partners</a>
 
       <a
         href="https://emprende360.club/impulsob2b"
@@ -2507,8 +2203,6 @@
       >
         Impulso
       </a>
-
-      <a href="#activadores">Activadores</a>
 
       <a
         href="https://emprende360.club/privacidad"
@@ -2533,93 +2227,23 @@
 </footer>
 
 
-<!-- =========================================================
-     CONFIGURACIÓN
-========================================================= -->
-
 <script>
-
-  /*
-  ==============================================================
-  CONFIGURACIÓN
-
-  Cambia solo estas 3 URLs cuando tengas las rutas definitivas.
-
-  AGENDA_URL:
-  Landing completa de eventos de septiembre.
-
-  ACTIVATORS_URL:
-  Landing definitiva de la Red de Activadores.
-
-  SPEAKER_FORM_URL:
-  Google Form para expertos / ponentes.
-  ==============================================================
-
-  */
-
-  const AGENDA_URL =
-    "https://emprende360.club/septiembre";
-
-  const ACTIVATORS_URL =
-    "https://emprende360.club/activadores";
-
-  const SPEAKER_FORM_URL =
-    "https://forms.gle/KHbVPDTr5utGFUta6";
-
-
-  document
-    .querySelectorAll(".agenda-link")
-    .forEach(link => {
-      link.href = AGENDA_URL;
-    });
-
-
-  document
-    .querySelectorAll(".activators-link")
-    .forEach(link => {
-      link.href = ACTIVATORS_URL;
-    });
-
-
-  document
-    .querySelectorAll(".speaker-link")
-    .forEach(link => {
-      link.href = SPEAKER_FORM_URL;
-    });
-
-
-  /*
-  ==============================================================
-  ANIMACIONES
-  ==============================================================
-  */
-
   const observer =
     new IntersectionObserver(
       entries => {
-
         entries.forEach(entry => {
-
           if(entry.isIntersecting){
             entry.target.classList.add("on");
             observer.unobserve(entry.target);
           }
-
         });
-
       },
-      {
-        threshold:.08
-      }
+      { threshold:.10 }
     );
-
 
   document
     .querySelectorAll(".reveal")
-    .forEach(element => {
-      observer.observe(element);
-    });
-
+    .forEach(el => observer.observe(el));
 </script>
 
 </body>
