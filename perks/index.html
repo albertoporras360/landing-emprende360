@@ -1,0 +1,1428 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Perks Emprende360 · Ventajas para el ecosistema B2B</title>
+
+  <meta
+    name="description"
+    content="Perks Emprende360: ventajas, descuentos y condiciones especiales ofrecidas por partners y empresas para profesionales del ecosistema B2B."
+  />
+
+  <meta name="robots" content="index,follow" />
+
+  <style>
+    :root{
+      --deep:#020617;
+      --navy:#071522;
+      --navy2:#0B1728;
+
+      --sky:#18A7FF;
+      --sky-soft:#7DD3FC;
+
+      --gold:#F4C542;
+      --gold-soft:#FDE68A;
+
+      --green:#22C55E;
+      --green-soft:#BBF7D0;
+
+      --text:#F8FAFC;
+      --soft:#CBD5E1;
+      --muted:#94A3B8;
+
+      --line:rgba(255,255,255,.12);
+      --glass:rgba(255,255,255,.05);
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background:var(--deep);
+      color:var(--text);
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    strong,b{color:#fff}
+
+    .wrap{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+    .section{
+      position:relative;
+      padding:78px 0;
+      overflow:hidden;
+    }
+
+    .center{
+      max-width:830px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .lead{
+      color:var(--soft);
+      font-size:18px;
+      line-height:1.68;
+    }
+
+    .grad-text{
+      background:linear-gradient(90deg,#fff,#d9f7e2 45%,#ffe7a3);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .pill,
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border-radius:999px;
+      font-size:11px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    .pill{
+      padding:8px 13px;
+      border:1px solid rgba(34,197,94,.22);
+      background:rgba(34,197,94,.075);
+      color:#D1FAE5;
+    }
+
+    .kicker{
+      padding:7px 12px;
+      border:1px solid rgba(24,167,255,.22);
+      background:rgba(24,167,255,.08);
+      color:#C8ECFF;
+    }
+
+    h1{
+      margin:18px 0 0;
+      font-size:clamp(43px,5.8vw,70px);
+      line-height:.99;
+      letter-spacing:-.058em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:14px 0 0;
+      font-size:clamp(31px,4.3vw,50px);
+      line-height:1.04;
+      letter-spacing:-.045em;
+      font-weight:950;
+    }
+
+    h3{
+      margin:0;
+      line-height:1.15;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      border-radius:999px;
+      padding:13px 19px;
+      font-size:13px;
+      font-weight:900;
+      border:0;
+      cursor:pointer;
+      transition:.22s ease;
+    }
+
+    .btn:hover{transform:translateY(-3px)}
+
+    .btn-primary{
+      color:#06111F;
+      background:linear-gradient(90deg,#BBF7D0,#86EFAC);
+      box-shadow:0 18px 60px rgba(34,197,94,.17);
+    }
+
+    .btn-secondary{
+      color:#fff;
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .btn-gold{
+      color:#06111F;
+      background:linear-gradient(90deg,#ffe16a,#F4C542);
+      box-shadow:0 18px 60px rgba(244,197,66,.16);
+    }
+
+    .grid-bg{
+      position:absolute;
+      inset:0;
+      opacity:.05;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);
+      background-size:54px 54px;
+    }
+
+    /* HEADER */
+
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:100;
+      border-bottom:1px solid rgba(255,255,255,.09);
+      background:rgba(2,6,23,.86);
+      backdrop-filter:blur(22px);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:11px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      flex-shrink:0;
+    }
+
+    .brand-mark{
+      width:41px;
+      height:41px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      font-weight:950;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      box-shadow:0 18px 45px rgba(24,167,255,.25);
+    }
+
+    .brand-title{
+      font-weight:950;
+      line-height:1;
+    }
+
+    .brand-sub{
+      margin-top:4px;
+      color:#94A3B8;
+      font-size:10px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-weight:850;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-left:auto;
+      color:#CBD5E1;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .nav-links a:hover{color:#fff}
+
+    /* HERO */
+
+    .hero{
+      position:relative;
+      padding:122px 0 72px;
+      background:
+        radial-gradient(circle at 12% 10%,rgba(34,197,94,.16),transparent 30%),
+        radial-gradient(circle at 87% 15%,rgba(244,197,66,.11),transparent 30%),
+        var(--deep);
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:880px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:19px auto 0;
+      color:#CBD5E1;
+      font-size:17px;
+      line-height:1.68;
+    }
+
+    .hero-actions{
+      margin-top:25px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:11px;
+    }
+
+    .hero-note{
+      margin-top:14px!important;
+      color:#94A3B8!important;
+      font-size:12px!important;
+    }
+
+    /* FILTER / INTRO */
+
+    .intro{
+      background:var(--navy);
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:13px;
+      margin-top:34px;
+    }
+
+    .intro-card{
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .intro-card h3{
+      font-size:18px;
+      margin-top:12px;
+    }
+
+    .intro-card p{
+      margin:8px 0 0;
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.52;
+    }
+
+    .intro-icon{
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:linear-gradient(135deg,#BBF7D0,#7DD3FC);
+      color:#06111F;
+      font-size:18px;
+    }
+
+    /* PERKS */
+
+    .perks{
+      background:var(--deep);
+    }
+
+    .category-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      justify-content:center;
+      margin-top:24px;
+    }
+
+    .category{
+      padding:8px 11px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      color:#CBD5E1;
+      font-size:10px;
+      font-weight:850;
+    }
+
+    .perks-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      margin-top:36px;
+    }
+
+    .perk-card{
+      min-height:365px;
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:rgba(255,255,255,.045);
+      transition:.23s ease;
+    }
+
+    .perk-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(34,197,94,.28);
+      box-shadow:0 25px 65px rgba(0,0,0,.22);
+    }
+
+    .perk-top{
+      min-height:126px;
+      padding:21px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      background:
+        radial-gradient(circle at 0 0,rgba(34,197,94,.15),transparent 45%),
+        radial-gradient(circle at 100% 100%,rgba(24,167,255,.10),transparent 45%),
+        #071522;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .perk-brand{
+      font-size:24px;
+      font-weight:950;
+      letter-spacing:-.04em;
+    }
+
+    .perk-category{
+      color:#BAE6FD;
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .perk-badge{
+      padding:6px 9px;
+      border:1px solid rgba(244,197,66,.24);
+      border-radius:999px;
+      background:rgba(244,197,66,.07);
+      color:#FDE68A;
+      font-size:9px;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .perk-body{
+      padding:21px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
+
+    .perk-offer{
+      font-size:25px;
+      line-height:1.04;
+      letter-spacing:-.035em;
+      font-weight:950;
+    }
+
+    .perk-description{
+      margin:10px 0 0;
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.52;
+    }
+
+    .perk-conditions{
+      margin-top:16px;
+      padding:12px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:14px;
+      background:rgba(2,6,23,.30);
+      color:#CBD5E1;
+      font-size:10px;
+      line-height:1.5;
+    }
+
+    .perk-actions{
+      margin-top:auto;
+      padding-top:18px;
+    }
+
+    .perk-actions .btn{
+      width:100%;
+    }
+
+    .demo-note{
+      margin:18px auto 0;
+      max-width:850px;
+      padding:13px 15px;
+      border:1px solid rgba(244,197,66,.18);
+      border-radius:15px;
+      background:rgba(244,197,66,.05);
+      color:#FDE68A;
+      font-size:11px;
+      line-height:1.55;
+      text-align:center;
+    }
+
+    /* HOW */
+
+    .how{
+      background:var(--navy);
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:34px;
+    }
+
+    .step{
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:23px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .step-num{
+      width:36px;
+      height:36px;
+      display:grid;
+      place-items:center;
+      border-radius:12px;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-size:12px;
+      font-weight:950;
+    }
+
+    .step h3{
+      margin-top:14px;
+      font-size:19px;
+    }
+
+    .step p{
+      margin:8px 0 0;
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.52;
+    }
+
+    /* OFFER PERK */
+
+    .offer{
+      background:var(--deep);
+    }
+
+    .offer-box{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:30px;
+      align-items:center;
+      padding:38px;
+      border:1px solid rgba(34,197,94,.20);
+      border-radius:32px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(34,197,94,.09),transparent 35%),
+        rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .offer-copy p{
+      color:#CBD5E1;
+      font-size:15px;
+      line-height:1.63;
+    }
+
+    .offer-list{
+      display:grid;
+      gap:8px;
+      margin-top:17px;
+    }
+
+    .offer-item{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:8px;
+      color:#CBD5E1;
+      font-size:12px;
+    }
+
+    .check{color:#86EFAC;font-weight:950}
+
+    .offer-panel{
+      padding:27px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:24px;
+      background:rgba(2,6,23,.30);
+      text-align:center;
+    }
+
+    .offer-panel b{
+      display:block;
+      font-size:24px;
+      letter-spacing:-.03em;
+    }
+
+    .offer-panel p{
+      margin:10px 0 17px;
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.52;
+    }
+
+    /* FAQ */
+
+    .faq{
+      background:var(--navy);
+    }
+
+    .faq-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:13px;
+      margin-top:32px;
+    }
+
+    .faq-item{
+      padding:21px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .faq-item b{
+      display:block;
+      font-size:14px;
+    }
+
+    .faq-item p{
+      margin:7px 0 0;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.5;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:30px 0;
+      border-top:1px solid var(--line);
+      background:#01040d;
+      color:#94A3B8;
+      font-size:12px;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .footer-links a:hover{color:#fff}
+
+    @media(max-width:1000px){
+      .nav-links{display:none}
+
+      .intro-grid,
+      .perks-grid,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .offer-box{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:760px){
+      .wrap{padding:0 16px}
+
+      .section{padding:60px 0}
+
+      .nav{padding:10px 16px}
+
+      .brand-sub{display:none}
+
+      .nav .btn{
+        padding:9px 11px;
+        font-size:10px;
+      }
+
+      .hero{padding:100px 0 54px}
+
+      h1{
+        font-size:clamp(37px,11vw,50px);
+        line-height:1.02;
+      }
+
+      h2{font-size:clamp(29px,8.8vw,40px)}
+
+      .lead,
+      .hero p{
+        font-size:15px;
+      }
+
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .hero-actions .btn{
+        width:100%;
+      }
+
+      .faq-grid{
+        grid-template-columns:1fr;
+      }
+
+      .offer-box{padding:24px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a href="https://emprende360.club/" class="brand">
+      <div class="brand-mark">E</div>
+      <div>
+        <div class="brand-title">Emprende360</div>
+        <div class="brand-sub">Perks · Ventajas del ecosistema</div>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#perks">Perks</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#ofrecer">Ofrecer un Perk</a>
+      <a href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">Agenda</a>
+      <a href="https://emprende360.club/activadores" target="_blank" rel="noopener noreferrer">Activadores</a>
+    </nav>
+
+    <a class="btn btn-secondary" href="https://emprende360.club/" >
+      Volver a Emprende360
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="grid-bg"></div>
+
+  <div class="wrap">
+
+    <div class="hero-inner">
+
+      <span class="pill">
+        Perks · Emprende360
+      </span>
+
+      <h1>
+        <span class="grad-text">
+          Ventajas útiles para profesionales del ecosistema.
+        </span>
+      </h1>
+
+      <p>
+        Empresas y partners pueden ofrecer descuentos, condiciones especiales y ventajas concretas para otros profesionales de Emprende360.
+      </p>
+
+      <p>
+        <strong>No queremos un catálogo de cupones.</strong>
+        Queremos ventajas que realmente tengan sentido en un entorno B2B.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="btn btn-primary" href="#perks">
+          Ver Perks disponibles
+        </a>
+
+        <a class="btn btn-secondary" href="#ofrecer">
+          Quiero ofrecer un Perk
+        </a>
+
+      </div>
+
+      <p class="hero-note">
+        Nuevos Perks se irán incorporando a medida que se sumen partners y empresas con propuestas relevantes.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="section intro">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Qué buscamos</span>
+
+      <h2>
+        Poco ruido. Ventajas claras.
+      </h2>
+
+      <p class="lead">
+        Cada Perk debería ser fácil de entender, fácil de utilizar y suficientemente relevante como para que merezca la pena conocerlo.
+      </p>
+
+    </div>
+
+
+    <div class="intro-grid">
+
+      <article class="intro-card">
+        <div class="intro-icon">✓</div>
+        <h3>Condición especial real</h3>
+        <p>
+          Un descuento, periodo adicional, mejora de plan, acceso preferente o ventaja que no sea simplemente una promoción genérica.
+        </p>
+      </article>
+
+      <article class="intro-card">
+        <div class="intro-icon">🎯</div>
+        <h3>Útil para B2B</h3>
+        <p>
+          Software, servicios, formación, tecnología, herramientas o recursos que puedan resultar útiles a profesionales y empresas.
+        </p>
+      </article>
+
+      <article class="intro-card">
+        <div class="intro-icon">🤝</div>
+        <h3>Partner identificado</h3>
+        <p>
+          La ventaja debe estar asociada a una empresa o profesional responsable de cumplir las condiciones publicadas.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PERKS
+========================================================= -->
+
+<section id="perks" class="section perks">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Perks del ecosistema</span>
+
+      <h2>
+        Ventajas disponibles.
+      </h2>
+
+      <p class="lead">
+        A continuación tienes ejemplos del formato que utilizaremos. Sustituye cada ficha por las condiciones reales acordadas con cada partner.
+      </p>
+
+      <div class="category-row">
+        <span class="category">Software</span>
+        <span class="category">Tecnología</span>
+        <span class="category">Servicios B2B</span>
+        <span class="category">Formación</span>
+        <span class="category">Marketing</span>
+        <span class="category">Operaciones</span>
+      </div>
+
+    </div>
+
+
+    <div class="perks-grid">
+
+      <!-- =====================================================
+           EJEMPLO 1
+           Sustituir marca, oferta, descripción, condiciones y URL
+      ====================================================== -->
+
+      <article class="perk-card">
+
+        <div class="perk-top">
+          <div>
+            <div class="perk-category">Software · ERP</div>
+            <div class="perk-brand">Partner ERP</div>
+          </div>
+
+          <span class="perk-badge">Ejemplo editable</span>
+        </div>
+
+        <div class="perk-body">
+
+          <div class="perk-offer">
+            20% de descuento durante 3 meses
+          </div>
+
+          <p class="perk-description">
+            Condición especial para empresas que quieran probar una solución de gestión, facturación y operaciones.
+          </p>
+
+          <div class="perk-conditions">
+            Ejemplo: nuevos clientes · sujeto a validación del partner · no acumulable con otras promociones.
+          </div>
+
+          <div class="perk-actions">
+            <a class="btn btn-secondary" href="#" onclick="return false;">
+              Solicitar este Perk →
+            </a>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           EJEMPLO 2
+      ====================================================== -->
+
+      <article class="perk-card">
+
+        <div class="perk-top">
+          <div>
+            <div class="perk-category">Tecnología · IA</div>
+            <div class="perk-brand">AI Tools Partner</div>
+          </div>
+
+          <span class="perk-badge">Ejemplo editable</span>
+        </div>
+
+        <div class="perk-body">
+
+          <div class="perk-offer">
+            1 mes adicional sin coste
+          </div>
+
+          <p class="perk-description">
+            Ventaja para profesionales o equipos que quieran probar una herramienta de automatización o IA aplicada al negocio.
+          </p>
+
+          <div class="perk-conditions">
+            Ejemplo: contratación mínima de un plan elegible · disponibilidad según país.
+          </div>
+
+          <div class="perk-actions">
+            <a class="btn btn-secondary" href="#" onclick="return false;">
+              Solicitar este Perk →
+            </a>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           EJEMPLO 3
+      ====================================================== -->
+
+      <article class="perk-card">
+
+        <div class="perk-top">
+          <div>
+            <div class="perk-category">Servicios B2B · Legal</div>
+            <div class="perk-brand">Legal Partner</div>
+          </div>
+
+          <span class="perk-badge">Ejemplo editable</span>
+        </div>
+
+        <div class="perk-body">
+
+          <div class="perk-offer">
+            Primera revisión estratégica sin coste
+          </div>
+
+          <p class="perk-description">
+            Una primera revisión para detectar si existe una cuestión legal, societaria o contractual que merezca profundizar.
+          </p>
+
+          <div class="perk-conditions">
+            Ejemplo: 30 minutos · una vez por empresa · sujeto a encaje del caso.
+          </div>
+
+          <div class="perk-actions">
+            <a class="btn btn-secondary" href="#" onclick="return false;">
+              Solicitar este Perk →
+            </a>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           EJEMPLO 4
+      ====================================================== -->
+
+      <article class="perk-card">
+
+        <div class="perk-top">
+          <div>
+            <div class="perk-category">Marketing B2B</div>
+            <div class="perk-brand">Growth Partner</div>
+          </div>
+
+          <span class="perk-badge">Ejemplo editable</span>
+        </div>
+
+        <div class="perk-body">
+
+          <div class="perk-offer">
+            Auditoría inicial con condiciones especiales
+          </div>
+
+          <p class="perk-description">
+            Revisión de posicionamiento, adquisición o proceso comercial para detectar mejoras prioritarias.
+          </p>
+
+          <div class="perk-conditions">
+            Ejemplo: formato diagnóstico · no incluye ejecución · sujeto a disponibilidad.
+          </div>
+
+          <div class="perk-actions">
+            <a class="btn btn-secondary" href="#" onclick="return false;">
+              Solicitar este Perk →
+            </a>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           EJEMPLO 5
+      ====================================================== -->
+
+      <article class="perk-card">
+
+        <div class="perk-top">
+          <div>
+            <div class="perk-category">Formación · Negocio</div>
+            <div class="perk-brand">Academy Partner</div>
+          </div>
+
+          <span class="perk-badge">Ejemplo editable</span>
+        </div>
+
+        <div class="perk-body">
+
+          <div class="perk-offer">
+            15% de descuento en programa ejecutivo
+          </div>
+
+          <p class="perk-description">
+            Condición especial para programas seleccionados de ventas, liderazgo, finanzas, IA u otras áreas de negocio.
+          </p>
+
+          <div class="perk-conditions">
+            Ejemplo: plazas limitadas por edición · aplicable únicamente a programas indicados.
+          </div>
+
+          <div class="perk-actions">
+            <a class="btn btn-secondary" href="#" onclick="return false;">
+              Solicitar este Perk →
+            </a>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           EJEMPLO 6
+      ====================================================== -->
+
+      <article class="perk-card">
+
+        <div class="perk-top">
+          <div>
+            <div class="perk-category">Servicios · Operaciones</div>
+            <div class="perk-brand">Ops Partner</div>
+          </div>
+
+          <span class="perk-badge">Ejemplo editable</span>
+        </div>
+
+        <div class="perk-body">
+
+          <div class="perk-offer">
+            Sesión de diagnóstico preferente
+          </div>
+
+          <p class="perk-description">
+            Una primera sesión para revisar procesos, operaciones o necesidades de mejora antes de plantear cualquier proyecto.
+          </p>
+
+          <div class="perk-conditions">
+            Ejemplo: sujeto a encaje · una sesión por empresa · sin compromiso posterior.
+          </div>
+
+          <div class="perk-actions">
+            <a class="btn btn-secondary" href="#" onclick="return false;">
+              Solicitar este Perk →
+            </a>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <div class="demo-note">
+      Estas seis fichas son ejemplos visuales para rellenar la página. No representan ofertas reales hasta que sustituyas marca, ventaja, condiciones y enlace por los acuerdos confirmados con cada partner.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
+
+<section id="como-funciona" class="section how">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Cómo utilizar un Perk</span>
+
+      <h2>
+        Simple para quien lo ofrece. Simple para quien lo utiliza.
+      </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+      <article class="step">
+        <div class="step-num">1</div>
+        <h3>Elige la ventaja</h3>
+        <p>
+          Revisa qué ofrece el partner, para quién aplica y cuáles son las condiciones.
+        </p>
+      </article>
+
+      <article class="step">
+        <div class="step-num">2</div>
+        <h3>Solicítala</h3>
+        <p>
+          Accede mediante el enlace específico, formulario, código o contacto indicado en cada Perk.
+        </p>
+      </article>
+
+      <article class="step">
+        <div class="step-num">3</div>
+        <h3>El partner la gestiona</h3>
+        <p>
+          La empresa responsable valida el encaje y aplica directamente la condición publicada.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     OFFER A PERK
+========================================================= -->
+
+<section id="ofrecer" class="section offer">
+
+  <div class="wrap">
+
+    <div class="offer-box">
+
+      <div class="offer-copy">
+
+        <span class="kicker">Para empresas y partners</span>
+
+        <h2>
+          ¿Quieres ofrecer una ventaja al ecosistema?
+        </h2>
+
+        <p>
+          Si tu empresa tiene un producto o servicio útil para profesionales B2B, puedes proponernos una condición especial para Emprende360.
+        </p>
+
+        <div class="offer-list">
+
+          <div class="offer-item">
+            <span class="check">✓</span>
+            <span>Oferta clara y fácil de explicar.</span>
+          </div>
+
+          <div class="offer-item">
+            <span class="check">✓</span>
+            <span>Ventaja específica para el ecosistema.</span>
+          </div>
+
+          <div class="offer-item">
+            <span class="check">✓</span>
+            <span>Producto o servicio con encaje B2B.</span>
+          </div>
+
+          <div class="offer-item">
+            <span class="check">✓</span>
+            <span>Empresa responsable de gestionar solicitudes y condiciones.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="offer-panel">
+
+        <b>Proponer un Perk</b>
+
+        <p>
+          Cuéntanos qué ofrece tu empresa, cuál sería la ventaja y para qué tipo de profesionales o empresas aplica.
+        </p>
+
+        <!--
+          Sustituye "#" por tu Google Form, WhatsApp o formulario de Partners/Perks.
+        -->
+        <a
+          class="btn btn-gold"
+          href="#"
+          onclick="return false;"
+          style="width:100%;"
+        >
+          Quiero ofrecer un Perk →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FAQ
+========================================================= -->
+
+<section class="section faq">
+
+  <div class="wrap">
+
+    <div class="center">
+
+      <span class="kicker">Preguntas rápidas</span>
+
+      <h2>
+        Lo esencial.
+      </h2>
+
+    </div>
+
+
+    <div class="faq-grid">
+
+      <article class="faq-item">
+        <b>¿Los Perks son gratuitos?</b>
+        <p>
+          Consultar la página sí. Cada ventaja tiene sus propias condiciones y puede requerir contratación, registro o validación por parte del partner.
+        </p>
+      </article>
+
+      <article class="faq-item">
+        <b>¿Emprende360 presta estos servicios?</b>
+        <p>
+          No necesariamente. Cada Perk identifica a la empresa o profesional responsable de ofrecer y cumplir la ventaja publicada.
+        </p>
+      </article>
+
+      <article class="faq-item">
+        <b>¿Puede cualquier empresa publicar un Perk?</b>
+        <p>
+          No de forma automática. Revisamos que exista encaje B2B, claridad y una ventaja suficientemente relevante para el ecosistema.
+        </p>
+      </article>
+
+      <article class="faq-item">
+        <b>¿Se irán añadiendo nuevos Perks?</b>
+        <p>
+          Sí. La página crecerá progresivamente a medida que se incorporen partners y nuevas ventajas confirmadas.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="wrap footer-inner">
+
+    <div>
+      <strong>Emprende360</strong>
+      <br>
+      Perks · Ventajas del ecosistema B2B
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="https://emprende360.club/">
+        Emprende360
+      </a>
+
+      <a
+        href="https://emprende360.club/septiembre"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Agenda
+      </a>
+
+      <a
+        href="https://emprende360.club/activadores"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Activadores
+      </a>
+
+      <a
+        href="https://emprende360.club/impulsob2b"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Impulso B2B
+      </a>
+
+      <a
+        href="https://emprende360.club/privacidad"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Privacidad
+      </a>
+
+      <a
+        href="https://emprende360.club/aviso-legal"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Aviso legal
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     CONFIG / EDICIÓN RÁPIDA
+========================================================= -->
+
+<script>
+  /*
+  =============================================================
+  CÓMO EDITAR ESTA PÁGINA
+
+  1. Sustituye en cada tarjeta:
+     - "Partner ERP", "AI Tools Partner", etc.
+     - oferta
+     - descripción
+     - condiciones
+     - enlace del botón
+
+  2. Cuando el Perk sea real:
+     elimina:
+     <span class="perk-badge">Ejemplo editable</span>
+
+  3. Sustituye el enlace del botón:
+     "Quiero ofrecer un Perk"
+     por tu Google Form o formulario correspondiente.
+
+  4. Puedes duplicar cualquier:
+     <article class="perk-card">...</article>
+     para añadir nuevos Perks.
+
+  IMPORTANTE:
+  No publiques descuentos o condiciones hasta que estén
+  confirmados con el partner correspondiente.
+  =============================================================
+  */
+</script>
+
+</body>
+</html>
