@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Emprende360 · Ecosistema B2B | Conversaciones, Activadores, Perks, Partners e Impulso</title>
+  <title>Emprende360 · Ecosistema B2B | Conversaciones, Partner Hub e Impulso</title>
 
   <meta
     name="description"
-    content="Emprende360 crea contexto para mejores conversaciones B2B mediante Foros Ejecutivos, Rondas, Activadores, Partners, Perks y activación comercial relacional."
+    content="Emprende360 es un ecosistema B2B que crea contexto para mejores conversaciones mediante Foros, Rondas, Partner Hub y activación individual con Impulso B2B."
   />
 
   <meta name="robots" content="index,follow" />
@@ -146,7 +146,7 @@
 
     h1{
       margin:18px 0 0;
-      font-size:clamp(44px,5.7vw,72px);
+      font-size:clamp(42px,5.15vw,64px);
       line-height:.98;
       letter-spacing:-.058em;
       font-weight:950;
@@ -306,7 +306,7 @@
 
     .hero{
       position:relative;
-      padding:122px 0 74px;
+      padding:102px 0 52px;
       background:
         radial-gradient(circle at 12% 10%,rgba(24,167,255,.22),transparent 30%),
         radial-gradient(circle at 88% 14%,rgba(244,197,66,.13),transparent 30%),
@@ -317,9 +317,9 @@
       position:relative;
       z-index:2;
       display:grid;
-      grid-template-columns:1.08fr .92fr;
-      gap:42px;
-      align-items:center;
+      grid-template-columns:1.04fr .96fr;
+      gap:38px;
+      align-items:start;
     }
 
     .hero-copy p{
@@ -588,13 +588,16 @@
 
     .doors-grid{
       display:grid;
-      grid-template-columns:repeat(6,1fr);
+      grid-template-columns:repeat(2,1fr);
       gap:14px;
       margin-top:36px;
+      max-width:940px;
+      margin-left:auto;
+      margin-right:auto;
     }
 
     .door{
-      grid-column:span 2;
+      grid-column:auto;
       min-height:320px;
       padding:24px;
       display:flex;
@@ -604,9 +607,6 @@
       background:rgba(255,255,255,.045);
       transition:.23s ease;
     }
-
-    .door:nth-child(4){grid-column:2 / span 2}
-    .door:nth-child(5){grid-column:4 / span 2}
 
     .door:hover{
       transform:translateY(-4px);
@@ -1041,6 +1041,242 @@
       line-height:1.55;
     }
 
+
+    .impulso-independent{
+      grid-template-columns:1.08fr .92fr;
+    }
+
+    .impulso-side{
+      display:grid;
+      gap:12px;
+    }
+
+    .impulso-side-label{
+      color:#94A3B8;
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      margin-bottom:2px;
+    }
+
+    .impulso-side-card{
+      padding:21px;
+      border:1px solid rgba(24,167,255,.20);
+      border-radius:21px;
+      background:rgba(24,167,255,.055);
+    }
+
+    .impulso-side-card.personal{
+      border-color:rgba(244,197,66,.24);
+      background:rgba(244,197,66,.055);
+    }
+
+    .impulso-side-card b{
+      display:block;
+      font-size:17px;
+    }
+
+    .impulso-side-card span{
+      display:block;
+      margin-top:7px;
+      color:#CBD5E1;
+      font-size:12px;
+      line-height:1.52;
+    }
+
+    .impulso-side-card strong{
+      display:inline-block;
+      margin-top:14px;
+      color:#7DD3FC;
+      font-size:10px;
+      letter-spacing:.08em;
+    }
+
+    .impulso-side-card.personal strong{
+      color:#FDE68A;
+    }
+
+
+    /* =========================================================
+       PARTNER HUB
+    ========================================================= */
+
+    .partner-hub{background:var(--deep)}
+
+    .hub-shell{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:30px;
+      align-items:center;
+      padding:36px;
+      border:1px solid rgba(24,167,255,.24);
+      border-radius:32px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(24,167,255,.10),transparent 38%),
+        rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .hub-copy p{
+      color:#CBD5E1;
+      font-size:15px;
+      line-height:1.65;
+    }
+
+    .hub-quote{
+      margin-top:16px;
+      padding:15px 16px;
+      border-left:3px solid var(--gold);
+      color:#FDE68A;
+      font-size:14px;
+      font-weight:900;
+      line-height:1.5;
+    }
+
+    .hub-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:11px;
+    }
+
+    .hub-card{
+      min-height:150px;
+      padding:18px;
+      border:1px solid var(--line);
+      border-radius:19px;
+      background:rgba(2,6,23,.32);
+    }
+
+    .hub-icon{
+      width:39px;
+      height:39px;
+      display:grid;
+      place-items:center;
+      border-radius:12px;
+      background:rgba(24,167,255,.10);
+      border:1px solid rgba(24,167,255,.20);
+      margin-bottom:11px;
+    }
+
+    .hub-card b{display:block;font-size:14px}
+    .hub-card span{
+      display:block;
+      margin-top:6px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    /* =========================================================
+       HISTORY + FOUNDER
+    ========================================================= */
+
+    .history{background:var(--navy)}
+
+    .history-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .history-box,.founder-box{
+      padding:30px;
+      border:1px solid var(--line);
+      border-radius:28px;
+      background:rgba(255,255,255,.045);
+    }
+
+    .history-box p,.founder-box p{
+      color:#CBD5E1;
+      font-size:14px;
+      line-height:1.65;
+    }
+
+    .timeline-mini{display:grid;gap:10px;margin-top:20px}
+
+    .time-row{
+      display:grid;
+      grid-template-columns:90px 1fr;
+      gap:14px;
+      align-items:start;
+      padding-top:11px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .time-row:first-child{border-top:0;padding-top:0}
+    .time-row b{color:#FDE68A;font-size:12px}
+    .time-row span{color:#CBD5E1;font-size:12px;line-height:1.5}
+
+    .founder-head{display:flex;align-items:center;gap:15px;margin-top:20px}
+
+    .founder-avatar{
+      width:66px;
+      height:66px;
+      display:grid;
+      place-items:center;
+      border-radius:21px;
+      background:linear-gradient(135deg,#7DD3FC,#FDE047);
+      color:#06111F;
+      font-size:21px;
+      font-weight:950;
+      flex-shrink:0;
+    }
+
+    .founder-name{font-size:22px;font-weight:950;letter-spacing:-.03em}
+    .founder-role{margin-top:4px;color:#94A3B8;font-size:11px;font-weight:850}
+
+    .founder-stat{
+      margin-top:17px;
+      padding:13px 15px;
+      border:1px solid rgba(24,167,255,.20);
+      border-radius:16px;
+      background:rgba(24,167,255,.055);
+      color:#BAE6FD;
+      font-size:12px;
+      font-weight:850;
+      line-height:1.5;
+    }
+
+    /* =========================================================
+       IMPULSO COMPARISON
+    ========================================================= */
+
+    .compare{display:grid;gap:12px}
+
+    .compare-card{
+      padding:21px;
+      border:1px solid rgba(24,167,255,.22);
+      border-radius:20px;
+      background:rgba(24,167,255,.055);
+    }
+
+    .compare-card.personal{
+      border-color:rgba(244,197,66,.24);
+      background:rgba(244,197,66,.055);
+    }
+
+    .compare-card b{display:block;font-size:17px}
+    .compare-card span{
+      display:block;
+      margin-top:7px;
+      color:#CBD5E1;
+      font-size:12px;
+      line-height:1.52;
+    }
+
+    .compare-tag{
+      display:inline-block !important;
+      margin-top:13px !important;
+      color:#86EFAC !important;
+      font-size:10px !important;
+      font-weight:950 !important;
+      letter-spacing:.08em;
+    }
+
+    .compare-card.personal .compare-tag{color:#FDE68A !important}
+
     /* =========================================================
        FINAL
     ========================================================= */
@@ -1108,8 +1344,8 @@
 
       .hero-grid,
       .what-grid,
-      .network-grid,
-      .global-grid,
+      .hub-shell,
+      .history-grid,
       .impulso-box{
         grid-template-columns:1fr;
       }
@@ -1120,12 +1356,6 @@
 
       .doors-grid{
         grid-template-columns:1fr 1fr;
-      }
-
-      .door,
-      .door:nth-child(4),
-      .door:nth-child(5){
-        grid-column:auto;
       }
 
       .proof-grid{
@@ -1180,7 +1410,7 @@
       }
 
       .scale-grid,
-      .doors-grid,
+      .hub-grid,
       .impulso-list{
         grid-template-columns:1fr;
       }
@@ -1220,19 +1450,17 @@
     <nav class="nav-links">
       <a href="#que-es">Qué es</a>
       <a href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">Agenda</a>
-      <a href="https://emprende360.club/activadores" target="_blank" rel="noopener noreferrer">Activadores</a>
-      <a href="https://emprende360.club/perks" target="_blank" rel="noopener noreferrer">Perks</a>
-      <a href="https://emprende360.club/partners">Partners</a>
+      <a href="https://emprende360.club/partner-hub/" target="_blank" rel="noopener noreferrer">Partner Hub</a>
       <a href="https://emprende360.club/impulsob2b" target="_blank" rel="noopener noreferrer">Impulso B2B</a>
     </nav>
 
     <a
       class="btn btn-primary"
-      href="https://emprende360.club/septiembre"
+      href="https://forms.gle/co89pCvzScuLtr6z5"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Ver agenda
+      Recibir próximos eventos
     </a>
 
   </div>
@@ -1253,18 +1481,14 @@
 
     <div class="hero-copy reveal">
 
-      <span class="pill">
-        Emprende360 · Ecosistema de relaciones B2B
-      </span>
+      <span class="pill">Emprende360 · Ecosistema de relaciones B2B</span>
 
       <h1>
-        <span class="grad-text">
-          Creamos el contexto para que ocurran mejores conversaciones B2B.
-        </span>
+        <span class="grad-text">Creamos contexto para mejores conversaciones B2B.</span>
       </h1>
 
       <p>
-        Conectamos profesionales, empresas y decisores mediante Foros Ejecutivos, Rondas, activación de red, partners y otras situaciones donde existe una razón concreta para hablar.
+        Emprende360 conecta founders, directivos, expertos y profesionales mediante <strong>Foros y Rondas gratuitas</strong>, un Partner Hub de perfiles y relaciones, y activaciones individuales para quien quiere trabajar su propio mercado.
       </p>
 
       <div class="hero-claim">
@@ -1272,102 +1496,43 @@
       </div>
 
       <div class="hero-actions">
-
-        <a
-          class="btn btn-primary"
-          href="#puertas"
-        >
-          Explorar Emprende360 →
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="https://emprende360.club/septiembre"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ver agenda actual
-        </a>
-
+        <a class="btn btn-primary" href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">Ver próximos eventos →</a>
+        <a class="btn btn-secondary" href="https://forms.gle/co89pCvzScuLtr6z5" target="_blank" rel="noopener noreferrer">Quiero recibir los próximos</a>
       </div>
 
       <p class="hero-scale">
-        Una red construida durante años entre España y Latinoamérica, con relaciones directas, comunidad, especialistas, partners y decisores B2B.
+        Una red construida durante años entre España y Latinoamérica, ahora organizada para crear más contexto, mejores relaciones y conversaciones con más sentido.
       </p>
 
     </div>
 
-
     <div class="hero-routes reveal">
 
-      <a
-        class="hero-route"
-        href="https://emprende360.club/septiembre"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="hero-route" href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">
         <div class="route-icon">💬</div>
         <div class="hero-route-copy">
-          <b>Agenda</b>
+          <b>Próximas conversaciones</b>
           <span>Foros Ejecutivos, Rondas y sesiones B2B.</span>
+          <span style="display:block;margin-top:7px;color:#86EFAC;font-size:9px;font-weight:950;letter-spacing:.08em;">PARTICIPACIÓN GRATUITA</span>
         </div>
         <div class="hero-route-arrow">→</div>
       </a>
 
-
-      <a
-        class="hero-route"
-        href="https://emprende360.club/activadores"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="route-icon">🌐</div>
-        <div class="hero-route-copy">
-          <b>Activadores</b>
-          <span>Ayuda a llevar las conversaciones adecuadas a tu red.</span>
-        </div>
-        <div class="hero-route-arrow">→</div>
-      </a>
-
-
-      <a
-        class="hero-route green"
-        href="https://emprende360.club/perks"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="route-icon">✦</div>
-        <div class="hero-route-copy">
-          <b>Perks</b>
-          <span>Ventajas y condiciones especiales dentro del ecosistema.</span>
-        </div>
-        <div class="hero-route-arrow">→</div>
-      </a>
-
-
-      <a
-        class="hero-route"
-        href="https://emprende360.club/partners"
-      >
+      <a class="hero-route" href="https://emprende360.club/partner-hub/" target="_blank" rel="noopener noreferrer">
         <div class="route-icon">🤝</div>
         <div class="hero-route-copy">
-          <b>Partners</b>
-          <span>Empresas y profesionales que aportan recursos y colaboración.</span>
+          <b>Partner Hub</b>
+          <span>Perfiles, expertos, partners, matches y verticales con contexto.</span>
         </div>
         <div class="hero-route-arrow">→</div>
       </a>
 
-
-      <a
-        class="hero-route gold"
-        href="https://emprende360.club/impulsob2b"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="hero-route gold" href="https://emprende360.club/impulsob2b" target="_blank" rel="noopener noreferrer">
         <div class="route-icon">↗</div>
         <div class="hero-route-copy">
           <b>Impulso B2B</b>
-          <span>Activa de forma dirigida tu propio mercado B2B.</span>
+          <span>Trabajo individual para activar un buyer o mercado concreto.</span>
+          <span style="display:block;margin-top:7px;color:#FDE68A;font-size:9px;font-weight:950;letter-spacing:.08em;">SERVICIO INDEPENDIENTE</span>
         </div>
         <div class="hero-route-arrow">→</div>
       </a>
@@ -1375,7 +1540,6 @@
     </div>
 
   </div>
-
 </section>
 
 
@@ -1384,55 +1548,37 @@
 ========================================================= -->
 
 <section class="scale">
-
   <div class="wrap">
 
     <div class="scale-title reveal">
-
-      <span class="kicker">Una infraestructura B2B que ya existe</span>
-
-      <h2>
-        La escala importa. El criterio todavía más.
-      </h2>
-
+      <span class="kicker">Una red que no empezó ayer</span>
+      <h2>La escala importa. El contexto todavía más.</h2>
     </div>
 
-
     <div class="scale-grid reveal">
+
+      <article class="scale-card gold">
+        <strong>~15 años</strong>
+        <b>construyendo red y comunidad profesional</b>
+        <p>El primer grupo de Emprende360 en LinkedIn nació hace aproximadamente quince años.</p>
+      </article>
 
       <article class="scale-card blue">
         <strong>12.487</strong>
         <b>decisores B2B identificados en red directa</b>
-        <p>
-          CEO · Founder · Socio · Owner · Dirección General · C-Level dentro de la red de primer nivel de LinkedIn.
-        </p>
+        <p>CEO · Founder · Socio · Owner · Dirección General · C-Level dentro de la red de primer nivel de LinkedIn.</p>
       </article>
-
 
       <article class="scale-card gold">
-        <strong>+70.000</strong>
+        <strong>70.000+</strong>
         <b>miembros en la comunidad principal</b>
-        <p>
-          Profesionales, founders, especialistas y empresas reunidos alrededor de emprendimiento y negocio.
-        </p>
+        <p>Profesionales, founders, especialistas y empresas alrededor de emprendimiento y negocio.</p>
       </article>
-
 
       <article class="scale-card blue">
         <strong>ES + LATAM</strong>
-        <b>relaciones en distintos mercados</b>
-        <p>
-          España · México · Colombia · Argentina · Chile y otros ecosistemas B2B.
-        </p>
-      </article>
-
-
-      <article class="scale-card gold">
-        <strong>5 capas</strong>
-        <b>que trabajan sobre la misma red</b>
-        <p>
-          Conversaciones · Activadores · Perks · Partners · Activación comercial.
-        </p>
+        <b>relaciones entre distintos mercados</b>
+        <p>España y Latinoamérica, con perfiles y conversaciones B2B en diferentes verticales.</p>
       </article>
 
     </div>
@@ -1442,7 +1588,6 @@
     </p>
 
   </div>
-
 </section>
 
 
@@ -1451,315 +1596,41 @@
 ========================================================= -->
 
 <section id="que-es" class="section what">
-
   <div class="wrap">
 
     <div class="center reveal">
-
-      <span class="kicker">Qué estamos construyendo</span>
-
-      <h2>
-        No otra comunidad. Una infraestructura relacional B2B.
-      </h2>
-
+      <span class="kicker">Qué es Emprende360</span>
+      <h2>Una red B2B construida para crear mejores razones para hablar.</h2>
       <p class="lead">
-        La red, los eventos, los especialistas, los partners, los activadores y las distintas comunidades forman parte de un mismo sistema.
+        Reunimos profesionales, founders, especialistas y decisores alrededor de problemas y contextos concretos. Algunas conversaciones suceden en Foros o Rondas abiertas; otras nacen de matches, relaciones o activaciones individuales.
       </p>
-
     </div>
-
 
     <div class="what-grid">
 
       <div class="what-copy reveal">
-
         <h3>Tener contactos no significa tener relaciones activas.</h3>
-
-        <p>
-          Puedes conocer cientos o miles de profesionales y seguir sin tener una razón natural para iniciar una conversación.
-        </p>
-
-        <p>
-          Emprende360 trabaja precisamente en ese espacio: seleccionar quién debería hablar con quién, crear una razón para hacerlo y continuar las relaciones que muestran recorrido.
-        </p>
-
-        <div class="what-quote">
-          La ventaja no es acumular contactos. Es convertir red + criterio + contexto en mejores conversaciones.
-        </div>
-
+        <p>Puedes conocer cientos o miles de profesionales y seguir sin tener una razón natural para iniciar una conversación.</p>
+        <p>Emprende360 trabaja precisamente ahí: entender quién debería hablar con quién, crear una razón para hacerlo y continuar las relaciones que muestran recorrido.</p>
+        <div class="what-quote">La ventaja no es acumular contactos. Es convertir red + criterio + contexto en mejores conversaciones.</div>
       </div>
-
 
       <div class="system-flow reveal">
-
-        <div class="flow-item">
-          <div class="flow-num">1</div>
-          <div>
-            <b>Identificamos</b>
-            <span>Tema, mercado, buyer, especialidad, necesidad o complementariedad.</span>
-          </div>
-        </div>
-
-        <div class="flow-item">
-          <div class="flow-num">2</div>
-          <div>
-            <b>Creamos contexto</b>
-            <span>Foro, Ronda, entrevista, sesión, partner, activación o conversación.</span>
-          </div>
-        </div>
-
-        <div class="flow-item">
-          <div class="flow-num">3</div>
-          <div>
-            <b>Movemos la red</b>
-            <span>Seleccionamos e invitamos perfiles para los que esa conversación realmente puede tener sentido.</span>
-          </div>
-        </div>
-
-        <div class="flow-item">
-          <div class="flow-num">4</div>
-          <div>
-            <b>Continuamos</b>
-            <span>Las conversaciones buenas pueden evolucionar hacia relaciones, colaboraciones, partners, oportunidades o nuevos proyectos.</span>
-          </div>
-        </div>
-
+        <div class="flow-item"><div class="flow-num">1</div><div><b>Identificamos</b><span>Tema, buyer, especialidad, intención, necesidad o complementariedad.</span></div></div>
+        <div class="flow-item"><div class="flow-num">2</div><div><b>Creamos contexto</b><span>Foro, Ronda, sesión, entrevista, match o activación.</span></div></div>
+        <div class="flow-item"><div class="flow-num">3</div><div><b>Conectamos</b><span>Seleccionamos perfiles para los que esa conversación realmente puede tener sentido.</span></div></div>
+        <div class="flow-item"><div class="flow-num">4</div><div><b>Seguimos</b><span>Las relaciones buenas pueden evolucionar hacia colaboraciones, referencias, partners, oportunidades o nuevos proyectos.</span></div></div>
       </div>
 
     </div>
-
   </div>
-
 </section>
 
 
-<!-- =========================================================
-     FIVE DOORS
-========================================================= -->
 
-<section id="puertas" class="section doors">
 
-  <div class="wrap">
 
-    <div class="center reveal">
 
-      <span class="kicker">Cinco puertas de entrada</span>
-
-      <h2>
-        Entra por donde tenga sentido para ti.
-      </h2>
-
-      <p class="lead">
-        No todo el mundo llega a Emprende360 buscando lo mismo. El ecosistema está diseñado para que cada persona pueda participar desde el papel que realmente le encaja.
-      </p>
-
-    </div>
-
-
-    <div class="doors-grid reveal">
-
-      <article class="door">
-
-        <div class="route-icon">💬</div>
-
-        <h3>Conversaciones B2B</h3>
-
-        <p>
-          Foros Ejecutivos, Rondas, entrevistas y sesiones alrededor de problemas empresariales concretos.
-        </p>
-
-        <div class="door-tags">
-          <span>Foros</span>
-          <span>Rondas</span>
-          <span>Sesiones</span>
-        </div>
-
-        <div class="door-actions">
-          <a
-            class="btn btn-secondary"
-            href="https://emprende360.club/septiembre"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver agenda →
-          </a>
-        </div>
-
-      </article>
-
-
-      <article class="door">
-
-        <div class="route-icon">🌐</div>
-
-        <h3>Activadores</h3>
-
-        <p>
-          Profesionales con relaciones B2B relevantes que ayudan a llevar determinadas conversaciones hacia las personas adecuadas.
-        </p>
-
-        <div class="door-tags">
-          <span>Red</span>
-          <span>Distribución</span>
-          <span>Criterio</span>
-        </div>
-
-        <div class="door-actions">
-          <a
-            class="btn btn-secondary"
-            href="https://emprende360.club/activadores"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Conocer Activadores →
-          </a>
-        </div>
-
-      </article>
-
-
-      <article class="door perks">
-
-        <div class="route-icon">✦</div>
-
-        <h3>Perks</h3>
-
-        <p>
-          Ventajas, descuentos y condiciones especiales ofrecidas por empresas y partners para profesionales del ecosistema.
-        </p>
-
-        <div class="door-tags">
-          <span>Software</span>
-          <span>Servicios</span>
-          <span>Ventajas</span>
-        </div>
-
-        <div class="door-actions">
-          <a
-            class="btn btn-secondary"
-            href="https://emprende360.club/perks"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver Perks →
-          </a>
-        </div>
-
-      </article>
-
-
-      <article class="door">
-
-        <div class="route-icon">🤝</div>
-
-        <h3>Partners</h3>
-
-        <p>
-          Empresas y profesionales que amplían lo que Emprende360 puede aportar mediante tecnología, servicios, conocimiento, distribución o ventajas.
-        </p>
-
-        <div class="door-tags">
-          <span>Colaboración</span>
-          <span>Tecnología</span>
-          <span>Ecosistema</span>
-        </div>
-
-        <div class="door-actions">
-          <a
-            class="btn btn-secondary"
-            href="#partners"
-          >
-            Conocer Partners →
-          </a>
-        </div>
-
-      </article>
-
-
-      <article class="door impulso">
-
-        <div class="route-icon">↗</div>
-
-        <h3>Impulso B2B</h3>
-
-        <p>
-          Para profesionales y empresas que quieren pasar de participar en el ecosistema a trabajar de forma dirigida su buyer, su mercado y sus relaciones.
-        </p>
-
-        <div class="door-tags">
-          <span>Q4</span>
-          <span>90 días</span>
-          <span>990 € + IVA</span>
-        </div>
-
-        <div class="door-actions">
-          <a
-            class="btn btn-primary"
-            href="https://emprende360.club/impulsob2b"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Conocer Impulso →
-          </a>
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     NETWORK
-========================================================= -->
-
-<section class="section network">
-
-  <div class="wrap network-grid">
-
-    <div class="network-visual reveal">
-
-      <div class="network-kpi">12.487</div>
-
-      <div class="network-kpi-label">
-        decisores B2B identificados dentro de la red directa de LinkedIn.
-      </div>
-
-      <div class="network-sub">
-        A esta capa directa se suman una comunidad principal de más de 70.000 miembros, grupos especializados, asistentes, expertos, partners y relaciones construidas en distintos mercados.
-      </div>
-
-    </div>
-
-
-    <div class="network-copy reveal">
-
-      <span class="kicker">Red + distribución + contexto</span>
-
-      <h2>
-        El activo no es la base de datos. Es lo que podemos hacer con la red.
-      </h2>
-
-      <p>
-        Emprende360 no parte de cero cada vez que organiza una conversación o activa una relación. Existe una infraestructura previa de contactos, comunidades, especialistas y relaciones.
-      </p>
-
-      <p>
-        La ventaja está en poder seleccionar por <strong>perfil, buyer, especialidad, mercado, país y contexto</strong> para decidir quién tiene sentido alrededor de cada conversación.
-      </p>
-
-      <div class="network-note">
-        No buscamos alcance indiscriminado. Buscamos acceso con criterio.
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 
 
 <!-- =========================================================
@@ -1767,463 +1638,222 @@
 ========================================================= -->
 
 <section class="section proof">
-
   <div class="wrap">
 
     <div class="center reveal">
-
       <span class="kicker">Emprende360 en acción</span>
-
-      <h2>
-        No es una idea. Ya está ocurriendo.
-      </h2>
-
-      <p class="lead">
-        Foros, Rondas y conversaciones reales con profesionales B2B. La prueba no es una promesa: es ver el sistema funcionando.
-      </p>
-
+      <h2>No es solo una idea. Las conversaciones ya están ocurriendo.</h2>
+      <p class="lead">Foros, Rondas y sesiones con profesionales B2B. La mejor forma de entender Emprende360 es ver el sistema funcionando.</p>
     </div>
-
 
     <div class="proof-grid reveal">
 
-      <a
-        class="proof-card"
-        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="proof-thumb">
-          <div style="position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.17);font-size:30px;font-weight:950;letter-spacing:-.04em;text-align:center;padding:20px;">RONDA<br>DE ALIANZAS</div>
-          <div class="play">▶</div>
-        </div>
-
-        <div class="proof-body">
-          <span class="proof-label">Foro Ejecutivo</span>
-          <h3>Conversaciones ejecutivas B2B</h3>
-          <p>Especialistas compartiendo perspectivas alrededor de negocio, decisiones y relaciones.</p>
-          <span class="proof-link">Ver sesiones anteriores →</span>
-        </div>
-      </a>
-
-
-      <a
-        class="proof-card"
-        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="proof-thumb">
-          <div style="position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.17);font-size:30px;font-weight:950;letter-spacing:-.04em;text-align:center;padding:20px;">MESA<br>B2B</div>
-          <div class="play">▶</div>
-        </div>
-
-        <div class="proof-body">
-          <span class="proof-label">Ronda de Alianzas</span>
-          <h3>Relaciones complementarias</h3>
-          <p>Sesiones orientadas a detectar complementariedad, buyers compartidos y siguientes conversaciones.</p>
-          <span class="proof-link">Ver sesiones anteriores →</span>
-        </div>
-      </a>
-
-
-      <a
-        class="proof-card"
-        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="proof-card" href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn" target="_blank" rel="noopener noreferrer">
         <div class="proof-thumb">
           <div style="position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.17);font-size:30px;font-weight:950;letter-spacing:-.04em;text-align:center;padding:20px;">FORO<br>EJECUTIVO B2B</div>
           <div class="play">▶</div>
         </div>
-
         <div class="proof-body">
-          <span class="proof-label">Mesa B2B</span>
-          <h3>Founders y negocio</h3>
-          <p>Presentación, conversación y posibles cruces entre profesionales y proyectos B2B.</p>
+          <span class="proof-label">Foros Ejecutivos</span>
+          <h3>Problemas reales. Perspectivas diferentes.</h3>
+          <p>Conversaciones entre especialistas alrededor de decisiones empresariales concretas.</p>
           <span class="proof-link">Ver sesiones anteriores →</span>
         </div>
       </a>
 
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     ACTIVATORS / PERKS
-========================================================= -->
-
-<section class="section split">
-
-  <div class="wrap split-grid">
-
-    <article id="activadores" class="feature-box reveal">
-
-      <span class="kicker">Red de Activadores</span>
-
-      <h2>
-        La red también puede distribuir.
-      </h2>
-
-      <p>
-        Los Activadores son profesionales con relaciones B2B relevantes que ayudan a que determinadas conversaciones lleguen a personas para las que realmente pueden tener sentido.
-      </p>
-
-      <div class="feature-quote">
-        No buscamos alcance. Buscamos acceso con criterio.
-      </div>
-
-      <a
-        class="btn btn-secondary"
-        href="https://emprende360.club/activadores"
-        target="_blank"
-        rel="noopener noreferrer"
-        style="margin-top:18px;"
-      >
-        Conocer la Red de Activadores →
-      </a>
-
-    </article>
-
-
-    <article id="perks" class="feature-box green reveal">
-
-      <span class="kicker">Perks del ecosistema</span>
-
-      <h2>
-        Ventajas que también crean valor.
-      </h2>
-
-      <p>
-        Empresas y partners pueden ofrecer condiciones especiales a profesionales de Emprende360 en software, tecnología, servicios B2B, formación, herramientas y otros recursos.
-      </p>
-
-      <div class="feature-quote">
-        No queremos un catálogo de cupones. Queremos ventajas que realmente tengan sentido.
-      </div>
-
-      <a
-        class="btn btn-secondary"
-        href="https://emprende360.club/perks"
-        target="_blank"
-        rel="noopener noreferrer"
-        style="margin-top:18px;"
-      >
-        Ver Perks →
-      </a>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     PARTNERS
-========================================================= -->
-
-<section id="partners" class="section split">
-
-  <div class="wrap">
-
-    <article class="feature-box gold reveal">
-
-      <span class="kicker">Partners del ecosistema</span>
-
-      <h2>
-        Un ecosistema también se construye con empresas que aportan.
-      </h2>
-
-      <p>
-        Colaboramos con empresas y profesionales capaces de aportar tecnología, conocimiento, distribución, recursos, ventajas o servicios complementarios.
-      </p>
-
-      <p>
-        Ser partner no significa comprar una plaza en un Foro ni visibilidad automática. La colaboración tiene que añadir valor real al ecosistema.
-      </p>
-
-      <div class="partner-row">
-        <div class="partner-name">MIAO</div>
-        <div class="partner-type">
-          Partner del ecosistema<br>
-          SaaS / ERP
+      <a class="proof-card" href="https://es.linkedin.com/posts/albertoporrasmoreno_la-primera-ronda-de-alianzas-b2b-confirm%C3%B3-activity-7467106669991305216-AOwf" target="_blank" rel="noopener noreferrer">
+        <div class="proof-thumb">
+          <div style="position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.17);font-size:30px;font-weight:950;letter-spacing:-.04em;text-align:center;padding:20px;">RONDA<br>DE ALIANZAS</div>
+          <div class="play">↗</div>
         </div>
-      </div>
+        <div class="proof-body">
+          <span class="proof-label">Rondas B2B</span>
+          <h3>Complementariedad con contexto.</h3>
+          <p>Matches preparados alrededor de buyers compatibles y relaciones con posible recorrido.</p>
+          <span class="proof-link">Ver una Ronda →</span>
+        </div>
+      </a>
 
-      <div class="hero-actions">
-        <a class="btn btn-secondary" href="#contacto">
-          Explorar una colaboración →
-        </a>
-      </div>
+      <a class="proof-card" href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">
+        <div class="proof-thumb">
+          <div style="position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.17);font-size:30px;font-weight:950;letter-spacing:-.04em;text-align:center;padding:20px;">PRÓXIMAS<br>CONVERSACIONES</div>
+          <div class="play">→</div>
+        </div>
+        <div class="proof-body">
+          <span class="proof-label">Agenda abierta</span>
+          <h3>Participa en las próximas.</h3>
+          <p>Foros, Rondas y nuevas conversaciones B2B que vamos publicando durante el año.</p>
+          <span class="proof-link">Ver agenda actual →</span>
+        </div>
+      </a>
 
-    </article>
-
+    </div>
   </div>
-
 </section>
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- =========================================================
-     GLOBAL / LOCAL
+     PARTNER HUB
 ========================================================= -->
 
-<section class="section global">
+<section id="partner-hub" class="section partner-hub">
+  <div class="wrap">
+    <div class="hub-shell reveal">
 
-  <div class="wrap global-grid">
+      <div class="hub-copy">
+        <span class="kicker">Partner Hub</span>
+        <h2>La capa visible de la red.</h2>
+        <p>El Partner Hub organiza perfiles, expertos, partners, verticales y posibles matches para entender mejor <strong>quién está dentro del ecosistema, qué aporta, qué busca y dónde puede existir una relación con sentido.</strong></p>
+        <p>No es una lista de asistentes ni un directorio abierto. Es una forma de hacer visible parte del movimiento que ya existe dentro de Emprende360.</p>
+        <div class="hub-quote">LinkedIn muestra perfiles. Emprende360 intenta añadir el contexto: con quién puede tener sentido hablar y por qué.</div>
+        <div class="hero-actions"><a class="btn btn-primary" href="https://emprende360.club/partner-hub/" target="_blank" rel="noopener noreferrer">Explorar Partner Hub →</a></div>
+      </div>
 
-    <div class="global-copy reveal">
-
-      <span class="kicker">Global en relaciones · local en contexto</span>
-
-      <h2>
-        Un ecosistema global necesita conversaciones locales.
-      </h2>
-
-      <p>
-        España, México, Colombia, Argentina o Chile comparten muchas oportunidades B2B, pero no necesariamente los mismos buyers, problemas, regulaciones o dinámicas.
-      </p>
-
-      <p>
-        Emprende360 desarrollará progresivamente Foros, Rondas y nodos adaptados a distintos mercados, apoyándose en profesionales capaces de ayudar a dinamizar cada ecosistema.
-      </p>
-
-      <div class="network-note">
-        La capa internacional crecerá según existan perfiles, temas y responsables con suficiente encaje.
+      <div class="hub-grid">
+        <div class="hub-card"><div class="hub-icon">👥</div><b>Perfiles y expertos</b><span>Quién está, qué hace y dónde encaja dentro de la red.</span></div>
+        <div class="hub-card"><div class="hub-icon">🤝</div><b>Matches sugeridos</b><span>Hipótesis de conexión con un motivo claro, no intros automáticas.</span></div>
+        <div class="hub-card"><div class="hub-icon">🧭</div><b>Verticales</b><span>Áreas donde empieza a existir suficiente densidad para activar relaciones.</span></div>
+        <div class="hub-card"><div class="hub-icon">🔁</div><b>Rondas y movimiento</b><span>Contextos donde las relaciones pasan de estar visibles a entrar en conversación.</span></div>
       </div>
 
     </div>
-
-
-    <div class="countries reveal">
-      <div class="country">🇪🇸 España</div>
-      <div class="country">🇲🇽 México</div>
-      <div class="country">🇨🇴 Colombia</div>
-      <div class="country">🇦🇷 Argentina</div>
-      <div class="country">🇨🇱 Chile</div>
-      <div class="country">🌎 Latinoamérica</div>
-    </div>
-
   </div>
-
 </section>
 
+<!-- =========================================================
+     HISTORY + FOUNDER
+========================================================= -->
+
+<section class="section history">
+  <div class="wrap history-grid">
+
+    <article class="history-box reveal">
+      <span class="kicker">Nuestra historia</span>
+      <h2>Esto no empezó en 2026.</h2>
+      <p>Emprende360 ha pasado por distintas etapas. La comunidad nació mucho antes que el modelo actual, y esa historia explica por qué hoy existe una red sobre la que construir algo más útil.</p>
+
+      <div class="timeline-mini">
+        <div class="time-row"><b>Hace ~15 años</b><span>Nace el primer grupo de Emprende360 en LinkedIn y empieza a crecer una comunidad profesional.</span></div>
+        <div class="time-row"><b>Con el tiempo</b><span>La red pasa por distintas etapas, formatos y conversaciones alrededor de emprendimiento y negocio.</span></div>
+        <div class="time-row"><b>Enero 2026</b><span>Decidimos dejar de pensar solo en “comunidad” y empezar a construir un ecosistema B2B con más contexto, Rondas, expertos, relaciones y activación.</span></div>
+        <div class="time-row"><b>Ahora</b><span>El objetivo es sencillo: que perfiles buenos no se encuentren solo por casualidad.</span></div>
+      </div>
+    </article>
+
+    <article class="founder-box reveal">
+      <span class="kicker">Founder</span>
+      <div class="founder-head">
+        <div class="founder-avatar">AP</div>
+        <div><div class="founder-name">Alberto Porras</div><div class="founder-role">Founder · Emprende360</div></div>
+      </div>
+      <p>Emprende360 está liderado por Alberto Porras, que lleva años construyendo comunidad, relaciones y conversación profesional en LinkedIn y hoy centra ese activo en desarrollar un ecosistema B2B más útil y selectivo.</p>
+      <div class="founder-stat">45.000+ seguidores en LinkedIn · red B2B construida durante años.</div>
+      <div class="hero-actions"><a class="btn btn-secondary" href="https://es.linkedin.com/in/albertoporrasmoreno" target="_blank" rel="noopener noreferrer">Ver perfil de Alberto en LinkedIn →</a></div>
+    </article>
+
+  </div>
+</section>
 
 <!-- =========================================================
      IMPULSO
 ========================================================= -->
 
 <section id="impulso" class="section impulso">
-
   <div class="wrap">
-
     <div class="impulso-box reveal">
 
       <div class="impulso-copy">
-
-        <span class="kicker">Impulso B2B · Q4</span>
-
-        <h2>
-          ¿Quieres pasar de participar a activar tu propio mercado?
-        </h2>
-
-        <p>
-          Durante octubre, noviembre y diciembre definimos a quién quieres llegar, activamos conversaciones desde la red y los contextos de Emprende360 y trabajamos las relaciones que muestran más recorrido.
-        </p>
+        <span class="kicker">Impulso B2B · Trabajo individual</span>
+        <h2>¿Quieres trabajar tu propio mercado de forma más personalizada?</h2>
+        <p>Los <strong>Foros, Rondas y eventos de Emprende360 son gratuitos.</strong> Puedes participar en ellos sin contratar ningún servicio.</p>
+        <p><strong>Impulso B2B es independiente:</strong> está pensado para profesionales y empresas que quieren trabajar de forma individual un buyer, un mercado o una línea concreta de negocio utilizando la red y los contextos de Emprende360.</p>
 
         <div class="impulso-list">
-          <div class="impulso-item">✓ Mapa de Activación</div>
-          <div class="impulso-item">✓ Buyer, problema y ángulo</div>
-          <div class="impulso-item">✓ Selección y activación</div>
+          <div class="impulso-item">✓ Sesión individual</div>
+          <div class="impulso-item">✓ Buyer y objetivo concreto</div>
+          <div class="impulso-item">✓ Selección y activación dirigida</div>
           <div class="impulso-item">✓ Relaciones complementarias</div>
           <div class="impulso-item">✓ Contexto propio cuando aporta valor</div>
-          <div class="impulso-item">✓ Seguimiento durante Q4</div>
+          <div class="impulso-item">✓ Seguimiento</div>
         </div>
 
+        <div class="hero-actions"><a class="btn btn-primary" href="https://emprende360.club/impulsob2b" target="_blank" rel="noopener noreferrer">Conocer Impulso B2B →</a></div>
       </div>
 
-
-      <div class="price-panel">
-
-        <small>Octubre + noviembre + diciembre</small>
-
-        <div class="price">
-          <b>990€</b>
-          <span>+ IVA</span>
+      <div class="compare">
+        <div class="compare-card">
+          <b>Eventos Emprende360</b>
+          <span>Foros, Rondas y conversaciones para participar, aprender, aportar criterio y conocer perfiles relevantes.</span>
+          <span class="compare-tag">GRATIS</span>
         </div>
-
-        <p>
-          90 días de activación comercial relacional B2B. No prometemos clientes, reuniones, leads ni ROI.
-        </p>
-
-        <a
-          class="btn btn-primary"
-          href="https://emprende360.club/impulsob2b"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="margin-top:12px;width:100%;"
-        >
-          Conocer Impulso B2B →
-        </a>
-
+        <div class="compare-card personal">
+          <b>Impulso B2B</b>
+          <span>Trabajo individual y personalizado alrededor de tu buyer, tu mercado y las relaciones que quieres activar.</span>
+          <span class="compare-tag">SERVICIO INDEPENDIENTE</span>
+        </div>
       </div>
 
     </div>
-
   </div>
-
 </section>
 
 
 <!-- =========================================================
-     FINAL CTA
+     SUBSCRIBE
 ========================================================= -->
 
 <section id="contacto" class="section final">
-
   <div class="wrap">
-
     <div class="final-box reveal">
-
-      <span class="kicker">¿Dónde quieres entrar?</span>
-
-      <h2>
-        Participa. Aporta. Colabora. O activa tu mercado.
-      </h2>
-
-      <p class="lead" style="max-width:790px;margin:17px auto 0;">
-        Emprende360 no tiene una única puerta de entrada. Elige la que tenga sentido para ti ahora.
-      </p>
+      <span class="kicker">Mantente al día</span>
+      <h2>¿Quieres enterarte de las próximas conversaciones?</h2>
+      <p class="lead" style="max-width:790px;margin:17px auto 0;">Vamos publicando nuevos Foros Ejecutivos, Rondas y sesiones B2B durante el año. Si quieres que te avisemos cuando haya nuevas conversaciones relevantes, deja tus datos.</p>
 
       <div class="final-actions">
-
-        <a
-          class="btn btn-primary"
-          href="https://emprende360.club/septiembre"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ver agenda
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="https://emprende360.club/activadores"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Activadores
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="https://emprende360.club/perks"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Perks
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="#partners"
-        >
-          Partners
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="https://emprende360.club/impulsob2b"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Impulso B2B
-        </a>
-
+        <a class="btn btn-primary" href="https://forms.gle/co89pCvzScuLtr6z5" target="_blank" rel="noopener noreferrer">Recibir próximos eventos →</a>
+        <a class="btn btn-secondary" href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">Ver agenda actual</a>
       </div>
 
+      <p style="margin:14px 0 0;color:#94A3B8;font-size:11px;line-height:1.5;">Gratis · Sin membresía obligatoria · Avisos sobre nuevas conversaciones y actividades de Emprende360.</p>
     </div>
-
   </div>
-
 </section>
 
 </main>
 
 
 <footer>
-
   <div class="wrap footer-inner">
 
     <div>
-      <strong>Emprende360</strong>
-      <br>
-      Ecosistema B2B · Conversaciones · Relaciones · Activación
+      <strong>Emprende360</strong><br>
+      Ecosistema B2B · Contexto · Conversaciones · Relaciones
     </div>
 
-
     <div class="footer-links">
-
       <a href="#que-es">Qué es</a>
+      <a href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">Agenda</a>
+      <a href="https://emprende360.club/partner-hub/" target="_blank" rel="noopener noreferrer">Partner Hub</a>
+      <a href="https://emprende360.club/impulsob2b" target="_blank" rel="noopener noreferrer">Impulso</a>
+      <a href="https://emprende360.club/privacidad" target="_blank" rel="noopener noreferrer">Privacidad</a>
+      <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer">Aviso legal</a>
+    </div>
 
-      <a
-        href="https://emprende360.club/septiembre"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Agenda
-      </a>
-
-      <a
-        href="https://emprende360.club/activadores"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Activadores
-      </a>
-
-      <a
-        href="https://emprende360.club/perks"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Perks
-      </a>
-
-      <a href="#partners">Partners</a>
-
-      <a
-        href="https://emprende360.club/impulsob2b"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Impulso
-      </a>
-
-      <a
-        href="https://emprende360.club/privacidad"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Privacidad
-      </a>
-
-      <a
-        href="https://emprende360.club/aviso-legal"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Aviso legal
-      </a>
-
+    <div style="width:100%;max-width:860px;margin-top:4px;color:#64748B;font-size:10px;line-height:1.55;">
+      Emprende360 facilita contexto, visibilidad, conversaciones, posibles matches y relaciones B2B. No garantiza clientes, ventas, inversión, financiación, colaboraciones ni resultados concretos.
     </div>
 
   </div>
-
 </footer>
 
 
