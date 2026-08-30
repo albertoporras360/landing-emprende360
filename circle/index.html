@@ -1,0 +1,1551 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Executive Circle · Emprende360 | Founders, CEOs y Owners</title>
+
+  <meta
+    name="description"
+    content="Executive Circle de Emprende360: hasta 8 founders, CEOs y owners. Tres meses, una sesión privada mensual, decisiones reales, confidencialidad y no solicitation."
+  />
+
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://emprende360.club/executive-circle" />
+
+  <meta property="og:title" content="Executive Circle · Emprende360" />
+  <meta
+    property="og:description"
+    content="Un pequeño consejo de pares para decisiones que no deberías tomar solo."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://emprende360.club/executive-circle" />
+
+  <style>
+    :root{
+      --deep:#020617;
+      --navy:#071522;
+      --navy2:#0B1728;
+      --sky:#18A7FF;
+      --sky-soft:#7DD3FC;
+      --gold:#F4C542;
+      --gold-soft:#FDE68A;
+      --green:#22C55E;
+      --red:#FB7185;
+      --text:#F8FAFC;
+      --soft:#CBD5E1;
+      --muted:#94A3B8;
+      --line:rgba(255,255,255,.12);
+      --glass:rgba(255,255,255,.05);
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--deep);
+      color:var(--text);
+      overflow-x:hidden;
+      line-height:1.5;
+    }
+
+    a{color:inherit;text-decoration:none}
+    strong,b{color:#fff}
+
+    .wrap{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+    .section{
+      position:relative;
+      padding:74px 0;
+      overflow:hidden;
+    }
+
+    .center{
+      max-width:860px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .lead{
+      color:var(--soft);
+      font-size:18px;
+      line-height:1.68;
+    }
+
+    .small{
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .grad-text{
+      background:linear-gradient(90deg,#fff,#c8ecff 45%,#ffe7a6);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .pill,.kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border-radius:999px;
+      font-weight:950;
+      text-transform:uppercase;
+    }
+
+    .pill{
+      padding:8px 13px;
+      border:1px solid rgba(244,197,66,.28);
+      background:rgba(244,197,66,.08);
+      color:#FDE68A;
+      font-size:11px;
+      letter-spacing:.08em;
+    }
+
+    .kicker{
+      padding:7px 12px;
+      border:1px solid rgba(24,167,255,.24);
+      background:rgba(24,167,255,.08);
+      color:#C8ECFF;
+      font-size:10px;
+      letter-spacing:.14em;
+    }
+
+    h1{
+      margin:18px 0 0;
+      font-size:clamp(43px,5.3vw,66px);
+      line-height:.99;
+      letter-spacing:-.057em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:14px 0 0;
+      font-size:clamp(31px,4.1vw,49px);
+      line-height:1.05;
+      letter-spacing:-.045em;
+      font-weight:950;
+    }
+
+    h3{margin:0;line-height:1.18}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:14px 21px;
+      border-radius:999px;
+      border:0;
+      font-size:13px;
+      font-weight:950;
+      cursor:pointer;
+      transition:.24s ease;
+    }
+
+    .btn:hover{transform:translateY(-3px)}
+
+    .btn-primary{
+      color:#06111F;
+      background:linear-gradient(90deg,#ffdc64,#F4C542,#ffd45d);
+      box-shadow:0 18px 60px rgba(244,197,66,.22);
+    }
+
+    .btn-primary:hover{
+      box-shadow:0 24px 75px rgba(244,197,66,.35);
+    }
+
+    .btn-secondary{
+      color:#fff;
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.085);
+    }
+
+    .check{
+      width:21px;
+      height:21px;
+      display:grid;
+      place-items:center;
+      border-radius:999px;
+      background:rgba(34,197,94,.14);
+      color:#86EFAC;
+      font-size:11px;
+      font-weight:950;
+      flex:none;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .6s ease,transform .6s ease;
+    }
+
+    .reveal.on{
+      opacity:1;
+      transform:none;
+    }
+
+    header{
+      position:fixed;
+      top:0;left:0;right:0;
+      z-index:100;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      background:rgba(2,6,23,.86);
+      backdrop-filter:blur(22px);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:11px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+    }
+
+    .brand-mark{
+      width:41px;height:41px;
+      display:grid;
+      place-items:center;
+      border-radius:15px;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      font-weight:950;
+      box-shadow:0 18px 45px rgba(24,167,255,.24);
+    }
+
+    .brand-title{font-weight:950;line-height:1}
+    .brand-sub{
+      margin-top:4px;
+      color:#94A3B8;
+      font-size:10px;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      font-weight:850;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:17px;
+      margin-left:auto;
+      color:#CBD5E1;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .nav-links a:hover{color:#fff}
+
+    /* HERO */
+    .hero{
+      position:relative;
+      padding:108px 0 58px;
+      background:
+        radial-gradient(circle at 12% 10%,rgba(24,167,255,.20),transparent 30%),
+        radial-gradient(circle at 88% 12%,rgba(244,197,66,.13),transparent 30%),
+        var(--deep);
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      opacity:.05;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.65) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.65) 1px,transparent 1px);
+      background-size:54px 54px;
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.04fr .96fr;
+      gap:42px;
+      align-items:start;
+    }
+
+    .hero-copy p{
+      max-width:720px;
+      margin:19px 0 0;
+      color:#CBD5E1;
+      font-size:17px;
+      line-height:1.67;
+    }
+
+    .hero-quote{
+      margin-top:19px;
+      padding:14px 17px;
+      border-left:3px solid var(--gold);
+      color:#FDE68A;
+      font-size:15px;
+      font-weight:900;
+      line-height:1.5;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:11px;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
+
+    .hero-note{
+      margin-top:17px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .circle-card{
+      padding:29px;
+      border:1px solid rgba(244,197,66,.30);
+      border-radius:29px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.12),transparent 38%),
+        radial-gradient(circle at 0 100%,rgba(24,167,255,.09),transparent 42%),
+        rgba(255,255,255,.05);
+      box-shadow:var(--shadow);
+    }
+
+    .circle-card h3{
+      margin-top:12px;
+      font-size:27px;
+      letter-spacing:-.04em;
+    }
+
+    .circle-list{
+      list-style:none;
+      margin:21px 0 0;
+      padding:0;
+      display:grid;
+      gap:11px;
+    }
+
+    .circle-list li{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:10px;
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    .hero-price{
+      margin-top:22px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.10);
+    }
+
+    .hero-price b{
+      display:block;
+      color:#FDE68A;
+      font-size:42px;
+      letter-spacing:-.05em;
+      line-height:1;
+    }
+
+    .hero-price span{
+      display:block;
+      margin-top:7px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    .circle-card .btn{
+      width:100%;
+      margin-top:20px;
+    }
+
+    /* WHAT */
+    .what{background:var(--navy)}
+
+    .what-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:36px;
+    }
+
+    .what-card{
+      padding:28px;
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:var(--glass);
+    }
+
+    .what-card.highlight{
+      border-color:rgba(244,197,66,.25);
+      background:
+        radial-gradient(circle at 0 0,rgba(244,197,66,.08),transparent 38%),
+        var(--glass);
+    }
+
+    .what-card h3{
+      font-size:25px;
+      letter-spacing:-.035em;
+    }
+
+    .what-card p{
+      color:#CBD5E1;
+      font-size:14px;
+      line-height:1.62;
+    }
+
+    /* FORMAT */
+    .format{background:var(--deep)}
+
+    .format-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:38px;
+    }
+
+    .format-item{
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:rgba(255,255,255,.04);
+      min-height:225px;
+    }
+
+    .format-icon{
+      width:43px;height:43px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-size:16px;
+      font-weight:950;
+    }
+
+    .format-item h3{
+      margin-top:14px;
+      font-size:19px;
+    }
+
+    .format-item p{
+      color:#CBD5E1;
+      font-size:12px;
+      line-height:1.55;
+    }
+
+    /* SESSION */
+    .session{background:var(--navy)}
+
+    .session-shell{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:28px;
+      align-items:start;
+      padding:34px;
+      border:1px solid rgba(24,167,255,.23);
+      border-radius:30px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(24,167,255,.09),transparent 40%),
+        rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .session-copy p{
+      color:#CBD5E1;
+      font-size:15px;
+      line-height:1.64;
+    }
+
+    .session-steps{
+      display:grid;
+      gap:10px;
+    }
+
+    .session-step{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:12px;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:17px;
+      background:rgba(2,6,23,.28);
+    }
+
+    .session-step b{
+      display:block;
+      font-size:13px;
+    }
+
+    .session-step span{
+      display:block;
+      margin-top:4px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    /* TOPICS */
+    .topics{background:var(--deep)}
+
+    .topic-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:13px;
+      margin-top:36px;
+    }
+
+    .topic{
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:21px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .topic-icon{
+      width:42px;height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      background:rgba(24,167,255,.09);
+      border:1px solid rgba(24,167,255,.19);
+      margin-bottom:12px;
+      font-size:18px;
+    }
+
+    .topic b{
+      display:block;
+      font-size:15px;
+    }
+
+    .topic span{
+      display:block;
+      margin-top:6px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    /* RULES */
+    .rules{background:var(--navy)}
+
+    .rules-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:36px;
+    }
+
+    .rule{
+      padding:25px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .rule.gold{
+      border-color:rgba(244,197,66,.25);
+      background:
+        radial-gradient(circle at 0 0,rgba(244,197,66,.08),transparent 38%),
+        rgba(255,255,255,.04);
+    }
+
+    .rule h3{
+      font-size:21px;
+      letter-spacing:-.03em;
+    }
+
+    .rule p{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.58;
+    }
+
+    /* FIT */
+    .fit{background:var(--deep)}
+
+    .fit-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:36px;
+    }
+
+    .fit-card{
+      padding:28px;
+      border:1px solid var(--line);
+      border-radius:25px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .fit-card h3{
+      font-size:24px;
+      letter-spacing:-.035em;
+    }
+
+    .fit-card ul{
+      list-style:none;
+      padding:0;
+      margin:18px 0 0;
+      display:grid;
+      gap:10px;
+    }
+
+    .fit-card li{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    /* SELECTION */
+    .selection{background:var(--navy)}
+
+    .selection-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:36px;
+    }
+
+    .selection-step{
+      padding:23px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .selection-step b{
+      display:block;
+      color:#FDE68A;
+      font-size:13px;
+    }
+
+    .selection-step span{
+      display:block;
+      margin-top:7px;
+      color:#CBD5E1;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    /* OFFER */
+    .offer{
+      background:
+        radial-gradient(circle at 15% 20%,rgba(24,167,255,.10),transparent 30%),
+        radial-gradient(circle at 85% 25%,rgba(244,197,66,.09),transparent 30%),
+        var(--deep);
+    }
+
+    .offer-card{
+      max-width:900px;
+      margin:36px auto 0;
+      padding:38px;
+      border:1px solid rgba(244,197,66,.30);
+      border-radius:31px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.10),transparent 38%),
+        rgba(255,255,255,.05);
+      box-shadow:var(--shadow);
+    }
+
+    .offer-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .offer-card h3{
+      margin-top:14px;
+      font-size:32px;
+      letter-spacing:-.04em;
+    }
+
+    .offer-price{
+      text-align:right;
+      min-width:180px;
+    }
+
+    .offer-price b{
+      display:block;
+      color:#FDE68A;
+      font-size:54px;
+      letter-spacing:-.055em;
+      line-height:1;
+    }
+
+    .offer-price span{
+      display:block;
+      margin-top:6px;
+      color:#94A3B8;
+      font-size:10px;
+    }
+
+    .offer-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px 18px;
+      list-style:none;
+      padding:0;
+      margin:25px 0 0;
+    }
+
+    .offer-list li{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:9px;
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    .offer-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:11px;
+      margin-top:27px;
+    }
+
+    /* FAQ */
+    .faq{background:var(--navy)}
+
+    details{
+      margin-bottom:10px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:17px;
+      background:rgba(255,255,255,.05);
+    }
+
+    summary{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      padding:18px 20px;
+      cursor:pointer;
+      list-style:none;
+      font-size:15px;
+      font-weight:900;
+    }
+
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";color:var(--gold);font-size:23px}
+    details[open] summary::after{content:"–"}
+
+    details p{
+      margin:0;
+      padding:0 20px 20px;
+      color:#94A3B8;
+      font-size:13px;
+      line-height:1.58;
+    }
+
+    /* FINAL */
+    .final{
+      text-align:center;
+      background:
+        radial-gradient(circle at 18% 20%,rgba(24,167,255,.13),transparent 32%),
+        radial-gradient(circle at 82% 30%,rgba(244,197,66,.10),transparent 30%),
+        var(--deep);
+    }
+
+    .final-box{
+      padding:43px;
+      border:1px solid rgba(244,197,66,.25);
+      border-radius:33px;
+      background:rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .final-actions{
+      display:flex;
+      justify-content:center;
+      gap:11px;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
+
+    footer{
+      padding:29px 0;
+      border-top:1px solid var(--line);
+      background:#01040d;
+      color:#94A3B8;
+      font-size:12px;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    @media(max-width:1050px){
+      .nav-links{display:none}
+      .hero-grid,.session-shell{grid-template-columns:1fr}
+      .format-grid{grid-template-columns:repeat(2,1fr)}
+      .topic-grid,.rules-grid{grid-template-columns:repeat(2,1fr)}
+      .selection-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media(max-width:760px){
+      .wrap{padding:0 16px}
+      .section{padding:58px 0}
+      .nav{padding:10px 16px}
+      .brand-sub{display:none}
+      .nav>.btn{padding:10px 12px;font-size:10px}
+
+      .hero{padding:94px 0 46px}
+      h1{font-size:clamp(38px,11vw,52px)}
+      h2{font-size:clamp(29px,8.8vw,40px)}
+
+      .hero-actions,.offer-actions,.final-actions{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .hero-actions .btn,.offer-actions .btn,.final-actions .btn{width:100%}
+
+      .what-grid,.format-grid,.topic-grid,.rules-grid,.fit-grid,.selection-grid,.offer-list{
+        grid-template-columns:1fr;
+      }
+
+      .session-shell,.offer-card,.final-box{padding:24px}
+
+      .offer-top{display:block}
+      .offer-price{text-align:left;margin-top:20px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a class="brand" href="https://emprende360.club/">
+      <div class="brand-mark">E</div>
+      <div>
+        <div class="brand-title">Emprende360</div>
+        <div class="brand-sub">Executive Circle</div>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#como">Cómo funciona</a>
+      <a href="#para-quien">Para quién</a>
+      <a href="#seleccion">Selección</a>
+      <a href="#oferta">Founding Cohort</a>
+    </nav>
+
+    <a
+      class="btn btn-primary"
+      href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20mi%20encaje%20en%20el%20Executive%20Circle%20de%20Emprende360.%0A%0ANombre%3A%0AEmpresa%3A%0ACargo%3A%0ALinkedIn%3A%0AQu%C3%A9%20reto%20o%20decisi%C3%B3n%20importante%20estoy%20trabajando%20ahora%3A%0AQu%C3%A9%20creo%20que%20puedo%20aportar%20al%20grupo%3A%0A"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Solicitar plaza
+    </a>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy reveal">
+
+      <span class="pill">Executive Circle · Founding Cohort Q4 2026</span>
+
+      <h1>
+        <span class="grad-text">
+          Hay decisiones que no deberías tomar solo.
+        </span>
+      </h1>
+
+      <p>
+        Un pequeño círculo privado de <strong>founders, CEOs y owners</strong> para trabajar decisiones, problemas y oportunidades reales con personas que también tienen responsabilidad empresarial.
+      </p>
+
+      <div class="hero-quote">
+        No es formación. No es networking. No es un grupo para venderse entre sí.
+      </div>
+
+      <div class="hero-actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20mi%20encaje%20en%20el%20Executive%20Circle%20de%20Emprende360.%0A%0ANombre%3A%0AEmpresa%3A%0ACargo%3A%0ALinkedIn%3A%0AQu%C3%A9%20reto%20o%20decisi%C3%B3n%20importante%20estoy%20trabajando%20ahora%3A%0AQu%C3%A9%20creo%20que%20puedo%20aportar%20al%20grupo%3A%0A"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Solicitar plaza →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="#como"
+        >
+          Ver cómo funciona
+        </a>
+
+      </div>
+
+      <div class="hero-note">
+        Hasta 8 miembros · Octubre–Diciembre 2026 · Solicitud previa · Confidencialidad · No solicitation.
+      </div>
+
+    </div>
+
+
+    <div class="circle-card reveal">
+
+      <span class="kicker">Founding Cohort</span>
+
+      <h3>
+        Tres meses para pensar mejor con un grupo que también decide.
+      </h3>
+
+      <ul class="circle-list">
+        <li><span class="check">✓</span><span><strong>Hasta 8 founders, CEOs u owners.</strong></span></li>
+        <li><span class="check">✓</span><span><strong>1 onboarding individual</strong> de 30 minutos.</span></li>
+        <li><span class="check">✓</span><span><strong>1 sesión privada mensual</strong> de aproximadamente 2 horas.</span></li>
+        <li><span class="check">✓</span><span><strong>3 meses:</strong> octubre, noviembre y diciembre.</span></li>
+        <li><span class="check">✓</span><span><strong>Grupo privado</strong> para continuidad entre sesiones.</span></li>
+        <li><span class="check">✓</span><span><strong>Conexiones puntuales</strong> cuando realmente tenga sentido.</span></li>
+      </ul>
+
+      <div class="hero-price">
+        <b>750 €</b>
+        <span>Founding Cohort · Q4 2026 · un único pago.</span>
+      </div>
+
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20mi%20encaje%20en%20el%20Executive%20Circle%20de%20Emprende360.%0A%0ANombre%3A%0AEmpresa%3A%0ACargo%3A%0ALinkedIn%3A%0AQu%C3%A9%20reto%20o%20decisi%C3%B3n%20importante%20estoy%20trabajando%20ahora%3A%0AQu%C3%A9%20creo%20que%20puedo%20aportar%20al%20grupo%3A%0A"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Valorar mi encaje
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHAT IT IS -->
+<section class="section what">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Qué estás comprando</span>
+      <h2>Un pequeño consejo de pares. No otra comunidad.</h2>
+      <p class="lead">
+        El valor está en poder poner encima de la mesa una situación real, escuchar buenas preguntas, recibir perspectivas de personas que también deciden y salir con más claridad sobre qué hacer.
+      </p>
+    </div>
+
+    <div class="what-grid reveal">
+
+      <div class="what-card highlight">
+        <h3>Lo que sí es</h3>
+        <p>
+          Un espacio recurrente, confidencial y bien seleccionado para trabajar decisiones reales de empresa con pares que tienen experiencia, responsabilidad y criterio.
+        </p>
+        <p>
+          El grupo existe para ayudarte a <strong>pensar mejor, ver ángulos que no estabas viendo y tomar decisiones con más contexto.</strong>
+        </p>
+      </div>
+
+      <div class="what-card">
+        <h3>Lo que no es</h3>
+        <p>
+          No es un curso, una academia, un networking abierto, una ronda de presentaciones, un grupo de WhatsApp masivo ni una sala llena de proveedores buscando clientes.
+        </p>
+        <p>
+          Tampoco necesitas preparar presentaciones. Vienes con realidad.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FORMAT -->
+<section id="como" class="section format">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Cómo funciona</span>
+      <h2>Pequeño, recurrente, confidencial y práctico.</h2>
+    </div>
+
+    <div class="format-grid reveal">
+
+      <article class="format-item">
+        <div class="format-icon">8</div>
+        <h3>Hasta 8 personas</h3>
+        <p>
+          Suficientemente pequeño para que todos tengan espacio y suficientemente diverso para aportar perspectivas distintas.
+        </p>
+      </article>
+
+      <article class="format-item">
+        <div class="format-icon">90</div>
+        <h3>3 meses</h3>
+        <p>
+          Octubre, noviembre y diciembre. Queremos continuidad suficiente para que exista confianza, seguimiento y aprendizaje entre sesiones.
+        </p>
+      </article>
+
+      <article class="format-item">
+        <div class="format-icon">2h</div>
+        <h3>1 sesión mensual</h3>
+        <p>
+          Aproximadamente dos horas para trabajar asuntos reales de varios miembros, no para escuchar ponencias.
+        </p>
+      </article>
+
+      <article class="format-item">
+        <div class="format-icon">1:1</div>
+        <h3>Onboarding individual</h3>
+        <p>
+          Una conversación inicial para entender tu empresa, momento, retos, objetivos y qué puedes aportar al grupo.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SESSION -->
+<section class="section session">
+
+  <div class="wrap">
+
+    <div class="session-shell reveal">
+
+      <div class="session-copy">
+
+        <span class="kicker">Qué ocurre en una sesión</span>
+
+        <h2>
+          Vienes con una decisión. No con una presentación.
+        </h2>
+
+        <p>
+          Cada sesión gira alrededor de situaciones que importan de verdad: una contratación, un socio, una decisión de crecimiento, margen, financiación, ventas, expansión, equipo, estrategia o un problema que todavía no tienes claro cómo resolver.
+        </p>
+
+        <p>
+          El grupo no decide por ti. Te ayuda a <strong>hacer mejores preguntas, detectar riesgos y ver opciones</strong> antes de actuar.
+        </p>
+
+      </div>
+
+
+      <div class="session-steps">
+
+        <div class="session-step">
+          <span class="check">1</span>
+          <div>
+            <b>Check-in rápido</b>
+            <span>Qué cambió desde la sesión anterior y qué necesita atención ahora.</span>
+          </div>
+        </div>
+
+        <div class="session-step">
+          <span class="check">2</span>
+          <div>
+            <b>2–3 asuntos importantes</b>
+            <span>Los miembros ponen encima de la mesa decisiones, retos u oportunidades concretas.</span>
+          </div>
+        </div>
+
+        <div class="session-step">
+          <span class="check">3</span>
+          <div>
+            <b>Preguntas antes que consejos</b>
+            <span>Primero entendemos. Después aparecen perspectivas, experiencias y contraste.</span>
+          </div>
+        </div>
+
+        <div class="session-step">
+          <span class="check">4</span>
+          <div>
+            <b>Siguiente acción</b>
+            <span>Cada asunto termina con más claridad sobre qué observar, decidir o hacer después.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TOPICS -->
+<section class="section topics">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Qué tipo de asuntos caben</span>
+      <h2>Decisiones que afectan a una empresa real.</h2>
+    </div>
+
+    <div class="topic-grid reveal">
+
+      <div class="topic">
+        <div class="topic-icon">🎯</div>
+        <b>Foco y estrategia</b>
+        <span>Qué priorizar, qué dejar de hacer, dónde competir y cómo asignar recursos.</span>
+      </div>
+
+      <div class="topic">
+        <div class="topic-icon">👥</div>
+        <b>Equipo y liderazgo</b>
+        <span>Contratación, delegación, socios, cultura, accountability y decisiones difíciles con personas.</span>
+      </div>
+
+      <div class="topic">
+        <div class="topic-icon">📈</div>
+        <b>Ventas y crecimiento</b>
+        <span>GTM, canal, posicionamiento, estructura comercial, pricing y crecimiento rentable.</span>
+      </div>
+
+      <div class="topic">
+        <div class="topic-icon">💰</div>
+        <b>Caja, margen y capital</b>
+        <span>Rentabilidad, financiación, deuda, inversión, adquisiciones y decisiones financieras.</span>
+      </div>
+
+      <div class="topic">
+        <div class="topic-icon">⚙️</div>
+        <b>Operaciones</b>
+        <span>Procesos, escalabilidad, tecnología, IA, eficiencia y dependencia del fundador.</span>
+      </div>
+
+      <div class="topic">
+        <div class="topic-icon">🌍</div>
+        <b>Expansión y oportunidades</b>
+        <span>Nuevos mercados, partnerships, internacionalización, adquisiciones y decisiones de timing.</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RULES -->
+<section class="section rules">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Las reglas importan</span>
+      <h2>La calidad del Circle depende de proteger la conversación.</h2>
+    </div>
+
+    <div class="rules-grid reveal">
+
+      <article class="rule gold">
+        <h3>Confidencialidad</h3>
+        <p>
+          Lo que se comparte dentro del Circle no se utiliza fuera sin permiso. Sin esa confianza, las conversaciones pierden valor.
+        </p>
+      </article>
+
+      <article class="rule">
+        <h3>No solicitation</h3>
+        <p>
+          No entras para prospectar al resto. Si de una relación acaba surgiendo negocio de forma natural, perfecto; pero no es el objetivo ni se fuerza.
+        </p>
+      </article>
+
+      <article class="rule">
+        <h3>No competencia directa</h3>
+        <p>
+          Evitamos situaciones donde dos miembros no puedan hablar con suficiente apertura por competir directamente en el mismo espacio.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FIT -->
+<section id="para-quien" class="section fit">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Para quién</span>
+      <h2>No buscamos llenar ocho sillas. Buscamos ocho personas correctas.</h2>
+    </div>
+
+    <div class="fit-grid reveal">
+
+      <div class="fit-card">
+        <h3>Puede encajarte si…</h3>
+        <ul>
+          <li>✓ Eres Founder, CEO, Owner o máximo responsable de una empresa operativa.</li>
+          <li>✓ Tomas decisiones que afectan a equipo, dinero, clientes, estrategia o crecimiento.</li>
+          <li>✓ Estás dispuesto a compartir contexto real, no solo éxitos.</li>
+          <li>✓ Puedes aportar experiencia y criterio a los problemas de otros.</li>
+          <li>✓ Buscas pares, no una audiencia a la que vender.</li>
+        </ul>
+      </div>
+
+      <div class="fit-card">
+        <h3>No encaja si…</h3>
+        <ul>
+          <li>✕ Tu objetivo principal es prospectar al resto del grupo.</li>
+          <li>✕ Buscas formación semanal o un catálogo de expertos.</li>
+          <li>✕ No tienes responsabilidad real de decisión.</li>
+          <li>✕ No quieres compartir problemas o información suficiente para que el grupo pueda ayudarte.</li>
+          <li>✕ Esperas clientes, inversión o negocio garantizado.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SELECTION -->
+<section id="seleccion" class="section selection">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Proceso de selección</span>
+      <h2>Pagar no es suficiente para entrar.</h2>
+      <p class="lead">
+        La mezcla del grupo es parte del producto. Por eso revisamos experiencia, momento, complementariedad y motivación antes de confirmar una plaza.
+      </p>
+    </div>
+
+    <div class="selection-grid reveal">
+
+      <div class="selection-step">
+        <b>1 · Solicitud</b>
+        <span>Nos pasas perfil, empresa y qué estás trabajando ahora.</span>
+      </div>
+
+      <div class="selection-step">
+        <b>2 · Conversación breve</b>
+        <span>Revisamos encaje, expectativas y lo que puedes aportar.</span>
+      </div>
+
+      <div class="selection-step">
+        <b>3 · Composición</b>
+        <span>Buscamos complementariedad y evitamos competencia directa innecesaria.</span>
+      </div>
+
+      <div class="selection-step">
+        <b>4 · Confirmación</b>
+        <span>Si hay encaje y plaza disponible, confirmamos entrada y onboarding.</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- OFFER -->
+<section id="oferta" class="section offer">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Founding Cohort · Q4 2026</span>
+      <h2>Una primera cohorte. Tres meses. Hasta ocho miembros.</h2>
+    </div>
+
+    <div class="offer-card reveal">
+
+      <div class="offer-top">
+
+        <div>
+          <span class="pill">Executive Circle</span>
+          <h3>Octubre · Noviembre · Diciembre</h3>
+        </div>
+
+        <div class="offer-price">
+          <b>750 €</b>
+          <span>un único pago · Founding Cohort Q4 2026</span>
+        </div>
+
+      </div>
+
+      <ul class="offer-list">
+        <li><span class="check">✓</span><span>Hasta 8 founders, CEOs u owners.</span></li>
+        <li><span class="check">✓</span><span>1 onboarding individual de 30 minutos.</span></li>
+        <li><span class="check">✓</span><span>3 sesiones privadas de aproximadamente 2 horas.</span></li>
+        <li><span class="check">✓</span><span>Grupo privado durante el ciclo.</span></li>
+        <li><span class="check">✓</span><span>Facilitación y seguimiento entre sesiones.</span></li>
+        <li><span class="check">✓</span><span>Posibles conexiones externas cuando exista una razón clara.</span></li>
+        <li><span class="check">✓</span><span>Confidencialidad.</span></li>
+        <li><span class="check">✓</span><span>No solicitation.</span></li>
+      </ul>
+
+      <div class="offer-actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20mi%20encaje%20en%20el%20Executive%20Circle%20de%20Emprende360.%0A%0ANombre%3A%0AEmpresa%3A%0ACargo%3A%0ALinkedIn%3A%0AQu%C3%A9%20reto%20o%20decisi%C3%B3n%20importante%20estoy%20trabajando%20ahora%3A%0AQu%C3%A9%20creo%20que%20puedo%20aportar%20al%20grupo%3A%0A"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Solicitar plaza →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="https://emprende360.club/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Conocer Emprende360
+        </a>
+
+      </div>
+
+      <p class="small" style="margin-top:18px">
+        La solicitud no garantiza admisión. Confirmamos plazas únicamente cuando existe suficiente encaje con la composición del grupo.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+<section class="section faq">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">FAQ</span>
+      <h2>Lo importante antes de solicitar plaza.</h2>
+    </div>
+
+    <div style="max-width:880px;margin:36px auto 0" class="reveal">
+
+      <details open>
+        <summary>¿Es un mastermind?</summary>
+        <p>
+          Preferimos definirlo como un círculo ejecutivo de pares. No se basa en formación ni en una figura que tenga todas las respuestas. El valor está en trabajar situaciones reales con un grupo seleccionado de personas que también tienen responsabilidad empresarial.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Habrá expertos o ponencias?</summary>
+        <p>
+          No como estructura principal. Puede aparecer algún especialista o recurso puntual si un tema lo justifica, pero las sesiones están diseñadas alrededor de los asuntos reales de los miembros.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Puedo entrar para conseguir clientes?</summary>
+        <p>
+          No. Existe una regla de no solicitation. No se utiliza el Circle como canal de prospección. Las relaciones pueden producir oportunidades de forma natural, pero no es una promesa ni el objetivo del producto.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Qué significa confidencialidad?</summary>
+        <p>
+          Los miembros deben tratar como confidencial la información compartida dentro del Circle y no utilizar fuera del grupo situaciones, datos o decisiones de otros miembros sin permiso.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Qué pasa si hay un competidor directo?</summary>
+        <p>
+          Revisamos la composición antes de confirmar las plazas. Si creemos que la competencia directa puede limitar la apertura de la conversación, evitamos esa combinación.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Las sesiones son online?</summary>
+        <p>
+          Sí. La Founding Cohort está planteada en formato virtual para facilitar la participación de miembros en distintos mercados.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Qué ocurre después de diciembre?</summary>
+        <p>
+          Esta primera cohorte cubre octubre, noviembre y diciembre de 2026. La continuidad posterior se decidirá en función de la experiencia real del grupo y del interés de los miembros; no existe renovación automática.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Se garantizan colaboraciones, clientes o inversión?</summary>
+        <p>
+          No. Executive Circle facilita conversaciones, perspectiva de pares y relaciones de calidad. No garantiza clientes, ventas, inversión, financiación, partnerships ni otros resultados concretos.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL -->
+<section class="section final">
+
+  <div class="wrap">
+
+    <div class="final-box reveal">
+
+      <span class="pill">Executive Circle · Emprende360</span>
+
+      <h2>
+        Si diriges una empresa y echas de menos mejores pares para pensar, hablemos.
+      </h2>
+
+      <p class="lead" style="max-width:780px;margin:17px auto 0">
+        Cuéntanos quién eres, qué estás construyendo y qué tipo de decisiones estás trabajando ahora. Revisaremos si existe suficiente encaje con la Founding Cohort.
+      </p>
+
+      <div class="final-actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20mi%20encaje%20en%20el%20Executive%20Circle%20de%20Emprende360.%0A%0ANombre%3A%0AEmpresa%3A%0ACargo%3A%0ALinkedIn%3A%0AQu%C3%A9%20reto%20o%20decisi%C3%B3n%20importante%20estoy%20trabajando%20ahora%3A%0AQu%C3%A9%20creo%20que%20puedo%20aportar%20al%20grupo%3A%0A"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Solicitar plaza →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="https://emprende360.club/septiembre"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver conversaciones Emprende360
+        </a>
+
+      </div>
+
+      <p class="small" style="margin-top:17px">
+        Hasta 8 miembros · Founding Cohort Q4 2026 · La solicitud no implica admisión.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="wrap footer-inner">
+
+    <div>
+      <strong>Emprende360 · Executive Circle</strong>
+      <br>
+      Pares · Decisiones · Confidencialidad · Continuidad.
+    </div>
+
+    <div class="footer-links">
+      <a href="https://emprende360.club/" target="_blank" rel="noopener noreferrer">Emprende360</a>
+      <a href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">Agenda</a>
+      <a href="https://emprende360.club/partner-hub/" target="_blank" rel="noopener noreferrer">Partner Hub</a>
+      <a href="https://emprende360.club/partner-select" target="_blank" rel="noopener noreferrer">Partner Select</a>
+      <a href="https://emprende360.club/vertical-partners" target="_blank" rel="noopener noreferrer">Vertical Partners</a>
+      <a href="https://emprende360.club/impulsob2b" target="_blank" rel="noopener noreferrer">Impulso B2B</a>
+      <a href="https://emprende360.club/privacidad" target="_blank" rel="noopener noreferrer">Privacidad</a>
+      <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer">Aviso legal</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("on");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold:.08 }
+  );
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
