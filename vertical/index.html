@@ -1,0 +1,1491 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Vertical Partners · Emprende360 | Partnerships B2B con contexto</title>
+
+  <meta
+    name="description"
+    content="Asocia tu marca a conversaciones B2B relevantes dentro de Emprende360: Foros, Rondas, Partner Hub, contenido y verticales con contexto."
+  />
+
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://emprende360.club/vertical-partners" />
+
+  <meta property="og:title" content="Vertical Partners · Emprende360" />
+  <meta
+    property="og:description"
+    content="Partnerships B2B para marcas que quieren estar presentes en conversaciones relevantes, no comprar leads."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://emprende360.club/vertical-partners" />
+
+  <style>
+    :root{
+      --deep:#020617;
+      --navy:#071522;
+      --navy2:#0B1728;
+      --sky:#18A7FF;
+      --sky-soft:#7DD3FC;
+      --gold:#F4C542;
+      --gold-soft:#FDE68A;
+      --green:#22C55E;
+      --text:#F8FAFC;
+      --soft:#CBD5E1;
+      --muted:#94A3B8;
+      --line:rgba(255,255,255,.12);
+      --glass:rgba(255,255,255,.05);
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--deep);
+      color:var(--text);
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    strong,b{color:#fff}
+
+    .wrap{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+    .section{
+      position:relative;
+      padding:74px 0;
+      overflow:hidden;
+    }
+
+    .center{
+      max-width:860px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .lead{
+      color:var(--soft);
+      font-size:18px;
+      line-height:1.68;
+    }
+
+    .small{
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .grad-text{
+      background:linear-gradient(90deg,#fff,#c8ecff 45%,#ffe7a6);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .pill,.kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border-radius:999px;
+      font-weight:950;
+      text-transform:uppercase;
+    }
+
+    .pill{
+      padding:8px 13px;
+      border:1px solid rgba(244,197,66,.28);
+      background:rgba(244,197,66,.08);
+      color:#FDE68A;
+      font-size:11px;
+      letter-spacing:.08em;
+    }
+
+    .kicker{
+      padding:7px 12px;
+      border:1px solid rgba(24,167,255,.24);
+      background:rgba(24,167,255,.08);
+      color:#C8ECFF;
+      font-size:10px;
+      letter-spacing:.14em;
+    }
+
+    h1{
+      margin:18px 0 0;
+      font-size:clamp(43px,5.3vw,66px);
+      line-height:.99;
+      letter-spacing:-.057em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:14px 0 0;
+      font-size:clamp(31px,4.1vw,49px);
+      line-height:1.05;
+      letter-spacing:-.045em;
+      font-weight:950;
+    }
+
+    h3{margin:0;line-height:1.18}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:14px 21px;
+      border-radius:999px;
+      border:0;
+      font-size:13px;
+      font-weight:950;
+      cursor:pointer;
+      transition:.24s ease;
+    }
+
+    .btn:hover{transform:translateY(-3px)}
+
+    .btn-primary{
+      color:#06111F;
+      background:linear-gradient(90deg,#ffdc64,#F4C542,#ffd45d);
+      box-shadow:0 18px 60px rgba(244,197,66,.22);
+    }
+
+    .btn-primary:hover{
+      box-shadow:0 24px 75px rgba(244,197,66,.35);
+    }
+
+    .btn-secondary{
+      color:#fff;
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.085);
+    }
+
+    .check{
+      width:21px;
+      height:21px;
+      display:grid;
+      place-items:center;
+      border-radius:999px;
+      background:rgba(34,197,94,.14);
+      color:#86EFAC;
+      font-size:11px;
+      font-weight:950;
+      flex:none;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .6s ease,transform .6s ease;
+    }
+
+    .reveal.on{
+      opacity:1;
+      transform:none;
+    }
+
+    header{
+      position:fixed;
+      top:0;left:0;right:0;
+      z-index:100;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      background:rgba(2,6,23,.86);
+      backdrop-filter:blur(22px);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:11px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+    }
+
+    .brand-mark{
+      width:41px;height:41px;
+      display:grid;
+      place-items:center;
+      border-radius:15px;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      font-weight:950;
+      box-shadow:0 18px 45px rgba(24,167,255,.24);
+    }
+
+    .brand-title{font-weight:950;line-height:1}
+    .brand-sub{
+      margin-top:4px;
+      color:#94A3B8;
+      font-size:10px;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      font-weight:850;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:17px;
+      margin-left:auto;
+      color:#CBD5E1;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .nav-links a:hover{color:#fff}
+
+    /* HERO */
+    .hero{
+      position:relative;
+      padding:108px 0 58px;
+      background:
+        radial-gradient(circle at 12% 10%,rgba(24,167,255,.20),transparent 30%),
+        radial-gradient(circle at 88% 12%,rgba(244,197,66,.13),transparent 30%),
+        var(--deep);
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      opacity:.05;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.65) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.65) 1px,transparent 1px);
+      background-size:54px 54px;
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.03fr .97fr;
+      gap:42px;
+      align-items:start;
+    }
+
+    .hero-copy p{
+      max-width:720px;
+      margin:19px 0 0;
+      color:#CBD5E1;
+      font-size:17px;
+      line-height:1.67;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:11px;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
+
+    .hero-note{
+      margin-top:17px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .partner-card{
+      padding:29px;
+      border:1px solid rgba(244,197,66,.30);
+      border-radius:29px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.12),transparent 38%),
+        radial-gradient(circle at 0 100%,rgba(24,167,255,.09),transparent 42%),
+        rgba(255,255,255,.05);
+      box-shadow:var(--shadow);
+    }
+
+    .partner-card h3{
+      margin-top:12px;
+      font-size:27px;
+      letter-spacing:-.04em;
+    }
+
+    .partner-list{
+      list-style:none;
+      margin:21px 0 0;
+      padding:0;
+      display:grid;
+      gap:11px;
+    }
+
+    .partner-list li{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:10px;
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    .partner-card .btn{
+      width:100%;
+      margin-top:22px;
+    }
+
+    /* VALUE */
+    .value{background:var(--navy)}
+
+    .value-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:36px;
+    }
+
+    .value-card{
+      padding:26px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:var(--glass);
+    }
+
+    .value-icon{
+      width:44px;height:44px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:rgba(24,167,255,.09);
+      border:1px solid rgba(24,167,255,.20);
+      margin-bottom:14px;
+      font-size:19px;
+    }
+
+    .value-card h3{
+      font-size:20px;
+    }
+
+    .value-card p{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.58;
+    }
+
+    /* HOW */
+    .how{background:var(--deep)}
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:38px;
+    }
+
+    .step{
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:rgba(255,255,255,.04);
+      min-height:230px;
+    }
+
+    .step-num{
+      width:43px;height:43px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-size:13px;
+      font-weight:950;
+    }
+
+    .step h3{
+      margin-top:14px;
+      font-size:20px;
+    }
+
+    .step p{
+      color:#CBD5E1;
+      font-size:12px;
+      line-height:1.55;
+    }
+
+    /* FORMATS */
+    .formats{background:var(--navy)}
+
+    .format-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:38px;
+      max-width:1000px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .format-card{
+      position:relative;
+      padding:30px;
+      border:1px solid var(--line);
+      border-radius:29px;
+      background:rgba(255,255,255,.045);
+    }
+
+    .format-card.primary{
+      border-color:rgba(244,197,66,.30);
+      background:
+        radial-gradient(circle at 0 0,rgba(244,197,66,.10),transparent 38%),
+        rgba(255,255,255,.05);
+    }
+
+    .format-label{
+      display:inline-flex;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(24,167,255,.22);
+      background:rgba(24,167,255,.07);
+      color:#BAE6FD;
+      font-size:9px;
+      font-weight:950;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    .format-card.primary .format-label{
+      border-color:rgba(244,197,66,.27);
+      background:rgba(244,197,66,.07);
+      color:#FDE68A;
+    }
+
+    .format-card h3{
+      margin-top:15px;
+      font-size:28px;
+      letter-spacing:-.04em;
+    }
+
+    .format-card p{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .format-list{
+      list-style:none;
+      margin:19px 0 0;
+      padding:0;
+      display:grid;
+      gap:10px;
+    }
+
+    .format-list li{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:9px;
+      color:#CBD5E1;
+      font-size:12px;
+      line-height:1.45;
+    }
+
+    .format-price{
+      margin-top:23px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.10);
+    }
+
+    .format-price b{
+      display:block;
+      color:#FDE68A;
+      font-size:31px;
+      letter-spacing:-.04em;
+    }
+
+    .format-price span{
+      display:block;
+      margin-top:5px;
+      color:#94A3B8;
+      font-size:10px;
+      line-height:1.45;
+    }
+
+    /* VERTICALS */
+    .verticals{background:var(--deep)}
+
+    .vertical-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:13px;
+      margin-top:36px;
+    }
+
+    .vertical{
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:21px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .vertical-icon{
+      width:42px;height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      background:rgba(24,167,255,.09);
+      border:1px solid rgba(24,167,255,.19);
+      margin-bottom:12px;
+      font-size:18px;
+    }
+
+    .vertical b{
+      display:block;
+      font-size:15px;
+    }
+
+    .vertical span{
+      display:block;
+      margin-top:6px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    /* NETWORK */
+    .network{
+      background:
+        radial-gradient(circle at 8% 20%,rgba(24,167,255,.10),transparent 30%),
+        var(--navy);
+    }
+
+    .network-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:13px;
+      margin-top:34px;
+    }
+
+    .network-card{
+      padding:23px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:rgba(255,255,255,.04);
+      text-align:center;
+    }
+
+    .network-card strong{
+      display:block;
+      color:#7DD3FC;
+      font-size:36px;
+      line-height:1;
+      letter-spacing:-.05em;
+    }
+
+    .network-card.gold strong{color:#FDE68A}
+
+    .network-card span{
+      display:block;
+      margin-top:9px;
+      color:#CBD5E1;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    /* DOES NOT BUY */
+    .rules{background:var(--deep)}
+
+    .rules-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:36px;
+    }
+
+    .rule-card{
+      padding:27px;
+      border:1px solid var(--line);
+      border-radius:25px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .rule-card.good{
+      border-color:rgba(244,197,66,.25);
+      background:
+        radial-gradient(circle at 0 0,rgba(244,197,66,.08),transparent 38%),
+        rgba(255,255,255,.04);
+    }
+
+    .rule-card h3{
+      font-size:24px;
+      letter-spacing:-.035em;
+    }
+
+    .rule-card ul{
+      list-style:none;
+      padding:0;
+      margin:18px 0 0;
+      display:grid;
+      gap:10px;
+    }
+
+    .rule-card li{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.48;
+    }
+
+    /* FIT */
+    .fit{background:var(--navy)}
+
+    .fit-shell{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:28px;
+      align-items:start;
+      padding:34px;
+      border:1px solid rgba(24,167,255,.23);
+      border-radius:30px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(24,167,255,.09),transparent 40%),
+        rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .fit-copy p{
+      color:#CBD5E1;
+      font-size:15px;
+      line-height:1.64;
+    }
+
+    .fit-points{
+      display:grid;
+      gap:10px;
+    }
+
+    .fit-point{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:12px;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:17px;
+      background:rgba(2,6,23,.28);
+    }
+
+    .fit-point b{
+      display:block;
+      font-size:13px;
+    }
+
+    .fit-point span{
+      display:block;
+      margin-top:4px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    /* FAQ */
+    .faq{background:var(--deep)}
+
+    details{
+      margin-bottom:10px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:17px;
+      background:rgba(255,255,255,.05);
+    }
+
+    summary{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      padding:18px 20px;
+      cursor:pointer;
+      list-style:none;
+      font-size:15px;
+      font-weight:900;
+    }
+
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";color:var(--gold);font-size:23px}
+    details[open] summary::after{content:"–"}
+
+    details p{
+      margin:0;
+      padding:0 20px 20px;
+      color:#94A3B8;
+      font-size:13px;
+      line-height:1.58;
+    }
+
+    /* FINAL */
+    .final{
+      text-align:center;
+      background:
+        radial-gradient(circle at 18% 20%,rgba(24,167,255,.13),transparent 32%),
+        radial-gradient(circle at 82% 30%,rgba(244,197,66,.10),transparent 30%),
+        var(--navy);
+    }
+
+    .final-box{
+      padding:43px;
+      border:1px solid rgba(244,197,66,.25);
+      border-radius:33px;
+      background:rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .final-actions{
+      display:flex;
+      justify-content:center;
+      gap:11px;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
+
+    .legal{
+      margin-top:16px;
+      color:#94A3B8;
+      font-size:10px;
+      line-height:1.55;
+    }
+
+    footer{
+      padding:29px 0;
+      border-top:1px solid var(--line);
+      background:#01040d;
+      color:#94A3B8;
+      font-size:12px;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    @media(max-width:1050px){
+      .nav-links{display:none}
+      .hero-grid,.fit-shell{grid-template-columns:1fr}
+      .value-grid{grid-template-columns:1fr}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .vertical-grid{grid-template-columns:repeat(2,1fr)}
+      .network-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media(max-width:760px){
+      .wrap{padding:0 16px}
+      .section{padding:58px 0}
+      .nav{padding:10px 16px}
+      .brand-sub{display:none}
+      .nav>.btn{padding:10px 12px;font-size:10px}
+
+      .hero{padding:94px 0 46px}
+      h1{font-size:clamp(38px,11vw,52px)}
+      h2{font-size:clamp(29px,8.8vw,40px)}
+
+      .hero-actions,.final-actions{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .hero-actions .btn,.final-actions .btn{width:100%}
+
+      .steps,.format-grid,.vertical-grid,.network-grid,.rules-grid{
+        grid-template-columns:1fr;
+      }
+
+      .fit-shell,.final-box{padding:24px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a class="brand" href="https://emprende360.club/">
+      <div class="brand-mark">E</div>
+      <div>
+        <div class="brand-title">Emprende360</div>
+        <div class="brand-sub">Vertical Partners · B2B</div>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#como">Cómo funciona</a>
+      <a href="#formatos">Formatos</a>
+      <a href="#verticales">Verticales</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a
+      class="btn btn-primary"
+      href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20un%20partnership%20con%20Emprende360.%0A%0AEmpresa%3A%0AWeb%20/%20LinkedIn%3A%0AQu%C3%A9%20ofrecemos%3A%0ABuyer%20principal%3A%0AVertical%20que%20nos%20interesa%3A%0AObjetivo%20del%20partnership%3A%0A"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Valorar partnership
+    </a>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy reveal">
+
+      <span class="pill">Vertical Partners · Emprende360</span>
+
+      <h1>
+        <span class="grad-text">
+          Posiciona tu empresa dentro de conversaciones B2B relevantes.
+        </span>
+      </h1>
+
+      <p>
+        Asociamos marcas B2B con <strong>Foros, Rondas, verticales y contextos</strong> donde su solución puede tener sentido para founders, directivos, especialistas y otros profesionales del ecosistema.
+      </p>
+
+      <p>
+        No se trata de comprar una lista de asistentes. Se trata de estar presente <strong>cuando existe una conversación relevante para tu buyer.</strong>
+      </p>
+
+      <div class="hero-actions">
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20un%20partnership%20con%20Emprende360.%0A%0AEmpresa%3A%0AWeb%20/%20LinkedIn%3A%0AQu%C3%A9%20ofrecemos%3A%0ABuyer%20principal%3A%0AVertical%20que%20nos%20interesa%3A%0AObjetivo%20del%20partnership%3A%0A"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Quiero valorar un partnership →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="#formatos"
+        >
+          Ver formatos
+        </a>
+      </div>
+
+      <div class="hero-note">
+        Partnerships B2B con contexto · Sin compra de bases · Sin leads garantizados · Selección por encaje.
+      </div>
+
+    </div>
+
+
+    <div class="partner-card reveal">
+
+      <span class="kicker">Qué puede aportar un partnership</span>
+
+      <h3>
+        Presencia donde tu producto o expertise tiene una razón para estar.
+      </h3>
+
+      <ul class="partner-list">
+        <li><span class="check">✓</span><span><strong>Visibilidad contextual</strong> en conversaciones y verticales relevantes.</span></li>
+        <li><span class="check">✓</span><span><strong>Presencia de marca</strong> en activos y comunicaciones acordadas.</span></li>
+        <li><span class="check">✓</span><span><strong>Contenido y recap</strong> alrededor de la conversación.</span></li>
+        <li><span class="check">✓</span><span><strong>Partner Hub</strong> como capa de visibilidad dentro del ecosistema.</span></li>
+        <li><span class="check">✓</span><span><strong>Posibles activaciones propias</strong> cuando exista suficiente encaje.</span></li>
+      </ul>
+
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20un%20partnership%20con%20Emprende360.%0A%0AEmpresa%3A%0AWeb%20/%20LinkedIn%3A%0AQu%C3%A9%20ofrecemos%3A%0ABuyer%20principal%3A%0AVertical%20que%20nos%20interesa%3A%0AObjetivo%20del%20partnership%3A%0A"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Revisar encaje
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VALUE -->
+<section class="section value">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">La diferencia</span>
+      <h2>No vendemos alcance indiscriminado. Vendemos contexto.</h2>
+      <p class="lead">
+        Una marca B2B no necesita estar delante de todo el mundo. Necesita estar presente delante de las personas adecuadas, en una conversación donde su solución tenga sentido.
+      </p>
+    </div>
+
+    <div class="value-grid reveal">
+
+      <article class="value-card">
+        <div class="value-icon">🎯</div>
+        <h3>Buyer antes que audiencia</h3>
+        <p>
+          Partimos del tipo de decisor, problema y vertical que realmente importan para tu empresa.
+        </p>
+      </article>
+
+      <article class="value-card">
+        <div class="value-icon">💬</div>
+        <h3>Conversación antes que banner</h3>
+        <p>
+          Buscamos asociar tu marca a un contexto donde ya existe un tema relevante, no simplemente añadir un logo.
+        </p>
+      </article>
+
+      <article class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>Relación antes que lead</h3>
+        <p>
+          Podemos crear visibilidad, contenido y contexto. No prometemos una cifra artificial de leads o reuniones.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOW -->
+<section id="como" class="section how">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Cómo funciona</span>
+      <h2>Primero comprobamos si la marca tiene sentido dentro del contexto.</h2>
+    </div>
+
+    <div class="steps reveal">
+
+      <article class="step">
+        <div class="step-num">1</div>
+        <h3>Entendemos tu buyer.</h3>
+        <p>
+          Qué vendes, a quién, qué problema resuelves y qué objetivo tiene el partnership.
+        </p>
+      </article>
+
+      <article class="step">
+        <div class="step-num">2</div>
+        <h3>Elegimos vertical.</h3>
+        <p>
+          IA, Finanzas, Ventas, Talent, Founders u otra conversación donde exista suficiente encaje.
+        </p>
+      </article>
+
+      <article class="step">
+        <div class="step-num">3</div>
+        <h3>Diseñamos presencia.</h3>
+        <p>
+          Marca, contenido, Partner Hub, evento, recap, ventaja o activación específica según el caso.
+        </p>
+      </article>
+
+      <article class="step">
+        <div class="step-num">4</div>
+        <h3>Medimos lo real.</h3>
+        <p>
+          Visibilidad, participación, conversaciones, interés y siguientes acciones. Sin atribuir ventas que no podemos demostrar.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FORMATS -->
+<section id="formatos" class="section formats">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Dos formas de empezar</span>
+      <h2>Una conversación concreta o presencia durante una vertical.</h2>
+    </div>
+
+    <div class="format-grid reveal">
+
+      <article class="format-card">
+
+        <span class="format-label">Event Partner</span>
+
+        <h3>Asocia tu marca a una conversación concreta.</h3>
+
+        <p>
+          Para empresas que quieren probar el encaje alrededor de un Foro, Ronda o sesión específica antes de construir una presencia más continuada.
+        </p>
+
+        <ul class="format-list">
+          <li><span class="check">✓</span><span>Presencia como partner en la landing o pieza acordada.</span></li>
+          <li><span class="check">✓</span><span>Mención contextual vinculada al evento.</span></li>
+          <li><span class="check">✓</span><span>Presencia en recap o contenido posterior cuando corresponda.</span></li>
+          <li><span class="check">✓</span><span>Ficha/identificación en Partner Hub como partner del contexto.</span></li>
+          <li><span class="check">✓</span><span>Posibilidad de ofrecer una Ventaja Emprende360.</span></li>
+        </ul>
+
+        <div class="format-price">
+          <b>Propuesta según evento</b>
+          <span>
+            El formato se adapta a la conversación y a los activos realmente utilizados. Solicita encaje y propuesta.
+          </span>
+        </div>
+
+      </article>
+
+
+      <article class="format-card primary">
+
+        <span class="format-label">Vertical Partner · Q4</span>
+
+        <h3>Presencia recurrente dentro de una vertical.</h3>
+
+        <p>
+          Para marcas que quieren construir asociación y reconocimiento durante octubre, noviembre y diciembre alrededor de un área B2B concreta.
+        </p>
+
+        <ul class="format-list">
+          <li><span class="check">✓</span><span>Presencia recurrente dentro de la vertical acordada.</span></li>
+          <li><span class="check">✓</span><span>Integración en conversaciones, Rondas o contenidos relacionados.</span></li>
+          <li><span class="check">✓</span><span>Partner Hub + identificación como Vertical Partner.</span></li>
+          <li><span class="check">✓</span><span>Recaps y piezas de contenido vinculadas a la vertical.</span></li>
+          <li><span class="check">✓</span><span>Posible sesión privada o activación co-diseñada cuando exista encaje.</span></li>
+          <li><span class="check">✓</span><span>Ventaja Emprende360 opcional para el ecosistema.</span></li>
+        </ul>
+
+        <div class="format-price">
+          <b>1.490 € · Q4</b>
+          <span>
+            Founding Vertical Partner · octubre + noviembre + diciembre · sujeto a encaje y disponibilidad de la vertical.
+          </span>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VERTICALS -->
+<section id="verticales" class="section verticals">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Verticales</span>
+      <h2>Contextos donde una marca B2B puede tener una razón clara para estar.</h2>
+      <p class="lead">
+        No abrimos una vertical solo porque exista un sponsor. Tiene que haber tema, buyer, perfiles y suficiente conversación.
+      </p>
+    </div>
+
+    <div class="vertical-grid reveal">
+
+      <div class="vertical">
+        <div class="vertical-icon">🤖</div>
+        <b>IA / Tecnología</b>
+        <span>Agentes, automatización, datos, procesos, sistemas y adopción empresarial.</span>
+      </div>
+
+      <div class="vertical">
+        <div class="vertical-icon">💰</div>
+        <b>Corporate Finance</b>
+        <span>Financiación, CFO, M&A, control financiero, deuda, valoración y crecimiento rentable.</span>
+      </div>
+
+      <div class="vertical">
+        <div class="vertical-icon">📈</div>
+        <b>Ventas / Revenue / GTM</b>
+        <span>SalesTech, CRM, RevOps, demanda, desarrollo comercial y crecimiento B2B.</span>
+      </div>
+
+      <div class="vertical">
+        <div class="vertical-icon">👥</div>
+        <b>Talent / Liderazgo</b>
+        <span>HRTech, Executive Search, liderazgo, organización, talento y cultura.</span>
+      </div>
+
+      <div class="vertical">
+        <div class="vertical-icon">🏢</div>
+        <b>Founders / Dirección</b>
+        <span>Herramientas y servicios para CEOs, founders, owners y equipos directivos.</span>
+      </div>
+
+      <div class="vertical">
+        <div class="vertical-icon">🧭</div>
+        <b>Otras verticales</b>
+        <span>Legal, internacionalización, operaciones, industria u otras áreas si existe suficiente densidad y encaje.</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NETWORK -->
+<section class="section network">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">La infraestructura</span>
+      <h2>Una red construida antes de que exista el partnership.</h2>
+      <p class="lead">
+        Emprende360 no parte de cero cada vez que crea una conversación. El partnership se apoya en red, comunidad, Partner Hub, eventos y relaciones existentes.
+      </p>
+    </div>
+
+    <div class="network-grid reveal">
+
+      <div class="network-card">
+        <strong>12.487</strong>
+        <span>decisores B2B identificados dentro de la red directa de LinkedIn.</span>
+      </div>
+
+      <div class="network-card gold">
+        <strong>70.000+</strong>
+        <span>miembros en la comunidad principal de Emprende360.</span>
+      </div>
+
+      <div class="network-card">
+        <strong>Partner Hub</strong>
+        <span>perfiles, expertos, partners, verticales y posibles matches con contexto.</span>
+      </div>
+
+      <div class="network-card gold">
+        <strong>Foros + Rondas</strong>
+        <span>formatos propios donde crear conversación y presencia contextual.</span>
+      </div>
+
+    </div>
+
+    <p class="small center" style="margin-top:17px">
+      La red directa y la comunidad son activos distintos y pueden solaparse. No las sumamos como una única audiencia ni garantizamos alcance individual.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- RULES -->
+<section class="section rules">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Protegemos la calidad del ecosistema</span>
+      <h2>Un partnership compra presencia y contexto. No compra credibilidad artificial.</h2>
+    </div>
+
+    <div class="rules-grid reveal">
+
+      <div class="rule-card good">
+        <h3>Lo que sí puede incluir</h3>
+        <ul>
+          <li>✓ Asociación de marca con una vertical o conversación relevante.</li>
+          <li>✓ Presencia en activos, landing, Partner Hub o comunicaciones acordadas.</li>
+          <li>✓ Contenido, recap o activación co-diseñada.</li>
+          <li>✓ Una Ventaja Emprende360 para miembros o participantes, si aporta valor.</li>
+          <li>✓ Participación editorial cuando exista encaje real de expertise.</li>
+        </ul>
+      </div>
+
+      <div class="rule-card">
+        <h3>Lo que NO compra</h3>
+        <ul>
+          <li>✕ Una plaza de experto en un Foro por haber pagado.</li>
+          <li>✕ Acceso a emails, teléfonos o datos de asistentes.</li>
+          <li>✕ Leads, reuniones, clientes o ventas garantizadas.</li>
+          <li>✕ Ranking artificial dentro del Partner Hub.</li>
+          <li>✕ Matches o recomendaciones forzadas.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FIT -->
+<section class="section fit">
+
+  <div class="wrap">
+
+    <div class="fit-shell reveal">
+
+      <div class="fit-copy">
+
+        <span class="kicker">Para quién tiene sentido</span>
+
+        <h2>
+          Marcas B2B donde una buena relación vale mucho más que una impresión.
+        </h2>
+
+        <p>
+          Vertical Partners está pensado especialmente para compañías con una solución clara, buyer identificable y suficiente valor por cliente como para preferir contexto y credibilidad frente a alcance masivo.
+        </p>
+
+        <p>
+          Si tu objetivo principal es comprar miles de impresiones al menor coste posible, probablemente hay canales mejores.
+        </p>
+
+      </div>
+
+      <div class="fit-points">
+
+        <div class="fit-point">
+          <span class="check">✓</span>
+          <div>
+            <b>SaaS B2B / tecnología</b>
+            <span>CRM, SalesTech, HRTech, fintech, software de gestión, IA y herramientas empresariales.</span>
+          </div>
+        </div>
+
+        <div class="fit-point">
+          <span class="check">✓</span>
+          <div>
+            <b>Servicios profesionales</b>
+            <span>Finanzas, Corporate Finance, legal, talento, consultoría, tecnología y operaciones.</span>
+          </div>
+        </div>
+
+        <div class="fit-point">
+          <span class="check">✓</span>
+          <div>
+            <b>Buyer senior</b>
+            <span>CEO, Founder, C-Level, dirección funcional, socios y decisores B2B.</span>
+          </div>
+        </div>
+
+        <div class="fit-point">
+          <span class="check">✓</span>
+          <div>
+            <b>Economía suficiente</b>
+            <span>Una sola buena relación puede justificar claramente la inversión en el partnership.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+<section id="faq" class="section faq">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">FAQ</span>
+      <h2>Lo importante antes de valorar un partnership.</h2>
+    </div>
+
+    <div style="max-width:880px;margin:36px auto 0" class="reveal">
+
+      <details open>
+        <summary>¿Esto es simplemente sponsorship?</summary>
+        <p>
+          Puede incluir sponsorship, pero el enfoque es más amplio: buscamos asociar la marca a una vertical y a conversaciones donde exista contexto real. El objetivo no es vender un logo aislado.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Obtendremos los datos de los asistentes?</summary>
+        <p>
+          No. Emprende360 no vende bases ni acceso indiscriminado a datos personales. El partnership se centra en presencia, contexto, contenido y conversaciones.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Ser partner garantiza participar como experto?</summary>
+        <p>
+          No. La participación editorial se decide por expertise, tema, complementariedad y calidad de la conversación. Un partner puede aportar expertise cuando encaje, pero no compra la plaza.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Garantizáis leads, reuniones o ventas?</summary>
+        <p>
+          No. Podemos responsabilizarnos de las activaciones, presencia y activos acordados. No podemos garantizar la respuesta o decisión comercial de terceros.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Qué diferencia hay entre Event Partner y Vertical Partner?</summary>
+        <p>
+          Event Partner se centra en una conversación o evento concreto. Vertical Partner busca una presencia recurrente durante un periodo y una temática más amplia, combinando varios activos cuando exista encaje.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Todas las empresas pueden entrar?</summary>
+        <p>
+          No necesariamente. Revisamos buyer, solución, reputación, vertical y compatibilidad con las conversaciones de Emprende360 antes de confirmar un partnership.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Podemos ofrecer una ventaja especial al ecosistema?</summary>
+        <p>
+          Sí, si aporta valor real. Puede ser onboarding, diagnóstico, créditos, sesión adicional, assessment, prioridad o una condición económica especial. No queremos un catálogo de cupones.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Podéis diseñar un partnership diferente?</summary>
+        <p>
+          Sí. Los dos formatos de esta página sirven para simplificar la decisión inicial, pero podemos valorar una activación específica si existe una razón clara y suficiente encaje.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL -->
+<section class="section final">
+
+  <div class="wrap">
+
+    <div class="final-box reveal">
+
+      <span class="pill">Vertical Partners · Emprende360</span>
+
+      <h2>
+        Cuéntanos qué vendes, a quién y en qué conversación quieres estar.
+      </h2>
+
+      <p class="lead" style="max-width:780px;margin:17px auto 0">
+        Revisaremos si existe una vertical, evento o contexto dentro de Emprende360 donde tu empresa pueda aportar y tener una presencia con sentido.
+      </p>
+
+      <div class="final-actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20un%20partnership%20con%20Emprende360.%0A%0AEmpresa%3A%0AWeb%20/%20LinkedIn%3A%0AQu%C3%A9%20ofrecemos%3A%0ABuyer%20principal%3A%0AVertical%20que%20nos%20interesa%3A%0AObjetivo%20del%20partnership%3A%0A"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Valorar partnership →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="https://emprende360.club/septiembre"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver agenda Emprende360
+        </a>
+
+      </div>
+
+      <div class="legal">
+        Los partnerships se confirman únicamente cuando existe suficiente encaje entre marca, buyer, temática y contexto. Emprende360 no vende datos de asistentes ni garantiza leads, reuniones, clientes, facturación o ROI.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="wrap footer-inner">
+
+    <div>
+      <strong>Emprende360 · Vertical Partners</strong>
+      <br>
+      Partnerships B2B con contexto.
+    </div>
+
+    <div class="footer-links">
+      <a href="https://emprende360.club/" target="_blank" rel="noopener noreferrer">Emprende360</a>
+      <a href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">Agenda</a>
+      <a href="https://emprende360.club/partner-hub/" target="_blank" rel="noopener noreferrer">Partner Hub</a>
+      <a href="https://emprende360.club/partner-select" target="_blank" rel="noopener noreferrer">Partner Select</a>
+      <a href="https://emprende360.club/impulsob2b" target="_blank" rel="noopener noreferrer">Impulso B2B</a>
+      <a href="https://emprende360.club/privacidad" target="_blank" rel="noopener noreferrer">Privacidad</a>
+      <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer">Aviso legal</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("on");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold:.08 }
+  );
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
