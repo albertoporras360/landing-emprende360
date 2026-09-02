@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111d">
+<meta name="description" content="Giới thiệu bạn bè học tiếng Tây Ban Nha và nhận tín dụng học phí. 3 học viên mới thanh toán = 1 tháng học miễn phí.">
+<title>Giới thiệu bạn bè · Tiếng Tây Ban Nha cùng Alberto</title>
+
+<style>
+:root{
+  --bg:#07111d;
+  --bg2:#0a1726;
+  --panel:#0d1a2a;
+  --panel2:#12243a;
+  --panel3:#17304c;
+  --text:#f4f8fc;
+  --muted:#96abc0;
+  --line:#223a54;
+  --yellow:#ffca55;
+  --coral:#ff7d67;
+  --green:#5de0a0;
+  --blue:#6eb1ff;
+  --shadow:0 18px 50px rgba(0,0,0,.28);
+  --radius:18px;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 10% -10%,rgba(110,177,255,.15),transparent 33%),
+    radial-gradient(circle at 92% 4%,rgba(255,202,85,.10),transparent 28%),
+    linear-gradient(180deg,#06101b 0%,#0a1726 100%);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+button,input,textarea,select{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 32px));margin:0 auto}
+.muted{color:var(--muted)}
+.es{color:#b4c6d8;font-size:.87em;line-height:1.45}
+.small{font-size:12px;color:var(--muted);line-height:1.5}
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--yellow);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:11px;
+  font-weight:900;
+}
+.kicker:before{
+  content:"";
+  width:7px;height:7px;border-radius:50%;
+  background:var(--yellow);
+  box-shadow:0 0 0 5px rgba(255,202,85,.08);
+}
+h1,h2,h3,p{margin-top:0}
+h1{
+  font-size:clamp(42px,7vw,76px);
+  line-height:.96;
+  letter-spacing:-.052em;
+  margin:12px 0 18px;
+}
+h2{
+  font-size:clamp(28px,4.5vw,44px);
+  line-height:1.02;
+  letter-spacing:-.035em;
+  margin-bottom:14px;
+}
+h3{font-size:20px;letter-spacing:-.015em}
+.lead{
+  color:#d5e0ea;
+  font-size:clamp(17px,2.4vw,21px);
+  line-height:1.55;
+  max-width:730px;
+}
+.card{
+  background:linear-gradient(180deg,rgba(18,36,58,.96),rgba(11,25,41,.97));
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+  min-height:50px;
+  padding:13px 18px;
+  border-radius:13px;
+  border:1px solid var(--line);
+  background:var(--panel2);
+  color:var(--text);
+  text-decoration:none;
+  font-weight:850;
+  transition:.18s ease;
+  cursor:pointer;
+}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.07)}
+.btn.primary{
+  border:0;
+  color:#241600;
+  background:linear-gradient(90deg,var(--yellow),#ff9b69);
+  box-shadow:0 13px 30px rgba(255,181,94,.17);
+}
+.btn.secondary{background:rgba(18,36,58,.75)}
+.btn.full{width:100%}
+
+/* TOPBAR */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(18px);
+  background:rgba(6,14,24,.83);
+  border-bottom:1px solid rgba(34,58,84,.8);
+}
+.topbar-inner{
+  min-height:66px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.brand{
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:210px;
+}
+.flag{
+  width:39px;height:39px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(145deg,#ad171f,#e12630);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);
+  font-size:21px;
+}
+.brand strong{display:block;font-size:14px}
+.brand span{display:block;color:var(--muted);font-size:10px;margin-top:2px}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{
+  text-decoration:none;
+  color:var(--muted);
+  font-size:12px;
+  font-weight:750;
+  padding:9px 10px;
+  border-radius:10px;
+}
+.nav a:hover{color:var(--text);background:var(--panel2)}
+.top-cta{min-height:40px;padding:9px 13px;font-size:12px}
+
+/* HERO */
+.hero{padding:72px 0 40px}
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.18fr) minmax(330px,.82fr);
+  gap:22px;
+  align-items:center;
+}
+.hero-copy{padding:14px 0}
+.hero-copy .es.hero-es{font-size:14px;margin-top:-8px;margin-bottom:22px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.trust-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 10px;
+  border:1px solid var(--line);
+  background:rgba(13,26,42,.68);
+  border-radius:999px;
+  color:#c8d6e4;
+  font-size:11px;
+  font-weight:700;
+}
+.hero-card{padding:18px;position:relative;overflow:hidden}
+.hero-card:before{
+  content:"";
+  position:absolute;
+  width:220px;height:220px;
+  border-radius:50%;
+  background:rgba(93,224,160,.08);
+  right:-90px;top:-100px;
+}
+.free-box{
+  padding:22px;
+  border-radius:15px;
+  background:linear-gradient(145deg,rgba(93,224,160,.13),rgba(110,177,255,.05));
+  border:1px solid rgba(93,224,160,.25);
+}
+.free-label{
+  color:var(--green);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.free{
+  font-size:51px;
+  font-weight:950;
+  letter-spacing:-.055em;
+  line-height:1;
+  margin:9px 0 6px;
+}
+.free small{font-size:15px;color:#d9e4ee;letter-spacing:0}
+.logic{
+  display:grid;
+  gap:9px;
+  margin:16px 0;
+}
+.logic-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:11px 12px;
+  border-radius:12px;
+  background:#081725;
+  border:1px solid var(--line);
+}
+.logic-row span{color:var(--muted);font-size:12px}
+.logic-row strong{font-size:14px}
+.logic-row.best{
+  border-color:rgba(93,224,160,.28);
+  background:rgba(93,224,160,.06);
+}
+.logic-row.best strong{color:var(--green)}
+.availability{
+  display:flex;gap:9px;align-items:center;
+  margin:13px 0 0;
+  padding:11px 12px;
+  border-radius:11px;
+  background:rgba(255,202,85,.07);
+  border:1px solid rgba(255,202,85,.18);
+  color:#f9df9f;
+  font-size:11px;
+}
+.availability i{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--yellow);
+  box-shadow:0 0 0 5px rgba(255,202,85,.08);
+}
+
+/* SECTIONS */
+section.block{padding:56px 0}
+.section-head{max-width:750px;margin-bottom:22px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.feature{padding:19px}
+.icon{
+  width:42px;height:42px;
+  border-radius:13px;
+  display:grid;place-items:center;
+  background:var(--panel3);
+  border:1px solid var(--line);
+  margin-bottom:13px;
+  font-size:19px;
+}
+.feature h3{margin-bottom:7px}
+.feature p{color:var(--muted);font-size:13px;line-height:1.58;margin:0}
+
+/* 3 STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{
+  padding:22px;
+  position:relative;
+  overflow:hidden;
+}
+.step .num{
+  width:34px;height:34px;border-radius:11px;
+  display:grid;place-items:center;
+  background:rgba(255,202,85,.1);
+  border:1px solid rgba(255,202,85,.2);
+  color:var(--yellow);
+  font-weight:950;
+  margin-bottom:14px;
+}
+.step p{font-size:13px;line-height:1.58;color:var(--muted);margin:0}
+.arrow{
+  position:absolute;
+  right:18px;top:22px;
+  color:#42627f;
+  font-size:25px;
+}
+
+/* WHY */
+.why{
+  padding:27px;
+  display:grid;
+  grid-template-columns:1fr .9fr;
+  gap:26px;
+  align-items:center;
+}
+.why-title{
+  font-size:clamp(30px,4vw,48px);
+  font-weight:950;
+  letter-spacing:-.045em;
+  line-height:1.02;
+}
+.why-title span{color:var(--yellow)}
+.checks{display:grid;gap:10px}
+.check{
+  display:flex;gap:9px;align-items:flex-start;
+  color:#d5e0ea;font-size:13px;line-height:1.45;
+  padding:11px 12px;
+  border-radius:12px;
+  background:#091827;
+  border:1px solid var(--line);
+}
+.check b{color:var(--green)}
+
+/* KIT */
+.kit{
+  padding:22px;
+}
+.kit-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:15px;
+}
+.kit-item{
+  padding:15px;
+  border-radius:14px;
+  background:#091827;
+  border:1px solid var(--line);
+}
+.kit-item strong{display:block;margin:8px 0 4px;font-size:13px}
+.kit-item p{font-size:11px;color:var(--muted);line-height:1.5;margin:0}
+
+/* COPY PREVIEW */
+.share-card{
+  padding:23px;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:22px;
+  align-items:start;
+}
+.message{
+  background:#081725;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:16px;
+  color:#dfe9f2;
+  font-size:13px;
+  line-height:1.6;
+  white-space:pre-line;
+}
+.share-note{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.55;
+}
+
+/* RULES */
+.rule{
+  padding:17px 18px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+.rule-icon{
+  flex:0 0 30px;
+  width:30px;height:30px;border-radius:10px;
+  display:grid;place-items:center;
+  background:#0b1d30;
+  border:1px solid var(--line);
+  color:var(--yellow);
+  font-size:13px;
+  font-weight:950;
+}
+.rule strong{display:block;margin-bottom:3px}
+.rule p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+
+/* FORM */
+.form-card{padding:26px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field{display:grid;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-size:11px;color:#c7d5e2;font-weight:800}
+input,select,textarea{
+  width:100%;
+  border:1px solid var(--line);
+  background:#081725;
+  color:var(--text);
+  padding:12px 13px;
+  border-radius:11px;
+  outline:none;
+}
+input:focus,select:focus,textarea:focus{border-color:var(--yellow)}
+textarea{min-height:88px;resize:vertical}
+.form-note{
+  margin:12px 0;
+  padding:10px 12px;
+  border-radius:11px;
+  background:rgba(110,177,255,.06);
+  border:1px solid rgba(110,177,255,.16);
+  color:#bcd5ee;
+  font-size:11px;
+  line-height:1.5;
+}
+.result{
+  display:none;
+  margin-top:13px;
+  padding:14px;
+  border-radius:12px;
+  background:#091827;
+  border:1px solid var(--line);
+}
+.result.show{display:block}
+.result pre{
+  white-space:pre-wrap;
+  word-break:break-word;
+  font-family:inherit;
+  color:#dfe9f2;
+  font-size:12px;
+  line-height:1.55;
+  margin:0 0 10px;
+}
+
+/* FAQ */
+.faq{display:grid;gap:8px}
+details{
+  background:linear-gradient(180deg,rgba(18,36,58,.94),rgba(11,25,41,.96));
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:0 16px;
+}
+summary{
+  list-style:none;
+  cursor:pointer;
+  padding:16px 24px 16px 0;
+  font-weight:850;
+  font-size:13px;
+  position:relative;
+}
+summary::-webkit-details-marker{display:none}
+summary:after{
+  content:"+";
+  position:absolute;
+  right:0;top:13px;
+  color:var(--yellow);
+  font-size:20px;
+}
+details[open] summary:after{content:"–"}
+details p{color:var(--muted);font-size:12px;line-height:1.6;padding:0 0 15px;margin:0}
+
+/* FINAL CTA */
+.final-cta{
+  padding:30px;
+  text-align:center;
+  border-color:rgba(93,224,160,.22);
+  background:
+    radial-gradient(circle at 50% -20%,rgba(93,224,160,.12),transparent 45%),
+    linear-gradient(180deg,rgba(18,36,58,.98),rgba(11,25,41,.98));
+}
+.final-cta h2{max-width:720px;margin:8px auto 14px}
+.final-cta p{max-width:650px;margin:0 auto 20px;color:var(--muted);line-height:1.55}
+
+/* FOOTER */
+footer{
+  border-top:1px solid var(--line);
+  margin-top:50px;
+  padding:28px 0 38px;
+  color:var(--muted);
+  font-size:11px;
+}
+.footer-grid{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.mobile-cta{display:none}
+
+@media(max-width:960px){
+  .nav{display:none}
+  .hero-grid,.why,.share-card{grid-template-columns:1fr}
+  .hero{padding-top:48px}
+  .steps{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg)}
+  .kit-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  body{padding-bottom:76px}
+  .wrap{width:min(100% - 22px,var(--max))}
+  .topbar-inner{min-height:60px}
+  .brand{min-width:0}
+  .top-cta{display:none}
+  .hero{padding:32px 0 22px}
+  h1{font-size:43px}
+  .lead{font-size:16px}
+  .hero-actions{display:grid;grid-template-columns:1fr}
+  .btn{width:100%}
+  .trust-row{gap:6px}
+  .pill{font-size:10px}
+  .hero-card,.feature,.step,.why,.kit,.share-card,.rule,.form-card,.final-cta{padding:16px}
+  section.block{padding:39px 0}
+  .g2,.g3,.form-grid,.kit-grid{grid-template-columns:1fr}
+  .field.full{grid-column:auto}
+  .free{font-size:44px}
+  .mobile-cta{
+    display:block;
+    position:fixed;
+    left:0;right:0;bottom:0;
+    z-index:70;
+    padding:9px 11px max(9px,env(safe-area-inset-bottom));
+    background:rgba(5,13,23,.94);
+    backdrop-filter:blur(18px);
+    border-top:1px solid var(--line);
+  }
+  .mobile-cta .btn{min-height:49px}
+}
+</style>
+</head>
+
+<body>
+
+<!--
+============================================================
+CONFIGURACIÓN RÁPIDA
+1) Cuando tengas enlace de Zalo, cambia ZALO_URL al final.
+2) Si quieres enlazar la landing de alumnos, cambia COURSE_URL.
+============================================================
+-->
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="#inicio" class="brand">
+      <div class="flag">🇪🇸</div>
+      <div>
+        <strong>Tiếng Tây Ban Nha cùng Alberto</strong>
+        <span>Chương trình giới thiệu bạn bè</span>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="#cach-hoat-dong">Cách hoạt động</a>
+      <a href="#bo-cong-cu">Bạn nhận gì?</a>
+      <a href="#quy-tac">Quy tắc</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a href="#dang-ky" class="btn primary top-cta">Tôi muốn tham gia</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="kicker">Chương trình giới thiệu bạn bè</div>
+
+        <h1>Học tiếng Tây Ban Nha <span style="color:var(--green)">miễn phí</span> bằng cách giới thiệu bạn bè.</h1>
+
+        <p class="lead">
+          Nếu bạn muốn học tiếng Tây Ban Nha và có bạn bè cũng muốn học, bạn có thể giảm học phí hoặc học miễn phí hoàn toàn.
+        </p>
+        <p class="es hero-es">
+          Si quieres aprender español y conoces a otras personas interesadas, puedes reducir tu cuota o estudiar gratis.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#dang-ky" class="btn primary">Tôi muốn trở thành người giới thiệu</a>
+          <a href="#cach-hoat-dong" class="btn secondary">Xem cách hoạt động</a>
+        </div>
+
+        <div class="trust-row">
+          <span class="pill">1 người = giảm 330k</span>
+          <span class="pill">2 người = giảm 660k</span>
+          <span class="pill">3 người = miễn phí</span>
+          <span class="pill">Không trả hoa hồng tiền mặt</span>
+        </div>
+      </div>
+
+      <aside class="card hero-card">
+        <div class="free-box">
+          <div class="free-label">3 học viên mới thanh toán</div>
+          <div class="free">0 VND <small>/ tháng học của bạn</small></div>
+          <div class="es">3 alumnos nuevos de pago = tu mes gratis</div>
+        </div>
+
+        <div class="logic">
+          <div class="logic-row">
+            <span>Bạn giới thiệu 1 học viên</span>
+            <strong>-330.000 VND</strong>
+          </div>
+          <div class="logic-row">
+            <span>Bạn giới thiệu 2 học viên</span>
+            <strong>-660.000 VND</strong>
+          </div>
+          <div class="logic-row best">
+            <span>Bạn giới thiệu 3 học viên</span>
+            <strong>MIỄN PHÍ THÁNG ĐÓ</strong>
+          </div>
+        </div>
+
+        <a href="#dang-ky" class="btn primary full">Đăng ký tham gia chương trình</a>
+
+        <div class="availability">
+          <i></i>
+          <span>Nhóm đầu tiên chỉ có tối đa 2 suất miễn phí theo chương trình giới thiệu.</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="block" id="cach-hoat-dong">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Rất đơn giản</div>
+        <h2>3 bước. Không có hệ thống phức tạp.</h2>
+        <p class="muted">
+          Bạn không cần trở thành “nhân viên bán hàng”. Chỉ cần giới thiệu khóa học cho những người thực sự có thể muốn học cùng bạn.
+        </p>
+      </div>
+
+      <div class="steps">
+        <article class="card step">
+          <div class="num">1</div>
+          <div class="arrow">→</div>
+          <h3>Chia sẻ với bạn bè</h3>
+          <p>Bạn gửi landing, hình ảnh hoặc tin nhắn ngắn mà Alberto chuẩn bị sẵn cho bạn.</p>
+        </article>
+
+        <article class="card step">
+          <div class="num">2</div>
+          <div class="arrow">→</div>
+          <h3>Họ đăng ký và thanh toán</h3>
+          <p>Người bạn giới thiệu liên hệ trực tiếp với Alberto và ghi tên bạn là người giới thiệu.</p>
+        </article>
+
+        <article class="card step">
+          <div class="num">3</div>
+          <h3>Bạn nhận tín dụng học phí</h3>
+          <p>Mỗi học viên mới đã thanh toán = 330.000 VND tín dụng. 3 người = 1 tháng miễn phí.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="block">
+    <div class="wrap">
+      <div class="card why">
+        <div>
+          <div class="kicker">Ai phù hợp?</div>
+          <div class="why-title">
+            Bạn muốn học. Và bạn nghĩ mình có thể tìm <span>3 người học cùng.</span>
+          </div>
+          <p class="es" style="margin-top:14px">
+            Buscamos personas que realmente quieran aprender y que crean que pueden encontrar a tres amigos interesados.
+          </p>
+        </div>
+
+        <div class="checks">
+          <div class="check"><b>✓</b><span>Bạn thực sự muốn học tiếng Tây Ban Nha.</span></div>
+          <div class="check"><b>✓</b><span>Bạn có bạn bè, đồng nghiệp hoặc cộng đồng có thể quan tâm.</span></div>
+          <div class="check"><b>✓</b><span>Bạn dùng Zalo, Facebook, Messenger hoặc các nhóm online.</span></div>
+          <div class="check"><b>✓</b><span>Bạn sẵn sàng chia sẻ một cách tự nhiên, không spam.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KIT -->
+  <section class="block" id="bo-cong-cu">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Chúng tôi giúp bạn</div>
+        <h2>Bạn không phải tự nghĩ cách quảng bá.</h2>
+        <p class="muted">
+          Alberto sẽ chuẩn bị những thứ cần thiết để bạn chỉ việc chia sẻ với người phù hợp.
+        </p>
+      </div>
+
+      <div class="card kit">
+        <div class="kit-grid">
+          <div class="kit-item">
+            <div style="font-size:22px">🔗</div>
+            <strong>Landing khóa học</strong>
+            <p>Trang giải thích rõ lớp học, giá, số buổi và cách học.</p>
+          </div>
+
+          <div class="kit-item">
+            <div style="font-size:22px">🖼️</div>
+            <strong>Hình ảnh để chia sẻ</strong>
+            <p>Dùng cho Zalo, Facebook, Messenger hoặc các nhóm phù hợp.</p>
+          </div>
+
+          <div class="kit-item">
+            <div style="font-size:22px">🎥</div>
+            <strong>Video ngắn của Alberto</strong>
+            <p>Để người quan tâm nhìn thấy và nghe giáo viên trước khi đăng ký.</p>
+          </div>
+
+          <div class="kit-item">
+            <div style="font-size:22px">💬</div>
+            <strong>Tin nhắn mẫu</strong>
+            <p>Một tin nhắn tự nhiên mà bạn có thể dùng hoặc chỉnh theo cách nói của mình.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MESSAGE PREVIEW -->
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Ví dụ tin nhắn</div>
+        <h2>Không cần “bán hàng”. Chỉ cần giới thiệu tự nhiên.</h2>
+      </div>
+
+      <div class="card share-card">
+        <div>
+          <h3>Tin nhắn bạn có thể gửi cho bạn bè</h3>
+          <p class="share-note">
+            Bạn có thể dùng nguyên văn hoặc sửa để giống cách bạn nói hơn.
+          </p>
+          <button class="btn secondary" id="copyShareBtn" type="button">Sao chép tin nhắn</button>
+        </div>
+
+        <div class="message" id="shareMessage">Mình vừa biết một lớp tiếng Tây Ban Nha online khá hay dành cho người mới bắt đầu.
+
+Giáo viên là người Tây Ban Nha bản xứ, nhóm chỉ tối đa 8 người và chủ yếu tập trung vào nói và giao tiếp.
+
+Có 8 buổi/tháng + nhóm Zalo để luyện tập, giá 990k/tháng.
+
+Nếu bạn muốn học thì mình gửi thông tin nhé.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULES -->
+  <section class="block" id="quy-tac">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Quy tắc rõ ràng</div>
+        <h2>Đơn giản để không có hiểu nhầm.</h2>
+      </div>
+
+      <div class="grid g2">
+        <div class="card rule">
+          <div class="rule-icon">1</div>
+          <div>
+            <strong>Chỉ tính học viên mới</strong>
+            <p>Người được giới thiệu phải là người mới chưa đăng ký trước đó.</p>
+          </div>
+        </div>
+
+        <div class="card rule">
+          <div class="rule-icon">2</div>
+          <div>
+            <strong>Chỉ tính sau khi thanh toán</strong>
+            <p>Quan tâm hoặc hỏi thông tin chưa được tính. Thanh toán xác nhận = giới thiệu hợp lệ.</p>
+          </div>
+        </div>
+
+        <div class="card rule">
+          <div class="rule-icon">3</div>
+          <div>
+            <strong>330.000 VND tín dụng / người</strong>
+            <p>Tín dụng được dùng để giảm học phí của chính bạn.</p>
+          </div>
+        </div>
+
+        <div class="card rule">
+          <div class="rule-icon">4</div>
+          <div>
+            <strong>Không đổi thành tiền mặt</strong>
+            <p>Tín dụng chỉ dùng cho lớp học và không được hoàn hoặc đổi thành tiền.</p>
+          </div>
+        </div>
+
+        <div class="card rule">
+          <div class="rule-icon">5</div>
+          <div>
+            <strong>Một học viên = một người giới thiệu</strong>
+            <p>Nếu có tranh chấp, thông tin do học viên mới khai khi đăng ký sẽ được dùng.</p>
+          </div>
+        </div>
+
+        <div class="card rule">
+          <div class="rule-icon">6</div>
+          <div>
+            <strong>Tối đa 2 suất miễn phí trong nhóm đầu tiên</strong>
+            <p>Nếu tín dụng vượt số suất hiện có, phần còn lại có thể được dùng cho tháng hoặc nhóm tiếp theo khi còn chỗ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTRA CREDIT EXAMPLES -->
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Nếu bạn giới thiệu nhiều hơn?</div>
+        <h2>Tín dụng tiếp tục cộng dồn cho việc học.</h2>
+      </div>
+
+      <div class="grid g3">
+        <article class="card feature">
+          <div class="icon">3️⃣</div>
+          <h3>3 học viên</h3>
+          <p>Bạn có đủ 990.000 VND tín dụng = một tháng học miễn phí.</p>
+        </article>
+
+        <article class="card feature">
+          <div class="icon">4️⃣</div>
+          <h3>4 học viên</h3>
+          <p>Một tháng miễn phí + 330.000 VND tín dụng cho tháng tiếp theo.</p>
+        </article>
+
+        <article class="card feature">
+          <div class="icon">6️⃣</div>
+          <h3>6 học viên</h3>
+          <p>1.980.000 VND tín dụng = tương đương hai tháng học theo mức giá hiện tại.</p>
+        </article>
+      </div>
+
+      <p class="small" style="margin-top:11px">
+        Tín dụng không phải tiền mặt và luôn được áp dụng vào học phí, tùy theo chỗ còn trống và việc chương trình tiếp tục hoạt động.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Câu hỏi thường gặp</div>
+        <h2>Trước khi bạn bắt đầu giới thiệu.</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Mình có được nhận 330.000 VND tiền mặt không?</summary>
+          <p>Không. 330.000 VND là tín dụng học phí. Tín dụng được dùng để giảm hoặc miễn phí lớp học của bạn.</p>
+        </details>
+
+        <details>
+          <summary>Nếu mình giới thiệu 3 người nhưng chỉ 2 người thanh toán thì sao?</summary>
+          <p>Bạn nhận 660.000 VND tín dụng. Khi người thứ ba hợp lệ thanh toán, tổng tín dụng đạt 990.000 VND và tương đương một tháng học miễn phí.</p>
+        </details>
+
+        <details>
+          <summary>Mình có cần là học viên hiện tại không?</summary>
+          <p>Không nhất thiết. Bạn có thể đăng ký chương trình nếu bạn muốn tham gia lớp và nghĩ rằng mình có thể giới thiệu người học cùng.</p>
+        </details>
+
+        <details>
+          <summary>Mình có phải đăng bài công khai không?</summary>
+          <p>Không. Bạn có thể chỉ nhắn cho những người mà bạn nghĩ thực sự phù hợp. Chúng tôi ưu tiên giới thiệu tự nhiên hơn spam.</p>
+        </details>
+
+        <details>
+          <summary>Nếu đã có 2 suất miễn phí trong nhóm đầu tiên thì tín dụng của mình mất không?</summary>
+          <p>Không. Nếu chương trình và lớp tiếp theo vẫn hoạt động, tín dụng còn lại có thể được dùng cho tháng hoặc nhóm tiếp theo, tùy chỗ còn trống.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="block" id="dang-ky">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Tham gia chương trình</div>
+        <h2>Bạn nghĩ mình có thể tìm 3 người muốn học cùng?</h2>
+        <p class="muted">
+          Điền vài thông tin ngắn. Alberto sẽ nói chuyện trực tiếp với bạn trước khi bắt đầu.
+        </p>
+      </div>
+
+      <div class="card form-card">
+        <form id="ambassadorForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Tên của bạn *</label>
+              <input id="name" required placeholder="Ví dụ: Linh">
+            </div>
+
+            <div class="field">
+              <label for="phone">Số điện thoại / Zalo *</label>
+              <input id="phone" required placeholder="0xxxxxxxxx">
+            </div>
+
+            <div class="field">
+              <label for="canFind">Bạn nghĩ mình có thể giới thiệu bao nhiêu người?</label>
+              <select id="canFind">
+                <option>1 người</option>
+                <option>2 người</option>
+                <option selected>Khoảng 3 người</option>
+                <option>Hơn 3 người</option>
+                <option>Chưa chắc, muốn tìm hiểu trước</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="channel">Bạn thường liên hệ bạn bè ở đâu?</label>
+              <select id="channel">
+                <option>Zalo</option>
+                <option>Facebook / Messenger</option>
+                <option>Nhóm học / trường / đại học</option>
+                <option>Đồng nghiệp</option>
+                <option>Nhiều kênh khác nhau</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="why">Vì sao bạn muốn học tiếng Tây Ban Nha?</label>
+              <textarea id="why" placeholder="Du lịch, công việc, học tập, giao tiếp, sở thích..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-note">
+            Điền form không đảm bảo ngay một suất miễn phí. Tín dụng chỉ được xác nhận khi học viên mới do bạn giới thiệu đã thanh toán.
+            <br><br>
+            <strong>Zalo Alberto:</strong> +34 623 281 239
+          </div>
+
+          <button class="btn primary full" type="submit">Tạo tin nhắn & mở Zalo</button>
+
+          <div class="result" id="result">
+            <pre id="messageText"></pre>
+            <div class="grid g2">
+              <button class="btn" type="button" id="copyBtn">Sao chép tin nhắn</button>
+              <a class="btn primary" id="zaloBtn" href="#" target="_blank" rel="noopener">Mở Zalo / liên hệ Alberto</a>
+            </div>
+            <p class="small" id="zaloNote" style="margin:10px 0 0">
+              Nếu nút Zalo chưa được cấu hình, hãy sao chép tin nhắn và gửi trực tiếp cho Alberto.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="block">
+    <div class="wrap">
+      <div class="card final-cta">
+        <div class="kicker">Nhóm đầu tiên</div>
+        <h2>Muốn học tiếng Tây Ban Nha nhưng muốn giảm chi phí?</h2>
+        <p>
+          Nếu bạn có thể tìm ba người bạn muốn học cùng, tháng học của bạn có thể hoàn toàn miễn phí.
+        </p>
+        <a href="#dang-ky" class="btn primary">Tôi muốn tham gia chương trình</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <strong style="color:#dfe8f1">Tiếng Tây Ban Nha cùng Alberto</strong><br>
+      <span>Chương trình giới thiệu bạn bè.</span>
+    </div>
+    <div>
+      1 học viên = 330k · 2 = 660k · 3 = 1 tháng miễn phí
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="#dang-ky" class="btn primary full">3 người = học miễn phí 🇪🇸</a>
+</div>
+
+<script>
+/* =========================================================
+   CONFIGURACIÓN — CAMBIAR AQUÍ CUANDO TENGAMOS LOS ENLACES
+   ========================================================= */
+const ZALO_URL = "https://zalo.me/34623281239";
+// Zalo de Alberto: +34 623 281 239
+
+const COURSE_URL = "";
+// Aquí puedes poner la URL pública de la landing de alumnos cuando esté publicada.
+
+/* ========================================================= */
+
+const form = document.getElementById("ambassadorForm");
+const result = document.getElementById("result");
+const messageText = document.getElementById("messageText");
+const copyBtn = document.getElementById("copyBtn");
+const zaloBtn = document.getElementById("zaloBtn");
+const zaloNote = document.getElementById("zaloNote");
+const copyShareBtn = document.getElementById("copyShareBtn");
+const shareMessage = document.getElementById("shareMessage");
+
+if (ZALO_URL) {
+  zaloBtn.href = ZALO_URL;
+  zaloNote.textContent = "Nhấn nút để mở Zalo, sau đó dán tin nhắn vừa tạo và gửi cho Alberto.";
+} else {
+  zaloBtn.href = "#";
+  zaloBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Không tìm thấy liên kết Zalo.");
+  });
+}
+
+async function copyText(text, button, original){
+  try{
+    await navigator.clipboard.writeText(text);
+  }catch(err){
+    const area=document.createElement("textarea");
+    area.value=text;
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand("copy");
+    area.remove();
+  }
+  button.textContent="Đã sao chép ✓";
+  setTimeout(()=>button.textContent=original,1800);
+}
+
+copyShareBtn.addEventListener("click", ()=>{
+  copyText(shareMessage.textContent.trim(), copyShareBtn, "Sao chép tin nhắn");
+});
+
+form.addEventListener("submit", async (e)=>{
+  e.preventDefault();
+
+  const name=document.getElementById("name").value.trim();
+  const phone=document.getElementById("phone").value.trim();
+  const canFind=document.getElementById("canFind").value;
+  const channel=document.getElementById("channel").value;
+  const why=document.getElementById("why").value.trim() || "Chưa ghi";
+
+  if (!name || !phone) {
+    alert("Vui lòng nhập tên và số điện thoại / Zalo.");
+    return;
+  }
+
+  const message =
+`Chào Alberto, mình muốn tìm hiểu chương trình giới thiệu bạn bè để học tiếng Tây Ban Nha 🇪🇸
+
+Tên: ${name}
+Zalo / điện thoại: ${phone}
+Mình nghĩ có thể giới thiệu: ${canFind}
+Kênh mình thường dùng: ${channel}
+Lý do muốn học tiếng Tây Ban Nha: ${why}
+
+Mình muốn biết bước tiếp theo để bắt đầu.`;
+
+  messageText.textContent=message;
+  result.classList.add("show");
+
+  try {
+    await navigator.clipboard.writeText(message);
+    zaloNote.textContent = "Tin nhắn đã được sao chép ✓ Bây giờ Zalo sẽ mở. Chỉ cần dán tin nhắn và gửi cho Alberto.";
+  } catch (err) {
+    zaloNote.textContent = "Tin nhắn đã được tạo. Hãy bấm “Sao chép tin nhắn”, sau đó mở Zalo và gửi cho Alberto.";
+  }
+
+  result.scrollIntoView({behavior:"smooth",block:"nearest"});
+
+  if (ZALO_URL) {
+    setTimeout(() => {
+      window.open(ZALO_URL, "_blank", "noopener,noreferrer");
+    }, 450);
+  }
+});
+
+copyBtn.addEventListener("click", ()=>{
+  copyText(messageText.textContent, copyBtn, "Sao chép tin nhắn");
+});
+</script>
+
+</body>
+</html>
