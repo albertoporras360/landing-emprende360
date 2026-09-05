@@ -3,698 +3,199 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#090E16">
-<title>SEPTIEMBRE 360 · Panel definitivo</title>
-<meta name="description" content="Panel diario personal y comercial para septiembre de 2026.">
-
+<meta name="theme-color" content="#090e16">
+<title>PANEL 360 · SEP–DIC 2026</title>
+<meta name="description" content="Sistema diario personal y profesional para septiembre, octubre, noviembre y diciembre de 2026.">
 <style>
 :root{
-  --bg:#090e16;--panel:#101824;--panel2:#162131;--panel3:#0c131e;
-  --line:#263247;--line2:#3a4a64;--text:#f6f8fc;--muted:#96a4b7;
-  --green:#34d399;--green2:#10b981;--blue:#60a5fa;--violet:#a78bfa;
-  --amber:#fbbf24;--orange:#fb923c;--red:#f87171;
-  --shadow:0 18px 52px rgba(0,0,0,.28);--radius:20px;
+  --bg:#090e16;--panel:#101824;--panel2:#162131;--panel3:#0c131e;--line:#263247;--line2:#3a4a64;
+  --text:#f6f8fc;--muted:#96a4b7;--green:#34d399;--green2:#10b981;--blue:#60a5fa;--violet:#a78bfa;
+  --amber:#fbbf24;--orange:#fb923c;--red:#f87171;--shadow:0 18px 52px rgba(0,0,0,.28);--radius:20px;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;min-height:100vh;color:var(--text);
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:
-    radial-gradient(circle at 14% -8%,rgba(96,165,250,.13),transparent 30%),
-    radial-gradient(circle at 90% 0%,rgba(167,139,250,.10),transparent 27%),var(--bg);
-  -webkit-font-smoothing:antialiased
-}
-button,input,textarea{font:inherit}
-button{cursor:pointer}
-input[type=number]{-moz-appearance:textfield}
-input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
-.shell{max-width:1180px;margin:0 auto;padding:18px 14px 90px}
-.topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}
-.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.17em;font-weight:900;color:var(--green);margin-bottom:9px}
-h1{margin:0;font-size:clamp(34px,7vw,58px);line-height:.94;letter-spacing:-.055em}
-.subtitle{max-width:790px;color:var(--muted);line-height:1.5;margin:11px 0 0}
-.save-pill{
-  flex:none;display:flex;gap:8px;align-items:center;border:1px solid rgba(52,211,153,.18);
-  color:#d0f9e9;background:rgba(52,211,153,.07);padding:9px 12px;border-radius:999px;
-  font-size:12px;font-weight:850;white-space:nowrap
-}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(52,211,153,.09)}
-.section{
-  margin-top:14px;padding:18px;border-radius:var(--radius);border:1px solid var(--line);
-  background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005)),var(--panel);
-  box-shadow:var(--shadow)
-}
-.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
-.section-title{font-size:18px;font-weight:950;letter-spacing:-.02em}
-.section-note{font-size:12px;color:var(--muted)}
-.toolbar{display:flex;gap:8px;flex-wrap:wrap}
-.btn{
-  border:1px solid var(--line);background:var(--panel2);color:var(--text);
-  padding:10px 12px;border-radius:12px;font-size:13px;font-weight:850
-}
-.btn:hover{border-color:var(--line2)}
-.btn.primary{background:var(--text);color:#0a0f17;border-color:transparent}
-.btn.success{background:rgba(52,211,153,.12);border-color:rgba(52,211,153,.28);color:#d1fae5}
-.btn.danger{color:#fecaca}
-.btn.small{padding:7px 9px;font-size:11px}
-
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
-.hero-card{border-radius:19px;padding:16px;border:1px solid var(--line);background:var(--panel);box-shadow:var(--shadow)}
-.hero-card.personal{border-color:rgba(52,211,153,.20);background:linear-gradient(135deg,rgba(52,211,153,.075),rgba(52,211,153,.02)),var(--panel)}
-.hero-card.business{border-color:rgba(96,165,250,.21);background:linear-gradient(135deg,rgba(96,165,250,.075),rgba(96,165,250,.02)),var(--panel)}
-.hero-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:var(--muted)}
-.hero-title{font-size:18px;font-weight:950;letter-spacing:-.02em;margin-top:7px}
-.hero-main{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:12px}
-.hero-value{font-size:35px;font-weight:950;letter-spacing:-.05em}
-.hero-side{font-size:12px;color:var(--muted);text-align:right;line-height:1.45}
-.track{height:8px;background:#263145;border-radius:999px;overflow:hidden;margin-top:12px}
-.track span{display:block;height:100%;border-radius:999px;transition:width .25s ease}
-.personal .track span{background:linear-gradient(90deg,var(--green2),var(--green))}
-.business .track span{background:linear-gradient(90deg,var(--blue),var(--violet))}
-
-.mantra{margin-top:12px;padding:14px 15px;border-radius:17px;border:1px solid rgba(167,139,250,.19);background:rgba(167,139,250,.05)}
-.mantra-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#ddd6fe}
-.mantra-text{font-size:18px;line-height:1.35;font-weight:900;letter-spacing:-.02em;margin-top:6px}
-
-.tabs{
-  position:sticky;top:7px;z-index:40;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;
-  margin-top:14px;padding:6px;border:1px solid var(--line);border-radius:16px;
-  background:rgba(9,14,22,.88);backdrop-filter:blur(18px);box-shadow:0 12px 35px rgba(0,0,0,.22)
-}
-.tab-btn{
-  border:0;border-radius:11px;background:transparent;color:var(--muted);padding:10px 12px;
-  font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.06em
-}
-.tab-btn.active{background:var(--panel2);color:var(--text);box-shadow:inset 0 0 0 1px var(--line)}
-.tab-pane{display:none}
-.tab-pane.active{display:block}
-
-.calendar-head,.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
-.calendar-head{margin-bottom:7px}
-.weekday{text-align:center;font-size:10px;font-weight:900;color:var(--muted);text-transform:uppercase}
-.day{
-  min-height:78px;border:1px solid var(--line);background:var(--panel2);color:var(--text);
-  border-radius:14px;padding:9px;text-align:left;position:relative;overflow:hidden;transition:.16s ease
-}
-.day:hover{transform:translateY(-1px);border-color:#40516d}
-.day.empty{opacity:0;pointer-events:none}
-.day.selected{outline:2px solid var(--blue);outline-offset:1px}
-.day.future:not(.has-data){opacity:.43}
-.day .numd{font-size:13px;font-weight:900}
-.day .pct{position:absolute;right:8px;top:9px;font-size:11px;color:var(--muted)}
-.day .clean{position:absolute;left:8px;bottom:21px;font-size:9px;color:var(--green);font-weight:900}
-.day .bar{position:absolute;left:8px;right:8px;bottom:9px;height:5px;background:#263145;border-radius:999px;overflow:hidden}
-.day .bar span{display:block;height:100%;border-radius:999px}
-.day.score100{background:rgba(16,185,129,.13);border-color:rgba(52,211,153,.34)}
-.day.score90{background:rgba(52,211,153,.075)}
-.day.score70{background:rgba(251,191,36,.08)}
-.day.score50{background:rgba(251,146,60,.08)}
-.day.scoreLow{background:rgba(248,113,113,.065)}
-
-.day-nav{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.navbtn{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font-size:20px}
-.dateblock{text-align:center}
-.dateblock .date{font-size:21px;font-weight:950;letter-spacing:-.03em}
-.dateblock .status{font-size:12px;color:var(--muted);margin-top:3px}
-
-.order-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:14px}
-.order-item{padding:9px 10px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.018);font-size:11px;color:var(--muted)}
-.order-item strong{display:block;color:var(--text);font-size:11px;margin-bottom:3px}
-
-.win-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.text-card{padding:13px 14px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.018)}
-.text-card.goal{border-color:rgba(251,191,36,.17);background:rgba(251,191,36,.045)}
-.text-card.hard{border-color:rgba(248,113,113,.17);background:rgba(248,113,113,.04)}
-.text-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:var(--muted)}
-.text-card input{
-  width:100%;border:0;border-bottom:1px solid rgba(255,255,255,.11);background:transparent;color:var(--text);
-  outline:none;padding:9px 1px 7px;font-size:14px;font-weight:760
-}
-.text-hint{font-size:10px;color:var(--muted);line-height:1.4;margin-top:6px}
-
-.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:14px}
-.score-card{border:1px solid var(--line);border-radius:16px;padding:13px;background:rgba(255,255,255,.018)}
-.score-label{font-size:10px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.08em}
-.score-value{font-size:28px;font-weight:950;letter-spacing:-.04em;margin-top:5px}
-.score-sub{font-size:10px;color:var(--muted);margin-top:3px;min-height:14px}
-
-.groups{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-.group{padding:14px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.018)}
-.group-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
-.group-name{font-size:12px;text-transform:uppercase;letter-spacing:.09em;font-weight:950}
-.group-score{font-size:12px;color:var(--muted);font-weight:850}
-.check{display:flex;align-items:flex-start;gap:11px;padding:11px 2px;border-top:1px solid rgba(255,255,255,.05);user-select:none}
-.check:first-of-type{border-top:0}
-.check input{position:absolute;opacity:0;pointer-events:none}
-.box{
-  width:23px;height:23px;flex:none;border-radius:7px;border:1px solid #42516a;background:#111a28;
-  display:grid;place-items:center;margin-top:1px;transition:.15s ease
-}
-.check input:checked + .box{background:var(--green2);border-color:var(--green2)}
-.box:after{content:"✓";opacity:0;transform:scale(.7);font-weight:1000;color:white}
-.check input:checked + .box:after{opacity:1;transform:scale(1)}
-.check-text{font-size:14px;font-weight:790;line-height:1.25}
-.check-sub{font-size:12px;line-height:1.35;color:var(--muted);margin-top:3px}
-.clean-streak{margin-top:12px;padding:11px 12px;border-radius:13px;border:1px dashed rgba(52,211,153,.30);color:#d1fae5;background:rgba(52,211,153,.05);font-size:12px;font-weight:900}
-
-.metric-stack{display:grid;gap:10px}
-.metric-row{padding:12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.018)}
-.metric-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.metric-name{font-size:13px;font-weight:900}
-.metric-target{font-size:11px;color:var(--muted)}
-.metric-controls{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;margin-top:10px}
-.numinput,.numbox{
-  width:100%;border:1px solid var(--line);border-radius:11px;background:var(--panel3);color:var(--text);
-  padding:10px 9px;text-align:center;outline:none;font-weight:900
-}
-.numbox{display:flex;align-items:center;justify-content:center}
-.numinput:focus{border-color:#4d6282}
-.slash{color:var(--muted);font-weight:900}
-.mini-track{height:6px;background:#263145;border-radius:999px;overflow:hidden;margin-top:9px}
-.mini-track span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--green))}
-.inline-check{display:flex;align-items:center;gap:8px;margin-top:9px;font-size:11px;color:var(--muted)}
-.inline-check input{accent-color:var(--green2)}
-.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-.quick button{border:1px solid var(--line);background:var(--panel3);color:var(--muted);border-radius:9px;padding:6px 8px;font-size:10px;font-weight:850}
-
-.funnel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.funnel-card{padding:12px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.018)}
-.funnel-label{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:850}
-.funnel-card input{
-  width:100%;margin-top:8px;border:1px solid var(--line);border-radius:10px;background:var(--panel3);
-  color:var(--text);padding:9px;text-align:center;font-size:18px;font-weight:950;outline:none
-}
-.funnel-card input:focus{border-color:#4d6282}
-.client-name{grid-column:span 3}
-.client-name input{text-align:left;font-size:14px;font-weight:760}
-
-.reading{margin-top:14px;padding:16px;border-radius:18px;border:1px solid rgba(96,165,250,.22);background:linear-gradient(135deg,rgba(96,165,250,.08),rgba(52,211,153,.04))}
-.reading-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:#bfdbfe}
-.reading-title{font-size:21px;font-weight:950;letter-spacing:-.03em;margin-top:7px}
-.reading-copy{font-size:13px;line-height:1.55;color:#d8e3f1;margin-top:7px}
-.next-action{margin-top:11px;padding:11px 12px;border-radius:13px;background:rgba(255,255,255,.045);font-size:13px}
-.next-action strong{color:var(--green)}
-
-.sos{margin-top:12px;border:1px solid rgba(248,113,113,.18);background:rgba(248,113,113,.04);border-radius:17px;padding:14px}
-.sos-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.sos h3{font-size:13px;margin:0}
-.sos p{font-size:12px;color:var(--muted);margin:5px 0 0;line-height:1.45}
-.sos-panel{display:none;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07)}
-.sos-panel.show{display:block}
-.sos-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.sos-step{border:1px solid var(--line);border-radius:13px;padding:10px;background:rgba(0,0,0,.09)}
-.sos-step strong{font-size:11px}
-.sos-step div{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}
-.timer{font-size:34px;font-weight:950;letter-spacing:-.04em;margin:12px 0 8px}
-.sos-actions{display:flex;gap:8px;flex-wrap:wrap}
-
-textarea{
-  width:100%;min-height:76px;resize:vertical;border:1px solid var(--line);border-radius:13px;
-  background:var(--panel3);color:var(--text);padding:12px 13px;outline:none;margin-top:8px
-}
-textarea:focus{border-color:#4d6282}
-.field-label{font-size:13px;font-weight:850;margin-top:14px}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
-.chip{border:1px solid var(--line);background:var(--panel2);color:var(--muted);border-radius:999px;padding:7px 10px;font-size:12px;font-weight:850}
-.chip.active{background:rgba(96,165,250,.13);border-color:rgba(96,165,250,.38);color:#dbeafe}
-.rating{display:flex;gap:7px;margin-top:9px;flex-wrap:wrap}
-.rating button{width:38px;height:38px;border-radius:11px;border:1px solid var(--line);background:var(--panel2);color:var(--muted);font-weight:900}
-.rating button.active{background:rgba(52,211,153,.14);border-color:rgba(52,211,153,.35);color:#d1fae5}
-
-.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
-.stat{padding:13px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.018)}
-.stat-label{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:850}
-.stat-value{font-size:24px;font-weight:950;letter-spacing:-.04em;margin-top:5px}
-.stat-sub{font-size:10px;color:var(--muted);margin-top:4px}
-
-.rates{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
-.rate-card{padding:11px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.018)}
-.rate-card .rlabel{font-size:9px;color:var(--muted);text-transform:uppercase;font-weight:850;line-height:1.35}
-.rate-card .rvalue{font-size:18px;font-weight:950;margin-top:5px}
-.checkpoint{margin-top:12px;padding:14px;border-radius:16px;border:1px solid rgba(251,191,36,.18);background:rgba(251,191,36,.05)}
-.checkpoint-title{font-size:12px;font-weight:950;color:#fde68a}
-.checkpoint-copy{font-size:12px;color:#e8dfc1;line-height:1.5;margin-top:5px}
-
-.weeks{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:13px}
-.week{padding:12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.018)}
-.week .wlabel{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:850}
-.week .wvalue{font-size:22px;font-weight:950;margin-top:5px}
-
-.client-list{display:grid;gap:8px}
-.client-item{padding:11px 12px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.018);display:flex;justify-content:space-between;gap:12px;font-size:12px}
-.client-item span:last-child{color:var(--muted)}
-
-.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.summary-box{padding:14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.018)}
-.summary-box h3{font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 9px}
-.rowstat{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid rgba(255,255,255,.05);font-size:13px}
-.rowstat:first-of-type{border-top:0}
-.rowstat span:last-child{text-align:right;font-weight:900}
-.month-reading{margin-top:12px;padding:15px;border-radius:17px;border:1px solid rgba(52,211,153,.18);background:rgba(52,211,153,.05)}
-.month-reading h3{font-size:16px;margin:0 0 6px}
-.month-reading p{font-size:13px;line-height:1.55;color:#d7eadf;margin:0}
-
-.trend-title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:16px 0 8px}
-.trend-title strong{font-size:13px}
-.trend-title span{font-size:11px;color:var(--muted)}
-.trend{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;align-items:end;height:128px}
-.trend-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:5px}
-.trend-pct{font-size:10px;color:var(--muted);min-height:13px}
-.trend-bar-wrap{height:84px;width:100%;max-width:47px;background:#202b3d;border-radius:9px;display:flex;align-items:flex-end;overflow:hidden}
-.trend-bar{width:100%;border-radius:9px 9px 0 0;background:linear-gradient(180deg,var(--green),var(--blue));transition:height .25s ease}
-.trend-day{font-size:10px;color:var(--muted);font-weight:850}
-
-.heatmap-wrap{overflow:auto;padding-bottom:4px}
-.heatmap{min-width:760px;display:grid;grid-template-columns:165px repeat(30,18px);gap:4px;align-items:center}
-.hm-label{font-size:11px;color:#dce4ef;font-weight:750;white-space:nowrap}
-.hm-head{font-size:9px;color:var(--muted);text-align:center;font-weight:850}
-.hm-cell{height:20px;border-radius:5px;background:#263145;border:1px solid rgba(255,255,255,.03)}
-.hm-cell.yes{background:rgba(52,211,153,.82)}
-.hm-cell.no{background:rgba(248,113,113,.16)}
-.hm-cell.future{background:#1a2332;opacity:.55}
-
-.system-status{margin-top:12px;padding:11px 12px;border-radius:13px;border:1px solid rgba(52,211,153,.18);background:rgba(52,211,153,.045);font-size:11px;color:#d1fae5}
-.footer{font-size:11px;line-height:1.5;color:var(--muted);text-align:center;margin-top:16px}
-.toast{
-  position:fixed;z-index:100;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);
-  opacity:0;pointer-events:none;background:#f7f9fc;color:#0a0f17;padding:10px 14px;border-radius:999px;
-  font-size:12px;font-weight:900;transition:.2s ease;box-shadow:0 12px 34px rgba(0,0,0,.28)
-}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.pulse{animation:pulse .55s ease}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.015)}100%{transform:scale(1)}}
-.confetti{position:fixed;z-index:150;pointer-events:none;width:8px;height:14px;border-radius:2px;animation:fall 1300ms linear forwards}
-@keyframes fall{0%{transform:translateY(-10vh) rotate(0);opacity:1}100%{transform:translateY(105vh) rotate(720deg);opacity:0}}
-
-@media(max-width:920px){
-  .hero-grid,.summary-grid{grid-template-columns:1fr}
-  .groups{grid-template-columns:1fr}
-  .kpi-grid{grid-template-columns:1fr 1fr}
-  .rates{grid-template-columns:1fr 1fr}
-  .funnel-grid{grid-template-columns:1fr 1fr}
-  .client-name{grid-column:span 2}
-  .order-strip{grid-template-columns:1fr 1fr}
-}
-@media(max-width:620px){
-  .shell{padding:14px 10px 86px}
-  .topbar{display:block}
-  .save-pill{display:inline-flex;margin-top:13px}
-  h1{font-size:40px}
-  .section{padding:14px;border-radius:17px}
-  .tabs{top:6px}
-  .win-grid,.score-grid{grid-template-columns:1fr}
-  .calendar-head,.calendar{gap:5px}
-  .day{min-height:65px;padding:7px;border-radius:11px}
-  .day .pct{right:6px;top:7px}
-  .day .bar{left:6px;right:6px;bottom:7px}
-  .day .clean{left:6px;bottom:17px}
-  .funnel-grid,.kpi-grid{grid-template-columns:1fr 1fr}
-  .client-name{grid-column:span 2}
-  .rates{grid-template-columns:1fr 1fr}
-  .sos-steps{grid-template-columns:1fr}
-  .weeks{grid-template-columns:1fr 1fr}
-}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 15% -5%,rgba(96,165,250,.13),transparent 30%),radial-gradient(circle at 90% 0%,rgba(167,139,250,.1),transparent 27%),var(--bg);-webkit-font-smoothing:antialiased}
+button,input,textarea,select{font:inherit}button{cursor:pointer}input[type=number]{-moz-appearance:textfield}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.shell{max-width:1180px;margin:0 auto;padding:18px 14px 100px}.topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.17em;font-weight:900;color:var(--green);margin-bottom:9px}h1{margin:0;font-size:clamp(34px,7vw,58px);line-height:.94;letter-spacing:-.055em}.subtitle{max-width:820px;color:var(--muted);line-height:1.5;margin:11px 0 0}.save-pill{flex:none;display:flex;gap:8px;align-items:center;border:1px solid rgba(52,211,153,.18);color:#d0f9e9;background:rgba(52,211,153,.07);padding:9px 12px;border-radius:999px;font-size:12px;font-weight:850;white-space:nowrap}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(52,211,153,.09)}
+.month-switch{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:16px}.month-btn{border:1px solid var(--line);background:rgba(255,255,255,.015);color:var(--muted);border-radius:13px;padding:10px 8px;font-size:12px;font-weight:900}.month-btn.active{background:var(--panel2);color:var(--text);border-color:#40516d}
+.hero-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:12px;margin-top:12px}.hero-card{border-radius:19px;padding:16px;border:1px solid var(--line);background:var(--panel);box-shadow:var(--shadow)}.hero-card.personal{border-color:rgba(52,211,153,.2);background:linear-gradient(135deg,rgba(52,211,153,.075),rgba(52,211,153,.02)),var(--panel)}.hero-card.business{border-color:rgba(96,165,250,.21);background:linear-gradient(135deg,rgba(96,165,250,.075),rgba(96,165,250,.02)),var(--panel)}.hero-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:var(--muted)}.hero-title{font-size:18px;font-weight:950;letter-spacing:-.02em;margin-top:7px}.hero-main{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:12px}.hero-value{font-size:35px;font-weight:950;letter-spacing:-.05em}.hero-side{font-size:12px;color:var(--muted);text-align:right;line-height:1.45}.track{height:8px;background:#263145;border-radius:999px;overflow:hidden;margin-top:12px}.track span{display:block;height:100%;border-radius:999px;transition:width .25s ease}.personal .track span{background:linear-gradient(90deg,var(--green2),var(--green))}.business .track span{background:linear-gradient(90deg,var(--blue),var(--violet))}.goal-pills{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.goal-pill{border:1px solid var(--line);border-radius:999px;padding:6px 9px;font-size:11px;color:#dbeafe;background:rgba(96,165,250,.06);font-weight:850}
+.mantra{margin-top:12px;padding:14px 15px;border-radius:17px;border:1px solid rgba(167,139,250,.19);background:rgba(167,139,250,.05)}.mantra-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#ddd6fe}.mantra-text{font-size:18px;line-height:1.35;font-weight:900;letter-spacing:-.02em;margin-top:6px}
+.tabs{position:sticky;top:7px;z-index:40;display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:14px;padding:6px;border:1px solid var(--line);border-radius:16px;background:rgba(9,14,22,.88);backdrop-filter:blur(18px);box-shadow:0 12px 35px rgba(0,0,0,.22)}.tab-btn{border:0;border-radius:11px;background:transparent;color:var(--muted);padding:10px 12px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}.tab-btn.active{background:var(--panel2);color:var(--text);box-shadow:inset 0 0 0 1px var(--line)}.tab-pane{display:none}.tab-pane.active{display:block}
+.section{margin-top:14px;padding:18px;border-radius:var(--radius);border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005)),var(--panel);box-shadow:var(--shadow)}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.section-title{font-size:18px;font-weight:950;letter-spacing:-.02em}.section-note{font-size:12px;color:var(--muted)}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:10px 12px;border-radius:12px;font-size:13px;font-weight:850}.btn:hover{border-color:var(--line2)}.btn.primary{background:var(--text);color:#0a0f17;border-color:transparent}.btn.success{background:rgba(52,211,153,.12);border-color:rgba(52,211,153,.28);color:#d1fae5}.btn.danger{color:#fecaca}.btn.small{padding:7px 9px;font-size:11px}.btn.ghost{background:transparent}
+.calendar-head,.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}.calendar-head{margin-bottom:7px}.weekday{text-align:center;font-size:10px;font-weight:900;color:var(--muted);text-transform:uppercase}.day{min-height:78px;border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:14px;padding:9px;text-align:left;position:relative;overflow:hidden;transition:.16s ease}.day:hover{transform:translateY(-1px);border-color:#40516d}.day.empty{opacity:0;pointer-events:none}.day.selected{outline:2px solid var(--blue);outline-offset:1px}.day .numd{font-size:13px;font-weight:900}.day .pct{position:absolute;right:8px;top:9px;font-size:11px;color:var(--muted)}.day .state{position:absolute;left:8px;bottom:21px;font-size:9px;font-weight:900}.day .state.closed{color:var(--green)}.day .state.open{color:var(--amber)}.day .bar{position:absolute;left:8px;right:8px;bottom:9px;height:5px;background:#263145;border-radius:999px;overflow:hidden}.day .bar span{display:block;height:100%;border-radius:999px}.day.closed100{background:rgba(16,185,129,.13);border-color:rgba(52,211,153,.34)}.day.closed70{background:rgba(251,191,36,.08)}.day.closedLow{background:rgba(248,113,113,.065)}.day.hasdata:not(.closedDay){background:rgba(96,165,250,.055)}
+.day-nav{display:flex;align-items:center;justify-content:space-between;gap:10px}.navbtn{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font-size:20px}.dateblock{text-align:center}.dateblock .date{font-size:21px;font-weight:950;letter-spacing:-.03em}.dateblock .status{font-size:12px;color:var(--muted);margin-top:3px}
+.win-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.text-card{padding:13px 14px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.018)}.text-card.goal{border-color:rgba(251,191,36,.17);background:rgba(251,191,36,.045)}.text-card.hard{border-color:rgba(248,113,113,.17);background:rgba(248,113,113,.04)}.text-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:var(--muted)}.text-card input{width:100%;border:0;border-bottom:1px solid rgba(255,255,255,.11);background:transparent;color:var(--text);outline:none;padding:9px 1px 7px;font-size:14px;font-weight:760}.text-hint{font-size:10px;color:var(--muted);line-height:1.4;margin-top:6px}
+.score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:14px}.score-card{border:1px solid var(--line);border-radius:16px;padding:13px;background:rgba(255,255,255,.018)}.score-label{font-size:10px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.08em}.score-value{font-size:28px;font-weight:950;letter-spacing:-.04em;margin-top:5px}.score-sub{font-size:10px;color:var(--muted);margin-top:3px;min-height:14px}
+.top3-list,.task-list{display:grid;gap:8px}.task-row{display:flex;align-items:center;gap:10px;padding:11px 12px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.018)}.task-row.done{opacity:.55}.task-check{width:22px;height:22px;border-radius:7px;border:1px solid #42516a;background:#111a28;display:grid;place-items:center;flex:none;color:white;font-weight:950}.task-check.done{background:var(--green2);border-color:var(--green2)}.task-main{min-width:0;flex:1}.task-title{font-size:13px;font-weight:820;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.task-meta{font-size:10px;color:var(--muted);margin-top:3px}.task-actions{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}.task-actions button{border:1px solid var(--line);background:var(--panel3);color:var(--muted);border-radius:8px;padding:5px 7px;font-size:10px;font-weight:850}.priority{display:inline-flex;border-radius:999px;padding:3px 7px;font-size:9px;font-weight:900}.p1{color:#fecaca;background:rgba(248,113,113,.1)}.p2{color:#fde68a;background:rgba(251,191,36,.1)}.p3{color:#bfdbfe;background:rgba(96,165,250,.1)}.quick-add{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:10px}.quick-add input,.form-grid input,.form-grid select{width:100%;border:1px solid var(--line);border-radius:11px;background:var(--panel3);color:var(--text);padding:10px;outline:none}.quick-add input:focus,.form-grid input:focus,.form-grid select:focus{border-color:#4d6282}.form-grid{display:grid;grid-template-columns:2fr 1fr .7fr auto;gap:8px}.bucket-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0 8px}.bucket-title strong{font-size:13px}.bucket-title span{font-size:11px;color:var(--muted)}
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.group{padding:14px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.018)}.group-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}.group-name{font-size:12px;text-transform:uppercase;letter-spacing:.09em;font-weight:950}.group-score{font-size:12px;color:var(--muted);font-weight:850}.check{display:flex;align-items:flex-start;gap:11px;padding:11px 2px;border-top:1px solid rgba(255,255,255,.05);user-select:none}.check:first-of-type{border-top:0}.check input{position:absolute;opacity:0;pointer-events:none}.box{width:23px;height:23px;flex:none;border-radius:7px;border:1px solid #42516a;background:#111a28;display:grid;place-items:center;margin-top:1px;transition:.15s ease}.check input:checked + .box{background:var(--green2);border-color:var(--green2)}.box:after{content:"✓";opacity:0;transform:scale(.7);font-weight:1000;color:white}.check input:checked + .box:after{opacity:1;transform:scale(1)}.check-text{font-size:14px;font-weight:790;line-height:1.25}.check-sub{font-size:12px;line-height:1.35;color:var(--muted);margin-top:3px}.clean-streak{margin-top:12px;padding:11px 12px;border-radius:13px;border:1px dashed rgba(52,211,153,.3);color:#d1fae5;background:rgba(52,211,153,.05);font-size:12px;font-weight:900}
+.prof-stack{display:grid;gap:10px}.prof-card{padding:12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.018)}.prof-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.prof-name{font-size:13px;font-weight:900}.prof-target{font-size:11px;color:var(--muted)}.segmented{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.segmented button{border:1px solid var(--line);background:var(--panel3);color:var(--muted);border-radius:9px;padding:7px 9px;font-size:11px;font-weight:850}.segmented button.active{background:rgba(52,211,153,.13);border-color:rgba(52,211,153,.35);color:#d1fae5}.metric-controls{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;margin-top:10px}.numinput,.numbox{width:100%;border:1px solid var(--line);border-radius:11px;background:var(--panel3);color:var(--text);padding:10px 9px;text-align:center;outline:none;font-weight:900}.numbox{display:flex;align-items:center;justify-content:center}.slash{color:var(--muted);font-weight:900}.mini-track{height:6px;background:#263145;border-radius:999px;overflow:hidden;margin-top:9px}.mini-track span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--green))}.blocks{display:grid;gap:7px;margin-top:10px}.block-row{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center}.block-row input[type=text]{width:100%;border:1px solid var(--line);border-radius:10px;background:var(--panel3);color:var(--text);padding:8px 9px;outline:none}.block-tag{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:850}.block-tag input{accent-color:var(--green2)}
+.weekly-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.weekly-card{padding:12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.018)}.weekly-value{font-size:22px;font-weight:950;margin-top:5px}.weekly-input{display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:9px}.weekly-input input{width:100%;border:1px solid var(--line);border-radius:10px;background:var(--panel3);color:var(--text);padding:8px;text-align:center;font-weight:900;outline:none}
+.reading{margin-top:14px;padding:16px;border-radius:18px;border:1px solid rgba(96,165,250,.22);background:linear-gradient(135deg,rgba(96,165,250,.08),rgba(52,211,153,.04))}.reading-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:#bfdbfe}.reading-title{font-size:21px;font-weight:950;letter-spacing:-.03em;margin-top:7px}.reading-copy{font-size:13px;line-height:1.55;color:#d8e3f1;margin-top:7px}.next-action,.dont-action{margin-top:11px;padding:11px 12px;border-radius:13px;background:rgba(255,255,255,.045);font-size:13px}.next-action strong{color:var(--green)}.dont-action strong{color:var(--amber)}
+.sales-form{display:grid;grid-template-columns:1.3fr 1.7fr auto;gap:8px}.sales-form select,.sales-form input{width:100%;border:1px solid var(--line);border-radius:11px;background:var(--panel3);color:var(--text);padding:10px;outline:none}.client-list{display:grid;gap:8px;margin-top:12px}.client-item{padding:11px 12px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.018);display:flex;justify-content:space-between;gap:12px;font-size:12px}.client-item span:last-child{color:var(--muted)}
+.sos{margin-top:12px;border:1px solid rgba(248,113,113,.18);background:rgba(248,113,113,.04);border-radius:17px;padding:14px}.sos-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.sos h3{font-size:13px;margin:0}.sos p{font-size:12px;color:var(--muted);margin:5px 0 0;line-height:1.45}.sos-panel{display:none;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07)}.sos-panel.show{display:block}.sos-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.sos-step{border:1px solid var(--line);border-radius:13px;padding:10px;background:rgba(0,0,0,.09)}.sos-step strong{font-size:11px}.sos-step div{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}.timer{font-size:34px;font-weight:950;letter-spacing:-.04em;margin:12px 0 8px}.sos-actions{display:flex;gap:8px;flex-wrap:wrap}
+textarea{width:100%;min-height:76px;resize:vertical;border:1px solid var(--line);border-radius:13px;background:var(--panel3);color:var(--text);padding:12px 13px;outline:none;margin-top:8px}textarea:focus{border-color:#4d6282}.field-label{font-size:13px;font-weight:850;margin-top:14px}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}.chip{border:1px solid var(--line);background:var(--panel2);color:var(--muted);border-radius:999px;padding:7px 10px;font-size:12px;font-weight:850}.chip.active{background:rgba(96,165,250,.13);border-color:rgba(96,165,250,.38);color:#dbeafe}.rating{display:flex;gap:7px;margin-top:9px;flex-wrap:wrap}.rating button{width:38px;height:38px;border-radius:11px;border:1px solid var(--line);background:var(--panel2);color:var(--muted);font-weight:900}.rating button.active{background:rgba(52,211,153,.14);border-color:rgba(52,211,153,.35);color:#d1fae5}
+.close-card{margin-top:14px;padding:15px;border-radius:17px;border:1px solid rgba(52,211,153,.18);background:rgba(52,211,153,.045)}.close-summary{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:10px 0}.close-kpi{padding:9px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.018)}.close-kpi span{display:block}.close-kpi .k{font-size:9px;color:var(--muted);text-transform:uppercase;font-weight:850}.close-kpi .v{font-size:18px;font-weight:950;margin-top:4px}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.stat{padding:13px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.018)}.stat-label{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:850}.stat-value{font-size:24px;font-weight:950;letter-spacing:-.04em;margin-top:5px}.stat-sub{font-size:10px;color:var(--muted);margin-top:4px}.weeks{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:13px}.week{padding:12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.018)}.week .wlabel{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:850}.week .wvalue{font-size:20px;font-weight:950;margin-top:5px}.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.summary-box{padding:14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.018)}.summary-box h3{font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 9px}.rowstat{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid rgba(255,255,255,.05);font-size:13px}.rowstat:first-of-type{border-top:0}.rowstat span:last-child{text-align:right;font-weight:900}.month-reading{margin-top:12px;padding:15px;border-radius:17px;border:1px solid rgba(52,211,153,.18);background:rgba(52,211,153,.05)}.month-reading h3{font-size:16px;margin:0 0 6px}.month-reading p{font-size:13px;line-height:1.55;color:#d7eadf;margin:0}.trend-title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:16px 0 8px}.trend-title strong{font-size:13px}.trend-title span{font-size:11px;color:var(--muted)}.trend{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;align-items:end;height:128px}.trend-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:5px}.trend-pct{font-size:10px;color:var(--muted);min-height:13px}.trend-bar-wrap{height:84px;width:100%;max-width:47px;background:#202b3d;border-radius:9px;display:flex;align-items:flex-end;overflow:hidden}.trend-bar{width:100%;border-radius:9px 9px 0 0;background:linear-gradient(180deg,var(--green),var(--blue));transition:height .25s ease}.trend-day{font-size:10px;color:var(--muted);font-weight:850}.heatmap-wrap{overflow:auto;padding-bottom:4px}.heatmap{min-width:760px;display:grid;gap:4px;align-items:center}.hm-label{font-size:11px;color:#dce4ef;font-weight:750;white-space:nowrap}.hm-head{font-size:9px;color:var(--muted);text-align:center;font-weight:850}.hm-cell{height:20px;border-radius:5px;background:#263145;border:1px solid rgba(255,255,255,.03)}.hm-cell.yes{background:rgba(52,211,153,.82)}.hm-cell.no{background:rgba(248,113,113,.16)}.hm-cell.future{background:#1a2332;opacity:.55}.care-trend{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;align-items:end;height:118px}.care-bar{height:76px;width:100%;max-width:46px;background:#202b3d;border-radius:9px;display:flex;align-items:flex-end;overflow:hidden}.care-fill{width:100%;background:linear-gradient(180deg,var(--violet),var(--blue));border-radius:9px 9px 0 0}.system-status{margin-top:12px;padding:11px 12px;border-radius:13px;border:1px solid rgba(52,211,153,.18);background:rgba(52,211,153,.045);font-size:11px;color:#d1fae5}.footer{font-size:11px;line-height:1.5;color:var(--muted);text-align:center;margin-top:16px}.toast{position:fixed;z-index:100;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;background:#f7f9fc;color:#0a0f17;padding:10px 14px;border-radius:999px;font-size:12px;font-weight:900;transition:.2s ease;box-shadow:0 12px 34px rgba(0,0,0,.28)}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:920px){.hero-grid,.summary-grid{grid-template-columns:1fr}.groups{grid-template-columns:1fr}.score-grid,.kpi-grid{grid-template-columns:1fr 1fr}.weekly-grid{grid-template-columns:1fr}.weeks{grid-template-columns:1fr 1fr}.close-summary{grid-template-columns:1fr 1fr 1fr}.form-grid{grid-template-columns:1fr 1fr}.form-grid .taskwide{grid-column:span 2}.sales-form{grid-template-columns:1fr 1fr}.sales-form .saleclient{grid-column:span 2}}
+@media(max-width:620px){.shell{padding:14px 10px 92px}.topbar{display:block}.save-pill{display:inline-flex;margin-top:13px}h1{font-size:40px}.month-switch{grid-template-columns:repeat(5,1fr);gap:5px}.month-btn{padding:9px 4px;font-size:10px}.tabs{top:6px}.tab-btn{padding:9px 4px;font-size:10px}.section{padding:14px;border-radius:17px}.win-grid,.score-grid,.kpi-grid{grid-template-columns:1fr 1fr}.calendar-head,.calendar{gap:5px}.day{min-height:65px;padding:7px;border-radius:11px}.day .pct{right:6px;top:7px}.day .bar{left:6px;right:6px;bottom:7px}.day .state{left:6px;bottom:17px}.form-grid,.sales-form{grid-template-columns:1fr}.form-grid .taskwide,.sales-form .saleclient{grid-column:span 1}.close-summary{grid-template-columns:1fr 1fr}.sos-steps{grid-template-columns:1fr}.task-row{align-items:flex-start}.task-actions{justify-content:flex-start}.client-item{display:block}.client-item span:last-child{display:block;margin-top:4px}}
 </style>
 </head>
-
 <body>
 <main class="shell">
-
 <header class="topbar">
   <div>
-    <div class="eyebrow">Septiembre 2026 · Panel personal + comercial</div>
-    <h1>SEPTIEMBRE 360</h1>
-    <p class="subtitle">Rutina, autocontrol, ejecución comercial y resultados en un único sistema. Objetivo personal: construir estabilidad. Objetivo profesional: 5 clientes de Impulso B2B.</p>
+    <div class="eyebrow">Sistema personal + profesional · SEP–DIC 2026</div>
+    <h1>PANEL 360</h1>
+    <p class="subtitle">Abrir → saber qué toca → ejecutar → registrar → cerrar. Autocontrol, foco, clientes, LinkedIn, ventas y tareas en un único sistema.</p>
   </div>
   <div class="save-pill"><span class="dot"></span><span id="saveText">Sistema activo</span></div>
 </header>
 
+<div class="month-switch" id="monthSwitch"></div>
+
 <section class="hero-grid">
   <div class="hero-card personal">
     <div class="hero-label">Misión personal</div>
-    <div class="hero-title">30 días construyendo una rutina estable</div>
-    <div class="hero-main">
-      <div class="hero-value" id="heroPersonalPct">0%</div>
-      <div class="hero-side"><span id="heroPersonalDays">0 días analizados</span><br><span id="heroCleanStreak">0 días limpios seguidos</span></div>
-    </div>
+    <div class="hero-title" id="heroPersonalTitle">Rutina estable</div>
+    <div class="hero-main"><div class="hero-value" id="heroPersonalPct">0%</div><div class="hero-side"><span id="heroClosedDays">0 días cerrados</span><br><span id="heroCleanStreak">0 días limpios seguidos</span></div></div>
     <div class="track"><span id="heroPersonalBar" style="width:0%"></span></div>
   </div>
-
   <div class="hero-card business">
     <div class="hero-label">Misión profesional</div>
-    <div class="hero-title">Cerrar 5 clientes de Impulso B2B · 390 €</div>
-    <div class="hero-main">
-      <div class="hero-value"><span id="heroClients">0</span>/5</div>
-      <div class="hero-side"><span id="heroRevenue">0 € cerrados</span><br><span id="heroRevenueRemaining">1.950 € por cerrar</span></div>
-    </div>
+    <div class="hero-title" id="heroBusinessTitle">2 Vertical Partner + 2 Impulso B2B</div>
+    <div class="hero-main"><div class="hero-value" id="heroRevenue">0 €</div><div class="hero-side" id="heroBusinessSide">0/2 VP · 0/2 Impulso<br>0 / 3.760 €</div></div>
+    <div class="goal-pills" id="heroGoalPills"></div>
     <div class="track"><span id="heroBusinessBar" style="width:0%"></span></div>
   </div>
 </section>
 
-<div class="mantra">
-  <div class="mantra-kicker">Frase del día</div>
-  <div class="mantra-text" id="dailyMantra">La siguiente decisión siempre cuenta.</div>
-</div>
+<div class="mantra"><div class="mantra-kicker">Frase del día</div><div class="mantra-text" id="dailyMantra">La siguiente decisión siempre cuenta.</div></div>
 
 <nav class="tabs" aria-label="Secciones">
   <button class="tab-btn active" data-tab="today">HOY</button>
+  <button class="tab-btn" data-tab="plan">PLAN</button>
   <button class="tab-btn" data-tab="business">NEGOCIO</button>
   <button class="tab-btn" data-tab="progress">PROGRESO</button>
 </nav>
 
 <div class="tab-pane active" id="tab-today">
+  <section class="section">
+    <div class="section-head"><div><div class="section-title" id="calendarTitle">Septiembre 2026</div><div class="section-note">Los días solo cuentan en estadísticas cuando pulsas “Cerrar día”.</div></div><div class="toolbar"><button class="btn small" id="todayBtn" type="button">Ir a hoy</button></div></div>
+    <div class="calendar-head"><div class="weekday">L</div><div class="weekday">M</div><div class="weekday">X</div><div class="weekday">J</div><div class="weekday">V</div><div class="weekday">S</div><div class="weekday">D</div></div>
+    <div class="calendar" id="calendar"></div>
+  </section>
 
-<section class="section">
-  <div class="section-head">
-    <div>
-      <div class="section-title">Calendario</div>
-      <div class="section-note">Puedes abrir cualquier día. Los resultados cambian al instante.</div>
-    </div>
-    <div class="toolbar"><button class="btn small" id="todayBtn">Ir a hoy</button></div>
-  </div>
-  <div class="calendar-head">
-    <div class="weekday">L</div><div class="weekday">M</div><div class="weekday">X</div>
-    <div class="weekday">J</div><div class="weekday">V</div><div class="weekday">S</div><div class="weekday">D</div>
-  </div>
-  <div class="calendar" id="calendar"></div>
-</section>
+  <section class="section" id="dailySection">
+    <div class="day-nav"><button class="navbtn" id="prevDay" type="button">‹</button><div class="dateblock"><div class="date" id="selectedDateLabel"></div><div class="status" id="selectedDateStatus"></div></div><button class="navbtn" id="nextDay" type="button">›</button></div>
 
-<section class="section" id="dailySection">
-  <div class="day-nav">
-    <button class="navbtn" id="prevDay" type="button" aria-label="Día anterior">‹</button>
-    <div class="dateblock">
-      <div class="date" id="selectedDateLabel">MARTES · 1 SEPTIEMBRE</div>
-      <div class="status" id="selectedDateStatus">Día 1 de 30</div>
-    </div>
-    <button class="navbtn" id="nextDay" type="button" aria-label="Día siguiente">›</button>
-  </div>
-
-  <div class="order-strip">
-    <div class="order-item"><strong>1 · DINERO</strong>Conversaciones calientes y cierres.</div>
-    <div class="order-item"><strong>2 · FOLLOW-UPS</strong>Cerrar conversaciones abiertas.</div>
-    <div class="order-item"><strong>3 · DMs</strong>70 nuevos en laborables.</div>
-    <div class="order-item"><strong>4 · INVITACIONES</strong>Cuota del día hasta 1.000/semana.</div>
-  </div>
-
-  <div class="win-grid">
-    <div class="text-card goal">
-      <div class="text-label">Hoy gano el día si...</div>
-      <input id="winToday" maxlength="180" placeholder="Ej.: dejo cerradas las 5 conversaciones calientes.">
-      <div class="text-hint">Una prioridad. No una lista.</div>
-    </div>
-    <div class="text-card hard">
-      <div class="text-label">Lo incómodo que no voy a evitar</div>
-      <input id="hardThing" maxlength="180" placeholder="Ej.: responder a esa objeción pendiente.">
-      <div class="text-hint">La tarea que el trabajo cómodo podría esconder.</div>
-    </div>
-  </div>
-
-  <div class="score-grid">
-    <div class="score-card"><div class="score-label">Personal</div><div class="score-value" id="dailyPersonalScore">0%</div><div class="score-sub">5 hábitos</div></div>
-    <div class="score-card"><div class="score-label">Profesional</div><div class="score-value" id="dailyProfessionalScore">0%</div><div class="score-sub" id="dailyProfessionalSub">Actividad controlable</div></div>
-    <div class="score-card"><div class="score-label">Día 360</div><div class="score-value" id="daily360Score">0%</div><div class="score-sub">Personal + profesional</div></div>
-  </div>
-
-  <div class="groups">
-    <div class="group">
-      <div class="group-head"><div class="group-name">Rutina personal</div><div class="group-score" id="personalChecks">0/5</div></div>
-
-      <label class="check">
-        <input type="checkbox" id="habitClean">
-        <span class="box"></span>
-        <span><div class="check-text">Día limpio</div><div class="check-sub">Sin cannabis, cocaína, alcohol ni tabaco.</div></span>
-      </label>
-
-      <label class="check">
-        <input type="checkbox" id="habitDigital">
-        <span class="box"></span>
-        <span><div class="check-text">Sin evasión digital</div><div class="check-sub">Sin YouTube, Shorts ni scrolling utilizado para escapar.</div></span>
-      </label>
-
-      <label class="check">
-        <input type="checkbox" id="habitFood">
-        <span class="box"></span>
-        <span><div class="check-text">Alimentación bajo control</div><div class="check-sub">Comida real, proteína e hidratación; sin energéticas, café del experimento ni bollería impulsiva.</div></span>
-      </label>
-
-      <label class="check">
-        <input type="checkbox" id="habitMovement">
-        <span class="box"></span>
-        <span><div class="check-text">Movimiento / entrenamiento</div><div class="check-sub">Sesión prevista o mínimo 20–30 minutos de movimiento.</div></span>
-      </label>
-
-      <label class="check">
-        <input type="checkbox" id="habitMeditation">
-        <span class="box"></span>
-        <span><div class="check-text">Meditación</div><div class="check-sub">10 minutos. En día difícil: mínimo 5.</div></span>
-      </label>
-
-      <div class="clean-streak" id="cleanStreakCard">🔥 Racha limpia actual: 0 días</div>
+    <div class="win-grid">
+      <div class="text-card goal"><div class="text-label">Hoy gano el día si...</div><input id="winToday" maxlength="180" placeholder="Un resultado concreto, no una lista."><div class="text-hint">Ej.: dejo resuelto el cierre de Vertical con X.</div></div>
+      <div class="text-card hard"><div class="text-label">Lo incómodo que no voy a evitar</div><input id="hardThing" maxlength="180" placeholder="La tarea que el trabajo cómodo podría esconder."><div class="text-hint">Ej.: responder esa objeción o tomar esa decisión pendiente.</div></div>
     </div>
 
-    <div class="group">
-      <div class="group-head"><div class="group-name">Ejecución profesional</div><div class="group-score" id="professionalLabel">Objetivo del día</div></div>
+    <div class="score-grid">
+      <div class="score-card"><div class="score-label">Personal</div><div class="score-value" id="dailyPersonalScore">0%</div><div class="score-sub">6 hábitos</div></div>
+      <div class="score-card"><div class="score-label">Profesional</div><div class="score-value" id="dailyProfessionalScore">0%</div><div class="score-sub">Ejecución controlable</div></div>
+      <div class="score-card"><div class="score-label">Top 3</div><div class="score-value" id="dailyTop3Score">0/3</div><div class="score-sub">Prioridades del día</div></div>
+      <div class="score-card"><div class="score-label">Estándar base</div><div class="score-value" id="dailyBaseScore">—</div><div class="score-sub">Lo no negociable</div></div>
+    </div>
 
-      <label class="check">
-        <input type="checkbox" id="moneyBlock">
-        <span class="box"></span>
-        <span><div class="check-text">Bloque Dinero primero</div><div class="check-sub">60–90 min: follow-ups calientes, objeciones, propuestas, decisiones y cierres.</div></span>
-      </label>
+    <div class="section-head" style="margin-top:18px"><div><div class="section-title">Las 3 de hoy</div><div class="section-note">Las tareas se crean una sola vez y pueden venir del PLAN.</div></div></div>
+    <div class="top3-list" id="todayTop3"></div>
+    <div class="quick-add"><input id="quickTop3Input" maxlength="180" placeholder="Añadir una tarea directamente al Top 3 de este día"><button class="btn" id="quickTop3Btn" type="button">+ Top 3</button></div>
 
-      <div class="metric-stack">
-        <div class="metric-row">
-          <div class="metric-top"><div class="metric-name">DMs nuevos</div><div class="metric-target" id="dmTargetLabel">Objetivo: 70</div></div>
-          <div class="metric-controls">
-            <input class="numinput" type="number" min="0" id="dmsDone" placeholder="0">
-            <div class="slash">/</div>
-            <div class="numbox" id="dmsTargetBox">70</div>
+    <div class="groups">
+      <div class="group">
+        <div class="group-head"><div class="group-name">Rutina personal</div><div class="group-score" id="personalChecks">0/6</div></div>
+        <label class="check"><input type="checkbox" id="habitClean"><span class="box"></span><span><div class="check-text">Día limpio</div><div class="check-sub">Sin cannabis, cocaína, alcohol, tabaco ni café.</div></span></label>
+        <label class="check"><input type="checkbox" id="habitDigital"><span class="box"></span><span><div class="check-text">Sin evasión digital</div><div class="check-sub">Sin YouTube, Shorts ni scrolling recreativo usado para escapar.</div></span></label>
+        <label class="check"><input type="checkbox" id="habitFood"><span class="box"></span><span><div class="check-text">Alimentación bajo control</div><div class="check-sub">Comida real, proteína, hidratación y sin comida impulsiva.</div></span></label>
+        <label class="check"><input type="checkbox" id="habitGym"><span class="box"></span><span><div class="check-text">Gimnasio</div><div class="check-sub">Ir y realizar la sesión prevista, aunque sea suave o de recuperación.</div></span></label>
+        <label class="check"><input type="checkbox" id="habitMeditation"><span class="box"></span><span><div class="check-text">Meditación</div><div class="check-sub">10 minutos; mínimo 5 en un día complicado.</div></span></label>
+        <label class="check"><input type="checkbox" id="habitVietnamese"><span class="box"></span><span><div class="check-text">5 expresiones en vietnamita</div><div class="check-sub">Aprender o revisar cinco expresiones útiles cada día.</div></span></label>
+        <div class="clean-streak" id="cleanStreakCard">🔥 Racha limpia registrada: 0 días</div>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><div class="group-name">Ejecución profesional</div><div class="group-score" id="professionalMini">0%</div></div>
+        <div class="prof-stack">
+          <div class="prof-card">
+            <div class="prof-top"><div class="prof-name">Atención a clientes activos</div><div class="prof-target">N/A o 0–100%</div></div>
+            <div class="segmented" id="clientCareButtons"></div>
           </div>
-          <div class="quick"><button type="button" data-add="dmsDone" data-amount="10">+10</button><button type="button" data-add="dmsDone" data-amount="20">+20</button></div>
-          <div class="mini-track"><span id="dmsBar" style="width:0%"></span></div>
-        </div>
 
-        <div class="metric-row">
-          <div class="metric-top"><div class="metric-name">Follow-ups</div><div class="metric-target">Objetivo: todos los que tocan</div></div>
-          <div class="metric-controls">
-            <input class="numinput" type="number" min="0" id="followupsDone" placeholder="Hechos">
-            <div class="slash">/</div>
-            <input class="numinput" type="number" min="0" id="followupsPlanned" placeholder="Total">
+          <div class="prof-card">
+            <div class="prof-top"><div class="prof-name">Bloques de foco · 90 min</div><div class="prof-target">Mínimo 3 · máximo 5</div></div>
+            <div class="blocks" id="focusBlocks"></div>
+            <div class="mini-track"><span id="blocksBar" style="width:0%"></span></div>
           </div>
-          <div class="quick"><button type="button" data-add="followupsDone" data-amount="1">+1 hecho</button><button type="button" data-add="followupsDone" data-amount="5">+5 hechos</button></div>
-          <label class="inline-check"><input type="checkbox" id="noFollowups"> No había follow-ups pendientes hoy</label>
-          <div class="mini-track"><span id="followupsBar" style="width:0%"></span></div>
-        </div>
 
-        <div class="metric-row">
-          <div class="metric-top"><div class="metric-name">Invitaciones a eventos</div><div class="metric-target" id="inviteTargetLabel">Objetivo de hoy: 400</div></div>
-          <div class="metric-controls">
-            <input class="numinput" type="number" min="0" id="invitesDone" placeholder="0">
-            <div class="slash">/</div>
-            <div class="numbox" id="invitesTargetBox">400</div>
+          <div class="prof-card">
+            <div class="prof-top"><div class="prof-name">DMs nuevos</div><div class="prof-target" id="dmTargetLabel">Objetivo: 70</div></div>
+            <div class="metric-controls"><input class="numinput" type="number" min="0" id="dmsDone" placeholder="0"><div class="slash">/</div><div class="numbox" id="dmsTargetBox">70</div></div>
+            <div class="mini-track"><span id="dmsBar" style="width:0%"></span></div>
           </div>
-          <div class="quick"><button type="button" data-add="invitesDone" data-amount="50">+50</button><button type="button" data-add="invitesDone" data-amount="100">+100</button></div>
-          <div class="mini-track"><span id="invitesBar" style="width:0%"></span></div>
+
+          <div class="prof-card">
+            <div class="prof-top"><div class="prof-name">Follow-ups del día</div><div class="prof-target">Binario</div></div>
+            <div class="segmented" id="followupButtons"><button type="button" data-follow="done">✓ Todos hechos</button><button type="button" data-follow="none">Hoy no había</button><button type="button" data-follow="pending">Pendientes</button></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="reading" id="dailyReading">
-    <div class="reading-kicker">Coach del día</div>
-    <div class="reading-title" id="dailyReadingTitle">Empieza por una decisión.</div>
-    <div class="reading-copy" id="dailyReadingCopy">El sistema prioriza lo que más mueve tu mes y evita que un fallo se convierta en abandono.</div>
-    <div class="next-action" id="nextAction"><strong>Siguiente:</strong> define qué significa ganar hoy.</div>
-  </div>
-
-  <div class="section-head" style="margin-top:18px">
-    <div><div class="section-title">Resultados comerciales de hoy</div><div class="section-note">No puntúan. Sirven para saber si la actividad está generando negocio.</div></div>
-  </div>
-
-  <div class="funnel-grid">
-    <div class="funnel-card"><div class="funnel-label">Respuestas</div><input type="number" min="0" id="responses" value="0"></div>
-    <div class="funnel-card"><div class="funnel-label">Respuestas positivas</div><input type="number" min="0" id="positiveResponses" value="0"></div>
-    <div class="funnel-card"><div class="funnel-label">Interés / info</div><input type="number" min="0" id="interest" value="0"></div>
-    <div class="funnel-card"><div class="funnel-label">Conversaciones serias</div><input type="number" min="0" id="seriousConversations" value="0"></div>
-    <div class="funnel-card"><div class="funnel-label">Clientes cerrados hoy</div><input type="number" min="0" id="clientsClosed" value="0"></div>
-    <div class="funnel-card client-name"><div class="funnel-label">Nombre/s cliente/s cerrados · opcional</div><input type="text" id="clientNames" maxlength="240" placeholder="Ej.: Nombre Apellido / Empresa"></div>
-  </div>
-
-  <div class="sos">
-    <div class="sos-top">
-      <div>
-        <h3>¿Apareció el impulso de fumar, consumir, abrir YouTube o escapar?</h3>
-        <p>Este protocolo entrena el espacio entre impulso y conducta. No suma ni resta al score.</p>
-      </div>
-      <button class="btn small" id="toggleSOS" type="button">Abrir SOS</button>
+    <div class="section-head" style="margin-top:18px"><div><div class="section-title">LinkedIn · esta semana</div><div class="section-note">Objetivos semanales: 1.000 invitaciones · 100 contactos nuevos · 100 eliminados.</div></div></div>
+    <div class="weekly-grid">
+      <div class="weekly-card"><div class="stat-label">Invitaciones a eventos</div><div class="weekly-value" id="weekInvites">0/1.000</div><div class="weekly-input"><input type="number" min="0" id="invitesToday" placeholder="Hechas hoy"><button class="btn small" type="button" data-add-week="invitesToday" data-amount="100">+100</button></div><div class="mini-track"><span id="weekInvitesBar"></span></div></div>
+      <div class="weekly-card"><div class="stat-label">Nuevos contactos</div><div class="weekly-value" id="weekConnections">0/100</div><div class="weekly-input"><input type="number" min="0" id="connectionsToday" placeholder="Añadidos hoy"><button class="btn small" type="button" data-add-week="connectionsToday" data-amount="20">+20</button></div><div class="mini-track"><span id="weekConnectionsBar"></span></div></div>
+      <div class="weekly-card"><div class="stat-label">Contactos eliminados</div><div class="weekly-value" id="weekRemoved">0/100</div><div class="weekly-input"><input type="number" min="0" id="removedToday" placeholder="Eliminados hoy"><button class="btn small" type="button" data-add-week="removedToday" data-amount="20">+20</button></div><div class="mini-track"><span id="weekRemovedBar"></span></div></div>
     </div>
-    <div class="sos-panel" id="sosPanel">
-      <div class="sos-steps">
-        <div class="sos-step"><strong>1 · NO DECIDAS AHORA</strong><div>Pospón 10 minutos. No respondas al impulso en su minuto más fuerte.</div></div>
-        <div class="sos-step"><strong>2 · CAMBIA EL CUERPO</strong><div>Camina, bebe agua o haz 20 sentadillas. Sal del contexto automático.</div></div>
-        <div class="sos-step"><strong>3 · OBSERVA</strong><div>“Esto es un impulso, no una orden.” Después vuelves a elegir.</div></div>
-      </div>
-      <div class="timer" id="timer">10:00</div>
-      <div class="sos-actions">
-        <button class="btn primary" id="startTimer" type="button">Empezar 10 min</button>
-        <button class="btn success" id="urgeBeaten" type="button">✓ Lo atravesé sin obedecer</button>
-        <button class="btn" id="resetTimer" type="button">Reiniciar</button>
-      </div>
+
+    <div class="reading"><div class="reading-kicker">Coach del día</div><div class="reading-title" id="dailyCoachTitle"></div><div class="reading-copy" id="dailyCoachCopy"></div><div class="next-action" id="nextAction"></div><div class="dont-action" id="dontAction"></div></div>
+
+    <div class="section-head" style="margin-top:18px"><div><div class="section-title">Ventas cerradas hoy</div><div class="section-note">La venta se registra una vez y alimenta automáticamente NEGOCIO y PROGRESO.</div></div></div>
+    <div class="sales-form"><select id="saleProduct"><option value="vertical">Vertical Partner · 1.490 €</option><option value="impulso">Impulso B2B · 390 €</option></select><input class="saleclient" id="saleClient" maxlength="180" placeholder="Cliente / empresa"><button class="btn primary" id="addSaleBtn" type="button">+ Añadir venta</button></div>
+    <div class="client-list" id="todaySales"></div>
+
+    <div class="sos">
+      <div class="sos-top"><div><h3 id="sosTitle">SOS del día</h3><p id="sosIntro"></p></div><button class="btn small" id="toggleSOS" type="button">Abrir SOS</button></div>
+      <div class="sos-panel" id="sosPanel"><div class="sos-steps" id="sosSteps"></div><div class="timer" id="timer">10:00</div><div class="sos-actions"><button class="btn primary" id="startTimer" type="button">Empezar 10 min</button><button class="btn success" id="urgeBeaten" type="button">✓ Lo atravesé sin obedecer</button><button class="btn" id="resetTimer" type="button">Reiniciar</button></div></div>
     </div>
-  </div>
 
-  <div class="field-label">Victoria del día <span class="section-note">· una frase basta</span></div>
-  <textarea id="victory" maxlength="500" placeholder="Ej.: Hice los follow-ups difíciles antes de abrir trabajo nuevo."></textarea>
+    <div class="field-label">Victoria del día <span class="section-note">· una frase basta</span></div><textarea id="victory" maxlength="500" placeholder="Qué hiciste hoy que merece quedar registrado."></textarea>
+    <div class="field-label">Trigger principal <span class="section-note">· opcional</span></div>
+    <div class="chips"><button class="chip" type="button" data-trigger="Craving">Craving</button><button class="chip" type="button" data-trigger="Aburrimiento">Aburrimiento</button><button class="chip" type="button" data-trigger="Conflicto">Conflicto</button><button class="chip" type="button" data-trigger="Cansancio">Cansancio</button><button class="chip" type="button" data-trigger="Evasión">Evasión</button><button class="chip" type="button" data-trigger="Ansiedad">Ansiedad</button><button class="chip" type="button" data-trigger="Después de comer">Después de comer</button><button class="chip" type="button" data-trigger="Otro">Otro</button></div>
+    <div class="win-grid"><div class="text-card"><div class="text-label">Energía · 1 a 5</div><div class="rating" id="energyRating"></div></div><div class="text-card"><div class="text-label">Foco · 1 a 5</div><div class="rating" id="focusRating"></div></div></div>
+    <div class="field-label">Nota breve <span class="section-note">· solo si merece recordarse</span></div><textarea id="notes" maxlength="700" placeholder="Qué funcionó, qué no, qué cambiar mañana."></textarea>
 
-  <div class="field-label">¿Qué apareció cuando fallaste o casi fallaste? <span class="section-note">· opcional</span></div>
-  <div class="chips">
-    <button class="chip" type="button" data-trigger="Craving">Craving</button>
-    <button class="chip" type="button" data-trigger="Aburrimiento">Aburrimiento</button>
-    <button class="chip" type="button" data-trigger="Conflicto">Conflicto</button>
-    <button class="chip" type="button" data-trigger="Cansancio">Cansancio</button>
-    <button class="chip" type="button" data-trigger="Evasión">Evasión</button>
-    <button class="chip" type="button" data-trigger="Ansiedad">Ansiedad</button>
-    <button class="chip" type="button" data-trigger="Después de comer">Después de comer</button>
-    <button class="chip" type="button" data-trigger="Otro">Otro</button>
-  </div>
+    <div class="close-card"><div class="section-title">Cerrar día</div><div class="section-note">Cerrar separa “no registrado” de “no cumplido” y hace fiables las estadísticas.</div><div class="close-summary"><div class="close-kpi"><span class="k">Personal</span><span class="v" id="closePersonal">0%</span></div><div class="close-kpi"><span class="k">Profesional</span><span class="v" id="closeProfessional">0%</span></div><div class="close-kpi"><span class="k">Top 3</span><span class="v" id="closeTop3">0/3</span></div><div class="close-kpi"><span class="k">Clientes</span><span class="v" id="closeCare">N/A</span></div><div class="close-kpi"><span class="k">Base</span><span class="v" id="closeBase">—</span></div></div><button class="btn success" id="closeDayBtn" type="button">Cerrar día</button></div>
+  </section>
+</div>
 
-  <div class="win-grid">
-    <div class="text-card">
-      <div class="text-label">Energía · 1 a 5</div>
-      <div class="rating">
-        <button type="button" data-rate="energy" data-value="1">1</button><button type="button" data-rate="energy" data-value="2">2</button>
-        <button type="button" data-rate="energy" data-value="3">3</button><button type="button" data-rate="energy" data-value="4">4</button>
-        <button type="button" data-rate="energy" data-value="5">5</button>
-      </div>
-    </div>
-    <div class="text-card">
-      <div class="text-label">Foco · 1 a 5</div>
-      <div class="rating">
-        <button type="button" data-rate="focus" data-value="1">1</button><button type="button" data-rate="focus" data-value="2">2</button>
-        <button type="button" data-rate="focus" data-value="3">3</button><button type="button" data-rate="focus" data-value="4">4</button>
-        <button type="button" data-rate="focus" data-value="5">5</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="field-label">Nota breve <span class="section-note">· solo si merece recordarse</span></div>
-  <textarea id="notes" maxlength="700" placeholder="Qué funcionó, qué no, qué cambiar mañana."></textarea>
-</section>
+<div class="tab-pane" id="tab-plan">
+  <section class="section">
+    <div class="section-head"><div><div class="section-title">Planificador</div><div class="section-note">Una tarea se crea una sola vez. Después se mueve, prioriza o sube al Top 3.</div></div></div>
+    <div class="form-grid"><input class="taskwide" id="taskTitle" maxlength="180" placeholder="Nueva tarea"><input type="date" id="taskDate"><select id="taskPriority"><option value="P1">P1</option><option value="P2" selected>P2</option><option value="P3">P3</option></select><button class="btn primary" id="addTaskBtn" type="button">+ Añadir</button></div>
+    <div class="bucket-title"><strong>🔴 Atrasadas</strong><span id="overdueCount">0</span></div><div class="task-list" id="tasksOverdue"></div>
+    <div class="bucket-title"><strong>🟠 Hoy</strong><span id="todayTaskCount">0</span></div><div class="task-list" id="tasksToday"></div>
+    <div class="bucket-title"><strong>Próximos 7 días</strong><span id="next7Count">0</span></div><div class="task-list" id="tasksNext7"></div>
+    <div class="bucket-title"><strong>Más adelante</strong><span id="laterCount">0</span></div><div class="task-list" id="tasksLater"></div>
+    <div class="bucket-title"><strong>Completadas</strong><span id="doneCount">0</span></div><div class="task-list" id="tasksDone"></div>
+  </section>
 </div>
 
 <div class="tab-pane" id="tab-business">
-<section class="section">
-  <div class="section-head">
-    <div><div class="section-title">North Star de septiembre</div><div class="section-note">Objetivos fijos: 5 clientes · 390 € · 70 DMs/día laboral · 1.000 invitaciones/semana.</div></div>
-  </div>
-  <div class="kpi-grid">
-    <div class="stat"><div class="stat-label">Clientes Impulso</div><div class="stat-value"><span id="bizClients">0</span>/5</div><div class="stat-sub" id="bizClientsRemaining">5 restantes</div></div>
-    <div class="stat"><div class="stat-label">Ingresos cerrados</div><div class="stat-value" id="bizRevenue">0 €</div><div class="stat-sub">Objetivo 1.950 €</div></div>
-    <div class="stat"><div class="stat-label">DMs nuevos</div><div class="stat-value" id="bizDms">0</div><div class="stat-sub" id="bizDmsSub">Objetivo acumulado</div></div>
-    <div class="stat"><div class="stat-label">Invitaciones mes</div><div class="stat-value" id="bizInvitesMonth">0/5.000</div><div class="stat-sub">5 semanas de septiembre</div></div>
-    <div class="stat"><div class="stat-label">Invitaciones semana</div><div class="stat-value" id="bizInvitesWeek">0/1.000</div><div class="stat-sub" id="bizInviteWeekLabel">Semana actual</div></div>
-    <div class="stat"><div class="stat-label">Follow-ups</div><div class="stat-value" id="bizFollowups">—</div><div class="stat-sub">Cumplimiento acumulado</div></div>
-    <div class="stat"><div class="stat-label">Conversaciones serias</div><div class="stat-value" id="bizSerious">0</div><div class="stat-sub">Acumuladas</div></div>
-    <div class="stat"><div class="stat-label">Ejecución profesional</div><div class="stat-value" id="bizExecution">0%</div><div class="stat-sub">Actividad controlable</div></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-head"><div><div class="section-title">Funnel comercial</div><div class="section-note">DM → respuesta → positiva → interés → conversación seria → pago.</div></div></div>
-  <div class="kpi-grid">
-    <div class="stat"><div class="stat-label">DMs</div><div class="stat-value" id="funnelDms">0</div></div>
-    <div class="stat"><div class="stat-label">Respuestas</div><div class="stat-value" id="funnelResponses">0</div></div>
-    <div class="stat"><div class="stat-label">Resp. positivas</div><div class="stat-value" id="funnelPositive">0</div></div>
-    <div class="stat"><div class="stat-label">Interés / info</div><div class="stat-value" id="funnelInterest">0</div></div>
-    <div class="stat"><div class="stat-label">Conv. serias</div><div class="stat-value" id="funnelSerious">0</div></div>
-    <div class="stat"><div class="stat-label">Clientes</div><div class="stat-value" id="funnelClients">0</div></div>
-    <div class="stat"><div class="stat-label">Invitaciones</div><div class="stat-value" id="funnelInvites">0</div></div>
-    <div class="stat"><div class="stat-label">Follow-ups hechos</div><div class="stat-value" id="funnelFollowups">0</div></div>
-  </div>
-  <div class="rates">
-    <div class="rate-card"><div class="rlabel">DM → respuesta</div><div class="rvalue" id="rateDmResponse">—</div></div>
-    <div class="rate-card"><div class="rlabel">Respuesta → positiva</div><div class="rvalue" id="rateResponsePositive">—</div></div>
-    <div class="rate-card"><div class="rlabel">Positiva → interés</div><div class="rvalue" id="ratePositiveInterest">—</div></div>
-    <div class="rate-card"><div class="rlabel">Interés → seria</div><div class="rvalue" id="rateInterestSerious">—</div></div>
-    <div class="rate-card"><div class="rlabel">Seria → cliente</div><div class="rvalue" id="rateSeriousClient">—</div></div>
-  </div>
-  <div class="checkpoint">
-    <div class="checkpoint-title" id="checkpointTitle">Checkpoint comercial</div>
-    <div class="checkpoint-copy" id="checkpointCopy">Aún no hay suficiente actividad para una lectura útil.</div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-head"><div><div class="section-title">1.000 invitaciones por semana</div><div class="section-note">Distribución automática: 400 + 300 + 300 en los tres primeros laborables disponibles.</div></div></div>
-  <div class="weeks" id="businessWeeks"></div>
-</section>
-
-<section class="section">
-  <div class="section-head"><div><div class="section-title">Clientes cerrados</div><div class="section-note">Se construye automáticamente con los nombres que registres en HOY.</div></div></div>
-  <div class="client-list" id="clientList"></div>
-</section>
+  <section class="section"><div class="section-head"><div><div class="section-title" id="businessNorthTitle">Negocio · Septiembre</div><div class="section-note" id="businessNorthNote"></div></div></div><div class="kpi-grid" id="businessNorthKpis"></div></section>
+  <section class="section"><div class="section-head"><div><div class="section-title">Ejecución</div><div class="section-note">Actividad controlable. Ventas y facturación se muestran por separado.</div></div></div><div class="kpi-grid" id="businessExecutionKpis"></div></section>
+  <section class="section" id="weeksSection"><div class="section-head"><div><div class="section-title">Semanas</div><div class="section-note">LinkedIn se evalúa semanalmente, no como castigo diario.</div></div></div><div class="weeks" id="businessWeeks"></div></section>
+  <section class="section"><div class="section-head"><div><div class="section-title">Ventas cerradas</div><div class="section-note">Histórico automático por fecha, producto e importe.</div></div></div><div class="client-list" id="salesList"></div></section>
 </div>
 
 <div class="tab-pane" id="tab-progress">
-<section class="section">
-  <div class="section-head">
-    <div><div class="section-title">Lectura 360 acumulada</div><div class="section-note" id="analysisScope">Se actualizará desde el primer día registrado.</div></div>
-  </div>
-  <div class="summary-grid">
-    <div class="summary-box">
-      <h3>Personal</h3>
-      <div class="rowstat"><span>Día limpio</span><span id="progressClean">0%</span></div>
-      <div class="rowstat"><span>Control digital</span><span id="progressDigital">0%</span></div>
-      <div class="rowstat"><span>Alimentación</span><span id="progressFood">0%</span></div>
-      <div class="rowstat"><span>Movimiento</span><span id="progressMovement">0%</span></div>
-      <div class="rowstat"><span>Meditación</span><span id="progressMeditation">0%</span></div>
-    </div>
-    <div class="summary-box">
-      <h3>Patrones</h3>
-      <div class="rowstat"><span>Mejor hábito</span><span id="bestHabit">—</span></div>
-      <div class="rowstat"><span>Principal fuga</span><span id="worstHabit">—</span></div>
-      <div class="rowstat"><span>Recuperación tras fallo</span><span id="recoveryRate">—</span></div>
-      <div class="rowstat"><span>Racha limpia máxima</span><span id="longestCleanStreak">0 días</span></div>
-      <div class="rowstat"><span>Trigger principal</span><span id="mainTrigger">—</span></div>
-      <div class="rowstat"><span>Impulsos superados</span><span id="progressUrges">0</span></div>
-    </div>
-  </div>
-
-  <div class="month-reading">
-    <h3 id="monthReadingTitle">Todavía no hay patrón que interpretar.</h3>
-    <p id="monthReadingCopy">Registra el primer día. Esta lectura distinguirá conducta, ejecución comercial, tendencia y fugas.</p>
-  </div>
-
-  <div class="trend-title"><strong>Día 360 · últimos 7 días analizados</strong><span id="trendLabel">Sin datos</span></div>
-  <div class="trend" id="trendChart"></div>
-</section>
-
-<section class="section">
-  <div class="section-head"><div><div class="section-title">Mapa de consistencia personal</div><div class="section-note">Verde = cumplido; rojo suave = no cumplido; gris = sin analizar.</div></div></div>
-  <div class="heatmap-wrap"><div class="heatmap" id="heatmap"></div></div>
-</section>
-
-<section class="section">
-  <div class="section-head"><div><div class="section-title">Energía, foco y consistencia</div><div class="section-note">Datos subjetivos 1–5 para conocerte mejor, no para sacar conclusiones médicas.</div></div></div>
-  <div class="kpi-grid">
-    <div class="stat"><div class="stat-label">Energía media</div><div class="stat-value" id="avgEnergy">—</div></div>
-    <div class="stat"><div class="stat-label">Foco medio</div><div class="stat-value" id="avgFocus">—</div></div>
-    <div class="stat"><div class="stat-label">Días personales 100%</div><div class="stat-value" id="personal100Days">0</div></div>
-    <div class="stat"><div class="stat-label">Días 360 al 100%</div><div class="stat-value" id="days360Perfect">0</div></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-head"><div><div class="section-title">Datos</div><div class="section-note">Guardado automático en este navegador.</div></div></div>
-  <div class="toolbar">
-    <button class="btn primary" id="exportCsv" type="button">Exportar CSV</button>
-    <button class="btn danger" id="resetBtn" type="button">Borrar todos los datos</button>
-  </div>
-  <div class="system-status" id="systemStatus">✓ Sistema cargado. Navegación, guardado, SOS y cálculos activos.</div>
-  <p class="footer">Si limpias los datos del navegador o cambias de dispositivo, el histórico local no viaja contigo. Exporta CSV cuando quieras conservar una copia externa.</p>
-</section>
+  <section class="section"><div class="section-head"><div><div class="section-title">Lectura 360</div><div class="section-note" id="progressScope"></div></div></div><div class="summary-grid"><div class="summary-box"><h3>Personal</h3><div id="personalRows"></div></div><div class="summary-box"><h3>Profesional</h3><div id="professionalRows"></div></div></div><div class="month-reading"><h3 id="progressReadingTitle"></h3><p id="progressReadingCopy"></p></div><div class="trend-title"><strong>Día 360 · últimos 7 días cerrados</strong><span id="trendLabel"></span></div><div class="trend" id="trendChart"></div></section>
+  <section class="section" id="heatmapSection"><div class="section-head"><div><div class="section-title">Mapa de consistencia</div><div class="section-note">Solo los días cerrados cuentan como sí/no.</div></div></div><div class="heatmap-wrap"><div class="heatmap" id="heatmap"></div></div></section>
+  <section class="section"><div class="section-head"><div><div class="section-title">Clientes activos · últimos 7 días cerrados</div><div class="section-note">N/A queda fuera del promedio.</div></div></div><div class="care-trend" id="careTrend"></div></section>
+  <section class="section"><div class="section-head"><div><div class="section-title">Productividad y resultados</div><div class="section-note">Foco, tareas, ventas y patrones sin mezclar ejecución con resultado.</div></div></div><div class="kpi-grid" id="progressKpis"></div></section>
+  <section class="section"><div class="section-head"><div><div class="section-title">Datos</div><div class="section-note">Guardado automático en este navegador.</div></div></div><div class="toolbar"><button class="btn primary" id="exportCsv" type="button">Exportar CSV</button><button class="btn danger" id="resetBtn" type="button">Borrar todos los datos</button></div><div class="system-status" id="systemStatus">✓ Sistema cargado.</div><p class="footer">La nueva versión conserva el almacenamiento anterior de septiembre y migra lo compatible sin borrar la copia vieja.</p></section>
 </div>
-
 </main>
 <div class="toast" id="toast">Guardado</div>
 
@@ -702,958 +203,180 @@ textarea:focus{border-color:#4d6282}
 (function(){
 "use strict";
 
-var YEAR=2026, MONTH=8, DAYS=30;
-var STORAGE_KEY="septiembre360_2026_v1";
-var CLIENT_GOAL=5, TICKET=390, DM_TARGET=70, WEEKLY_INVITES=1000;
-
+var STORAGE_KEY="panel360_sep_dic_2026_v1";
+var OLD_STORAGE_KEY="septiembre360_2026_v1";
+var YEAR=2026, DM_TARGET=70, WEEK_INVITES=1000, WEEK_CONNECTIONS=100, WEEK_REMOVED=100;
+var MONTHS=[
+  {key:"09",num:8,name:"Septiembre",short:"SEP",days:30},
+  {key:"10",num:9,name:"Octubre",short:"OCT",days:31},
+  {key:"11",num:10,name:"Noviembre",short:"NOV",days:30},
+  {key:"12",num:11,name:"Diciembre",short:"DIC",days:31}
+];
+var PRODUCTS={vertical:{name:"Vertical Partner",amount:1490},impulso:{name:"Impulso B2B",amount:390},legacy:{name:"Cierre anterior sin clasificar",amount:0}};
 var PERSONAL=[
-  {id:"clean",label:"Día limpio"},
-  {id:"digital",label:"Sin evasión digital"},
-  {id:"food",label:"Alimentación bajo control"},
-  {id:"movement",label:"Movimiento"},
-  {id:"meditation",label:"Meditación"}
+  {id:"clean",label:"Día limpio"},{id:"digital",label:"Sin evasión digital"},{id:"food",label:"Alimentación"},
+  {id:"gym",label:"Gimnasio"},{id:"meditation",label:"Meditación"},{id:"vietnamese",label:"5 expresiones vietnamitas"}
 ];
-
-var MANTRAS=[
-  "La siguiente decisión siempre cuenta.",
-  "Primero lo importante. Después lo fácil.",
-  "La incomodidad no es una emergencia.",
-  "No necesitas otro comienzo. Necesitas continuidad.",
-  "No confundas actividad con avance.",
-  "Haz primero la conversación que estás evitando.",
-  "Menos estimulación. Más presencia.",
-  "Un mal momento no tiene derecho a quedarse con todo el día.",
-  "La estabilidad gana a la intensidad.",
-  "Tu trabajo no es sentirte preparado; es empezar.",
-  "El autocontrol se practica cuando sí tienes ganas de escapar.",
-  "No añadas más. Cumple mejor.",
-  "Terminar es una habilidad.",
-  "La motivación es bienvenida; la estructura es obligatoria.",
-  "No persigas un estado. Entrena una respuesta.",
-  "Tu futuro depende más de lo que repites que de lo que prometes.",
-  "La tarea incómoda suele estar más cerca del resultado.",
-  "No negocies con el impulso en su minuto más fuerte.",
-  "El día difícil también cuenta para construir identidad.",
-  "No te evalúes por intención. Mira lo que quedó hecho.",
-  "Haz que el día bueno sea repetible.",
-  "Cero dramatización del fallo. Corrección inmediata.",
-  "El cuerpo que quieres se construye en sesiones normales, no heroicas.",
-  "No cambies de vida hoy. Cumple hoy.",
-  "Lo que repites te está entrenando.",
-  "Protege energía para decidir bien.",
-  "Puedes sentir ansiedad sin convertirla en conducta.",
-  "No necesitas más contactos si estás evitando conversaciones abiertas.",
-  "El seguimiento convierte actividad en negocio.",
-  "Llegar al día 30 vale más que impresionar al día 3."
-];
-
 var weekdayNames=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
-
-function byId(id){ return document.getElementById(id); }
-function qsa(sel){ return Array.prototype.slice.call(document.querySelectorAll(sel)); }
-function clamp(n,min,max){ return Math.min(max,Math.max(min,n)); }
-function pct(n,d){ return d ? Math.round((n/d)*100) : 0; }
-function money(n){ return new Intl.NumberFormat("es-ES",{maximumFractionDigits:0}).format(n)+" €"; }
-function num(v){ var n=Number(v); return isFinite(n) && n>=0 ? n : 0; }
-
-var state;
-var selectedDay;
-var saveTimer=null;
-var timerInterval=null;
-var timerRemaining=600;
-
-function blankDay(){
-  return {
-    habits:{clean:false,digital:false,food:false,movement:false,meditation:false},
-    winToday:"",hardThing:"",
-    moneyBlock:false,dmsDone:0,followupsDone:0,followupsPlanned:0,noFollowups:false,invitesDone:0,
-    responses:0,positiveResponses:0,interest:0,seriousConversations:0,clientsClosed:0,clientNames:"",
-    victory:"",triggers:[],energy:0,focus:0,notes:"",urgesBeaten:0,updatedAt:null
-  };
-}
-
-function defaultState(){
-  var days={};
-  for(var d=1;d<=DAYS;d++) days[d]=blankDay();
-  return {version:5,year:YEAR,month:9,days:days,createdAt:new Date().toISOString()};
-}
-
-function migrateDay(incoming){
-  incoming=incoming||{};
-  var old=incoming.habits||{};
-  var b=blankDay();
-
-  b.habits.clean = !!(old.clean !== undefined ? old.clean : old.substances);
-  b.habits.digital = !!old.digital;
-  if(old.food !== undefined){
-    b.habits.food=!!old.food;
-  }else{
-    b.habits.food=!!(old.nutrition && old.stimulants && old.sweets);
-  }
-  b.habits.movement=!!old.movement;
-  b.habits.meditation=!!old.meditation;
-
-  b.winToday=incoming.winToday||"";
-  b.hardThing=incoming.hardThing||"";
-  b.moneyBlock=!!(incoming.moneyBlock !== undefined ? incoming.moneyBlock : old.money);
-  b.dmsDone=num(incoming.dmsDone);
-  b.followupsDone=num(incoming.followupsDone);
-  b.followupsPlanned=num(incoming.followupsPlanned);
-  b.noFollowups=!!incoming.noFollowups;
-  b.invitesDone=num(incoming.invitesDone);
-  b.responses=num(incoming.responses);
-  b.positiveResponses=num(incoming.positiveResponses);
-  b.interest=num(incoming.interest);
-  b.seriousConversations=num(incoming.seriousConversations);
-  b.clientsClosed=num(incoming.clientsClosed);
-  b.clientNames=incoming.clientNames||"";
-  b.victory=incoming.victory||"";
-  b.triggers=Array.isArray(incoming.triggers)?incoming.triggers:[];
-  b.energy=num(incoming.energy);
-  b.focus=num(incoming.focus);
-  b.notes=incoming.notes||"";
-  b.urgesBeaten=num(incoming.urgesBeaten);
-  b.updatedAt=incoming.updatedAt||null;
-  return b;
-}
-
-function normalizeState(input){
-  var base=defaultState();
-  if(!input || typeof input!=="object") return base;
-  for(var d=1;d<=DAYS;d++){
-    var incoming=(input.days && (input.days[d] || input.days[String(d)])) || {};
-    base.days[d]=migrateDay(incoming);
-  }
-  if(input.createdAt) base.createdAt=input.createdAt;
-  return base;
-}
-
-function loadState(){
-  try{
-    var raw=localStorage.getItem(STORAGE_KEY);
-    return raw ? normalizeState(JSON.parse(raw)) : defaultState();
-  }catch(e){
-    return defaultState();
-  }
-}
-
-function persist(){
-  try{
-    localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
-    byId("saveText").textContent="Guardado";
-    clearTimeout(saveTimer);
-    saveTimer=setTimeout(function(){byId("saveText").textContent="Sistema activo";},800);
-  }catch(e){
-    byId("saveText").textContent="Activo · sin guardado local";
-  }
-}
-
-function touch(day){ state.days[day].updatedAt=new Date().toISOString(); }
-
-function toast(msg){
-  var el=byId("toast");
-  el.textContent=msg;el.classList.add("show");
-  clearTimeout(el._t);
-  el._t=setTimeout(function(){el.classList.remove("show");},1500);
-}
-
-function pickInitialDay(){
-  var now=new Date();
-  if(now.getFullYear()===YEAR && now.getMonth()===MONTH) return clamp(now.getDate(),1,DAYS);
-  if(now < new Date(YEAR,MONTH,1)) return 1;
-  return DAYS;
-}
-
-function isWeekend(day){
-  var dow=new Date(YEAR,MONTH,day).getDay();
-  return dow===0 || dow===6;
-}
-function isWorkday(day){ return !isWeekend(day); }
-
-function isFutureDay(day){
-  var now=new Date();
-  var endToday=new Date(now.getFullYear(),now.getMonth(),now.getDate(),23,59,59,999);
-  return new Date(YEAR,MONTH,day)>endToday;
-}
-
-function hasDayData(day){
-  var r=state.days[day];
-  return PERSONAL.some(function(h){return !!r.habits[h.id];}) ||
-    r.moneyBlock || r.dmsDone>0 || r.followupsDone>0 || r.followupsPlanned>0 || r.noFollowups ||
-    r.invitesDone>0 || r.responses>0 || r.positiveResponses>0 || r.interest>0 ||
-    r.seriousConversations>0 || r.clientsClosed>0 || !!r.clientNames.trim() ||
-    !!r.winToday.trim() || !!r.hardThing.trim() || !!r.victory.trim() || !!r.notes.trim() ||
-    r.triggers.length>0 || r.energy>0 || r.focus>0 || r.urgesBeaten>0;
-}
-
-function lastDayWithData(){
-  for(var d=DAYS;d>=1;d--) if(hasDayData(d)) return d;
-  return 0;
-}
-
-function completedCalendarDays(){
-  var now=new Date();
-  var start=new Date(YEAR,MONTH,1);
-  var end=new Date(YEAR,MONTH,DAYS,23,59,59,999);
-  if(now<start) return 0;
-  if(now>end) return DAYS;
-  return Math.max(0,now.getDate()-1);
-}
-
-function analysisThrough(){ return Math.max(completedCalendarDays(),lastDayWithData()); }
-
-function personalChecks(day){
-  var r=state.days[day],n=0;
-  PERSONAL.forEach(function(h){if(r.habits[h.id]) n++;});
-  return n;
-}
-function personalScore(day){ return pct(personalChecks(day),5); }
-
-function weekOfDay(day){
-  if(day<=6) return 1;
-  if(day<=13) return 2;
-  if(day<=20) return 3;
-  if(day<=27) return 4;
-  return 5;
-}
-function weekRange(w){
-  if(w===1)return{start:1,end:6,label:"1–6 sep"};
-  if(w===2)return{start:7,end:13,label:"7–13 sep"};
-  if(w===3)return{start:14,end:20,label:"14–20 sep"};
-  if(w===4)return{start:21,end:27,label:"21–27 sep"};
-  return{start:28,end:30,label:"28–30 sep"};
-}
-function workdaysInWeek(w){
-  var r=weekRange(w),arr=[];
-  for(var d=r.start;d<=r.end;d++) if(isWorkday(d)) arr.push(d);
-  return arr;
-}
-function dmTargetFor(day){ return isWorkday(day)?DM_TARGET:0; }
-function inviteTargetFor(day){
-  if(!isWorkday(day)) return 0;
-  var arr=workdaysInWeek(weekOfDay(day));
-  var index=arr.indexOf(day);
-  if(index===0) return 400;
-  if(index===1) return 300;
-  if(index===2) return 300;
-  return 0;
-}
-
-function followupScore(day){
-  var r=state.days[day];
-  if(r.noFollowups) return 100;
-  if(r.followupsPlanned<=0) return 0;
-  return clamp(pct(r.followupsDone,r.followupsPlanned),0,100);
-}
-
-function professionalScore(day){
-  if(!isWorkday(day)) return null;
-  var r=state.days[day],arr=[];
-  arr.push(r.moneyBlock?100:0);
-  arr.push(clamp(pct(r.dmsDone,DM_TARGET),0,100));
-  arr.push(followupScore(day));
-  var invT=inviteTargetFor(day);
-  if(invT>0) arr.push(clamp(pct(r.invitesDone,invT),0,100));
-  var total=arr.reduce(function(a,b){return a+b;},0);
-  return Math.round(total/arr.length);
-}
-
-function day360Score(day){
-  var p=personalScore(day),pro=professionalScore(day);
-  return pro===null?p:Math.round((p+pro)/2);
-}
-
-function currentCleanStreak(){
-  var through=analysisThrough();
-  if(!through) return 0;
-  var n=0;
-  for(var d=through;d>=1;d--){
-    if(state.days[d].habits.clean)n++;else break;
-  }
-  return n;
-}
-function longestCleanStreak(){
-  var through=analysisThrough(),best=0,cur=0;
-  for(var d=1;d<=through;d++){
-    if(state.days[d].habits.clean){cur++;best=Math.max(best,cur);}else cur=0;
-  }
-  return best;
-}
-function habitRate(id){
-  var through=analysisThrough();
-  if(!through)return 0;
-  var n=0;
-  for(var d=1;d<=through;d++)if(state.days[d].habits[id])n++;
-  return pct(n,through);
-}
-function recoveryRate(){
-  var through=analysisThrough();
-  if(through<2)return null;
-  var opp=0,rec=0;
-  PERSONAL.forEach(function(h){
-    for(var d=1;d<through;d++){
-      if(!state.days[d].habits[h.id]){
-        opp++;
-        if(state.days[d+1].habits[h.id])rec++;
-      }
-    }
-  });
-  return opp?pct(rec,opp):100;
-}
-function triggerSummary(){
-  var through=analysisThrough(),counts={};
-  for(var d=1;d<=through;d++){
-    state.days[d].triggers.forEach(function(t){counts[t]=(counts[t]||0)+1;});
-  }
-  var entries=Object.keys(counts).map(function(k){return[k,counts[k]];});
-  entries.sort(function(a,b){return b[1]-a[1];});
-  return entries.length?entries[0]:null;
-}
-
-function totals(){
-  var through=analysisThrough();
-  var t={
-    dms:0,followupsDone:0,followupsPlanned:0,noFollowupDays:0,invites:0,
-    responses:0,positive:0,interest:0,serious:0,clients:0,moneyDays:0,urges:0,
-    workdays:0,personal100:0,day360perfect:0
-  };
-  for(var d=1;d<=through;d++){
-    var r=state.days[d];
-    t.dms+=r.dmsDone;t.followupsDone+=r.followupsDone;t.followupsPlanned+=r.followupsPlanned;
-    if(r.noFollowups)t.noFollowupDays++;
-    t.invites+=r.invitesDone;t.responses+=r.responses;t.positive+=r.positiveResponses;
-    t.interest+=r.interest;t.serious+=r.seriousConversations;t.clients+=r.clientsClosed;t.urges+=r.urgesBeaten;
-    if(personalScore(d)===100)t.personal100++;
-    if(day360Score(d)===100)t.day360perfect++;
-    if(isWorkday(d)){t.workdays++;if(r.moneyBlock)t.moneyDays++;}
-  }
-  return t;
-}
-
-function cumulativePersonal(){
-  var through=analysisThrough();
-  if(!through)return 0;
-  var sum=0;
-  for(var d=1;d<=through;d++)sum+=personalScore(d);
-  return Math.round(sum/through);
-}
-function cumulativeProfessional(){
-  var through=analysisThrough(),arr=[];
-  for(var d=1;d<=through;d++){
-    var s=professionalScore(d);
-    if(s!==null)arr.push(s);
-  }
-  if(!arr.length)return 0;
-  return Math.round(arr.reduce(function(a,b){return a+b;},0)/arr.length);
-}
-function invitesInWeek(w){
-  var r=weekRange(w),n=0;
-  for(var d=r.start;d<=r.end;d++)n+=state.days[d].invitesDone;
-  return n;
-}
-function workdaysThrough(through){
-  var n=0;
-  for(var d=1;d<=through;d++)if(isWorkday(d))n++;
-  return n;
-}
-function avgRating(key){
-  var through=analysisThrough(),arr=[];
-  for(var d=1;d<=through;d++)if(state.days[d][key]>0)arr.push(state.days[d][key]);
-  if(!arr.length)return null;
-  return (arr.reduce(function(a,b){return a+b;},0)/arr.length).toFixed(1);
-}
-
-function renderAll(){
-  renderMantra();
-  renderHero();
-  renderCalendar();
-  renderSelectedDay();
-  renderBusiness();
-  renderProgress();
-}
-
-function renderMantra(){ byId("dailyMantra").textContent=MANTRAS[(selectedDay-1)%MANTRAS.length]; }
-
-function renderHero(){
-  var t=totals(),pp=cumulativePersonal(),revenue=t.clients*TICKET;
-  byId("heroPersonalPct").textContent=pp+"%";
-  byId("heroPersonalBar").style.width=pp+"%";
-  byId("heroPersonalDays").textContent=analysisThrough()+" días analizados";
-  byId("heroCleanStreak").textContent=currentCleanStreak()+" días limpios seguidos";
-  byId("heroClients").textContent=t.clients;
-  byId("heroRevenue").textContent=money(revenue)+" cerrados";
-  byId("heroRevenueRemaining").textContent=money(Math.max(0,CLIENT_GOAL*TICKET-revenue))+" por cerrar";
-  byId("heroBusinessBar").style.width=clamp(pct(t.clients,CLIENT_GOAL),0,100)+"%";
-}
-
-function renderCalendar(){
-  var cal=byId("calendar");
-  cal.innerHTML="";
-  var first=new Date(YEAR,MONTH,1).getDay();
-  var offset=(first+6)%7;
-
-  for(var i=0;i<offset;i++){
-    var blank=document.createElement("div");
-    blank.className="day empty";cal.appendChild(blank);
-  }
-
-  for(var d=1;d<=DAYS;d++){
-    (function(day){
-      var score=day360Score(day),data=hasDayData(day);
-      var btn=document.createElement("button");
-      btn.type="button";btn.className="day";
-      if(day===selectedDay)btn.classList.add("selected");
-      if(isFutureDay(day))btn.classList.add("future");
-      if(data)btn.classList.add("has-data");
-      if(data || !isFutureDay(day)){
-        if(score===100)btn.classList.add("score100");
-        else if(score>=90)btn.classList.add("score90");
-        else if(score>=70)btn.classList.add("score70");
-        else if(score>=50)btn.classList.add("score50");
-        else btn.classList.add("scoreLow");
-      }
-      var color=score===100?"var(--green)":score>=70?"var(--amber)":score>=50?"var(--orange)":"var(--red)";
-      btn.innerHTML='<span class="numd">'+day+'</span>'+
-        '<span class="pct">'+(data?score+"%":"")+'</span>'+
-        (state.days[day].habits.clean?'<span class="clean">LIMPIO</span>':'')+
-        '<span class="bar"><span style="width:'+(data?score:0)+'%;background:'+color+'"></span></span>';
-      btn.addEventListener("click",function(){
-        selectedDay=day;resetTimerUI();renderAll();setTab("today");
-        setTimeout(function(){byId("dailySection").scrollIntoView({behavior:"smooth",block:"start"});},20);
-      });
-      cal.appendChild(btn);
-    })(d);
-  }
-}
-
-function renderSelectedDay(){
-  var r=state.days[selectedDay],date=new Date(YEAR,MONTH,selectedDay);
-  var p=personalScore(selectedDay),pro=professionalScore(selectedDay),s360=day360Score(selectedDay);
-  var dmT=dmTargetFor(selectedDay),invT=inviteTargetFor(selectedDay);
-
-  byId("selectedDateLabel").textContent=weekdayNames[date.getDay()].toUpperCase()+" · "+selectedDay+" SEPTIEMBRE";
-  byId("selectedDateStatus").textContent="Día "+selectedDay+" de 30"+(isWeekend(selectedDay)?" · fin de semana":"")+(isFutureDay(selectedDay)?" · registro de prueba/futuro":"");
-
-  byId("winToday").value=r.winToday;
-  byId("hardThing").value=r.hardThing;
-  byId("habitClean").checked=r.habits.clean;
-  byId("habitDigital").checked=r.habits.digital;
-  byId("habitFood").checked=r.habits.food;
-  byId("habitMovement").checked=r.habits.movement;
-  byId("habitMeditation").checked=r.habits.meditation;
-  byId("moneyBlock").checked=r.moneyBlock;
-
-  byId("personalChecks").textContent=personalChecks(selectedDay)+"/5";
-  byId("dailyPersonalScore").textContent=p+"%";
-  byId("dailyProfessionalScore").textContent=pro===null?"LIBRE":pro+"%";
-  byId("dailyProfessionalSub").textContent=pro===null?"Sin cuota obligatoria":"Actividad controlable";
-  byId("daily360Score").textContent=s360+"%";
-  byId("professionalLabel").textContent=pro===null?"Fin de semana":"Objetivo del día";
-  byId("cleanStreakCard").textContent="🔥 Racha limpia actual: "+currentCleanStreak()+" días";
-
-  byId("dmsDone").value=r.dmsDone||"";
-  byId("dmsTargetBox").textContent=dmT;
-  byId("dmTargetLabel").textContent=isWorkday(selectedDay)?"Objetivo: "+dmT:"Sin cuota obligatoria";
-  byId("dmsBar").style.width=(dmT?clamp(pct(r.dmsDone,dmT),0,100):(r.dmsDone>0?100:0))+"%";
-
-  byId("followupsDone").value=r.followupsDone||"";
-  byId("followupsPlanned").value=r.followupsPlanned||"";
-  byId("noFollowups").checked=r.noFollowups;
-  byId("followupsBar").style.width=followupScore(selectedDay)+"%";
-
-  byId("invitesDone").value=r.invitesDone||"";
-  byId("invitesTargetBox").textContent=invT;
-  byId("inviteTargetLabel").textContent=invT?"Objetivo de hoy: "+invT:"No toca cuota hoy";
-  byId("invitesBar").style.width=(invT?clamp(pct(r.invitesDone,invT),0,100):(r.invitesDone>0?100:0))+"%";
-
-  byId("responses").value=r.responses;
-  byId("positiveResponses").value=r.positiveResponses;
-  byId("interest").value=r.interest;
-  byId("seriousConversations").value=r.seriousConversations;
-  byId("clientsClosed").value=r.clientsClosed;
-  byId("clientNames").value=r.clientNames;
-  byId("victory").value=r.victory;
-  byId("notes").value=r.notes;
-
-  qsa("[data-trigger]").forEach(function(btn){
-    btn.classList.toggle("active",r.triggers.indexOf(btn.getAttribute("data-trigger"))>=0);
-  });
-  qsa("[data-rate]").forEach(function(btn){
-    var key=btn.getAttribute("data-rate"),val=num(btn.getAttribute("data-value"));
-    btn.classList.toggle("active",r[key]===val);
-  });
-
-  byId("prevDay").disabled=selectedDay<=1;
-  byId("nextDay").disabled=selectedDay>=DAYS;
-  byId("prevDay").style.opacity=selectedDay<=1?".35":"1";
-  byId("nextDay").style.opacity=selectedDay>=DAYS?".35":"1";
-
-  var c=dailyCoach(selectedDay);
-  byId("dailyReadingTitle").textContent=c.title;
-  byId("dailyReadingCopy").textContent=c.copy;
-  byId("nextAction").innerHTML="<strong>Siguiente:</strong> "+c.next;
-}
-
-function dailyCoach(day){
-  var r=state.days[day],p=personalScore(day),pro=professionalScore(day);
-  var invT=inviteTargetFor(day),dmPct=isWorkday(day)?clamp(pct(r.dmsDone,DM_TARGET),0,100):100;
-  var fu=followupScore(day),invPct=invT?clamp(pct(r.invitesDone,invT),0,100):100;
-  var t=totals();
-
-  if(t.clients>=CLIENT_GOAL){
-    return{title:"Objetivo de clientes alcanzado.",copy:"Ya tienes la cohorte objetivo. No rebajes calidad por sumar otro número: protege entrega, experiencia de septiembre y continuidad.",next:"prioriza calidad de ejecución y conversaciones de alto valor."};
-  }
-  if(!r.winToday.trim()){
-    return{title:"Define qué significa ganar hoy.",copy:"Sin una prioridad explícita es fácil llenar el día de actividad y seguir evitando lo importante.",next:"escribe una sola frase en “Hoy gano el día si…”."};
-  }
-  if(!r.habits.clean){
-    return{title:"Protege primero el mando sobre ti mismo.",copy:"No necesitamos un día perfecto; necesitamos que el malestar no decida automáticamente por ti.",next:"mantén el día limpio. Si aparece craving, abre SOS y pospón 10 minutos."};
-  }
-  if(isWorkday(day) && !r.moneyBlock){
-    return{title:"Primero el trabajo que puede producir dinero.",copy:"DMs e invitaciones te resultan relativamente fáciles. El riesgo es utilizarlos para evitar follow-ups, objeciones o cierres.",next:"haz el Bloque Dinero antes de la actividad repetitiva."};
-  }
-  if(isWorkday(day) && fu<100){
-    return{title:"Cierra antes las conversaciones que ya existen.",copy:"Los follow-ups están al "+fu+"%. Más contactos nuevos no compensan conversaciones abiertas sin seguimiento.",next:"completa todos los follow-ups que realmente tocan hoy."};
-  }
-  if(isWorkday(day) && dmPct<100){
-    return{title:"Ahora sí: completa el volumen nuevo.",copy:"Llevas "+r.dmsDone+" de "+DM_TARGET+" DMs. El criterio del ICP sigue siendo más importante que marcar 70 por marcar.",next:"completa "+Math.max(0,DM_TARGET-r.dmsDone)+" DMs restantes."};
-  }
-  if(isWorkday(day) && invT>0 && invPct<100){
-    return{title:"Elimina la deuda de distribución.",copy:"Llevas "+r.invitesDone+" de "+invT+" invitaciones previstas hoy.",next:"completa "+Math.max(0,invT-r.invitesDone)+" invitaciones para mantener 1.000/semana."};
-  }
-  if(p<100){
-    var missing=PERSONAL.filter(function(h){return !r.habits[h.id];})[0];
-    return{title:"El trabajo está protegido. Cierra también tu sistema personal.",copy:"Un buen día comercial no compra permiso para abandonar cuerpo, mente o autocontrol.",next:"completa "+(missing?missing.label.toLowerCase():"la siguiente casilla personal")+"."};
-  }
-  if(pro===100 || pro===null){
-    return{title:"Día cerrado. No añadas heroicidades.",copy:"La victoria no es exprimir un día excepcional; es construir un patrón que puedas repetir hasta el día 30.",next:"registra una victoria breve y termina bien el día."};
-  }
-  return{title:"La estructura está funcionando.",copy:"No añadas objetivos. Corrige la siguiente fuga y conserva energía para repetir mañana.",next:"termina el componente profesional que quede pendiente."};
-}
-
-function renderBusiness(){
-  var t=totals(),through=analysisThrough(),week=through?weekOfDay(through):weekOfDay(selectedDay);
-  var revenue=t.clients*TICKET;
-  var workdays=workdaysThrough(through),dmGoal=workdays*DM_TARGET;
-  var weekInv=invitesInWeek(week);
-
-  byId("bizClients").textContent=t.clients;
-  byId("bizClientsRemaining").textContent=Math.max(0,CLIENT_GOAL-t.clients)+" restantes";
-  byId("bizRevenue").textContent=money(revenue);
-  byId("bizDms").textContent=t.dms;
-  byId("bizDmsSub").textContent=t.dms+"/"+dmGoal+" objetivo acumulado";
-  byId("bizInvitesMonth").textContent=t.invites+"/5.000";
-  byId("bizInvitesWeek").textContent=weekInv+"/1.000";
-  byId("bizInviteWeekLabel").textContent="Semana "+week+" · "+weekRange(week).label;
-
-  var followText="—";
-  if(t.followupsPlanned>0) followText=pct(t.followupsDone,t.followupsPlanned)+"%";
-  else if(workdays>0 && t.noFollowupDays===workdays) followText="100%";
-  byId("bizFollowups").textContent=followText;
-  byId("bizSerious").textContent=t.serious;
-  byId("bizExecution").textContent=cumulativeProfessional()+"%";
-
-  byId("funnelDms").textContent=t.dms;
-  byId("funnelResponses").textContent=t.responses;
-  byId("funnelPositive").textContent=t.positive;
-  byId("funnelInterest").textContent=t.interest;
-  byId("funnelSerious").textContent=t.serious;
-  byId("funnelClients").textContent=t.clients;
-  byId("funnelInvites").textContent=t.invites;
-  byId("funnelFollowups").textContent=t.followupsDone;
-
-  byId("rateDmResponse").textContent=t.dms?pct(t.responses,t.dms)+"%":"—";
-  byId("rateResponsePositive").textContent=t.responses?pct(t.positive,t.responses)+"%":"—";
-  byId("ratePositiveInterest").textContent=t.positive?pct(t.interest,t.positive)+"%":"—";
-  byId("rateInterestSerious").textContent=t.interest?pct(t.serious,t.interest)+"%":"—";
-  byId("rateSeriousClient").textContent=t.serious?pct(t.clients,t.serious)+"%":"—";
-
-  var cp=checkpoint(t);
-  byId("checkpointTitle").textContent=cp.title;
-  byId("checkpointCopy").textContent=cp.copy;
-
-  var weeks=byId("businessWeeks");weeks.innerHTML="";
-  for(var w=1;w<=5;w++){
-    var val=invitesInWeek(w),rate=clamp(pct(val,WEEKLY_INVITES),0,100);
-    var el=document.createElement("div");el.className="week";
-    el.innerHTML='<div class="wlabel">Semana '+w+' · '+weekRange(w).label+'</div>'+
-      '<div class="wvalue">'+val+'/1.000</div>'+
-      '<div class="mini-track"><span style="width:'+rate+'%"></span></div>';
-    weeks.appendChild(el);
-  }
-
-  var list=byId("clientList");list.innerHTML="";
-  var found=false;
-  for(var d=1;d<=DAYS;d++){
-    var r=state.days[d];
-    if(r.clientsClosed>0 || r.clientNames.trim()){
-      found=true;
-      var item=document.createElement("div");item.className="client-item";
-      var name=r.clientNames.trim() || (r.clientsClosed+" cliente"+(r.clientsClosed===1?"":"s")+" sin nombre");
-      item.innerHTML="<span>"+escapeHtml(name)+"</span><span>Día "+d+" · "+r.clientsClosed+" cierre"+(r.clientsClosed===1?"":"s")+"</span>";
-      list.appendChild(item);
-    }
-  }
-  if(!found){
-    var empty=document.createElement("div");empty.className="section-note";empty.textContent="Todavía no hay clientes registrados.";list.appendChild(empty);
-  }
-}
-
-function checkpoint(t){
-  if(t.clients>=CLIENT_GOAL){
-    return{title:"Objetivo comercial alcanzado",copy:"Has llegado a 5 clientes. Prioriza ahora calidad de cohorte, experiencia, activaciones y señales de continuidad; no hace falta llenar septiembre con perfiles peores por volumen."};
-  }
-  if(t.dms<100){
-    return{title:"Checkpoint 1 · construyendo muestra",copy:"Llevas "+t.dms+" DMs. Al llegar aproximadamente a 100 revisa respuesta y respuesta positiva antes de decidir que el problema se arregla con más volumen."};
-  }
-  if(t.dms<200){
-    return{title:"Checkpoint 1 · ya hay muestra inicial",copy:t.dms+" DMs → "+t.responses+" respuestas → "+t.positive+" positivas → "+t.interest+" intereses. Mira dónde cae tu propio funnel antes de tocar volumen, ICP o mensaje."};
-  }
-  if(t.serious>0 && t.clients===0){
-    return{title:"Checkpoint 2 · hay conversaciones, todavía no pago",copy:"Con "+t.dms+" DMs has generado "+t.serious+" conversaciones serias y 0 clientes. La fuga ya no está solo arriba: revisa valor percibido, objeciones, oferta y cierre."};
-  }
-  if(t.interest>0 && t.serious===0){
-    return{title:"Checkpoint 2 · el interés no avanza",copy:"Tienes "+t.interest+" señales de interés y todavía 0 conversaciones serias. Revisa el siguiente microcompromiso y la transición interés → conversación."};
-  }
-  if(t.clients>0){
-    return{title:"Ya existe conversión real",copy:"Has cerrado "+t.clients+" cliente"+(t.clients===1?"":"s")+" con "+t.dms+" DMs acumulados. Identifica qué ICP, mensaje y recorrido produjeron pago y replica criterio antes que volumen."};
-  }
-  return{title:"Checkpoint 2 · mira el funnel completo",copy:t.dms+" DMs, "+t.positive+" positivas, "+t.interest+" intereses y "+t.serious+" conversaciones serias. Ajusta el eslabón que esté frenando el avance."};
-}
-
-function renderProgress(){
-  var through=analysisThrough(),t=totals();
-  byId("progressClean").textContent=habitRate("clean")+"%";
-  byId("progressDigital").textContent=habitRate("digital")+"%";
-  byId("progressFood").textContent=habitRate("food")+"%";
-  byId("progressMovement").textContent=habitRate("movement")+"%";
-  byId("progressMeditation").textContent=habitRate("meditation")+"%";
-
-  if(through){
-    var ranked=PERSONAL.map(function(h){return{id:h.id,label:h.label,rate:habitRate(h.id)};});
-    ranked.sort(function(a,b){return b.rate-a.rate;});
-    byId("bestHabit").textContent=ranked[0].label+" · "+ranked[0].rate+"%";
-    byId("worstHabit").textContent=ranked[ranked.length-1].label+" · "+ranked[ranked.length-1].rate+"%";
-    byId("analysisScope").textContent="Lectura actual sobre los días 1–"+through+".";
-  }else{
-    byId("bestHabit").textContent="—";byId("worstHabit").textContent="—";
-    byId("analysisScope").textContent="Se actualizará desde el primer día registrado.";
-  }
-
-  var rr=recoveryRate(),trig=triggerSummary();
-  byId("recoveryRate").textContent=rr===null?"—":rr+"%";
-  byId("longestCleanStreak").textContent=longestCleanStreak()+" días";
-  byId("mainTrigger").textContent=trig?trig[0]+" · "+trig[1]:"—";
-  byId("progressUrges").textContent=t.urges;
-
-  var pr=progressReading();
-  byId("monthReadingTitle").textContent=pr.title;
-  byId("monthReadingCopy").textContent=pr.copy;
-
-  renderTrend();
-  renderHeatmap();
-
-  byId("avgEnergy").textContent=avgRating("energy") || "—";
-  byId("avgFocus").textContent=avgRating("focus") || "—";
-  byId("personal100Days").textContent=t.personal100;
-  byId("days360Perfect").textContent=t.day360perfect;
-}
-
-function progressReading(){
-  var through=analysisThrough();
-  if(!through)return{title:"Todavía no hay patrón que interpretar.",copy:"Registra el primer día. Esta lectura distinguirá conducta, ejecución comercial, tendencia y fugas."};
-
-  var p=cumulativePersonal(),pro=cumulativeProfessional(),t=totals();
-  var ranked=PERSONAL.map(function(h){return{label:h.label,rate:habitRate(h.id)};});
-  ranked.sort(function(a,b){return a.rate-b.rate;});
-  var low=ranked[0],trig=triggerSummary(),title,copy;
-
-  if(p>=90 && pro>=90){
-    title="No necesitas más intensidad: necesitas repetir.";
-    copy="Personal "+p+"% y profesional "+pro+"%. Estás cerca del estándar objetivo. Protege la repetición y corrige la fuga más baja ("+low.label.toLowerCase()+", "+low.rate+"%) sin añadir nuevos hábitos.";
-  }else if(p>=85 && pro<70){
-    title="Tu sistema personal está más fuerte que la ejecución comercial.";
-    copy="Personal "+p+"% frente a profesional "+pro+"%. No conviertas el autocuidado en una forma elegante de evitar conversaciones difíciles: Bloque Dinero y follow-ups primero.";
-  }else if(pro>=85 && p<70){
-    title="El negocio tira, pero no a costa de abandonarte.";
-    copy="Profesional "+pro+"% frente a personal "+p+"%. Un gran día comercial no compra permiso para perder autocontrol, movimiento o presencia.";
-  }else if(p>=70 && pro>=70){
-    title="La base existe. Ahora gana la estabilidad.";
-    copy="Personal "+p+"% y profesional "+pro+"%. No cambies el sistema: reduce la principal fuga ("+low.label.toLowerCase()+", "+low.rate+"%) y conserva lo que funciona.";
-  }else{
-    title="No necesitas más objetivos. Necesitas recuperar continuidad.";
-    copy="Personal "+p+"% y profesional "+pro+"%. Vuelve a las anclas: día limpio, Bloque Dinero, follow-ups y movimiento. Después reconstruye el resto.";
-  }
-  if(trig)copy+=" Trigger más registrado: “"+trig[0]+"” ("+trig[1]+" veces).";
-  if(t.urges>0)copy+=" Has atravesado "+t.urges+" impulso"+(t.urges===1?"":"s")+" sin obedecer.";
-  if(through<=2)copy+=" La muestra todavía es pequeña: úsala como orientación.";
-  return{title:title,copy:copy};
-}
-
-function renderTrend(){
-  var through=analysisThrough(),chart=byId("trendChart");
-  chart.innerHTML="";
-  if(!through){
-    byId("trendLabel").textContent="Sin datos";
-    for(var i=0;i<7;i++){
-      var c=document.createElement("div");c.className="trend-col";
-      c.innerHTML='<div class="trend-pct">—</div><div class="trend-bar-wrap"><div class="trend-bar" style="height:0%"></div></div><div class="trend-day">—</div>';
-      chart.appendChild(c);
-    }
-    return;
-  }
-  var start=Math.max(1,through-6);
-  byId("trendLabel").textContent="Días "+start+"–"+through;
-  for(var d=start;d<=through;d++){
-    var p=day360Score(d),date=new Date(YEAR,MONTH,d),short=["D","L","M","X","J","V","S"][date.getDay()];
-    var col=document.createElement("div");col.className="trend-col";
-    col.innerHTML='<div class="trend-pct">'+p+'%</div><div class="trend-bar-wrap"><div class="trend-bar" style="height:'+p+'%"></div></div><div class="trend-day">'+short+d+'</div>';
-    chart.appendChild(col);
-  }
-  while(chart.children.length<7){
-    var blank=document.createElement("div");blank.className="trend-col";
-    blank.innerHTML='<div class="trend-pct"></div><div class="trend-bar-wrap"><div class="trend-bar" style="height:0%"></div></div><div class="trend-day"></div>';
-    chart.insertBefore(blank,chart.firstChild);
-  }
-}
-
-function renderHeatmap(){
-  var through=analysisThrough(),hm=byId("heatmap");hm.innerHTML="";
-  var label=document.createElement("div");label.className="hm-label";label.textContent="Hábito";hm.appendChild(label);
-  for(var d=1;d<=DAYS;d++){var h=document.createElement("div");h.className="hm-head";h.textContent=d;hm.appendChild(h);}
-  PERSONAL.forEach(function(habit){
-    var l=document.createElement("div");l.className="hm-label";l.textContent=habit.label;hm.appendChild(l);
-    for(var day=1;day<=DAYS;day++){
-      var c=document.createElement("div"),analyzed=day<=through;
-      c.className="hm-cell "+(analyzed?(state.days[day].habits[habit.id]?"yes":"no"):"future");
-      c.title="Día "+day+" · "+habit.label+": "+(analyzed?(state.days[day].habits[habit.id]?"cumplido":"no cumplido"):"sin analizar");
-      hm.appendChild(c);
-    }
-  });
-}
-
-function escapeHtml(s){
-  return String(s).replace(/[&<>"']/g,function(ch){
-    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch];
-  });
-}
-
-function setTab(name){
-  qsa(".tab-btn").forEach(function(btn){btn.classList.toggle("active",btn.getAttribute("data-tab")===name);});
-  qsa(".tab-pane").forEach(function(p){p.classList.toggle("active",p.id==="tab-"+name);});
-}
-
-function confetti(){
-  var colors=["#34d399","#60a5fa","#a78bfa","#fbbf24","#f87171","#f6f8fc"];
-  for(var i=0;i<36;i++){
-    var el=document.createElement("div");el.className="confetti";
-    el.style.left=(Math.random()*100)+"vw";el.style.top="-20px";
-    el.style.background=colors[Math.floor(Math.random()*colors.length)];
-    el.style.animationDelay=(Math.random()*250)+"ms";
-    document.body.appendChild(el);
-    setTimeout((function(x){return function(){x.remove();};})(el),1800);
-  }
-}
-
-function saveAndRender(celebrate){
-  persist();renderAll();
-  if(celebrate){confetti();toast("100% · Día 360 completo");}
-}
-
-function updateNumericField(id){
-  var before=day360Score(selectedDay);
-  state.days[selectedDay][id]=num(byId(id).value);
-  if(id==="followupsPlanned" && state.days[selectedDay][id]>0)state.days[selectedDay].noFollowups=false;
-  touch(selectedDay);
-  var after=day360Score(selectedDay);
-  saveAndRender(before<100 && after===100);
-}
-
-function bind(){
-  qsa(".tab-btn").forEach(function(btn){
-    btn.addEventListener("click",function(){setTab(btn.getAttribute("data-tab"));});
-  });
-
-  byId("prevDay").addEventListener("click",function(){if(selectedDay>1){selectedDay--;resetTimerUI();renderAll();}});
-  byId("nextDay").addEventListener("click",function(){if(selectedDay<DAYS){selectedDay++;resetTimerUI();renderAll();}});
-  byId("todayBtn").addEventListener("click",function(){selectedDay=pickInitialDay();resetTimerUI();renderAll();});
-
-  var habitMap={
-    habitClean:"clean",habitDigital:"digital",habitFood:"food",habitMovement:"movement",habitMeditation:"meditation"
-  };
-  Object.keys(habitMap).forEach(function(id){
-    byId(id).addEventListener("change",function(){
-      var before=day360Score(selectedDay);
-      state.days[selectedDay].habits[habitMap[id]]=byId(id).checked;
-      touch(selectedDay);
-      var after=day360Score(selectedDay);
-      saveAndRender(before<100 && after===100);
-    });
-  });
-
-  byId("moneyBlock").addEventListener("change",function(){
-    var before=day360Score(selectedDay);
-    state.days[selectedDay].moneyBlock=byId("moneyBlock").checked;
-    touch(selectedDay);
-    var after=day360Score(selectedDay);
-    saveAndRender(before<100 && after===100);
-  });
-
-  ["winToday","hardThing","victory","notes","clientNames"].forEach(function(id){
-    byId(id).addEventListener("input",function(){
-      state.days[selectedDay][id]=byId(id).value;
-      touch(selectedDay);persist();
-      if(id==="winToday"||id==="hardThing"||id==="clientNames")renderAll();
-    });
-  });
-
-  ["dmsDone","followupsDone","followupsPlanned","invitesDone","responses","positiveResponses","interest","seriousConversations","clientsClosed"].forEach(function(id){
-    byId(id).addEventListener("input",function(){updateNumericField(id);});
-  });
-
-  byId("noFollowups").addEventListener("change",function(){
-    var before=day360Score(selectedDay);
-    state.days[selectedDay].noFollowups=byId("noFollowups").checked;
-    if(state.days[selectedDay].noFollowups){
-      state.days[selectedDay].followupsDone=0;
-      state.days[selectedDay].followupsPlanned=0;
-    }
-    touch(selectedDay);
-    var after=day360Score(selectedDay);
-    saveAndRender(before<100 && after===100);
-  });
-
-  qsa("[data-add]").forEach(function(btn){
-    btn.addEventListener("click",function(){
-      var id=btn.getAttribute("data-add"),amount=num(btn.getAttribute("data-amount"));
-      state.days[selectedDay][id]=num(state.days[selectedDay][id])+amount;
-      touch(selectedDay);saveAndRender(false);
-    });
-  });
-
-  qsa("[data-trigger]").forEach(function(btn){
-    btn.addEventListener("click",function(){
-      var t=btn.getAttribute("data-trigger"),arr=state.days[selectedDay].triggers;
-      var idx=arr.indexOf(t);
-      if(idx>=0)arr.splice(idx,1);else arr.push(t);
-      touch(selectedDay);saveAndRender(false);
-    });
-  });
-
-  qsa("[data-rate]").forEach(function(btn){
-    btn.addEventListener("click",function(){
-      var key=btn.getAttribute("data-rate"),val=num(btn.getAttribute("data-value"));
-      state.days[selectedDay][key]=(state.days[selectedDay][key]===val?0:val);
-      touch(selectedDay);saveAndRender(false);
-    });
-  });
-
-  byId("toggleSOS").addEventListener("click",function(){
-    var p=byId("sosPanel");p.classList.toggle("show");
-    byId("toggleSOS").textContent=p.classList.contains("show")?"Cerrar SOS":"Abrir SOS";
-  });
-  byId("startTimer").addEventListener("click",startTimer);
-  byId("resetTimer").addEventListener("click",resetTimerUI);
-  byId("urgeBeaten").addEventListener("click",function(){
-    state.days[selectedDay].urgesBeaten++;
-    touch(selectedDay);persist();renderAll();toast("Impulso superado +1");
-  });
-
-  byId("exportCsv").addEventListener("click",exportCsv);
-  byId("resetBtn").addEventListener("click",resetAll);
-}
-
-function updateTimerUI(){
-  var m=Math.floor(timerRemaining/60),s=timerRemaining%60;
-  byId("timer").textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
-}
-function resetTimerUI(){
-  if(timerInterval){clearInterval(timerInterval);timerInterval=null;}
-  timerRemaining=600;updateTimerUI();
-}
-function startTimer(){
-  if(timerInterval)return;
-  timerInterval=setInterval(function(){
-    timerRemaining--;updateTimerUI();
-    if(timerRemaining<=0){
-      clearInterval(timerInterval);timerInterval=null;
-      toast("10 minutos completados · ahora vuelve a elegir");
-    }
-  },1000);
-}
-
-function download(name,content,type){
-  var blob=new Blob([content],{type:type});
-  var url=URL.createObjectURL(blob);
-  var a=document.createElement("a");a.href=url;a.download=name;
-  document.body.appendChild(a);a.click();a.remove();
-  setTimeout(function(){URL.revokeObjectURL(url);},500);
-}
-
-function csvEscape(v){return '"'+String(v===undefined||v===null?"":v).replace(/"/g,'""')+'"';}
-
-function exportCsv(){
-  var headers=[
-    "fecha","dia_semana","laborable","objetivo_dms","objetivo_invitaciones","hoy_gano_si","accion_incomoda",
-    "dia_limpio","sin_evasion_digital","alimentacion_control","movimiento","meditacion","personal_pct",
-    "bloque_dinero","dms_hechos","followups_hechos","followups_total","sin_followups_pendientes","invitaciones_hechas",
-    "profesional_pct","dia_360_pct","respuestas","respuestas_positivas","interes_info","conversaciones_serias",
-    "clientes_cerrados","nombres_clientes","impulsos_superados","energia_1_5","foco_1_5","victoria","triggers","notas"
-  ];
-  var rows=[headers.join(",")];
-  for(var d=1;d<=DAYS;d++){
-    var r=state.days[d],date=new Date(YEAR,MONTH,d),pro=professionalScore(d);
-    var vals=[
-      "2026-09-"+String(d).padStart(2,"0"),weekdayNames[date.getDay()],isWorkday(d)?1:0,dmTargetFor(d),inviteTargetFor(d),
-      r.winToday,r.hardThing,r.habits.clean?1:0,r.habits.digital?1:0,r.habits.food?1:0,r.habits.movement?1:0,
-      r.habits.meditation?1:0,personalScore(d),r.moneyBlock?1:0,r.dmsDone,r.followupsDone,r.followupsPlanned,
-      r.noFollowups?1:0,r.invitesDone,pro===null?"":pro,day360Score(d),r.responses,r.positiveResponses,r.interest,
-      r.seriousConversations,r.clientsClosed,r.clientNames,r.urgesBeaten,r.energy,r.focus,r.victory,r.triggers.join("|"),r.notes
-    ];
-    rows.push(vals.map(csvEscape).join(","));
-  }
-  download("SEPTIEMBRE360_2026.csv","\uFEFF"+rows.join("\n"),"text/csv;charset=utf-8");
-  toast("CSV exportado");
-}
-
-function resetAll(){
-  if(!confirm("¿Borrar todos los registros de Septiembre 360 de este navegador?"))return;
-  if(!confirm("Última confirmación: esta acción no se puede deshacer desde la landing."))return;
-  state=defaultState();
-  try{localStorage.removeItem(STORAGE_KEY);}catch(e){}
-  persist();selectedDay=pickInitialDay();resetTimerUI();renderAll();toast("Datos borrados");
-}
-
-function selfCheck(){
-  var required=[
-    "prevDay","nextDay","toggleSOS","sosPanel","calendar","tab-today","tab-business","tab-progress",
-    "habitClean","moneyBlock","dmsDone","exportCsv"
-  ];
-  var missing=required.filter(function(id){return !byId(id);});
-  if(missing.length){
-    byId("systemStatus").textContent="⚠ Falta un componente: "+missing.join(", ");
-    byId("systemStatus").style.color="#fecaca";
-    return false;
-  }
-  byId("systemStatus").textContent="✓ Sistema cargado. Navegación, guardado, SOS y cálculos activos.";
-  return true;
-}
-
-function init(){
-  state=loadState();
-  selectedDay=pickInitialDay();
-  bind();
-  updateTimerUI();
-  renderAll();
-  selfCheck();
-}
-
-if(document.readyState==="loading"){
-  document.addEventListener("DOMContentLoaded",init);
-}else{
-  init();
-}
-
+var monthFrame=[
+  "Septiembre es el mes de poner el sistema en pie y demostrar que puedes repetirlo.",
+  "Octubre es el mes de convertir disciplina en cadencia estable, sin volver a empezar desde cero.",
+  "Noviembre pide profundidad: menos novedad, más terminar, entregar y cerrar.",
+  "Diciembre premia la selección: cerrar lo importante y llegar al final con energía, no roto."
+];
+var COACH_PRINCIPLES=[
+  "No esperes el estado perfecto: protege la primera acción y deja que el movimiento construya energía.",
+  "La tarea fácil puede darte sensación de avance mientras esconde la conversación que realmente importa.",
+  "Tu sistema funciona cuando también lo cumples en un día normal, no solo cuando estás inspirado.",
+  "Cerrar bucles abiertos libera más energía que empezar cinco cosas nuevas.",
+  "El criterio está en elegir qué no merece hoy tu atención.",
+  "Una hora enfocada sobre la decisión correcta vale más que una mañana llena de actividad dispersa.",
+  "No uses volumen para evitar precisión: primero la conversación correcta, después el resto.",
+  "La disciplina útil no te castiga; reduce decisiones y te devuelve dirección.",
+  "Si algo importante genera resistencia, considéralo una señal para mirarlo antes, no después.",
+  "Tu objetivo no es sentir control, sino actuar de acuerdo con tus prioridades aunque el estado cambie.",
+  "No confundas cansancio con rechazo a empezar: prueba cinco minutos antes de decidir.",
+  "Una buena rutina debe dejarte capacidad para volver mañana.",
+  "El trabajo profundo empieza cuando dejas de negociar con cada distracción.",
+  "No abras otra herramienta ni otro frente si todavía queda una decisión importante sin cerrar.",
+  "La consistencia se construye protegiendo lo mínimo incluso cuando el día se complica.",
+  "Tus clientes actuales también forman parte del crecimiento: vender y entregar son el mismo sistema.",
+  "No midas el día por cuánto hiciste; mídelo por si avanzaste lo que realmente importaba.",
+  "El seguimiento convierte intención comercial en relaciones trabajadas.",
+  "Hoy no necesitas demostrar intensidad. Necesitas completar el estándar.",
+  "El cuerpo puede ser tu interruptor de estado: muévete, ordénate y después entra al bloque.",
+  "Un fallo no tiene derecho a llevarse las siguientes cinco decisiones.",
+  "La prioridad real se reconoce porque algo menos importante tiene que quedarse sin hacer.",
+  "La incomodidad no es una emergencia. Puede acompañarte mientras haces la tarea.",
+  "La venta de mañana suele depender de una conversación bien cuidada hoy.",
+  "No premies el trabajo repetitivo si lo utilizas para evitar una objeción o una decisión.",
+  "La energía estable gana a la explosión de motivación que desaparece a media tarde.",
+  "Si ya sabes qué toca, pensar más puede convertirse en otra forma de retrasarlo.",
+  "Haz visible lo pendiente; lo invisible se convierte con facilidad en deuda mental.",
+  "La calidad de tu trimestre dependerá más de cerrar semanas que de empezar días fuertes.",
+  "El día bueno no necesita ser heroico; necesita ser repetible.",
+  "Llegar al final con un sistema vivo vale más que impresionar durante tres días."
+];
+var SOS_REMINDERS=[
+  "El impulso sube, cambia y baja aunque no lo obedezcas.","Retrasar una conducta ya rompe el automatismo.","No necesitas resolver tu vida en este minuto; solo no ejecutar el automático.","Cambia de lugar antes de intentar cambiar de pensamiento.","Pon nombre a lo que sientes sin convertirlo en una orden.","El craving es una experiencia temporal, no una instrucción.","Pregunta qué estás intentando no sentir antes de buscar apagarlo.","Puedes tener ganas y no actuar; las dos cosas pueden coexistir.","No negocies en el pico de la urgencia: espera primero.","Haz algo físico y simple para romper la secuencia automática.","La siguiente decisión pesa más que la anterior.","No necesitas ganar para siempre; atraviesa los próximos diez minutos.","Observa dónde se siente en el cuerpo en vez de discutir con la cabeza.","Salir de la habitación puede ser suficiente para romper el patrón.","No conviertas aburrimiento en una emergencia que exige estimulación.","Si aparece después de comer, cambia inmediatamente el contexto habitual.","La ansiedad puede estar presente sin gobernar lo que haces.","No sustituyas una compulsión por otra pantalla.","Haz más lento el momento antes de decidir.","Lo que hoy atraviesas conscientemente mañana tendrá menos poder automático.","El impulso no necesita desaparecer para que tú recuperes el mando.","Vuelve al cuerpo: pies, respiración, postura, movimiento.","No añadas culpa al impulso; solo elige la siguiente conducta.","La urgencia miente sobre el tiempo: diez minutos pueden cambiarla.","Tu objetivo no es sentirte perfecto, sino mantener capacidad de elección.","Si estás enfadado o en conflicto, no uses una sustancia para cerrar emocionalmente la escena.","Haz una acción incompatible con el automático: caminar, ducharte, ordenar o salir.","Una sensación intensa no necesita una respuesta intensa.","Si la mente dice 'solo hoy', vuelve a mirar el mes entero.","El cuerpo sabe atravesar olas si no las alimentas con acción.","No necesitas confianza para resistir; necesitas tiempo y distancia."
+];
+var SOS_PROTOCOLS=[
+  {title:"Retrasa y observa",steps:[["1 · RETRASA","No decidas durante 10 minutos."],["2 · LOCALIZA","¿Dónde se siente físicamente el impulso?"],["3 · ELIGE","Al terminar, decide otra vez desde un estado menos automático."]]},
+  {title:"Cambia de contexto",steps:[["1 · LEVÁNTATE","Sal del lugar donde apareció el automático."],["2 · CAMINA","Cinco minutos sin móvil ni estímulos."],["3 · VUELVE","Regresa solo cuando la urgencia haya cambiado de intensidad."]]},
+  {title:"Interrupción física",steps:[["1 · CUERPO","20 sentadillas o dos minutos andando rápido."],["2 · AGUA","Bebe agua y cambia postura."],["3 · ESPERA","Completa los 10 minutos antes de decidir nada."]]},
+  {title:"Pregunta incómoda",steps:[["1 · NOMBRA","¿Qué estoy intentando no sentir ahora?"],["2 · ACEPTA","Deja que esa sensación exista dos minutos."],["3 · ACTÚA","Haz una acción pequeña alineada con lo importante."]]},
+  {title:"Urge surfing",steps:[["1 · OBSERVA","Mira el impulso como una ola que sube."],["2 · NO EMPUJES","No intentes eliminarlo ni alimentarlo."],["3 · ESPERA","Comprueba cómo cambia antes de responder."]]},
+  {title:"Corta la secuencia",steps:[["1 · IDENTIFICA","¿Qué pasó justo antes del impulso?"],["2 · ROMPE","Haz algo incompatible con el patrón habitual."],["3 · REINICIA","Vuelve a una tarea concreta y pequeña."]]}
+];
+
+function byId(id){return document.getElementById(id)}
+function qsa(sel){return Array.prototype.slice.call(document.querySelectorAll(sel))}
+function clamp(n,min,max){return Math.min(max,Math.max(min,n))}
+function pct(n,d){return d?Math.round(n/d*100):0}
+function num(v){var n=Number(v);return isFinite(n)&&n>=0?n:0}
+function money(n){return new Intl.NumberFormat("es-ES",{maximumFractionDigits:0}).format(n)+" €"}
+function pad(n){return String(n).padStart(2,"0")}
+function dateKey(monthIndex,day){return YEAR+"-"+MONTHS[monthIndex].key+"-"+pad(day)}
+function parseKey(k){var p=k.split("-");return new Date(Number(p[0]),Number(p[1])-1,Number(p[2]))}
+function keyFromDate(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+function dateInRange(k){return k>="2026-09-01"&&k<="2026-12-31"}
+function escapeHtml(s){return String(s||"").replace(/[&<>"']/g,function(ch){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch]})}
+
+var state,selectedMonth=0,selectedDay=1,scopeMode="month",saveTimer=null,timerInterval=null,timerRemaining=600;
+
+function blankDay(){return{habits:{clean:false,digital:false,food:false,gym:false,meditation:false,vietnamese:false},winToday:"",hardThing:"",blocks:[{done:false,desc:""},{done:false,desc:""},{done:false,desc:""},{done:false,desc:""},{done:false,desc:""}],dms:0,followups:"pending",clientCare:null,invites:0,connections:0,removed:0,victory:"",triggers:[],energy:0,focus:0,notes:"",urgesBeaten:0,top3Snapshot:null,closed:false,closedAt:null,updatedAt:null}}
+function defaultState(){var days={};MONTHS.forEach(function(m,mi){for(var d=1;d<=m.days;d++)days[dateKey(mi,d)]=blankDay()});return{version:1,days:days,tasks:[],sales:[],migratedOld:false,createdAt:new Date().toISOString()}}
+function normalizeDay(r){r=r||{};var b=blankDay();b.habits={clean:!!(r.habits&&r.habits.clean),digital:!!(r.habits&&r.habits.digital),food:!!(r.habits&&r.habits.food),gym:!!(r.habits&&r.habits.gym),meditation:!!(r.habits&&r.habits.meditation),vietnamese:!!(r.habits&&r.habits.vietnamese)};b.winToday=r.winToday||"";b.hardThing=r.hardThing||"";if(Array.isArray(r.blocks)){b.blocks=b.blocks.map(function(x){return{done:!!x.done,desc:x.desc||""}}).slice(0,5);while(b.blocks.length<5)b.blocks.push({done:false,desc:""})}b.dms=num(r.dms);b.followups=["done","none","pending"].indexOf(r.followups)>=0?r.followups:"pending";b.clientCare=(r.clientCare===null||r.clientCare===undefined)?null:clamp(Math.round(num(r.clientCare)/10)*10,0,100);b.invites=num(r.invites);b.connections=num(r.connections);b.removed=num(r.removed);b.victory=r.victory||"";b.triggers=Array.isArray(r.triggers)?r.triggers:[];b.energy=num(r.energy);b.focus=num(r.focus);b.notes=r.notes||"";b.urgesBeaten=num(r.urgesBeaten);b.top3Snapshot=(r.top3Snapshot&&typeof r.top3Snapshot==="object")?{done:num(r.top3Snapshot.done),total:num(r.top3Snapshot.total)}:null;b.closed=!!r.closed;b.closedAt=r.closedAt||null;b.updatedAt=r.updatedAt||null;return b}
+function normalizeState(s){var base=defaultState();if(!s||typeof s!=="object")return base;Object.keys(base.days).forEach(function(k){base.days[k]=normalizeDay(s.days&&s.days[k])});base.tasks=Array.isArray(s.tasks)?s.tasks.map(function(t){return{id:t.id||uid("t"),title:t.title||"",date:t.date||"2026-09-01",priority:["P1","P2","P3"].indexOf(t.priority)>=0?t.priority:"P2",status:["pending","in_progress","done"].indexOf(t.status)>=0?t.status:"pending",top3For:t.top3For||null,createdAt:t.createdAt||new Date().toISOString()}}):[];base.sales=Array.isArray(s.sales)?s.sales.map(function(x){return{id:x.id||uid("s"),date:x.date||"2026-09-01",product:PRODUCTS[x.product]?x.product:"legacy",client:x.client||"",amount:PRODUCTS[x.product]?PRODUCTS[x.product].amount:num(x.amount),createdAt:x.createdAt||new Date().toISOString()}}):[];base.migratedOld=!!s.migratedOld;return base}
+function uid(prefix){return prefix+Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
+function migrateOldInto(s){if(s.migratedOld)return s;try{var raw=localStorage.getItem(OLD_STORAGE_KEY);if(!raw){s.migratedOld=true;return s}var old=JSON.parse(raw);for(var d=1;d<=30;d++){var src=old.days&&(old.days[d]||old.days[String(d)]);if(!src)continue;var k=dateKey(0,d),r=s.days[k],h=src.habits||{};r.habits.clean=!!(h.clean!==undefined?h.clean:h.substances);r.habits.digital=!!h.digital;r.habits.food=!!h.food;r.habits.gym=!!h.movement;r.habits.meditation=!!h.meditation;r.winToday=src.winToday||"";r.hardThing=src.hardThing||"";r.blocks[0].done=!!(src.moneyBlock!==undefined?src.moneyBlock:h.money);r.blocks[0].desc=r.blocks[0].done?"Bloque Dinero migrado":"";r.dms=num(src.dmsDone);if(src.noFollowups)r.followups="none";else if(num(src.followupsPlanned)>0&&num(src.followupsDone)>=num(src.followupsPlanned))r.followups="done";else if(num(src.followupsDone)>0||num(src.followupsPlanned)>0)r.followups="pending";r.invites=num(src.invitesDone);r.victory=src.victory||"";r.triggers=Array.isArray(src.triggers)?src.triggers:[];r.energy=num(src.energy);r.focus=num(src.focus);r.notes=src.notes||"";r.urgesBeaten=num(src.urgesBeaten);if(num(src.clientsClosed)>0||String(src.clientNames||"").trim()){var count=Math.max(1,num(src.clientsClosed));for(var i=0;i<count;i++)s.sales.push({id:uid("s"),date:k,product:"legacy",client:String(src.clientNames||"").trim()||"Cierre anterior sin clasificar",amount:0,createdAt:new Date().toISOString()})}}s.migratedOld=true;return s}catch(e){s.migratedOld=true;return s}}
+function loadState(){try{var raw=localStorage.getItem(STORAGE_KEY);var s=raw?normalizeState(JSON.parse(raw)):defaultState();return migrateOldInto(s)}catch(e){return migrateOldInto(defaultState())}}
+function persist(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));byId("saveText").textContent="Guardado";clearTimeout(saveTimer);saveTimer=setTimeout(function(){byId("saveText").textContent="Sistema activo"},800)}catch(e){byId("saveText").textContent="Activo · sin guardado local"}}
+function touch(k){state.days[k].updatedAt=new Date().toISOString()}
+function toast(msg){var el=byId("toast");el.textContent=msg;el.classList.add("show");clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove("show")},1500)}
+
+function initSelection(){var now=new Date();var mi=MONTHS.findIndex(function(m){return now.getFullYear()===YEAR&&now.getMonth()===m.num});if(mi>=0){selectedMonth=mi;selectedDay=clamp(now.getDate(),1,MONTHS[mi].days)}else if(now<new Date(2026,8,1)){selectedMonth=0;selectedDay=1}else{selectedMonth=3;selectedDay=31}}
+function currentKey(){return dateKey(selectedMonth,selectedDay)}
+function isWeekendKey(k){var g=parseKey(k).getDay();return g===0||g===6}
+function hasDayData(k){var r=state.days[k];return r.closed||PERSONAL.some(function(h){return r.habits[h.id]})||r.winToday.trim()||r.hardThing.trim()||r.blocks.some(function(b){return b.done||b.desc.trim()})||r.dms>0||r.followups!=="pending"||r.clientCare!==null||r.invites>0||r.connections>0||r.removed>0||r.victory.trim()||r.triggers.length||r.energy>0||r.focus>0||r.notes.trim()||r.urgesBeaten>0}
+function closedKeys(mode){var keys=Object.keys(state.days).filter(function(k){return state.days[k].closed});if(mode==="total")return keys.sort();var prefix=YEAR+"-"+MONTHS[selectedMonth].key+"-";return keys.filter(function(k){return k.indexOf(prefix)===0}).sort()}
+function personalScoreKey(k){var r=state.days[k],n=0;PERSONAL.forEach(function(h){if(r.habits[h.id])n++});return pct(n,6)}
+function focusCount(k){return state.days[k].blocks.filter(function(b){return b.done}).length}
+function moneyBlockDone(k){return !!state.days[k].blocks[0].done}
+function professionalScoreKey(k){var r=state.days[k],arr=[];arr.push(moneyBlockDone(k)?100:0);arr.push(clamp(pct(Math.min(focusCount(k),3),3),0,100));if(!isWeekendKey(k))arr.push(clamp(pct(r.dms,DM_TARGET),0,100));arr.push((r.followups==="done"||r.followups==="none")?100:0);if(r.clientCare!==null)arr.push(r.clientCare);return Math.round(arr.reduce(function(a,b){return a+b},0)/arr.length)}
+function day360Key(k){return Math.round((personalScoreKey(k)+professionalScoreKey(k))/2)}
+function baseMet(k){var r=state.days[k];return r.habits.clean&&r.habits.gym&&moneyBlockDone(k)&&focusCount(k)>=3&&(r.followups==="done"||r.followups==="none")&&(isWeekendKey(k)||r.dms>=DM_TARGET)}
+function top3Tasks(k){return state.tasks.filter(function(t){return t.top3For===k}).slice(0,3)}
+function top3Done(k){var arr=top3Tasks(k);return arr.filter(function(t){return t.status==="done"}).length}
+function salesForScope(mode){if(mode==="total")return state.sales.slice().sort(function(a,b){return a.date.localeCompare(b.date)});var prefix=YEAR+"-"+MONTHS[selectedMonth].key+"-";return state.sales.filter(function(s){return s.date.indexOf(prefix)===0}).sort(function(a,b){return a.date.localeCompare(b.date)})}
+function salesForDate(k){return state.sales.filter(function(s){return s.date===k})}
+function salesStats(mode){var arr=salesForScope(mode),t={vertical:0,impulso:0,legacy:0,revenue:0};arr.forEach(function(s){if(t[s.product]!==undefined)t[s.product]++;t.revenue+=PRODUCTS[s.product]?PRODUCTS[s.product].amount:num(s.amount)});return t}
+function average(arr){return arr.length?arr.reduce(function(a,b){return a+b},0)/arr.length:null}
+function scopeStats(mode){var keys=closedKeys(mode),s={closed:keys.length,personal:0,professional:0,base:0,focusBlocks:0,dms:0,followDays:0,careAvg:null,invites:0,connections:0,removed:0,top3Done:0,top3Total:0,urges:0,energy:null,focus:null};var ps=[],prs=[],care=[],energy=[],focus=[];keys.forEach(function(k){var r=state.days[k];ps.push(personalScoreKey(k));prs.push(professionalScoreKey(k));if(baseMet(k))s.base++;s.focusBlocks+=focusCount(k);s.dms+=r.dms;if(r.followups==="done"||r.followups==="none")s.followDays++;if(r.clientCare!==null)care.push(r.clientCare);s.invites+=r.invites;s.connections+=r.connections;s.removed+=r.removed;var t3=top3Tasks(k),snap=r.top3Snapshot;if(r.closed&&snap){s.top3Done+=num(snap.done);s.top3Total+=num(snap.total)}else{s.top3Done+=t3.filter(function(t){return t.status==="done"}).length;s.top3Total+=t3.length;}s.urges+=r.urgesBeaten;if(r.energy>0)energy.push(r.energy);if(r.focus>0)focus.push(r.focus)});s.personal=ps.length?Math.round(average(ps)):0;s.professional=prs.length?Math.round(average(prs)):0;s.careAvg=care.length?Math.round(average(care)):null;s.energy=energy.length?average(energy).toFixed(1):null;s.focus=focus.length?average(focus).toFixed(1):null;return s}
+function habitRate(id,mode){var keys=closedKeys(mode);if(!keys.length)return 0;var n=keys.filter(function(k){return state.days[k].habits[id]}).length;return pct(n,keys.length)}
+function cleanStreak(mode){var keys=closedKeys(mode);if(!keys.length)return 0;var last=keys[keys.length-1],d=parseKey(last),n=0;while(dateInRange(keyFromDate(d))){var k=keyFromDate(d);if(!state.days[k]||!state.days[k].closed||!state.days[k].habits.clean)break;if(mode!=="total"&&k.slice(5,7)!==MONTHS[selectedMonth].key)break;n++;d.setDate(d.getDate()-1)}return n}
+function mainTrigger(mode){var counts={};closedKeys(mode).forEach(function(k){state.days[k].triggers.forEach(function(t){counts[t]=(counts[t]||0)+1})});var arr=Object.keys(counts).map(function(k){return[k,counts[k]]}).sort(function(a,b){return b[1]-a[1]});return arr.length?arr[0]:null}
+function weekRangeForKey(k){var d=parseKey(k),dow=(d.getDay()+6)%7,monday=new Date(d);monday.setDate(d.getDate()-dow);var sunday=new Date(monday);sunday.setDate(monday.getDate()+6);var monthStart=new Date(d.getFullYear(),d.getMonth(),1),monthEnd=new Date(d.getFullYear(),d.getMonth()+1,0);if(monday<monthStart)monday=monthStart;if(sunday>monthEnd)sunday=monthEnd;return{start:keyFromDate(monday),end:keyFromDate(sunday),label:monday.getDate()+"–"+sunday.getDate()+" "+MONTHS.find(function(m){return m.num===d.getMonth()}).short.toLowerCase()}}
+function datesBetween(a,b){var out=[],d=parseKey(a),end=parseKey(b);while(d<=end){out.push(keyFromDate(d));d.setDate(d.getDate()+1)}return out}
+function weekTotals(k){var r=weekRangeForKey(k),t={invites:0,connections:0,removed:0};datesBetween(r.start,r.end).forEach(function(x){if(state.days[x]){t.invites+=state.days[x].invites;t.connections+=state.days[x].connections;t.removed+=state.days[x].removed}});return{range:r,totals:t}}
+function weeksForMonth(mi){var m=MONTHS[mi],seen={},out=[];for(var d=1;d<=m.days;d++){var k=dateKey(mi,d),r=weekRangeForKey(k);if(!seen[r.start]){seen[r.start]=1;out.push(r)}}return out}
+function monthNameForKey(k){var mm=k.slice(5,7),m=MONTHS.find(function(x){return x.key===mm});return m?m.name:""}
+
+function coachForKey(k){var d=parseKey(k),mi=MONTHS.findIndex(function(m){return m.num===d.getMonth()}),day=d.getDate(),principle=COACH_PRINCIPLES[(day-1+mi*7)%COACH_PRINCIPLES.length];return{title:"Día "+day+" · "+MONTHS[mi].name,copy:principle+" "+monthFrame[mi]}}
+function nextActionForKey(k){var r=state.days[k],t3=top3Tasks(k);if(r.clientCare!==null&&r.clientCare<100)return{next:"Lleva primero la atención de clientes activos desde "+r.clientCare+"% hasta donde realmente quede resuelto lo debido hoy.",dont:"No abras más prospección si hay compromisos de clientes importantes sin atender."};if(!r.winToday.trim())return{next:"Define en una frase qué resultado haría que hoy merezca la pena.",dont:"No empieces una lista larga antes de decidir qué significa ganar el día."};if(t3.length<3)return{next:"Completa tus tres prioridades del día. Ahora mismo tienes "+t3.length+" de 3.",dont:"No llenes el día de tareas pequeñas antes de elegir las tres que mandan."};if(!moneyBlockDone(k))return{next:"Empieza el Bloque 1 · Dinero y úsalo para cierres, objeciones, propuestas o decisiones.",dont:"No uses DMs o administración para evitar el trabajo comercial más incómodo."};if(!(r.followups==="done"||r.followups==="none"))return{next:"Cierra todos los follow-ups que tocan hoy antes de abrir más conversaciones.",dont:"No compenses seguimiento pendiente con más volumen nuevo."};if(focusCount(k)<3)return{next:"Completa el bloque de 90 minutos número "+(focusCount(k)+1)+". El estándar mínimo son tres.",dont:"No añadas un cuarto frente abierto antes de completar los tres bloques base."};if(!isWeekendKey(k)&&r.dms<DM_TARGET)return{next:"Completa los "+Math.max(0,DM_TARGET-r.dms)+" DMs que faltan manteniendo el criterio del ICP.",dont:"No persigas 100 DMs si 70 bien elegidos ya cumplen el estándar."};var w=weekTotals(k);if(w.totals.invites<WEEK_INVITES)return{next:"La semana lleva "+w.totals.invites+"/1.000 invitaciones. Avanza la cuota cuando tenga sentido.",dont:"No conviertas la cuota semanal en culpa diaria; solo evita llegar al final con toda la deuda."};if(w.totals.connections<WEEK_CONNECTIONS)return{next:"La semana lleva "+w.totals.connections+"/100 nuevos contactos. Completa el crecimiento de red.",dont:"No añadas contactos sin criterio solo por alcanzar el número."};if(w.totals.removed<WEEK_REMOVED)return{next:"La semana lleva "+w.totals.removed+"/100 contactos eliminados. Limpia red cuando tengas un bloque ligero.",dont:"No sacrifiques un cierre o un cliente por hacer limpieza de red antes de tiempo."};var miss=PERSONAL.find(function(h){return !r.habits[h.id]});if(miss)return{next:"Cierra tu sistema personal: falta "+miss.label.toLowerCase()+".",dont:"No uses un buen día de trabajo como permiso para abandonar el sistema personal."};return{next:"El estándar está cubierto. Registra la victoria y cierra el día sin añadir heroicidades.",dont:"No añadas trabajo por inercia solo para sentir que hiciste más."}}
+function sosForKey(k){var d=parseKey(k),mi=MONTHS.findIndex(function(m){return m.num===d.getMonth()}),idx=(d.getDate()-1+mi*11)%SOS_REMINDERS.length,proto=SOS_PROTOCOLS[(d.getDate()+mi*2)%SOS_PROTOCOLS.length];return{title:proto.title,intro:SOS_REMINDERS[idx],steps:proto.steps}}
+
+function renderAll(){renderMonthSwitch();renderHero();renderMantra();renderCalendar();renderToday();renderPlan();renderBusiness();renderProgress()}
+function renderMonthSwitch(){var wrap=byId("monthSwitch");wrap.innerHTML="";MONTHS.forEach(function(m,mi){var b=document.createElement("button");b.type="button";b.className="month-btn"+(scopeMode==="month"&&selectedMonth===mi?" active":"");b.textContent=m.short;b.addEventListener("click",function(){scopeMode="month";selectedMonth=mi;var now=new Date();selectedDay=(now.getFullYear()===YEAR&&now.getMonth()===m.num)?clamp(now.getDate(),1,m.days):1;resetTimerUI();renderAll()});wrap.appendChild(b)});var total=document.createElement("button");total.type="button";total.className="month-btn"+(scopeMode==="total"?" active":"");total.textContent="TOTAL";total.addEventListener("click",function(){scopeMode="total";setTab("progress");renderAll()});wrap.appendChild(total)}
+function renderHero(){var mode=scopeMode==="total"?"total":"month",st=scopeStats(mode),ss=salesStats(mode);byId("heroPersonalPct").textContent=st.personal+"%";byId("heroPersonalBar").style.width=st.personal+"%";byId("heroClosedDays").textContent=st.closed+" días cerrados";byId("heroCleanStreak").textContent=cleanStreak(mode)+" días limpios seguidos";byId("heroPersonalTitle").textContent=scopeMode==="total"?"Rutina acumulada SEP–DIC":"Rutina · "+MONTHS[selectedMonth].name;byId("heroRevenue").textContent=money(ss.revenue);var pills=byId("heroGoalPills");pills.innerHTML="";if(scopeMode==="month"&&selectedMonth===0){byId("heroBusinessTitle").textContent="2 Vertical Partner + 2 Impulso B2B";byId("heroBusinessSide").innerHTML=ss.vertical+"/2 VP · "+ss.impulso+"/2 Impulso<br>"+money(ss.revenue)+" / 3.760 €";var prog=Math.min(100,Math.round(((Math.min(ss.vertical,2)+Math.min(ss.impulso,2))/4)*100));byId("heroBusinessBar").style.width=prog+"%";[["Mínimo","2 VP = 2.980 €"],["Completo","2 VP + 2 Impulso = 3.760 €"]].forEach(function(x){var s=document.createElement("span");s.className="goal-pill";s.textContent=x[0]+": "+x[1];pills.appendChild(s)})}else{byId("heroBusinessTitle").textContent=scopeMode==="total"?"Resultados acumulados SEP–DIC":"Resultados · "+MONTHS[selectedMonth].name;byId("heroBusinessSide").innerHTML=ss.vertical+" VP · "+ss.impulso+" Impulso<br>"+ss.legacy+" cierres antiguos sin clasificar";byId("heroBusinessBar").style.width=ss.revenue>0?100:0}}
+function renderMantra(){if(scopeMode==="total"){byId("dailyMantra").textContent="El trimestre se gana cerrando semanas, no empezando días con intensidad.";return}var c=coachForKey(currentKey());byId("dailyMantra").textContent=c.copy.split(". ")[0]+"."}
+function renderCalendar(){var section=byId("calendar");if(scopeMode==="total"){section.innerHTML="";return}var m=MONTHS[selectedMonth];byId("calendarTitle").textContent=m.name+" 2026";section.innerHTML="";var first=new Date(YEAR,m.num,1).getDay(),offset=(first+6)%7;for(var i=0;i<offset;i++){var e=document.createElement("div");e.className="day empty";section.appendChild(e)}for(var d=1;d<=m.days;d++){(function(day){var k=dateKey(selectedMonth,day),r=state.days[k],score=day360Key(k),b=document.createElement("button");b.type="button";b.className="day"+(day===selectedDay?" selected":"")+(hasDayData(k)?" hasdata":"")+(r.closed?" closedDay":"");if(r.closed){if(score===100)b.classList.add("closed100");else if(score>=70)b.classList.add("closed70");else b.classList.add("closedLow")}var stateLabel=r.closed?'<span class="state closed">CERRADO</span>':(hasDayData(k)?'<span class="state open">ABIERTO</span>':'');var color=score===100?"var(--green)":score>=70?"var(--amber)":"var(--red)";b.innerHTML='<span class="numd">'+day+'</span><span class="pct">'+(r.closed?score+"%":"")+'</span>'+stateLabel+'<span class="bar"><span style="width:'+(r.closed?score:0)+'%;background:'+color+'"></span></span>';b.addEventListener("click",function(){selectedDay=day;resetTimerUI();renderAll();setTab("today");setTimeout(function(){byId("dailySection").scrollIntoView({behavior:"smooth",block:"start"})},20)});section.appendChild(b)})(d)}}
+function renderToday(){if(scopeMode==="total")return;var k=currentKey(),r=state.days[k],d=parseKey(k),mi=selectedMonth,week=weekTotals(k);byId("selectedDateLabel").textContent=weekdayNames[d.getDay()].toUpperCase()+" · "+d.getDate()+" "+MONTHS[mi].name.toUpperCase();byId("selectedDateStatus").textContent=(r.closed?"Día cerrado":"Día abierto")+" · "+(isWeekendKey(k)?"fin de semana":"laborable");byId("winToday").value=r.winToday;byId("hardThing").value=r.hardThing;PERSONAL.forEach(function(h){byId("habit"+h.id.charAt(0).toUpperCase()+h.id.slice(1)).checked=r.habits[h.id]});byId("personalChecks").textContent=PERSONAL.filter(function(h){return r.habits[h.id]}).length+"/6";byId("dailyPersonalScore").textContent=personalScoreKey(k)+"%";byId("dailyProfessionalScore").textContent=professionalScoreKey(k)+"%";byId("professionalMini").textContent=professionalScoreKey(k)+"%";byId("dailyTop3Score").textContent=top3Done(k)+"/3";byId("dailyBaseScore").textContent=baseMet(k)?"✓":"—";byId("cleanStreakCard").textContent="🔥 Racha limpia registrada: "+cleanStreak("total")+" días";renderTodayTop3(k);renderCareButtons(k);renderFocusBlocks(k);byId("dmsDone").value=r.dms||"";byId("dmsTargetBox").textContent=isWeekendKey(k)?0:DM_TARGET;byId("dmTargetLabel").textContent=isWeekendKey(k)?"Sin cuota obligatoria":"Objetivo: 70";byId("dmsBar").style.width=(isWeekendKey(k)?(r.dms>0?100:0):clamp(pct(r.dms,DM_TARGET),0,100))+"%";qsa("[data-follow]").forEach(function(b){b.classList.toggle("active",b.getAttribute("data-follow")===r.followups)});byId("weekInvites").textContent=week.totals.invites+"/1.000";byId("weekConnections").textContent=week.totals.connections+"/100";byId("weekRemoved").textContent=week.totals.removed+"/100";byId("weekInvitesBar").style.width=clamp(pct(week.totals.invites,WEEK_INVITES),0,100)+"%";byId("weekConnectionsBar").style.width=clamp(pct(week.totals.connections,WEEK_CONNECTIONS),0,100)+"%";byId("weekRemovedBar").style.width=clamp(pct(week.totals.removed,WEEK_REMOVED),0,100)+"%";byId("invitesToday").value=r.invites||"";byId("connectionsToday").value=r.connections||"";byId("removedToday").value=r.removed||"";var c=coachForKey(k),na=nextActionForKey(k);byId("dailyCoachTitle").textContent=c.title;byId("dailyCoachCopy").textContent=c.copy;byId("nextAction").innerHTML="<strong>AHORA:</strong> "+escapeHtml(na.next);byId("dontAction").innerHTML="<strong>NO HAGAS AHORA:</strong> "+escapeHtml(na.dont);renderTodaySales(k);var sos=sosForKey(k);byId("sosTitle").textContent="SOS · "+sos.title;byId("sosIntro").textContent=sos.intro;var sw=byId("sosSteps");sw.innerHTML="";sos.steps.forEach(function(st){var e=document.createElement("div");e.className="sos-step";e.innerHTML="<strong>"+escapeHtml(st[0])+"</strong><div>"+escapeHtml(st[1])+"</div>";sw.appendChild(e)});byId("victory").value=r.victory;byId("notes").value=r.notes;qsa("[data-trigger]").forEach(function(b){b.classList.toggle("active",r.triggers.indexOf(b.getAttribute("data-trigger"))>=0)});renderRating("energyRating","energy",r.energy);renderRating("focusRating","focus",r.focus);byId("closePersonal").textContent=personalScoreKey(k)+"%";byId("closeProfessional").textContent=professionalScoreKey(k)+"%";byId("closeTop3").textContent=top3Done(k)+"/3";byId("closeCare").textContent=r.clientCare===null?"N/A":r.clientCare+"%";byId("closeBase").textContent=baseMet(k)?"✓":"—";byId("closeDayBtn").textContent=r.closed?"Reabrir día":"Cerrar día";byId("closeDayBtn").className=r.closed?"btn":"btn success";byId("prevDay").disabled=(selectedMonth===0&&selectedDay===1);byId("nextDay").disabled=(selectedMonth===3&&selectedDay===31)}
+function renderTodayTop3(k){var wrap=byId("todayTop3"),arr=top3Tasks(k);wrap.innerHTML="";if(!arr.length){var e=document.createElement("div");e.className="section-note";e.textContent="Todavía no has definido las tres prioridades de este día.";wrap.appendChild(e)}arr.forEach(function(t){wrap.appendChild(taskRow(t,true,k))});for(var i=arr.length;i<3;i++){var p=document.createElement("div");p.className="task-row";p.innerHTML='<div class="task-check"></div><div class="task-main"><div class="task-title" style="color:var(--muted)">Hueco Top '+(i+1)+'</div><div class="task-meta">Añade una tarea desde aquí o desde PLAN.</div></div>';wrap.appendChild(p)}}
+function renderCareButtons(k){var wrap=byId("clientCareButtons"),r=state.days[k];wrap.innerHTML="";var vals=[null,0,10,20,30,40,50,60,70,80,90,100];vals.forEach(function(v){var b=document.createElement("button");b.type="button";b.textContent=v===null?"N/A":v+"%";b.classList.toggle("active",r.clientCare===v);b.addEventListener("click",function(){r.clientCare=v;touch(k);persist();renderAll()});wrap.appendChild(b)})}
+function renderFocusBlocks(k){var wrap=byId("focusBlocks"),r=state.days[k];wrap.innerHTML="";r.blocks.forEach(function(bl,i){var row=document.createElement("div");row.className="block-row";var label=document.createElement("label");label.className="block-tag";var cb=document.createElement("input");cb.type="checkbox";cb.checked=bl.done;cb.addEventListener("change",function(){bl.done=cb.checked;touch(k);persist();renderAll()});label.appendChild(cb);var tx=document.createElement("span");tx.textContent=(i===0?"1 · DINERO":""+(i+1))+" · 90'";label.appendChild(tx);var inp=document.createElement("input");inp.type="text";inp.maxLength=120;inp.placeholder=i===0?"Cierres, follow-ups calientes, propuestas...":"Qué trabajaste en este bloque";inp.value=bl.desc;inp.addEventListener("input",function(){bl.desc=inp.value;touch(k);persist()});row.appendChild(label);row.appendChild(inp);wrap.appendChild(row)});byId("blocksBar").style.width=clamp(pct(Math.min(focusCount(k),3),3),0,100)+"%"}
+function renderRating(container,key,val){var wrap=byId(container);wrap.innerHTML="";for(var i=1;i<=5;i++){(function(v){var b=document.createElement("button");b.type="button";b.textContent=v;b.classList.toggle("active",val===v);b.addEventListener("click",function(){state.days[currentKey()][key]=state.days[currentKey()][key]===v?0:v;touch(currentKey());persist();renderAll()});wrap.appendChild(b)})(i)}}
+function renderTodaySales(k){var list=byId("todaySales"),arr=salesForDate(k);list.innerHTML="";if(!arr.length){var e=document.createElement("div");e.className="section-note";e.textContent="No hay ventas registradas este día.";list.appendChild(e);return}arr.forEach(function(s){var item=document.createElement("div");item.className="client-item";item.innerHTML="<span><strong>"+escapeHtml(PRODUCTS[s.product].name)+"</strong> · "+escapeHtml(s.client||"Sin nombre")+"</span><span>"+money(PRODUCTS[s.product].amount)+" <button class='btn small danger' data-del-sale='"+s.id+"' type='button'>Eliminar</button></span>";list.appendChild(item)});qsa("[data-del-sale]").forEach(function(b){b.addEventListener("click",function(){deleteSale(b.getAttribute("data-del-sale"))})})}
+
+function renderPlan(){if(scopeMode==="total")return;var k=currentKey();byId("taskDate").value=k;var buckets=taskBuckets(k);renderTaskBucket("tasksOverdue",buckets.overdue,k);renderTaskBucket("tasksToday",buckets.today,k);renderTaskBucket("tasksNext7",buckets.next7,k);renderTaskBucket("tasksLater",buckets.later,k);renderTaskBucket("tasksDone",buckets.done,k);byId("overdueCount").textContent=buckets.overdue.length;byId("todayTaskCount").textContent=buckets.today.length;byId("next7Count").textContent=buckets.next7.length;byId("laterCount").textContent=buckets.later.length;byId("doneCount").textContent=buckets.done.length}
+function taskBuckets(k){var ref=parseKey(k),next=new Date(ref);next.setDate(ref.getDate()+7);var nextKey=keyFromDate(next),monthPrefix=YEAR+"-"+MONTHS[selectedMonth].key+"-";var out={overdue:[],today:[],next7:[],later:[],done:[]};state.tasks.forEach(function(t){if(t.status==="done"){if(t.date.indexOf(monthPrefix)===0)out.done.push(t);return}if(t.date<k)out.overdue.push(t);else if(t.date===k)out.today.push(t);else if(t.date>k&&t.date<=nextKey)out.next7.push(t);else if(t.date.indexOf(monthPrefix)===0||t.date>nextKey)out.later.push(t)});Object.keys(out).forEach(function(key){out[key].sort(function(a,b){if(a.priority!==b.priority)return a.priority.localeCompare(b.priority);return a.date.localeCompare(b.date)})});return out}
+function renderTaskBucket(id,arr,k){var wrap=byId(id);wrap.innerHTML="";if(!arr.length){var e=document.createElement("div");e.className="section-note";e.textContent="Nada aquí.";wrap.appendChild(e);return}arr.forEach(function(t){wrap.appendChild(taskRow(t,false,k))})}
+function taskRow(t,compact,k){var row=document.createElement("div");row.className="task-row"+(t.status==="done"?" done":"");var check=document.createElement("button");check.type="button";check.className="task-check"+(t.status==="done"?" done":"");check.textContent=t.status==="done"?"✓":"";check.addEventListener("click",function(){t.status=t.status==="done"?"pending":"done";persist();renderAll()});var main=document.createElement("div");main.className="task-main";main.innerHTML='<div class="task-title">'+escapeHtml(t.title)+'</div><div class="task-meta"><span class="priority '+t.priority.toLowerCase()+'">'+t.priority+'</span> · '+escapeHtml(t.date)+(t.status==="in_progress"?" · EN CURSO":"")+(t.top3For?" · ★ TOP 3 "+escapeHtml(t.top3For):"")+'</div>';row.appendChild(check);row.appendChild(main);if(!compact){var actions=document.createElement("div");actions.className="task-actions";var top=document.createElement("button");top.type="button";top.textContent=t.top3For===k?"★ Quitar Top 3":"★ Top 3";top.addEventListener("click",function(){if(t.top3For===k){t.top3For=null}else{if(top3Tasks(k).length>=3){toast("Ya hay 3 tareas en el Top 3");return}t.top3For=k}persist();renderAll()});var prog=document.createElement("button");prog.type="button";prog.textContent=t.status==="in_progress"?"Pendiente":"En curso";prog.addEventListener("click",function(){t.status=t.status==="in_progress"?"pending":"in_progress";persist();renderAll()});var tomorrow=document.createElement("button");tomorrow.type="button";tomorrow.textContent="→ Mañana";tomorrow.addEventListener("click",function(){var d=parseKey(t.date);d.setDate(d.getDate()+1);var nk=keyFromDate(d);if(dateInRange(nk)){t.date=nk;if(t.top3For)t.top3For=nk;persist();renderAll()}else toast("Fuera del rango SEP–DIC")});var del=document.createElement("button");del.type="button";del.textContent="Eliminar";del.addEventListener("click",function(){if(confirm("¿Eliminar esta tarea?")){state.tasks=state.tasks.filter(function(x){return x.id!==t.id});persist();renderAll()}});actions.appendChild(top);actions.appendChild(prog);actions.appendChild(tomorrow);actions.appendChild(del);row.appendChild(actions)}return row}
+
+function renderBusiness(){var mode=scopeMode==="total"?"total":"month",ss=salesStats(mode),st=scopeStats(mode);byId("businessNorthTitle").textContent=scopeMode==="total"?"Negocio · SEP–DIC":"Negocio · "+MONTHS[selectedMonth].name;byId("businessNorthNote").textContent=(scopeMode==="month"&&selectedMonth===0)?"Objetivo mínimo: ≈ 3.000 € (2 Vertical Partner = 2.980 € exactos). Objetivo completo: 2 Vertical Partner + 2 Impulso = 3.760 €.":"Resultados registrados. No se inventan objetivos para meses que todavía no has fijado.";var north=byId("businessNorthKpis");north.innerHTML="";if(scopeMode==="month"&&selectedMonth===0){addStat(north,"Vertical Partner",ss.vertical+"/2",Math.max(0,2-ss.vertical)+" restantes");addStat(north,"Impulso B2B",ss.impulso+"/2",Math.max(0,2-ss.impulso)+" restantes");addStat(north,"Objetivo mínimo",money(Math.min(ss.revenue,2980))+" / 2.980 €","2 Vertical Partner");addStat(north,"Objetivo completo",money(ss.revenue)+" / 3.760 €","2 VP + 2 Impulso")}else{addStat(north,"Vertical Partner",ss.vertical,"Ventas");addStat(north,"Impulso B2B",ss.impulso,"Ventas");addStat(north,"Facturación",money(ss.revenue),scopeMode==="total"?"SEP–DIC":"Mes");addStat(north,"Cierres antiguos",ss.legacy,"Sin clasificar")}
+var ex=byId("businessExecutionKpis");ex.innerHTML="";addStat(ex,"DMs",st.dms,"Días cerrados");addStat(ex,"Follow-ups",st.closed?pct(st.followDays,st.closed)+"%":"—","Días completos / N/A");addStat(ex,"Bloques 90'",st.focusBlocks,(st.focusBlocks*1.5).toFixed(1)+" h de foco");addStat(ex,"Atención clientes",st.careAvg===null?"N/A":st.careAvg+"%","Promedio cuando aplica");addStat(ex,"Invitaciones",st.invites,"Registradas");addStat(ex,"Nuevos contactos",st.connections,"Registrados");addStat(ex,"Eliminados",st.removed,"Registrados");addStat(ex,"Estándar base",st.closed?pct(st.base,st.closed)+"%":"—",st.base+"/"+st.closed+" días")
+var weeks=byId("businessWeeks");weeks.innerHTML="";if(scopeMode==="total"){byId("weeksSection").style.display="none"}else{byId("weeksSection").style.display="block";weeksForMonth(selectedMonth).forEach(function(w,i){var t={invites:0,connections:0,removed:0};datesBetween(w.start,w.end).forEach(function(k){var r=state.days[k];t.invites+=r.invites;t.connections+=r.connections;t.removed+=r.removed});var el=document.createElement("div");el.className="week";el.innerHTML='<div class="wlabel">Semana '+(i+1)+' · '+escapeHtml(w.label)+'</div><div class="wvalue">'+t.invites+'/1.000 inv.</div><div class="section-note">'+t.connections+'/100 nuevos · '+t.removed+'/100 eliminados</div><div class="mini-track"><span style="width:'+clamp(pct(t.invites,WEEK_INVITES),0,100)+'%"></span></div>';weeks.appendChild(el)})}
+renderSalesList(mode)}
+function addStat(parent,label,value,sub){var e=document.createElement("div");e.className="stat";e.innerHTML='<div class="stat-label">'+escapeHtml(label)+'</div><div class="stat-value">'+escapeHtml(value)+'</div><div class="stat-sub">'+escapeHtml(sub||"")+'</div>';parent.appendChild(e)}
+function renderSalesList(mode){var list=byId("salesList"),arr=salesForScope(mode);list.innerHTML="";if(!arr.length){var e=document.createElement("div");e.className="section-note";e.textContent="Todavía no hay ventas registradas.";list.appendChild(e);return}arr.forEach(function(s){var e=document.createElement("div");e.className="client-item";e.innerHTML="<span><strong>"+escapeHtml(PRODUCTS[s.product].name)+"</strong> · "+escapeHtml(s.client||"Sin nombre")+"</span><span>"+escapeHtml(s.date)+" · "+money(PRODUCTS[s.product].amount)+"</span>";list.appendChild(e)})}
+
+function renderProgress(){var mode=scopeMode==="total"?"total":"month",st=scopeStats(mode),ss=salesStats(mode);byId("progressScope").textContent=scopeMode==="total"?"Acumulado del 1 de septiembre al 31 de diciembre.":MONTHS[selectedMonth].name+" · solo días cerrados.";var pr=byId("personalRows");pr.innerHTML="";PERSONAL.forEach(function(h){addRow(pr,h.label,habitRate(h.id,mode)+"%")});var prof=byId("professionalRows");prof.innerHTML="";addRow(prof,"Bloque Dinero",professionalRate("money",mode)+"%");addRow(prof,"3 bloques de 90'",professionalRate("blocks",mode)+"%");addRow(prof,"DMs laborables",professionalRate("dms",mode)+"%");addRow(prof,"Follow-ups",professionalRate("follow",mode)+"%");addRow(prof,"Atención clientes",st.careAvg===null?"N/A":st.careAvg+"%");var reading=progressReading(mode,st,ss);byId("progressReadingTitle").textContent=reading.title;byId("progressReadingCopy").textContent=reading.copy;renderTrend(mode);if(scopeMode==="total"){byId("heatmapSection").style.display="none"}else{byId("heatmapSection").style.display="block";renderHeatmap()}renderCareTrend(mode);var pk=byId("progressKpis");pk.innerHTML="";addStat(pk,"Bloques",st.focusBlocks,(st.focusBlocks*1.5).toFixed(1)+" h de foco");addStat(pk,"Top 3 completadas",st.top3Done+"/"+st.top3Total,st.top3Total?pct(st.top3Done,st.top3Total)+"%":"Sin muestra");addStat(pk,"Facturación",money(ss.revenue),ss.vertical+" VP · "+ss.impulso+" Impulso");addStat(pk,"Días base",st.base+"/"+st.closed,st.closed?pct(st.base,st.closed)+"%":"—");addStat(pk,"Energía media",st.energy||"—","Escala 1–5");addStat(pk,"Foco medio",st.focus||"—","Escala 1–5");var mt=mainTrigger(mode);addStat(pk,"Trigger principal",mt?mt[0]:"—",mt?mt[1]+" registros":"Sin datos");addStat(pk,"Impulsos atravesados",st.urges,"Sin obedecer")}
+function addRow(parent,label,value){var r=document.createElement("div");r.className="rowstat";r.innerHTML="<span>"+escapeHtml(label)+"</span><span>"+escapeHtml(value)+"</span>";parent.appendChild(r)}
+function professionalRate(type,mode){var keys=closedKeys(mode);if(!keys.length)return 0;var applicable=keys.filter(function(k){return type!=="dms"||!isWeekendKey(k)});if(!applicable.length)return 0;var vals=applicable.map(function(k){var r=state.days[k];if(type==="money")return moneyBlockDone(k)?100:0;if(type==="blocks")return focusCount(k)>=3?100:Math.round(Math.min(focusCount(k),3)/3*100);if(type==="dms")return clamp(pct(r.dms,DM_TARGET),0,100);if(type==="follow")return(r.followups==="done"||r.followups==="none")?100:0;return 0});return Math.round(average(vals))}
+function progressReading(mode,st,ss){if(!st.closed)return{title:"Todavía no hay días cerrados.",copy:"Registra y cierra el primer día para empezar a distinguir patrón de impresión."};var personal=st.personal,pro=st.professional,title,copy;if(personal>=85&&pro>=85){title="El sistema está funcionando; protege la repetición.";copy="Personal "+personal+"% y profesional "+pro+"%. No añadas más hábitos: busca la fuga más baja y mejora sin romper lo que ya funciona."}else if(personal>=80&&pro<65){title="Tu sistema personal va por delante de la ejecución comercial.";copy="Personal "+personal+"% frente a profesional "+pro+"%. Vigila que gimnasio, organización o planificación no se conviertan en una forma elegante de evitar cierres y follow-ups."}else if(pro>=80&&personal<65){title="El negocio tira más fuerte que tu base personal.";copy="Profesional "+pro+"% frente a personal "+personal+"%. El objetivo es terminar el trimestre mejor, no solo producir más durante unos días."}else{title="La mejora ahora es continuidad, no intensidad.";copy="Personal "+personal+"% y profesional "+pro+"%. Recupera primero el estándar base y deja los extras para después."}if(st.careAvg!==null&&st.careAvg<80)copy+=" Atención a clientes activos está en "+st.careAvg+"%: no dejes que adquirir nuevo negocio deteriore la entrega.";if(ss.revenue>0)copy+=" Facturación registrada: "+money(ss.revenue)+".";return{title:title,copy:copy}}
+function renderTrend(mode){var keys=closedKeys(mode).slice(-7),chart=byId("trendChart");chart.innerHTML="";byId("trendLabel").textContent=keys.length?keys[0].slice(5)+" → "+keys[keys.length-1].slice(5):"Sin datos";if(!keys.length){for(var i=0;i<7;i++){var e=document.createElement("div");e.className="trend-col";e.innerHTML='<div class="trend-pct">—</div><div class="trend-bar-wrap"><div class="trend-bar" style="height:0%"></div></div><div class="trend-day">—</div>';chart.appendChild(e)}return}keys.forEach(function(k){var v=day360Key(k),d=parseKey(k),e=document.createElement("div");e.className="trend-col";e.innerHTML='<div class="trend-pct">'+v+'%</div><div class="trend-bar-wrap"><div class="trend-bar" style="height:'+v+'%"></div></div><div class="trend-day">'+d.getDate()+'</div>';chart.appendChild(e)});while(chart.children.length<7){var b=document.createElement("div");b.className="trend-col";b.innerHTML='<div class="trend-pct"></div><div class="trend-bar-wrap"><div class="trend-bar" style="height:0%"></div></div><div class="trend-day"></div>';chart.insertBefore(b,chart.firstChild)}}
+function renderHeatmap(){var hm=byId("heatmap"),m=MONTHS[selectedMonth];hm.innerHTML="";hm.style.gridTemplateColumns="165px repeat("+m.days+",18px)";var label=document.createElement("div");label.className="hm-label";label.textContent="Hábito";hm.appendChild(label);for(var d=1;d<=m.days;d++){var h=document.createElement("div");h.className="hm-head";h.textContent=d;hm.appendChild(h)}PERSONAL.forEach(function(habit){var l=document.createElement("div");l.className="hm-label";l.textContent=habit.label;hm.appendChild(l);for(var day=1;day<=m.days;day++){var k=dateKey(selectedMonth,day),r=state.days[k],c=document.createElement("div");c.className="hm-cell "+(!r.closed?"future":(r.habits[habit.id]?"yes":"no"));c.title="Día "+day+" · "+habit.label+": "+(!r.closed?"sin cerrar":(r.habits[habit.id]?"cumplido":"no cumplido"));hm.appendChild(c)}})}
+function renderCareTrend(mode){var keys=closedKeys(mode).slice(-7),wrap=byId("careTrend");wrap.innerHTML="";if(!keys.length){for(var i=0;i<7;i++){var x=document.createElement("div");x.className="trend-col";x.innerHTML='<div class="trend-pct">—</div><div class="care-bar"><div class="care-fill" style="height:0%"></div></div><div class="trend-day">—</div>';wrap.appendChild(x)}return}keys.forEach(function(k){var v=state.days[k].clientCare,e=document.createElement("div");e.className="trend-col";e.innerHTML='<div class="trend-pct">'+(v===null?"N/A":v+"%")+'</div><div class="care-bar"><div class="care-fill" style="height:'+(v===null?0:v)+'%"></div></div><div class="trend-day">'+parseKey(k).getDate()+'</div>';wrap.appendChild(e)});while(wrap.children.length<7){var b=document.createElement("div");b.className="trend-col";b.innerHTML='<div class="trend-pct"></div><div class="care-bar"><div class="care-fill" style="height:0%"></div></div><div class="trend-day"></div>';wrap.insertBefore(b,wrap.firstChild)}}
+
+function setTab(name){if(scopeMode==="total"&&(name==="today"||name==="plan")){toast("Selecciona un mes para usar HOY o PLAN");return}qsa(".tab-btn").forEach(function(b){b.classList.toggle("active",b.getAttribute("data-tab")===name)});qsa(".tab-pane").forEach(function(p){p.classList.toggle("active",p.id==="tab-"+name)})}
+function goAdjacent(delta){if(scopeMode==="total")return;var d=parseKey(currentKey());d.setDate(d.getDate()+delta);var nk=keyFromDate(d);if(!dateInRange(nk))return;var mi=MONTHS.findIndex(function(m){return m.key===nk.slice(5,7)});selectedMonth=mi;selectedDay=d.getDate();resetTimerUI();renderAll()}
+function goToday(){var now=new Date(),k=keyFromDate(now);if(dateInRange(k)){selectedMonth=MONTHS.findIndex(function(m){return m.num===now.getMonth()});selectedDay=now.getDate();scopeMode="month";renderAll()}else toast("Hoy está fuera del rango SEP–DIC 2026")}
+function addTask(title,date,priority,top3){title=String(title||"").trim();if(!title){toast("Escribe la tarea");return}if(!dateInRange(date)){toast("La fecha debe estar entre septiembre y diciembre");return}if(top3&&top3Tasks(date).length>=3){toast("Ya hay 3 tareas en el Top 3");return}state.tasks.push({id:uid("t"),title:title,date:date,priority:priority||"P2",status:"pending",top3For:top3?date:null,createdAt:new Date().toISOString()});persist();renderAll()}
+function addSale(){var product=byId("saleProduct").value,client=byId("saleClient").value.trim();if(!PRODUCTS[product])return;if(!client){toast("Añade cliente o empresa");return}state.sales.push({id:uid("s"),date:currentKey(),product:product,client:client,amount:PRODUCTS[product].amount,createdAt:new Date().toISOString()});byId("saleClient").value="";persist();renderAll();toast("Venta registrada · "+PRODUCTS[product].name)}
+function deleteSale(id){if(!confirm("¿Eliminar esta venta?"))return;state.sales=state.sales.filter(function(s){return s.id!==id});persist();renderAll()}
+function toggleCloseDay(){var k=currentKey(),r=state.days[k];r.closed=!r.closed;r.closedAt=r.closed?new Date().toISOString():null;if(r.closed){r.top3Snapshot={done:top3Done(k),total:top3Tasks(k).length}}touch(k);persist();renderAll();toast(r.closed?"Día cerrado":"Día reabierto")}
+function updateTimerUI(){var m=Math.floor(timerRemaining/60),s=timerRemaining%60;byId("timer").textContent=pad(m)+":"+pad(s)}
+function resetTimerUI(){if(timerInterval){clearInterval(timerInterval);timerInterval=null}timerRemaining=600;updateTimerUI()}
+function startTimer(){if(timerInterval)return;timerInterval=setInterval(function(){timerRemaining--;updateTimerUI();if(timerRemaining<=0){clearInterval(timerInterval);timerInterval=null;toast("10 minutos completados · vuelve a elegir")}},1000)}
+function download(name,content,type){var blob=new Blob([content],{type:type}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},500)}
+function csvEscape(v){return '"'+String(v===undefined||v===null?"":v).replace(/"/g,'""')+'"'}
+function exportCsv(){var headers=["fecha","cerrado","personal_pct","profesional_pct","dia_360_pct","estandar_base","dia_limpio","digital","alimentacion","gimnasio","meditacion","vietnamita","bloques_90","horas_foco","dms","followups","atencion_clientes","invitaciones","nuevos_contactos","contactos_eliminados","top3_hechas","top3_total","ventas_vertical","ventas_impulso","facturacion","hoy_gano_si","accion_incomoda","energia","foco","triggers","victoria","notas"];var rows=[headers.join(",")];Object.keys(state.days).sort().forEach(function(k){var r=state.days[k],sales=salesForDate(k),vs=sales.filter(function(s){return s.product==="vertical"}).length,is=sales.filter(function(s){return s.product==="impulso"}).length,rev=sales.reduce(function(a,s){return a+PRODUCTS[s.product].amount},0),t3=top3Tasks(k);var vals=[k,r.closed?1:0,personalScoreKey(k),professionalScoreKey(k),day360Key(k),baseMet(k)?1:0,r.habits.clean?1:0,r.habits.digital?1:0,r.habits.food?1:0,r.habits.gym?1:0,r.habits.meditation?1:0,r.habits.vietnamese?1:0,focusCount(k),(focusCount(k)*1.5).toFixed(1),r.dms,r.followups,r.clientCare===null?"N/A":r.clientCare,r.invites,r.connections,r.removed,t3.filter(function(t){return t.status==="done"}).length,t3.length,vs,is,rev,r.winToday,r.hardThing,r.energy,r.focus,r.triggers.join("|"),r.victory,r.notes];rows.push(vals.map(csvEscape).join(","))});download("PANEL360_SEP_DIC_2026.csv","\uFEFF"+rows.join("\n"),"text/csv;charset=utf-8");toast("CSV exportado")}
+function resetAll(){if(!confirm("¿Borrar todos los datos del nuevo PANEL 360? La copia antigua de septiembre no se borrará."))return;if(!confirm("Última confirmación."))return;state=defaultState();state.migratedOld=true;try{localStorage.removeItem(STORAGE_KEY)}catch(e){}persist();initSelection();scopeMode="month";renderAll();toast("Datos del nuevo panel borrados")}
+
+function bind(){qsa(".tab-btn").forEach(function(b){b.addEventListener("click",function(){setTab(b.getAttribute("data-tab"))})});byId("prevDay").addEventListener("click",function(){goAdjacent(-1)});byId("nextDay").addEventListener("click",function(){goAdjacent(1)});byId("todayBtn").addEventListener("click",goToday);var map={habitClean:"clean",habitDigital:"digital",habitFood:"food",habitGym:"gym",habitMeditation:"meditation",habitVietnamese:"vietnamese"};Object.keys(map).forEach(function(id){byId(id).addEventListener("change",function(){var k=currentKey();state.days[k].habits[map[id]]=byId(id).checked;touch(k);persist();renderAll()})});["winToday","hardThing","victory","notes"].forEach(function(id){byId(id).addEventListener("input",function(){var k=currentKey();state.days[k][id]=byId(id).value;touch(k);persist();if(id==="winToday"||id==="hardThing")renderAll()})});byId("dmsDone").addEventListener("input",function(){var k=currentKey();state.days[k].dms=num(this.value);touch(k);persist();renderAll()});qsa("[data-follow]").forEach(function(b){b.addEventListener("click",function(){var k=currentKey();state.days[k].followups=b.getAttribute("data-follow");touch(k);persist();renderAll()})});[["invitesToday","invites"],["connectionsToday","connections"],["removedToday","removed"]].forEach(function(x){byId(x[0]).addEventListener("input",function(){var k=currentKey();state.days[k][x[1]]=num(this.value);touch(k);persist();renderAll()})});qsa("[data-add-week]").forEach(function(b){b.addEventListener("click",function(){var id=b.getAttribute("data-add-week"),amount=num(b.getAttribute("data-amount")),field=id==="invitesToday"?"invites":id==="connectionsToday"?"connections":"removed",k=currentKey();state.days[k][field]+=amount;touch(k);persist();renderAll()})});qsa("[data-trigger]").forEach(function(b){b.addEventListener("click",function(){var k=currentKey(),t=b.getAttribute("data-trigger"),arr=state.days[k].triggers,idx=arr.indexOf(t);if(idx>=0)arr.splice(idx,1);else arr.push(t);touch(k);persist();renderAll()})});byId("quickTop3Btn").addEventListener("click",function(){addTask(byId("quickTop3Input").value,currentKey(),"P1",true);byId("quickTop3Input").value=""});byId("quickTop3Input").addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();byId("quickTop3Btn").click()}});byId("addTaskBtn").addEventListener("click",function(){addTask(byId("taskTitle").value,byId("taskDate").value,byId("taskPriority").value,false);byId("taskTitle").value=""});byId("addSaleBtn").addEventListener("click",addSale);byId("toggleSOS").addEventListener("click",function(){var p=byId("sosPanel");p.classList.toggle("show");byId("toggleSOS").textContent=p.classList.contains("show")?"Cerrar SOS":"Abrir SOS"});byId("startTimer").addEventListener("click",startTimer);byId("resetTimer").addEventListener("click",resetTimerUI);byId("urgeBeaten").addEventListener("click",function(){var k=currentKey();state.days[k].urgesBeaten++;touch(k);persist();renderAll();toast("Impulso atravesado +1")});byId("closeDayBtn").addEventListener("click",toggleCloseDay);byId("exportCsv").addEventListener("click",exportCsv);byId("resetBtn").addEventListener("click",resetAll)}
+function selfCheck(){var ids=["monthSwitch","calendar","prevDay","nextDay","habitClean","habitGym","clientCareButtons","focusBlocks","dmsDone","followupButtons","toggleSOS","addSaleBtn","addTaskBtn","closeDayBtn","exportCsv"];var missing=ids.filter(function(id){return !byId(id)});if(missing.length){byId("systemStatus").textContent="⚠ Faltan componentes: "+missing.join(", ");byId("systemStatus").style.color="#fecaca";return false}byId("systemStatus").textContent="✓ Sistema cargado. Navegación, guardado, tareas, ventas, SOS, cierre de día y cálculos activos.";return true}
+function init(){state=loadState();persist();initSelection();bind();updateTimerUI();renderAll();selfCheck()}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
 </script>
 </body>
