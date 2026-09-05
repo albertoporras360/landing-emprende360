@@ -7,7 +7,7 @@
 <title>Vietnamita 5 al día · Southern Neural · Sep–Dic 2026</title>
 
 <!-- Free browser-side neural inference. No API key / account. -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/onnxruntime-web/1.17.0/ort.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.17.0/dist/ort.min.js"></script>
 <script src="https://huggingface.co/spaces/letrggghieu/v-vietnamese-tts-web/raw/main/vietnamese_g2p.js"></script>
 
 <style>
@@ -76,7 +76,11 @@ let ttsReady=false,ttsLoading=false,ttsPromise=null;
 let audioContext=null;
 let loadProgress=0,loadMessage="Modelo no cargado todavía";
 
-const ONNX_PATH="https://huggingface.co/v-tts/v-tts-onnx/resolve/main/";
+const MODEL_BASES=[
+  "https://huggingface.co/letrggghieu/v-tts-onnx/resolve/main/",
+  "https://huggingface.co/valtecAI-team/valtec-tts-onnx/resolve/main/"
+];
+let ACTIVE_MODEL_BASE=MODEL_BASES[0];
 if(window.ort){
   ort.env.wasm.wasmPaths="https://cdnjs.cloudflare.com/ajax/libs/onnxruntime-web/1.17.0/";
   ort.env.wasm.numThreads=1;
@@ -114,6 +118,33 @@ function setLoad(p,msg){
  const b=document.getElementById("ttsLoadBar"),t=document.getElementById("ttsLoadText");
  if(b)b.style.width=p+"%";if(t)t.textContent=msg;
 }
+async function createSessionFromBases(filename){
+ let lastErr=null;
+ for(const base of MODEL_BASES){
+   try{
+     setLoad(loadProgress,`Descargando ${filename} desde ${base.includes("letrggghieu")?"repositorio principal":"repositorio alternativo"}…`);
+     const session=await ort.InferenceSession.create(base+filename,{executionProviders:["wasm"]});
+     ACTIVE_MODEL_BASE=base;
+     return session;
+   }catch(e){
+     console.warn("Falló",base+filename,e);
+     lastErr=e;
+   }
+ }
+ throw lastErr||new Error("No se pudo descargar "+filename);
+}
+async function fetchConfigFromBases(){
+ let lastErr=null;
+ for(const base of [ACTIVE_MODEL_BASE,...MODEL_BASES.filter(x=>x!==ACTIVE_MODEL_BASE)]){
+   try{
+     const r=await fetch(base+"tts_config.json",{cache:"force-cache"});
+     if(!r.ok)throw new Error("HTTP "+r.status);
+     ACTIVE_MODEL_BASE=base;
+     return await r.json();
+   }catch(e){lastErr=e}
+ }
+ throw lastErr||new Error("No se pudo cargar tts_config.json");
+}
 async function ensureTTS(){
  if(ttsReady)return true;
  if(ttsPromise)return ttsPromise;
@@ -123,25 +154,23 @@ async function ensureTTS(){
      if(!window.ort)throw new Error("No se pudo cargar ONNX Runtime");
      if(!window.VietnameseG2P)throw new Error("No se pudo cargar el módulo fonético vietnamita");
      setLoad(3,"Preparando motor neural…");
-     textEncoder=await ort.InferenceSession.create(ONNX_PATH+"text_encoder.onnx",{executionProviders:["wasm"]});
+     textEncoder=await createSessionFromBases("text_encoder.onnx");
      setLoad(23,"Modelo 1/4 cargado · text encoder");
-     durationPredictor=await ort.InferenceSession.create(ONNX_PATH+"duration_predictor.onnx",{executionProviders:["wasm"]});
+     durationPredictor=await createSessionFromBases("duration_predictor.onnx");
      setLoad(36,"Modelo 2/4 cargado · duración");
-     flow=await ort.InferenceSession.create(ONNX_PATH+"flow.onnx",{executionProviders:["wasm"]});
+     flow=await createSessionFromBases("flow.onnx");
      setLoad(67,"Modelo 3/4 cargado · flow");
-     decoder=await ort.InferenceSession.create(ONNX_PATH+"decoder.onnx",{executionProviders:["wasm"]});
+     decoder=await createSessionFromBases("decoder.onnx");
      setLoad(94,"Modelo 4/4 cargado · decoder");
-     const rr=await fetch(ONNX_PATH+"tts_config.json");
-     if(!rr.ok)throw new Error("No se pudo cargar la configuración");
-     ttsConfig=await rr.json();
+     ttsConfig=await fetchConfigFromBases();
      ttsReady=true;ttsLoading=false;
-     setLoad(100,"✓ Voz Southern Neural preparada");
+     setLoad(100,"✓ Southern Neural preparada");
      toastMsg("Voz sureña preparada ✓");
      return true;
    }catch(e){
      console.error(e);ttsLoading=false;ttsPromise=null;
-     setLoad(0,"Error al cargar: "+e.message);
-     toastMsg("No se pudo cargar el modelo. Necesitas Internet en la primera carga.");
+     setLoad(0,"Error real: "+(e?.message||e));
+     toastMsg("No se pudo cargar el modelo. Comprueba conexión y vuelve a pulsar.");
      return false;
    }
  })();
@@ -163,9 +192,10 @@ function randNoise(){
  return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
 }
 async function synthesizeWav(text,slow=false){
- const ok=await ensureTTS();if(!ok)throw new Error("TTS not ready");
+ const ok=await ensureTTS();if(!ok)throw new Error("TTS no preparado");
  const {phonemes,tones,languages}=convertTextToPhonemes(text);
  const seqLen=phonemes.length;
+
  const phoneIds=new ort.Tensor("int64",new BigInt64Array(phonemes.map(BigInt)),[1,seqLen]);
  const phoneLengths=new ort.Tensor("int64",new BigInt64Array([BigInt(seqLen)]),[1]);
  const toneIds=new ort.Tensor("int64",new BigInt64Array(tones.map(BigInt)),[1,seqLen]);
@@ -174,36 +204,73 @@ async function synthesizeWav(text,slow=false){
  const jaBert=new ort.Tensor("float32",new Float32Array(768*seqLen),[1,768,seqLen]);
  const sid=new ort.Tensor("int64",new BigInt64Array([BigInt(S.settings.speaker)]),[1]);
 
- const enc=await textEncoder.run({phone_ids:phoneIds,phone_lengths:phoneLengths,tone_ids:toneIds,language_ids:languageIds,bert,ja_bert:jaBert,speaker_id:sid});
- const xEncoded=enc.x_encoded,mP=enc.m_p,logsP=enc.logs_p,xMask=enc.x_mask,g=enc.g;
- const dp=await durationPredictor.run({x:xEncoded,x_mask:xMask,g});
- const logwData=dp.logw.data,maskData=xMask.data;
- const durationScale=(slow?1.40:1.0)*(+S.settings.speed||1);
- let totalFrames=0,durations=[];
+ const encOutputs=await textEncoder.run({
+   phone_ids:phoneIds,
+   phone_lengths:phoneLengths,
+   tone_ids:toneIds,
+   language_ids:languageIds,
+   bert:bert,
+   ja_bert:jaBert,
+   speaker_id:sid
+ });
+
+ const xEncoded=encOutputs.x_encoded;
+ const mP=encOutputs.m_p;
+ const logsP=encOutputs.logs_p;
+ const xMask=encOutputs.x_mask;
+ const g=encOutputs.g;
+
+ const dpOutputs=await durationPredictor.run({x:xEncoded,x_mask:xMask,g:g});
+ const logwData=dpOutputs.logw.data;
+ const maskData=xMask.data;
+
+ let totalFrames=0;
+ const durations=[];
  for(let i=0;i<logwData.length;i++){
-   const dur=Math.max(1,Math.ceil(Math.exp(logwData[i])*maskData[i]*durationScale));
-   durations.push(dur);totalFrames+=dur;
+   // Exact method used by the project's browser demo.
+   const baseDur=Math.ceil(Math.exp(logwData[i])*maskData[i]);
+   const dur=Math.max(1,Math.ceil(baseDur*(slow?1.28:1)));
+   durations.push(dur);
+   totalFrames+=dur;
  }
- const mPData=mP.data,logsPData=logsP.data,channels=mP.dims[1];
+
+ const mPData=mP.data, logsPData=logsP.data;
+ const channels=mP.dims[1];
  const expandedMP=new Float32Array(channels*totalFrames);
  const expandedLogsP=new Float32Array(channels*totalFrames);
- let frame=0;
+
+ let frameIdx=0;
  for(let t=0;t<durations.length;t++){
    for(let d=0;d<durations[t];d++){
      for(let c=0;c<channels;c++){
-       expandedMP[c*totalFrames+frame]=mPData[c*seqLen+t];
-       expandedLogsP[c*totalFrames+frame]=logsPData[c*seqLen+t];
-     }frame++;
+       expandedMP[c*totalFrames+frameIdx]=mPData[c*seqLen+t];
+       expandedLogsP[c*totalFrames+frameIdx]=logsPData[c*seqLen+t];
+     }
+     frameIdx++;
    }
  }
+
  const zP=new Float32Array(channels*totalFrames);
- for(let i=0;i<zP.length;i++)zP[i]=expandedMP[i]+Math.exp(expandedLogsP[i])*randNoise()*0.50;
+ for(let i=0;i<zP.length;i++){
+   // Exact uniform-noise strategy used by the project's own browser demo.
+   const noise=(Math.random()*2-1)*0.667;
+   zP[i]=expandedMP[i]+Math.exp(expandedLogsP[i])*noise;
+ }
+
  const zPTensor=new ort.Tensor("float32",zP,[1,channels,totalFrames]);
  const yMask=new ort.Tensor("float32",new Float32Array(totalFrames).fill(1),[1,1,totalFrames]);
- const fl=await flow.run({z_p:zPTensor,y_mask:yMask,g});
- const dec=await decoder.run({z:fl.z,g});
- return audioToWav(dec.audio.data,ttsConfig.sample_rate);
+
+ const flowOutputs=await flow.run({z_p:zPTensor,y_mask:yMask,g:g});
+ const z=flowOutputs.z;
+ const zData=z.data;
+ const zMasked=new Float32Array(zData.length);
+ for(let i=0;i<zData.length;i++)zMasked[i]=zData[i];
+
+ const zTensor=new ort.Tensor("float32",zMasked,z.dims);
+ const decOutputs=await decoder.run({z:zTensor,g:g});
+ return audioToWav(decOutputs.audio.data,ttsConfig.sample_rate);
 }
+
 function audioToWav(samples,sampleRate){
  const buffer=new ArrayBuffer(44+samples.length*2),view=new DataView(buffer);
  function ws(o,str){for(let i=0;i<str.length;i++)view.setUint8(o+i,str.charCodeAt(i))}
@@ -229,7 +296,7 @@ async function playOne(text,rate=1,repeats=1,label=""){
    if(stopSequence)return;
    let blob=await cacheGet(k);
    if(!blob){
-     player.classList.add("show");playerTitle.textContent=label||text;playerSub.textContent=ttsReady?"Generando audio neural…":"Primera vez: descargando modelo neural (~165 MB)…";
+     player.classList.add("show");playerTitle.textContent=label||text;playerSub.textContent=ttsReady?"Generando audio neural…":"Primera vez: descargando modelos Southern Neural (~175 MB)…";
      try{blob=await synthesizeWav(text,slow);await cachePut(k,blob)}
      catch(e){console.error(e);player.classList.remove("show");toastMsg("No se pudo generar el audio. Entra en «Audio Sur» para ver el estado.");return}
    }
@@ -267,7 +334,7 @@ function card(x){
  </article>`;
 }
 function render(){const r=route(),p=r.split("/");document.querySelectorAll("#nav button").forEach(b=>b.classList.toggle("active",b.dataset.route===p[0]));if(p[0]==="day")return renderDay(p[1]);({home:renderHome,calendar:renderCalendar,review:renderReview,library:renderLibrary,reference:renderReference,audio:renderAudio,progress:renderProgress}[p[0]]||renderHome)()}
-function renderHome(){const ds=currentDate(),ar=dayItems(ds);app.innerHTML=head("Hoy · "+formatDate(ds),"5 elementos · voz neural Southern Female por defecto.")+`<div class="hero"><div class="card"><h2>Vietnamita del sur.<br><span class="accent">Sin claves ni APIs.</span></h2><p class="muted">La primera vez que escuches audio se descarga un modelo neural de aproximadamente 165 MB. Después queda cacheado por el navegador y las frases generadas también se guardan localmente.</p><div class="progress"><i style="width:${pct(learned(),610)}%"></i></div><div class="sub">${learned()}/610 aprendidos</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px"><button class="btn primary" data-route="day/${ds}">Abrir las 5 de hoy</button><button class="btn" onclick="A.five('${ds}',false)">▶ Escuchar las 5</button><button class="btn purple" data-route="audio">Audio Sur</button></div></div><div class="card metric"><small>Hoy</small><strong>${learned(ar)}/5</strong><span class="muted">aprendidas</span><hr style="border:0;border-top:1px solid var(--line);margin:16px 0"><small>Repasos</small><strong>${due().length}</strong></div></div><div class="section"><h2>Las 5 de hoy</h2></div><div class="grid g2">${ar.map(card).join("")}</div>`}
+function renderHome(){const ds=currentDate(),ar=dayItems(ds);app.innerHTML=head("Hoy · "+formatDate(ds),"5 elementos · voz neural Southern Female por defecto.")+`<div class="hero"><div class="card"><h2>Vietnamita del sur.<br><span class="accent">Sin claves ni APIs.</span></h2><p class="muted">La primera vez que escuches audio se descargan los modelos ONNX del repositorio correcto (aprox. 175 MB). Después queda cacheado por el navegador y las frases generadas también se guardan localmente.</p><div class="progress"><i style="width:${pct(learned(),610)}%"></i></div><div class="sub">${learned()}/610 aprendidos</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px"><button class="btn primary" data-route="day/${ds}">Abrir las 5 de hoy</button><button class="btn" onclick="A.five('${ds}',false)">▶ Escuchar las 5</button><button class="btn purple" data-route="audio">Audio Sur</button></div></div><div class="card metric"><small>Hoy</small><strong>${learned(ar)}/5</strong><span class="muted">aprendidas</span><hr style="border:0;border-top:1px solid var(--line);margin:16px 0"><small>Repasos</small><strong>${due().length}</strong></div></div><div class="section"><h2>Las 5 de hoy</h2></div><div class="grid g2">${ar.map(card).join("")}</div>`}
 function renderDay(ds){const ar=dayItems(ds);if(!ar.length)return go("calendar");app.innerHTML=head(formatDate(ds),`${learned(ar)}/5 aprendidas · Día ${ar[0].dayIndex} de 122`,`<button class="btn sm" data-route="calendar">← Calendario</button>`)+`<div class="card note"><b>Primera vez:</b> espera a que descargue el modelo (~165 MB). Después los audios se generan localmente y se guardan. Modelo por defecto: Southern Female (miền Nam).</div><div class="audio-row"><button class="btn primary" onclick="A.five('${ds}',false)">▶ Escuchar las 5</button><button class="btn purple" onclick="A.five('${ds}',true)">🎧 Shadowing</button><button class="btn" data-route="audio">Audio Sur</button></div><div class="section"><h2>Las 5</h2></div><div class="grid g2">${ar.map(card).join("")}</div>`}
 function renderCalendar(){let h="",last="";for(const ds of [...new Set(ITEMS.map(x=>x.date))]){const ar=dayItems(ds),m=monthName(ds),done=ar.every(x=>st(x.id).learned);if(m!==last){h+=`<div class="month-title">${m}</div>`;last=m}h+=`<button class="card daybtn ${done?"done":""} ${ds===currentDate()?"current":""}" data-route="day/${ds}"><div class="dn">${ds.slice(8,10)} ${m.slice(0,3)}</div><b>${learned(ar)}/5</b><small>Día ${ar[0].dayIndex}</small></button>`}app.innerHTML=head("Calendario","122 días · 610 elementos · exactamente 5 diarios.")+`<div class="days">${h}</div>`}
 function renderReview(){const ar=due();app.innerHTML=head("Repaso","1 → 3 → 7 → 14 → 30 → 60 días.")+`<div class="card">${ar.length?ar.map(x=>`<div class="reviewrow"><div><b>${esc(x.es)}</b><div class="vi">${esc(x.vi)}</div><div class="phon">${S.settings.phon?esc(x.phon):""}</div><button class="audio-btn" onclick='A.play(${JSON.stringify(x.vi)},1,1,${JSON.stringify(x.vi)})'>🔊 Sur</button></div><div><button class="btn gold sm" onclick="A.grade(${x.id},true)">Me costó</button> <button class="btn primary sm" onclick="A.grade(${x.id},false)">Lo sé</button></div></div>`).join(""):'<div class="muted" style="padding:25px;text-align:center">No tienes repasos vencidos.</div>'}</div>`}
@@ -280,7 +347,7 @@ async function renderAudio(){
   <div class="card">
    <h2>Modelo neural</h2>
    <p>El motor utiliza un modelo VITS vietnamita con cinco voces regionales. Por defecto he seleccionado <b>SF · Southern Female (Nam Nữ)</b>.</p>
-   <div class="loadbox"><div class="loadbar"><i id="ttsLoadBar" style="width:${loadProgress}%"></i></div><div id="ttsLoadText" class="loadtxt">${esc(loadMessage)}</div></div>
+   <div class="status ok">Repositorio corregido: letrggghieu/v-tts-onnx · fallback: valtecAI-team/valtec-tts-onnx</div><div class="loadbox"><div class="loadbar"><i id="ttsLoadBar" style="width:${loadProgress}%"></i></div><div id="ttsLoadText" class="loadtxt">${esc(loadMessage)}</div></div>
    <div class="audio-row"><button class="btn primary" onclick="A.prepare()">Preparar voz ahora</button><button class="btn purple" onclick="A.test()">▶ Probar «Xin chào»</button></div>
   </div>
   <div class="card">
@@ -297,7 +364,7 @@ async function renderAudio(){
  </div>
 
  <div class="section"><h2>Qué necesitas hacer</h2></div>
- <div class="card note"><b>Nada que instalar ni ninguna cuenta.</b> Solo Internet la primera vez para descargar aproximadamente 165 MB. Chrome, Edge y Firefox modernos pueden ejecutar el modelo con WebAssembly. Después los modelos quedan en la caché del navegador y cada frase generada se guarda además en IndexedDB.</div>
+ <div class="card note"><b>Nada que instalar ni ninguna cuenta.</b> Solo Internet la primera vez para descargar aproximadamente 175 MB. Chrome, Edge y Firefox modernos pueden ejecutar el modelo con WebAssembly. Después los modelos quedan en la caché del navegador y cada frase generada se guarda además en IndexedDB.</div>
 
  <div class="section"><h2>Estado</h2></div>
  <div class="grid g3">
