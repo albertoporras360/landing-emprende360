@@ -8,19 +8,37 @@
 
   <meta
     name="description"
-    content="Emprende360 convierte red, criterio y contexto en mejores conversaciones B2B mediante Foros, Rondas, Impulso B2B y Vertical Partners."
+    content="Emprende360 crea conversaciones B2B con contexto mediante Foros Ejecutivos, Rondas y sesiones gratuitas, y ofrece Impulso B2B y Vertical Partners para activar mercado y posicionamiento."
   />
 
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://emprende360.club/" />
 
-  <meta property="og:title" content="Emprende360 · Conversaciones y activación comercial B2B" />
+  <meta property="og:title" content="Emprende360 · Conversaciones B2B con contexto" />
   <meta
     property="og:description"
-    content="Participa en Foros y Rondas B2B o trabaja con Emprende360 para activar tu mercado o posicionar tu empresa dentro de una vertical."
+    content="Foros Ejecutivos, Rondas B2B y conversaciones gratuitas. Y, cuando quieres ir más allá, Impulso B2B y Vertical Partners."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://emprende360.club/" />
+
+  <meta name="theme-color" content="#020617" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Emprende360",
+    "url":"https://emprende360.club/",
+    "founder":{
+      "@type":"Person",
+      "name":"Alberto Porras"
+    },
+    "sameAs":[
+      "https://es.linkedin.com/in/albertoporrasmoreno"
+    ]
+  }
+  </script>
 
   <style>
     :root{
@@ -36,6 +54,7 @@
       --gold-soft:#FDE68A;
 
       --green:#22C55E;
+      --green-soft:#86EFAC;
 
       --text:#F8FAFC;
       --soft:#CBD5E1;
@@ -46,7 +65,6 @@
       --glass2:rgba(255,255,255,.08);
 
       --shadow:0 30px 100px rgba(0,0,0,.38);
-
       --max:1180px;
     }
 
@@ -90,7 +108,7 @@
     }
 
     .center{
-      max-width:850px;
+      max-width:860px;
       margin-left:auto;
       margin-right:auto;
       text-align:center;
@@ -102,64 +120,72 @@
       line-height:1.68;
     }
 
-    .muted{color:var(--muted)}
+    .small{
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.55;
+    }
 
     .grad-text{
-      background:linear-gradient(90deg,#fff,#c8ecff 46%,#ffe6a6);
+      background:linear-gradient(90deg,#fff,#c8ecff 48%,#ffe6a6);
       -webkit-background-clip:text;
       background-clip:text;
       color:transparent;
     }
 
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      border:1px solid rgba(255,255,255,.13);
-      background:rgba(255,255,255,.055);
-      color:#DBEAFE;
-      border-radius:999px;
-      padding:8px 13px;
-      font-size:11px;
-      font-weight:900;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-
+    .pill,
     .kicker{
       display:inline-flex;
       align-items:center;
       gap:8px;
+      border-radius:999px;
+      font-weight:950;
+      text-transform:uppercase;
+    }
+
+    .pill{
+      padding:8px 13px;
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(255,255,255,.055);
+      color:#DBEAFE;
+      font-size:11px;
+      letter-spacing:.08em;
+    }
+
+    .pill.free{
+      border-color:rgba(34,197,94,.26);
+      background:rgba(34,197,94,.08);
+      color:var(--green-soft);
+    }
+
+    .kicker{
+      padding:7px 12px;
       border:1px solid rgba(24,167,255,.25);
       background:rgba(24,167,255,.09);
       color:#C8ECFF;
-      border-radius:999px;
-      padding:7px 12px;
       font-size:11px;
-      font-weight:950;
-      text-transform:uppercase;
       letter-spacing:.14em;
     }
 
     h1{
       margin:18px 0 0;
-      font-size:clamp(42px,5.15vw,66px);
+      font-size:clamp(44px,5.45vw,69px);
       line-height:.98;
-      letter-spacing:-.058em;
+      letter-spacing:-.06em;
       font-weight:950;
     }
 
     h2{
       margin:14px 0 0;
-      font-size:clamp(33px,4.5vw,53px);
-      line-height:1.03;
+      font-size:clamp(32px,4.3vw,51px);
+      line-height:1.04;
       letter-spacing:-.045em;
       font-weight:950;
     }
 
     h3{
       margin:0;
-      line-height:1.15;
+      line-height:1.16;
     }
 
     .btn{
@@ -168,9 +194,9 @@
       justify-content:center;
       gap:9px;
       border-radius:999px;
-      padding:13px 19px;
+      padding:14px 20px;
       font-size:13px;
-      font-weight:900;
+      font-weight:950;
       border:0;
       cursor:pointer;
       transition:.24s ease;
@@ -242,7 +268,7 @@
       right:0;
       z-index:100;
       border-bottom:1px solid rgba(255,255,255,.09);
-      background:rgba(2,6,23,.86);
+      background:rgba(2,6,23,.87);
       backdrop-filter:blur(22px);
     }
 
@@ -302,12 +328,12 @@
     .nav-links a:hover{color:#fff}
 
     /* =========================================================
-       HERO
+       HERO — EVENTS FIRST
     ========================================================= */
 
     .hero{
       position:relative;
-      padding:104px 0 60px;
+      padding:110px 0 66px;
       background:
         radial-gradient(circle at 12% 10%,rgba(24,167,255,.22),transparent 30%),
         radial-gradient(circle at 88% 14%,rgba(244,197,66,.13),transparent 30%),
@@ -318,16 +344,16 @@
       position:relative;
       z-index:2;
       display:grid;
-      grid-template-columns:1.04fr .96fr;
-      gap:40px;
+      grid-template-columns:1.08fr .92fr;
+      gap:42px;
       align-items:start;
     }
 
     .hero-copy p{
-      max-width:730px;
-      margin:19px 0 0;
+      max-width:740px;
+      margin:20px 0 0;
       color:#CBD5E1;
-      font-size:17px;
+      font-size:18px;
       line-height:1.68;
     }
 
@@ -350,103 +376,405 @@
       gap:11px;
     }
 
-    .hero-scale{
-      margin-top:17px !important;
-      color:#94A3B8 !important;
-      font-size:12px !important;
-      line-height:1.55 !important;
+    .hero-topics{
+      margin-top:18px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.6;
+      font-weight:800;
+      letter-spacing:.025em;
     }
 
-    .hero-routes{
+    .agenda-card{
+      padding:29px;
+      border:1px solid rgba(34,197,94,.25);
+      border-radius:30px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(34,197,94,.10),transparent 38%),
+        radial-gradient(circle at 0 100%,rgba(24,167,255,.09),transparent 42%),
+        rgba(255,255,255,.05);
+      box-shadow:var(--shadow);
+    }
+
+    .agenda-card h3{
+      margin-top:13px;
+      font-size:29px;
+      letter-spacing:-.04em;
+    }
+
+    .agenda-card > p{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.58;
+    }
+
+    .agenda-list{
       display:grid;
+      gap:10px;
+      margin-top:19px;
+    }
+
+    .agenda-item{
+      display:grid;
+      grid-template-columns:auto 1fr;
       gap:11px;
+      align-items:start;
+      padding:14px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:17px;
+      background:rgba(2,6,23,.28);
     }
 
-    .hero-route{
-      display:grid;
-      grid-template-columns:auto 1fr auto;
-      gap:13px;
-      align-items:center;
-      padding:17px 18px;
-      border:1px solid rgba(255,255,255,.11);
-      border-radius:20px;
-      background:rgba(255,255,255,.045);
-      transition:.22s ease;
-      box-shadow:0 14px 40px rgba(0,0,0,.14);
-    }
-
-    .hero-route:hover{
-      transform:translateY(-3px);
-      border-color:rgba(24,167,255,.30);
-      background:rgba(255,255,255,.07);
-      box-shadow:0 20px 52px rgba(0,0,0,.21);
-    }
-
-    .hero-route.gold{
-      border-color:rgba(244,197,66,.27);
-      background:
-        radial-gradient(circle at 100% 0,rgba(244,197,66,.10),transparent 45%),
-        rgba(255,255,255,.045);
-    }
-
-    .hero-route.blue{
-      border-color:rgba(24,167,255,.25);
-      background:
-        radial-gradient(circle at 100% 0,rgba(24,167,255,.08),transparent 45%),
-        rgba(255,255,255,.045);
-    }
-
-    .route-icon{
-      width:44px;
-      height:44px;
+    .agenda-icon{
+      width:38px;
+      height:38px;
       display:grid;
       place-items:center;
-      border-radius:14px;
-      background:linear-gradient(135deg,#FDE047,#7DD3FC);
-      color:#06111F;
-      font-size:19px;
-      flex-shrink:0;
+      border-radius:12px;
+      background:rgba(24,167,255,.10);
+      border:1px solid rgba(24,167,255,.18);
+      flex:none;
     }
 
-    .hero-route-copy b{
+    .agenda-item b{
       display:block;
-      font-size:15px;
-      letter-spacing:-.015em;
+      font-size:13px;
     }
 
-    .hero-route-copy span{
+    .agenda-item span{
       display:block;
       margin-top:4px;
       color:#94A3B8;
-      font-size:11px;
-      line-height:1.42;
+      font-size:10px;
+      line-height:1.45;
     }
 
-    .route-tag{
-      display:block !important;
-      margin-top:7px !important;
-      font-size:9px !important;
-      font-weight:950 !important;
+    .agenda-card .btn{
+      width:100%;
+      margin-top:20px;
+    }
+
+    .agenda-note{
+      margin-top:12px;
+      color:#86EFAC;
+      text-align:center;
+      font-size:10px;
+      font-weight:950;
       letter-spacing:.08em;
       text-transform:uppercase;
     }
 
-    .route-tag.green{color:#86EFAC !important}
-    .route-tag.gold{color:#FDE68A !important}
-    .route-tag.blue{color:#7DD3FC !important}
+    /* =========================================================
+       EVENTS FORMATS
+    ========================================================= */
 
-    .hero-route-arrow{
-      color:#FDE68A;
-      font-size:18px;
+    .formats{
+      background:var(--navy);
+    }
+
+    .format-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      margin-top:36px;
+    }
+
+    .format-card{
+      min-height:270px;
+      padding:25px;
+      border:1px solid var(--line);
+      border-radius:25px;
+      background:rgba(255,255,255,.045);
+      transition:.24s ease;
+    }
+
+    .format-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(24,167,255,.28);
+      background:rgba(255,255,255,.065);
+    }
+
+    .format-icon{
+      width:46px;
+      height:46px;
+      display:grid;
+      place-items:center;
+      border-radius:15px;
+      background:linear-gradient(135deg,#7DD3FC,#FDE047);
+      color:#06111F;
+      font-size:19px;
       font-weight:950;
     }
 
+    .format-card h3{
+      margin-top:17px;
+      font-size:23px;
+      letter-spacing:-.03em;
+    }
+
+    .format-card p{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.58;
+    }
+
+    .format-tag{
+      display:inline-block;
+      margin-top:14px;
+      padding:6px 9px;
+      border:1px solid rgba(34,197,94,.20);
+      border-radius:999px;
+      background:rgba(34,197,94,.06);
+      color:#86EFAC;
+      font-size:9px;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
     /* =========================================================
-       TWO PRODUCTS
+       PROOF
+    ========================================================= */
+
+    .proof{
+      background:
+        radial-gradient(circle at 12% 15%,rgba(24,167,255,.09),transparent 30%),
+        radial-gradient(circle at 88% 20%,rgba(244,197,66,.08),transparent 30%),
+        var(--deep);
+    }
+
+    .proof-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      margin-top:36px;
+    }
+
+    .proof-card{
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:25px;
+      background:rgba(255,255,255,.04);
+      transition:.24s ease;
+    }
+
+    .proof-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(24,167,255,.28);
+      background:rgba(255,255,255,.06);
+    }
+
+    .proof-thumb{
+      position:relative;
+      width:100%;
+      aspect-ratio:16/9;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 20% 20%,rgba(24,167,255,.22),transparent 34%),
+        linear-gradient(135deg,#071522,#0B1728);
+    }
+
+    .proof-word{
+      position:absolute;
+      inset:0;
+      display:grid;
+      place-items:center;
+      color:rgba(255,255,255,.18);
+      font-size:30px;
+      font-weight:950;
+      letter-spacing:-.04em;
+      text-align:center;
+      padding:20px;
+    }
+
+    .proof-thumb:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,rgba(2,6,23,.02),rgba(2,6,23,.15) 60%,rgba(2,6,23,.62));
+      pointer-events:none;
+    }
+
+    .play{
+      position:absolute;
+      left:18px;
+      bottom:16px;
+      z-index:2;
+      width:43px;
+      height:43px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      color:#06111F;
+      background:linear-gradient(135deg,#FDE047,#F4C542);
+      font-size:15px;
+      font-weight:950;
+      box-shadow:0 12px 32px rgba(0,0,0,.28);
+    }
+
+    .proof-body{padding:21px}
+
+    .proof-label{
+      display:inline-flex;
+      padding:6px 9px;
+      border:1px solid rgba(24,167,255,.22);
+      border-radius:999px;
+      background:rgba(24,167,255,.07);
+      color:#BAE6FD;
+      font-size:9px;
+      font-weight:950;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    .proof-card h3{
+      margin-top:12px;
+      font-size:20px;
+      letter-spacing:-.025em;
+    }
+
+    .proof-card p{
+      margin:9px 0 0;
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .proof-link{
+      display:inline-block;
+      margin-top:15px;
+      color:#FDE68A;
+      font-size:12px;
+      font-weight:900;
+    }
+
+    /* =========================================================
+       SCALE
+    ========================================================= */
+
+    .scale{
+      background:var(--navy);
+    }
+
+    .scale-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:13px;
+      margin-top:35px;
+    }
+
+    .scale-card{
+      min-height:175px;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:23px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .scale-card strong{
+      display:block;
+      font-size:clamp(30px,3.7vw,45px);
+      line-height:1;
+      letter-spacing:-.05em;
+    }
+
+    .scale-card.blue strong{color:#7DD3FC}
+    .scale-card.gold strong{color:#FDE68A}
+
+    .scale-card b{
+      display:block;
+      margin-top:12px;
+      font-size:14px;
+    }
+
+    .scale-card p{
+      margin:8px 0 0;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.48;
+    }
+
+    .scale-note{
+      max-width:860px;
+      margin:18px auto 0;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.55;
+      text-align:center;
+    }
+
+    /* =========================================================
+       SYSTEM
+    ========================================================= */
+
+    .system{
+      background:var(--deep);
+    }
+
+    .flow-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:13px;
+      margin-top:36px;
+    }
+
+    .flow-item{
+      min-height:210px;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .flow-num{
+      width:40px;
+      height:40px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      background:linear-gradient(135deg,#FDE047,#7DD3FC);
+      color:#06111F;
+      font-size:13px;
+      font-weight:950;
+    }
+
+    .flow-item b{
+      display:block;
+      margin-top:14px;
+      font-size:17px;
+    }
+
+    .flow-item span{
+      display:block;
+      margin-top:7px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.52;
+    }
+
+    .system-quote{
+      max-width:820px;
+      margin:22px auto 0;
+      padding:15px 18px;
+      border:1px solid rgba(244,197,66,.22);
+      border-radius:18px;
+      background:rgba(244,197,66,.055);
+      color:#FDE68A;
+      text-align:center;
+      font-size:14px;
+      font-weight:900;
+      line-height:1.5;
+    }
+
+    /* =========================================================
+       MONETIZATION
     ========================================================= */
 
     .products{
-      background:var(--navy);
+      background:
+        radial-gradient(circle at 9% 12%,rgba(244,197,66,.08),transparent 28%),
+        radial-gradient(circle at 91% 16%,rgba(24,167,255,.09),transparent 30%),
+        var(--navy);
     }
 
     .products-grid{
@@ -457,7 +785,7 @@
     }
 
     .product-card{
-      min-height:440px;
+      min-height:470px;
       display:flex;
       flex-direction:column;
       padding:30px;
@@ -580,7 +908,7 @@
 
     .product-price strong{
       display:block;
-      font-size:34px;
+      font-size:35px;
       line-height:1;
       letter-spacing:-.05em;
       color:#FDE68A;
@@ -603,285 +931,19 @@
     }
 
     /* =========================================================
-       SCALE
-    ========================================================= */
-
-    .scale{
-      background:var(--deep);
-      padding:72px 0;
-    }
-
-    .scale-title{
-      text-align:center;
-      margin-bottom:24px;
-    }
-
-    .scale-title h2{
-      font-size:clamp(28px,3.6vw,44px);
-    }
-
-    .scale-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:13px;
-    }
-
-    .scale-card{
-      min-height:185px;
-      padding:22px;
-      border:1px solid var(--line);
-      border-radius:23px;
-      background:rgba(255,255,255,.04);
-    }
-
-    .scale-card strong{
-      display:block;
-      font-size:clamp(30px,3.7vw,46px);
-      line-height:1;
-      letter-spacing:-.05em;
-    }
-
-    .scale-card.blue strong{color:#7DD3FC}
-    .scale-card.gold strong{color:#FDE68A}
-
-    .scale-card b{
-      display:block;
-      margin-top:12px;
-      font-size:14px;
-    }
-
-    .scale-card p{
-      margin:8px 0 0;
-      color:#94A3B8;
-      font-size:11px;
-      line-height:1.48;
-    }
-
-    .scale-note{
-      max-width:860px;
-      margin:18px auto 0;
-      color:#94A3B8;
-      font-size:11px;
-      line-height:1.55;
-      text-align:center;
-    }
-
-    /* =========================================================
-       SYSTEM
-    ========================================================= */
-
-    .system{
-      background:var(--navy);
-    }
-
-    .system-grid{
-      display:grid;
-      grid-template-columns:.92fr 1.08fr;
-      gap:32px;
-      align-items:start;
-      margin-top:38px;
-    }
-
-    .system-copy{
-      padding:29px;
-      border:1px solid var(--line);
-      border-radius:27px;
-      background:rgba(255,255,255,.04);
-    }
-
-    .system-copy h3{
-      font-size:26px;
-      letter-spacing:-.035em;
-    }
-
-    .system-copy p{
-      color:#CBD5E1;
-      font-size:14px;
-      line-height:1.65;
-    }
-
-    .system-quote{
-      margin-top:17px;
-      padding:16px;
-      border:1px solid rgba(244,197,66,.22);
-      border-radius:17px;
-      background:rgba(244,197,66,.055);
-      color:#FDE68A;
-      font-weight:900;
-      line-height:1.5;
-    }
-
-    .flow{
-      display:grid;
-      gap:10px;
-    }
-
-    .flow-item{
-      display:grid;
-      grid-template-columns:auto 1fr;
-      gap:13px;
-      align-items:start;
-      padding:19px;
-      border:1px solid var(--line);
-      border-radius:21px;
-      background:rgba(255,255,255,.035);
-    }
-
-    .flow-num{
-      width:38px;
-      height:38px;
-      display:grid;
-      place-items:center;
-      border-radius:13px;
-      background:linear-gradient(135deg,#FDE047,#7DD3FC);
-      color:#06111F;
-      font-size:13px;
-      font-weight:950;
-    }
-
-    .flow-item b{
-      display:block;
-      font-size:16px;
-    }
-
-    .flow-item span{
-      display:block;
-      margin-top:5px;
-      color:#94A3B8;
-      font-size:12px;
-      line-height:1.5;
-    }
-
-    /* =========================================================
-       PROOF
-    ========================================================= */
-
-    .proof{
-      background:
-        radial-gradient(circle at 12% 15%,rgba(24,167,255,.09),transparent 30%),
-        radial-gradient(circle at 88% 20%,rgba(244,197,66,.08),transparent 30%),
-        var(--deep);
-    }
-
-    .proof-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:15px;
-      margin-top:36px;
-    }
-
-    .proof-card{
-      overflow:hidden;
-      border:1px solid var(--line);
-      border-radius:25px;
-      background:rgba(255,255,255,.04);
-      transition:.24s ease;
-    }
-
-    .proof-card:hover{
-      transform:translateY(-4px);
-      border-color:rgba(24,167,255,.28);
-      background:rgba(255,255,255,.06);
-    }
-
-    .proof-thumb{
-      position:relative;
-      width:100%;
-      aspect-ratio:16/9;
-      overflow:hidden;
-      background:
-        radial-gradient(circle at 20% 20%,rgba(24,167,255,.22),transparent 34%),
-        linear-gradient(135deg,#071522,#0B1728);
-    }
-
-    .proof-word{
-      position:absolute;
-      inset:0;
-      display:grid;
-      place-items:center;
-      color:rgba(255,255,255,.18);
-      font-size:30px;
-      font-weight:950;
-      letter-spacing:-.04em;
-      text-align:center;
-      padding:20px;
-    }
-
-    .proof-thumb:after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(180deg,rgba(2,6,23,.02),rgba(2,6,23,.15) 60%,rgba(2,6,23,.62));
-      pointer-events:none;
-    }
-
-    .play{
-      position:absolute;
-      left:18px;
-      bottom:16px;
-      z-index:2;
-      width:43px;
-      height:43px;
-      display:grid;
-      place-items:center;
-      border-radius:50%;
-      color:#06111F;
-      background:linear-gradient(135deg,#FDE047,#F4C542);
-      font-size:15px;
-      font-weight:950;
-      box-shadow:0 12px 32px rgba(0,0,0,.28);
-    }
-
-    .proof-body{padding:21px}
-
-    .proof-label{
-      display:inline-flex;
-      padding:6px 9px;
-      border:1px solid rgba(24,167,255,.22);
-      border-radius:999px;
-      background:rgba(24,167,255,.07);
-      color:#BAE6FD;
-      font-size:9px;
-      font-weight:950;
-      letter-spacing:.09em;
-      text-transform:uppercase;
-    }
-
-    .proof-card h3{
-      margin-top:12px;
-      font-size:20px;
-      letter-spacing:-.025em;
-    }
-
-    .proof-card p{
-      margin:9px 0 0;
-      color:#94A3B8;
-      font-size:12px;
-      line-height:1.5;
-    }
-
-    .proof-link{
-      display:inline-block;
-      margin-top:15px;
-      color:#FDE68A;
-      font-size:12px;
-      font-weight:900;
-    }
-
-    /* =========================================================
        PARTNER HUB
     ========================================================= */
 
     .partner-hub{
-      background:var(--navy);
+      background:var(--deep);
     }
 
     .hub-shell{
       display:grid;
-      grid-template-columns:.95fr 1.05fr;
+      grid-template-columns:.96fr 1.04fr;
       gap:30px;
       align-items:center;
-      padding:36px;
+      padding:35px;
       border:1px solid rgba(24,167,255,.24);
       border-radius:32px;
       background:
@@ -913,7 +975,7 @@
     }
 
     .hub-card{
-      min-height:150px;
+      min-height:145px;
       padding:18px;
       border:1px solid var(--line);
       border-radius:19px;
@@ -931,7 +993,10 @@
       margin-bottom:11px;
     }
 
-    .hub-card b{display:block;font-size:14px}
+    .hub-card b{
+      display:block;
+      font-size:14px;
+    }
 
     .hub-card span{
       display:block;
@@ -942,47 +1007,11 @@
     }
 
     /* =========================================================
-       EVENTS CTA
-    ========================================================= */
-
-    .events-cta{
-      background:
-        radial-gradient(circle at 15% 20%,rgba(34,197,94,.10),transparent 32%),
-        radial-gradient(circle at 85% 30%,rgba(24,167,255,.10),transparent 32%),
-        var(--deep);
-    }
-
-    .events-box{
-      display:grid;
-      grid-template-columns:1.08fr .92fr;
-      gap:30px;
-      align-items:center;
-      padding:38px;
-      border:1px solid rgba(24,167,255,.22);
-      border-radius:32px;
-      background:rgba(255,255,255,.045);
-      box-shadow:var(--shadow);
-    }
-
-    .events-copy p{
-      color:#CBD5E1;
-      font-size:15px;
-      line-height:1.65;
-    }
-
-    .events-actions{
-      display:grid;
-      gap:10px;
-    }
-
-    .events-actions .btn{width:100%}
-
-    /* =========================================================
        FOUNDER STRIP
     ========================================================= */
 
     .founder-strip{
-      padding:32px 0;
+      padding:31px 0;
       background:var(--navy);
       border-top:1px solid rgba(255,255,255,.06);
       border-bottom:1px solid rgba(255,255,255,.06);
@@ -1000,6 +1029,7 @@
       display:flex;
       align-items:center;
       gap:14px;
+      max-width:850px;
     }
 
     .founder-avatar{
@@ -1026,6 +1056,34 @@
       color:#94A3B8;
       font-size:11px;
       line-height:1.45;
+    }
+
+    /* =========================================================
+       FINAL CTA — EVENTS AGAIN
+    ========================================================= */
+
+    .final{
+      background:
+        radial-gradient(circle at 15% 20%,rgba(34,197,94,.10),transparent 32%),
+        radial-gradient(circle at 85% 30%,rgba(24,167,255,.10),transparent 32%),
+        var(--deep);
+      text-align:center;
+    }
+
+    .final-box{
+      padding:43px;
+      border:1px solid rgba(34,197,94,.22);
+      border-radius:34px;
+      background:rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .final-actions{
+      margin-top:24px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
     }
 
     /* =========================================================
@@ -1066,28 +1124,28 @@
       .nav-links{display:none}
 
       .hero-grid,
-      .system-grid,
-      .hub-shell,
-      .events-box{
+      .hub-shell{
         grid-template-columns:1fr;
       }
 
-      .products-grid{
+      .format-grid,
+      .proof-grid{
         grid-template-columns:1fr;
       }
 
-      .scale-grid{
+      .scale-grid,
+      .flow-grid{
         grid-template-columns:1fr 1fr;
       }
 
-      .proof-grid{
+      .products-grid{
         grid-template-columns:1fr;
       }
     }
 
     @media(max-width:760px){
       .wrap{padding:0 16px}
-      .section{padding:60px 0}
+      .section{padding:58px 0}
       .nav{padding:10px 16px}
       .brand-sub{display:none}
 
@@ -1096,11 +1154,13 @@
         font-size:10px;
       }
 
-      .hero{padding:101px 0 52px}
+      .hero{
+        padding:101px 0 50px;
+      }
 
       h1{
-        font-size:clamp(37px,11vw,51px);
-        line-height:1.02;
+        font-size:clamp(38px,11vw,52px);
+        line-height:1.01;
       }
 
       h2{
@@ -1112,32 +1172,27 @@
         font-size:15px;
       }
 
-      .hero-actions{
+      .hero-actions,
+      .final-actions{
         display:grid;
         grid-template-columns:1fr;
       }
 
-      .hero-actions .btn{
+      .hero-actions .btn,
+      .final-actions .btn{
         width:100%;
       }
 
-      .hero-route{
-        grid-template-columns:auto 1fr auto;
-        padding:14px;
-      }
-
       .scale-grid,
+      .flow-grid,
       .hub-grid{
         grid-template-columns:1fr;
       }
 
-      .scale{
-        padding:56px 0;
-      }
-
+      .agenda-card,
       .product-card,
       .hub-shell,
-      .events-box{
+      .final-box{
         padding:24px;
       }
 
@@ -1146,7 +1201,7 @@
       }
 
       .product-price strong{
-        font-size:30px;
+        font-size:31px;
       }
 
       .founder-inner{
@@ -1165,12 +1220,12 @@
       <div class="brand-mark">E</div>
       <div>
         <div class="brand-title">Emprende360</div>
-        <div class="brand-sub">Conversaciones · Activación · Verticales B2B</div>
+        <div class="brand-sub">Conversaciones B2B con contexto</div>
       </div>
     </a>
 
     <nav class="nav-links">
-      <a href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">Agenda</a>
+      <a href="https://emprende360.club/eventos" target="_blank" rel="noopener noreferrer">Eventos gratuitos</a>
       <a href="https://emprende360.club/impulsob2b" target="_blank" rel="noopener noreferrer">Impulso B2B</a>
       <a href="https://emprende360.club/vertical-partners" target="_blank" rel="noopener noreferrer">Vertical Partners</a>
       <a href="https://emprende360.club/partner-hub/" target="_blank" rel="noopener noreferrer">Partner Hub</a>
@@ -1178,11 +1233,11 @@
 
     <a
       class="btn btn-primary"
-      href="https://emprende360.club/impulsob2b"
+      href="https://emprende360.club/eventos"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Activar mi mercado
+      Ver eventos gratuitos
     </a>
 
   </div>
@@ -1191,7 +1246,7 @@
 <main>
 
 <!-- =========================================================
-     HERO
+     HERO — EVENTS FIRST
 ========================================================= -->
 
 <section id="top" class="hero">
@@ -1202,108 +1257,379 @@
 
     <div class="hero-copy reveal">
 
-      <span class="pill">Emprende360 · Ecosistema de relaciones B2B</span>
+      <span class="pill free">Participación gratuita</span>
 
       <h1>
         <span class="grad-text">
-          Convertimos red, criterio y contexto en mejores conversaciones B2B.
+          Conversaciones B2B que merece la pena tener.
         </span>
       </h1>
 
       <p>
-        Participa gratuitamente en <strong>Foros y Rondas</strong> o trabaja con Emprende360 para <strong>activar un mercado concreto</strong> o <strong>posicionar tu empresa dentro de una vertical B2B</strong>.
+        <strong>Foros Ejecutivos, Rondas B2B y conversaciones</strong> con founders, directivos, expertos y profesionales alrededor de problemas empresariales concretos.
       </p>
 
       <div class="hero-claim">
-        No juntamos gente. Diseñamos razones para que la gente adecuada hable.
+        Menos webinar. Más conversación.
       </div>
 
       <div class="hero-actions">
+
         <a
           class="btn btn-primary"
-          href="https://emprende360.club/impulsob2b"
+          href="https://emprende360.club/eventos"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Activar mi mercado →
+          Ver eventos gratuitos →
         </a>
 
         <a
           class="btn btn-secondary"
-          href="https://emprende360.club/septiembre"
+          href="https://forms.gle/co89pCvzScuLtr6z5"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Ver conversaciones gratuitas
+          Recibir próximos eventos
         </a>
+
       </div>
 
-      <p class="hero-scale">
-        Una red construida durante años entre España y Latinoamérica, ahora organizada para crear contexto, activar relaciones y dar continuidad a las conversaciones que merecen avanzar.
+      <div class="hero-topics">
+        IA · Ventas B2B · Corporate Finance · Founders · Liderazgo · Emprendedores · Rondas de Alianzas
+      </div>
+
+    </div>
+
+    <aside class="agenda-card reveal">
+
+      <span class="kicker">Agenda abierta</span>
+
+      <h3>
+        Entra en las conversaciones que realmente te interesen.
+      </h3>
+
+      <p>
+        No necesitas ser miembro ni contratar ningún servicio para participar en la parte abierta de Emprende360.
       </p>
 
-    </div>
+      <div class="agenda-list">
 
-    <div class="hero-routes reveal">
+        <div class="agenda-item">
+          <div class="agenda-icon">🎙</div>
+          <div>
+            <b>Foros Ejecutivos</b>
+            <span>Expertos y perspectivas complementarias alrededor de un problema empresarial concreto.</span>
+          </div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-icon">🤝</div>
+          <div>
+            <b>Rondas B2B</b>
+            <span>Complementariedad, buyers compartidos y relaciones que pueden tener recorrido.</span>
+          </div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-icon">💬</div>
+          <div>
+            <b>Entrevistas y conversaciones</b>
+            <span>Casos, experiencia y temas más específicos con profesionales del ecosistema.</span>
+          </div>
+        </div>
+
+      </div>
 
       <a
-        class="hero-route"
-        href="https://emprende360.club/septiembre"
+        class="btn btn-primary"
+        href="https://emprende360.club/eventos"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div class="route-icon">💬</div>
-
-        <div class="hero-route-copy">
-          <b>Quiero participar</b>
-          <span>Foros Ejecutivos, Rondas y conversaciones B2B.</span>
-          <span class="route-tag green">Participación gratuita</span>
-        </div>
-
-        <div class="hero-route-arrow">→</div>
+        Explorar agenda completa →
       </a>
 
-      <a
-        class="hero-route gold"
-        href="https://emprende360.club/impulsob2b"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="route-icon">↗</div>
+      <div class="agenda-note">
+        Acceso gratuito · elige solo lo que te aporte
+      </div>
 
-        <div class="hero-route-copy">
-          <b>Quiero activar mi mercado</b>
-          <span>Impulso B2B trabaja alrededor de un buyer concreto.</span>
-          <span class="route-tag gold">290 € + IVA · Septiembre</span>
-        </div>
-
-        <div class="hero-route-arrow">→</div>
-      </a>
-
-      <a
-        class="hero-route blue"
-        href="https://emprende360.club/vertical-partners"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="route-icon">◎</div>
-
-        <div class="hero-route-copy">
-          <b>Quiero posicionar mi empresa</b>
-          <span>Vertical Partners crea presencia recurrente dentro de un mercado B2B.</span>
-          <span class="route-tag blue">1.490 € + IVA · Q4 Founding</span>
-        </div>
-
-        <div class="hero-route-arrow">→</div>
-      </a>
-
-    </div>
+    </aside>
 
   </div>
 </section>
 
 <!-- =========================================================
-     TWO PRODUCTS
+     EVENT FORMATS
+========================================================= -->
+
+<section class="section formats">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Cómo participas</span>
+      <h2>Distintos formatos. La misma idea: crear mejores razones para hablar.</h2>
+      <p class="lead">
+        La parte gratuita de Emprende360 es la puerta de entrada al ecosistema y el lugar donde empiezan muchas de las relaciones que después continúan.
+      </p>
+    </div>
+
+    <div class="format-grid reveal">
+
+      <article class="format-card">
+        <div class="format-icon">🎙</div>
+        <h3>Foros Ejecutivos</h3>
+        <p>
+          Menos ponencias aisladas y más contraste entre especialistas sobre ventas, IA, finanzas, liderazgo, founders y otros problemas B2B.
+        </p>
+        <span class="format-tag">Participación gratuita</span>
+      </article>
+
+      <article class="format-card">
+        <div class="format-icon">🤝</div>
+        <h3>Rondas de Alianzas B2B</h3>
+        <p>
+          Sesiones orientadas a complementariedad, buyers compatibles y posibles relaciones entre perfiles que pueden aportar algo el uno al otro.
+        </p>
+        <span class="format-tag">Participación gratuita</span>
+      </article>
+
+      <article class="format-card">
+        <div class="format-icon">💬</div>
+        <h3>Entrevistas y sesiones</h3>
+        <p>
+          Conversaciones más específicas alrededor de experiencia, casos, mercados, herramientas y problemas empresariales concretos.
+        </p>
+        <span class="format-tag">Según agenda</span>
+      </article>
+
+    </div>
+
+    <div class="hero-actions reveal" style="justify-content:center;">
+      <a
+        class="btn btn-primary"
+        href="https://emprende360.club/eventos"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ver todos los próximos eventos →
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     PROOF
+========================================================= -->
+
+<section class="section proof">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Emprende360 en acción</span>
+      <h2>No es una idea. Las conversaciones ya están ocurriendo.</h2>
+      <p class="lead">
+        Puedes ver sesiones anteriores, una Ronda real y la agenda abierta antes de decidir si quieres implicarte más.
+      </p>
+    </div>
+
+    <div class="proof-grid reveal">
+
+      <a
+        class="proof-card"
+        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="proof-thumb">
+          <div class="proof-word">FOROS<br>EJECUTIVOS</div>
+          <div class="play">▶</div>
+        </div>
+
+        <div class="proof-body">
+          <span class="proof-label">Vídeos</span>
+          <h3>Mira cómo son las conversaciones.</h3>
+          <p>
+            Sesiones anteriores con especialistas alrededor de problemas y decisiones empresariales concretas.
+          </p>
+          <span class="proof-link">Ver sesiones anteriores →</span>
+        </div>
+      </a>
+
+      <a
+        class="proof-card"
+        href="https://es.linkedin.com/posts/albertoporrasmoreno_la-primera-ronda-de-alianzas-b2b-confirm%C3%B3-activity-7467106669991305216-AOwf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="proof-thumb">
+          <div class="proof-word">RONDA<br>DE ALIANZAS</div>
+          <div class="play">↗</div>
+        </div>
+
+        <div class="proof-body">
+          <span class="proof-label">Rondas B2B</span>
+          <h3>Complementariedad con contexto.</h3>
+          <p>
+            Una muestra del formato donde buscamos relaciones con posible recorrido, no simplemente presentaciones rápidas.
+          </p>
+          <span class="proof-link">Ver una Ronda →</span>
+        </div>
+      </a>
+
+      <a
+        class="proof-card"
+        href="https://emprende360.club/eventos"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="proof-thumb">
+          <div class="proof-word">AGENDA<br>ABIERTA</div>
+          <div class="play">→</div>
+        </div>
+
+        <div class="proof-body">
+          <span class="proof-label">Próximas conversaciones</span>
+          <h3>Entra en las próximas.</h3>
+          <p>
+            Consulta Foros, Rondas y nuevas conversaciones B2B y participa en las que realmente tengan sentido para ti.
+          </p>
+          <span class="proof-link">Ver agenda actual →</span>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     SCALE
+========================================================= -->
+
+<section class="section scale">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">La infraestructura</span>
+      <h2>La red aporta alcance. La selección aporta valor.</h2>
+      <p class="lead">
+        Emprende360 no parte de cero cada vez que crea una conversación.
+      </p>
+    </div>
+
+    <div class="scale-grid reveal">
+
+      <article class="scale-card gold">
+        <strong>~15 años</strong>
+        <b>construyendo red y comunidad profesional</b>
+        <p>
+          El primer grupo de Emprende360 en LinkedIn nació hace aproximadamente quince años.
+        </p>
+      </article>
+
+      <article class="scale-card blue">
+        <strong>12.487</strong>
+        <b>decisores B2B identificados en red directa</b>
+        <p>
+          CEO · Founder · Socio · Owner · Dirección General · C-Level dentro de la red de primer nivel de LinkedIn.
+        </p>
+      </article>
+
+      <article class="scale-card gold">
+        <strong>70.000+</strong>
+        <b>miembros en la comunidad principal</b>
+        <p>
+          Profesionales, founders, especialistas y empresas alrededor de emprendimiento y negocio.
+        </p>
+      </article>
+
+      <article class="scale-card blue">
+        <strong>ES + LATAM</strong>
+        <b>relaciones entre distintos mercados</b>
+        <p>
+          España y Latinoamérica, con perfiles y conversaciones B2B en diferentes verticales.
+        </p>
+      </article>
+
+    </div>
+
+    <p class="scale-note reveal">
+      La red directa y la comunidad son activos distintos y pueden solaparse. No se suman como una única audiencia ni se garantiza alcance individual.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     SYSTEM
+========================================================= -->
+
+<section class="section system">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+      <span class="kicker">Qué hay detrás</span>
+      <h2>Red + selección + contexto + seguimiento.</h2>
+      <p class="lead">
+        Tener contactos no significa tener relaciones activas. El trabajo empieza cuando añadimos una buena razón para hablar.
+      </p>
+    </div>
+
+    <div class="flow-grid reveal">
+
+      <article class="flow-item">
+        <div class="flow-num">1</div>
+        <b>Red</b>
+        <span>
+          Partimos de relaciones, perfiles, comunidad, expertos, partners y conversaciones que ya existen.
+        </span>
+      </article>
+
+      <article class="flow-item">
+        <div class="flow-num">2</div>
+        <b>Selección</b>
+        <span>
+          No todo el mundo debe hablar con todo el mundo. Priorizamos perfiles y temas con lógica real.
+        </span>
+      </article>
+
+      <article class="flow-item">
+        <div class="flow-num">3</div>
+        <b>Contexto</b>
+        <span>
+          Foro, Ronda, entrevista, mesa, sesión privada o activación: creamos una razón concreta para entrar en conversación.
+        </span>
+      </article>
+
+      <article class="flow-item">
+        <div class="flow-num">4</div>
+        <b>Seguimiento</b>
+        <span>
+          Las relaciones con recorrido pueden evolucionar hacia partners, referencias, colaboraciones, oportunidades o nuevos proyectos.
+        </span>
+      </article>
+
+    </div>
+
+    <div class="system-quote reveal">
+      No juntamos gente. Diseñamos razones para que la gente adecuada hable.
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     MONETIZATION — ONLY TWO OFFERS
 ========================================================= -->
 
 <section id="trabaja" class="section products">
@@ -1311,10 +1637,10 @@
   <div class="wrap">
 
     <div class="center reveal">
-      <span class="kicker">Dos formas de trabajar con Emprende360</span>
-      <h2>Activar tu mercado o posicionar tu empresa dentro de él.</h2>
+      <span class="kicker">¿Quieres ir más allá de participar?</span>
+      <h2>Dos formas de trabajar directamente con Emprende360.</h2>
       <p class="lead">
-        Dos necesidades diferentes. Dos productos distintos. Sin convertir Emprende360 en un catálogo de servicios.
+        Si quieres activar tu propio mercado o posicionar tu empresa dentro de una vertical, estas son las dos vías.
       </p>
     </div>
 
@@ -1334,22 +1660,23 @@
         </div>
 
         <p>
-          Trabajamos durante septiembre alrededor de tu objetivo, oferta, buyer, problema y ángulo para crear mejores razones para iniciar y continuar conversaciones B2B.
+          Un trabajo de 30 días para convertir experiencia, posicionamiento, red y contexto en mejores conversaciones B2B.
         </p>
 
         <ul class="product-list">
           <li><span class="check">✓</span><span>Sesión individual de activación.</span></li>
-          <li><span class="check">✓</span><span>Mapa de Activación: buyer, objetivo, problema y contexto.</span></li>
+          <li><span class="check">✓</span><span>Objetivo, buyer, problema y ángulo.</span></li>
+          <li><span class="check">✓</span><span>Mapa de Activación.</span></li>
           <li><span class="check">✓</span><span>Activación propia adaptada a tu perfil.</span></li>
-          <li><span class="check">✓</span><span>Activación desde la red y los contextos de Emprende360.</span></li>
-          <li><span class="check">✓</span><span>Dos mesas privadas.</span></li>
-          <li><span class="check">✓</span><span>Partner Match, cruces y seguimiento durante septiembre.</span></li>
+          <li><span class="check">✓</span><span>Activación desde la red y contextos de Emprende360.</span></li>
+          <li><span class="check">✓</span><span>Dos mesas privadas, cruces y seguimiento.</span></li>
         </ul>
 
         <div class="product-bottom">
+
           <div class="product-price">
-            <strong>290 € + IVA</strong>
-            <span>Edición Founding Partners · septiembre 2026 · sin permanencia.</span>
+            <strong>390 €</strong>
+            <span>30 días · sin permanencia.</span>
           </div>
 
           <div class="product-cta">
@@ -1362,6 +1689,7 @@
               Conocer Impulso B2B →
             </a>
           </div>
+
         </div>
 
       </article>
@@ -1376,11 +1704,11 @@
         <h3>Vertical Partners</h3>
 
         <div class="product-job">
-          Quiero posicionar mi empresa delante de un mercado.
+          Quiero posicionar mi empresa dentro de un mercado.
         </div>
 
         <p>
-          Asociamos una empresa durante octubre, noviembre y diciembre a una vertical B2B concreta con presencia recurrente, conversaciones, contenido y reporting.
+          Presencia recurrente durante Q4 dentro de una vertical B2B donde tu solución tenga una razón real para estar.
         </p>
 
         <ul class="product-list">
@@ -1393,9 +1721,10 @@
         </ul>
 
         <div class="product-bottom">
+
           <div class="product-price">
-            <strong>1.490 € + IVA</strong>
-            <span>Founding Vertical Partner · Q4 2026 · sujeto a encaje y disponibilidad.</span>
+            <strong>1.490 € · Q4</strong>
+            <span>Founding Vertical Partner · sujeto a encaje y disponibilidad.</span>
           </div>
 
           <div class="product-cta">
@@ -1408,218 +1737,16 @@
               Explorar Vertical Partners →
             </a>
           </div>
+
         </div>
 
       </article>
 
     </div>
 
-  </div>
-
-</section>
-
-<!-- =========================================================
-     SCALE
-========================================================= -->
-
-<section class="scale">
-
-  <div class="wrap">
-
-    <div class="scale-title reveal">
-      <span class="kicker">Una red que no empezó ayer</span>
-      <h2>La escala importa. La selección importa más.</h2>
-    </div>
-
-    <div class="scale-grid reveal">
-
-      <article class="scale-card gold">
-        <strong>~15 años</strong>
-        <b>construyendo red y comunidad profesional</b>
-        <p>El primer grupo de Emprende360 en LinkedIn nació hace aproximadamente quince años.</p>
-      </article>
-
-      <article class="scale-card blue">
-        <strong>12.487</strong>
-        <b>decisores B2B identificados en red directa</b>
-        <p>CEO · Founder · Socio · Owner · Dirección General · C-Level dentro de la red de primer nivel de LinkedIn.</p>
-      </article>
-
-      <article class="scale-card gold">
-        <strong>70.000+</strong>
-        <b>miembros en la comunidad principal</b>
-        <p>Profesionales, founders, especialistas y empresas alrededor de emprendimiento y negocio.</p>
-      </article>
-
-      <article class="scale-card blue">
-        <strong>ES + LATAM</strong>
-        <b>relaciones entre distintos mercados</b>
-        <p>España y Latinoamérica, con perfiles y conversaciones B2B en diferentes verticales.</p>
-      </article>
-
-    </div>
-
-    <p class="scale-note reveal">
-      No sumamos estas cifras como si fueran una única audiencia porque existe solapamiento entre redes y comunidades. El valor está en combinar alcance, selección, contexto y capacidad de activación.
+    <p class="small center reveal" style="margin-top:20px;">
+      Participar en los Foros, Rondas y conversaciones abiertas no requiere contratar Impulso B2B ni ser Vertical Partner.
     </p>
-
-  </div>
-</section>
-
-<!-- =========================================================
-     HOW IT WORKS
-========================================================= -->
-
-<section id="que-es" class="section system">
-
-  <div class="wrap">
-
-    <div class="center reveal">
-      <span class="kicker">Cómo funciona Emprende360</span>
-      <h2>Red, selección, contexto y seguimiento.</h2>
-      <p class="lead">
-        Tener contactos no significa tener relaciones activas. Emprende360 trabaja en el espacio entre conocer a alguien y tener una buena razón para hablar.
-      </p>
-    </div>
-
-    <div class="system-grid">
-
-      <div class="system-copy reveal">
-
-        <h3>La red por sí sola no crea valor.</h3>
-
-        <p>
-          Puedes tener miles de contactos y seguir sin saber quién tiene sentido para una conversación concreta, qué contexto puede abrirla o cómo continuarla después.
-        </p>
-
-        <p>
-          Nuestro trabajo consiste en añadir criterio, contexto y seguimiento a una red ya existente.
-        </p>
-
-        <div class="system-quote">
-          La red aporta alcance. La selección aporta valor.
-        </div>
-
-      </div>
-
-      <div class="flow reveal">
-
-        <div class="flow-item">
-          <div class="flow-num">1</div>
-          <div>
-            <b>Identificamos</b>
-            <span>Buyer, tema, especialidad, problema, intención o complementariedad.</span>
-          </div>
-        </div>
-
-        <div class="flow-item">
-          <div class="flow-num">2</div>
-          <div>
-            <b>Seleccionamos</b>
-            <span>No todo el mundo tiene que hablar con todo el mundo. Priorizamos perfiles con lógica real.</span>
-          </div>
-        </div>
-
-        <div class="flow-item">
-          <div class="flow-num">3</div>
-          <div>
-            <b>Creamos contexto</b>
-            <span>Foro, Ronda, entrevista, mesa, sesión privada, activación o conversación específica.</span>
-          </div>
-        </div>
-
-        <div class="flow-item">
-          <div class="flow-num">4</div>
-          <div>
-            <b>Seguimos</b>
-            <span>Las relaciones con recorrido pueden evolucionar hacia partners, referencias, colaboraciones, oportunidades o nuevos proyectos.</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================================================
-     PROOF
-========================================================= -->
-
-<section class="section proof">
-
-  <div class="wrap">
-
-    <div class="center reveal">
-      <span class="kicker">Emprende360 en acción</span>
-      <h2>Las conversaciones ya están ocurriendo.</h2>
-      <p class="lead">
-        Los Foros y Rondas son la infraestructura abierta donde aparecen expertos, empresas, problemas y relaciones que después pueden continuar.
-      </p>
-    </div>
-
-    <div class="proof-grid reveal">
-
-      <a
-        class="proof-card"
-        href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="proof-thumb">
-          <div class="proof-word">FOROS<br>EJECUTIVOS</div>
-          <div class="play">▶</div>
-        </div>
-
-        <div class="proof-body">
-          <span class="proof-label">Foros Ejecutivos</span>
-          <h3>Problemas reales. Perspectivas diferentes.</h3>
-          <p>Conversaciones editoriales con especialistas alrededor de decisiones y problemas empresariales concretos.</p>
-          <span class="proof-link">Ver sesiones anteriores →</span>
-        </div>
-      </a>
-
-      <a
-        class="proof-card"
-        href="https://es.linkedin.com/posts/albertoporrasmoreno_la-primera-ronda-de-alianzas-b2b-confirm%C3%B3-activity-7467106669991305216-AOwf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="proof-thumb">
-          <div class="proof-word">RONDAS<br>DE ALIANZAS</div>
-          <div class="play">↗</div>
-        </div>
-
-        <div class="proof-body">
-          <span class="proof-label">Rondas B2B</span>
-          <h3>Complementariedad con contexto.</h3>
-          <p>Sesiones reducidas orientadas a compradores compatibles, complementariedad y siguientes conversaciones.</p>
-          <span class="proof-link">Ver una Ronda →</span>
-        </div>
-      </a>
-
-      <a
-        class="proof-card"
-        href="https://emprende360.club/septiembre"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="proof-thumb">
-          <div class="proof-word">PRÓXIMAS<br>CONVERSACIONES</div>
-          <div class="play">→</div>
-        </div>
-
-        <div class="proof-body">
-          <span class="proof-label">Agenda abierta</span>
-          <h3>Entra en las próximas conversaciones.</h3>
-          <p>Consulta los próximos Foros, Rondas y sesiones B2B y participa únicamente en las que realmente te interesen.</p>
-          <span class="proof-link">Ver agenda actual →</span>
-        </div>
-      </a>
-
-    </div>
 
   </div>
 
@@ -1639,14 +1766,14 @@
 
         <span class="kicker">Partner Hub</span>
 
-        <h2>La red no termina cuando acaba un evento.</h2>
+        <h2>Las conversaciones no terminan cuando acaba el evento.</h2>
 
         <p>
-          El Partner Hub hace visible parte de la red y del movimiento de Emprende360: perfiles, expertos, partners, verticales y posibles matches con contexto.
+          El Partner Hub hace visible parte del movimiento de Emprende360: perfiles, expertos, partners, verticales y posibles relaciones con contexto.
         </p>
 
         <p>
-          No es una base de datos abierta ni un marketplace. Su función es ayudar a entender <strong>quién está dentro del ecosistema, qué aporta y dónde puede tener sentido una conversación.</strong>
+          No es una base de datos abierta ni un marketplace. Su función es ayudar a entender <strong>quién está dentro del ecosistema, qué aporta y dónde puede tener sentido hablar.</strong>
         </p>
 
         <div class="hub-quote">
@@ -1671,76 +1798,34 @@
         <div class="hub-card">
           <div class="hub-icon">👥</div>
           <b>Perfiles y expertos</b>
-          <span>Quién está, qué hace y dónde encaja dentro de la red.</span>
+          <span>
+            Quién está, qué hace y dónde encaja dentro del ecosistema.
+          </span>
         </div>
 
         <div class="hub-card">
           <div class="hub-icon">🤝</div>
-          <b>Matches con criterio</b>
-          <span>Posibles conexiones cuando existe una razón concreta para hablar.</span>
+          <b>Relaciones posibles</b>
+          <span>
+            Hipótesis de conexión cuando existe una razón concreta para hablar.
+          </span>
         </div>
 
         <div class="hub-card">
           <div class="hub-icon">🧭</div>
           <b>Verticales</b>
-          <span>Áreas donde existe suficiente densidad para generar conversaciones con continuidad.</span>
+          <span>
+            Áreas donde existe suficiente densidad para generar conversaciones con continuidad.
+          </span>
         </div>
 
         <div class="hub-card">
           <div class="hub-icon">🔁</div>
           <b>Movimiento</b>
-          <span>Foros, Rondas, activaciones y siguientes conversaciones alrededor de la red.</span>
+          <span>
+            Foros, Rondas, activaciones y siguientes conversaciones alrededor de la red.
+          </span>
         </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================================================
-     EVENTS CTA
-========================================================= -->
-
-<section id="contacto" class="section events-cta">
-
-  <div class="wrap">
-
-    <div class="events-box reveal">
-
-      <div class="events-copy">
-
-        <span class="kicker">Conversaciones abiertas</span>
-
-        <h2>Participar en Emprende360 no requiere contratar nada.</h2>
-
-        <p>
-          Los Foros, Rondas y otras conversaciones abiertas siguen siendo una parte central del ecosistema. Entra en las que te interesen o deja tus datos para recibir las próximas convocatorias.
-        </p>
-
-      </div>
-
-      <div class="events-actions">
-
-        <a
-          class="btn btn-primary"
-          href="https://emprende360.club/septiembre"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ver agenda actual →
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="https://forms.gle/co89pCvzScuLtr6z5"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Recibir próximos eventos
-        </a>
 
       </div>
 
@@ -1764,7 +1849,9 @@
 
       <div>
         <b>Fundado por Alberto Porras</b>
-        <span>Emprende360 nació hace aproximadamente 15 años como comunidad profesional y hoy utiliza esa red para crear conversaciones y relaciones B2B con más contexto.</span>
+        <span>
+          Emprende360 nació hace aproximadamente 15 años como comunidad profesional y hoy utiliza esa red para crear conversaciones y relaciones B2B con más contexto.
+        </span>
       </div>
 
     </div>
@@ -1782,6 +1869,54 @@
 
 </section>
 
+<!-- =========================================================
+     FINAL CTA — EVENTS
+========================================================= -->
+
+<section class="section final">
+
+  <div class="wrap">
+
+    <div class="final-box reveal">
+
+      <span class="pill free">Participación gratuita</span>
+
+      <h2>
+        Empieza por una conversación.
+      </h2>
+
+      <p class="lead" style="max-width:760px;margin:17px auto 0;">
+        Mira la agenda y entra en la que realmente tenga sentido para ti. Sin membresía obligatoria y sin necesidad de contratar ningún servicio.
+      </p>
+
+      <div class="final-actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://emprende360.club/eventos"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver eventos gratuitos →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="https://forms.gle/co89pCvzScuLtr6z5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Recibir próximos eventos
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 </main>
 
 <footer>
@@ -1790,11 +1925,11 @@
 
     <div>
       <strong>Emprende360</strong><br>
-      Red · Selección · Contexto · Conversaciones B2B
+      Conversaciones · Contexto · Relaciones B2B
     </div>
 
     <div class="footer-links">
-      <a href="https://emprende360.club/septiembre" target="_blank" rel="noopener noreferrer">Agenda</a>
+      <a href="https://emprende360.club/eventos" target="_blank" rel="noopener noreferrer">Eventos</a>
       <a href="https://emprende360.club/impulsob2b" target="_blank" rel="noopener noreferrer">Impulso B2B</a>
       <a href="https://emprende360.club/vertical-partners" target="_blank" rel="noopener noreferrer">Vertical Partners</a>
       <a href="https://emprende360.club/partner-hub/" target="_blank" rel="noopener noreferrer">Partner Hub</a>
@@ -1804,7 +1939,7 @@
     </div>
 
     <div style="width:100%;max-width:900px;margin-top:4px;color:#64748B;font-size:10px;line-height:1.55;">
-      Emprende360 facilita contexto, selección, visibilidad, activaciones, conversaciones y posibles relaciones B2B. No garantiza clientes, leads, reuniones, ventas, facturación, inversión, financiación, colaboraciones ni ROI.
+      Emprende360 facilita contexto, selección, visibilidad, activaciones, conversaciones y posibles relaciones B2B. No garantiza clientes, leads, reuniones, ventas, facturación, inversión, financiación, colaboraciones ni resultados concretos.
     </div>
 
   </div>
