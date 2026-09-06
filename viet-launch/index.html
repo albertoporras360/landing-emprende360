@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emprende360 Vietnam | Launch Hub Sep–Oct 2026</title>
+  <meta name="description" content="Kit comercial, pipeline VIS y dashboard del piloto de Emprende360 Vietnam para septiembre y octubre de 2026." />
+  <meta name="theme-color" content="#07111f" />
+  <style>
+    :root{
+      --bg:#07111f;--bg2:#0a1728;--panel:rgba(255,255,255,.06);--panel2:rgba(255,255,255,.095);
+      --text:#f7f9fc;--muted:#aebbc9;--line:rgba(255,255,255,.13);--yellow:#ffd83d;--green:#6ee7b7;
+      --red:#fb7185;--blue:#7dd3fc;--orange:#fdba74;--shadow:0 24px 80px rgba(0,0,0,.32);
+      --r:22px;--rs:15px;--max:1200px
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);line-height:1.52;background:
+      radial-gradient(circle at 10% 4%,rgba(247,79,79,.15),transparent 26%),
+      radial-gradient(circle at 92% 4%,rgba(255,216,61,.13),transparent 23%),
+      linear-gradient(180deg,#06101c 0%,#07111f 48%,#091626 100%);overflow-x:hidden}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}
+    header{position:sticky;top:0;z-index:60;backdrop-filter:blur(18px);background:rgba(6,16,28,.83);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.02em}
+    .brandmark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--yellow),#fff09c);color:#07111f;display:grid;place-items:center;font-size:12px;font-weight:950}
+    .navlinks{display:flex;align-items:center;gap:18px;color:#c9d5df;font-size:13px}
+    .navlinks a:hover{color:#fff}.navright{display:flex;align-items:center;gap:10px}
+    .lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:4px;background:rgba(255,255,255,.04)}
+    .lang button{border:0;background:transparent;color:#b7c3cf;border-radius:999px;padding:7px 10px;font-weight:850;font-size:12px;cursor:pointer}
+    .lang button.active{background:#fff;color:#07111f}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 15px;border-radius:12px;border:1px solid transparent;font-weight:850;cursor:pointer;transition:.18s}
+    .btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--yellow);color:#07111f}.btn-secondary{background:rgba(255,255,255,.05);border-color:var(--line);color:#fff}
+    .btn-danger{background:rgba(251,113,133,.12);border-color:rgba(251,113,133,.28);color:#ffd7df}.btn-sm{min-height:36px;padding:0 11px;font-size:12px}
+    .hero{padding:72px 0 44px}.hero-grid{display:grid;grid-template-columns:1.16fr .84fr;gap:38px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);font-size:12px;text-transform:uppercase;letter-spacing:.11em;font-weight:800;color:#d9e4ef}
+    .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 22px rgba(255,216,61,.5)}
+    h1,h2,h3,p{margin-top:0}h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-.055em;margin:20px 0 22px;max-width:940px}
+    h2{font-size:clamp(30px,4vw,50px);line-height:1.03;letter-spacing:-.04em;margin-bottom:14px}h3{font-size:20px;line-height:1.18;letter-spacing:-.02em}
+    .lead{font-size:clamp(18px,2vw,22px);color:#cad5e1;max-width:840px}.sub{color:var(--muted);font-size:16px;max-width:820px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.small{font-size:12px;color:var(--muted)}
+    .panel{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045));box-shadow:var(--shadow)}
+    .hero-card{padding:24px}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{padding:16px;border-radius:15px;background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.08)}
+    .metric strong{display:block;font-size:28px;letter-spacing:-.04em}.metric span{color:var(--muted);font-size:12px}.metric .good{color:var(--green)}
+    .section{padding:78px 0}.section.alt{background:rgba(255,255,255,.018);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+    .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0}.tab{padding:10px 13px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#cbd5df;font-weight:800;font-size:13px;cursor:pointer}.tab.active{background:var(--yellow);color:#07111f;border-color:var(--yellow)}
+    .tab-pane{display:none}.tab-pane.active{display:block}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .card{padding:22px;border:1px solid var(--line);border-radius:var(--rs);background:var(--panel)}.card p:last-child{margin-bottom:0}.muted{color:var(--muted)}
+    .kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);font-weight:900;margin-bottom:8px}.tag{display:inline-flex;align-items:center;padding:6px 9px;border-radius:999px;font-size:11px;font-weight:850;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .tag.a{color:#07111f;background:var(--yellow);border-color:var(--yellow)}.tag.green{color:#062219;background:var(--green);border-color:var(--green)}.tag.red{color:#30070f;background:#ffc0cd;border-color:#ffc0cd}
+    .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:24px}.flow .step{padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.04);font-size:13px}.flow .n{font-size:11px;color:var(--yellow);font-weight:900;margin-bottom:8px}
+    .rule{padding:14px 16px;border-left:4px solid var(--yellow);background:rgba(255,216,61,.07);border-radius:0 12px 12px 0;margin:15px 0;color:#e6edf3}
+    .onepager{padding:28px;border:1px solid rgba(255,216,61,.28);border-radius:24px;background:linear-gradient(180deg,rgba(255,216,61,.08),rgba(255,255,255,.04))}
+    .onepager h3{font-size:28px}.price{font-size:43px;font-weight:950;letter-spacing:-.05em;color:var(--yellow);line-height:1}.ul{margin:12px 0 0;padding-left:20px;color:#c9d4dd}.ul li{margin:8px 0}
+    .business-card{aspect-ratio:1.78/1;border-radius:20px;border:1px solid rgba(255,255,255,.13);background:linear-gradient(145deg,#0c1d31,#06101c);padding:24px;display:flex;justify-content:space-between;gap:18px;box-shadow:var(--shadow);min-height:230px}
+    .business-card .qr{width:132px;height:132px;background:#fff;border-radius:12px;padding:8px;align-self:center}.business-card .qr img{width:100%;height:100%;object-fit:contain}
+    .copybox{position:relative;padding:16px 48px 16px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(0,0,0,.15);margin-top:10px;white-space:pre-wrap;color:#dbe4ec}
+    .copybtn{position:absolute;right:8px;top:8px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;border-radius:9px;padding:7px 8px;font-size:11px;font-weight:800;cursor:pointer}
+    .score-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.question{padding:14px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.035)}
+    .question label{display:flex;align-items:flex-start;gap:9px;font-size:14px}.question input{margin-top:4px;accent-color:#ffd83d}
+    .score-result{padding:20px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:16px}
+    .score-result strong{font-size:44px;letter-spacing:-.06em}.score-result .grade{font-size:28px;font-weight:950}
+    .grade.aplus{color:var(--green)}.grade.a{color:var(--yellow)}.grade.b{color:var(--orange)}.grade.d{color:var(--red)}
+    table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:11px 10px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;vertical-align:top}th{color:#dfe8ef;font-size:11px;text-transform:uppercase;letter-spacing:.08em;background:rgba(255,255,255,.035);position:sticky;top:70px}
+    .tablewrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);max-height:610px}
+    td input,td select,.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#0b1929;color:#fff;border-radius:10px;padding:9px 10px;outline:none}
+    .field{display:grid;gap:6px}.field label{font-size:12px;color:#c6d1dc;font-weight:750}.field textarea{min-height:90px;resize:vertical}
+    .form-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:15px 0}
+    .toolbar{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;margin:14px 0}.tool-left,.tool-right{display:flex;flex-wrap:wrap;gap:8px}
+    .status-pill{padding:6px 9px;border-radius:999px;font-size:11px;font-weight:850;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.kpi{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.04)}
+    .kpi label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:850}.kpi .kpi-row{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;margin-top:9px}
+    .kpi input{width:85px;background:#0b1929;color:#fff;border:1px solid var(--line);border-radius:10px;padding:8px}.kpi strong{font-size:28px;letter-spacing:-.04em}.kpi small{display:block;color:var(--muted);margin-top:8px}
+    .progress{height:8px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin-top:9px}.progress i{display:block;height:100%;background:var(--yellow);width:0}
+    .decision{padding:24px;border-radius:20px;border:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;margin-top:16px}.decision .circle{width:94px;height:94px;border-radius:50%;display:grid;place-items:center;font-weight:950;font-size:20px;background:rgba(255,255,255,.08)}
+    .decision.go{border-color:rgba(110,231,183,.35);background:rgba(110,231,183,.06)}.decision.go .circle{background:var(--green);color:#062219}
+    .decision.adjust{border-color:rgba(255,216,61,.35);background:rgba(255,216,61,.06)}.decision.adjust .circle{background:var(--yellow);color:#07111f}
+    .decision.stop{border-color:rgba(251,113,133,.35);background:rgba(251,113,133,.06)}.decision.stop .circle{background:#ffc0cd;color:#310812}
+    .week{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08)}.week:last-child{border-bottom:0}.week strong{color:var(--yellow)}
+    .checkline{display:flex;gap:10px;align-items:flex-start;margin:9px 0}.checkline input{margin-top:4px;accent-color:#ffd83d}
+    .notice{padding:16px;border:1px solid rgba(125,211,252,.25);background:rgba(125,211,252,.07);border-radius:15px;color:#d9edf8}
+    .footer{padding:36px 0 56px;border-top:1px solid rgba(255,255,255,.08);color:#91a0ae;font-size:12px}
+    .hide{display:none!important}
+    @media(max-width:950px){.hero-grid,.grid-2{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr 1fr}.grid-4,.kpi-grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:repeat(3,1fr)}.navlinks{display:none}.form-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.wrap{width:min(100% - 22px,1200px)}.hero{padding-top:44px}.section{padding:58px 0}.grid-3,.grid-4,.kpi-grid,.score-grid,.form-grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.business-card{aspect-ratio:auto;min-height:0;flex-direction:column}.business-card .qr{width:110px;height:110px}.navright .btn{display:none}.week{grid-template-columns:1fr}.decision{grid-template-columns:1fr;text-align:center}.decision .circle{margin:auto}}
+    @media print{header,.no-print,.btn,.tabs{display:none!important}body{background:#fff;color:#111}.section{padding:18px 0}.panel,.card,.onepager{box-shadow:none;background:#fff;color:#111;border-color:#ddd}.muted,.sub,.small{color:#555!important}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="brandmark">E360</span><span>Emprende360 Vietnam · Launch Hub</span></div>
+    <nav class="navlinks">
+      <a href="#kit" data-es="Kit comercial" data-vi="Bộ sales kit">Kit comercial</a>
+      <a href="#pipeline" data-es="Pipeline VIS" data-vi="Pipeline VIS">Pipeline VIS</a>
+      <a href="#dashboard" data-es="Dashboard piloto" data-vi="Dashboard pilot">Dashboard piloto</a>
+    </nav>
+    <div class="navright">
+      <div class="lang"><button class="active" data-lang="es">ES</button><button data-lang="vi">VI</button></div>
+      <a class="btn btn-primary" target="_blank" href="https://emprende360.club/vietnam">Landing cliente ↗</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><i></i><span data-es="Piloto · septiembre–octubre 2026" data-vi="Pilot · tháng 9–10/2026">Piloto · septiembre–octubre 2026</span></span>
+      <h1 data-es="De tarjetas de feria a clientes pagados." data-vi="Từ danh thiếp hội chợ đến khách hàng trả tiền.">De tarjetas de feria a clientes pagados.</h1>
+      <p class="lead" data-es="Tres piezas, un único sistema: kit comercial para vender bien, pipeline real para convertir VIS y un dashboard que nos dice si esta línea merece escalar." data-vi="Ba phần, một hệ thống duy nhất: sales kit để bán đúng, pipeline thực tế để chuyển đổi lead từ VIS và dashboard để quyết định có nên mở rộng hay không.">Tres piezas, un único sistema: kit comercial para vender bien, pipeline real para convertir VIS y un dashboard que nos dice si esta línea merece escalar.</p>
+      <div class="hero-actions">
+        <a href="#kit" class="btn btn-primary" data-es="1 · Kit comercial" data-vi="1 · Sales kit">1 · Kit comercial</a>
+        <a href="#pipeline" class="btn btn-secondary" data-es="2 · Pipeline VIS" data-vi="2 · Pipeline VIS">2 · Pipeline VIS</a>
+        <a href="#dashboard" class="btn btn-secondary" data-es="3 · Dashboard piloto" data-vi="3 · Dashboard pilot">3 · Dashboard piloto</a>
+      </div>
+      <p class="small" data-es="Regla: Alberto da presencia y credibilidad. El Business Development Partner vietnamita vende y cierra. El Market Activation Operator entrega." data-vi="Nguyên tắc: Alberto tạo sự hiện diện và uy tín. Business Development Partner người Việt bán và chốt. Market Activation Operator triển khai dịch vụ.">Regla: Alberto da presencia y credibilidad. El Business Development Partner vietnamita vende y cierra. El Market Activation Operator entrega.</p>
+    </div>
+    <aside class="panel hero-card">
+      <div class="kicker" data-es="Oferta bloqueada" data-vi="Offer đã chốt">Oferta bloqueada</div>
+      <h3>Market Validation Sprint</h3>
+      <div class="price">US$1,500</div>
+      <p class="muted" data-es="15 días laborables · 1 producto · 1 mercado · 1 buyer segment" data-vi="15 ngày làm việc · 1 sản phẩm · 1 thị trường · 1 buyer segment">15 días laborables · 1 producto · 1 mercado · 1 buyer segment</p>
+      <div class="metric-grid">
+        <div class="metric"><strong>30</strong><span data-es="target accounts" data-vi="target accounts">target accounts</span></div>
+        <div class="metric"><strong>45</strong><span data-es="decision-makers máx." data-vi="decision-makers tối đa">decision-makers máx.</span></div>
+        <div class="metric"><strong>20</strong><span data-es="cuentas activadas máx." data-vi="tài khoản kích hoạt tối đa">cuentas activadas máx.</span></div>
+        <div class="metric"><strong class="good">30%</strong><span data-es="comisión BD inicial" data-vi="hoa hồng BD ban đầu">comisión BD inicial</span></div>
+      </div>
+      <div class="rule" data-es="Nunca prometemos buyers, reuniones, pedidos, ventas ni ROI. Vendemos trabajo comercial real + evidencia." data-vi="Không bao giờ cam kết buyer, cuộc họp, đơn hàng, doanh số hay ROI. Chúng ta bán công việc thương mại thực tế + bằng chứng thị trường.">Nunca prometemos buyers, reuniones, pedidos, ventas ni ROI. Vendemos trabajo comercial real + evidencia.</div>
+    </aside>
+  </div>
+</section>
+
+<section class="section alt" id="kit">
+  <div class="wrap">
+    <span class="eyebrow"><i></i><span data-es="Pieza 1" data-vi="Phần 1">Pieza 1</span></span>
+    <h2 data-es="Kit comercial para utilizar físicamente en feria." data-vi="Sales kit dùng trực tiếp tại hội chợ.">Kit comercial para utilizar físicamente en feria.</h2>
+    <p class="sub" data-es="El colaborador no necesita una presentación de 40 slides. Necesita tres cosas: explicar la propuesta en 30 segundos, enseñar una prueba visual creíble y conseguir el siguiente paso." data-vi="Không cần deck 40 slide. Cần 3 thứ: giải thích giá trị trong 30 giây, cho thấy bằng chứng trực quan đáng tin cậy và chốt bước tiếp theo.">El colaborador no necesita una presentación de 40 slides. Necesita tres cosas: explicar la propuesta en 30 segundos, enseñar una prueba visual creíble y conseguir el siguiente paso.</p>
+
+    <div class="tabs no-print">
+      <button class="tab active" data-target="kit1" data-es="One-pager" data-vi="One-pager">One-pager</button>
+      <button class="tab" data-target="kit2" data-es="Tarjeta + QR" data-vi="Danh thiếp + QR">Tarjeta + QR</button>
+      <button class="tab" data-target="kit3" data-es="Secuencia en stand" data-vi="Quy trình tại booth">Secuencia en stand</button>
+      <button class="tab" data-target="kit4" data-es="Qué enseñar" data-vi="Cho khách xem gì">Qué enseñar</button>
+    </div>
+
+    <div id="kit1" class="tab-pane active">
+      <div class="onepager" id="printOnePager">
+        <div class="kicker">EMPRENDE360 · VIETNAM → SPAIN & LATIN AMERICA</div>
+        <h3 data-es="Valida el mercado antes de invertir en entrar." data-vi="Kiểm chứng thị trường trước khi đầu tư mở rộng.">Valida el mercado antes de invertir en entrar.</h3>
+        <p class="muted" data-es="Para fabricantes y empresas vietnamitas con capacidad real de exportación que quieran comprobar si existe una oportunidad comercial en España o un mercado latinoamericano de habla hispana." data-vi="Dành cho nhà sản xuất và doanh nghiệp Việt Nam có năng lực xuất khẩu thực tế muốn kiểm tra cơ hội thương mại tại Tây Ban Nha hoặc một thị trường Mỹ Latinh nói tiếng Tây Ban Nha.">Para fabricantes y empresas vietnamitas con capacidad real de exportación que quieran comprobar si existe una oportunidad comercial en España o un mercado latinoamericano de habla hispana.</p>
+        <div class="grid-3" style="margin:22px 0">
+          <div class="card"><div class="kicker">01</div><h3 data-es="Definimos" data-vi="Xác định">Definimos</h3><p class="muted" data-es="Buyer, mercado, posicionamiento, barreras y criterios de entrada." data-vi="Buyer, thị trường, định vị, rào cản và tiêu chí vào thị trường.">Buyer, mercado, posicionamiento, barreras y criterios de entrada.</p></div>
+          <div class="card"><div class="kicker">02</div><h3 data-es="Mapeamos" data-vi="Lập bản đồ">Mapeamos</h3><p class="muted" data-es="30 empresas objetivo y hasta 45 decisores relevantes." data-vi="30 công ty mục tiêu và tối đa 45 người ra quyết định.">30 empresas objetivo y hasta 45 decisores relevantes.</p></div>
+          <div class="card"><div class="kicker">03</div><h3 data-es="Probamos" data-vi="Kiểm thử">Probamos</h3><p class="muted" data-es="Activamos hasta 20 cuentas y recogemos señales y feedback reales." data-vi="Kích hoạt tối đa 20 tài khoản mục tiêu và thu thập tín hiệu, phản hồi thực tế.">Activamos hasta 20 cuentas y recogemos señales y feedback reales.</p></div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="kicker" data-es="Recibes" data-vi="Bạn nhận được">Recibes</div>
+            <ul class="ul">
+              <li data-es="Market Opportunity Snapshot" data-vi="Market Opportunity Snapshot">Market Opportunity Snapshot</li>
+              <li data-es="Buyer Profile + Target Account Map" data-vi="Buyer Profile + Target Account Map">Buyer Profile + Target Account Map</li>
+              <li data-es="Commercial Messaging" data-vi="Commercial Messaging">Commercial Messaging</li>
+              <li data-es="Market Test + Buyer Feedback" data-vi="Market Test + Buyer Feedback">Market Test + Buyer Feedback</li>
+              <li data-es="GO / ADJUST / NO-GO + plan 90 días" data-vi="GO / ADJUST / NO-GO + kế hoạch 90 ngày">GO / ADJUST / NO-GO + plan 90 días</li>
+            </ul>
+          </div>
+          <div>
+            <div class="kicker" data-es="Inversión" data-vi="Chi phí">Inversión</div>
+            <div class="price">US$1,500</div>
+            <p class="muted" data-es="US$750 al iniciar + US$750 antes de activar el mercado." data-vi="US$750 khi bắt đầu + US$750 trước khi kích hoạt thị trường.">US$750 al iniciar + US$750 antes de activar el mercado.</p>
+            <a class="btn btn-primary no-print" target="_blank" href="https://emprende360.club/vietnam" data-es="Ver landing cliente" data-vi="Xem landing khách hàng">Ver landing cliente</a>
+            <button class="btn btn-secondary no-print" onclick="window.print()" data-es="Imprimir / guardar PDF" data-vi="In / lưu PDF">Imprimir / guardar PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="kit2" class="tab-pane">
+      <div class="grid-2">
+        <div class="business-card">
+          <div>
+            <div class="kicker">EMPRENDE360</div>
+            <h3 style="font-size:27px;margin-bottom:8px">Business Development Partner · Vietnam</h3>
+            <p class="muted" data-es="Vietnam → Spain & Spanish-speaking Latin America" data-vi="Việt Nam → Tây Ban Nha & Mỹ Latinh nói tiếng Tây Ban Nha">Vietnam → Spain & Spanish-speaking Latin America</p>
+            <p><strong data-es="Nombre:" data-vi="Tên:">Nombre:</strong> [NOMBRE DEL PARTNER]</p>
+            <p><strong data-es="Zalo / Tel:" data-vi="Zalo / ĐT:">Zalo / Tel:</strong> [NÚMERO]</p>
+            <p><strong>Email:</strong> [EMAIL]</p>
+            <p class="small">emprende360.club/vietnam</p>
+          </div>
+          <div class="qr"><img alt="QR Emprende360 Vietnam" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Femprende360.club%2Fvietnam"></div>
+        </div>
+        <div class="card">
+          <div class="kicker" data-es="Regla de uso" data-vi="Cách dùng">Regla de uso</div>
+          <h3 data-es="El QR no sustituye la conversación." data-vi="QR không thay thế cuộc trò chuyện.">El QR no sustituye la conversación.</h3>
+          <p class="muted" data-es="Se entrega solo después de detectar encaje. El objetivo es que el prospecto pueda revisar la propuesta y que el partner tenga permiso explícito para hacer follow-up." data-vi="Chỉ đưa sau khi xác định có fit. Mục tiêu là để prospect xem lại đề xuất và partner có quyền follow-up rõ ràng.">Se entrega solo después de detectar encaje. El objetivo es que el prospecto pueda revisar la propuesta y que el partner tenga permiso explícito para hacer follow-up.</p>
+          <div class="copybox" data-copy="Emprende360 Vietnam: https://emprende360.club/vietnam">Emprende360 Vietnam:
+https://emprende360.club/vietnam<button class="copybtn">Copiar</button></div>
+          <div class="notice" style="margin-top:14px" data-es="Imprimir 50–100 tarjetas, no 1.000. Estamos validando el modelo." data-vi="Chỉ in 50–100 danh thiếp, không in 1.000. Chúng ta đang kiểm chứng mô hình.">Imprimir 50–100 tarjetas, no 1.000. Estamos validando el modelo.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="kit3" class="tab-pane">
+      <div class="flow">
+        <div class="step"><div class="n">01</div><b data-es="Abrir" data-vi="Mở đầu">Abrir</b><br><span class="muted" data-es="¿Ya exportáis?" data-vi="Công ty đã xuất khẩu chưa?">¿Ya exportáis?</span></div>
+        <div class="step"><div class="n">02</div><b data-es="Cualificar" data-vi="Sàng lọc">Cualificar</b><br><span class="muted" data-es="Mercados, producto, buyer, capacidad." data-vi="Thị trường, sản phẩm, buyer, năng lực.">Mercados, producto, buyer, capacidad.</span></div>
+        <div class="step"><div class="n">03</div><b data-es="Detectar intención" data-vi="Xác định ý định">Detectar intención</b><br><span class="muted" data-es="España / LatAm real o curiosidad." data-vi="Tây Ban Nha / LatAm thực sự hay chỉ tò mò.">España / LatAm real o curiosidad.</span></div>
+        <div class="step"><div class="n">04</div><b data-es="Presentar" data-vi="Giới thiệu">Presentar</b><br><span class="muted" data-es="Solo si A/A+." data-vi="Chỉ khi A/A+.">Solo si A/A+.</span></div>
+        <div class="step"><div class="n">05</div><b data-es="Decisor" data-vi="Decision maker">Decisor</b><br><span class="muted" data-es="Nombre + Zalo + email." data-vi="Tên + Zalo + email.">Nombre + Zalo + email.</span></div>
+        <div class="step"><div class="n">06</div><b data-es="Siguiente paso" data-vi="Bước tiếp theo">Siguiente paso</b><br><span class="muted" data-es="Discovery de 20 min." data-vi="Discovery 20 phút.">Discovery de 20 min.</span></div>
+      </div>
+
+      <div class="grid-2" style="margin-top:22px">
+        <div class="card">
+          <div class="kicker" data-es="Apertura vietnamita" data-vi="Mở đầu bằng tiếng Việt">Apertura vietnamita</div>
+          <div class="copybox" data-copy="Chào anh/chị. Bên em đang làm việc với các doanh nghiệp Việt Nam có định hướng phát triển thị trường tại Tây Ban Nha và khu vực Mỹ Latinh. Em muốn hỏi nhanh một chút: hiện tại công ty mình đã xuất khẩu chưa ạ?">Chào anh/chị. Bên em đang làm việc với các doanh nghiệp Việt Nam có định hướng phát triển thị trường tại Tây Ban Nha và khu vực Mỹ Latinh. Em muốn hỏi nhanh một chút: hiện tại công ty mình đã xuất khẩu chưa ạ?<button class="copybtn">Copiar</button></div>
+        </div>
+        <div class="card">
+          <div class="kicker" data-es="Microcierre" data-vi="Micro-close">Microcierre</div>
+          <div class="copybox" data-copy="Nếu chúng tôi có thể giúp công ty kiểm tra thực tế cơ hội tại thị trường Tây Ban Nha trước khi đầu tư lớn hơn, điều đó có đáng để trao đổi thêm không?">Nếu chúng tôi có thể giúp công ty kiểm tra thực tế cơ hội tại thị trường Tây Ban Nha trước khi đầu tư lớn hơn, điều đó có đáng để trao đổi thêm không?<button class="copybtn">Copiar</button></div>
+        </div>
+      </div>
+      <div class="rule" data-es="Tiempo inicial por stand: 2–4 minutos. Si no hay export readiness + interés real + valor económico suficiente, pasar al siguiente." data-vi="Thời gian ban đầu mỗi booth: 2–4 phút. Nếu không có năng lực xuất khẩu + ý định thực sự + giá trị kinh tế đủ lớn, chuyển sang booth tiếp theo.">Tiempo inicial por stand: 2–4 minutos. Si no hay export readiness + interés real + valor económico suficiente, pasar al siguiente.</div>
+    </div>
+
+    <div id="kit4" class="tab-pane">
+      <div class="grid-4">
+        <div class="card"><div class="kicker">1</div><h3 data-es="Landing" data-vi="Landing">Landing</h3><p class="muted" data-es="Para credibilidad, proceso, precio y FAQs." data-vi="Tạo uy tín, giải thích quy trình, giá và FAQ.">Para credibilidad, proceso, precio y FAQs.</p></div>
+        <div class="card"><div class="kicker">2</div><h3 data-es="One-pager" data-vi="One-pager">One-pager</h3><p class="muted" data-es="Para explicar visualmente qué compra." data-vi="Giải thích trực quan khách hàng mua gì.">Para explicar visualmente qué compra.</p></div>
+        <div class="card"><div class="kicker">3</div><h3 data-es="Sample Deliverable" data-vi="Sample Deliverable">Sample Deliverable</h3><p class="muted" data-es="Solo cuando pregunta “¿qué recibiré exactamente?”." data-vi="Chỉ khi khách hỏi “tôi sẽ nhận được gì?”.">Solo cuando pregunta “¿qué recibiré exactamente?”.</p></div>
+        <div class="card"><div class="kicker">4</div><h3 data-es="Proposal" data-vi="Proposal">Proposal</h3><p class="muted" data-es="Solo después de discovery y encaje." data-vi="Chỉ sau discovery và xác nhận fit.">Solo después de discovery y encaje.</p></div>
+      </div>
+      <div class="notice" style="margin-top:16px" data-es="No enseñar todo a todo el mundo. Menos material, en el momento correcto, convierte mejor." data-vi="Không gửi mọi tài liệu cho mọi người. Ít tài liệu hơn, đúng thời điểm, sẽ chuyển đổi tốt hơn.">No enseñar todo a todo el mundo. Menos material, en el momento correcto, convierte mejor.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pipeline">
+  <div class="wrap">
+    <span class="eyebrow"><i></i><span data-es="Pieza 2" data-vi="Phần 2">Pieza 2</span></span>
+    <h2 data-es="Convertir las tarjetas de VIS en el primer pipeline real." data-vi="Biến danh thiếp từ VIS thành pipeline thực tế đầu tiên.">Convertir las tarjetas de VIS en el primer pipeline real.</h2>
+    <p class="sub" data-es="No esperamos a la siguiente feria. VIS es la primera base de prospección. Objetivo: digitalizar todo, seleccionar 20–30 A/A+ y empezar follow-up en vietnamita inmediatamente." data-vi="Không chờ hội chợ tiếp theo. VIS là data prospecting đầu tiên. Mục tiêu: số hóa toàn bộ, chọn 20–30 A/A+ và follow-up bằng tiếng Việt ngay.">No esperamos a la siguiente feria. VIS es la primera base de prospección. Objetivo: digitalizar todo, seleccionar 20–30 A/A+ y empezar follow-up en vietnamita inmediatamente.</p>
+
+    <div class="grid-3" style="margin-top:24px">
+      <div class="card"><div class="kicker">T+0</div><h3 data-es="Digitalizar" data-vi="Số hóa">Digitalizar</h3><p class="muted" data-es="Tarjeta + catálogo + web + notas. Una empresa = una fila." data-vi="Danh thiếp + catalogue + website + ghi chú. Một công ty = một dòng.">Tarjeta + catálogo + web + notas. Una empresa = una fila.</p></div>
+      <div class="card"><div class="kicker">T+1</div><h3 data-es="Score" data-vi="Chấm điểm">Score</h3><p class="muted" data-es="Export readiness, intención, decisor, valor y fricción." data-vi="Năng lực xuất khẩu, ý định, decision maker, giá trị và độ ma sát.">Export readiness, intención, decisor, valor y fricción.</p></div>
+      <div class="card"><div class="kicker">T+2</div><h3 data-es="Activar Top 30" data-vi="Kích hoạt Top 30">Activar Top 30</h3><p class="muted" data-es="Zalo / teléfono / email. No mensaje masivo." data-vi="Zalo / điện thoại / email. Không spam hàng loạt.">Zalo / teléfono / email. No mensaje masivo.</p></div>
+    </div>
+
+    <div class="panel" style="padding:22px;margin-top:22px">
+      <div class="kicker" data-es="Scoring rápido · 100 puntos" data-vi="Chấm điểm nhanh · 100 điểm">Scoring rápido · 100 puntos</div>
+      <div class="score-grid">
+        <div class="question"><label><input type="checkbox" class="scoreBox" data-points="20"> <span data-es="Fabricante directo / control real de producción" data-vi="Nhà sản xuất trực tiếp / kiểm soát sản xuất thực tế">Fabricante directo / control real de producción</span></label></div>
+        <div class="question"><label><input type="checkbox" class="scoreBox" data-points="15"> <span data-es="Ya exporta internacionalmente" data-vi="Đã xuất khẩu quốc tế">Ya exporta internacionalmente</span></label></div>
+        <div class="question"><label><input type="checkbox" class="scoreBox" data-points="10"> <span data-es="Certificaciones/documentación comercial suficiente" data-vi="Có chứng nhận/tài liệu thương mại đủ">Certificaciones/documentación comercial suficiente</span></label></div>
+        <div class="question"><label><input type="checkbox" class="scoreBox" data-points="15"> <span data-es="Interés explícito en España o LatAm" data-vi="Quan tâm rõ ràng tới Tây Ban Nha hoặc LatAm">Interés explícito en España o LatAm</span></label></div>
+        <div class="question"><label><input type="checkbox" class="scoreBox" data-points="10"> <span data-es="No tiene ya canal/distribuidor consolidado allí" data-vi="Chưa có kênh/distributor mạnh tại đó">No tiene ya canal/distribuidor consolidado allí</span></label></div>
+        <div class="question"><label><input type="checkbox" class="scoreBox" data-points="10"> <span data-es="Tenemos decisor de export/international business" data-vi="Có contact decision maker export/international business">Tenemos decisor de export/international business</span></label></div>
+        <div class="question"><label><input type="checkbox" class="scoreBox" data-points="15"> <span data-es="Una buena relación comercial puede valer >US$10k/año" data-vi="Một quan hệ thương mại tốt có thể trị giá >US$10k/năm">Una buena relación comercial puede valer >US$10k/año</span></label></div>
+        <div class="question"><label><input type="checkbox" class="scoreBox" data-points="5"> <span data-es="Materiales en inglés + capacidad de responder rápido" data-vi="Có tài liệu tiếng Anh + phản hồi nhanh">Materiales en inglés + capacidad de responder rápido</span></label></div>
+      </div>
+      <div class="score-result">
+        <div><div class="kicker" data-es="Resultado" data-vi="Kết quả">Resultado</div><strong id="scoreValue">0</strong><span class="muted"> / 100</span></div>
+        <div id="grade" class="grade d">D</div>
+        <div id="scoreAction" class="muted" data-es="Descartar campaña." data-vi="Loại khỏi campaign.">Descartar campaña.</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:22px">
+      <div class="card">
+        <div class="kicker" data-es="Secuencia exacta" data-vi="Chuỗi follow-up">Secuencia exacta</div>
+        <h3>T+1 · Follow-up</h3>
+        <div class="copybox" data-copy="Chào anh/chị [Tên], em là [Tên] từ Emprende360. Chúng ta đã gặp nhau tại Vietnam International Sourcing. Em đã xem lại thông tin của công ty và nghĩ rằng [sản phẩm] có thể đáng để đánh giá cho thị trường Tây Ban Nha / Mỹ Latinh. Em muốn hiểu rõ hơn kế hoạch quốc tế của công ty trước khi xem liệu Market Validation có phù hợp hay không. Mình có thể trao đổi 20 phút trong tuần này không ạ?">Chào anh/chị [Tên], em là [Tên] từ Emprende360. Chúng ta đã gặp nhau tại Vietnam International Sourcing. Em đã xem lại thông tin của công ty và nghĩ rằng [sản phẩm] có thể đáng để đánh giá cho thị trường Tây Ban Nha / Mỹ Latinh. Em muốn hiểu rõ hơn kế hoạch quốc tế của công ty trước khi xem liệu Market Validation có phù hợp hay không. Mình có thể trao đổi 20 phút trong tuần này không ạ?<button class="copybtn">Copiar</button></div>
+        <h3 style="margin-top:18px">T+3 · Sin respuesta</h3>
+        <div class="copybox" data-copy="Chào anh/chị [Tên], em follow-up lại tin nhắn trước. Em không muốn gửi thông tin chung chung. Nếu Tây Ban Nha hoặc Mỹ Latinh thực sự nằm trong kế hoạch của công ty, em có thể trao đổi ngắn để xem có đáng test thị trường hay không. Nếu hiện tại chưa phải ưu tiên thì anh/chị cứ nói thẳng, hoàn toàn không vấn đề.">Chào anh/chị [Tên], em follow-up lại tin nhắn trước. Em không muốn gửi thông tin chung chung. Nếu Tây Ban Nha hoặc Mỹ Latinh thực sự nằm trong kế hoạch của công ty, em có thể trao đổi ngắn để xem có đáng test thị trường hay không. Nếu hiện tại chưa phải ưu tiên thì anh/chị cứ nói thẳng, hoàn toàn không vấn đề.<button class="copybtn">Copiar</button></div>
+        <h3 style="margin-top:18px">T+7 · Cierre de loop</h3>
+        <div class="copybox" data-copy="Chào anh/chị [Tên], em gửi tin cuối để không làm phiền. Nếu mở thị trường Tây Ban Nha / Mỹ Latinh trở thành ưu tiên sau này, cứ nhắn lại cho em. Em sẽ giữ thông tin công ty trong hệ thống và liên hệ lại khi có lý do phù hợp.">Chào anh/chị [Tên], em gửi tin cuối để không làm phiền. Nếu mở thị trường Tây Ban Nha / Mỹ Latinh trở thành ưu tiên sau này, cứ nhắn lại cho em. Em sẽ giữ thông tin công ty trong hệ thống và liên hệ lại khi có lý do phù hợp.<button class="copybtn">Copiar</button></div>
+      </div>
+      <div class="card">
+        <div class="kicker" data-es="Objetivo VIS" data-vi="Mục tiêu VIS">Objetivo VIS</div>
+        <h3 data-es="No contactar a todos." data-vi="Không liên hệ tất cả.">No contactar a todos.</h3>
+        <div class="checkline"><input type="checkbox" class="persist-check" id="vis1"><label for="vis1" data-es="Digitalizar 100% de tarjetas y catálogos." data-vi="Số hóa 100% danh thiếp và catalogue.">Digitalizar 100% de tarjetas y catálogos.</label></div>
+        <div class="checkline"><input type="checkbox" class="persist-check" id="vis2"><label for="vis2" data-es="Eliminar duplicados y empresas sin encaje." data-vi="Loại trùng và công ty không fit.">Eliminar duplicados y empresas sin encaje.</label></div>
+        <div class="checkline"><input type="checkbox" class="persist-check" id="vis3"><label for="vis3" data-es="Scorear todas las empresas." data-vi="Chấm điểm tất cả công ty.">Scorear todas las empresas.</label></div>
+        <div class="checkline"><input type="checkbox" class="persist-check" id="vis4"><label for="vis4" data-es="Seleccionar Top 20–30 A/A+." data-vi="Chọn Top 20–30 A/A+.">Seleccionar Top 20–30 A/A+.</label></div>
+        <div class="checkline"><input type="checkbox" class="persist-check" id="vis5"><label for="vis5" data-es="Conseguir decisor export/international business." data-vi="Lấy contact decision maker export/international business.">Conseguir decisor export/international business.</label></div>
+        <div class="checkline"><input type="checkbox" class="persist-check" id="vis6"><label for="vis6" data-es="Contactar Top 30 en 48 horas." data-vi="Liên hệ Top 30 trong 48 giờ.">Contactar Top 30 en 48 horas.</label></div>
+        <div class="checkline"><input type="checkbox" class="persist-check" id="vis7"><label for="vis7" data-es="Intentar 8–12 discoveries." data-vi="Mục tiêu 8–12 discovery.">Intentar 8–12 discoveries.</label></div>
+        <div class="checkline"><input type="checkbox" class="persist-check" id="vis8"><label for="vis8" data-es="Buscar 4–6 propuestas, no 30." data-vi="Tìm 4–6 proposal, không phải 30.">Buscar 4–6 propuestas, no 30.</label></div>
+        <div class="checkline"><input type="checkbox" class="persist-check" id="vis9"><label for="vis9" data-es="Objetivo inicial: 1–2 Validations pagadas." data-vi="Mục tiêu ban đầu: 1–2 Validation trả tiền.">Objetivo inicial: 1–2 Validations pagadas.</label></div>
+      </div>
+    </div>
+
+    <div class="panel" style="padding:20px;margin-top:22px">
+      <div class="toolbar">
+        <div>
+          <div class="kicker" data-es="Mini CRM del piloto" data-vi="Mini CRM pilot">Mini CRM del piloto</div>
+          <h3 style="margin-bottom:0" data-es="Pipeline operativo" data-vi="Pipeline vận hành">Pipeline operativo</h3>
+        </div>
+        <div class="tool-right">
+          <button class="btn btn-secondary btn-sm" id="exportCsv" data-es="Exportar CSV" data-vi="Xuất CSV">Exportar CSV</button>
+          <button class="btn btn-danger btn-sm" id="clearCrm" data-es="Vaciar CRM" data-vi="Xóa CRM">Vaciar CRM</button>
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="field"><label data-es="Empresa" data-vi="Công ty">Empresa</label><input id="fCompany"></div>
+        <div class="field"><label data-es="Producto / sector" data-vi="Sản phẩm / ngành">Producto / sector</label><input id="fProduct"></div>
+        <div class="field"><label data-es="Contacto" data-vi="Liên hệ">Contacto</label><input id="fContact"></div>
+        <div class="field"><label data-es="Zalo / Email" data-vi="Zalo / Email">Zalo / Email</label><input id="fChannel"></div>
+        <div class="field"><label>Score</label><select id="fScore"><option>A+</option><option>A</option><option>B</option><option>D</option></select></div>
+        <div class="field"><label>Status</label><select id="fStatus"><option>NEW</option><option>QUALIFIED</option><option>FOLLOW-UP</option><option>DISCOVERY</option><option>PROPOSAL</option><option>VERBAL YES</option><option>PAYMENT PENDING</option><option>WON</option><option>DELIVERY</option><option>MARKET ACCESS</option><option>LOST</option></select></div>
+        <div class="field"><label data-es="Próxima acción" data-vi="Bước tiếp theo">Próxima acción</label><input id="fNext"></div>
+        <div class="field"><label data-es="Valor propuesta USD" data-vi="Giá trị proposal USD">Valor propuesta USD</label><input id="fValue" type="number" min="0" value="1500"></div>
+      </div>
+      <button class="btn btn-primary btn-sm" id="addLead" data-es="+ Añadir lead" data-vi="+ Thêm lead">+ Añadir lead</button>
+
+      <div class="tablewrap" style="margin-top:16px">
+        <table>
+          <thead><tr><th>#</th><th data-es="Empresa" data-vi="Công ty">Empresa</th><th data-es="Producto" data-vi="Sản phẩm">Producto</th><th data-es="Contacto" data-vi="Liên hệ">Contacto</th><th>Score</th><th>Status</th><th data-es="Próxima acción" data-vi="Bước tiếp theo">Próxima acción</th><th>USD</th><th></th></tr></thead>
+          <tbody id="crmBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="dashboard">
+  <div class="wrap">
+    <span class="eyebrow"><i></i><span data-es="Pieza 3" data-vi="Phần 3">Pieza 3</span></span>
+    <h2 data-es="Dashboard del piloto · hasta 31 octubre." data-vi="Dashboard pilot · đến 31/10.">Dashboard del piloto · hasta 31 octubre.</h2>
+    <p class="sub" data-es="Los objetivos son internos, no benchmarks de mercado. Sirven para decidir con datos si escalamos, ajustamos o detenemos la línea." data-vi="Đây là mục tiêu nội bộ, không phải benchmark thị trường. Dùng để quyết định dựa trên dữ liệu: mở rộng, điều chỉnh hay dừng.">Los objetivos son internos, no benchmarks de mercado. Sirven para decidir con datos si escalamos, ajustamos o detenemos la línea.</p>
+
+    <div class="kpi-grid" style="margin-top:24px">
+      <div class="kpi"><label data-es="Empresas cualificadas" data-vi="Công ty qualified">Empresas cualificadas</label><div class="kpi-row"><strong>40</strong><input class="kpiActual" data-key="qualified" data-target="40" type="number" min="0" value="0"></div><div class="progress"><i></i></div><small data-es="A/A+ con necesidad y capacidad." data-vi="A/A+ có nhu cầu và năng lực.">A/A+ con necesidad y capacidad.</small></div>
+      <div class="kpi"><label>Discoveries</label><div class="kpi-row"><strong>24</strong><input class="kpiActual" data-key="discoveries" data-target="24" type="number" min="0" value="0"></div><div class="progress"><i></i></div><small data-es="Conversaciones serias con decisor." data-vi="Cuộc trao đổi nghiêm túc với decision maker.">Conversaciones serias con decisor.</small></div>
+      <div class="kpi"><label>Proposals</label><div class="kpi-row"><strong>12</strong><input class="kpiActual" data-key="proposals" data-target="12" type="number" min="0" value="0"></div><div class="progress"><i></i></div><small data-es="Solo a empresas con fit real." data-vi="Chỉ gửi cho công ty fit thực sự.">Solo a empresas con fit real.</small></div>
+      <div class="kpi"><label data-es="Validations pagadas" data-vi="Validation trả tiền">Validations pagadas</label><div class="kpi-row"><strong>5</strong><input class="kpiActual" data-key="wins" data-target="5" type="number" min="0" value="0"></div><div class="progress"><i></i></div><small>US$1,500 c/u.</small></div>
+      <div class="kpi"><label data-es="Market Access vendidos" data-vi="Market Access bán được">Market Access vendidos</label><div class="kpi-row"><strong>1</strong><input class="kpiActual" data-key="upsells" data-target="1" type="number" min="0" value="0"></div><div class="progress"><i></i></div><small>US$5,900 c/u.</small></div>
+      <div class="kpi"><label data-es="Revenue cobrado" data-vi="Doanh thu đã thu">Revenue cobrado</label><div class="kpi-row"><strong>US$13.4k</strong><input class="kpiActual" data-key="revenue" data-target="13400" type="number" min="0" value="0"></div><div class="progress"><i></i></div><small data-es="5 validations + 1 Market Access." data-vi="5 validation + 1 Market Access.">5 validations + 1 Market Access.</small></div>
+      <div class="kpi"><label data-es="Horas por Validation" data-vi="Giờ / Validation">Horas por Validation</label><div class="kpi-row"><strong>≤18h</strong><input class="kpiActual" data-key="hours" data-target="18" type="number" min="0" value="0"></div><div class="progress inverse"><i></i></div><small data-es="Si supera 20–22h, revisar delivery." data-vi="Nếu vượt 20–22h, cần xem lại delivery.">Si supera 20–22h, revisar delivery.</small></div>
+      <div class="kpi"><label data-es="Margen contribución" data-vi="Contribution margin">Margen contribución</label><div class="kpi-row"><strong>≥50%</strong><input class="kpiActual" data-key="margin" data-target="50" type="number" min="0" max="100" value="0"></div><div class="progress"><i></i></div><small data-es="Después de comisión + delivery directo." data-vi="Sau hoa hồng + chi phí delivery trực tiếp.">Después de comisión + delivery directo.</small></div>
+    </div>
+
+    <div class="grid-3" style="margin-top:22px">
+      <div class="card"><div class="kicker" data-es="Conversión 1" data-vi="Conversion 1">Conversión 1</div><h3 id="c1">—</h3><p class="muted" data-es="Qualified → Discovery. Objetivo interno: ≥50%." data-vi="Qualified → Discovery. Mục tiêu nội bộ: ≥50%.">Qualified → Discovery. Objetivo interno: ≥50%.</p></div>
+      <div class="card"><div class="kicker" data-es="Conversión 2" data-vi="Conversion 2">Conversión 2</div><h3 id="c2">—</h3><p class="muted" data-es="Discovery → Proposal. Objetivo interno: ≥40%." data-vi="Discovery → Proposal. Mục tiêu nội bộ: ≥40%.">Discovery → Proposal. Objetivo interno: ≥40%.</p></div>
+      <div class="card"><div class="kicker" data-es="Conversión 3" data-vi="Conversion 3">Conversión 3</div><h3 id="c3">—</h3><p class="muted" data-es="Proposal → Paid. Objetivo interno: ≥25%." data-vi="Proposal → Paid. Mục tiêu nội bộ: ≥25%.">Proposal → Paid. Objetivo interno: ≥25%.</p></div>
+    </div>
+
+    <div id="decisionBox" class="decision adjust">
+      <div class="circle" id="decisionLabel">PILOT</div>
+      <div>
+        <h3 id="decisionTitle" data-es="Todavía no hay datos suficientes." data-vi="Chưa đủ dữ liệu.">Todavía no hay datos suficientes.</h3>
+        <p id="decisionText" class="muted" data-es="Carga los resultados reales. La decisión GO / ADJUST / STOP se actualizará automáticamente." data-vi="Nhập kết quả thực tế. Quyết định GO / ADJUST / STOP sẽ tự cập nhật.">Carga los resultados reales. La decisión GO / ADJUST / STOP se actualizará automáticamente.</p>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:22px">
+      <div class="card">
+        <div class="kicker" data-es="GO / ADJUST / STOP" data-vi="GO / ADJUST / STOP">GO / ADJUST / STOP</div>
+        <h3>GO</h3>
+        <p class="muted" data-es="Al 31/10: ≥4 Validations pagadas, revenue ≥US$6,000, proposal→paid ≥25%, delivery ≤20h/Validation y margen contribución ≥45%. Mejor aún si existe ≥1 Market Access vendido o candidato fuerte." data-vi="Đến 31/10: ≥4 Validation trả tiền, revenue ≥US$6,000, proposal→paid ≥25%, delivery ≤20h/Validation và contribution margin ≥45%. Tốt hơn nếu có ≥1 Market Access đã bán hoặc candidate mạnh.">Al 31/10: ≥4 Validations pagadas, revenue ≥US$6,000, proposal→paid ≥25%, delivery ≤20h/Validation y margen contribución ≥45%. Mejor aún si existe ≥1 Market Access vendido o candidato fuerte.</p>
+        <h3>ADJUST</h3>
+        <p class="muted" data-es="2–3 Validations pagadas o buena respuesta pero conversiones débiles. Corregir primero ICP → mensaje → prueba tangible → precio/cierre, en ese orden." data-vi="2–3 Validation trả tiền hoặc phản hồi tốt nhưng conversion yếu. Điều chỉnh theo thứ tự: ICP → message → bằng chứng hữu hình → price/closing.">2–3 Validations pagadas o buena respuesta pero conversiones débiles. Corregir primero ICP → mensaje → prueba tangible → precio/cierre, en ese orden.</p>
+        <h3>STOP / REPLANTEAR</h3>
+        <p class="muted" data-es="<2 ventas tras ≥20 discoveries reales y ≥10 propuestas, o delivery estructuralmente >25h/Validation y margen <35%. No arreglarlo yendo a más ferias." data-vi="<2 sales sau ≥20 discovery thực và ≥10 proposal, hoặc delivery >25h/Validation và margin <35%. Không giải quyết bằng cách đi thêm hội chợ.">&lt;2 ventas tras ≥20 discoveries reales y ≥10 propuestas, o delivery estructuralmente &gt;25h/Validation y margen &lt;35%. No arreglarlo yendo a más ferias.</p>
+      </div>
+
+      <div class="card">
+        <div class="kicker" data-es="Diagnóstico del cuello de botella" data-vi="Chẩn đoán bottleneck">Diagnóstico del cuello de botella</div>
+        <h3 data-es="Si falla aquí, cambia esto:" data-vi="Nếu fail ở đây, thay đổi thứ này:">Si falla aquí, cambia esto:</h3>
+        <table>
+          <tr><td><b data-es="Pocos A/A+" data-vi="Ít A/A+">Pocos A/A+</b></td><td data-es="Feria/sector/ICP equivocado." data-vi="Sai hội chợ/ngành/ICP.">Feria/sector/ICP equivocado.</td></tr>
+          <tr><td><b data-es="A/A+ pero pocas discoveries" data-vi="Có A/A+ nhưng ít discovery">A/A+ pero pocas discoveries</b></td><td data-es="Apertura/follow-up/credibilidad." data-vi="Opening/follow-up/credibility.">Apertura/follow-up/credibilidad.</td></tr>
+          <tr><td><b data-es="Discoveries pero pocas propuestas" data-vi="Có discovery nhưng ít proposal">Discoveries pero pocas propuestas</b></td><td data-es="El ICP no tiene necesidad o capacidad de pagar." data-vi="ICP không có nhu cầu hoặc khả năng trả tiền.">El ICP no tiene necesidad o capacidad de pagar.</td></tr>
+          <tr><td><b data-es="Propuestas pero no pagan" data-vi="Có proposal nhưng không trả tiền">Propuestas pero no pagan</b></td><td data-es="Oferta, prueba tangible, confianza, precio o cierre." data-vi="Offer, proof, trust, price hoặc closing.">Oferta, prueba tangible, confianza, precio o cierre.</td></tr>
+          <tr><td><b data-es="Venden pero delivery duele" data-vi="Bán được nhưng delivery quá nặng">Venden pero delivery duele</b></td><td data-es="Recortar alcance, estandarizar o subir precio. No añadir volumen." data-vi="Giảm scope, chuẩn hóa hoặc tăng giá. Không tăng volume.">Recortar alcance, estandarizar o subir precio. No añadir volumen.</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel" style="padding:22px;margin-top:22px">
+      <div class="kicker" data-es="Plan de ejecución · 7 días" data-vi="Kế hoạch triển khai · 7 ngày">Plan de ejecución · 7 días</div>
+      <div class="week"><strong>Día 1</strong><div data-es="Confirmar Business Development Partner, comisión, límites de autoridad y role-play." data-vi="Chốt Business Development Partner, commission, giới hạn quyền hạn và role-play.">Confirmar Business Development Partner, comisión, límites de autoridad y role-play.</div></div>
+      <div class="week"><strong>Día 2</strong><div data-es="Digitalizar todas las tarjetas/catálogos VIS. Una fila por empresa. Nada queda en papel sin registrar." data-vi="Số hóa toàn bộ danh thiếp/catalogue VIS. Một dòng mỗi công ty. Không để dữ liệu nằm trên giấy.">Digitalizar todas las tarjetas/catálogos VIS. Una fila por empresa. Nada queda en papel sin registrar.</div></div>
+      <div class="week"><strong>Día 3</strong><div data-es="Scorear y seleccionar Top 20–30 A/A+. Localizar decisores de export/international business." data-vi="Chấm điểm, chọn Top 20–30 A/A+. Tìm decision maker export/international business.">Scorear y seleccionar Top 20–30 A/A+. Localizar decisores de export/international business.</div></div>
+      <div class="week"><strong>Día 4</strong><div data-es="Enviar primera ola de follow-up vietnamita. Objetivo: discoveries, no vender por mensaje." data-vi="Gửi wave follow-up đầu tiên bằng tiếng Việt. Mục tiêu: discovery, không bán qua tin nhắn.">Enviar primera ola de follow-up vietnamita. Objetivo: discoveries, no vender por mensaje.</div></div>
+      <div class="week"><strong>Día 5</strong><div data-es="Realizar primeras discoveries. Enviar proposal solo a los que encajan. Enseñar Sample Deliverable cuando ayude." data-vi="Thực hiện discovery đầu tiên. Chỉ gửi proposal cho lead fit. Cho xem Sample Deliverable khi cần.">Realizar primeras discoveries. Enviar proposal solo a los que encajan. Enseñar Sample Deliverable cuando ayude.</div></div>
+      <div class="week"><strong>Día 6</strong><div data-es="Segundo follow-up a no respondidos + cierre de propuestas activas. Preparar siguiente feria con lista previa." data-vi="Follow-up lần 2 + close proposal đang active. Chuẩn bị hội chợ tiếp theo với danh sách target trước.">Segundo follow-up a no respondidos + cierre de propuestas activas. Preparar siguiente feria con lista previa.</div></div>
+      <div class="week"><strong>Día 7</strong><div data-es="Revisión de funnel: A/A+, discoveries, propuestas, objeciones y pagos. Cambiar una sola variable si hay un cuello de botella claro." data-vi="Review funnel: A/A+, discovery, proposal, objection và payment. Chỉ thay đổi một biến nếu bottleneck rõ.">Revisión de funnel: A/A+, discoveries, propuestas, objeciones y pagos. Cambiar una sola variable si hay un cuello de botella claro.</div></div>
+    </div>
+
+    <div class="grid-2" style="margin-top:22px">
+      <div class="card">
+        <div class="kicker" data-es="Economics rápidos" data-vi="Economics nhanh">Economics rápidos</div>
+        <table>
+          <tr><td>Validation</td><td><b>US$1,500</b></td></tr>
+          <tr><td data-es="Comisión BD 30%" data-vi="BD commission 30%">Comisión BD 30%</td><td>US$450</td></tr>
+          <tr><td data-es="Disponible antes de delivery" data-vi="Còn lại trước delivery">Disponible antes de delivery</td><td><b>US$1,050</b></td></tr>
+          <tr><td>Market Access</td><td><b>US$5,900</b></td></tr>
+          <tr><td data-es="Comisión BD 30%" data-vi="BD commission 30%">Comisión BD 30%</td><td>US$1,770</td></tr>
+          <tr><td data-es="Disponible antes de delivery" data-vi="Còn lại trước delivery">Disponible antes de delivery</td><td><b>US$4,130</b></td></tr>
+        </table>
+        <p class="small" data-es="Objetivo: contribution margin mínimo 45–50% después de comisión y costes directos de delivery." data-vi="Mục tiêu: contribution margin tối thiểu 45–50% sau commission và direct delivery cost.">Objetivo: contribution margin mínimo 45–50% después de comisión y costes directos de delivery.</p>
+      </div>
+      <div class="card">
+        <div class="kicker" data-es="No construir todavía" data-vi="Chưa xây bây giờ">No construir todavía</div>
+        <ul class="ul">
+          <li data-es="CRM de pago complejo." data-vi="CRM trả phí phức tạp.">CRM de pago complejo.</li>
+          <li data-es="Equipo grande de ventas." data-vi="Đội sales lớn.">Equipo grande de ventas.</li>
+          <li data-es="10 servicios distintos." data-vi="10 dịch vụ khác nhau.">10 servicios distintos.</li>
+          <li data-es="Automatizaciones masivas de outreach." data-vi="Automation outreach hàng loạt.">Automatizaciones masivas de outreach.</li>
+          <li data-es="Oficina, sociedad nueva o branding independiente." data-vi="Văn phòng, pháp nhân mới hoặc brand riêng.">Oficina, sociedad nueva o branding independiente.</li>
+          <li data-es="Success-only como modelo estándar." data-vi="Success-only như mô hình chuẩn.">Success-only como modelo estándar.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rule" style="margin-top:22px" data-es="Regla final del piloto: si conseguimos ventas pagadas y delivery rentable, escalamos. Si solo conseguimos tarjetas, reuniones y entusiasmo, no está validado." data-vi="Quy tắc cuối của pilot: nếu có khách hàng trả tiền và delivery có lãi, mở rộng. Nếu chỉ có danh thiếp, cuộc họp và sự hào hứng, mô hình chưa được xác thực.">Regla final del piloto: si conseguimos ventas pagadas y delivery rentable, escalamos. Si solo conseguimos tarjetas, reuniones y entusiasmo, no está validado.</div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <b>Emprende360 Vietnam · Internal Launch Hub</b><br>
+    <span data-es="Documento operativo interno. No usar como promesa contractual al cliente. El alcance contractual final lo determina la propuesta aceptada." data-vi="Tài liệu vận hành nội bộ. Không dùng như cam kết hợp đồng với khách hàng. Scope hợp đồng cuối cùng theo proposal đã chấp thuận.">Documento operativo interno. No usar como promesa contractual al cliente. El alcance contractual final lo determina la propuesta aceptada.</span>
+  </div>
+</footer>
+
+<script>
+  // Language
+  let currentLang = localStorage.getItem('e360lang') || 'es';
+  const langButtons = document.querySelectorAll('.lang button');
+  function applyLang(lang){
+    currentLang=lang;localStorage.setItem('e360lang',lang);
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-es][data-vi]').forEach(el=>{
+      el.textContent=el.dataset[lang];
+    });
+    langButtons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  }
+  langButtons.forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+  applyLang(currentLang);
+
+  // Tabs
+  document.querySelectorAll('.tab').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const parent=btn.closest('.section');
+      parent.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+      parent.querySelectorAll('.tab-pane').forEach(x=>x.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+    });
+  });
+
+  // Copy buttons
+  document.querySelectorAll('.copybox').forEach(box=>{
+    const btn=box.querySelector('.copybtn');
+    if(!btn)return;
+    btn.addEventListener('click',async()=>{
+      const text=box.dataset.copy || box.textContent.replace(btn.textContent,'').trim();
+      try{await navigator.clipboard.writeText(text);btn.textContent=currentLang==='vi'?'Đã copy':'Copiado';setTimeout(()=>btn.textContent=currentLang==='vi'?'Sao chép':'Copiar',1200)}
+      catch(e){prompt('Copy:',text)}
+    });
+  });
+
+  // Score
+  const boxes=[...document.querySelectorAll('.scoreBox')], scoreValue=document.getElementById('scoreValue'),
+        grade=document.getElementById('grade'), scoreAction=document.getElementById('scoreAction');
+  function calcScore(){
+    let s=boxes.reduce((n,b)=>n+(b.checked?Number(b.dataset.points):0),0);scoreValue.textContent=s;
+    let g='D',cls='d',actEs='Descartar campaña.',actVi='Loại khỏi campaign.';
+    if(s>=85){g='A+';cls='aplus';actEs='Activar ya. Conseguir discovery y decisor.';actVi='Kích hoạt ngay. Lấy discovery và decision maker.'}
+    else if(s>=70){g='A';cls='a';actEs='Buen encaje. Follow-up prioritario.';actVi='Fit tốt. Follow-up ưu tiên.'}
+    else if(s>=50){g='B';cls='b';actEs='Explorar solo si hay señal concreta.';actVi='Chỉ explore nếu có tín hiệu cụ thể.'}
+    grade.textContent=g;grade.className='grade '+cls;scoreAction.textContent=currentLang==='vi'?actVi:actEs;
+  }
+  boxes.forEach(b=>b.addEventListener('change',calcScore));calcScore();
+
+  // Persist checkboxes
+  document.querySelectorAll('.persist-check').forEach(cb=>{
+    cb.checked=localStorage.getItem(cb.id)==='1';
+    cb.addEventListener('change',()=>localStorage.setItem(cb.id,cb.checked?'1':'0'));
+  });
+
+  // Mini CRM
+  let crm=JSON.parse(localStorage.getItem('e360crm')||'[]');
+  const body=document.getElementById('crmBody');
+  function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+  function renderCrm(){
+    body.innerHTML='';
+    crm.forEach((r,i)=>{
+      const tr=document.createElement('tr');
+      tr.innerHTML=`<td>${i+1}</td><td><b>${esc(r.company)}</b></td><td>${esc(r.product)}</td><td>${esc(r.contact)}<br><span class="small">${esc(r.channel)}</span></td><td><span class="status-pill">${esc(r.score)}</span></td><td>${esc(r.status)}</td><td>${esc(r.next)}</td><td>${Number(r.value||0).toLocaleString()}</td><td><button class="btn btn-danger btn-sm" data-del="${i}">×</button></td>`;
+      body.appendChild(tr);
+    });
+    localStorage.setItem('e360crm',JSON.stringify(crm));
+    body.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',()=>{crm.splice(Number(b.dataset.del),1);renderCrm()}));
+  }
+  document.getElementById('addLead').addEventListener('click',()=>{
+    const company=document.getElementById('fCompany').value.trim();if(!company)return;
+    crm.push({
+      company,product:document.getElementById('fProduct').value.trim(),contact:document.getElementById('fContact').value.trim(),
+      channel:document.getElementById('fChannel').value.trim(),score:document.getElementById('fScore').value,status:document.getElementById('fStatus').value,
+      next:document.getElementById('fNext').value.trim(),value:Number(document.getElementById('fValue').value||0)
+    });
+    ['fCompany','fProduct','fContact','fChannel','fNext'].forEach(id=>document.getElementById(id).value='');
+    renderCrm();
+  });
+  document.getElementById('clearCrm').addEventListener('click',()=>{if(confirm(currentLang==='vi'?'Xóa toàn bộ CRM?':'¿Vaciar todo el CRM?')){crm=[];renderCrm()}});
+  document.getElementById('exportCsv').addEventListener('click',()=>{
+    const rows=[['Company','Product','Contact','Channel','Score','Status','Next Action','Proposal USD'],...crm.map(r=>[r.company,r.product,r.contact,r.channel,r.score,r.status,r.next,r.value])];
+    const csv=rows.map(row=>row.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\n');
+    const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download='emprende360-vietnam-pipeline.csv';a.click();URL.revokeObjectURL(url);
+  });
+  renderCrm();
+
+  // KPI dashboard
+  const kpis=[...document.querySelectorAll('.kpiActual')];
+  kpis.forEach(inp=>{
+    const key='e360kpi_'+inp.dataset.key;
+    if(localStorage.getItem(key)!==null)inp.value=localStorage.getItem(key);
+    inp.addEventListener('input',()=>{localStorage.setItem(key,inp.value);updateDashboard()});
+  });
+  function pct(a,b){return b>0?Math.round((a/b)*100):null}
+  function updateDashboard(){
+    let vals={};kpis.forEach(inp=>{
+      const v=Number(inp.value||0),t=Number(inp.dataset.target||0);vals[inp.dataset.key]=v;
+      const bar=inp.closest('.kpi').querySelector('.progress i');
+      let p=inp.dataset.key==='hours'?(v===0?0:Math.min(100,(t/Math.max(v,1))*100)):Math.min(100,(v/Math.max(t,1))*100);
+      bar.style.width=p+'%';
+    });
+    const q=vals.qualified||0,d=vals.discoveries||0,p=vals.proposals||0,w=vals.wins||0;
+    const c1=pct(d,q),c2=pct(p,d),c3=pct(w,p);
+    document.getElementById('c1').textContent=c1===null?'—':c1+'%';
+    document.getElementById('c2').textContent=c2===null?'—':c2+'%';
+    document.getElementById('c3').textContent=c3===null?'—':c3+'%';
+
+    const box=document.getElementById('decisionBox'),label=document.getElementById('decisionLabel'),title=document.getElementById('decisionTitle'),text=document.getElementById('decisionText');
+    let mode='adjust',lab='PILOT',tEs='Todavía no hay datos suficientes.',xEs='Carga los resultados reales. La decisión GO / ADJUST / STOP se actualizará automáticamente.',
+        tVi='Chưa đủ dữ liệu.',xVi='Nhập kết quả thực tế. Quyết định GO / ADJUST / STOP sẽ tự cập nhật.';
+    if(p>=10 || d>=20 || w>=2){
+      const proposalPaid=c3||0, hours=vals.hours||999, margin=vals.margin||0, revenue=vals.revenue||0;
+      if(w>=4 && revenue>=6000 && proposalPaid>=25 && hours<=20 && margin>=45){
+        mode='go';lab='GO';tEs='El piloto está validando negocio.';xEs='Mantener disciplina, documentar casos reales y preparar escala controlada. No ampliar servicios todavía.';
+        tVi='Pilot đang xác thực được business.';xVi='Giữ kỷ luật, ghi lại case thật và chuẩn bị scale có kiểm soát. Chưa mở thêm dịch vụ.';
+      }else if(w<2 && d>=20 && p>=10){
+        mode='stop';lab='STOP';tEs='No hay suficiente evidencia de compra.';xEs='Pausar expansión. Revisar ICP, necesidad, confianza, oferta y precio antes de seguir añadiendo volumen o ferias.';
+        tVi='Chưa có đủ bằng chứng mua.';xVi='Tạm dừng mở rộng. Xem lại ICP, nhu cầu, trust, offer và price trước khi tăng volume/hội chợ.';
+      }else{
+        mode='adjust';lab='ADJUST';tEs='Hay señal, pero todavía no una máquina repetible.';xEs='Localiza el cuello de botella del funnel y cambia una variable cada vez.';
+        tVi='Có tín hiệu nhưng chưa thành machine lặp lại được.';xVi='Tìm bottleneck trong funnel và chỉ thay đổi một biến mỗi lần.';
+      }
+    }
+    box.className='decision '+mode;label.textContent=lab;title.textContent=currentLang==='vi'?tVi:tEs;text.textContent=currentLang==='vi'?xVi:xEs;
+  }
+  kpis.forEach(i=>i.addEventListener('change',updateDashboard));updateDashboard();
+
+  // Reapply dynamic texts on language switch
+  langButtons.forEach(b=>b.addEventListener('click',()=>{calcScore();updateDashboard()}));
+</script>
+</body>
+</html>
