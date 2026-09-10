@@ -1,0 +1,3533 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Emprende360 · Conversaciones y relaciones B2B con contexto</title>
+
+  <meta
+    name="description"
+    content="Emprende360 crea conversaciones B2B con contexto mediante Rondas de Alianzas, Foros Ejecutivos, entrevistas y sesiones especializadas. Descubre Golden Partners e Impulso B2B."
+  />
+
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://emprende360.club/" />
+
+  <meta
+    property="og:title"
+    content="Emprende360 · Conversaciones B2B que merece la pena tener"
+  />
+
+  <meta
+    property="og:description"
+    content="Rondas de Alianzas B2B, Foros Ejecutivos, entrevistas, sesiones, Golden Partners e Impulso B2B."
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://emprende360.club/" />
+
+  <meta name="theme-color" content="#020617" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Emprende360",
+    "url":"https://emprende360.club/",
+    "founder":{
+      "@type":"Person",
+      "name":"Alberto Porras"
+    },
+    "sameAs":[
+      "https://es.linkedin.com/in/albertoporrasmoreno"
+    ]
+  }
+  </script>
+
+  <style>
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root{
+      --deep:#020617;
+      --deep2:#040B16;
+
+      --navy:#071522;
+      --navy2:#0B1728;
+
+      --sky:#18A7FF;
+      --sky-soft:#7DD3FC;
+
+      --gold:#F4C542;
+      --gold-soft:#FDE68A;
+
+      --green:#22C55E;
+      --green-soft:#86EFAC;
+
+      --text:#F8FAFC;
+      --soft:#CBD5E1;
+      --muted:#94A3B8;
+
+      --line:rgba(255,255,255,.12);
+
+      --glass:rgba(255,255,255,.045);
+      --glass2:rgba(255,255,255,.075);
+
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+
+      --max:1180px;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background:var(--deep);
+      color:var(--text);
+
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    strong,
+    b{
+      color:#fff;
+    }
+
+    img,
+    iframe{
+      display:block;
+      max-width:100%;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+    .section{
+      position:relative;
+      padding:78px 0;
+      overflow:hidden;
+    }
+
+    .center{
+      max-width:870px;
+      margin-left:auto;
+      margin-right:auto;
+      text-align:center;
+    }
+
+    .lead{
+      color:var(--soft);
+      font-size:18px;
+      line-height:1.68;
+    }
+
+    .small{
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .grad-text{
+      background:
+        linear-gradient(
+          90deg,
+          #ffffff,
+          #c8ecff 47%,
+          #ffe6a6
+        );
+
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .pill,
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+
+      border-radius:999px;
+
+      text-transform:uppercase;
+      font-weight:950;
+    }
+
+    .pill{
+      padding:8px 13px;
+
+      border:1px solid rgba(255,255,255,.13);
+
+      background:rgba(255,255,255,.055);
+
+      color:#DBEAFE;
+
+      font-size:11px;
+      letter-spacing:.08em;
+    }
+
+    .pill.free{
+      border-color:rgba(34,197,94,.26);
+      background:rgba(34,197,94,.08);
+      color:var(--green-soft);
+    }
+
+    .pill.gold{
+      border-color:rgba(244,197,66,.28);
+      background:rgba(244,197,66,.08);
+      color:var(--gold-soft);
+    }
+
+    .kicker{
+      padding:7px 12px;
+
+      border:1px solid rgba(24,167,255,.25);
+
+      background:rgba(24,167,255,.09);
+
+      color:#C8ECFF;
+
+      font-size:10px;
+      letter-spacing:.14em;
+    }
+
+    h1{
+      margin:18px 0 0;
+
+      font-size:clamp(44px,5.45vw,69px);
+      line-height:.98;
+
+      letter-spacing:-.06em;
+
+      font-weight:950;
+    }
+
+    h2{
+      margin:14px 0 0;
+
+      font-size:clamp(32px,4.3vw,51px);
+      line-height:1.04;
+
+      letter-spacing:-.045em;
+
+      font-weight:950;
+    }
+
+    h3{
+      margin:0;
+      line-height:1.16;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+
+      padding:14px 20px;
+
+      border-radius:999px;
+      border:0;
+
+      cursor:pointer;
+
+      font-size:13px;
+      font-weight:950;
+
+      transition:
+        transform .24s ease,
+        box-shadow .24s ease,
+        border-color .24s ease,
+        background .24s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .btn-primary{
+      color:#06111F;
+
+      background:
+        linear-gradient(
+          90deg,
+          #ffd95a,
+          #F4C542,
+          #ffd15a
+        );
+
+      box-shadow:
+        0 18px 60px rgba(244,197,66,.20);
+    }
+
+    .btn-primary:hover{
+      box-shadow:
+        0 24px 70px rgba(244,197,66,.34);
+    }
+
+    .btn-secondary{
+      color:#fff;
+
+      background:rgba(255,255,255,.055);
+
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.085);
+      border-color:rgba(255,255,255,.23);
+    }
+
+    .btn-blue{
+      color:#fff;
+
+      background:
+        linear-gradient(
+          90deg,
+          #0A66C2,
+          #18A7FF
+        );
+
+      box-shadow:
+        0 18px 55px rgba(24,167,255,.18);
+    }
+
+    .grid-bg{
+      position:absolute;
+      inset:0;
+
+      opacity:.055;
+
+      pointer-events:none;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,.65) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.65) 1px,
+          transparent 1px
+        );
+
+      background-size:54px 54px;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+
+      transition:
+        opacity .65s ease,
+        transform .65s ease;
+    }
+
+    .reveal.on{
+      opacity:1;
+      transform:none;
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    header{
+      position:fixed;
+
+      top:0;
+      left:0;
+      right:0;
+
+      z-index:100;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.09);
+
+      background:
+        rgba(2,6,23,.87);
+
+      backdrop-filter:blur(22px);
+    }
+
+    .nav{
+      max-width:var(--max);
+
+      margin:0 auto;
+      padding:11px 22px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+
+      gap:11px;
+
+      flex-shrink:0;
+    }
+
+    .brand-mark{
+      width:41px;
+      height:41px;
+
+      display:grid;
+      place-items:center;
+
+      border-radius:16px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #7DD3FC,
+          #0A66C2
+        );
+
+      box-shadow:
+        0 18px 45px rgba(24,167,255,.25);
+
+      font-weight:950;
+    }
+
+    .brand-title{
+      font-weight:950;
+      line-height:1;
+    }
+
+    .brand-sub{
+      margin-top:4px;
+
+      color:#94A3B8;
+
+      font-size:10px;
+      font-weight:850;
+
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+
+      gap:18px;
+
+      margin-left:auto;
+
+      color:#CBD5E1;
+
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .nav-links a:hover{
+      color:#fff;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero{
+      position:relative;
+
+      padding:
+        110px 0 67px;
+
+      background:
+        radial-gradient(
+          circle at 12% 10%,
+          rgba(24,167,255,.22),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 88% 14%,
+          rgba(244,197,66,.13),
+          transparent 30%
+        ),
+        var(--deep);
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+
+      display:grid;
+
+      grid-template-columns:
+        1.08fr .92fr;
+
+      gap:42px;
+
+      align-items:start;
+    }
+
+    .hero-copy p{
+      max-width:740px;
+
+      margin:20px 0 0;
+
+      color:#CBD5E1;
+
+      font-size:18px;
+      line-height:1.68;
+    }
+
+    .hero-claim{
+      margin-top:21px;
+      padding:16px 18px;
+
+      border:
+        1px solid rgba(244,197,66,.26);
+
+      border-radius:18px;
+
+      background:
+        rgba(244,197,66,.055);
+
+      color:#FDE68A;
+
+      font-size:15px;
+      font-weight:900;
+
+      line-height:1.5;
+    }
+
+    .hero-actions{
+      margin-top:25px;
+
+      display:flex;
+      flex-wrap:wrap;
+
+      gap:11px;
+    }
+
+    .hero-topics{
+      margin-top:18px;
+
+      color:#94A3B8;
+
+      font-size:11px;
+      font-weight:800;
+
+      line-height:1.6;
+      letter-spacing:.025em;
+    }
+
+
+    /* =========================================================
+       FORMATS CARD
+    ========================================================= */
+
+    .formats-card{
+      padding:29px;
+
+      border:
+        1px solid rgba(24,167,255,.23);
+
+      border-radius:30px;
+
+      background:
+        radial-gradient(
+          circle at 100% 0,
+          rgba(24,167,255,.10),
+          transparent 38%
+        ),
+        radial-gradient(
+          circle at 0 100%,
+          rgba(244,197,66,.08),
+          transparent 42%
+        ),
+        rgba(255,255,255,.05);
+
+      box-shadow:var(--shadow);
+    }
+
+    .formats-card h3{
+      margin-top:13px;
+
+      font-size:29px;
+
+      letter-spacing:-.04em;
+    }
+
+    .formats-card > p{
+      color:#CBD5E1;
+
+      font-size:13px;
+      line-height:1.58;
+    }
+
+    .formats-list{
+      display:grid;
+      gap:10px;
+
+      margin-top:19px;
+    }
+
+    .format-item{
+      display:grid;
+
+      grid-template-columns:
+        auto 1fr;
+
+      gap:11px;
+      align-items:start;
+
+      padding:14px;
+
+      border:
+        1px solid rgba(255,255,255,.10);
+
+      border-radius:17px;
+
+      background:
+        rgba(2,6,23,.28);
+    }
+
+    .format-icon{
+      width:38px;
+      height:38px;
+
+      display:grid;
+      place-items:center;
+
+      border-radius:12px;
+
+      background:
+        rgba(24,167,255,.10);
+
+      border:
+        1px solid rgba(24,167,255,.18);
+
+      flex:none;
+    }
+
+    .format-icon.gold{
+      background:
+        rgba(244,197,66,.10);
+
+      border-color:
+        rgba(244,197,66,.22);
+    }
+
+    .format-icon.green{
+      background:
+        rgba(34,197,94,.09);
+
+      border-color:
+        rgba(34,197,94,.20);
+    }
+
+    .format-item b{
+      display:block;
+
+      font-size:13px;
+    }
+
+    .format-item span{
+      display:block;
+
+      margin-top:4px;
+
+      color:#94A3B8;
+
+      font-size:10px;
+      line-height:1.45;
+    }
+
+    .formats-card .btn{
+      width:100%;
+
+      margin-top:20px;
+    }
+
+
+    /* =========================================================
+       AUTHORITY
+    ========================================================= */
+
+    .authority{
+      padding:38px 0;
+
+      background:var(--navy);
+
+      border-top:
+        1px solid rgba(255,255,255,.06);
+
+      border-bottom:
+        1px solid rgba(255,255,255,.06);
+    }
+
+    .authority-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap:13px;
+    }
+
+    .authority-card{
+      padding:20px;
+
+      border:
+        1px solid rgba(255,255,255,.10);
+
+      border-radius:21px;
+
+      background:
+        rgba(255,255,255,.035);
+    }
+
+    .authority-card strong{
+      display:block;
+
+      font-size:
+        clamp(27px,3.2vw,40px);
+
+      line-height:1;
+
+      letter-spacing:-.05em;
+    }
+
+    .authority-card.blue strong{
+      color:#7DD3FC;
+    }
+
+    .authority-card.gold strong{
+      color:#FDE68A;
+    }
+
+    .authority-card b{
+      display:block;
+
+      margin-top:10px;
+
+      font-size:13px;
+    }
+
+    .authority-card p{
+      margin:
+        7px 0 0;
+
+      color:#94A3B8;
+
+      font-size:10px;
+      line-height:1.48;
+    }
+
+    .authority-note{
+      max-width:850px;
+
+      margin:
+        15px auto 0;
+
+      color:#64748B;
+
+      text-align:center;
+
+      font-size:10px;
+      line-height:1.5;
+    }
+
+
+    /* =========================================================
+       EMPRENDE360 EN ACCIÓN
+    ========================================================= */
+
+    .action-section{
+      background:var(--deep);
+    }
+
+    .action-grid{
+      display:grid;
+
+      grid-template-columns:
+        1.22fr .78fr;
+
+      gap:17px;
+
+      margin-top:38px;
+    }
+
+    .action-video{
+      overflow:hidden;
+
+      border:
+        1px solid rgba(244,197,66,.23);
+
+      border-radius:29px;
+
+      background:
+        rgba(255,255,255,.04);
+
+      box-shadow:
+        0 24px 70px rgba(0,0,0,.22);
+    }
+
+    .video-frame{
+      position:relative;
+
+      width:100%;
+      aspect-ratio:16/9;
+
+      overflow:hidden;
+
+      background:
+        radial-gradient(
+          circle at 18% 18%,
+          rgba(24,167,255,.22),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 80% 60%,
+          rgba(244,197,66,.10),
+          transparent 38%
+        ),
+        linear-gradient(
+          135deg,
+          #071522,
+          #0B1728
+        );
+    }
+
+    .video-frame iframe{
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
+    .video-placeholder{
+      position:absolute;
+      inset:0;
+
+      display:flex;
+      flex-direction:column;
+
+      align-items:center;
+      justify-content:center;
+
+      gap:14px;
+
+      padding:30px;
+
+      text-align:center;
+    }
+
+    .video-play{
+      width:68px;
+      height:68px;
+
+      display:grid;
+      place-items:center;
+
+      border-radius:50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #FDE047,
+          #F4C542
+        );
+
+      color:#06111F;
+
+      font-size:22px;
+      font-weight:950;
+
+      box-shadow:
+        0 18px 45px rgba(0,0,0,.30);
+    }
+
+    .video-placeholder b{
+      font-size:21px;
+    }
+
+    .video-placeholder span{
+      max-width:470px;
+
+      color:#94A3B8;
+
+      font-size:11px;
+      line-height:1.5;
+    }
+
+    .action-video-body{
+      padding:24px;
+    }
+
+    .action-label{
+      display:inline-flex;
+
+      padding:6px 9px;
+
+      border:
+        1px solid rgba(34,197,94,.22);
+
+      border-radius:999px;
+
+      background:
+        rgba(34,197,94,.07);
+
+      color:#86EFAC;
+
+      font-size:9px;
+      font-weight:950;
+
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    .action-video-body h3{
+      margin-top:12px;
+
+      font-size:25px;
+
+      letter-spacing:-.035em;
+    }
+
+    .action-video-body p{
+      margin:
+        9px 0 0;
+
+      color:#94A3B8;
+
+      font-size:12px;
+      line-height:1.55;
+    }
+
+    .action-side{
+      display:grid;
+      gap:15px;
+    }
+
+    .action-card{
+      display:flex;
+      flex-direction:column;
+
+      padding:24px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:25px;
+
+      background:
+        rgba(255,255,255,.04);
+    }
+
+    .action-card-icon{
+      width:44px;
+      height:44px;
+
+      display:grid;
+      place-items:center;
+
+      border-radius:14px;
+
+      background:
+        rgba(24,167,255,.09);
+
+      border:
+        1px solid rgba(24,167,255,.18);
+
+      font-size:18px;
+    }
+
+    .action-card h3{
+      margin-top:14px;
+
+      font-size:21px;
+
+      letter-spacing:-.025em;
+    }
+
+    .action-card p{
+      color:#94A3B8;
+
+      font-size:12px;
+      line-height:1.52;
+    }
+
+    .action-link{
+      display:inline-block;
+
+      margin-top:auto;
+      padding-top:14px;
+
+      color:#FDE68A;
+
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .action-actions{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+
+      gap:10px;
+
+      margin-top:26px;
+    }
+
+
+    /* =========================================================
+       GOLDEN PARTNERS
+    ========================================================= */
+
+    .golden-section{
+      background:
+        radial-gradient(
+          circle at 9% 12%,
+          rgba(244,197,66,.10),
+          transparent 29%
+        ),
+        radial-gradient(
+          circle at 90% 17%,
+          rgba(24,167,255,.08),
+          transparent 30%
+        ),
+        var(--navy);
+    }
+
+    .golden-intro{
+      max-width:900px;
+
+      margin:
+        0 auto;
+
+      text-align:center;
+    }
+
+    .golden-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap:14px;
+
+      margin-top:38px;
+    }
+
+    .golden-card{
+      position:relative;
+
+      min-height:270px;
+
+      display:flex;
+      flex-direction:column;
+
+      padding:23px;
+
+      border:
+        1px solid rgba(244,197,66,.18);
+
+      border-radius:24px;
+
+      background:
+        radial-gradient(
+          circle at 100% 0,
+          rgba(244,197,66,.08),
+          transparent 38%
+        ),
+        rgba(255,255,255,.04);
+
+      transition:
+        transform .24s ease,
+        border-color .24s ease,
+        background .24s ease;
+    }
+
+    .golden-card:hover{
+      transform:translateY(-4px);
+
+      border-color:
+        rgba(244,197,66,.34);
+
+      background:
+        radial-gradient(
+          circle at 100% 0,
+          rgba(244,197,66,.11),
+          transparent 38%
+        ),
+        rgba(255,255,255,.06);
+    }
+
+    .golden-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+
+      gap:12px;
+    }
+
+    .golden-icon{
+      width:49px;
+      height:49px;
+
+      display:grid;
+      place-items:center;
+
+      border-radius:16px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #FDE047,
+          #7DD3FC
+        );
+
+      color:#06111F;
+
+      font-size:21px;
+      font-weight:950;
+    }
+
+    .golden-slot{
+      display:inline-flex;
+
+      padding:6px 9px;
+
+      border:
+        1px solid rgba(244,197,66,.24);
+
+      border-radius:999px;
+
+      background:
+        rgba(244,197,66,.07);
+
+      color:#FDE68A;
+
+      font-size:8px;
+      font-weight:950;
+
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .golden-card h3{
+      margin-top:17px;
+
+      font-size:20px;
+
+      letter-spacing:-.03em;
+    }
+
+    .golden-card p{
+      margin:
+        9px 0 0;
+
+      color:#94A3B8;
+
+      font-size:11px;
+      line-height:1.52;
+    }
+
+    .golden-company{
+      margin-top:15px;
+      padding-top:14px;
+
+      border-top:
+        1px solid rgba(255,255,255,.09);
+
+      color:#CBD5E1;
+
+      font-size:11px;
+    }
+
+    .golden-company b{
+      display:block;
+
+      margin-bottom:4px;
+
+      color:#FDE68A;
+
+      font-size:11px;
+    }
+
+    .golden-link{
+      display:inline-block;
+
+      margin-top:auto;
+      padding-top:18px;
+
+      color:#FDE68A;
+
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .golden-actions{
+      margin-top:27px;
+
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+
+      gap:10px;
+    }
+
+
+    /* =========================================================
+       SYSTEM
+    ========================================================= */
+
+    .system{
+      background:var(--deep);
+    }
+
+    .flow-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap:13px;
+
+      margin-top:36px;
+    }
+
+    .flow-item{
+      min-height:210px;
+
+      padding:22px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:22px;
+
+      background:
+        rgba(255,255,255,.04);
+    }
+
+    .flow-num{
+      width:40px;
+      height:40px;
+
+      display:grid;
+      place-items:center;
+
+      border-radius:13px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #FDE047,
+          #7DD3FC
+        );
+
+      color:#06111F;
+
+      font-size:13px;
+      font-weight:950;
+    }
+
+    .flow-item b{
+      display:block;
+
+      margin-top:14px;
+
+      font-size:17px;
+    }
+
+    .flow-item span{
+      display:block;
+
+      margin-top:7px;
+
+      color:#94A3B8;
+
+      font-size:11px;
+      line-height:1.52;
+    }
+
+    .system-quote{
+      max-width:820px;
+
+      margin:
+        22px auto 0;
+
+      padding:15px 18px;
+
+      border:
+        1px solid rgba(244,197,66,.22);
+
+      border-radius:18px;
+
+      background:
+        rgba(244,197,66,.055);
+
+      color:#FDE68A;
+
+      text-align:center;
+
+      font-size:14px;
+      font-weight:900;
+
+      line-height:1.5;
+    }
+
+
+    /* =========================================================
+       PRODUCTS
+    ========================================================= */
+
+    .products{
+      background:
+        radial-gradient(
+          circle at 9% 12%,
+          rgba(244,197,66,.08),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 91% 16%,
+          rgba(24,167,255,.09),
+          transparent 30%
+        ),
+        var(--navy);
+    }
+
+    .products-grid{
+      display:grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:17px;
+
+      margin-top:38px;
+    }
+
+    .product-card{
+      min-height:480px;
+
+      display:flex;
+      flex-direction:column;
+
+      padding:30px;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:29px;
+
+      background:
+        rgba(255,255,255,.045);
+
+      box-shadow:
+        0 22px 65px rgba(0,0,0,.17);
+    }
+
+    .product-card.impulso{
+      border-color:
+        rgba(244,197,66,.30);
+
+      background:
+        radial-gradient(
+          circle at 0 0,
+          rgba(244,197,66,.10),
+          transparent 38%
+        ),
+        rgba(255,255,255,.05);
+    }
+
+    .product-card.golden{
+      border-color:
+        rgba(24,167,255,.28);
+
+      background:
+        radial-gradient(
+          circle at 100% 0,
+          rgba(24,167,255,.10),
+          transparent 38%
+        ),
+        rgba(255,255,255,.05);
+    }
+
+    .product-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+
+      gap:14px;
+    }
+
+    .product-icon{
+      width:49px;
+      height:49px;
+
+      display:grid;
+      place-items:center;
+
+      border-radius:16px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #FDE047,
+          #7DD3FC
+        );
+
+      color:#06111F;
+
+      font-size:20px;
+      font-weight:950;
+
+      flex-shrink:0;
+    }
+
+    .product-label{
+      display:inline-flex;
+
+      padding:6px 9px;
+
+      border:
+        1px solid rgba(255,255,255,.12);
+
+      border-radius:999px;
+
+      background:
+        rgba(255,255,255,.04);
+
+      color:#DBEAFE;
+
+      font-size:9px;
+      font-weight:950;
+
+      letter-spacing:.07em;
+      text-transform:uppercase;
+
+      text-align:right;
+    }
+
+    .product-card h3{
+      margin-top:19px;
+
+      font-size:31px;
+
+      letter-spacing:-.04em;
+    }
+
+    .product-job{
+      margin-top:8px;
+
+      color:#FDE68A;
+
+      font-size:16px;
+      font-weight:900;
+    }
+
+    .product-card.golden .product-job{
+      color:#7DD3FC;
+    }
+
+    .product-card p{
+      color:#CBD5E1;
+
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .product-list{
+      list-style:none;
+
+      margin:
+        18px 0 0;
+
+      padding:0;
+
+      display:grid;
+      gap:9px;
+    }
+
+    .product-list li{
+      display:grid;
+
+      grid-template-columns:
+        auto 1fr;
+
+      gap:9px;
+
+      color:#CBD5E1;
+
+      font-size:12px;
+      line-height:1.45;
+    }
+
+    .check{
+      width:20px;
+      height:20px;
+
+      display:grid;
+      place-items:center;
+
+      border-radius:50%;
+
+      background:
+        rgba(34,197,94,.13);
+
+      color:#86EFAC;
+
+      font-size:10px;
+      font-weight:950;
+    }
+
+    .product-bottom{
+      margin-top:auto;
+      padding-top:22px;
+    }
+
+    .product-highlight{
+      padding-top:18px;
+
+      border-top:
+        1px solid rgba(255,255,255,.10);
+    }
+
+    .product-highlight strong{
+      display:block;
+
+      color:#FDE68A;
+
+      font-size:19px;
+
+      letter-spacing:-.025em;
+    }
+
+    .product-card.golden .product-highlight strong{
+      color:#7DD3FC;
+    }
+
+    .product-highlight span{
+      display:block;
+
+      margin-top:7px;
+
+      color:#94A3B8;
+
+      font-size:10px;
+      line-height:1.45;
+    }
+
+    .product-cta{
+      margin-top:17px;
+    }
+
+
+    /* =========================================================
+       PEOPLE
+    ========================================================= */
+
+    .people-strip{
+      padding:55px 0;
+
+      background:var(--deep);
+
+      border-top:
+        1px solid rgba(255,255,255,.06);
+
+      border-bottom:
+        1px solid rgba(255,255,255,.06);
+    }
+
+    .people-head{
+      max-width:760px;
+
+      margin:
+        0 auto 25px;
+
+      text-align:center;
+    }
+
+    .people-grid{
+      display:grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:14px;
+
+      max-width:880px;
+
+      margin:
+        0 auto;
+    }
+
+    .person-card{
+      display:flex;
+      align-items:center;
+
+      gap:15px;
+
+      padding:20px;
+
+      border:
+        1px solid rgba(255,255,255,.10);
+
+      border-radius:22px;
+
+      background:
+        rgba(255,255,255,.04);
+    }
+
+    .person-avatar{
+      width:55px;
+      height:55px;
+
+      display:grid;
+      place-items:center;
+
+      flex-shrink:0;
+
+      border-radius:17px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #7DD3FC,
+          #FDE047
+        );
+
+      color:#06111F;
+
+      font-size:17px;
+      font-weight:950;
+    }
+
+    .person-card b{
+      display:block;
+
+      font-size:15px;
+    }
+
+    .person-role{
+      display:block;
+
+      margin-top:3px;
+
+      color:#FDE68A;
+
+      font-size:10px;
+      font-weight:900;
+    }
+
+    .person-card p{
+      margin:
+        6px 0 0;
+
+      color:#94A3B8;
+
+      font-size:10px;
+      line-height:1.45;
+    }
+
+    .people-link{
+      display:inline-block;
+
+      margin-top:8px;
+
+      color:#7DD3FC;
+
+      font-size:10px;
+      font-weight:900;
+    }
+
+
+    /* =========================================================
+       FINAL
+    ========================================================= */
+
+    .final{
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(34,197,94,.10),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 85% 30%,
+          rgba(24,167,255,.10),
+          transparent 32%
+        ),
+        var(--navy);
+
+      text-align:center;
+    }
+
+    .final-box{
+      padding:43px;
+
+      border:
+        1px solid rgba(34,197,94,.22);
+
+      border-radius:34px;
+
+      background:
+        rgba(255,255,255,.045);
+
+      box-shadow:var(--shadow);
+    }
+
+    .final-actions{
+      margin-top:24px;
+
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+
+      gap:10px;
+    }
+
+    .final-secondary{
+      margin-top:18px;
+
+      color:#94A3B8;
+
+      font-size:11px;
+      line-height:1.5;
+    }
+
+    .final-secondary a{
+      color:#FDE68A;
+      font-weight:900;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer{
+      padding:31px 0;
+
+      border-top:
+        1px solid var(--line);
+
+      background:#01040d;
+
+      color:#94A3B8;
+
+      font-size:12px;
+    }
+
+    .footer-inner{
+      display:flex;
+
+      justify-content:space-between;
+      align-items:flex-start;
+
+      flex-wrap:wrap;
+
+      gap:20px;
+    }
+
+    .footer-links{
+      display:flex;
+
+      gap:15px;
+
+      flex-wrap:wrap;
+
+      max-width:760px;
+
+      justify-content:flex-end;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+    }
+
+    .footer-legal{
+      width:100%;
+      max-width:900px;
+
+      margin-top:4px;
+
+      color:#64748B;
+
+      font-size:10px;
+      line-height:1.55;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media(max-width:1060px){
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .authority-grid,
+      .golden-grid,
+      .flow-grid{
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+      .action-grid{
+        grid-template-columns:1fr;
+      }
+
+      .action-side{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .products-grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+
+    @media(max-width:760px){
+
+      .wrap{
+        padding:
+          0 16px;
+      }
+
+      .section{
+        padding:
+          58px 0;
+      }
+
+      .nav{
+        padding:
+          10px 16px;
+      }
+
+      .brand-sub{
+        display:none;
+      }
+
+      .nav > .btn{
+        padding:
+          9px 11px;
+
+        font-size:10px;
+      }
+
+      .hero{
+        padding:
+          101px 0 50px;
+      }
+
+      h1{
+        font-size:
+          clamp(38px,11vw,52px);
+
+        line-height:1.01;
+      }
+
+      h2{
+        font-size:
+          clamp(29px,8.8vw,40px);
+      }
+
+      .hero-copy p,
+      .lead{
+        font-size:15px;
+      }
+
+      .hero-actions,
+      .final-actions,
+      .golden-actions,
+      .action-actions{
+        display:grid;
+
+        grid-template-columns:1fr;
+      }
+
+      .hero-actions .btn,
+      .final-actions .btn,
+      .golden-actions .btn,
+      .action-actions .btn{
+        width:100%;
+      }
+
+      .formats-card,
+      .product-card,
+      .final-box{
+        padding:24px;
+      }
+
+      .authority-grid,
+      .golden-grid,
+      .flow-grid,
+      .people-grid,
+      .action-side{
+        grid-template-columns:1fr;
+      }
+
+      .golden-card{
+        min-height:auto;
+      }
+
+      .product-card h3{
+        font-size:27px;
+      }
+
+      .person-card{
+        align-items:flex-start;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+  <div class="nav">
+
+    <a
+      href="#top"
+      class="brand"
+      aria-label="Emprende360"
+    >
+
+      <div class="brand-mark">
+        E
+      </div>
+
+      <div>
+
+        <div class="brand-title">
+          Emprende360
+        </div>
+
+        <div class="brand-sub">
+          Conversaciones B2B con contexto
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+      <a href="https://emprende360.club/eventos">
+        Eventos
+      </a>
+
+      <a href="#golden">
+        Golden Partners
+      </a>
+
+      <a href="https://emprende360.club/impulsob2b">
+        Impulso B2B
+      </a>
+
+    </nav>
+
+
+    <a
+      class="btn btn-primary"
+      href="https://emprende360.club/eventos"
+    >
+      Ver próximos eventos
+    </a>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+  id="top"
+  class="hero"
+>
+
+  <div class="grid-bg"></div>
+
+
+  <div class="wrap hero-grid">
+
+
+    <div class="hero-copy reveal">
+
+      <span class="pill free">
+        Participación abierta
+      </span>
+
+
+      <h1>
+        <span class="grad-text">
+          Conversaciones B2B que merece la pena tener.
+        </span>
+      </h1>
+
+
+      <p>
+        <strong>
+          Rondas de Alianzas B2B, Foros Ejecutivos, entrevistas y sesiones
+        </strong>
+        con founders, directivos, especialistas y profesionales alrededor de problemas, mercados y oportunidades empresariales concretas.
+      </p>
+
+
+      <div class="hero-claim">
+        Menos webinar. Más conversación.
+      </div>
+
+
+      <div class="hero-actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://emprende360.club/eventos"
+        >
+          Ver próximas conversaciones →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="#accion"
+        >
+          Ver Emprende360 en acción
+        </a>
+
+      </div>
+
+
+      <div class="hero-topics">
+        Rondas de Alianzas · IA · Ventas B2B · Corporate Finance · Talento · Liderazgo · Branding · Emprendedores · Founders
+      </div>
+
+    </div>
+
+
+
+    <aside class="formats-card reveal">
+
+      <span class="kicker">
+        Formatos Emprende360
+      </span>
+
+
+      <h3>
+        Diferentes razones para que la gente adecuada hable.
+      </h3>
+
+
+      <p>
+        Cada formato crea un contexto distinto. Participa únicamente en aquellos donde el tema, perfiles o mercado tengan sentido para ti.
+      </p>
+
+
+      <div class="formats-list">
+
+
+        <div class="format-item">
+
+          <div class="format-icon gold">
+            🤝
+          </div>
+
+          <div>
+
+            <b>
+              Rondas de Alianzas B2B
+            </b>
+
+            <span>
+              Pequeños grupos de perfiles seleccionados para descubrir complementariedades, buyers compartidos y relaciones que puedan continuar.
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="format-item">
+
+          <div class="format-icon">
+            🎙
+          </div>
+
+          <div>
+
+            <b>
+              Foros Ejecutivos
+            </b>
+
+            <span>
+              Conversaciones especializadas alrededor de decisiones, problemas y mercados empresariales concretos.
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="format-item">
+
+          <div class="format-icon green">
+            ◉
+          </div>
+
+          <div>
+
+            <b>
+              Entrevistas y sesiones
+            </b>
+
+            <span>
+              Conversaciones más específicas con expertos, empresas, founders y perfiles relevantes del ecosistema.
+            </span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <a
+        class="btn btn-primary"
+        href="https://emprende360.club/eventos"
+      >
+        Explorar agenda →
+      </a>
+
+
+    </aside>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     AUTHORITY
+========================================================= -->
+
+<section class="authority">
+
+  <div class="wrap">
+
+    <div class="authority-grid reveal">
+
+
+      <article class="authority-card gold">
+
+        <strong>
+          ~15 años
+        </strong>
+
+        <b>
+          construyendo red profesional
+        </b>
+
+        <p>
+          Emprende360 nació alrededor de una comunidad profesional que lleva años generando relaciones.
+        </p>
+
+      </article>
+
+
+
+      <article class="authority-card blue">
+
+        <strong>
+          12.487
+        </strong>
+
+        <b>
+          decisores B2B identificados
+        </b>
+
+        <p>
+          CEO, Founder, Socio, Owner, Dirección General y perfiles C-Level dentro de la red directa.
+        </p>
+
+      </article>
+
+
+
+      <article class="authority-card gold">
+
+        <strong>
+          70.000+
+        </strong>
+
+        <b>
+          miembros en la comunidad principal
+        </b>
+
+        <p>
+          Profesionales, founders, especialistas y empresas alrededor de emprendimiento y negocio.
+        </p>
+
+      </article>
+
+
+
+      <article class="authority-card blue">
+
+        <strong>
+          ES + LATAM
+        </strong>
+
+        <b>
+          relaciones entre mercados
+        </b>
+
+        <p>
+          Conversaciones y conexiones B2B entre España y Latinoamérica.
+        </p>
+
+      </article>
+
+
+    </div>
+
+
+    <p class="authority-note reveal">
+      La red directa y la comunidad son activos distintos y pueden solaparse. No se suman como una audiencia única ni se garantiza alcance individual.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EMPRENDE360 EN ACCIÓN
+========================================================= -->
+
+<section
+  id="accion"
+  class="section action-section"
+>
+
+  <div class="wrap">
+
+
+    <div class="center reveal">
+
+      <span class="kicker">
+        Emprende360 en acción
+      </span>
+
+
+      <h2>
+        Mira cómo son las conversaciones.
+      </h2>
+
+
+      <p class="lead">
+        No tienes que imaginar el formato. Puedes ver sesiones anteriores y comprobar qué tipo de conversación, perfiles e interacción buscamos.
+      </p>
+
+    </div>
+
+
+
+    <div class="action-grid reveal">
+
+
+      <!-- =====================================================
+           RONDA DE ALIANZAS · VÍDEO PRINCIPAL
+      ====================================================== -->
+
+      <article class="action-video">
+
+
+        <div class="video-frame">
+
+
+          <!-- ==================================================
+               CUANDO TENGAS EL VÍDEO REAL:
+
+               1. Elimina .video-placeholder
+               2. Descomenta este iframe
+               3. Cambia VIDEO_ID_RONDA por el ID de YouTube
+
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_RONDA"
+            title="Ronda de Alianzas B2B · Emprende360"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+
+          =================================================== -->
+
+
+          <div class="video-placeholder">
+
+            <div class="video-play">
+              ▶
+            </div>
+
+            <b>
+              Ronda de Alianzas B2B
+            </b>
+
+            <span>
+              Inserta aquí una Ronda real de Emprende360. Este será uno de los mejores ejemplos para que un visitante entienda inmediatamente la dinámica.
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="action-video-body">
+
+          <span class="action-label">
+            Ronda real
+          </span>
+
+          <h3>
+            Cinco perfiles. Conversación. Complementariedad.
+          </h3>
+
+          <p>
+            Qué hace cada participante, qué buyer busca, qué puede aportar y dónde puede existir una relación con recorrido.
+          </p>
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- =====================================================
+           LATERAL
+      ====================================================== -->
+
+      <div class="action-side">
+
+
+        <a
+          class="action-card"
+          href="https://www.youtube.com/playlist?list=PL0Rqr4ghQ137GnE0ua_PEVgN9NCQsLaBn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="action-card-icon">
+            🎙
+          </div>
+
+          <h3>
+            Foros Ejecutivos
+          </h3>
+
+          <p>
+            Conversaciones con especialistas alrededor de IA, ventas, finanzas, liderazgo y otros problemas empresariales.
+          </p>
+
+          <span class="action-link">
+            Ver sesiones anteriores →
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="action-card"
+          href="https://emprende360.club/eventos"
+        >
+
+          <div class="action-card-icon">
+            ◉
+          </div>
+
+          <h3>
+            Próximas conversaciones
+          </h3>
+
+          <p>
+            Rondas, Foros Ejecutivos, entrevistas y sesiones especiales que iremos incorporando al calendario.
+          </p>
+
+          <span class="action-link">
+            Ver agenda →
+          </span>
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="action-actions reveal">
+
+      <a
+        class="btn btn-primary"
+        href="https://emprende360.club/eventos"
+      >
+        Ver próximos eventos →
+      </a>
+
+      <a
+        class="btn btn-secondary"
+        href="https://forms.gle/co89pCvzScuLtr6z5"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Recibir próximas conversaciones
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     GOLDEN PARTNERS
+========================================================= -->
+
+<section
+  id="golden"
+  class="section golden-section"
+>
+
+  <div class="wrap">
+
+
+    <div class="golden-intro reveal">
+
+      <span class="pill gold">
+        Golden Partners · Q4 2026
+      </span>
+
+
+      <h2>
+        Ocho áreas estratégicas. Una empresa de referencia por vertical.
+      </h2>
+
+
+      <p class="lead">
+        Los Golden Partners acompañan durante Q4 las conversaciones de Emprende360 alrededor de mercados donde existe un buyer, un problema y una razón real para estar presentes.
+      </p>
+
+
+      <p class="small">
+        No compran autoridad editorial ni una base de contactos. Ocupan una posición recurrente y contextual dentro del ecosistema.
+      </p>
+
+    </div>
+
+
+
+    <div class="golden-grid reveal">
+
+
+      <!-- GOLDEN 1 -->
+      <article class="golden-card">
+
+        <div class="golden-top">
+
+          <div class="golden-icon">
+            🤖
+          </div>
+
+          <span class="golden-slot">
+            Plaza Q4 abierta
+          </span>
+
+        </div>
+
+        <h3>
+          IA & Tecnología
+        </h3>
+
+        <p>
+          IA aplicada, automatización, agentes, software, datos y transformación tecnológica.
+        </p>
+
+        <div class="golden-company">
+          <b>
+            Golden Partner
+          </b>
+          Próximamente
+        </div>
+
+        <a
+          class="golden-link"
+          href="https://emprende360.club/golden/ia-tecnologia"
+        >
+          Ver vertical →
+        </a>
+
+      </article>
+
+
+
+      <!-- GOLDEN 2 -->
+      <article class="golden-card">
+
+        <div class="golden-top">
+
+          <div class="golden-icon">
+            📈
+          </div>
+
+          <span class="golden-slot">
+            Plaza Q4 abierta
+          </span>
+
+        </div>
+
+        <h3>
+          Ventas, Revenue & GTM
+        </h3>
+
+        <p>
+          Ventas B2B, pipeline, prospección, RevOps, desarrollo comercial y crecimiento.
+        </p>
+
+        <div class="golden-company">
+          <b>
+            Golden Partner
+          </b>
+          Próximamente
+        </div>
+
+        <a
+          class="golden-link"
+          href="https://emprende360.club/golden/revenue-gtm"
+        >
+          Ver vertical →
+        </a>
+
+      </article>
+
+
+
+      <!-- GOLDEN 3 -->
+      <article class="golden-card">
+
+        <div class="golden-top">
+
+          <div class="golden-icon">
+            💰
+          </div>
+
+          <span class="golden-slot">
+            Plaza Q4 abierta
+          </span>
+
+        </div>
+
+        <h3>
+          Corporate Finance
+        </h3>
+
+        <p>
+          CFO, financiación, control financiero, M&A, valoración, deuda y crecimiento rentable.
+        </p>
+
+        <div class="golden-company">
+          <b>
+            Golden Partner
+          </b>
+          Próximamente
+        </div>
+
+        <a
+          class="golden-link"
+          href="https://emprende360.club/golden/corporate-finance"
+        >
+          Ver vertical →
+        </a>
+
+      </article>
+
+
+
+      <!-- GOLDEN 4 -->
+      <article class="golden-card">
+
+        <div class="golden-top">
+
+          <div class="golden-icon">
+            👥
+          </div>
+
+          <span class="golden-slot">
+            Plaza Q4 abierta
+          </span>
+
+        </div>
+
+        <h3>
+          Talento & Organización
+        </h3>
+
+        <p>
+          Executive Search, talento, capacidades, organización, people y transformación de equipos.
+        </p>
+
+        <div class="golden-company">
+          <b>
+            Golden Partner
+          </b>
+          Próximamente
+        </div>
+
+        <a
+          class="golden-link"
+          href="https://emprende360.club/golden/talento"
+        >
+          Ver vertical →
+        </a>
+
+      </article>
+
+
+
+      <!-- GOLDEN 5 -->
+      <article class="golden-card">
+
+        <div class="golden-top">
+
+          <div class="golden-icon">
+            🧭
+          </div>
+
+          <span class="golden-slot">
+            Plaza Q4 abierta
+          </span>
+
+        </div>
+
+        <h3>
+          Liderazgo
+        </h3>
+
+        <p>
+          Dirección, equipos, cambio, toma de decisiones y evolución del rol del líder.
+        </p>
+
+        <div class="golden-company">
+          <b>
+            Golden Partner
+          </b>
+          Próximamente
+        </div>
+
+        <a
+          class="golden-link"
+          href="https://emprende360.club/golden/liderazgo"
+        >
+          Ver vertical →
+        </a>
+
+      </article>
+
+
+
+      <!-- GOLDEN 6 -->
+      <article class="golden-card">
+
+        <div class="golden-top">
+
+          <div class="golden-icon">
+            ◎
+          </div>
+
+          <span class="golden-slot">
+            Plaza Q4 abierta
+          </span>
+
+        </div>
+
+        <h3>
+          Branding & Marketing B2B
+        </h3>
+
+        <p>
+          Posicionamiento, comunicación, marca, contenido y generación de demanda B2B.
+        </p>
+
+        <div class="golden-company">
+          <b>
+            Golden Partner
+          </b>
+          Próximamente
+        </div>
+
+        <a
+          class="golden-link"
+          href="https://emprende360.club/golden/branding-marketing"
+        >
+          Ver vertical →
+        </a>
+
+      </article>
+
+
+
+      <!-- GOLDEN 7 -->
+      <article class="golden-card">
+
+        <div class="golden-top">
+
+          <div class="golden-icon">
+            🚀
+          </div>
+
+          <span class="golden-slot">
+            Plaza Q4 abierta
+          </span>
+
+        </div>
+
+        <h3>
+          Emprendimiento
+        </h3>
+
+        <p>
+          De idea a negocio: validación, oferta, cliente, precio, foco y primeras ventas.
+        </p>
+
+        <div class="golden-company">
+          <b>
+            Golden Partner
+          </b>
+          Próximamente
+        </div>
+
+        <a
+          class="golden-link"
+          href="https://emprende360.club/golden/emprendimiento"
+        >
+          Ver vertical →
+        </a>
+
+      </article>
+
+
+
+      <!-- GOLDEN 8 -->
+      <article class="golden-card">
+
+        <div class="golden-top">
+
+          <div class="golden-icon">
+            ◈
+          </div>
+
+          <span class="golden-slot">
+            Plaza Q4 abierta
+          </span>
+
+        </div>
+
+        <h3>
+          Founders & Inversión
+        </h3>
+
+        <p>
+          Empresas validadas, crecimiento, financiación, inversión y relaciones con capital.
+        </p>
+
+        <div class="golden-company">
+          <b>
+            Golden Partner
+          </b>
+          Próximamente
+        </div>
+
+        <a
+          class="golden-link"
+          href="https://emprende360.club/golden/founders-inversion"
+        >
+          Ver vertical →
+        </a>
+
+      </article>
+
+
+    </div>
+
+
+
+    <div class="golden-actions reveal">
+
+      <a
+        class="btn btn-primary"
+        href="https://emprende360.club/golden-partners"
+      >
+        Conocer Golden Partners →
+      </a>
+
+      <a
+        class="btn btn-secondary"
+        href="https://emprende360.club/golden-partners"
+      >
+        Quiero valorar una vertical
+      </a>
+
+    </div>
+
+
+    <p
+      class="small center reveal"
+      style="margin-top:16px;"
+    >
+      Una empresa principal por vertical durante Q4. La participación y las condiciones están sujetas a encaje y disponibilidad.
+    </p>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SYSTEM
+========================================================= -->
+
+<section class="section system">
+
+  <div class="wrap">
+
+
+    <div class="center reveal">
+
+      <span class="kicker">
+        Qué hay detrás
+      </span>
+
+      <h2>
+        Red + selección + contexto + seguimiento.
+      </h2>
+
+      <p class="lead">
+        Tener contactos no significa tener relaciones activas. El valor aparece cuando existe una buena razón para iniciar la conversación.
+      </p>
+
+    </div>
+
+
+
+    <div class="flow-grid reveal">
+
+
+      <article class="flow-item">
+
+        <div class="flow-num">
+          1
+        </div>
+
+        <b>
+          Red
+        </b>
+
+        <span>
+          Partimos de relaciones, perfiles, comunidad, expertos, partners y conversaciones que ya existen.
+        </span>
+
+      </article>
+
+
+
+      <article class="flow-item">
+
+        <div class="flow-num">
+          2
+        </div>
+
+        <b>
+          Selección
+        </b>
+
+        <span>
+          No todo el mundo debe hablar con todo el mundo. Priorizamos perfiles y temas con lógica real.
+        </span>
+
+      </article>
+
+
+
+      <article class="flow-item">
+
+        <div class="flow-num">
+          3
+        </div>
+
+        <b>
+          Contexto
+        </b>
+
+        <span>
+          Ronda, Foro, entrevista, mesa o sesión privada: creamos una razón concreta para entrar en conversación.
+        </span>
+
+      </article>
+
+
+
+      <article class="flow-item">
+
+        <div class="flow-num">
+          4
+        </div>
+
+        <b>
+          Seguimiento
+        </b>
+
+        <span>
+          Cuando existe recorrido, la relación puede continuar hacia colaboración, partnership, oportunidad o negocio.
+        </span>
+
+      </article>
+
+
+    </div>
+
+
+
+    <div class="system-quote reveal">
+      No juntamos gente. Diseñamos razones para que la gente adecuada hable.
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WORK WITH EMPRENDE360
+========================================================= -->
+
+<section
+  id="trabaja"
+  class="section products"
+>
+
+  <div class="wrap">
+
+
+    <div class="center reveal">
+
+      <span class="kicker">
+        ¿Quieres ir más allá de participar?
+      </span>
+
+      <h2>
+        Dos formas de trabajar directamente con Emprende360.
+      </h2>
+
+      <p class="lead">
+        Una para profesionales que quieren activar su propio mercado. Otra para empresas que quieren ocupar una posición recurrente dentro de una vertical.
+      </p>
+
+    </div>
+
+
+
+    <div class="products-grid reveal">
+
+
+      <!-- IMPULSO -->
+      <article class="product-card impulso">
+
+
+        <div class="product-head">
+
+          <div class="product-icon">
+            ↗
+          </div>
+
+          <span class="product-label">
+            Para profesionales B2B
+          </span>
+
+        </div>
+
+
+        <h3>
+          Impulso B2B
+        </h3>
+
+
+        <div class="product-job">
+          Quiero activar un buyer o mercado concreto.
+        </div>
+
+
+        <p>
+          Un trabajo de activación comercial relacional para convertir experiencia, posicionamiento, red y contexto en mejores conversaciones B2B.
+        </p>
+
+
+        <ul class="product-list">
+
+          <li>
+            <span class="check">✓</span>
+            <span>
+              Trabajo alrededor de un buyer u objetivo concreto.
+            </span>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <span>
+              Selección y activación de perfiles relevantes.
+            </span>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <span>
+              Contextos diseñados para facilitar conversaciones.
+            </span>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <span>
+              Posibles cruces, partners y complementariedades.
+            </span>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <span>
+              Seguimiento durante el periodo de activación.
+            </span>
+          </li>
+
+        </ul>
+
+
+        <div class="product-bottom">
+
+          <div class="product-highlight">
+
+            <strong>
+              Activación Comercial Relacional
+            </strong>
+
+            <span>
+              Consulta en la landing específica el formato y las condiciones vigentes.
+            </span>
+
+          </div>
+
+
+          <div class="product-cta">
+
+            <a
+              class="btn btn-primary"
+              href="https://emprende360.club/impulsob2b"
+            >
+              Conocer Impulso B2B →
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- GOLDEN -->
+      <article class="product-card golden">
+
+
+        <div class="product-head">
+
+          <div class="product-icon">
+            ★
+          </div>
+
+          <span class="product-label">
+            Para empresas B2B
+          </span>
+
+        </div>
+
+
+        <h3>
+          Golden Partners
+        </h3>
+
+
+        <div class="product-job">
+          Quiero posicionar mi empresa dentro de un mercado.
+        </div>
+
+
+        <p>
+          Una posición recurrente durante Q4 alrededor de una vertical concreta y de las conversaciones donde tu solución tiene una razón real para estar presente.
+        </p>
+
+
+        <ul class="product-list">
+
+          <li>
+            <span class="check">✓</span>
+            <span>
+              Una empresa principal por vertical.
+            </span>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <span>
+              Presencia recurrente durante octubre, noviembre y diciembre.
+            </span>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <span>
+              Foros, conversación propia y activaciones acordadas.
+            </span>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <span>
+              Landing específica y presencia en activos de Emprende360.
+            </span>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <span>
+              Ventaja Emprende360 exclusiva para el ecosistema.
+            </span>
+          </li>
+
+        </ul>
+
+
+        <div class="product-bottom">
+
+          <div class="product-highlight">
+
+            <strong>
+              1.490 € · Q4
+            </strong>
+
+            <span>
+              Edición Founding · una empresa principal por vertical · sujeto a encaje y disponibilidad.
+            </span>
+
+          </div>
+
+
+          <div class="product-cta">
+
+            <a
+              class="btn btn-blue"
+              href="https://emprende360.club/golden-partners"
+            >
+              Explorar Golden Partners →
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </article>
+
+
+    </div>
+
+
+
+    <p
+      class="small center reveal"
+      style="margin-top:20px;"
+    >
+      Participar en las Rondas, Foros, entrevistas y conversaciones abiertas de Emprende360 no requiere contratar Impulso B2B ni ser Golden Partner.
+    </p>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PEOPLE
+========================================================= -->
+
+<section class="people-strip">
+
+  <div class="wrap">
+
+
+    <div class="people-head reveal">
+
+      <span class="kicker">
+        Detrás de las conversaciones
+      </span>
+
+      <h3
+        style="
+          margin-top:12px;
+          font-size:24px;
+          letter-spacing:-.03em;
+        "
+      >
+        Red, criterio y dinamización.
+      </h3>
+
+    </div>
+
+
+
+    <div class="people-grid reveal">
+
+
+      <article class="person-card">
+
+        <div class="person-avatar">
+          AP
+        </div>
+
+        <div>
+
+          <b>
+            Alberto Porras
+          </b>
+
+          <span class="person-role">
+            Fundador · Emprende360
+          </span>
+
+          <p>
+            Red, activación comercial, selección de perfiles y desarrollo del ecosistema.
+          </p>
+
+          <a
+            class="people-link"
+            href="https://es.linkedin.com/in/albertoporrasmoreno"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn →
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="person-card">
+
+        <div class="person-avatar">
+          J
+        </div>
+
+        <div>
+
+          <b>
+            Jorge
+          </b>
+
+          <span class="person-role">
+            Moderación y dinamización
+          </span>
+
+          <p>
+            Apoyo en la conducción de conversaciones, Foros y Rondas para que exista más interacción y menos formato de ponencia.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="section final">
+
+  <div class="wrap">
+
+
+    <div class="final-box reveal">
+
+
+      <span class="pill free">
+        Participación abierta
+      </span>
+
+
+      <h2>
+        Empieza por una conversación.
+      </h2>
+
+
+      <p
+        class="lead"
+        style="
+          max-width:760px;
+          margin:17px auto 0;
+        "
+      >
+        Mira la agenda y entra en la sesión que realmente tenga sentido para ti. No necesitas pertenecer a una membresía ni contratar ningún servicio para participar en la parte abierta.
+      </p>
+
+
+      <div class="final-actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://emprende360.club/eventos"
+        >
+          Ver próximos eventos →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="https://forms.gle/co89pCvzScuLtr6z5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Recibir próximos eventos
+        </a>
+
+      </div>
+
+
+      <div class="final-secondary">
+
+        ¿Representas a una empresa B2B?
+
+        <a href="https://emprende360.club/golden-partners">
+          Explora Golden Partners →
+        </a>
+
+        &nbsp; · &nbsp;
+
+        ¿Quieres activar tu propio mercado?
+
+        <a href="https://emprende360.club/impulsob2b">
+          Conoce Impulso B2B →
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="wrap footer-inner">
+
+
+    <div>
+
+      <strong>
+        Emprende360
+      </strong>
+
+      <br>
+
+      Conversaciones · Contexto · Relaciones B2B
+
+    </div>
+
+
+
+    <div class="footer-links">
+
+      <a href="https://emprende360.club/eventos">
+        Eventos
+      </a>
+
+      <a href="https://emprende360.club/golden-partners">
+        Golden Partners
+      </a>
+
+      <a href="https://emprende360.club/impulsob2b">
+        Impulso B2B
+      </a>
+
+      <a
+        href="https://es.linkedin.com/in/albertoporrasmoreno"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Alberto Porras
+      </a>
+
+      <a href="https://emprende360.club/privacidad">
+        Privacidad
+      </a>
+
+      <a href="https://emprende360.club/aviso-legal">
+        Aviso legal
+      </a>
+
+    </div>
+
+
+
+    <div class="footer-legal">
+      Emprende360 facilita contexto, selección, visibilidad, activaciones, conversaciones y posibles relaciones B2B. No garantiza clientes, leads, reuniones, ventas, facturación, inversión, financiación, colaboraciones ni resultados concretos. La participación como Golden Partner está sujeta a encaje, disponibilidad y condiciones específicas de cada edición.
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     INTERSECTION ANIMATIONS
+========================================================= -->
+
+<script>
+
+  const observer =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if(entry.isIntersecting){
+
+            entry.target.classList.add("on");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold:.10
+      }
+    );
+
+
+  document
+    .querySelectorAll(".reveal")
+    .forEach(el => observer.observe(el));
+
+</script>
+
+
+</body>
+</html>
