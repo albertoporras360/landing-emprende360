@@ -1,0 +1,3074 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title id="page-title">
+    Emprende360 Asia · Sourcing y fabricantes en Asia para empresas
+  </title>
+
+  <meta
+    id="page-description"
+    name="description"
+    content="Emprende360 Asia ayuda a empresas a identificar, evaluar y conectar con fabricantes y proveedores en Vietnam, China y otros mercados asiáticos."
+  />
+
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://emprende360.club/asia" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://emprende360.club/asia" />
+  <meta name="theme-color" content="#020617" />
+
+  <style>
+    :root{
+      --deep:#020617;
+      --deep2:#040B16;
+      --navy:#071522;
+      --sky:#18A7FF;
+      --sky-soft:#7DD3FC;
+      --gold:#F4C542;
+      --gold-soft:#FDE68A;
+      --green:#22C55E;
+      --green-soft:#86EFAC;
+      --text:#F8FAFC;
+      --soft:#CBD5E1;
+      --muted:#94A3B8;
+      --line:rgba(255,255,255,.12);
+      --shadow:0 30px 100px rgba(0,0,0,.38);
+      --max:1180px;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background:var(--deep);
+      color:var(--text);
+      overflow-x:hidden;
+      line-height:1.5;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    strong,b{
+      color:#fff;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+    .section{
+      position:relative;
+      padding:80px 0;
+      overflow:hidden;
+    }
+
+    .center{
+      max-width:860px;
+      margin-left:auto;
+      margin-right:auto;
+      text-align:center;
+    }
+
+    .lead{
+      color:var(--soft);
+      font-size:18px;
+      line-height:1.68;
+    }
+
+    .small{
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .grad-text{
+      background:linear-gradient(
+        90deg,
+        #fff,
+        #c8ecff 48%,
+        #ffe6a6
+      );
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .pill,
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border-radius:999px;
+      font-weight:950;
+      text-transform:uppercase;
+    }
+
+    .pill{
+      padding:8px 13px;
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(255,255,255,.055);
+      color:#DBEAFE;
+      font-size:11px;
+      letter-spacing:.08em;
+    }
+
+    .pill.green{
+      border-color:rgba(34,197,94,.28);
+      background:rgba(34,197,94,.08);
+      color:var(--green-soft);
+    }
+
+    .kicker{
+      padding:7px 12px;
+      border:1px solid rgba(24,167,255,.25);
+      background:rgba(24,167,255,.09);
+      color:#C8ECFF;
+      font-size:11px;
+      letter-spacing:.14em;
+    }
+
+    h1{
+      margin:18px 0 0;
+      font-size:clamp(45px,5.6vw,72px);
+      line-height:.98;
+      letter-spacing:-.06em;
+      font-weight:950;
+    }
+
+    h2{
+      margin:14px 0 0;
+      font-size:clamp(32px,4.3vw,51px);
+      line-height:1.04;
+      letter-spacing:-.045em;
+      font-weight:950;
+    }
+
+    h3{
+      margin:0;
+      line-height:1.16;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      border-radius:999px;
+      padding:14px 20px;
+      font-size:13px;
+      font-weight:950;
+      border:0;
+      cursor:pointer;
+      transition:.24s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .btn-primary{
+      color:#06111F;
+      background:linear-gradient(
+        90deg,
+        #ffd95a,
+        #F4C542,
+        #ffd15a
+      );
+      box-shadow:0 18px 60px rgba(244,197,66,.20);
+    }
+
+    .btn-primary:hover{
+      box-shadow:0 24px 70px rgba(244,197,66,.34);
+    }
+
+    .btn-secondary{
+      color:#fff;
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.085);
+      border-color:rgba(255,255,255,.23);
+    }
+
+    .grid-bg{
+      position:absolute;
+      inset:0;
+      opacity:.055;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.65) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.65) 1px,transparent 1px);
+      background-size:54px 54px;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .65s ease,transform .65s ease;
+    }
+
+    .reveal.on{
+      opacity:1;
+      transform:none;
+    }
+
+    /* HEADER */
+
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:100;
+      border-bottom:1px solid rgba(255,255,255,.09);
+      background:rgba(2,6,23,.90);
+      backdrop-filter:blur(22px);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:10px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      flex-shrink:0;
+    }
+
+    .brand-mark{
+      width:41px;
+      height:41px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      font-weight:950;
+      background:linear-gradient(135deg,#7DD3FC,#0A66C2);
+      box-shadow:0 18px 45px rgba(24,167,255,.25);
+    }
+
+    .brand-title{
+      font-weight:950;
+      line-height:1;
+    }
+
+    .brand-sub{
+      margin-top:4px;
+      color:#94A3B8;
+      font-size:10px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-weight:850;
+    }
+
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:13px;
+      margin-left:auto;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      color:#CBD5E1;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .nav-links a:hover{
+      color:#fff;
+    }
+
+    /* LANGUAGE */
+
+    .language-switcher{
+      display:flex;
+      align-items:center;
+      gap:4px;
+      padding:4px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      flex-shrink:0;
+    }
+
+    .lang-btn{
+      border:0;
+      cursor:pointer;
+      background:transparent;
+      color:#94A3B8;
+      border-radius:999px;
+      padding:7px 9px;
+      font-size:11px;
+      font-weight:900;
+      transition:.2s ease;
+      white-space:nowrap;
+    }
+
+    .lang-btn:hover{
+      color:#fff;
+      background:rgba(255,255,255,.08);
+    }
+
+    .lang-btn.active{
+      color:#06111F;
+      background:#F4C542;
+    }
+
+    /* HERO */
+
+    .hero{
+      position:relative;
+      padding:126px 0 78px;
+      background:
+        radial-gradient(circle at 12% 12%,rgba(24,167,255,.22),transparent 31%),
+        radial-gradient(circle at 88% 12%,rgba(244,197,66,.13),transparent 30%),
+        radial-gradient(circle at 78% 88%,rgba(34,197,94,.06),transparent 28%),
+        var(--deep);
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:42px;
+      align-items:center;
+    }
+
+    .hero-copy p{
+      max-width:750px;
+      margin:22px 0 0;
+      color:#CBD5E1;
+      font-size:18px;
+      line-height:1.68;
+    }
+
+    .hero-highlight{
+      color:#fff;
+      font-weight:850;
+    }
+
+    .hero-actions{
+      margin-top:28px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:11px;
+    }
+
+    .hero-note{
+      margin-top:17px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .hero-card{
+      padding:30px;
+      border:1px solid rgba(24,167,255,.24);
+      border-radius:30px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(24,167,255,.12),transparent 37%),
+        radial-gradient(circle at 0 100%,rgba(244,197,66,.08),transparent 42%),
+        rgba(255,255,255,.05);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card h3{
+      margin-top:15px;
+      font-size:28px;
+      letter-spacing:-.04em;
+    }
+
+    .hero-card > p{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .request-list{
+      display:grid;
+      gap:10px;
+      margin-top:21px;
+    }
+
+    .request-item{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:12px;
+      align-items:start;
+      padding:14px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:17px;
+      background:rgba(2,6,23,.30);
+    }
+
+    .request-icon{
+      width:39px;
+      height:39px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      background:rgba(24,167,255,.10);
+      border:1px solid rgba(24,167,255,.18);
+      font-size:13px;
+      font-weight:950;
+    }
+
+    .request-item b{
+      display:block;
+      font-size:13px;
+    }
+
+    .request-item span{
+      display:block;
+      margin-top:4px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    /* PRINCIPLES */
+
+    .principles{
+      padding:0 0 34px;
+      background:var(--deep);
+    }
+
+    .principles-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border:1px solid var(--line);
+      border-radius:24px;
+      overflow:hidden;
+      background:rgba(255,255,255,.035);
+    }
+
+    .principle{
+      padding:21px 20px;
+      border-right:1px solid var(--line);
+    }
+
+    .principle:last-child{
+      border-right:0;
+    }
+
+    .principle strong{
+      display:block;
+      font-size:14px;
+    }
+
+    .principle span{
+      display:block;
+      margin-top:5px;
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.5;
+    }
+
+    /* PROBLEM */
+
+    .problem{
+      background:var(--navy);
+    }
+
+    .problem-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .problem-copy p{
+      color:var(--soft);
+      font-size:16px;
+      line-height:1.7;
+    }
+
+    .problem-box{
+      display:grid;
+      gap:13px;
+    }
+
+    .problem-item{
+      padding:19px 20px;
+      border:1px solid var(--line);
+      border-radius:19px;
+      background:rgba(255,255,255,.045);
+    }
+
+    .problem-item b{
+      display:block;
+      font-size:14px;
+    }
+
+    .problem-item span{
+      display:block;
+      margin-top:5px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    /* HOW */
+
+    .how{
+      background:var(--deep2);
+    }
+
+    .steps-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px;
+      margin-top:38px;
+    }
+
+    .step{
+      min-height:260px;
+      padding:25px;
+      border:1px solid var(--line);
+      border-radius:25px;
+      background:rgba(255,255,255,.045);
+    }
+
+    .step-num{
+      width:43px;
+      height:43px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:linear-gradient(135deg,#7DD3FC,#FDE047);
+      color:#06111F;
+      font-weight:950;
+    }
+
+    .step h3{
+      margin-top:17px;
+      font-size:21px;
+      letter-spacing:-.03em;
+    }
+
+    .step p{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.58;
+    }
+
+    /* VERTICALS */
+
+    .verticals{
+      background:var(--navy);
+    }
+
+    .vertical-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:38px;
+    }
+
+    .vertical-card{
+      min-height:280px;
+      padding:25px;
+      border:1px solid var(--line);
+      border-radius:25px;
+      background:rgba(255,255,255,.045);
+      transition:.24s ease;
+    }
+
+    .vertical-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(24,167,255,.30);
+      background:rgba(255,255,255,.065);
+    }
+
+    .vertical-icon{
+      width:48px;
+      height:48px;
+      display:grid;
+      place-items:center;
+      border-radius:15px;
+      background:linear-gradient(135deg,#7DD3FC,#FDE047);
+      color:#06111F;
+      font-size:20px;
+      font-weight:950;
+    }
+
+    .vertical-card h3{
+      margin-top:18px;
+      font-size:23px;
+      letter-spacing:-.035em;
+    }
+
+    .vertical-card p{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.58;
+      min-height:62px;
+    }
+
+    .vertical-link{
+      display:inline-flex;
+      margin-top:8px;
+      color:var(--sky-soft);
+      font-size:12px;
+      font-weight:900;
+    }
+
+    /* PRESENCE */
+
+    .presence{
+      background:var(--deep);
+    }
+
+    .presence-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:38px;
+    }
+
+    .country-card{
+      padding:29px;
+      border:1px solid var(--line);
+      border-radius:27px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(24,167,255,.09),transparent 35%),
+        rgba(255,255,255,.045);
+    }
+
+    .country-label{
+      display:inline-block;
+      color:var(--gold-soft);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:950;
+    }
+
+    .country-card h3{
+      margin-top:10px;
+      font-size:26px;
+      letter-spacing:-.04em;
+    }
+
+    .country-card p{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .country-points{
+      display:grid;
+      gap:9px;
+      margin-top:18px;
+    }
+
+    .country-point{
+      display:flex;
+      gap:10px;
+      color:#CBD5E1;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .check{
+      color:var(--green-soft);
+      font-weight:950;
+    }
+
+    /* BRIEF */
+
+    .brief{
+      background:var(--deep2);
+    }
+
+    .brief-shell{
+      display:grid;
+      grid-template-columns:1fr .95fr;
+      gap:35px;
+      align-items:center;
+      padding:38px;
+      border:1px solid rgba(244,197,66,.19);
+      border-radius:30px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.08),transparent 35%),
+        rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .brief-copy p{
+      color:#CBD5E1;
+      line-height:1.65;
+    }
+
+    .brief-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+
+    .brief-item{
+      padding:13px 14px;
+      border-radius:15px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(2,6,23,.28);
+      color:#CBD5E1;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    /* MODEL */
+
+    .model{
+      background:var(--navy);
+    }
+
+    .model-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:37px;
+    }
+
+    .model-card{
+      padding:26px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:rgba(255,255,255,.045);
+    }
+
+    .model-card.featured{
+      border-color:rgba(34,197,94,.25);
+      background:
+        radial-gradient(circle at 100% 0,rgba(34,197,94,.08),transparent 40%),
+        rgba(255,255,255,.05);
+    }
+
+    .model-card h3{
+      margin-top:14px;
+      font-size:21px;
+      letter-spacing:-.03em;
+    }
+
+    .model-card p{
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.58;
+    }
+
+    /* SUPPLIERS */
+
+    .suppliers{
+      background:var(--deep);
+    }
+
+    .supplier-shell{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:35px;
+      align-items:center;
+      padding:36px;
+      border:1px solid rgba(24,167,255,.18);
+      border-radius:30px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(24,167,255,.09),transparent 35%),
+        rgba(255,255,255,.045);
+    }
+
+    .supplier-copy p{
+      color:#CBD5E1;
+      line-height:1.65;
+    }
+
+    .supplier-card{
+      padding:23px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:22px;
+      background:rgba(2,6,23,.28);
+    }
+
+    .supplier-card b{
+      display:block;
+      margin-bottom:8px;
+    }
+
+    .supplier-card span{
+      color:#94A3B8;
+      font-size:12px;
+      line-height:1.58;
+    }
+
+    /* CTA */
+
+    .final-cta{
+      background:
+        radial-gradient(circle at 15% 20%,rgba(24,167,255,.16),transparent 30%),
+        radial-gradient(circle at 85% 20%,rgba(244,197,66,.10),transparent 30%),
+        var(--deep2);
+    }
+
+    .cta-shell{
+      max-width:920px;
+      margin:0 auto;
+      padding:45px 34px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:32px;
+      background:rgba(255,255,255,.05);
+      box-shadow:var(--shadow);
+    }
+
+    .cta-shell p{
+      max-width:700px;
+      margin:17px auto 0;
+      color:#CBD5E1;
+      font-size:16px;
+      line-height:1.65;
+    }
+
+    .cta-actions{
+      margin-top:26px;
+      display:flex;
+      justify-content:center;
+      gap:11px;
+      flex-wrap:wrap;
+    }
+
+    footer{
+      padding:32px 0;
+      border-top:1px solid rgba(255,255,255,.09);
+      background:#01040d;
+      color:#94A3B8;
+      font-size:11px;
+    }
+
+    .footer-inner{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:20px;
+    }
+
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      font-weight:800;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+    }
+
+    @media(max-width:1050px){
+      .nav-links{
+        display:none;
+      }
+    }
+
+    @media(max-width:980px){
+      .hero-grid,
+      .problem-grid,
+      .brief-shell,
+      .supplier-shell{
+        grid-template-columns:1fr;
+      }
+
+      .steps-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .vertical-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .principles-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:740px){
+      .section{
+        padding:62px 0;
+      }
+
+      .hero{
+        padding:150px 0 60px;
+      }
+
+      .nav{
+        flex-wrap:wrap;
+      }
+
+      .nav-right{
+        width:100%;
+        justify-content:space-between;
+      }
+
+      .nav-right > .btn{
+        display:none;
+      }
+
+      .language-switcher{
+        margin-left:auto;
+      }
+
+      .steps-grid,
+      .vertical-grid,
+      .model-grid,
+      .presence-grid,
+      .principles-grid,
+      .brief-list{
+        grid-template-columns:1fr;
+      }
+
+      .principle{
+        border-right:0;
+        border-bottom:1px solid var(--line);
+      }
+
+      .principle:last-child{
+        border-bottom:0;
+      }
+
+      .brief-shell,
+      .supplier-shell,
+      .cta-shell{
+        padding:27px 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a href="#top" class="brand">
+      <div class="brand-mark">E</div>
+
+      <div>
+        <div class="brand-title">Emprende360</div>
+        <div class="brand-sub">Asia · Sourcing & Commercial Development</div>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#como-funciona" data-i18n="navHow">Cómo funciona</a>
+      <a href="#verticales" data-i18n="navVerticals">Verticales</a>
+      <a href="#asia" data-i18n="navAsia">Asia</a>
+      <a href="#fabricantes" data-i18n="navManufacturers">Fabricantes</a>
+    </nav>
+
+    <div class="nav-right">
+
+      <div class="language-switcher" aria-label="Language">
+
+        <button
+          class="lang-btn active"
+          type="button"
+          data-lang="es"
+          onclick="changeLanguage('es')"
+        >
+          🇪🇸 ES
+        </button>
+
+        <button
+          class="lang-btn"
+          type="button"
+          data-lang="en"
+          onclick="changeLanguage('en')"
+        >
+          🇬🇧 EN
+        </button>
+
+        <button
+          class="lang-btn"
+          type="button"
+          data-lang="fr"
+          onclick="changeLanguage('fr')"
+        >
+          🇫🇷 FR
+        </button>
+
+      </div>
+
+      <a
+        class="btn btn-primary"
+        href="https://emprende360.club/asia/solicitud"
+        data-i18n="navCta"
+      >
+        Cuéntanos qué buscas
+      </a>
+
+    </div>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section id="top" class="hero">
+
+  <div class="grid-bg"></div>
+
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy reveal">
+
+      <span class="pill green" data-i18n="heroPill">
+        Buyer first · Presencia en Asia
+      </span>
+
+      <h1>
+        <span class="grad-text" data-i18n="heroTitle">
+          Tu equipo de sourcing sobre el terreno en Asia.
+        </span>
+      </h1>
+
+      <p data-i18n="heroText1">
+        Si tu empresa ya compra en Asia, busca un nuevo fabricante o quiere
+        diversificar proveedores, empezamos por una pregunta muy sencilla:
+        ¿qué necesitas encontrar?
+      </p>
+
+      <p data-i18n="heroText2">
+        Desde nuestra base operativa en Vietnam identificamos, contactamos y
+        evaluamos fabricantes, aprovechamos ferias sectoriales y activamos
+        también China u otros mercados asiáticos cuando la operación lo requiere.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://emprende360.club/asia/solicitud"
+          data-i18n="heroCta"
+        >
+          Enviar una necesidad de compra →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="#como-funciona"
+          data-i18n="heroSecondary"
+        >
+          Ver cómo funciona
+        </a>
+
+      </div>
+
+      <div class="hero-note" data-i18n="heroNote">
+        Para solicitudes seleccionadas podemos iniciar la búsqueda sin fee
+        comercial por adelantado. Primero comprobamos si existe una oportunidad real.
+      </div>
+
+    </div>
+
+
+    <aside class="hero-card reveal">
+
+      <span class="kicker" data-i18n="heroCardKicker">
+        Empezamos por tu demanda
+      </span>
+
+      <h3 data-i18n="heroCardTitle">
+        No buscamos fabricantes al azar.
+      </h3>
+
+      <p data-i18n="heroCardText">
+        Partimos de una necesidad concreta de compra y buscamos después la
+        capacidad industrial que mejor pueda resolverla.
+      </p>
+
+      <div class="request-list">
+
+        <div class="request-item">
+          <div class="request-icon">01</div>
+          <div>
+            <b data-i18n="request1Title">Qué necesitas</b>
+            <span data-i18n="request1Text">
+              Producto, componente, material, maquinaria o fabricación.
+            </span>
+          </div>
+        </div>
+
+        <div class="request-item">
+          <div class="request-icon">02</div>
+          <div>
+            <b data-i18n="request2Title">Cuánto necesitas</b>
+            <span data-i18n="request2Text">
+              Volumen, frecuencia, especificaciones y destino.
+            </span>
+          </div>
+        </div>
+
+        <div class="request-item">
+          <div class="request-icon">03</div>
+          <div>
+            <b data-i18n="request3Title">Qué debería mejorar</b>
+            <span data-i18n="request3Text">
+              Precio, capacidad, calidad, condiciones, lead time o diversificación.
+            </span>
+          </div>
+        </div>
+
+        <div class="request-item">
+          <div class="request-icon">04</div>
+          <div>
+            <b data-i18n="request4Title">Nosotros buscamos en Asia</b>
+            <span data-i18n="request4Text">
+              Vietnam, China y otros mercados cuando la necesidad lo justifique.
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>
+
+
+<!-- PRINCIPLES -->
+
+<section class="principles">
+  <div class="wrap">
+
+    <div class="principles-grid reveal">
+
+      <div class="principle">
+        <strong data-i18n="principle1Title">Buyer first</strong>
+        <span data-i18n="principle1Text">
+          Primero entendemos qué necesita comprar tu empresa.
+        </span>
+      </div>
+
+      <div class="principle">
+        <strong data-i18n="principle2Title">
+          Base operativa en Vietnam
+        </strong>
+        <span data-i18n="principle2Text">
+          Relaciones, fabricantes, ferias y seguimiento sobre el terreno.
+        </span>
+      </div>
+
+      <div class="principle">
+        <strong data-i18n="principle3Title">
+          China cuando tiene sentido
+        </strong>
+        <span data-i18n="principle3Text">
+          Activamos otros mercados asiáticos según el producto y la oportunidad.
+        </span>
+      </div>
+
+      <div class="principle">
+        <strong data-i18n="principle4Title">
+          Operaciones seleccionadas
+        </strong>
+        <span data-i18n="principle4Text">
+          Priorizamos necesidades reales con capacidad de compra.
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PROBLEM -->
+
+<section class="section problem">
+
+  <div class="wrap problem-grid">
+
+    <div class="problem-copy reveal">
+
+      <span class="kicker" data-i18n="problemKicker">
+        Sourcing con contexto
+      </span>
+
+      <h2 data-i18n="problemTitle">
+        No necesitas otra lista de proveedores.
+      </h2>
+
+      <p data-i18n="problemText1">
+        Encontrar cientos de fábricas online es sencillo. Saber cuáles pueden
+        producir realmente lo que necesitas, cuáles tienen sentido comercial
+        y con quién merece la pena hablar es otra cosa.
+      </p>
+
+      <p data-i18n="problemText2">
+        Nuestro trabajo empieza por tu necesidad de compra y utiliza presencia
+        local, relaciones, ferias y contacto directo con fabricantes para
+        encontrar alternativas relevantes.
+      </p>
+
+    </div>
+
+
+    <div class="problem-box reveal">
+
+      <div class="problem-item">
+        <b data-i18n="problem1Title">¿Ya compras en China?</b>
+        <span data-i18n="problem1Text">
+          Podemos estudiar Vietnam u otros mercados como segunda fuente de suministro.
+        </span>
+      </div>
+
+      <div class="problem-item">
+        <b data-i18n="problem2Title">¿Necesitas un fabricante nuevo?</b>
+        <span data-i18n="problem2Text">
+          Definimos la necesidad y buscamos capacidad productiva compatible.
+        </span>
+      </div>
+
+      <div class="problem-item">
+        <b data-i18n="problem3Title">
+          ¿Tu proveedor actual tiene limitaciones?
+        </b>
+        <span data-i18n="problem3Text">
+          Podemos buscar alternativas de capacidad, condiciones, producto o especialización.
+        </span>
+      </div>
+
+      <div class="problem-item">
+        <b data-i18n="problem4Title">
+          ¿Quieres fabricar un producto nuevo?
+        </b>
+        <span data-i18n="problem4Text">
+          Podemos identificar potenciales OEM y fabricantes especializados.
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section id="como-funciona" class="section how">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+
+      <span class="kicker" data-i18n="howKicker">
+        Cómo funciona
+      </span>
+
+      <h2 data-i18n="howTitle">
+        De una necesidad de compra a una operación real.
+      </h2>
+
+      <p class="lead" data-i18n="howLead">
+        El proceso es deliberadamente sencillo. Primero necesitamos entender
+        qué estás buscando y si existe una oportunidad comercial suficientemente clara.
+      </p>
+
+    </div>
+
+
+    <div class="steps-grid reveal">
+
+      <article class="step">
+        <div class="step-num">1</div>
+
+        <h3 data-i18n="step1Title">
+          Nos dices qué necesitas.
+        </h3>
+
+        <p data-i18n="step1Text">
+          Producto, especificaciones, volumen, destino, certificaciones,
+          timing y qué debería mejorar una nueva alternativa.
+        </p>
+      </article>
+
+
+      <article class="step">
+        <div class="step-num">2</div>
+
+        <h3 data-i18n="step2Title">
+          Seleccionamos dónde buscar.
+        </h3>
+
+        <p data-i18n="step2Text">
+          Analizamos si tiene más sentido Vietnam, China u otro mercado
+          asiático y qué fabricantes pueden encajar.
+        </p>
+      </article>
+
+
+      <article class="step">
+        <div class="step-num">3</div>
+
+        <h3 data-i18n="step3Title">
+          Activamos fabricantes.
+        </h3>
+
+        <p data-i18n="step3Text">
+          Contactamos, cualificamos, aprovechamos ferias, solicitamos información
+          y construimos una primera selección.
+        </p>
+      </article>
+
+
+      <article class="step">
+        <div class="step-num">4</div>
+
+        <h3 data-i18n="step4Title">
+          Tú decides.
+        </h3>
+
+        <p data-i18n="step4Text">
+          Comparamos opciones, facilitamos conversaciones y acompañamos
+          la negociación si aparece una alternativa que tenga sentido.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VERTICALS -->
+
+<section id="verticales" class="section verticals">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+
+      <span class="kicker" data-i18n="verticalsKicker">
+        Áreas de sourcing
+      </span>
+
+      <h2 data-i18n="verticalsTitle">
+        Seis verticales para empezar.
+      </h2>
+
+      <p class="lead" data-i18n="verticalsLead">
+        Trabajamos sobre necesidades concretas. Estas son las primeras áreas
+        donde estamos concentrando búsqueda, relaciones y actividad en ferias.
+      </p>
+
+    </div>
+
+
+    <div class="vertical-grid reveal">
+
+      <a
+        class="vertical-card"
+        href="https://emprende360.club/asia/industrial"
+      >
+        <div class="vertical-icon">⚙</div>
+
+        <h3>Industrial / OEM</h3>
+
+        <p data-i18n="verticalIndustrialText">
+          Componentes, moldes, inyección, piezas técnicas, fabricación
+          a medida, assemblies y producción OEM.
+        </p>
+
+        <span class="vertical-link" data-i18n="verticalIndustrialLink">
+          Explorar Industrial / OEM →
+        </span>
+      </a>
+
+
+      <a
+        class="vertical-card"
+        href="https://emprende360.club/asia/packaging"
+      >
+        <div class="vertical-icon">▣</div>
+
+        <h3>Packaging / Materials</h3>
+
+        <p data-i18n="verticalPackagingText">
+          Packaging, films, etiquetas, masterbatch, compounds,
+          materiales técnicos y soluciones relacionadas.
+        </p>
+
+        <span class="vertical-link" data-i18n="verticalPackagingLink">
+          Explorar Packaging / Materials →
+        </span>
+      </a>
+
+
+      <a
+        class="vertical-card"
+        href="https://emprende360.club/asia/food"
+      >
+        <div class="vertical-icon">◉</div>
+
+        <h3>Food</h3>
+
+        <p data-i18n="verticalFoodText">
+          Ingredientes, alimentación B2B, café, especias, productos agrícolas,
+          procesados y private label.
+        </p>
+
+        <span class="vertical-link" data-i18n="verticalFoodLink">
+          Explorar Food →
+        </span>
+      </a>
+
+
+      <a
+        class="vertical-card"
+        href="https://emprende360.club/asia/furniture"
+      >
+        <div class="vertical-icon">▤</div>
+
+        <h3>Furniture</h3>
+
+        <p data-i18n="verticalFurnitureText">
+          Mobiliario, fabricación contract, hospitality, componentes,
+          interiorismo y producción para distribuidores.
+        </p>
+
+        <span class="vertical-link" data-i18n="verticalFurnitureLink">
+          Explorar Furniture →
+        </span>
+      </a>
+
+
+      <a
+        class="vertical-card"
+        href="https://emprende360.club/asia/textile"
+      >
+        <div class="vertical-icon">✦</div>
+
+        <h3>Textile</h3>
+
+        <p data-i18n="verticalTextileText">
+          Fabricación textil, garment, tejidos, materiales,
+          OEM, private label y proveedores especializados.
+        </p>
+
+        <span class="vertical-link" data-i18n="verticalTextileLink">
+          Explorar Textile →
+        </span>
+      </a>
+
+
+      <a
+        class="vertical-card"
+        href="https://emprende360.club/asia/machinery"
+      >
+        <div class="vertical-icon">⬡</div>
+
+        <h3>Machinery</h3>
+
+        <p data-i18n="verticalMachineryText">
+          Maquinaria industrial, automatización, líneas de producción,
+          packaging equipment y tecnología de fabricación.
+        </p>
+
+        <span class="vertical-link" data-i18n="verticalMachineryLink">
+          Explorar Machinery →
+        </span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ASIA -->
+
+<section id="asia" class="section presence">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+
+      <span class="kicker" data-i18n="presenceKicker">
+        Sobre el terreno
+      </span>
+
+      <h2 data-i18n="presenceTitle">
+        Asia no se trabaja solo desde una base de datos.
+      </h2>
+
+      <p class="lead" data-i18n="presenceLead">
+        La ventaja está en poder hablar directamente con fabricantes,
+        acudir a ferias, entender quién está detrás de cada empresa
+        y construir relaciones antes de poner comprador y proveedor en contacto.
+      </p>
+
+    </div>
+
+
+    <div class="presence-grid reveal">
+
+      <article class="country-card">
+
+        <span class="country-label" data-i18n="vietnamLabel">
+          Operational hub
+        </span>
+
+        <h3>Vietnam</h3>
+
+        <p data-i18n="vietnamText">
+          Es nuestra base operativa inicial en Asia y donde podemos desarrollar
+          relaciones directamente con fabricantes, asociaciones y empresas.
+        </p>
+
+        <div class="country-points">
+
+          <div class="country-point">
+            <span class="check">✓</span>
+            <span data-i18n="vietnamPoint1">
+              Presencia física y seguimiento local.
+            </span>
+          </div>
+
+          <div class="country-point">
+            <span class="check">✓</span>
+            <span data-i18n="vietnamPoint2">
+              Participación en ferias B2B y encuentros empresariales.
+            </span>
+          </div>
+
+          <div class="country-point">
+            <span class="check">✓</span>
+            <span data-i18n="vietnamPoint3">
+              Contacto directo con fabricantes y equipos comerciales.
+            </span>
+          </div>
+
+          <div class="country-point">
+            <span class="check">✓</span>
+            <span data-i18n="vietnamPoint4">
+              Capacidad para desarrollar alternativas China+1 cuando encajen.
+            </span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="country-card">
+
+        <span class="country-label" data-i18n="chinaLabel">
+          Supply activation
+        </span>
+
+        <h3 data-i18n="chinaTitle">
+          China + otros mercados asiáticos
+        </h3>
+
+        <p data-i18n="chinaText">
+          No limitamos una necesidad al país donde estamos físicamente.
+          Si China u otro mercado puede ofrecer una alternativa mejor,
+          activamos la búsqueda allí.
+        </p>
+
+        <div class="country-points">
+
+          <div class="country-point">
+            <span class="check">✓</span>
+            <span data-i18n="chinaPoint1">
+              Búsqueda orientada por producto y especificaciones.
+            </span>
+          </div>
+
+          <div class="country-point">
+            <span class="check">✓</span>
+            <span data-i18n="chinaPoint2">
+              Comparación entre alternativas cuando resulte útil.
+            </span>
+          </div>
+
+          <div class="country-point">
+            <span class="check">✓</span>
+            <span data-i18n="chinaPoint3">
+              Partners locales cuando idioma o mercado lo requieran.
+            </span>
+          </div>
+
+          <div class="country-point">
+            <span class="check">✓</span>
+            <span data-i18n="chinaPoint4">
+              Ferias internacionales cuando el valor de la operación lo justifique.
+            </span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BRIEF -->
+
+<section class="section brief">
+
+  <div class="wrap">
+
+    <div class="brief-shell reveal">
+
+      <div class="brief-copy">
+
+        <span class="kicker" data-i18n="briefKicker">
+          Para empezar
+        </span>
+
+        <h2 data-i18n="briefTitle">
+          Cuanto más concreta sea la necesidad, mejor podemos buscar.
+        </h2>
+
+        <p data-i18n="briefText">
+          No necesitamos un documento de veinte páginas.
+          Con algunos datos básicos podemos determinar rápidamente
+          si merece la pena activar una búsqueda.
+        </p>
+
+        <a
+          class="btn btn-primary"
+          href="https://emprende360.club/asia/solicitud"
+          data-i18n="briefCta"
+        >
+          Enviar Buyer Request →
+        </a>
+
+      </div>
+
+
+      <div class="brief-list">
+
+        <div class="brief-item" data-i18n="briefItem1">
+          Producto / componente
+        </div>
+
+        <div class="brief-item" data-i18n="briefItem2">
+          Especificaciones
+        </div>
+
+        <div class="brief-item" data-i18n="briefItem3">
+          Volumen aproximado
+        </div>
+
+        <div class="brief-item" data-i18n="briefItem4">
+          Compra anual
+        </div>
+
+        <div class="brief-item" data-i18n="briefItem5">
+          Origen actual
+        </div>
+
+        <div class="brief-item" data-i18n="briefItem6">
+          Certificaciones
+        </div>
+
+        <div class="brief-item" data-i18n="briefItem7">
+          Destino
+        </div>
+
+        <div class="brief-item" data-i18n="briefItem8">
+          Timing
+        </div>
+
+        <div class="brief-item" data-i18n="briefItem9">
+          Precio objetivo, si existe
+        </div>
+
+        <div class="brief-item" data-i18n="briefItem10">
+          Qué debería mejorar
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MODEL -->
+
+<section class="section model">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+
+      <span class="kicker" data-i18n="modelKicker">
+        Modelo simple
+      </span>
+
+      <h2 data-i18n="modelTitle">
+        Primero tiene que existir una oportunidad real.
+      </h2>
+
+      <p class="lead" data-i18n="modelLead">
+        Queremos reducir la fricción para el comprador sin convertirnos
+        en un departamento de sourcing gratuito e ilimitado.
+      </p>
+
+    </div>
+
+
+    <div class="model-grid reveal">
+
+      <article class="model-card featured">
+
+        <span class="pill green" data-i18n="model1Pill">
+          Casos seleccionados
+        </span>
+
+        <h3 data-i18n="model1Title">
+          Sin fee comercial inicial
+        </h3>
+
+        <p data-i18n="model1Text">
+          Si la necesidad tiene suficiente claridad, volumen y capacidad real
+          de compra, podemos iniciar la búsqueda sin cobrar un fee comercial
+          por adelantado al buyer.
+        </p>
+
+      </article>
+
+
+      <article class="model-card">
+
+        <span class="pill" data-i18n="model2Pill">
+          Si existe operación
+        </span>
+
+        <h3 data-i18n="model2Title">
+          Remuneración comercial
+        </h3>
+
+        <p data-i18n="model2Text">
+          Cuando una operación avanza, nuestra remuneración puede estructurarse
+          con el proveedor seleccionado mediante un acuerdo comercial claramente definido.
+        </p>
+
+      </article>
+
+
+      <article class="model-card">
+
+        <span class="pill" data-i18n="model3Pill">
+          Proyectos complejos
+        </span>
+
+        <h3 data-i18n="model3Title">
+          Sourcing específico
+        </h3>
+
+        <p data-i18n="model3Text">
+          Auditorías, estudios amplios, muchas fábricas, inspecciones o procesos
+          intensivos pueden requerir un proyecto de sourcing o validación separado.
+        </p>
+
+      </article>
+
+    </div>
+
+    <p
+      class="small center"
+      style="margin-top:18px;"
+      data-i18n="modelDisclaimer"
+    >
+      Emprende360 no garantiza ahorro, disponibilidad, capacidad productiva,
+      calidad final, certificaciones, pedidos ni cierre de operaciones.
+      Cada proveedor y cada transacción deben evaluarse individualmente.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- SUPPLIERS -->
+
+<section id="fabricantes" class="section suppliers">
+
+  <div class="wrap">
+
+    <div class="supplier-shell reveal">
+
+      <div class="supplier-copy">
+
+        <span class="kicker" data-i18n="supplierKicker">
+          Fabricantes asiáticos
+        </span>
+
+        <h2 data-i18n="supplierTitle">
+          ¿Fabricas en Asia y quieres desarrollar España?
+        </h2>
+
+        <p data-i18n="supplierText1">
+          Nuestro modelo empieza por demanda real.
+          Cuando existe una necesidad compatible de un comprador,
+          buscamos fabricantes capaces de responderla y estructuramos
+          la relación comercial.
+        </p>
+
+        <p data-i18n="supplierText2">
+          También podemos estudiar oportunidades específicas de desarrollo
+          de mercado para España y, progresivamente, otros mercados hispanohablantes.
+        </p>
+
+        <a
+          class="btn btn-secondary"
+          href="mailto:info@emprende360.club?subject=Manufacturer%20-%20Emprende360%20Asia"
+          data-i18n="supplierCta"
+        >
+          Contactar como fabricante
+        </a>
+
+      </div>
+
+
+      <div class="supplier-card">
+
+        <b data-i18n="supplierBoxTitle">
+          Buscamos fabricantes con capacidad real.
+        </b>
+
+        <span data-i18n="supplierBoxText">
+          Productos competitivos, capacidad exportadora, comunicación profesional,
+          certificaciones cuando correspondan y disposición para construir
+          relaciones comerciales de largo plazo.
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="section final-cta">
+
+  <div class="wrap">
+
+    <div class="cta-shell reveal">
+
+      <span class="pill green">
+        Buyer Request
+      </span>
+
+      <h2 data-i18n="finalTitle">
+        ¿Qué necesita encontrar tu empresa en Asia?
+      </h2>
+
+      <p data-i18n="finalText">
+        Si ya compras allí, buscas un segundo fabricante o quieres evaluar
+        nuevas alternativas, cuéntanos qué necesitas.
+        Revisaremos primero si existe una oportunidad clara para trabajarla.
+      </p>
+
+      <div class="cta-actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://emprende360.club/asia/solicitud"
+          data-i18n="finalCta"
+        >
+          Enviar necesidad de compra →
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="mailto:info@emprende360.club?subject=Asia%20Sourcing%20Request"
+        >
+          info@emprende360.club
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="wrap footer-inner">
+
+    <div>
+      <strong>Emprende360 Asia</strong><br>
+      Sourcing · Manufacturing · Commercial Development
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="https://emprende360.club/">
+        Emprende360
+      </a>
+
+      <a href="https://emprende360.club/asia/industrial">
+        Industrial / OEM
+      </a>
+
+      <a href="https://emprende360.club/asia/packaging">
+        Packaging
+      </a>
+
+      <a href="https://emprende360.club/asia/food">
+        Food
+      </a>
+
+      <a href="https://emprende360.club/asia/furniture">
+        Furniture
+      </a>
+
+      <a href="https://emprende360.club/asia/textile">
+        Textile
+      </a>
+
+      <a href="https://emprende360.club/asia/machinery">
+        Machinery
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/albertoporrasmoreno/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Alberto Porras
+      </a>
+
+      <a
+        href="https://emprende360.club/privacidad"
+        data-i18n="footerPrivacy"
+      >
+        Privacidad
+      </a>
+
+      <a
+        href="https://emprende360.club/aviso-legal"
+        data-i18n="footerLegal"
+      >
+        Aviso legal
+      </a>
+
+    </div>
+
+
+    <div
+      style="
+        width:100%;
+        max-width:960px;
+        margin-top:5px;
+        color:#64748B;
+        font-size:10px;
+        line-height:1.6;
+      "
+      data-i18n="footerDisclaimer"
+    >
+      Emprende360 facilita búsqueda, identificación, contacto, evaluación inicial,
+      desarrollo comercial y posibles relaciones entre compradores y proveedores.
+      No actúa como fabricante y no garantiza precios, calidad, capacidad,
+      certificaciones, ahorro, pedidos, ventas, suministro ni resultados concretos.
+      La validación técnica, contractual, financiera y logística de cada operación
+      corresponde a las partes involucradas y, cuando proceda, a profesionales especializados.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+const translations = {
+
+  /* =========================================================
+     ESPAÑOL
+  ========================================================= */
+
+  es: {
+
+    title:
+      "Emprende360 Asia · Sourcing y fabricantes en Asia para empresas",
+
+    description:
+      "Emprende360 Asia ayuda a empresas a identificar, evaluar y conectar con fabricantes y proveedores en Vietnam, China y otros mercados asiáticos.",
+
+    navHow:"Cómo funciona",
+    navVerticals:"Verticales",
+    navAsia:"Asia",
+    navManufacturers:"Fabricantes",
+    navCta:"Cuéntanos qué buscas",
+
+    heroPill:"Buyer first · Presencia en Asia",
+    heroTitle:"Tu equipo de sourcing sobre el terreno en Asia.",
+
+    heroText1:
+      "Si tu empresa ya compra en Asia, busca un nuevo fabricante o quiere diversificar proveedores, empezamos por una pregunta muy sencilla: ¿qué necesitas encontrar?",
+
+    heroText2:
+      "Desde nuestra base operativa en Vietnam identificamos, contactamos y evaluamos fabricantes, aprovechamos ferias sectoriales y activamos también China u otros mercados asiáticos cuando la operación lo requiere.",
+
+    heroCta:"Enviar una necesidad de compra →",
+    heroSecondary:"Ver cómo funciona",
+
+    heroNote:
+      "Para solicitudes seleccionadas podemos iniciar la búsqueda sin fee comercial por adelantado. Primero comprobamos si existe una oportunidad real.",
+
+    heroCardKicker:"Empezamos por tu demanda",
+    heroCardTitle:"No buscamos fabricantes al azar.",
+
+    heroCardText:
+      "Partimos de una necesidad concreta de compra y buscamos después la capacidad industrial que mejor pueda resolverla.",
+
+    request1Title:"Qué necesitas",
+    request1Text:
+      "Producto, componente, material, maquinaria o fabricación.",
+
+    request2Title:"Cuánto necesitas",
+    request2Text:
+      "Volumen, frecuencia, especificaciones y destino.",
+
+    request3Title:"Qué debería mejorar",
+    request3Text:
+      "Precio, capacidad, calidad, condiciones, lead time o diversificación.",
+
+    request4Title:"Nosotros buscamos en Asia",
+    request4Text:
+      "Vietnam, China y otros mercados cuando la necesidad lo justifique.",
+
+    principle1Title:"Buyer first",
+    principle1Text:
+      "Primero entendemos qué necesita comprar tu empresa.",
+
+    principle2Title:"Base operativa en Vietnam",
+    principle2Text:
+      "Relaciones, fabricantes, ferias y seguimiento sobre el terreno.",
+
+    principle3Title:"China cuando tiene sentido",
+    principle3Text:
+      "Activamos otros mercados asiáticos según el producto y la oportunidad.",
+
+    principle4Title:"Operaciones seleccionadas",
+    principle4Text:
+      "Priorizamos necesidades reales con capacidad de compra.",
+
+    problemKicker:"Sourcing con contexto",
+    problemTitle:"No necesitas otra lista de proveedores.",
+
+    problemText1:
+      "Encontrar cientos de fábricas online es sencillo. Saber cuáles pueden producir realmente lo que necesitas, cuáles tienen sentido comercial y con quién merece la pena hablar es otra cosa.",
+
+    problemText2:
+      "Nuestro trabajo empieza por tu necesidad de compra y utiliza presencia local, relaciones, ferias y contacto directo con fabricantes para encontrar alternativas relevantes.",
+
+    problem1Title:"¿Ya compras en China?",
+    problem1Text:
+      "Podemos estudiar Vietnam u otros mercados como segunda fuente de suministro.",
+
+    problem2Title:"¿Necesitas un fabricante nuevo?",
+    problem2Text:
+      "Definimos la necesidad y buscamos capacidad productiva compatible.",
+
+    problem3Title:"¿Tu proveedor actual tiene limitaciones?",
+    problem3Text:
+      "Podemos buscar alternativas de capacidad, condiciones, producto o especialización.",
+
+    problem4Title:"¿Quieres fabricar un producto nuevo?",
+    problem4Text:
+      "Podemos identificar potenciales OEM y fabricantes especializados.",
+
+    howKicker:"Cómo funciona",
+    howTitle:"De una necesidad de compra a una operación real.",
+
+    howLead:
+      "El proceso es deliberadamente sencillo. Primero necesitamos entender qué estás buscando y si existe una oportunidad comercial suficientemente clara.",
+
+    step1Title:"Nos dices qué necesitas.",
+    step1Text:
+      "Producto, especificaciones, volumen, destino, certificaciones, timing y qué debería mejorar una nueva alternativa.",
+
+    step2Title:"Seleccionamos dónde buscar.",
+    step2Text:
+      "Analizamos si tiene más sentido Vietnam, China u otro mercado asiático y qué fabricantes pueden encajar.",
+
+    step3Title:"Activamos fabricantes.",
+    step3Text:
+      "Contactamos, cualificamos, aprovechamos ferias, solicitamos información y construimos una primera selección.",
+
+    step4Title:"Tú decides.",
+    step4Text:
+      "Comparamos opciones, facilitamos conversaciones y acompañamos la negociación si aparece una alternativa que tenga sentido.",
+
+    verticalsKicker:"Áreas de sourcing",
+    verticalsTitle:"Seis verticales para empezar.",
+
+    verticalsLead:
+      "Trabajamos sobre necesidades concretas. Estas son las primeras áreas donde estamos concentrando búsqueda, relaciones y actividad en ferias.",
+
+    verticalIndustrialText:
+      "Componentes, moldes, inyección, piezas técnicas, fabricación a medida, assemblies y producción OEM.",
+
+    verticalIndustrialLink:
+      "Explorar Industrial / OEM →",
+
+    verticalPackagingText:
+      "Packaging, films, etiquetas, masterbatch, compounds, materiales técnicos y soluciones relacionadas.",
+
+    verticalPackagingLink:
+      "Explorar Packaging / Materials →",
+
+    verticalFoodText:
+      "Ingredientes, alimentación B2B, café, especias, productos agrícolas, procesados y private label.",
+
+    verticalFoodLink:
+      "Explorar Food →",
+
+    verticalFurnitureText:
+      "Mobiliario, fabricación contract, hospitality, componentes, interiorismo y producción para distribuidores.",
+
+    verticalFurnitureLink:
+      "Explorar Furniture →",
+
+    verticalTextileText:
+      "Fabricación textil, garment, tejidos, materiales, OEM, private label y proveedores especializados.",
+
+    verticalTextileLink:
+      "Explorar Textile →",
+
+    verticalMachineryText:
+      "Maquinaria industrial, automatización, líneas de producción, packaging equipment y tecnología de fabricación.",
+
+    verticalMachineryLink:
+      "Explorar Machinery →",
+
+    presenceKicker:"Sobre el terreno",
+    presenceTitle:"Asia no se trabaja solo desde una base de datos.",
+
+    presenceLead:
+      "La ventaja está en poder hablar directamente con fabricantes, acudir a ferias, entender quién está detrás de cada empresa y construir relaciones antes de poner comprador y proveedor en contacto.",
+
+    vietnamLabel:"Operational hub",
+
+    vietnamText:
+      "Es nuestra base operativa inicial en Asia y donde podemos desarrollar relaciones directamente con fabricantes, asociaciones y empresas.",
+
+    vietnamPoint1:"Presencia física y seguimiento local.",
+    vietnamPoint2:"Participación en ferias B2B y encuentros empresariales.",
+    vietnamPoint3:"Contacto directo con fabricantes y equipos comerciales.",
+    vietnamPoint4:"Capacidad para desarrollar alternativas China+1 cuando encajen.",
+
+    chinaLabel:"Supply activation",
+    chinaTitle:"China + otros mercados asiáticos",
+
+    chinaText:
+      "No limitamos una necesidad al país donde estamos físicamente. Si China u otro mercado puede ofrecer una alternativa mejor, activamos la búsqueda allí.",
+
+    chinaPoint1:
+      "Búsqueda orientada por producto y especificaciones.",
+
+    chinaPoint2:
+      "Comparación entre alternativas cuando resulte útil.",
+
+    chinaPoint3:
+      "Partners locales cuando idioma o mercado lo requieran.",
+
+    chinaPoint4:
+      "Ferias internacionales cuando el valor de la operación lo justifique.",
+
+    briefKicker:"Para empezar",
+
+    briefTitle:
+      "Cuanto más concreta sea la necesidad, mejor podemos buscar.",
+
+    briefText:
+      "No necesitamos un documento de veinte páginas. Con algunos datos básicos podemos determinar rápidamente si merece la pena activar una búsqueda.",
+
+    briefCta:"Enviar Buyer Request →",
+
+    briefItem1:"Producto / componente",
+    briefItem2:"Especificaciones",
+    briefItem3:"Volumen aproximado",
+    briefItem4:"Compra anual",
+    briefItem5:"Origen actual",
+    briefItem6:"Certificaciones",
+    briefItem7:"Destino",
+    briefItem8:"Timing",
+    briefItem9:"Precio objetivo, si existe",
+    briefItem10:"Qué debería mejorar",
+
+    modelKicker:"Modelo simple",
+
+    modelTitle:
+      "Primero tiene que existir una oportunidad real.",
+
+    modelLead:
+      "Queremos reducir la fricción para el comprador sin convertirnos en un departamento de sourcing gratuito e ilimitado.",
+
+    model1Pill:"Casos seleccionados",
+    model1Title:"Sin fee comercial inicial",
+
+    model1Text:
+      "Si la necesidad tiene suficiente claridad, volumen y capacidad real de compra, podemos iniciar la búsqueda sin cobrar un fee comercial por adelantado al buyer.",
+
+    model2Pill:"Si existe operación",
+    model2Title:"Remuneración comercial",
+
+    model2Text:
+      "Cuando una operación avanza, nuestra remuneración puede estructurarse con el proveedor seleccionado mediante un acuerdo comercial claramente definido.",
+
+    model3Pill:"Proyectos complejos",
+    model3Title:"Sourcing específico",
+
+    model3Text:
+      "Auditorías, estudios amplios, muchas fábricas, inspecciones o procesos intensivos pueden requerir un proyecto de sourcing o validación separado.",
+
+    modelDisclaimer:
+      "Emprende360 no garantiza ahorro, disponibilidad, capacidad productiva, calidad final, certificaciones, pedidos ni cierre de operaciones. Cada proveedor y cada transacción deben evaluarse individualmente.",
+
+    supplierKicker:"Fabricantes asiáticos",
+
+    supplierTitle:
+      "¿Fabricas en Asia y quieres desarrollar España?",
+
+    supplierText1:
+      "Nuestro modelo empieza por demanda real. Cuando existe una necesidad compatible de un comprador, buscamos fabricantes capaces de responderla y estructuramos la relación comercial.",
+
+    supplierText2:
+      "También podemos estudiar oportunidades específicas de desarrollo de mercado para España y, progresivamente, otros mercados hispanohablantes.",
+
+    supplierCta:"Contactar como fabricante",
+
+    supplierBoxTitle:
+      "Buscamos fabricantes con capacidad real.",
+
+    supplierBoxText:
+      "Productos competitivos, capacidad exportadora, comunicación profesional, certificaciones cuando correspondan y disposición para construir relaciones comerciales de largo plazo.",
+
+    finalTitle:
+      "¿Qué necesita encontrar tu empresa en Asia?",
+
+    finalText:
+      "Si ya compras allí, buscas un segundo fabricante o quieres evaluar nuevas alternativas, cuéntanos qué necesitas. Revisaremos primero si existe una oportunidad clara para trabajarla.",
+
+    finalCta:"Enviar necesidad de compra →",
+
+    footerPrivacy:"Privacidad",
+    footerLegal:"Aviso legal",
+
+    footerDisclaimer:
+      "Emprende360 facilita búsqueda, identificación, contacto, evaluación inicial, desarrollo comercial y posibles relaciones entre compradores y proveedores. No actúa como fabricante y no garantiza precios, calidad, capacidad, certificaciones, ahorro, pedidos, ventas, suministro ni resultados concretos. La validación técnica, contractual, financiera y logística de cada operación corresponde a las partes involucradas y, cuando proceda, a profesionales especializados."
+  },
+
+
+  /* =========================================================
+     ENGLISH
+  ========================================================= */
+
+  en: {
+
+    title:
+      "Emprende360 Asia · Asian Sourcing & Manufacturing",
+
+    description:
+      "Emprende360 Asia helps companies identify, evaluate and connect with manufacturers and suppliers across Vietnam, China and other Asian markets.",
+
+    navHow:"How it works",
+    navVerticals:"Sectors",
+    navAsia:"Asia",
+    navManufacturers:"Manufacturers",
+    navCta:"Tell us what you need",
+
+    heroPill:"Buyer first · On the ground in Asia",
+
+    heroTitle:
+      "Your sourcing partner on the ground in Asia.",
+
+    heroText1:
+      "If your company already buys from Asia, needs a new manufacturer or wants to diversify its supplier base, we start with one simple question: what do you need to find?",
+
+    heroText2:
+      "From our operational base in Vietnam, we identify, contact and evaluate manufacturers, attend industry trade fairs and activate China or other Asian markets when the opportunity requires it.",
+
+    heroCta:"Submit a sourcing request →",
+    heroSecondary:"See how it works",
+
+    heroNote:
+      "For selected sourcing requests, we can begin without an upfront commercial fee. We first determine whether there is a genuine business opportunity.",
+
+    heroCardKicker:"We start with your demand",
+
+    heroCardTitle:
+      "We don't search for manufacturers at random.",
+
+    heroCardText:
+      "We start with a real purchasing requirement and then look for the manufacturing capability best positioned to solve it.",
+
+    request1Title:"What you need",
+    request1Text:
+      "Product, component, material, machinery or manufacturing capability.",
+
+    request2Title:"How much you need",
+    request2Text:
+      "Volume, frequency, specifications and destination.",
+
+    request3Title:"What should improve",
+    request3Text:
+      "Price, capacity, quality, terms, lead time or supply diversification.",
+
+    request4Title:"We search across Asia",
+    request4Text:
+      "Vietnam, China and other markets when the requirement justifies it.",
+
+    principle1Title:"Buyer first",
+    principle1Text:
+      "We first understand what your company actually needs to buy.",
+
+    principle2Title:"Operational base in Vietnam",
+    principle2Text:
+      "Manufacturers, trade fairs, relationships and local follow-up.",
+
+    principle3Title:"China when it makes sense",
+    principle3Text:
+      "We activate other Asian markets according to the product and opportunity.",
+
+    principle4Title:"Selected opportunities",
+    principle4Text:
+      "We prioritise real purchasing requirements with genuine buying capacity.",
+
+    problemKicker:"Sourcing with context",
+
+    problemTitle:
+      "You don't need another list of suppliers.",
+
+    problemText1:
+      "Finding hundreds of factories online is easy. Understanding which ones can actually manufacture what you need, which ones make commercial sense and who is worth speaking with is a different matter.",
+
+    problemText2:
+      "Our work begins with your purchasing requirement and combines local presence, relationships, trade fairs and direct manufacturer contact to identify relevant alternatives.",
+
+    problem1Title:"Already sourcing from China?",
+    problem1Text:
+      "We can evaluate Vietnam or other markets as an additional supply source.",
+
+    problem2Title:"Need a new manufacturer?",
+    problem2Text:
+      "We define the requirement and look for compatible manufacturing capability.",
+
+    problem3Title:"Limitations with your current supplier?",
+    problem3Text:
+      "We can look for alternatives in capacity, commercial terms, products or specialisation.",
+
+    problem4Title:"Developing a new product?",
+    problem4Text:
+      "We can identify potential OEM and specialised manufacturers.",
+
+    howKicker:"How it works",
+
+    howTitle:
+      "From a purchasing requirement to a real business opportunity.",
+
+    howLead:
+      "The process is deliberately simple. We first need to understand what you are looking for and whether there is a sufficiently clear commercial opportunity.",
+
+    step1Title:"Tell us what you need.",
+
+    step1Text:
+      "Product, specifications, volume, destination, certifications, timing and what a new supplier would need to improve.",
+
+    step2Title:"We decide where to search.",
+
+    step2Text:
+      "We assess whether Vietnam, China or another Asian market makes more sense and identify manufacturers that could fit.",
+
+    step3Title:"We activate manufacturers.",
+
+    step3Text:
+      "We contact and qualify companies, use trade fairs, collect information and build an initial shortlist.",
+
+    step4Title:"You decide.",
+
+    step4Text:
+      "We compare alternatives, facilitate discussions and support negotiations when a suitable option emerges.",
+
+    verticalsKicker:"Sourcing sectors",
+
+    verticalsTitle:
+      "Six initial sourcing verticals.",
+
+    verticalsLead:
+      "We work from real purchasing needs. These are the first areas where we are concentrating sourcing, relationships and trade fair activity.",
+
+    verticalIndustrialText:
+      "Components, moulds, injection moulding, technical parts, custom manufacturing, assemblies and OEM production.",
+
+    verticalIndustrialLink:
+      "Explore Industrial / OEM →",
+
+    verticalPackagingText:
+      "Packaging, films, labels, masterbatch, compounds, technical materials and related solutions.",
+
+    verticalPackagingLink:
+      "Explore Packaging / Materials →",
+
+    verticalFoodText:
+      "Ingredients, B2B food products, coffee, spices, agricultural products, processed food and private label.",
+
+    verticalFoodLink:
+      "Explore Food →",
+
+    verticalFurnitureText:
+      "Furniture, contract manufacturing, hospitality, components, interiors and production for distributors.",
+
+    verticalFurnitureLink:
+      "Explore Furniture →",
+
+    verticalTextileText:
+      "Textile manufacturing, garments, fabrics, materials, OEM, private label and specialised suppliers.",
+
+    verticalTextileLink:
+      "Explore Textile →",
+
+    verticalMachineryText:
+      "Industrial machinery, automation, production lines, packaging equipment and manufacturing technology.",
+
+    verticalMachineryLink:
+      "Explore Machinery →",
+
+    presenceKicker:"On the ground",
+
+    presenceTitle:
+      "Asia cannot be worked from a database alone.",
+
+    presenceLead:
+      "The advantage comes from speaking directly with manufacturers, attending trade fairs, understanding who is behind each company and developing relationships before connecting buyer and supplier.",
+
+    vietnamLabel:"Operational hub",
+
+    vietnamText:
+      "Vietnam is our initial operational base in Asia, allowing us to develop relationships directly with manufacturers, associations and companies.",
+
+    vietnamPoint1:
+      "Physical presence and local follow-up.",
+
+    vietnamPoint2:
+      "Participation in B2B trade fairs and business events.",
+
+    vietnamPoint3:
+      "Direct contact with manufacturers and commercial teams.",
+
+    vietnamPoint4:
+      "Ability to develop China+1 alternatives when relevant.",
+
+    chinaLabel:"Supply activation",
+
+    chinaTitle:
+      "China + other Asian markets",
+
+    chinaText:
+      "We do not limit a sourcing requirement to the country where we are physically based. If China or another market can provide a better alternative, we activate the search there.",
+
+    chinaPoint1:
+      "Product- and specification-driven sourcing.",
+
+    chinaPoint2:
+      "Comparison between alternatives when useful.",
+
+    chinaPoint3:
+      "Local partners when language or market conditions require them.",
+
+    chinaPoint4:
+      "International trade fairs when the value of the opportunity justifies it.",
+
+    briefKicker:"To get started",
+
+    briefTitle:
+      "The clearer the requirement, the better we can search.",
+
+    briefText:
+      "We don't need a twenty-page document. A few essential details are enough for us to quickly determine whether it makes sense to activate a search.",
+
+    briefCta:"Submit Buyer Request →",
+
+    briefItem1:"Product / component",
+    briefItem2:"Specifications",
+    briefItem3:"Approximate volume",
+    briefItem4:"Annual purchasing volume",
+    briefItem5:"Current sourcing country",
+    briefItem6:"Certifications",
+    briefItem7:"Destination",
+    briefItem8:"Timing",
+    briefItem9:"Target price, if available",
+    briefItem10:"What should improve",
+
+    modelKicker:"Simple model",
+
+    modelTitle:
+      "There must first be a real commercial opportunity.",
+
+    modelLead:
+      "We want to reduce friction for buyers without becoming an unlimited free sourcing department.",
+
+    model1Pill:"Selected opportunities",
+
+    model1Title:
+      "No upfront commercial fee",
+
+    model1Text:
+      "When the requirement has sufficient clarity, volume and genuine purchasing capacity, we may begin the sourcing process without charging the buyer an upfront commercial fee.",
+
+    model2Pill:"When business happens",
+
+    model2Title:
+      "Commercial remuneration",
+
+    model2Text:
+      "When an opportunity progresses, our remuneration may be structured with the selected supplier under a clearly defined commercial agreement.",
+
+    model3Pill:"Complex projects",
+
+    model3Title:
+      "Dedicated sourcing projects",
+
+    model3Text:
+      "Audits, broad studies, extensive supplier searches, inspections or intensive processes may require a separate sourcing or validation project.",
+
+    modelDisclaimer:
+      "Emprende360 does not guarantee savings, availability, manufacturing capacity, final quality, certifications, orders or completed transactions. Each supplier and transaction must be evaluated individually.",
+
+    supplierKicker:"Asian manufacturers",
+
+    supplierTitle:
+      "Do you manufacture in Asia and want to develop the Spanish market?",
+
+    supplierText1:
+      "Our model starts with real demand. When a compatible buyer requirement exists, we identify manufacturers capable of fulfilling it and structure the commercial relationship.",
+
+    supplierText2:
+      "We can also evaluate specific market development opportunities for Spain and, progressively, other Spanish-speaking markets.",
+
+    supplierCta:"Contact us as a manufacturer",
+
+    supplierBoxTitle:
+      "We are looking for manufacturers with real capability.",
+
+    supplierBoxText:
+      "Competitive products, export readiness, professional communication, relevant certifications when required and a willingness to build long-term commercial relationships.",
+
+    finalTitle:
+      "What does your company need to find in Asia?",
+
+    finalText:
+      "If you already source from Asia, need a second manufacturer or want to evaluate new alternatives, tell us what you are looking for. We will first determine whether there is a clear opportunity worth pursuing.",
+
+    finalCta:"Submit a sourcing request →",
+
+    footerPrivacy:"Privacy",
+    footerLegal:"Legal notice",
+
+    footerDisclaimer:
+      "Emprende360 facilitates sourcing, identification, contact, initial evaluation, commercial development and potential relationships between buyers and suppliers. Emprende360 is not a manufacturer and does not guarantee prices, quality, capacity, certifications, savings, orders, sales, supply or specific results. Technical, contractual, financial and logistical validation of each transaction remains the responsibility of the parties involved and, where appropriate, specialised professionals."
+  },
+
+
+  /* =========================================================
+     FRANÇAIS
+  ========================================================= */
+
+  fr: {
+
+    title:
+      "Emprende360 Asia · Sourcing et fabricants en Asie",
+
+    description:
+      "Emprende360 Asia aide les entreprises à identifier, évaluer et contacter des fabricants et fournisseurs au Vietnam, en Chine et sur d'autres marchés asiatiques.",
+
+    navHow:"Comment ça marche",
+    navVerticals:"Secteurs",
+    navAsia:"Asie",
+    navManufacturers:"Fabricants",
+    navCta:"Dites-nous ce que vous cherchez",
+
+    heroPill:"Buyer first · Présence en Asie",
+
+    heroTitle:
+      "Votre partenaire sourcing sur le terrain en Asie.",
+
+    heroText1:
+      "Si votre entreprise achète déjà en Asie, recherche un nouveau fabricant ou souhaite diversifier ses fournisseurs, nous commençons par une question très simple : que recherchez-vous ?",
+
+    heroText2:
+      "Depuis notre base opérationnelle au Vietnam, nous identifions, contactons et évaluons des fabricants, participons à des salons professionnels et activons également la Chine ou d'autres marchés asiatiques lorsque l'opportunité le nécessite.",
+
+    heroCta:"Envoyer une demande de sourcing →",
+    heroSecondary:"Voir comment ça marche",
+
+    heroNote:
+      "Pour certaines demandes sélectionnées, nous pouvons commencer la recherche sans frais commerciaux initiaux. Nous vérifions d'abord qu'il existe une réelle opportunité commerciale.",
+
+    heroCardKicker:"Nous partons de votre besoin",
+
+    heroCardTitle:
+      "Nous ne recherchons pas des fabricants au hasard.",
+
+    heroCardText:
+      "Nous partons d'un besoin d'achat concret puis recherchons la capacité industrielle la plus adaptée pour y répondre.",
+
+    request1Title:"Ce dont vous avez besoin",
+
+    request1Text:
+      "Produit, composant, matériau, machine ou capacité de fabrication.",
+
+    request2Title:"La quantité nécessaire",
+
+    request2Text:
+      "Volume, fréquence, spécifications et destination.",
+
+    request3Title:"Ce qui doit être amélioré",
+
+    request3Text:
+      "Prix, capacité, qualité, conditions, délais ou diversification.",
+
+    request4Title:"Nous recherchons en Asie",
+
+    request4Text:
+      "Vietnam, Chine et autres marchés lorsque le besoin le justifie.",
+
+    principle1Title:"Buyer first",
+
+    principle1Text:
+      "Nous commençons par comprendre ce que votre entreprise doit réellement acheter.",
+
+    principle2Title:"Base opérationnelle au Vietnam",
+
+    principle2Text:
+      "Fabricants, salons professionnels, relations et suivi local.",
+
+    principle3Title:"La Chine lorsque cela a du sens",
+
+    principle3Text:
+      "Nous activons d'autres marchés asiatiques selon le produit et l'opportunité.",
+
+    principle4Title:"Opportunités sélectionnées",
+
+    principle4Text:
+      "Nous privilégions les besoins réels avec une véritable capacité d'achat.",
+
+    problemKicker:"Sourcing avec contexte",
+
+    problemTitle:
+      "Vous n'avez pas besoin d'une nouvelle liste de fournisseurs.",
+
+    problemText1:
+      "Trouver des centaines d'usines en ligne est facile. Savoir lesquelles peuvent réellement fabriquer ce dont vous avez besoin, lesquelles sont commercialement pertinentes et avec qui il vaut la peine de discuter est une autre question.",
+
+    problemText2:
+      "Notre travail commence par votre besoin d'achat et combine présence locale, relations, salons professionnels et contact direct avec les fabricants afin d'identifier des alternatives pertinentes.",
+
+    problem1Title:"Vous achetez déjà en Chine ?",
+
+    problem1Text:
+      "Nous pouvons étudier le Vietnam ou d'autres marchés comme source d'approvisionnement complémentaire.",
+
+    problem2Title:"Vous cherchez un nouveau fabricant ?",
+
+    problem2Text:
+      "Nous définissons le besoin et recherchons une capacité de production compatible.",
+
+    problem3Title:"Votre fournisseur actuel a des limites ?",
+
+    problem3Text:
+      "Nous pouvons rechercher des alternatives en matière de capacité, conditions commerciales, produits ou spécialisation.",
+
+    problem4Title:"Vous développez un nouveau produit ?",
+
+    problem4Text:
+      "Nous pouvons identifier des fabricants OEM et spécialisés.",
+
+    howKicker:"Comment ça marche",
+
+    howTitle:
+      "D'un besoin d'achat à une opportunité commerciale réelle.",
+
+    howLead:
+      "Le processus est volontairement simple. Nous devons d'abord comprendre ce que vous recherchez et déterminer s'il existe une opportunité commerciale suffisamment claire.",
+
+    step1Title:"Vous nous dites ce dont vous avez besoin.",
+
+    step1Text:
+      "Produit, spécifications, volume, destination, certifications, calendrier et améliorations attendues d'une nouvelle alternative.",
+
+    step2Title:"Nous choisissons où chercher.",
+
+    step2Text:
+      "Nous évaluons si le Vietnam, la Chine ou un autre marché asiatique est le plus pertinent et quels fabricants peuvent correspondre.",
+
+    step3Title:"Nous activons les fabricants.",
+
+    step3Text:
+      "Nous contactons et qualifions les entreprises, utilisons les salons professionnels, recueillons les informations et établissons une première sélection.",
+
+    step4Title:"Vous décidez.",
+
+    step4Text:
+      "Nous comparons les alternatives, facilitons les échanges et accompagnons la négociation lorsqu'une option pertinente apparaît.",
+
+    verticalsKicker:"Secteurs de sourcing",
+
+    verticalsTitle:
+      "Six verticales pour commencer.",
+
+    verticalsLead:
+      "Nous travaillons à partir de besoins d'achat concrets. Voici les premiers secteurs sur lesquels nous concentrons notre sourcing, nos relations et notre présence sur les salons.",
+
+    verticalIndustrialText:
+      "Composants, moules, injection plastique, pièces techniques, fabrication sur mesure, assemblages et production OEM.",
+
+    verticalIndustrialLink:
+      "Découvrir Industrial / OEM →",
+
+    verticalPackagingText:
+      "Packaging, films, étiquettes, masterbatch, compounds, matériaux techniques et solutions associées.",
+
+    verticalPackagingLink:
+      "Découvrir Packaging / Materials →",
+
+    verticalFoodText:
+      "Ingrédients, produits alimentaires B2B, café, épices, produits agricoles, aliments transformés et private label.",
+
+    verticalFoodLink:
+      "Découvrir Food →",
+
+    verticalFurnitureText:
+      "Mobilier, fabrication contract, hospitality, composants, aménagement intérieur et production pour distributeurs.",
+
+    verticalFurnitureLink:
+      "Découvrir Furniture →",
+
+    verticalTextileText:
+      "Fabrication textile, vêtements, tissus, matériaux, OEM, private label et fournisseurs spécialisés.",
+
+    verticalTextileLink:
+      "Découvrir Textile →",
+
+    verticalMachineryText:
+      "Machines industrielles, automatisation, lignes de production, équipements de packaging et technologies de fabrication.",
+
+    verticalMachineryLink:
+      "Découvrir Machinery →",
+
+    presenceKicker:"Sur le terrain",
+
+    presenceTitle:
+      "L'Asie ne se travaille pas uniquement depuis une base de données.",
+
+    presenceLead:
+      "L'avantage consiste à pouvoir parler directement avec les fabricants, participer à des salons, comprendre qui se trouve derrière chaque entreprise et construire une relation avant de connecter acheteur et fournisseur.",
+
+    vietnamLabel:"Base opérationnelle",
+
+    vietnamText:
+      "Le Vietnam est notre première base opérationnelle en Asie et nous permet de développer directement des relations avec fabricants, associations et entreprises.",
+
+    vietnamPoint1:
+      "Présence physique et suivi local.",
+
+    vietnamPoint2:
+      "Participation à des salons B2B et événements professionnels.",
+
+    vietnamPoint3:
+      "Contact direct avec fabricants et équipes commerciales.",
+
+    vietnamPoint4:
+      "Capacité à développer des alternatives China+1 lorsqu'elles sont pertinentes.",
+
+    chinaLabel:"Activation fournisseurs",
+
+    chinaTitle:
+      "Chine + autres marchés asiatiques",
+
+    chinaText:
+      "Nous ne limitons pas un besoin de sourcing au pays où nous sommes physiquement présents. Si la Chine ou un autre marché peut proposer une meilleure alternative, nous y activons la recherche.",
+
+    chinaPoint1:
+      "Recherche guidée par le produit et les spécifications.",
+
+    chinaPoint2:
+      "Comparaison des alternatives lorsque cela est pertinent.",
+
+    chinaPoint3:
+      "Partenaires locaux lorsque la langue ou le marché le nécessitent.",
+
+    chinaPoint4:
+      "Salons internationaux lorsque la valeur de l'opportunité le justifie.",
+
+    briefKicker:"Pour commencer",
+
+    briefTitle:
+      "Plus votre besoin est précis, plus notre recherche sera efficace.",
+
+    briefText:
+      "Nous n'avons pas besoin d'un document de vingt pages. Quelques informations essentielles nous permettent de déterminer rapidement s'il est pertinent d'activer une recherche.",
+
+    briefCta:"Envoyer une Buyer Request →",
+
+    briefItem1:"Produit / composant",
+    briefItem2:"Spécifications",
+    briefItem3:"Volume approximatif",
+    briefItem4:"Volume d'achat annuel",
+    briefItem5:"Pays d'approvisionnement actuel",
+    briefItem6:"Certifications",
+    briefItem7:"Destination",
+    briefItem8:"Calendrier",
+    briefItem9:"Prix cible, si disponible",
+    briefItem10:"Ce qui doit être amélioré",
+
+    modelKicker:"Modèle simple",
+
+    modelTitle:
+      "Il faut d'abord qu'il existe une réelle opportunité commerciale.",
+
+    modelLead:
+      "Nous voulons réduire la friction pour l'acheteur sans devenir un service de sourcing gratuit et illimité.",
+
+    model1Pill:"Opportunités sélectionnées",
+
+    model1Title:
+      "Pas de frais commerciaux initiaux",
+
+    model1Text:
+      "Lorsque le besoin est suffisamment clair, le volume significatif et la capacité d'achat réelle, nous pouvons commencer la recherche sans facturer de frais commerciaux initiaux à l'acheteur.",
+
+    model2Pill:"Lorsqu'une opération existe",
+
+    model2Title:
+      "Rémunération commerciale",
+
+    model2Text:
+      "Lorsqu'une opportunité progresse, notre rémunération peut être structurée avec le fournisseur sélectionné dans le cadre d'un accord commercial clairement défini.",
+
+    model3Pill:"Projets complexes",
+
+    model3Title:
+      "Projet de sourcing dédié",
+
+    model3Text:
+      "Audits, études étendues, recherche de nombreux fabricants, inspections ou processus intensifs peuvent nécessiter un projet de sourcing ou de validation distinct.",
+
+    modelDisclaimer:
+      "Emprende360 ne garantit pas les économies, la disponibilité, les capacités de production, la qualité finale, les certifications, les commandes ou la conclusion des opérations. Chaque fournisseur et chaque transaction doivent être évalués individuellement.",
+
+    supplierKicker:"Fabricants asiatiques",
+
+    supplierTitle:
+      "Vous fabriquez en Asie et souhaitez développer le marché espagnol ?",
+
+    supplierText1:
+      "Notre modèle commence par une demande réelle. Lorsqu'un besoin compatible d'un acheteur existe, nous identifions des fabricants capables d'y répondre et structurons la relation commerciale.",
+
+    supplierText2:
+      "Nous pouvons également étudier certaines opportunités spécifiques de développement commercial en Espagne puis, progressivement, sur d'autres marchés hispanophones.",
+
+    supplierCta:"Nous contacter comme fabricant",
+
+    supplierBoxTitle:
+      "Nous recherchons des fabricants disposant de capacités réelles.",
+
+    supplierBoxText:
+      "Produits compétitifs, capacité export, communication professionnelle, certifications pertinentes lorsque nécessaire et volonté de construire des relations commerciales à long terme.",
+
+    finalTitle:
+      "Que doit trouver votre entreprise en Asie ?",
+
+    finalText:
+      "Si vous achetez déjà en Asie, recherchez un second fabricant ou souhaitez évaluer de nouvelles alternatives, dites-nous ce dont vous avez besoin. Nous vérifierons d'abord qu'il existe une opportunité claire à développer.",
+
+    finalCta:"Envoyer une demande de sourcing →",
+
+    footerPrivacy:"Confidentialité",
+    footerLegal:"Mentions légales",
+
+    footerDisclaimer:
+      "Emprende360 facilite la recherche, l'identification, le contact, l'évaluation initiale, le développement commercial et les relations potentielles entre acheteurs et fournisseurs. Emprende360 n'est pas un fabricant et ne garantit pas les prix, la qualité, la capacité, les certifications, les économies, les commandes, les ventes, l'approvisionnement ni des résultats spécifiques. La validation technique, contractuelle, financière et logistique de chaque opération relève de la responsabilité des parties concernées et, le cas échéant, de professionnels spécialisés."
+  }
+
+};
+
+
+/* =========================================================
+   LANGUAGE ENGINE
+========================================================= */
+
+function changeLanguage(lang){
+
+  if(!translations[lang]){
+    return;
+  }
+
+  const t = translations[lang];
+
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+
+    const key = element.getAttribute("data-i18n");
+
+    if(t[key] !== undefined){
+      element.textContent = t[key];
+    }
+
+  });
+
+
+  document.querySelectorAll(".lang-btn").forEach(button => {
+
+    button.classList.toggle(
+      "active",
+      button.dataset.lang === lang
+    );
+
+  });
+
+
+  document.title = t.title;
+
+  const description =
+    document.querySelector('meta[name="description"]');
+
+  if(description){
+    description.setAttribute(
+      "content",
+      t.description
+    );
+  }
+
+
+  try{
+    localStorage.setItem(
+      "emprende360AsiaLanguage",
+      lang
+    );
+  }catch(e){}
+
+}
+
+
+/* =========================================================
+   INITIAL LANGUAGE
+========================================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    let savedLanguage = "es";
+
+    try{
+
+      const stored =
+        localStorage.getItem(
+          "emprende360AsiaLanguage"
+        );
+
+      if(stored && translations[stored]){
+        savedLanguage = stored;
+      }
+
+    }catch(e){}
+
+    changeLanguage(savedLanguage);
+
+  }
+);
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+const observer = new IntersectionObserver(
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+        entry.target.classList.add("on");
+      }
+
+    });
+
+  },
+  {
+    threshold:0.10
+  }
+);
+
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
