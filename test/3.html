@@ -945,6 +945,191 @@
 
 
 
+
+    /* =========================================================
+       GOLDEN EN ACCIÓN · PRUEBA REAL
+    ========================================================= */
+
+    .proof{
+      background:
+        radial-gradient(circle at 12% 18%,rgba(24,167,255,.10),transparent 30%),
+        radial-gradient(circle at 88% 24%,rgba(244,197,66,.08),transparent 30%),
+        var(--deep);
+    }
+
+    .proof-shell{
+      display:grid;
+      grid-template-columns:.88fr 1.12fr;
+      gap:30px;
+      align-items:center;
+      margin-top:36px;
+      padding:34px;
+      border:1px solid rgba(244,197,66,.24);
+      border-radius:31px;
+      background:rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .proof-copy p{
+      color:#CBD5E1;
+      font-size:14px;
+      line-height:1.64;
+    }
+
+    .proof-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:20px;
+    }
+
+    .proof-event{
+      display:block;
+      overflow:hidden;
+      border:1px solid rgba(24,167,255,.24);
+      border-radius:27px;
+      background:
+        radial-gradient(circle at 16% 18%,rgba(24,167,255,.18),transparent 35%),
+        linear-gradient(135deg,#071522,#0B1728);
+      transition:transform .24s ease,border-color .24s ease;
+    }
+
+    .proof-event:hover{
+      transform:translateY(-4px);
+      border-color:rgba(244,197,66,.36);
+    }
+
+    .proof-visual{
+      min-height:250px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:13px;
+      padding:28px;
+      text-align:center;
+    }
+
+    .proof-play{
+      width:70px;
+      height:70px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:linear-gradient(135deg,#FDE047,#F4C542);
+      color:#06111F;
+      font-size:23px;
+      font-weight:950;
+      box-shadow:0 18px 45px rgba(0,0,0,.30);
+    }
+
+    .proof-visual b{
+      font-size:22px;
+      letter-spacing:-.025em;
+    }
+
+    .proof-visual span{
+      max-width:480px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.5;
+    }
+
+    .proof-body{
+      padding:22px;
+      border-top:1px solid rgba(255,255,255,.09);
+    }
+
+    .proof-body strong{
+      display:block;
+      font-size:16px;
+    }
+
+    .proof-body span{
+      display:block;
+      margin-top:5px;
+      color:#94A3B8;
+      font-size:11px;
+    }
+
+    .proof-stats{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:10px;
+      margin-top:22px;
+    }
+
+    .proof-stat{
+      padding:16px 12px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      text-align:center;
+    }
+
+    .proof-stat strong{
+      display:block;
+      color:#FDE68A;
+      font-size:24px;
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+
+    .proof-stat span{
+      display:block;
+      margin-top:7px;
+      color:#94A3B8;
+      font-size:9px;
+      line-height:1.35;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+    }
+
+    .proof-audience{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+      margin-top:14px;
+    }
+
+    .proof-audience span{
+      padding:7px 9px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:999px;
+      background:rgba(255,255,255,.035);
+      color:#CBD5E1;
+      font-size:9px;
+      font-weight:800;
+    }
+
+    .vertical.confirmed{
+      border-color:rgba(34,197,94,.24);
+      background:
+        radial-gradient(circle at 100% 0,rgba(34,197,94,.07),transparent 35%),
+        rgba(255,255,255,.04);
+    }
+
+    .slot.confirmed{
+      border-color:rgba(34,197,94,.28);
+      background:rgba(34,197,94,.08);
+      color:#86EFAC;
+    }
+
+    .vertical-partner-link{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-top:15px;
+      color:#FDE68A;
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .vertical-partner-link:hover{
+      color:#fff;
+    }
+
+
     /* =========================================================
        WHAT IS INCLUDED
     ========================================================= */
@@ -2238,7 +2423,8 @@
 
       .hero-grid,
       .advantage-shell,
-      .fit-shell{
+      .fit-shell,
+      .proof-shell{
 
         grid-template-columns:1fr;
 
@@ -2270,7 +2456,8 @@
 
 
       .metrics-grid,
-      .network-grid{
+      .network-grid,
+      .proof-stats{
 
         grid-template-columns:
           1fr 1fr;
@@ -2367,7 +2554,8 @@
       .vertical-grid,
       .metrics-grid,
       .network-grid,
-      .rules-grid{
+      .rules-grid,
+      .proof-stats{
 
         grid-template-columns:1fr;
 
@@ -2462,6 +2650,15 @@
         FAQ
       </button>
 
+      <a
+        class="nav-link"
+        href="https://emprende360.club/eventos"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Eventos
+      </a>
+
     </nav>
 
 
@@ -2498,7 +2695,7 @@
 
 
       <span class="pill">
-        Founding Q4 · 8 verticales · 8 plazas
+        Founding Q4 · 8 verticales · 4 confirmadas
       </span>
 
 
@@ -2579,89 +2776,54 @@
 
       <ul class="partner-list">
 
-
         <li>
-
-          <span class="check">
-            ✓
-          </span>
-
+          <span class="check">✓</span>
           <span>
-            <strong>3 meses de presencia recurrente</strong> · octubre, noviembre y diciembre.
+            <strong>3 meses de presencia recurrente en todos los eventos</strong> · Rondas y Foros durante octubre, noviembre y diciembre.
           </span>
-
         </li>
 
-
-
         <li>
-
-          <span class="check">
-            ✓
-          </span>
-
+          <span class="check">✓</span>
           <span>
-            <strong>3 Foros Ejecutivos</strong> · uno al mes alrededor de tu vertical.
+            <strong>3 Foros Ejecutivos</strong> · patrocinio y participación en uno al mes alrededor de tu vertical.
           </span>
-
         </li>
 
-
-
         <li>
-
-          <span class="check">
-            ✓
-          </span>
-
+          <span class="check">✓</span>
           <span>
             <strong>1 conversación propia</strong> · entrevista, caso, sesión o conversación especializada.
           </span>
-
         </li>
-
-
 
         <li>
-
-          <span class="check">
-            ✓
-          </span>
-
+          <span class="check">✓</span>
           <span>
-            <strong>Landing individual</strong> del Golden Partner y su Ventaja Emprende360.
+            <strong>Landing individual</strong> del Golden Partner y su negocio dentro de Emprende360.
           </span>
-
         </li>
-
-
 
         <li>
-
-          <span class="check">
-            ✓
-          </span>
-
+          <span class="check">✓</span>
           <span>
-            <strong>Presencia transversal</strong> en home, Eventos, página Golden y otros activos acordados.
+            <strong>Presencia transversal</strong> · home, cabecera del grupo, post fijado, página Golden, post semanal y otros activos acordados.
           </span>
-
         </li>
-
-
 
         <li>
-
-          <span class="check">
-            ✓
-          </span>
-
+          <span class="check">✓</span>
           <span>
-            <strong>Contenido, recaps y reporting</strong> durante Q4.
+            <strong>Invitación a ICP</strong> · activación de perfiles relevantes hacia los Foros Ejecutivos y la conversación propia.
           </span>
-
         </li>
 
+        <li>
+          <span class="check">✓</span>
+          <span>
+            <strong>Contenido grabado, distribución y reporting</strong> durante Q4.
+          </span>
+        </li>
 
       </ul>
 
@@ -2813,6 +2975,164 @@
 
 
 <!-- =========================================================
+     GOLDEN EN ACCIÓN · PRUEBA REAL
+========================================================= -->
+
+<section class="section proof">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+
+      <span class="kicker">
+        Emprende360 en acción
+      </span>
+
+      <h2>
+        Antes de ocupar una vertical, mira el tipo de conversación que ya estamos generando.
+      </h2>
+
+      <p class="lead">
+        Golden Partners se apoya en una actividad real de Rondas, Foros y conversaciones B2B. Esta Ronda de Alianzas es un ejemplo de cómo se crea contexto, interacción y continuidad alrededor de perfiles profesionales.
+      </p>
+
+    </div>
+
+
+    <div class="proof-shell reveal">
+
+      <div class="proof-copy">
+
+        <span class="pill">
+          Ronda de Alianzas B2B · ejemplo real
+        </span>
+
+        <h3 style="margin-top:14px;font-size:30px;letter-spacing:-.035em;">
+          La conversación ya existe. El Golden entra con una posición clara dentro de ella.
+        </h3>
+
+        <p>
+          En esta sesión, cinco perfiles B2B compartieron actividad, buyers, mercados y posibles complementariedades. El evento quedó disponible en LinkedIn con el vídeo completo y la interacción pública de la comunidad.
+        </p>
+
+        <p>
+          No presentamos estos datos como promesa de resultados futuros. Sirven para mostrar una actividad real y el tipo de ecosistema alrededor del que se construye Golden Partners.
+        </p>
+
+        <div class="proof-actions">
+
+          <a
+            class="btn btn-primary"
+            href="https://www.linkedin.com/events/7496395870095998976/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver Ronda y vídeo en LinkedIn →
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="https://emprende360.club/eventos"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver agenda de eventos
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <a
+          class="proof-event"
+          href="https://www.linkedin.com/events/7496395870095998976/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Ver Ronda de Alianzas B2B en LinkedIn"
+        >
+
+          <div class="proof-visual">
+
+            <div class="proof-play">
+              ▶
+            </div>
+
+            <b>
+              Ronda de Alianzas B2B
+            </b>
+
+            <span>
+              Abre el evento ya realizado en LinkedIn para ver el vídeo completo, participantes e interacción pública.
+            </span>
+
+          </div>
+
+          <div class="proof-body">
+
+            <strong>
+              Cinco perfiles. Conversación. Complementariedad.
+            </strong>
+
+            <span>
+              Evento real de Emprende360 · vídeo disponible en LinkedIn
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <div class="proof-stats">
+
+          <div class="proof-stat">
+            <strong>2.070</strong>
+            <span>Impresiones</span>
+          </div>
+
+          <div class="proof-stat">
+            <strong>1.046</strong>
+            <span>Vídeo views</span>
+          </div>
+
+          <div class="proof-stat">
+            <strong>120</strong>
+            <span>Comentarios</span>
+          </div>
+
+          <div class="proof-stat">
+            <strong>43</strong>
+            <span>Reacciones</span>
+          </div>
+
+          <div class="proof-stat">
+            <strong>18</strong>
+            <span>Republicaciones</span>
+          </div>
+
+        </div>
+
+
+        <div class="proof-audience">
+          <span>28% Senior</span>
+          <span>24% empresas de 2–10 empleados</span>
+          <span>17% Business Consulting & Services</span>
+          <span>15% Greater Madrid</span>
+          <span>11% Founder</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
      QUÉ INCLUYE
 ========================================================= -->
 
@@ -2846,113 +3166,61 @@
 
     <div class="inventory-grid reveal">
 
-
       <article class="inventory-card">
-
-        <div class="inventory-num">
-          3
-        </div>
-
-        <h3>
-          Foros Ejecutivos
-        </h3>
-
+        <div class="inventory-num">3</div>
+        <h3>Meses en todos los eventos</h3>
         <p>
-          Uno al mes alrededor de la vertical, con especialistas y perspectivas complementarias.
+          Presencia recurrente durante octubre, noviembre y diciembre en Rondas de Alianzas y Foros de Emprende360.
         </p>
-
       </article>
 
-
-
       <article class="inventory-card">
-
-        <div class="inventory-num">
-          1
-        </div>
-
-        <h3>
-          Conversación propia
-        </h3>
-
+        <div class="inventory-num">3</div>
+        <h3>Foros Ejecutivos</h3>
         <p>
-          Entrevista, caso, sesión o conversación construida con el Golden Partner alrededor de un tema útil para su mercado.
+          Patrocinio y participación en un Foro al mes alrededor de tu vertical, manteniendo Emprende360 el criterio editorial y la selección de perfiles.
         </p>
-
       </article>
 
-
-
       <article class="inventory-card">
-
-        <div class="inventory-icon">
-          ↗
-        </div>
-
-        <h3>
-          Landing individual
-        </h3>
-
+        <div class="inventory-num">1</div>
+        <h3>Conversación propia</h3>
         <p>
-          Página específica del Partner con propuesta, buyer, soluciones, Ventaja Emprende360, contenidos y CTA directo.
+          Entrevista, caso, sesión o conversación especializada construida alrededor de tu negocio y de un tema útil para tu buyer.
         </p>
-
       </article>
 
-
-
       <article class="inventory-card">
-
-        <div class="inventory-icon">
-          🤝
-        </div>
-
-        <h3>
-          Presencia transversal
-        </h3>
-
+        <div class="inventory-icon">↗</div>
+        <h3>Landing individual</h3>
         <p>
-          El Golden puede aparecer en Rondas, conversaciones y otros espacios del ecosistema cuando exista relación real con su mercado.
+          Página específica del Golden Partner y su negocio dentro de Emprende360, con propuesta, buyer, soluciones, contenidos y CTA.
         </p>
-
       </article>
 
-
-
       <article class="inventory-card">
-
-        <div class="inventory-icon">
-          ▶
-        </div>
-
-        <h3>
-          Contenido y recaps
-        </h3>
-
+        <div class="inventory-icon">★</div>
+        <h3>Presencia transversal</h3>
         <p>
-          Publicaciones, clips, recaps u otros activos derivados de las conversaciones cuando corresponda.
+          Home, cabecera del grupo, post fijado, página Golden, post semanal y otros activos de Emprende360 acordados durante Q4.
         </p>
-
       </article>
 
-
-
       <article class="inventory-card">
-
-        <div class="inventory-icon">
-          📊
-        </div>
-
-        <h3>
-          Reporting
-        </h3>
-
+        <div class="inventory-icon">🎯</div>
+        <h3>Invitación a ICP</h3>
         <p>
-          Seguimiento de audiencia, participación, contenido, perfiles, relaciones y señales verificables durante Q4.
+          Activación e invitación de perfiles relevantes hacia los Foros Ejecutivos de la vertical y hacia tu conversación o evento propio.
         </p>
-
       </article>
 
+      <article class="inventory-card">
+        <div class="inventory-icon">▶</div>
+        <h3>Contenido, distribución y reporting</h3>
+        <p>
+          Contenido grabado, publicaciones y distribución de los activos generados, junto con seguimiento y reporting verificable durante Q4.
+        </p>
+      </article>
 
     </div>
 
@@ -2960,7 +3228,6 @@
   </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -2985,7 +3252,7 @@
 
 
       <p class="lead">
-        Los Golden Partners forman parte visible de la arquitectura de Emprende360 durante Q4.
+        Los Golden Partners forman parte visible de la arquitectura de Emprende360 durante Q4, tanto en eventos como en activos digitales y publicaciones recurrentes.
       </p>
 
     </div>
@@ -3023,11 +3290,11 @@
           </div>
 
           <b>
-            Página de Eventos
+            Todos los eventos
           </b>
 
           <span>
-            Presencia visible dentro del ecosistema de conversaciones de Emprende360.
+            Presencia recurrente en Rondas y Foros durante octubre, noviembre y diciembre, con patrocinio visible donde corresponda.
           </span>
 
         </article>
@@ -3077,11 +3344,11 @@
           </div>
 
           <b>
-            Conversaciones
+            Grupo + publicaciones
           </b>
 
           <span>
-            Presencia contextual dentro de contenidos y conversaciones acordadas durante Q4.
+            Presencia en cabecera del grupo, post fijado, post semanal y otros activos acordados para mantener continuidad durante Q4.
           </span>
 
         </article>
@@ -3286,7 +3553,7 @@
           </h3>
 
           <p>
-            Incorporación como Golden Partner, primera presencia de la vertical, primer Foro y activación de los activos digitales.
+            Incorporación como Golden Partner, presencia en Rondas y Foros, primer Foro patrocinado, activación de la landing y primeros activos de visibilidad.
           </p>
 
         </article>
@@ -3304,7 +3571,7 @@
           </h3>
 
           <p>
-            Segundo Foro, conversación propia, contenidos, Ventaja Emprende360 y seguimiento de las señales relevantes.
+            Presencia continua en eventos, segundo Foro patrocinado, conversación propia o activación acordada, post semanal, contenidos e invitación a ICP.
           </p>
 
         </article>
@@ -3322,7 +3589,7 @@
           </h3>
 
           <p>
-            Tercer Foro, nuevos contenidos, recap de Q4, reporting y revisión de conversaciones y siguientes pasos.
+            Presencia continua en eventos, tercer Foro patrocinado, nuevos contenidos, distribución, recap de Q4, reporting y revisión de siguientes pasos.
           </p>
 
         </article>
@@ -3370,7 +3637,7 @@
 
 
       <p class="lead">
-        Cada Golden ocupará una categoría propia y tendrá presencia visible con su logo y su página individual.
+        Cada Golden ocupa una categoría propia y tiene presencia visible con su logo y su landing individual. Las plazas ya confirmadas aparecen identificadas a continuación.
       </p>
 
     </div>
@@ -3386,7 +3653,7 @@
            <img src="/img/golden/empresa.png" alt="Empresa">
       ====================================================== -->
 
-      <article class="vertical">
+      <article class="vertical confirmed">
 
 
         <div class="vertical-top">
@@ -3394,9 +3661,9 @@
 
           <div class="vertical-brand">
 
-            <div class="vertical-logo">
-              LOGO
-            </div>
+            <a class="vertical-logo" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer" aria-label="Uniasser Consulting">
+              <img src="https://emprende360.club/uniasser.webp" alt="Uniasser Consulting">
+            </a>
 
             <div class="vertical-icon">
               🤖
@@ -3405,8 +3672,8 @@
           </div>
 
 
-          <span class="slot">
-            Plaza Q4 abierta
+          <span class="slot confirmed">
+            Confirmado Q4
           </span>
 
 
@@ -3438,9 +3705,9 @@
         </div>
 
 
-        <div class="vertical-partner">
-          Golden Partner · Próximamente
-        </div>
+        <a class="vertical-partner-link" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer">
+          Golden Partner · Uniasser Consulting →
+        </a>
 
 
       </article>
@@ -3448,16 +3715,16 @@
 
 
       <!-- 2 -->
-      <article class="vertical">
+      <article class="vertical confirmed">
 
 
         <div class="vertical-top">
 
           <div class="vertical-brand">
 
-            <div class="vertical-logo">
-              LOGO
-            </div>
+            <a class="vertical-logo" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer" aria-label="Salesnite">
+              <img src="https://emprende360.club/salesnite.png" alt="Salesnite">
+            </a>
 
             <div class="vertical-icon">
               📈
@@ -3466,8 +3733,8 @@
           </div>
 
 
-          <span class="slot">
-            Plaza Q4 abierta
+          <span class="slot confirmed">
+            Confirmado Q4
           </span>
 
         </div>
@@ -3498,9 +3765,9 @@
         </div>
 
 
-        <div class="vertical-partner">
-          Golden Partner · Próximamente
-        </div>
+        <a class="vertical-partner-link" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer">
+          Golden Partner · Salesnite →
+        </a>
 
 
       </article>
@@ -3508,16 +3775,16 @@
 
 
       <!-- 3 -->
-      <article class="vertical">
+      <article class="vertical confirmed">
 
 
         <div class="vertical-top">
 
           <div class="vertical-brand">
 
-            <div class="vertical-logo">
-              LOGO
-            </div>
+            <a class="vertical-logo" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer" aria-label="Nakama Kapital">
+              <img src="https://emprende360.club/nakamakapital.png" alt="Nakama Kapital">
+            </a>
 
             <div class="vertical-icon">
               💰
@@ -3526,8 +3793,8 @@
           </div>
 
 
-          <span class="slot">
-            Plaza Q4 abierta
+          <span class="slot confirmed">
+            Confirmado Q4
           </span>
 
         </div>
@@ -3558,9 +3825,9 @@
         </div>
 
 
-        <div class="vertical-partner">
-          Golden Partner · Próximamente
-        </div>
+        <a class="vertical-partner-link" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer">
+          Golden Partner · Nakama Kapital →
+        </a>
 
 
       </article>
@@ -3628,16 +3895,16 @@
 
 
       <!-- 5 -->
-      <article class="vertical">
+      <article class="vertical confirmed">
 
 
         <div class="vertical-top">
 
           <div class="vertical-brand">
 
-            <div class="vertical-logo">
-              LOGO
-            </div>
+            <a class="vertical-logo" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer" aria-label="L de Líder">
+              <img src="https://emprende360.club/ldelider.png" alt="L de Líder">
+            </a>
 
             <div class="vertical-icon">
               🧭
@@ -3646,8 +3913,8 @@
           </div>
 
 
-          <span class="slot">
-            Plaza Q4 abierta
+          <span class="slot confirmed">
+            Confirmado Q4
           </span>
 
         </div>
@@ -3678,9 +3945,9 @@
         </div>
 
 
-        <div class="vertical-partner">
-          Golden Partner · Próximamente
-        </div>
+        <a class="vertical-partner-link" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer">
+          Golden Partner · L de Líder →
+        </a>
 
 
       </article>
@@ -3873,7 +4140,7 @@
       class="small center reveal"
       style="margin-top:20px;"
     >
-      Al confirmar una plaza, el logo y nombre del Golden Partner sustituirán el estado “Próximamente” y enlazarán con su landing individual.
+      Las verticales confirmadas muestran ya el logo y nombre del Golden Partner y enlazan con su landing individual. Las restantes permanecen abiertas mientras exista encaje y disponibilidad.
     </p>
 
 
@@ -4136,7 +4403,7 @@
           </li>
 
           <li>
-            ✓ Presencia recurrente en los activos y conversaciones acordados.
+            ✓ Presencia recurrente en Rondas, Foros y activos acordados durante Q4.
           </li>
 
           <li>
@@ -4148,7 +4415,7 @@
           </li>
 
           <li>
-            ✓ Tres Foros Ejecutivos alrededor de la vertical.
+            ✓ Patrocinio y participación en tres Foros Ejecutivos, uno al mes alrededor de la vertical.
           </li>
 
           <li>
@@ -4156,11 +4423,11 @@
           </li>
 
           <li>
-            ✓ Contenido y recaps cuando corresponda.
+            ✓ Contenido grabado, distribución, publicaciones y recaps cuando corresponda.
           </li>
 
           <li>
-            ✓ Reporting de actividad y señales reales.
+            ✓ Invitación a ICP y reporting de actividad y señales reales.
           </li>
 
           <li>
@@ -4185,7 +4452,7 @@
         <ul>
 
           <li>
-            ✕ Una plaza automática como experto en todos los Foros.
+            ✕ Participación automática como experto fuera de los tres Foros acordados de su vertical.
           </li>
 
           <li>
@@ -4437,7 +4704,7 @@
         </summary>
 
         <p>
-          No. Los Foros mantienen criterio editorial y están construidos alrededor de la vertical. El Golden aparece como empresa principal de la categoría, pero las perspectivas y expertos se seleccionan buscando calidad y complementariedad.
+          No son eventos exclusivos de una sola empresa. El Golden patrocina y participa en un Foro al mes alrededor de su vertical, mientras Emprende360 mantiene el criterio editorial, el enfoque de la conversación y la selección de perfiles complementarios.
         </p>
 
       </details>
@@ -4447,11 +4714,11 @@
       <details>
 
         <summary>
-          ¿Ser Golden Partner garantiza participar como experto?
+          ¿Ser Golden Partner incluye participación en los Foros?
         </summary>
 
         <p>
-          No. Pagar no compra autoridad editorial. La participación como experto depende del tema, experiencia y complementariedad. El Golden sí dispone de su propia conversación acordada durante Q4.
+          Sí. Incluye patrocinio y participación en tres Foros Ejecutivos durante Q4, uno al mes alrededor de la vertical. Esa participación no implica control editorial ni exclusividad sobre el contenido del Foro. Además, el Golden dispone de una conversación propia acordada durante el trimestre.
         </p>
 
       </details>
@@ -4480,6 +4747,20 @@
 
         <p>
           Cuando tenga sentido, el Golden puede ofrecer un beneficio adicional para personas que participen en directo en determinadas conversaciones.
+        </p>
+
+      </details>
+
+
+
+      <details>
+
+        <summary>
+          ¿Qué significa “invitación a ICP”?
+        </summary>
+
+        <p>
+          Emprende360 activa e invita perfiles que encajan con el buyer objetivo hacia los Foros de la vertical y la conversación propia. Es una acción de activación relacional, no una promesa de asistencia, reunión o conversión.
         </p>
 
       </details>
