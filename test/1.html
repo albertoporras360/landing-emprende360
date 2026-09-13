@@ -835,6 +835,65 @@
       border:0;
     }
 
+    .video-frame-link{
+      display:block;
+      color:inherit;
+    }
+
+    .video-frame-link .video-frame{
+      transition:
+        transform .24s ease,
+        filter .24s ease;
+    }
+
+    .video-frame-link:hover .video-frame{
+      transform:scale(1.008);
+      filter:brightness(1.06);
+    }
+
+    .ronda-stats{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:8px;
+      margin-top:18px;
+    }
+
+    .ronda-stat{
+      padding:11px 9px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:14px;
+      background:rgba(2,6,23,.30);
+      text-align:center;
+    }
+
+    .ronda-stat strong{
+      display:block;
+      color:#fff;
+      font-size:17px;
+      line-height:1;
+      letter-spacing:-.035em;
+    }
+
+    .ronda-stat span{
+      display:block;
+      margin-top:5px;
+      color:#94A3B8;
+      font-size:8px;
+      font-weight:800;
+      line-height:1.25;
+      text-transform:uppercase;
+      letter-spacing:.045em;
+    }
+
+    .ronda-audience{
+      margin-top:13px;
+      padding-top:13px;
+      border-top:1px solid rgba(255,255,255,.09);
+      color:#64748B;
+      font-size:9px;
+      line-height:1.55;
+    }
+
     .video-placeholder{
       position:absolute;
       inset:0;
@@ -1123,6 +1182,44 @@
       font-weight:950;
     }
 
+    .golden-logo{
+      width:72px;
+      height:72px;
+
+      display:grid;
+      place-items:center;
+
+      flex-shrink:0;
+
+      padding:10px;
+
+      overflow:hidden;
+
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:18px;
+
+      background:#fff;
+
+      box-shadow:
+        0 14px 34px rgba(0,0,0,.20);
+
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease;
+    }
+
+    .golden-logo:hover{
+      transform:translateY(-2px);
+      box-shadow:
+        0 18px 42px rgba(0,0,0,.28);
+    }
+
+    .golden-logo img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
     .golden-slot{
       display:inline-flex;
 
@@ -1143,6 +1240,21 @@
 
       letter-spacing:.08em;
       text-transform:uppercase;
+    }
+
+    .golden-slot.confirmed{
+      border-color:rgba(34,197,94,.27);
+      background:rgba(34,197,94,.08);
+      color:#86EFAC;
+    }
+
+    .golden-company a{
+      color:#fff;
+      font-weight:900;
+    }
+
+    .golden-company a:hover{
+      color:#FDE68A;
     }
 
     .golden-card h3{
@@ -1824,6 +1936,10 @@
         grid-template-columns:1fr;
       }
 
+      .ronda-stats{
+        grid-template-columns:repeat(3,1fr);
+      }
+
     }
 
 
@@ -1911,6 +2027,15 @@
         min-height:auto;
       }
 
+      .ronda-stats{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .golden-logo{
+        width:64px;
+        height:64px;
+      }
+
       .product-card h3{
         font-size:27px;
       }
@@ -1963,7 +2088,10 @@
 
     <nav class="nav-links">
 
-      <a href="https://emprende360.club/eventos">
+      <a href="https://emprende360.club/eventos"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Eventos
       </a>
 
@@ -1971,7 +2099,10 @@
         Golden Partners
       </a>
 
-      <a href="https://emprende360.club/impulsob2b">
+      <a href="https://emprende360.club/impulsob2b"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Impulso B2B
       </a>
 
@@ -1981,7 +2112,10 @@
     <a
       class="btn btn-primary"
       href="https://emprende360.club/eventos"
-    >
+    
+        target="_blank"
+        rel="noopener noreferrer"
+      >
       Ver próximos eventos
     </a>
 
@@ -2041,7 +2175,10 @@
         <a
           class="btn btn-primary"
           href="https://emprende360.club/eventos"
-        >
+        
+        target="_blank"
+        rel="noopener noreferrer"
+      >
           Ver próximas conversaciones →
         </a>
 
@@ -2154,6 +2291,9 @@
       <a
         class="btn btn-primary"
         href="https://emprende360.club/eventos"
+      
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Explorar agenda →
       </a>
@@ -2299,57 +2439,47 @@
 
 
       <!-- =====================================================
-           RONDA DE ALIANZAS · VÍDEO PRINCIPAL
+           RONDA DE ALIANZAS · EJEMPLO REAL EN LINKEDIN
       ====================================================== -->
 
       <article class="action-video">
 
 
-        <div class="video-frame">
+        <a
+          class="video-frame-link"
+          href="https://www.linkedin.com/events/7496395870095998976/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Ver Ronda de Alianzas B2B y vídeo en LinkedIn"
+        >
 
+          <div class="video-frame">
 
-          <!-- ==================================================
-               CUANDO TENGAS EL VÍDEO REAL:
+            <div class="video-placeholder">
 
-               1. Elimina .video-placeholder
-               2. Descomenta este iframe
-               3. Cambia VIDEO_ID_RONDA por el ID de YouTube
+              <div class="video-play">
+                ▶
+              </div>
 
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_RONDA"
-            title="Ronda de Alianzas B2B · Emprende360"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+              <b>
+                Ronda de Alianzas B2B
+              </b>
 
-          =================================================== -->
+              <span>
+                Ver el evento y la grabación de esta Ronda real directamente en LinkedIn.
+              </span>
 
-
-          <div class="video-placeholder">
-
-            <div class="video-play">
-              ▶
             </div>
-
-            <b>
-              Ronda de Alianzas B2B
-            </b>
-
-            <span>
-              Inserta aquí una Ronda real de Emprende360. Este será uno de los mejores ejemplos para que un visitante entienda inmediatamente la dinámica.
-            </span>
 
           </div>
 
-
-        </div>
+        </a>
 
 
         <div class="action-video-body">
 
           <span class="action-label">
-            Ronda real
+            Ronda real · LinkedIn
           </span>
 
           <h3>
@@ -2359,6 +2489,53 @@
           <p>
             Qué hace cada participante, qué buyer busca, qué puede aportar y dónde puede existir una relación con recorrido.
           </p>
+
+
+          <div class="ronda-stats">
+
+            <div class="ronda-stat">
+              <strong>2.070</strong>
+              <span>Impresiones</span>
+            </div>
+
+            <div class="ronda-stat">
+              <strong>1.046</strong>
+              <span>Visualizaciones de vídeo</span>
+            </div>
+
+            <div class="ronda-stat">
+              <strong>43</strong>
+              <span>Reacciones</span>
+            </div>
+
+            <div class="ronda-stat">
+              <strong>120</strong>
+              <span>Comentarios</span>
+            </div>
+
+            <div class="ronda-stat">
+              <strong>18</strong>
+              <span>Republicaciones</span>
+            </div>
+
+          </div>
+
+
+          <div class="ronda-audience">
+            Datos de audiencia mostrados por LinkedIn para esta publicación/evento:
+            28% Senior · 11% Founder · 24% empresas de 2–10 empleados ·
+            17% Business Consulting and Services · 15% Greater Madrid Metropolitan Area.
+          </div>
+
+
+          <a
+            class="action-link"
+            href="https://www.linkedin.com/events/7496395870095998976/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver evento y vídeo en LinkedIn →
+          </a>
 
         </div>
 
@@ -2404,7 +2581,10 @@
         <a
           class="action-card"
           href="https://emprende360.club/eventos"
-        >
+        
+        target="_blank"
+        rel="noopener noreferrer"
+      >
 
           <div class="action-card-icon">
             ◉
@@ -2437,6 +2617,9 @@
       <a
         class="btn btn-primary"
         href="https://emprende360.club/eventos"
+      
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Ver próximos eventos →
       </a>
@@ -2479,12 +2662,12 @@
 
 
       <h2>
-        Ocho áreas estratégicas. Una empresa de referencia por vertical.
+        Ocho áreas estratégicas. Un Golden Partner principal por vertical.
       </h2>
 
 
       <p class="lead">
-        Los Golden Partners acompañan durante Q4 las conversaciones de Emprende360 alrededor de mercados donde existe un buyer, un problema y una razón real para estar presentes.
+        Los Golden Partners acompañan durante Q4 las conversaciones de Emprende360 alrededor de mercados donde existe un buyer, un problema y una razón real para estar presentes. Cuatro verticales ya cuentan con Golden Partner confirmado.
       </p>
 
 
@@ -2499,17 +2682,27 @@
     <div class="golden-grid reveal">
 
 
-      <!-- GOLDEN 1 -->
+      <!-- GOLDEN 1 · CONFIRMADO -->
       <article class="golden-card">
 
         <div class="golden-top">
 
-          <div class="golden-icon">
-            🤖
-          </div>
+          <a
+            class="golden-logo"
+            href="https://emprende360.club/golden/ia-tecnologia"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Uniasser Consulting · Golden Partner IA y Tecnología"
+          >
+            <img
+              src="https://emprende360.club/uniasser.webp"
+              alt="Uniasser Consulting"
+              loading="lazy"
+            />
+          </a>
 
-          <span class="golden-slot">
-            Plaza Q4 abierta
+          <span class="golden-slot confirmed">
+            Confirmado Q4
           </span>
 
         </div>
@@ -2526,31 +2719,49 @@
           <b>
             Golden Partner
           </b>
-          Próximamente
+          <a
+            href="https://emprende360.club/golden/ia-tecnologia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Uniasser Consulting
+          </a>
         </div>
 
         <a
           class="golden-link"
           href="https://emprende360.club/golden/ia-tecnologia"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Ver vertical →
+          Ver Golden Partner →
         </a>
 
       </article>
 
 
 
-      <!-- GOLDEN 2 -->
+      <!-- GOLDEN 2 · CONFIRMADO -->
       <article class="golden-card">
 
         <div class="golden-top">
 
-          <div class="golden-icon">
-            📈
-          </div>
+          <a
+            class="golden-logo"
+            href="https://emprende360.club/golden/revenue-gtm"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Salesnite · Golden Partner Ventas, Revenue y GTM"
+          >
+            <img
+              src="https://emprende360.club/salesnite.png"
+              alt="Salesnite"
+              loading="lazy"
+            />
+          </a>
 
-          <span class="golden-slot">
-            Plaza Q4 abierta
+          <span class="golden-slot confirmed">
+            Confirmado Q4
           </span>
 
         </div>
@@ -2567,31 +2778,49 @@
           <b>
             Golden Partner
           </b>
-          Próximamente
+          <a
+            href="https://emprende360.club/golden/revenue-gtm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Salesnite
+          </a>
         </div>
 
         <a
           class="golden-link"
           href="https://emprende360.club/golden/revenue-gtm"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Ver vertical →
+          Ver Golden Partner →
         </a>
 
       </article>
 
 
 
-      <!-- GOLDEN 3 -->
+      <!-- GOLDEN 3 · CONFIRMADO -->
       <article class="golden-card">
 
         <div class="golden-top">
 
-          <div class="golden-icon">
-            💰
-          </div>
+          <a
+            class="golden-logo"
+            href="https://emprende360.club/golden/corporate-finance"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Nakama Kapital · Golden Partner Corporate Finance"
+          >
+            <img
+              src="https://emprende360.club/nakamakapital.png"
+              alt="Nakama Kapital"
+              loading="lazy"
+            />
+          </a>
 
-          <span class="golden-slot">
-            Plaza Q4 abierta
+          <span class="golden-slot confirmed">
+            Confirmado Q4
           </span>
 
         </div>
@@ -2608,21 +2837,29 @@
           <b>
             Golden Partner
           </b>
-          Próximamente
+          <a
+            href="https://emprende360.club/golden/corporate-finance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nakama Kapital
+          </a>
         </div>
 
         <a
           class="golden-link"
           href="https://emprende360.club/golden/corporate-finance"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Ver vertical →
+          Ver Golden Partner →
         </a>
 
       </article>
 
 
 
-      <!-- GOLDEN 4 -->
+      <!-- GOLDEN 4 · ABIERTA -->
       <article class="golden-card">
 
         <div class="golden-top">
@@ -2654,26 +2891,38 @@
 
         <a
           class="golden-link"
-          href="https://emprende360.club/golden/talento"
+          href="https://emprende360.club/golden-partners"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Ver vertical →
+          Valorar esta vertical →
         </a>
 
       </article>
 
 
 
-      <!-- GOLDEN 5 -->
+      <!-- GOLDEN 5 · CONFIRMADO -->
       <article class="golden-card">
 
         <div class="golden-top">
 
-          <div class="golden-icon">
-            🧭
-          </div>
+          <a
+            class="golden-logo"
+            href="https://emprende360.club/golden/liderazgo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="L de Líder · Golden Partner Liderazgo"
+          >
+            <img
+              src="https://emprende360.club/ldelider.png"
+              alt="L de Líder"
+              loading="lazy"
+            />
+          </a>
 
-          <span class="golden-slot">
-            Plaza Q4 abierta
+          <span class="golden-slot confirmed">
+            Confirmado Q4
           </span>
 
         </div>
@@ -2690,21 +2939,29 @@
           <b>
             Golden Partner
           </b>
-          Próximamente
+          <a
+            href="https://emprende360.club/golden/liderazgo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            L de Líder
+          </a>
         </div>
 
         <a
           class="golden-link"
           href="https://emprende360.club/golden/liderazgo"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Ver vertical →
+          Ver Golden Partner →
         </a>
 
       </article>
 
 
 
-      <!-- GOLDEN 6 -->
+      <!-- GOLDEN 6 · ABIERTA -->
       <article class="golden-card">
 
         <div class="golden-top">
@@ -2736,16 +2993,18 @@
 
         <a
           class="golden-link"
-          href="https://emprende360.club/golden/branding-marketing"
+          href="https://emprende360.club/golden-partners"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Ver vertical →
+          Valorar esta vertical →
         </a>
 
       </article>
 
 
 
-      <!-- GOLDEN 7 -->
+      <!-- GOLDEN 7 · ABIERTA -->
       <article class="golden-card">
 
         <div class="golden-top">
@@ -2777,16 +3036,18 @@
 
         <a
           class="golden-link"
-          href="https://emprende360.club/golden/emprendimiento"
+          href="https://emprende360.club/golden-partners"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Ver vertical →
+          Valorar esta vertical →
         </a>
 
       </article>
 
 
 
-      <!-- GOLDEN 8 -->
+      <!-- GOLDEN 8 · ABIERTA -->
       <article class="golden-card">
 
         <div class="golden-top">
@@ -2818,9 +3079,11 @@
 
         <a
           class="golden-link"
-          href="https://emprende360.club/golden/founders-inversion"
+          href="https://emprende360.club/golden-partners"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Ver vertical →
+          Valorar esta vertical →
         </a>
 
       </article>
@@ -2835,6 +3098,9 @@
       <a
         class="btn btn-primary"
         href="https://emprende360.club/golden-partners"
+      
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Conocer Golden Partners →
       </a>
@@ -2842,6 +3108,9 @@
       <a
         class="btn btn-secondary"
         href="https://emprende360.club/golden-partners"
+      
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Quiero valorar una vertical
       </a>
@@ -3104,7 +3373,10 @@
             <a
               class="btn btn-primary"
               href="https://emprende360.club/impulsob2b"
-            >
+            
+        target="_blank"
+        rel="noopener noreferrer"
+      >
               Conocer Impulso B2B →
             </a>
 
@@ -3168,7 +3440,7 @@
           <li>
             <span class="check">✓</span>
             <span>
-              Foros, conversación propia y activaciones acordadas.
+              Foros, conversación propia y presencia transversal acordada.
             </span>
           </li>
 
@@ -3209,7 +3481,10 @@
             <a
               class="btn btn-blue"
               href="https://emprende360.club/golden-partners"
-            >
+            
+        target="_blank"
+        rel="noopener noreferrer"
+      >
               Explorar Golden Partners →
             </a>
 
@@ -3309,13 +3584,13 @@
       <article class="person-card">
 
         <div class="person-avatar">
-          J
+          JI
         </div>
 
         <div>
 
           <b>
-            Jorge
+            Jorge Iparraguirre
           </b>
 
           <span class="person-role">
@@ -3325,6 +3600,15 @@
           <p>
             Apoyo en la conducción de conversaciones, Foros y Rondas para que exista más interacción y menos formato de ponencia.
           </p>
+
+          <a
+            class="people-link"
+            href="https://www.linkedin.com/in/jorgeiparraguirre/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn →
+          </a>
 
         </div>
 
@@ -3378,7 +3662,10 @@
         <a
           class="btn btn-primary"
           href="https://emprende360.club/eventos"
-        >
+        
+        target="_blank"
+        rel="noopener noreferrer"
+      >
           Ver próximos eventos →
         </a>
 
@@ -3398,7 +3685,10 @@
 
         ¿Representas a una empresa B2B?
 
-        <a href="https://emprende360.club/golden-partners">
+        <a href="https://emprende360.club/golden-partners"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
           Explora Golden Partners →
         </a>
 
@@ -3406,7 +3696,10 @@
 
         ¿Quieres activar tu propio mercado?
 
-        <a href="https://emprende360.club/impulsob2b">
+        <a href="https://emprende360.club/impulsob2b"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
           Conoce Impulso B2B →
         </a>
 
@@ -3450,15 +3743,24 @@
 
     <div class="footer-links">
 
-      <a href="https://emprende360.club/eventos">
+      <a href="https://emprende360.club/eventos"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Eventos
       </a>
 
-      <a href="https://emprende360.club/golden-partners">
+      <a href="https://emprende360.club/golden-partners"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Golden Partners
       </a>
 
-      <a href="https://emprende360.club/impulsob2b">
+      <a href="https://emprende360.club/impulsob2b"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Impulso B2B
       </a>
 
@@ -3470,11 +3772,25 @@
         Alberto Porras
       </a>
 
-      <a href="https://emprende360.club/privacidad">
+      <a
+        href="https://www.linkedin.com/in/jorgeiparraguirre/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Jorge Iparraguirre
+      </a>
+
+      <a href="https://emprende360.club/privacidad"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Privacidad
       </a>
 
-      <a href="https://emprende360.club/aviso-legal">
+      <a href="https://emprende360.club/aviso-legal"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Aviso legal
       </a>
 
