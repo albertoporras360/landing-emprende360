@@ -19,6 +19,9 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://emprende360.club/asia" />
+  <meta property="og:image" content="https://emprende360.club/asia/im8.jpeg" />
+  <meta property="og:title" content="Emprende360 Asia · Sourcing & Commercial Development" />
+  <meta property="og:description" content="Conectamos necesidades reales de compra en España y mercados hispanohablantes con fabricantes y proveedores en Asia." />
   <meta name="theme-color" content="#020617" />
 
   <style>
@@ -833,6 +836,244 @@
       line-height:1.58;
     }
 
+
+    /* FIELD / GALLERY */
+
+    .field{
+      background:var(--deep2);
+    }
+
+    .field-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:38px;
+    }
+
+    .field-photo{
+      position:relative;
+      overflow:hidden;
+      min-height:420px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:#07111f;
+      box-shadow:0 20px 55px rgba(0,0,0,.20);
+    }
+
+    .field-photo img{
+      width:100%;
+      height:100%;
+      min-height:420px;
+      display:block;
+      object-fit:cover;
+      transition:transform .45s ease,filter .45s ease;
+    }
+
+    .field-photo:hover img{
+      transform:scale(1.025);
+      filter:brightness(1.05);
+    }
+
+    .field-wide{
+      grid-column:span 3;
+      min-height:380px;
+    }
+
+    .field-wide img{
+      min-height:380px;
+      aspect-ratio:16/8;
+    }
+
+    .field-caption{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      padding:28px 22px 18px;
+      background:linear-gradient(transparent,rgba(2,6,23,.90));
+      color:#E2E8F0;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .hero-photo{
+      position:relative;
+      overflow:hidden;
+      margin:-30px -30px 24px;
+      height:260px;
+      border-radius:30px 30px 22px 22px;
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+
+    .hero-photo img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+    }
+
+    .hero-photo::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,transparent 40%,rgba(2,6,23,.72) 100%);
+      pointer-events:none;
+    }
+
+    .hero-photo-badge{
+      position:absolute;
+      left:18px;
+      bottom:16px;
+      z-index:2;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 11px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(2,6,23,.72);
+      backdrop-filter:blur(14px);
+      color:#fff;
+      font-size:10px;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+    }
+
+    /* FOUNDER / NETWORK */
+
+    .network{
+      background:
+        radial-gradient(circle at 15% 0,rgba(24,167,255,.12),transparent 28%),
+        radial-gradient(circle at 90% 85%,rgba(244,197,66,.07),transparent 30%),
+        var(--navy);
+    }
+
+    .network-shell{
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      gap:22px;
+      margin-top:38px;
+      align-items:stretch;
+    }
+
+    .founder-card,
+    .network-proof{
+      border:1px solid var(--line);
+      border-radius:28px;
+      background:rgba(255,255,255,.045);
+      overflow:hidden;
+    }
+
+    .founder-card{
+      padding:27px;
+      display:grid;
+      grid-template-columns:112px 1fr;
+      gap:20px;
+      align-items:center;
+    }
+
+    .founder-photo{
+      width:112px;
+      height:112px;
+      border-radius:24px;
+      object-fit:cover;
+      border:2px solid rgba(125,211,252,.42);
+      box-shadow:0 18px 50px rgba(0,0,0,.25);
+    }
+
+    .founder-name{
+      font-size:25px;
+      letter-spacing:-.035em;
+      font-weight:950;
+    }
+
+    .founder-role{
+      margin-top:4px;
+      color:var(--sky-soft);
+      font-size:12px;
+      font-weight:850;
+    }
+
+    .founder-copy{
+      margin-top:13px;
+      color:#CBD5E1;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .network-proof{
+      padding:27px;
+    }
+
+    .network-stats{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:13px;
+      margin-top:17px;
+    }
+
+    .network-card{
+      display:flex;
+      flex-direction:column;
+      min-height:210px;
+      padding:22px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.11);
+      background:rgba(2,6,23,.32);
+      transition:.24s ease;
+    }
+
+    .network-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(24,167,255,.34);
+      background:rgba(255,255,255,.07);
+    }
+
+    .linkedin-mark{
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      background:#0A66C2;
+      color:#fff;
+      font-size:20px;
+      font-weight:950;
+    }
+
+    .network-number{
+      margin-top:18px;
+      font-size:34px;
+      line-height:1;
+      letter-spacing:-.04em;
+      font-weight:950;
+      color:#fff;
+    }
+
+    .network-label{
+      margin-top:7px;
+      color:#CBD5E1;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .network-link{
+      margin-top:auto;
+      padding-top:14px;
+      color:var(--sky-soft);
+      font-size:11px;
+      font-weight:950;
+    }
+
+    .network-note{
+      margin-top:18px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.55;
+    }
+
     /* CTA */
 
     .final-cta{
@@ -906,7 +1147,8 @@
       .hero-grid,
       .problem-grid,
       .brief-shell,
-      .supplier-shell{
+      .supplier-shell,
+      .network-shell{
         grid-template-columns:1fr;
       }
 
@@ -954,8 +1196,33 @@
       .model-grid,
       .presence-grid,
       .principles-grid,
-      .brief-list{
+      .brief-list,
+      .field-grid,
+      .network-stats{
         grid-template-columns:1fr;
+      }
+
+      .field-wide{
+        grid-column:span 1;
+      }
+
+      .field-photo,
+      .field-photo img{
+        min-height:520px;
+      }
+
+      .field-wide,
+      .field-wide img{
+        min-height:240px;
+      }
+
+      .founder-card{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .founder-photo{
+        margin:0 auto;
       }
 
       .principle{
@@ -994,6 +1261,7 @@
       <a href="#como-funciona" data-i18n="navHow">Cómo funciona</a>
       <a href="#verticales" data-i18n="navVerticals">Verticales</a>
       <a href="#asia" data-i18n="navAsia">Asia</a>
+      <a href="#red" data-i18n="navNetwork">Red</a>
       <a href="#fabricantes" data-i18n="navManufacturers">Fabricantes</a>
     </nav>
 
@@ -1107,6 +1375,17 @@
 
 
     <aside class="hero-card reveal">
+
+      <div class="hero-photo">
+        <img
+          src="https://emprende360.club/asia/im7.jpeg"
+          alt="Emprende360 Asia en ferias y encuentros empresariales en Asia"
+          fetchpriority="high"
+        />
+        <span class="hero-photo-badge" data-i18n="heroPhotoBadge">
+          Sobre el terreno en Asia
+        </span>
+      </div>
 
       <span class="kicker" data-i18n="heroCardKicker">
         Empezamos por tu demanda
@@ -1371,6 +1650,80 @@
           la negociación si aparece una alternativa que tenga sentido.
         </p>
       </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- FIELD / REAL ACTIVITY -->
+
+<section class="section field">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+
+      <span class="kicker" data-i18n="fieldKicker">
+        Relaciones reales
+      </span>
+
+      <h2 data-i18n="fieldTitle">
+        No trabajamos Asia desde un escritorio.
+      </h2>
+
+      <p class="lead" data-i18n="fieldLead">
+        Ferias, reuniones, fabricantes y conversaciones cara a cara.
+        La red se construye estando aquí, viendo quién hay detrás de cada empresa
+        y dando seguimiento después del primer contacto.
+      </p>
+
+    </div>
+
+    <div class="field-grid reveal">
+
+      <figure class="field-photo">
+        <img src="https://emprende360.club/asia/im1.jpeg" alt="Emprende360 Asia · actividad empresarial en Asia" loading="lazy" decoding="async" />
+        <figcaption class="field-caption" data-i18n="fieldCaption">Relaciones directas con fabricantes y equipos comerciales.</figcaption>
+      </figure>
+
+      <figure class="field-photo">
+        <img src="https://emprende360.club/asia/im2.jpeg" alt="Emprende360 Asia · feria B2B" loading="lazy" decoding="async" />
+        <figcaption class="field-caption" data-i18n="fieldCaption">Relaciones directas con fabricantes y equipos comerciales.</figcaption>
+      </figure>
+
+      <figure class="field-photo">
+        <img src="https://emprende360.club/asia/im3.jpeg" alt="Emprende360 Asia · fabricantes" loading="lazy" decoding="async" />
+        <figcaption class="field-caption" data-i18n="fieldCaption">Relaciones directas con fabricantes y equipos comerciales.</figcaption>
+      </figure>
+
+      <figure class="field-photo">
+        <img src="https://emprende360.club/asia/im4.jpeg" alt="Emprende360 Asia · reuniones B2B" loading="lazy" decoding="async" />
+        <figcaption class="field-caption" data-i18n="fieldCaption">Relaciones directas con fabricantes y equipos comerciales.</figcaption>
+      </figure>
+
+      <figure class="field-photo">
+        <img src="https://emprende360.club/asia/im5.jpeg" alt="Emprende360 Asia · Vietnam" loading="lazy" decoding="async" />
+        <figcaption class="field-caption" data-i18n="fieldCaption">Relaciones directas con fabricantes y equipos comerciales.</figcaption>
+      </figure>
+
+      <figure class="field-photo">
+        <img src="https://emprende360.club/asia/im6.jpeg" alt="Emprende360 Asia · China y Vietnam" loading="lazy" decoding="async" />
+        <figcaption class="field-caption" data-i18n="fieldCaption">Relaciones directas con fabricantes y equipos comerciales.</figcaption>
+      </figure>
+
+      <figure class="field-photo field-wide">
+        <img src="https://emprende360.club/asia/im7.jpeg" alt="Emprende360 Asia · feria industrial" loading="lazy" decoding="async" />
+        <figcaption class="field-caption" data-i18n="fieldWideCaption1">Presencia continua en ferias y encuentros empresariales.</figcaption>
+      </figure>
+
+      <figure class="field-photo field-wide">
+        <img src="https://emprende360.club/asia/im8.jpeg" alt="Emprende360 Asia · red empresarial" loading="lazy" decoding="async" />
+        <figcaption class="field-caption" data-i18n="fieldWideCaption2">Asia en un lado. España y Latinoamérica en el otro.</figcaption>
+      </figure>
 
     </div>
 
@@ -1647,6 +2000,128 @@
           </div>
 
         </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- FOUNDER / NETWORK -->
+
+<section id="red" class="section network">
+
+  <div class="wrap">
+
+    <div class="center reveal">
+
+      <span class="kicker" data-i18n="networkKicker">
+        El puente comercial
+      </span>
+
+      <h2 data-i18n="networkTitle">
+        Asia de un lado. Una gran red B2B hispanohablante del otro.
+      </h2>
+
+      <p class="lead" data-i18n="networkLead">
+        La ventaja no es únicamente estar físicamente en Vietnam.
+        Es poder conectar relaciones construidas en Asia con una red empresarial
+        desarrollada durante años en España y Latinoamérica.
+      </p>
+
+    </div>
+
+    <div class="network-shell reveal">
+
+      <article class="founder-card">
+
+        <img
+          class="founder-photo"
+          src="https://emprende360.club/asia/alberto.jpg"
+          alt="Alberto Porras Moreno · Founder Emprende360"
+          loading="lazy"
+          decoding="async"
+        />
+
+        <div>
+          <div class="founder-name">Alberto Porras Moreno</div>
+          <div class="founder-role" data-i18n="founderRole">
+            Founder · Emprende360
+          </div>
+
+          <p class="founder-copy" data-i18n="founderText">
+            Español y residente en Vietnam. Desde aquí desarrollo relaciones con
+            fabricantes, empresas y partners asiáticos mientras conecto oportunidades
+            con mi red empresarial en el mundo hispanohablante.
+          </p>
+
+          <a
+            class="btn btn-secondary"
+            href="https://www.linkedin.com/in/albertoporrasmoreno/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="founderCta"
+          >
+            Ver perfil de LinkedIn ↗
+          </a>
+        </div>
+
+      </article>
+
+
+      <article class="network-proof">
+
+        <span class="pill green" data-i18n="networkProofPill">
+          Red B2B hispanohablante
+        </span>
+
+        <div class="network-stats">
+
+          <a
+            class="network-card"
+            href="https://www.linkedin.com/in/albertoporrasmoreno/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir perfil de LinkedIn de Alberto Porras"
+          >
+            <div class="linkedin-mark">in</div>
+            <div class="network-number">45.000+</div>
+            <div class="network-label" data-i18n="profileFollowers">
+              seguidores en el perfil de LinkedIn de Alberto.
+            </div>
+            <div class="network-link" data-i18n="profileLink">
+              Abrir perfil ↗
+            </div>
+          </a>
+
+          <a
+            class="network-card"
+            href="https://www.linkedin.com/groups/4060848/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir grupo de LinkedIn de Emprende360"
+          >
+            <div class="linkedin-mark">in</div>
+            <div class="network-number">70.000+</div>
+            <div class="network-label" data-i18n="groupMembers">
+              emprendedores y profesionales en el grupo de LinkedIn.
+            </div>
+            <div class="network-link" data-i18n="groupLink">
+              Abrir grupo ↗
+            </div>
+          </a>
+
+        </div>
+
+        <p class="network-note" data-i18n="networkNote">
+          Una red construida principalmente en español y enfocada en empresarios,
+          profesionales B2B y oportunidades entre España y Latinoamérica.
+          Los enlaces se abren en una nueva pestaña para que puedas comprobarla directamente.
+        </p>
 
       </article>
 
@@ -1997,7 +2472,15 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Alberto Porras
+        LinkedIn · Alberto Porras
+      </a>
+
+      <a
+        href="https://www.linkedin.com/groups/4060848/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn · Grupo Emprende360
       </a>
 
       <a
@@ -2059,10 +2542,12 @@ const translations = {
     navHow:"Cómo funciona",
     navVerticals:"Verticales",
     navAsia:"Asia",
+    navNetwork:"Red",
     navManufacturers:"Fabricantes",
     navCta:"Cuéntanos qué buscas",
 
     heroPill:"Buyer first · Presencia en Asia",
+    heroPhotoBadge:"Sobre el terreno en Asia",
     heroTitle:"Tu equipo de sourcing sobre el terreno en Asia.",
 
     heroText1:
@@ -2162,6 +2647,13 @@ const translations = {
     step4Text:
       "Comparamos opciones, facilitamos conversaciones y acompañamos la negociación si aparece una alternativa que tenga sentido.",
 
+    fieldKicker:"Relaciones reales",
+    fieldTitle:"No trabajamos Asia desde un escritorio.",
+    fieldLead:"Ferias, reuniones, fabricantes y conversaciones cara a cara. La red se construye estando aquí, viendo quién hay detrás de cada empresa y dando seguimiento después del primer contacto.",
+    fieldCaption:"Relaciones directas con fabricantes y equipos comerciales.",
+    fieldWideCaption1:"Presencia continua en ferias y encuentros empresariales.",
+    fieldWideCaption2:"Asia en un lado. España y Latinoamérica en el otro.",
+
     verticalsKicker:"Áreas de sourcing",
     verticalsTitle:"Seis verticales para empezar.",
 
@@ -2237,6 +2729,19 @@ const translations = {
 
     chinaPoint4:
       "Ferias internacionales cuando el valor de la operación lo justifique.",
+
+    networkKicker:"El puente comercial",
+    networkTitle:"Asia de un lado. Una gran red B2B hispanohablante del otro.",
+    networkLead:"La ventaja no es únicamente estar físicamente en Vietnam. Es poder conectar relaciones construidas en Asia con una red empresarial desarrollada durante años en España y Latinoamérica.",
+    founderRole:"Founder · Emprende360",
+    founderText:"Español y residente en Vietnam. Desde aquí desarrollo relaciones con fabricantes, empresas y partners asiáticos mientras conecto oportunidades con mi red empresarial en el mundo hispanohablante.",
+    founderCta:"Ver perfil de LinkedIn ↗",
+    networkProofPill:"Red B2B hispanohablante",
+    profileFollowers:"seguidores en el perfil de LinkedIn de Alberto.",
+    profileLink:"Abrir perfil ↗",
+    groupMembers:"emprendedores y profesionales en el grupo de LinkedIn.",
+    groupLink:"Abrir grupo ↗",
+    networkNote:"Una red construida principalmente en español y enfocada en empresarios, profesionales B2B y oportunidades entre España y Latinoamérica. Los enlaces se abren en una nueva pestaña para que puedas comprobarla directamente.",
 
     briefKicker:"Para empezar",
 
@@ -2338,10 +2843,12 @@ const translations = {
     navHow:"How it works",
     navVerticals:"Sectors",
     navAsia:"Asia",
+    navNetwork:"Network",
     navManufacturers:"Manufacturers",
     navCta:"Tell us what you need",
 
     heroPill:"Buyer first · On the ground in Asia",
+    heroPhotoBadge:"On the ground in Asia",
 
     heroTitle:
       "Your sourcing partner on the ground in Asia.",
@@ -2453,6 +2960,13 @@ const translations = {
     step4Text:
       "We compare alternatives, facilitate discussions and support negotiations when a suitable option emerges.",
 
+    fieldKicker:"Real relationships",
+    fieldTitle:"We do not work Asia from a desk.",
+    fieldLead:"Trade fairs, meetings, manufacturers and face-to-face conversations. The network is built by being here, understanding who is behind each company and following up after the first contact.",
+    fieldCaption:"Direct relationships with manufacturers and commercial teams.",
+    fieldWideCaption1:"Continuous presence at trade fairs and business events.",
+    fieldWideCaption2:"Asia on one side. Spain and Latin America on the other.",
+
     verticalsKicker:"Sourcing sectors",
 
     verticalsTitle:
@@ -2541,6 +3055,19 @@ const translations = {
 
     chinaPoint4:
       "International trade fairs when the value of the opportunity justifies it.",
+
+    networkKicker:"The commercial bridge",
+    networkTitle:"Asia on one side. A large Spanish-speaking B2B network on the other.",
+    networkLead:"The advantage is not only being physically based in Vietnam. It is the ability to connect relationships built in Asia with a business network developed over years across Spain and Latin America.",
+    founderRole:"Founder · Emprende360",
+    founderText:"Spanish and based in Vietnam. From here I build relationships with Asian manufacturers, companies and partners while connecting opportunities with my Spanish-speaking business network.",
+    founderCta:"View LinkedIn profile ↗",
+    networkProofPill:"Spanish-speaking B2B network",
+    profileFollowers:"followers on Alberto's LinkedIn profile.",
+    profileLink:"Open profile ↗",
+    groupMembers:"entrepreneurs and professionals in the LinkedIn group.",
+    groupLink:"Open group ↗",
+    networkNote:"A network built primarily in Spanish and focused on business owners, B2B professionals and opportunities across Spain and Latin America. Links open in a new tab so you can view the network directly.",
 
     briefKicker:"To get started",
 
@@ -2648,10 +3175,12 @@ const translations = {
     navHow:"Comment ça marche",
     navVerticals:"Secteurs",
     navAsia:"Asie",
+    navNetwork:"Réseau",
     navManufacturers:"Fabricants",
     navCta:"Dites-nous ce que vous cherchez",
 
     heroPill:"Buyer first · Présence en Asie",
+    heroPhotoBadge:"Sur le terrain en Asie",
 
     heroTitle:
       "Votre partenaire sourcing sur le terrain en Asie.",
@@ -2775,6 +3304,13 @@ const translations = {
     step4Text:
       "Nous comparons les alternatives, facilitons les échanges et accompagnons la négociation lorsqu'une option pertinente apparaît.",
 
+    fieldKicker:"Relations réelles",
+    fieldTitle:"Nous ne travaillons pas l'Asie depuis un bureau.",
+    fieldLead:"Salons, réunions, fabricants et échanges en face à face. Le réseau se construit en étant ici, en comprenant qui se trouve derrière chaque entreprise et en assurant le suivi après le premier contact.",
+    fieldCaption:"Relations directes avec fabricants et équipes commerciales.",
+    fieldWideCaption1:"Présence continue sur les salons et événements professionnels.",
+    fieldWideCaption2:"L'Asie d'un côté. L'Espagne et l'Amérique latine de l'autre.",
+
     verticalsKicker:"Secteurs de sourcing",
 
     verticalsTitle:
@@ -2863,6 +3399,19 @@ const translations = {
 
     chinaPoint4:
       "Salons internationaux lorsque la valeur de l'opportunité le justifie.",
+
+    networkKicker:"Le pont commercial",
+    networkTitle:"L'Asie d'un côté. Un vaste réseau B2B hispanophone de l'autre.",
+    networkLead:"L'avantage ne consiste pas seulement à être physiquement présent au Vietnam. Il réside dans la capacité à connecter les relations développées en Asie à un réseau d'affaires construit pendant des années en Espagne et en Amérique latine.",
+    founderRole:"Founder · Emprende360",
+    founderText:"Espagnol et basé au Vietnam. Depuis ici, je développe des relations avec des fabricants, entreprises et partenaires asiatiques tout en connectant les opportunités à mon réseau d'affaires hispanophone.",
+    founderCta:"Voir le profil LinkedIn ↗",
+    networkProofPill:"Réseau B2B hispanophone",
+    profileFollowers:"abonnés au profil LinkedIn d'Alberto.",
+    profileLink:"Ouvrir le profil ↗",
+    groupMembers:"entrepreneurs et professionnels dans le groupe LinkedIn.",
+    groupLink:"Ouvrir le groupe ↗",
+    networkNote:"Un réseau construit principalement en espagnol et centré sur les dirigeants, les professionnels B2B et les opportunités entre l'Espagne et l'Amérique latine. Les liens s'ouvrent dans un nouvel onglet pour vous permettre de le consulter directement.",
 
     briefKicker:"Pour commencer",
 
