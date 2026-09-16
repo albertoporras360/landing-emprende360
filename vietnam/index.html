@@ -11,6 +11,7 @@
   <meta property="og:title" content="Emprende360 Asia | Vietnam Manufacturers & Suppliers" />
   <meta property="og:description" content="We start with real buyer demand. When a Spanish company needs what you manufacture, Emprende360 Asia identifies, qualifies and connects the right supplier." />
   <meta property="og:url" content="https://emprende360.club/vietnam/" />
+  <meta property="og:image" content="https://emprende360.club/asia/im8.jpeg" />
   <meta name="theme-color" content="#07111f" />
 
   <style>
@@ -543,6 +544,135 @@
       line-height:1.55;
     }
 
+
+    /* VISUAL PROOF / LINKEDIN NETWORK */
+
+    .stat-link {
+      display:block;
+      transition:.22s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .stat-link:hover {
+      transform:translateY(-3px);
+      border-color:rgba(125,211,252,.34);
+      background:rgba(255,255,255,.07);
+      box-shadow:0 18px 48px rgba(0,0,0,.18);
+    }
+    .stat-link:after {
+      content:"↗";
+      position:absolute;
+      top:13px;
+      right:14px;
+      color:var(--blue);
+      font-weight:900;
+      opacity:.78;
+    }
+
+    .field-proof {
+      padding-top:34px;
+    }
+    .field-head {
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:28px;
+      margin-bottom:26px;
+    }
+    .field-head .sub {
+      margin-bottom:0;
+    }
+
+    .photo-grid-vertical {
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:10px;
+    }
+    .photo-grid-horizontal {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    .field-photo {
+      margin:0;
+      overflow:hidden;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      box-shadow:0 16px 40px rgba(0,0,0,.16);
+    }
+    .field-photo img {
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      transition:transform .35s ease;
+    }
+    .field-photo:hover img {
+      transform:scale(1.025);
+    }
+    .field-photo.vertical {
+      aspect-ratio:3 / 4;
+    }
+    .field-photo.horizontal {
+      aspect-ratio:16 / 9;
+    }
+    .field-caption {
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .founder-photo {
+      width:72px;
+      height:72px;
+      border-radius:20px;
+      object-fit:cover;
+      border:2px solid rgba(255,216,61,.55);
+      box-shadow:0 14px 36px rgba(0,0,0,.24);
+      flex:0 0 auto;
+    }
+
+    .network-links {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:22px;
+    }
+    .network-link {
+      display:block;
+      padding:18px;
+      border-radius:17px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.045);
+      transition:.22s ease;
+    }
+    .network-link:hover {
+      transform:translateY(-2px);
+      border-color:rgba(125,211,252,.34);
+      background:rgba(255,255,255,.075);
+    }
+    .network-link strong {
+      display:block;
+      font-size:22px;
+      letter-spacing:-.03em;
+      margin-bottom:4px;
+    }
+    .network-link span {
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
+    .network-link .open {
+      display:inline-block;
+      margin-top:10px;
+      color:var(--blue);
+      font-weight:800;
+      font-size:12px;
+    }
+
     .lang-block[hidden] { display:none !important; }
     .mobile-only { display:none; }
 
@@ -553,6 +683,7 @@
       .timeline { grid-template-columns:1fr 1fr; }
       .stats { grid-template-columns:1fr 1fr; }
       .nav-links { display:none; }
+      .photo-grid-vertical { grid-template-columns:repeat(3,1fr); }
     }
 
     @media (max-width: 640px) {
@@ -568,6 +699,9 @@
       .desktop-cta { display:none; }
       .mobile-only { display:inline-flex; }
       .hero-actions .btn { width:100%; }
+      .photo-grid-vertical { grid-template-columns:repeat(2,1fr); }
+      .photo-grid-horizontal, .network-links { grid-template-columns:1fr; }
+      .field-head { align-items:flex-start; flex-direction:column; }
     }
   </style>
 
@@ -578,7 +712,12 @@
     "name": "Emprende360",
     "url": "https://emprende360.club/",
     "email": "info@emprende360.club",
-    "founder": {"@type":"Person","name":"Alberto Porras"},
+    "founder": {
+      "@type":"Person",
+      "name":"Alberto Porras",
+      "image":"https://emprende360.club/asia/alberto.jpg",
+      "sameAs":["https://www.linkedin.com/in/albertoporrasmoreno/"]
+    },
     "description": "B2B commercial sourcing and relationship-development ecosystem connecting Spanish-speaking business demand with Asian manufacturing capacity."
   }
   </script>
@@ -712,12 +851,41 @@
         <div class="stats">
           <div class="stat"><strong>~15 years</strong><span>building business relationships and professional communities</span></div>
           <div class="stat"><strong>12,487</strong><span>B2B decision-makers identified in the direct LinkedIn network</span></div>
-          <div class="stat"><strong>70,000+</strong><span>members in the main professional community</span></div>
-          <div class="stat"><strong>45,000+</strong><span>followers on the founder's LinkedIn profile</span></div>
+          <a class="stat stat-link" href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer"><strong>70,000+</strong><span>members in our Spanish-speaking LinkedIn business community</span></a>
+          <a class="stat stat-link" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener noreferrer"><strong>45,000+</strong><span>followers on Alberto Porras' LinkedIn profile</span></a>
         </div>
         <p class="small" style="margin-top:12px;">These figures describe Emprende360's relationship and distribution infrastructure. They are not a claim of 70,000 buyers and the different audiences may overlap.</p>
       </div>
     </section>
+
+    <section class="section field-proof">
+      <div class="wrap">
+        <div class="field-head">
+          <div>
+            <span class="eyebrow"><i></i> On the ground in Asia</span>
+            <h2 style="margin-top:18px;">Relationships are built face to face.</h2>
+          </div>
+          <p class="sub">Trade fairs, manufacturer meetings and local follow-up in Vietnam are part of the work. These are real moments from the field — not stock photography.</p>
+        </div>
+
+        <div class="photo-grid-vertical">
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im1.jpeg" alt="Emprende360 Asia at a trade fair in Vietnam" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im2.jpeg" alt="Business meetings with manufacturers in Vietnam" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im3.jpeg" alt="Supplier development in Asia" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im4.jpeg" alt="Trade fair activity in Ho Chi Minh City" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im5.jpeg" alt="Manufacturer meetings in Vietnam" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im6.jpeg" alt="Emprende360 Asia field activity" loading="lazy"></figure>
+        </div>
+
+        <div class="photo-grid-horizontal">
+          <figure class="field-photo horizontal"><img src="https://emprende360.club/asia/im7.jpeg" alt="B2B trade fair in Vietnam" loading="lazy"></figure>
+          <figure class="field-photo horizontal"><img src="https://emprende360.club/asia/im8.jpeg" alt="Emprende360 Asia meeting manufacturers and suppliers" loading="lazy"></figure>
+        </div>
+
+        <p class="field-caption">The objective is simple: understand who is behind each company, what they actually manufacture and whether there is a credible fit for a real buyer requirement.</p>
+      </div>
+    </section>
+
 
     <section class="section" id="model-en">
       <div class="wrap">
@@ -961,7 +1129,7 @@
             <h2 style="margin-top:18px;">On the ground in Asia. Connected to business demand in Spain.</h2>
 
             <div class="founder">
-              <div class="avatar">AP</div>
+              <img class="founder-photo" src="https://emprende360.club/asia/alberto.jpg" alt="Alberto Porras, founder of Emprende360" loading="lazy">
               <div>
                 <strong>Alberto Porras</strong><br>
                 <span class="small">Founder · Emprende360 · based in Ho Chi Minh City</span>
@@ -973,9 +1141,23 @@
             <p class="lead" style="font-size:19px;">Emprende360 is a B2B ecosystem built around commercial relationships, business conversations and trusted introductions.</p>
             <p class="sub">The Asia line uses that relationship infrastructure differently: first we identify purchasing demand in Spain, then we activate the right manufacturing capacity in Asia. Vietnam is the initial on-the-ground hub because we can meet companies, attend exhibitions and develop supplier relationships locally.</p>
 
+            <div class="network-links">
+              <a class="network-link" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener noreferrer">
+                <strong>45,000+ followers</strong>
+                <span>Alberto Porras' LinkedIn profile and Spanish-speaking B2B network.</span>
+                <span class="open">Open LinkedIn profile ↗</span>
+              </a>
+              <a class="network-link" href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer">
+                <strong>70,000+ members</strong>
+                <span>Entrepreneurs and professionals in Emprende360's Spanish-speaking LinkedIn community.</span>
+                <span class="open">Open LinkedIn group ↗</span>
+              </a>
+            </div>
+
             <div class="hero-actions" style="margin-bottom:0;">
               <a class="btn btn-secondary" href="https://emprende360.club/" target="_blank" rel="noopener">Visit Emprende360.club ↗</a>
-              <a class="btn btn-secondary" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener">Founder on LinkedIn ↗</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener noreferrer">Founder on LinkedIn ↗</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer">LinkedIn community ↗</a>
             </div>
           </div>
         </div>
@@ -1131,12 +1313,41 @@
         <div class="stats">
           <div class="stat"><strong>~15 năm</strong><span>xây dựng quan hệ kinh doanh và cộng đồng nghề nghiệp</span></div>
           <div class="stat"><strong>12,487</strong><span>decision-makers B2B được xác định trong mạng LinkedIn trực tiếp</span></div>
-          <div class="stat"><strong>70,000+</strong><span>thành viên trong cộng đồng chuyên nghiệp chính</span></div>
-          <div class="stat"><strong>45,000+</strong><span>followers trên hồ sơ LinkedIn của founder</span></div>
+          <a class="stat stat-link" href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer"><strong>70,000+</strong><span>thành viên trong cộng đồng doanh nhân nói tiếng Tây Ban Nha trên LinkedIn</span></a>
+          <a class="stat stat-link" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener noreferrer"><strong>45,000+</strong><span>followers trên hồ sơ LinkedIn của Alberto Porras</span></a>
         </div>
         <p class="small" style="margin-top:12px;">Các con số này thể hiện hạ tầng quan hệ và phân phối của Emprende360. Đây không phải là tuyên bố rằng có 70.000 buyer và các nhóm đối tượng có thể chồng lặp.</p>
       </div>
     </section>
+
+    <section class="section field-proof">
+      <div class="wrap">
+        <div class="field-head">
+          <div>
+            <span class="eyebrow"><i></i> Hoạt động trực tiếp tại châu Á</span>
+            <h2 style="margin-top:18px;">Quan hệ kinh doanh được xây dựng trực tiếp.</h2>
+          </div>
+          <p class="sub">Triển lãm, gặp nhà sản xuất và follow-up tại Việt Nam là một phần của công việc. Đây là những hình ảnh thực tế từ hoạt động của chúng tôi, không phải stock photography.</p>
+        </div>
+
+        <div class="photo-grid-vertical">
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im1.jpeg" alt="Emprende360 Asia tại triển lãm ở Việt Nam" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im2.jpeg" alt="Gặp gỡ nhà sản xuất tại Việt Nam" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im3.jpeg" alt="Phát triển nhà cung cấp tại châu Á" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im4.jpeg" alt="Hoạt động triển lãm tại Ho Chi Minh City" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im5.jpeg" alt="Gặp gỡ doanh nghiệp sản xuất tại Việt Nam" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im6.jpeg" alt="Hoạt động thực tế của Emprende360 Asia" loading="lazy"></figure>
+        </div>
+
+        <div class="photo-grid-horizontal">
+          <figure class="field-photo horizontal"><img src="https://emprende360.club/asia/im7.jpeg" alt="Triển lãm B2B tại Việt Nam" loading="lazy"></figure>
+          <figure class="field-photo horizontal"><img src="https://emprende360.club/asia/im8.jpeg" alt="Emprende360 Asia gặp nhà sản xuất và nhà cung cấp" loading="lazy"></figure>
+        </div>
+
+        <p class="field-caption">Mục tiêu rất đơn giản: hiểu ai đứng sau mỗi doanh nghiệp, họ thực sự sản xuất gì và liệu có phù hợp với một buyer requirement thực tế hay không.</p>
+      </div>
+    </section>
+
 
     <section class="section" id="model-vi">
       <div class="wrap">
@@ -1380,7 +1591,7 @@
             <h2 style="margin-top:18px;">Có mặt tại châu Á. Kết nối với nhu cầu doanh nghiệp tại Tây Ban Nha.</h2>
 
             <div class="founder">
-              <div class="avatar">AP</div>
+              <img class="founder-photo" src="https://emprende360.club/asia/alberto.jpg" alt="Alberto Porras, founder of Emprende360" loading="lazy">
               <div>
                 <strong>Alberto Porras</strong><br>
                 <span class="small">Founder · Emprende360 · hiện ở Ho Chi Minh City</span>
@@ -1392,9 +1603,23 @@
             <p class="lead" style="font-size:19px;">Emprende360 là một hệ sinh thái B2B được xây dựng xoay quanh quan hệ thương mại, business conversations và trusted introductions.</p>
             <p class="sub">Emprende360 Asia sử dụng hạ tầng quan hệ đó theo cách khác: trước tiên xác định nhu cầu mua hàng tại Tây Ban Nha, sau đó kích hoạt đúng năng lực sản xuất tại châu Á. Việt Nam là operational hub ban đầu vì chúng tôi có thể gặp doanh nghiệp, tham dự triển lãm và phát triển quan hệ supplier trực tiếp tại đây.</p>
 
+            <div class="network-links">
+              <a class="network-link" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener noreferrer">
+                <strong>45.000+ followers</strong>
+                <span>Hồ sơ LinkedIn của Alberto Porras và mạng lưới B2B nói tiếng Tây Ban Nha.</span>
+                <span class="open">Mở hồ sơ LinkedIn ↗</span>
+              </a>
+              <a class="network-link" href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer">
+                <strong>70.000+ thành viên</strong>
+                <span>Cộng đồng doanh nhân và chuyên gia nói tiếng Tây Ban Nha của Emprende360.</span>
+                <span class="open">Mở LinkedIn group ↗</span>
+              </a>
+            </div>
+
             <div class="hero-actions" style="margin-bottom:0;">
               <a class="btn btn-secondary" href="https://emprende360.club/" target="_blank" rel="noopener">Xem Emprende360.club ↗</a>
-              <a class="btn btn-secondary" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener">Founder trên LinkedIn ↗</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener noreferrer">Founder trên LinkedIn ↗</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer">Cộng đồng LinkedIn ↗</a>
             </div>
           </div>
         </div>
@@ -1550,12 +1775,41 @@
         <div class="stats">
           <div class="stat"><strong>约15年</strong><span>持续建设商业关系与专业社群</span></div>
           <div class="stat"><strong>12,487</strong><span>在直接 LinkedIn 网络中识别的 B2B 决策者</span></div>
-          <div class="stat"><strong>70,000+</strong><span>主要专业社群成员</span></div>
-          <div class="stat"><strong>45,000+</strong><span>创始人 LinkedIn 关注者</span></div>
+          <a class="stat stat-link" href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer"><strong>70,000+</strong><span>西班牙语 LinkedIn 商业社群成员</span></a>
+          <a class="stat stat-link" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener noreferrer"><strong>45,000+</strong><span>Alberto Porras 的 LinkedIn 关注者</span></a>
         </div>
         <p class="small" style="margin-top:12px;">以上数据用于说明 Emprende360 的关系与传播基础设施，并不代表有 70,000 名买方；不同受众之间也可能存在重叠。</p>
       </div>
     </section>
+
+    <section class="section field-proof">
+      <div class="wrap">
+        <div class="field-head">
+          <div>
+            <span class="eyebrow"><i></i> 亚洲本地执行</span>
+            <h2 style="margin-top:18px;">真正的商业关系来自面对面的沟通。</h2>
+          </div>
+          <p class="sub">参加展会、拜访制造商以及在越南进行本地跟进，都是我们日常工作的一部分。以下均为真实现场照片，并非图库图片。</p>
+        </div>
+
+        <div class="photo-grid-vertical">
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im1.jpeg" alt="Emprende360 Asia 在越南展会现场" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im2.jpeg" alt="与越南制造商进行商务会面" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im3.jpeg" alt="亚洲供应商开发" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im4.jpeg" alt="胡志明市展会活动" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im5.jpeg" alt="越南制造商会面" loading="lazy"></figure>
+          <figure class="field-photo vertical"><img src="https://emprende360.club/asia/im6.jpeg" alt="Emprende360 Asia 本地商务活动" loading="lazy"></figure>
+        </div>
+
+        <div class="photo-grid-horizontal">
+          <figure class="field-photo horizontal"><img src="https://emprende360.club/asia/im7.jpeg" alt="越南 B2B 展会" loading="lazy"></figure>
+          <figure class="field-photo horizontal"><img src="https://emprende360.club/asia/im8.jpeg" alt="Emprende360 Asia 与制造商和供应商会面" loading="lazy"></figure>
+        </div>
+
+        <p class="field-caption">目标很简单：了解企业背后的人、真实制造能力，以及是否能够匹配真实买方需求。</p>
+      </div>
+    </section>
+
 
     <section class="section" id="model-zh">
       <div class="wrap">
@@ -1799,7 +2053,7 @@
             <h2 style="margin-top:18px;">扎根亚洲，连接西班牙真实商业需求。</h2>
 
             <div class="founder">
-              <div class="avatar">AP</div>
+              <img class="founder-photo" src="https://emprende360.club/asia/alberto.jpg" alt="Alberto Porras, founder of Emprende360" loading="lazy">
               <div>
                 <strong>Alberto Porras</strong><br>
                 <span class="small">Founder · Emprende360 · 常驻胡志明市</span>
@@ -1811,9 +2065,23 @@
             <p class="lead" style="font-size:19px;">Emprende360 是一个围绕商业关系、B2B 对话与可信商务引荐建立的生态系统。</p>
             <p class="sub">Emprende360 Asia 以不同方式使用这一关系基础设施：先在西班牙识别采购需求，再根据需求启动合适的亚洲制造能力。越南是我们的初始运营中心，因为我们可以在当地与企业会面、参加展会并直接发展供应商关系。</p>
 
+            <div class="network-links">
+              <a class="network-link" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener noreferrer">
+                <strong>45,000+ 关注者</strong>
+                <span>Alberto Porras 的 LinkedIn 主页及西班牙语 B2B 商业网络。</span>
+                <span class="open">打开 LinkedIn 主页 ↗</span>
+              </a>
+              <a class="network-link" href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer">
+                <strong>70,000+ 成员</strong>
+                <span>Emprende360 的西班牙语企业家与专业人士 LinkedIn 社群。</span>
+                <span class="open">打开 LinkedIn 群组 ↗</span>
+              </a>
+            </div>
+
             <div class="hero-actions" style="margin-bottom:0;">
               <a class="btn btn-secondary" href="https://emprende360.club/" target="_blank" rel="noopener">访问 Emprende360.club ↗</a>
-              <a class="btn btn-secondary" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener">查看创始人 LinkedIn ↗</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener noreferrer">查看创始人 LinkedIn ↗</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer">LinkedIn 社群 ↗</a>
             </div>
           </div>
         </div>
@@ -1898,6 +2166,8 @@
         <a href="https://emprende360.club/privacidad/" target="_blank" rel="noopener">Privacy</a>
         <a href="https://emprende360.club/terminos-condiciones/" target="_blank" rel="noopener">Terms</a>
         <a href="https://emprende360.club/" target="_blank" rel="noopener">Emprende360.club</a>
+        <a href="https://www.linkedin.com/in/albertoporrasmoreno/" target="_blank" rel="noopener noreferrer">Alberto Porras · LinkedIn</a>
+        <a href="https://www.linkedin.com/groups/4060848/" target="_blank" rel="noopener noreferrer">LinkedIn Group · 70,000+</a>
       </div>
     </div>
 
