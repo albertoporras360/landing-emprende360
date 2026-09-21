@@ -5,11 +5,11 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Emprende360 · Conversaciones y relaciones B2B con contexto</title>
-<meta content="Emprende360 crea conversaciones y activación B2B con contexto mediante Rondas de Alianzas, Foros Ejecutivos, Impulso B2B, Activación B2B, Fractional Pipeline, Golden Partners y Emprende360 Asia." name="description"/>
+<meta content="Emprende360 crea conversaciones y relaciones B2B con contexto mediante Rondas de Alianzas, Foros Ejecutivos y Golden Partners: posicionamiento, radar de oportunidades y activación B2B alrededor de una categoría." name="description"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://emprende360.club/" rel="canonical"/>
 <meta content="Emprende360 · Conversaciones B2B que merece la pena tener" property="og:title"/>
-<meta content="Rondas de Alianzas B2B, Foros Ejecutivos y servicios para activar mercados, pipeline, posicionamiento y oportunidades: Impulso B2B, Activación B2B, Fractional Pipeline, Golden Partners y Emprende360 Asia." property="og:description"/>
+<meta content="Rondas de Alianzas B2B, Foros Ejecutivos y Golden Partners: una posición activa en tu mercado con posicionamiento, señales, relaciones, contexto y activación B2B." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://emprende360.club/" property="og:url"/>
 <meta content="#020617" name="theme-color"/>
@@ -1084,7 +1084,7 @@
       display:grid;
 
       grid-template-columns:
-        repeat(4,1fr);
+        repeat(3,1fr);
 
       gap:14px;
 
@@ -2334,6 +2334,161 @@
         order:2;
       }
     }
+
+
+    /* =========================================================
+       GOLDEN PARTNERS · SLIDER SUPERIOR
+    ========================================================= */
+    .golden-strip{
+      position:relative;
+      z-index:2;
+      padding-top:64px;
+      background:
+        radial-gradient(circle at 12% 20%,rgba(244,197,66,.08),transparent 30%),
+        radial-gradient(circle at 88% 20%,rgba(24,167,255,.07),transparent 30%),
+        var(--navy);
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+
+    .golden-strip-head{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 22px 10px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .golden-strip-head strong{
+      color:#FDE68A;
+      font-size:12px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .golden-strip-head span{
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .logo-marquee{
+      position:relative;
+      width:100%;
+      overflow:hidden;
+      padding:12px 0 20px;
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+      mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+    }
+
+    .logo-track{
+      width:max-content;
+      display:flex;
+      gap:16px;
+      padding-left:16px;
+      animation:goldenScroll 40s linear infinite;
+    }
+
+    .logo-marquee:hover .logo-track{ animation-play-state:paused; }
+
+    @keyframes goldenScroll{
+      from{ transform:translateX(0); }
+      to{ transform:translateX(calc(-50% - 8px)); }
+    }
+
+    .golden-logo-card{
+      width:285px;
+      min-width:285px;
+      min-height:112px;
+      display:grid;
+      grid-template-columns:74px 1fr;
+      align-items:center;
+      gap:16px;
+      padding:18px;
+      border:1px solid rgba(244,197,66,.20);
+      border-radius:22px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.08),transparent 40%),
+        rgba(255,255,255,.04);
+      transition:transform .2s ease,border-color .2s ease,background .2s ease;
+    }
+
+    .golden-logo-card:hover{
+      transform:translateY(-3px);
+      border-color:rgba(244,197,66,.42);
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.14),transparent 42%),
+        rgba(255,255,255,.055);
+    }
+
+    .golden-logo-media{
+      width:74px;
+      height:74px;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.16);
+      background:#fff;
+      padding:7px;
+    }
+
+    .golden-logo-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:12px;
+    }
+
+    .golden-logo-copy b{
+      display:block;
+      font-size:15px;
+      line-height:1.2;
+    }
+
+    .golden-logo-copy span{
+      display:block;
+      margin-top:6px;
+      color:var(--gold-soft);
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .golden-logo-copy small{
+      display:block;
+      margin-top:7px;
+      color:var(--muted);
+      font-size:10px;
+      line-height:1.4;
+    }
+
+    @media(max-width:760px){
+      .golden-strip{ padding-top:62px; }
+      .golden-strip-head{ padding:14px 16px 8px; align-items:flex-start; flex-direction:column; gap:3px; }
+      .golden-logo-card{ width:248px; min-width:248px; grid-template-columns:62px 1fr; }
+      .golden-logo-media{ width:62px; height:62px; }
+      .logo-marquee{
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
+        touch-action:pan-x;
+        cursor:grab;
+        -webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);
+        mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);
+      }
+      .logo-marquee::-webkit-scrollbar{ display:none; }
+      .logo-marquee.dragging{ cursor:grabbing; scroll-behavior:auto; }
+      .logo-track{ animation:none; }
+      .hero{ padding-top:52px; }
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      .logo-track{ animation:none; }
+    }
+
 </style>
 </head>
 <body>
@@ -2355,7 +2510,12 @@
         </div>
 </div>
 </a>
-<nav class="nav-links"><a data-i18n="nav1" href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank">Eventos</a><a data-i18n="nav2" href="https://emprende360.club/sprint-activation" rel="noopener noreferrer" target="_blank">Activación B2B</a><a data-i18n="nav3" href="https://emprende360.club/fractional-pipeline" rel="noopener noreferrer" target="_blank">Fractional Pipeline</a><a data-i18n="nav4" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Golden Partners</a><a data-i18n="nav5" href="https://emprende360.club/asia" rel="noopener noreferrer" target="_blank">Asia</a></nav>
+<nav class="nav-links">
+<a data-i18n="nav1" href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank">Eventos</a>
+<a data-i18n="nav2" href="#accion">En acción</a>
+<a data-i18n="nav3" href="#golden">Golden Partners</a>
+<a data-i18n="nav4" href="#trabaja">Trabaja con Emprende360</a>
+</nav>
 <div aria-label="Language selector" class="home-language-switcher">
 <button aria-label="Ver en español" class="home-lang-btn active" data-lang="es" type="button">🇪🇸 ES</button>
 <button aria-label="View in English" class="home-lang-btn" data-lang="en" type="button">🇬🇧 EN</button>
@@ -2364,6 +2524,54 @@
     </a>
 </div>
 </header>
+
+<!-- =========================================================
+     GOLDEN PARTNERS · SLIDER SUPERIOR
+========================================================= -->
+<section class="golden-strip" aria-label="Golden Partners actuales">
+  <div class="golden-strip-head">
+    <strong data-i18n="sliderTitle">Golden Partners actuales</strong>
+    <span data-i18n="sliderNote">Cada logo abre su landing o web en una nueva pestaña.</span>
+  </div>
+
+  <div class="logo-marquee">
+    <div class="logo-track">
+      <a class="golden-logo-card" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/enric.jpg" alt="Uniasser Consulting"></div>
+        <div class="golden-logo-copy"><b>Uniasser Consulting</b><span data-i18n="sliderCat1">IA &amp; Tecnología</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
+      </a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/jesus.jpg" alt="Salesnite"></div>
+        <div class="golden-logo-copy"><b>Salesnite</b><span data-i18n="sliderCat2">Ventas, Revenue &amp; GTM</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
+      </a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/raul.jpg" alt="Nakama Kapital"></div>
+        <div class="golden-logo-copy"><b>Nakama Kapital</b><span>Corporate Finance</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
+      </a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/maider.jpg" alt="L de Líder"></div>
+        <div class="golden-logo-copy"><b>L de Líder</b><span data-i18n="sliderCat4">Liderazgo</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
+      </a>
+      <a class="golden-logo-card" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/jorge.jpg" alt="MIAU Consulting"></div>
+        <div class="golden-logo-copy"><b>MIAU Consulting</b><span data-i18n="sliderCat5">Estrategia, Marketing &amp; IA</span><small data-i18n="sliderOpenWeb">Ver web del Golden</small></div>
+      </a>
+      <a class="golden-logo-card" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/asia.png" alt="Emprende360 Asia"></div>
+        <div class="golden-logo-copy"><b>Emprende360 Asia</b><span data-i18n="sliderCat6">Asia · Sourcing &amp; Market Access</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
+      </a>
+
+      <!-- Duplicados para loop continuo -->
+      <a class="golden-logo-card" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/enric.jpg" alt=""></div><div class="golden-logo-copy"><b>Uniasser Consulting</b><span data-i18n="sliderCat1">IA &amp; Tecnología</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/jesus.jpg" alt=""></div><div class="golden-logo-copy"><b>Salesnite</b><span data-i18n="sliderCat2">Ventas, Revenue &amp; GTM</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/raul.jpg" alt=""></div><div class="golden-logo-copy"><b>Nakama Kapital</b><span>Corporate Finance</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/maider.jpg" alt=""></div><div class="golden-logo-copy"><b>L de Líder</b><span data-i18n="sliderCat4">Liderazgo</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
+      <a class="golden-logo-card" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/jorge.jpg" alt=""></div><div class="golden-logo-copy"><b>MIAU Consulting</b><span data-i18n="sliderCat5">Estrategia, Marketing &amp; IA</span><small data-i18n="sliderOpenWeb">Ver web del Golden</small></div></a>
+      <a class="golden-logo-card" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/asia.png" alt=""></div><div class="golden-logo-copy"><b>Emprende360 Asia</b><span data-i18n="sliderCat6">Asia · Sourcing &amp; Market Access</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
+    </div>
+  </div>
+</section>
+
 <main>
 <!-- =========================================================
      HERO
@@ -2617,248 +2825,58 @@
 <section class="section golden-section" id="golden">
 <div class="wrap">
 <div class="golden-intro reveal">
-<span class="pill gold" data-i18n="goldenPill">
-        Golden Partners · Q4 2026
-      </span>
-<h2 data-i18n="goldenTitle">
-        Ocho áreas estratégicas. Un Golden Partner principal por vertical.
-      </h2>
-<p class="lead" data-i18n="goldenLead">
-        Los Golden Partners acompañan durante Q4 las conversaciones de Emprende360 alrededor de mercados donde existe un buyer, un problema y una razón real para estar presentes. Cuatro verticales ya cuentan con Golden Partner confirmado.
-      </p>
-<p class="small" data-i18n="goldenSmall">
-        No compran autoridad editorial ni una base de contactos. Ocupan una posición recurrente y contextual dentro del ecosistema.
-      </p>
+<span class="pill gold" data-i18n="goldenPill">Golden Partners</span>
+<h2 data-i18n="goldenTitle">Una categoría. Un Golden Partner principal.</h2>
+<p class="lead" data-i18n="goldenLead">Los Golden Partners combinan posicionamiento, conversaciones, contenido, radar de oportunidades y activación B2B alrededor de una categoría concreta. Seis posiciones ya están activas.</p>
+<p class="small" data-i18n="goldenSmall">La posición principal se protege frente a competidores directos mientras el Golden está activo. La continuidad tiene prioridad antes de volver a abrir la categoría.</p>
 </div>
 <div class="golden-grid reveal">
-<!-- GOLDEN 1 · CONFIRMADO -->
+
 <article class="golden-card">
-<div class="golden-top">
-<a aria-label="Uniasser Consulting · Golden Partner IA y Tecnología" class="golden-logo" href="https://emprende360.club/golden/ia-tecnologia" rel="noopener noreferrer" target="_blank">
-<img alt="Uniasser Consulting" loading="lazy" src="https://emprende360.club/enric.jpg"/>
-</a>
-<span class="golden-slot confirmed" data-i18n="golden1Slot">
-            Confirmado septiembre
-          </span>
-</div>
-<h3 data-i18n="golden1Title">
-          IA &amp; Tecnología
-        </h3>
-<p data-i18n="golden1Text">
-          IA aplicada, automatización, agentes, software, datos y transformación tecnológica.
-        </p>
-<div class="golden-company">
-<b data-i18n="golden1CompanyLabel">
-            Golden Partner
-          </b>
-<a href="https://uniasser.com" rel="noopener noreferrer" target="_blank">
-            Uniasser Consulting
-          </a>
-</div>
-<a class="golden-link" data-i18n="golden1Link" href="https://emprende360.club/golden/ia-tecnologia" rel="noopener noreferrer" target="_blank">
-          Ver Golden Partner →
-        </a>
+<div class="golden-top"><a class="golden-logo" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer"><img alt="Uniasser Consulting" loading="lazy" src="https://emprende360.club/enric.jpg"/></a><span class="golden-slot confirmed" data-i18n="goldenActive">Golden activo</span></div>
+<h3 data-i18n="golden1Title">IA &amp; Tecnología</h3><p data-i18n="golden1Text">IA aplicada, automatización, agentes, software, datos y transformación tecnológica.</p>
+<div class="golden-company"><b>Golden Partner</b><a href="https://uniasser.com" target="_blank" rel="noopener noreferrer">Uniasser Consulting</a></div><a class="golden-link" data-i18n="goldenView" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer">Ver Golden Partner →</a>
 </article>
-<!-- GOLDEN 2 · CONFIRMADO -->
+
 <article class="golden-card">
-<div class="golden-top">
-<a aria-label="Salesnite · Golden Partner Ventas, Revenue y GTM" class="golden-logo" href="https://emprende360.club/golden/revenue-gtm" rel="noopener noreferrer" target="_blank">
-<img alt="Salesnite" loading="lazy" src="https://emprende360.club/jesus.jpg"/>
-</a>
-<span class="golden-slot confirmed" data-i18n="golden2Slot">
-            Confirmado septiembre
-          </span>
-</div>
-<h3 data-i18n="golden2Title">
-          Ventas, Revenue &amp; GTM
-        </h3>
-<p data-i18n="golden2Text">
-          Ventas B2B, pipeline, prospección, RevOps, desarrollo comercial y crecimiento.
-        </p>
-<div class="golden-company">
-<b data-i18n="golden2CompanyLabel">
-            Golden Partner
-          </b>
-<a href="https://salesnite.co" rel="noopener noreferrer" target="_blank">
-            Salesnite
-          </a>
-</div>
-<a class="golden-link" data-i18n="golden2Link" href="https://emprende360.club/golden/revenue-gtm" rel="noopener noreferrer" target="_blank">
-          Ver Golden Partner →
-        </a>
+<div class="golden-top"><a class="golden-logo" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer"><img alt="Salesnite" loading="lazy" src="https://emprende360.club/jesus.jpg"/></a><span class="golden-slot confirmed" data-i18n="goldenActive">Golden activo</span></div>
+<h3 data-i18n="golden2Title">Ventas, Revenue &amp; GTM</h3><p data-i18n="golden2Text">Ventas B2B, pipeline, prospección, RevOps, desarrollo comercial y crecimiento.</p>
+<div class="golden-company"><b>Golden Partner</b><a href="https://salesnite.co" target="_blank" rel="noopener noreferrer">Salesnite</a></div><a class="golden-link" data-i18n="goldenView" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer">Ver Golden Partner →</a>
 </article>
-<!-- GOLDEN 3 · CONFIRMADO -->
+
 <article class="golden-card">
-<div class="golden-top">
-<a aria-label="Nakama Kapital · Golden Partner Corporate Finance" class="golden-logo" href="https://emprende360.club/golden/corporate-finance" rel="noopener noreferrer" target="_blank">
-<img alt="Nakama Kapital" loading="lazy" src="https://emprende360.club/raul.jpg"/>
-</a>
-<span class="golden-slot confirmed" data-i18n="golden3Slot">
-            Confirmado septiembre
-          </span>
-</div>
-<h3 data-i18n="golden3Title">
-          Corporate Finance
-        </h3>
-<p data-i18n="golden3Text">
-          CFO, financiación, control financiero, M&amp;A, valoración, deuda y crecimiento rentable.
-        </p>
-<div class="golden-company">
-<b data-i18n="golden3CompanyLabel">
-            Golden Partner
-          </b>
-<a href="https://nakamakapital.com" rel="noopener noreferrer" target="_blank">
-            Nakama Kapital
-          </a>
-</div>
-<a class="golden-link" data-i18n="golden3Link" href="https://emprende360.club/golden/corporate-finance" rel="noopener noreferrer" target="_blank">
-          Ver Golden Partner →
-        </a>
+<div class="golden-top"><a class="golden-logo" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer"><img alt="Nakama Kapital" loading="lazy" src="https://emprende360.club/raul.jpg"/></a><span class="golden-slot confirmed" data-i18n="goldenActive">Golden activo</span></div>
+<h3>Corporate Finance</h3><p data-i18n="golden3Text">CFO, financiación, control financiero, M&amp;A, valoración, deuda y crecimiento rentable.</p>
+<div class="golden-company"><b>Golden Partner</b><a href="https://nakamakapital.com" target="_blank" rel="noopener noreferrer">Nakama Kapital</a></div><a class="golden-link" data-i18n="goldenView" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer">Ver Golden Partner →</a>
 </article>
-<!-- GOLDEN 4 · ABIERTA -->
+
 <article class="golden-card">
-<div class="golden-top">
-<div class="golden-icon">
-            👥
-          </div>
-<span class="golden-slot" data-i18n="golden4Slot">
-            Plaza Q4 abierta
-          </span>
-</div>
-<h3 data-i18n="golden4Title">
-          Talento &amp; Organización
-        </h3>
-<p data-i18n="golden4Text">
-          Executive Search, talento, capacidades, organización, people y transformación de equipos.
-        </p>
-<div class="golden-company">
-<b data-i18n="golden4CompanyLabel">
-            Golden Partner
-          </b>
-          Próximamente
-        </div>
-<a class="golden-link" data-i18n="golden4Link" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">
-          Valorar esta vertical →
-        </a>
+<div class="golden-top"><a class="golden-logo" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer"><img alt="L de Líder" loading="lazy" src="https://emprende360.club/maider.jpg"/></a><span class="golden-slot confirmed" data-i18n="goldenActive">Golden activo</span></div>
+<h3 data-i18n="golden5Title">Liderazgo</h3><p data-i18n="golden5Text">Dirección, equipos, cambio, toma de decisiones y evolución del rol del líder.</p>
+<div class="golden-company"><b>Golden Partner</b><a href="https://ldelider.es" target="_blank" rel="noopener noreferrer">L de Líder</a></div><a class="golden-link" data-i18n="goldenView" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer">Ver Golden Partner →</a>
 </article>
-<!-- GOLDEN 5 · CONFIRMADO -->
+
 <article class="golden-card">
-<div class="golden-top">
-<a aria-label="L de Líder · Golden Partner Liderazgo" class="golden-logo" href="https://emprende360.club/golden/liderazgo" rel="noopener noreferrer" target="_blank">
-<img alt="L de Líder" loading="lazy" src="https://emprende360.club/maider.jpg"/>
-</a>
-<span class="golden-slot confirmed" data-i18n="golden5Slot">
-            Confirmado septiembre
-          </span>
-</div>
-<h3 data-i18n="golden5Title">
-          Liderazgo
-        </h3>
-<p data-i18n="golden5Text">
-          Dirección, equipos, cambio, toma de decisiones y evolución del rol del líder.
-        </p>
-<div class="golden-company">
-<b data-i18n="golden5CompanyLabel">
-            Golden Partner
-          </b>
-<a href="https://ldelider.es" rel="noopener noreferrer" target="_blank">
-            L de Líder
-          </a>
-</div>
-<a class="golden-link" data-i18n="golden5Link" href="https://emprende360.club/golden/liderazgo" rel="noopener noreferrer" target="_blank">
-          Ver Golden Partner →
-        </a>
+<div class="golden-top"><a class="golden-logo" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer"><img alt="MIAU Consulting" loading="lazy" src="https://emprende360.club/jorge.jpg"/></a><span class="golden-slot confirmed" data-i18n="goldenActive">Golden activo</span></div>
+<h3 data-i18n="golden6Title">Branding, Marketing &amp; Estrategia</h3><p data-i18n="golden6Text">Posicionamiento, estrategia, marketing, comunicación, IA aplicada y generación de demanda.</p>
+<div class="golden-company"><b>Golden Partner</b><a href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer">MIAU Consulting</a></div><a class="golden-link" data-i18n="goldenViewWeb" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer">Ver web del Golden →</a>
 </article>
-<!-- GOLDEN 6 · ABIERTA -->
+
 <article class="golden-card">
-<div class="golden-top">
-<div class="golden-icon">
-            ◎
-          </div>
-<span class="golden-slot" data-i18n="golden6Slot">
-            Plaza Q4 abierta
-          </span>
-</div>
-<h3 data-i18n="golden6Title">
-          Branding &amp; Marketing B2B
-        </h3>
-<p data-i18n="golden6Text">
-          Posicionamiento, comunicación, marca, contenido y generación de demanda B2B.
-        </p>
-<div class="golden-company">
-<b data-i18n="golden6CompanyLabel">
-            Golden Partner
-          </b>
-          Próximamente
-        </div>
-<a class="golden-link" data-i18n="golden6Link" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">
-          Valorar esta vertical →
-        </a>
+<div class="golden-top"><a class="golden-logo" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer"><img alt="Emprende360 Asia" loading="lazy" src="https://emprende360.club/asia.png"/></a><span class="golden-slot confirmed" data-i18n="goldenActive">Golden activo</span></div>
+<h3 data-i18n="goldenAsiaTitle">Asia · Sourcing &amp; Market Access</h3><p data-i18n="goldenAsiaText">Sourcing, fabricantes, desarrollo comercial y acceso entre Asia, España y mercados hispanohablantes.</p>
+<div class="golden-company"><b>Golden Partner</b><a href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer">Emprende360 Asia</a></div><a class="golden-link" data-i18n="goldenView" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer">Ver Golden Partner →</a>
 </article>
-<!-- GOLDEN 7 · ABIERTA -->
-<article class="golden-card">
-<div class="golden-top">
-<div class="golden-icon">
-            🚀
-          </div>
-<span class="golden-slot" data-i18n="golden7Slot">
-            Plaza Q4 abierta
-          </span>
+
+<article class="golden-card"><div class="golden-top"><div class="golden-icon">👥</div><span class="golden-slot" data-i18n="goldenOpen">Categoría abierta</span></div><h3 data-i18n="golden4Title">Talento &amp; Organización</h3><p data-i18n="golden4Text">Executive Search, talento, capacidades, organización, people y transformación de equipos.</p><div class="golden-company"><b>Golden Partner</b><span data-i18n="goldenAvailable">Disponible</span></div><a class="golden-link" data-i18n="goldenConsider" href="https://emprende360.club/golden-partners" target="_blank" rel="noopener noreferrer">Valorar esta categoría →</a></article>
+
+<article class="golden-card"><div class="golden-top"><div class="golden-icon">🚀</div><span class="golden-slot" data-i18n="goldenOpen">Categoría abierta</span></div><h3 data-i18n="golden7Title">Emprendimiento</h3><p data-i18n="golden7Text">De idea a negocio: validación, oferta, cliente, precio, foco y primeras ventas.</p><div class="golden-company"><b>Golden Partner</b><span data-i18n="goldenAvailable">Disponible</span></div><a class="golden-link" data-i18n="goldenConsider" href="https://emprende360.club/golden-partners" target="_blank" rel="noopener noreferrer">Valorar esta categoría →</a></article>
+
+<article class="golden-card"><div class="golden-top"><div class="golden-icon">◈</div><span class="golden-slot" data-i18n="goldenOpen">Categoría abierta</span></div><h3 data-i18n="golden8Title">Founders &amp; Inversión</h3><p data-i18n="golden8Text">Empresas validadas, crecimiento, financiación, inversión y relaciones con capital.</p><div class="golden-company"><b>Golden Partner</b><span data-i18n="goldenAvailable">Disponible</span></div><a class="golden-link" data-i18n="goldenConsider" href="https://emprende360.club/golden-partners" target="_blank" rel="noopener noreferrer">Valorar esta categoría →</a></article>
+
 </div>
-<h3 data-i18n="golden7Title">
-          Emprendimiento
-        </h3>
-<p data-i18n="golden7Text">
-          De idea a negocio: validación, oferta, cliente, precio, foco y primeras ventas.
-        </p>
-<div class="golden-company">
-<b data-i18n="golden7CompanyLabel">
-            Golden Partner
-          </b>
-          Próximamente
-        </div>
-<a class="golden-link" data-i18n="golden7Link" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">
-          Valorar esta vertical →
-        </a>
-</article>
-<!-- GOLDEN 8 · ABIERTA -->
-<article class="golden-card">
-<div class="golden-top">
-<div class="golden-icon">
-            ◈
-          </div>
-<span class="golden-slot" data-i18n="golden8Slot">
-            Plaza Q4 abierta
-          </span>
-</div>
-<h3 data-i18n="golden8Title">
-          Founders &amp; Inversión
-        </h3>
-<p data-i18n="golden8Text">
-          Empresas validadas, crecimiento, financiación, inversión y relaciones con capital.
-        </p>
-<div class="golden-company">
-<b data-i18n="golden8CompanyLabel">
-            Golden Partner
-          </b>
-          Próximamente
-        </div>
-<a class="golden-link" data-i18n="golden8Link" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">
-          Valorar esta vertical →
-        </a>
-</article>
-</div>
-<div class="golden-actions reveal">
-<a class="btn btn-primary" data-i18n="goldenBtn1" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">
-        Conocer Golden Partners →
-      </a>
-<a class="btn btn-secondary" data-i18n="goldenBtn2" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">
-        Quiero valorar una vertical
-      </a>
-</div>
-<p class="small center reveal" data-i18n="goldenNote" style="margin-top:16px;">
-      Una empresa principal por vertical durante Q4. La participación y las condiciones están sujetas a encaje y disponibilidad.
-    </p>
+<div class="golden-actions reveal"><a class="btn btn-primary" data-i18n="goldenBtn1" href="https://emprende360.club/golden-partners" target="_blank" rel="noopener noreferrer">Conocer Golden Partners →</a></div>
+<p class="small center reveal" data-i18n="goldenNote" style="margin-top:16px;">Cada posición está sujeta a encaje, disponibilidad y ausencia de conflictos relevantes con un Golden activo.</p>
 </div>
 </section>
 <!-- =========================================================
@@ -2929,178 +2947,35 @@
 </div>
 </section>
 <!-- =========================================================
-     WORK WITH EMPRENDE360
+     TRABAJA CON EMPRENDE360 · GOLDEN PARTNERS
 ========================================================= -->
 <section class="section products" id="trabaja">
 <div class="wrap">
 <div class="center reveal">
-<span class="kicker" data-i18n="productsKicker">
-        ¿Quieres ir más allá de participar?
-      </span>
-<h2 data-i18n="productsTitle">Cuatro formas de trabajar directamente con Emprende360.</h2>
-<p class="lead" data-i18n="productsLead">Desde una activación corta hasta un sistema de 90 días para construir pipeline o una posición recurrente dentro del ecosistema. Elige según tu punto de partida, tu tipo de negocio y la profundidad de trabajo que necesitas.</p>
+<span class="kicker" data-i18n="productsKicker">Trabaja directamente con Emprende360</span>
+<h2 data-i18n="productsTitle">Golden Partners es nuestro sistema principal de activación B2B.</h2>
+<p class="lead" data-i18n="productsLead">Una sola propuesta que combina posicionamiento, radar de oportunidades, señales de mercado, relaciones, contexto, eventos, contenido, activación y seguimiento alrededor de tu categoría.</p>
 </div>
-<div class="products-grid reveal"><!-- IMPULSO B2B --><article class="product-card impulso">
-<div class="product-head">
-<div class="product-icon">↗</div>
-<span class="product-label" data-i18n="product1Label">Formato corto · 30 días</span>
-</div>
-<h3 data-i18n="product1Title">Impulso B2B</h3>
-<div class="product-job" data-i18n="product1Job">
-    Quiero activar un buyer, una oportunidad o un mercado concreto.
-  </div>
-<p data-i18n="product1Text">
-    Un formato de entrada para ordenar foco comercial, identificar relaciones relevantes
-    y activar conversaciones con más contexto durante un periodo corto.
-  </p>
+<div class="products-grid reveal" style="grid-template-columns:minmax(0,860px);justify-content:center;">
+<article class="product-card golden" style="min-height:auto;">
+<div class="product-head"><div class="product-icon">★</div><span class="product-label" data-i18n="product4Label">Sistema B2B · 30 días, 90 días o anual</span></div>
+<h3>Golden Partners</h3>
+<div class="product-job" data-i18n="product4Job">Quiero que mi categoría se trabaje de forma activa, no aparecer una vez y desaparecer.</div>
+<p data-i18n="product4Text">Cada periodo empieza definiendo buyer, problema, señales y situaciones donde tu solución puede tener sentido. A partir de ahí combinamos red, radar, contenido, Foros, Rondas y activación relacional para detectar y trabajar conversaciones relevantes.</p>
 <ul class="product-list">
-<li><span class="check">✓</span><span data-i18n="product1Item1">Foco alrededor de un buyer u objetivo comercial concreto.</span></li>
-<li><span class="check">✓</span><span data-i18n="product1Item2">Selección de perfiles, relaciones y posibles cruces.</span></li>
-<li><span class="check">✓</span><span data-i18n="product1Item3">Contextos para facilitar conversaciones B2B con sentido.</span></li>
-<li><span class="check">✓</span><span data-i18n="product1Item4">Activación desde red, ecosistema y oportunidades detectadas.</span></li>
-<li><span class="check">✓</span><span data-i18n="product1Item5">Seguimiento durante el periodo de activación.</span></li>
+<li><span class="check">✓</span><span data-i18n="product4Item1">Posición principal y protegida dentro de una categoría.</span></li>
+<li><span class="check">✓</span><span data-i18n="product4Item2">Radar continuo de empresas, señales y situaciones relevantes.</span></li>
+<li><span class="check">✓</span><span data-i18n="product4Item3">Foros, Rondas, contenidos y conversaciones alrededor de tu mercado.</span></li>
+<li><span class="check">✓</span><span data-i18n="product4Item4">Búsqueda de caminos de acceso y activación cuando existe una buena razón para hablar.</span></li>
+<li><span class="check">✓</span><span data-i18n="product4Item5">Seguimiento, aprendizaje y prioridad para renovar antes de reabrir la categoría.</span></li>
 </ul>
 <div class="product-bottom">
-<div class="product-highlight">
-<strong data-i18n="product1Highlight">Activación B2B · 30 días</strong>
-<span data-i18n="product1HighlightText">
-        Para probar foco, mensaje y activación sin empezar directamente por un programa más profundo.
-      </span>
+<div class="product-highlight"><strong data-i18n="product4Highlight">590 € / 30 días · 1.690 € / 90 días · 5.900 € / año</strong><span data-i18n="product4HighlightText">Puedes empezar un mes. Si continúa teniendo sentido, el Golden activo tiene prioridad para mantener su posición.</span></div>
+<div class="product-cta"><a class="btn btn-blue" data-i18n="product4Cta" href="https://emprende360.club/golden-partners" target="_blank" rel="noopener noreferrer">Explorar Golden Partners →</a></div>
 </div>
-<div class="product-cta">
-<a class="btn btn-primary" data-i18n="product1Cta" href="https://emprende360.club/impulsob2b" rel="noopener noreferrer" target="_blank">
-        Conocer Impulso B2B →
-      </a>
+</article>
 </div>
-</div>
-</article><!-- ACTIVACIÓN B2B --><article class="product-card activation">
-<div class="product-head">
-<div class="product-icon">◎</div>
-<span class="product-label" data-i18n="product2Label">Empresas y servicios B2B</span>
-</div>
-<h3 data-i18n="product2Title">Activación B2B</h3>
-<div class="product-job" data-i18n="product2Job">
-    Quiero construir un sistema de activación alrededor de un buyer prioritario.
-  </div>
-<p data-i18n="product2Text">
-    Un trabajo de 90 días para pasar de contactos dispersos y acciones aisladas a una
-    activación comercial más selectiva: buyer definido, señales, relaciones, contexto,
-    seguimiento y aprendizaje continuo.
-  </p>
-<ul class="product-list">
-<li><span class="check">✓</span><span data-i18n="product2Item1">Diagnóstico y definición de buyer prioritario.</span></li>
-<li><span class="check">✓</span><span data-i18n="product2Item2">Mapa de intención, universo objetivo y señales relevantes.</span></li>
-<li><span class="check">✓</span><span data-i18n="product2Item3">Warm paths, relaciones existentes y activaciones cualificadas.</span></li>
-<li><span class="check">✓</span><span data-i18n="product2Item4">Contextos propios: conversación, introducción, evento o activación directa.</span></li>
-<li><span class="check">✓</span><span data-i18n="product2Item5">Seguimiento, dashboard y revisión del sistema durante 90 días.</span></li>
-</ul>
-<div class="product-bottom">
-<div class="product-highlight">
-<strong data-i18n="product2Highlight">Menos volumen. Más intención, contexto y timing.</strong>
-<span data-i18n="product2HighlightText">
-        Especialmente pensado para empresas, boutiques y servicios B2B donde una relación correcta
-        puede tener un valor comercial alto.
-      </span>
-</div>
-<div class="product-cta">
-<a class="btn btn-activation" data-i18n="product2Cta" href="https://emprende360.club/sprint-activation" rel="noopener noreferrer" target="_blank">
-        Conocer Activación B2B →
-      </a>
-</div>
-</div>
-</article><!-- FRACTIONAL PIPELINE --><article class="product-card fractional">
-<div class="product-head">
-<div class="product-icon">◈</div>
-<span class="product-label" data-i18n="product3Label">Fractional · Interim · Advisors</span>
-</div>
-<h3 data-i18n="product3Title">Fractional Pipeline</h3>
-<div class="product-job" data-i18n="product3Job">
-    Quiero que mi siguiente cliente no dependa solo de una recomendación casual.
-  </div>
-<p data-i18n="product3Text">
-    Un sistema de 90 días para profesionales senior que venden experiencia y confianza:
-    Fractional CxO, interim managers, advisors y consultores especializados que necesitan
-    construir conversaciones con empresas donde exista fit, necesidad y timing.
-  </p>
-<ul class="product-list">
-<li><span class="check">✓</span><span data-i18n="product3Item1">Activación de tu propia red y relaciones ya existentes.</span></li>
-<li><span class="check">✓</span><span data-i18n="product3Item2">Acceso contextual al ecosistema de Emprende360 cuando exista encaje.</span></li>
-<li><span class="check">✓</span><span data-i18n="product3Item3">Exploración de mercado externo y señales de oportunidad.</span></li>
-<li><span class="check">✓</span><span data-i18n="product3Item4">Priorización por fit, intención, trigger y relación.</span></li>
-<li><span class="check">✓</span><span data-i18n="product3Item5">Activación, seguimiento y aprendizaje durante 90 días.</span></li>
-</ul>
-<div class="product-bottom">
-<div class="product-highlight">
-<strong data-i18n="product3Highlight">Pipeline para perfiles senior B2B.</strong>
-<span data-i18n="product3HighlightText">
-        No se basa en enviar más mensajes, sino en identificar dónde existe una razón real
-        para iniciar conversación.
-      </span>
-</div>
-<div class="product-cta">
-<a class="btn btn-fractional" data-i18n="product3Cta" href="https://emprende360.club/fractional-pipeline" rel="noopener noreferrer" target="_blank">
-        Conocer Fractional Pipeline →
-      </a>
-</div>
-</div>
-</article><!-- GOLDEN PARTNERS --><article class="product-card golden">
-<div class="product-head">
-<div class="product-icon">★</div>
-<span class="product-label" data-i18n="product4Label">Para empresas B2B</span>
-</div>
-<h3 data-i18n="product4Title">Golden Partners</h3>
-<div class="product-job" data-i18n="product4Job">
-    Quiero posicionar mi empresa dentro de una vertical.
-  </div>
-<p data-i18n="product4Text">
-    Una posición recurrente durante Q4 alrededor de una vertical concreta y de las
-    conversaciones donde tu solución tiene una razón real para estar presente.
-  </p>
-<ul class="product-list">
-<li><span class="check">✓</span><span data-i18n="product4Item1">Una empresa principal por vertical.</span></li>
-<li><span class="check">✓</span><span data-i18n="product4Item2">Presencia recurrente durante octubre, noviembre y diciembre.</span></li>
-<li><span class="check">✓</span><span data-i18n="product4Item3">Foros, conversación propia y presencia transversal acordada.</span></li>
-<li><span class="check">✓</span><span data-i18n="product4Item4">Landing específica y presencia en activos de Emprende360.</span></li>
-<li><span class="check">✓</span><span data-i18n="product4Item5">Contexto recurrente alrededor de mercados y conversaciones relevantes.</span></li>
-</ul>
-<div class="product-bottom">
-<div class="product-highlight">
-<strong data-i18n="product4Highlight">1.490 € · Q4</strong>
-<span data-i18n="product4HighlightText">
-        Edición Founding · una empresa principal por vertical · sujeto a encaje y disponibilidad.
-      </span>
-</div>
-<div class="product-cta">
-<a class="btn btn-blue" data-i18n="product4Cta" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">
-        Explorar Golden Partners →
-      </a>
-</div>
-</div>
-</article></div>
-<div class="asia-service-strip reveal">
-<div class="asia-service-icon">🌏</div>
-<div class="asia-service-copy">
-<span class="asia-service-kicker" data-i18n="asiaKicker">Emprende360 Asia · Nueva línea</span>
-<h3 data-i18n="asiaTitle">¿Tu empresa compra, fabrica o busca proveedores en Asia?</h3>
-<p data-i18n="asiaText">
-      Desde nuestra base operativa en Vietnam identificamos, contactamos y evaluamos
-      fabricantes en Vietnam, China y otros mercados asiáticos. Partimos de una necesidad
-      real de compra y buscamos después la capacidad industrial adecuada.
-    </p>
-<div class="asia-service-tags">
-<span data-i18n="asiaTag1">Sourcing</span>
-<span data-i18n="asiaTag2">Fabricantes</span>
-<span data-i18n="asiaTag3">Vietnam</span>
-<span data-i18n="asiaTag4">China</span>
-<span data-i18n="asiaTag5">Desarrollo comercial</span>
-</div>
-</div>
-<div class="asia-service-cta">
-<a class="btn btn-asia" data-i18n="asiaCta" href="https://emprende360.club/asia" rel="noopener noreferrer" target="_blank">
-      Explorar Emprende360 Asia →
-    </a>
-</div>
-</div><p class="small center reveal" data-i18n="productsNote" style="margin-top:20px;">Participar en las Rondas, Foros, entrevistas y conversaciones abiertas de Emprende360 no requiere contratar ningún servicio ni ser Golden Partner.</p>
+<p class="small center reveal" data-i18n="productsNote" style="margin-top:20px;">Participar en las Rondas, Foros, entrevistas y conversaciones abiertas de Emprende360 no requiere ser Golden Partner.</p>
 </div>
 </section>
 <!-- =========================================================
@@ -3188,7 +3063,7 @@
           Recibir próximos eventos
         </a>
 </div>
-<div class="final-secondary"><span data-i18n="finalSecondaryIntro">¿Quieres trabajar directamente con Emprende360? Elige la vía que encaje mejor:</span><div class="service-links"><a data-i18n="finalService1" href="https://emprende360.club/impulsob2b" rel="noopener noreferrer" target="_blank">Impulso B2B →</a><a data-i18n="finalService2" href="https://emprende360.club/sprint-activation" rel="noopener noreferrer" target="_blank">Activación B2B →</a><a data-i18n="finalService3" href="https://emprende360.club/fractional-pipeline" rel="noopener noreferrer" target="_blank">Fractional Pipeline →</a><a data-i18n="finalService4" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Golden Partners →</a><a data-i18n="finalService5" href="https://emprende360.club/asia" rel="noopener noreferrer" target="_blank">Emprende360 Asia →</a></div></div>
+<div class="final-secondary"><span data-i18n="finalSecondaryIntro">¿Quieres trabajar directamente con Emprende360?</span> <a data-i18n="finalService4" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Conocer Golden Partners →</a></div>
 </div>
 </div>
 </section>
@@ -3204,27 +3079,12 @@
       </strong>
 <br/><span data-i18n="footerTagline">Conversaciones · Contexto · Relaciones B2B</span></div>
 <div class="footer-links">
-<a data-i18n="footerLink1" href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank">
-        Eventos
-      </a>
-<a data-i18n="footerLink2" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">
-        Golden Partners
-      </a><a data-i18n="footerLink3" href="https://emprende360.club/asia" rel="noopener noreferrer" target="_blank">Emprende360 Asia</a>
-<a data-i18n="footerLink4" href="https://emprende360.club/impulsob2b" rel="noopener noreferrer" target="_blank">
-        Impulso B2B
-      </a><a data-i18n="footerLink5" href="https://emprende360.club/sprint-activation" rel="noopener noreferrer" target="_blank">Activación B2B</a><a data-i18n="footerLink6" href="https://emprende360.club/fractional-pipeline" rel="noopener noreferrer" target="_blank">Fractional Pipeline</a>
-<a data-i18n="footerLink7" href="https://es.linkedin.com/in/albertoporrasmoreno" rel="noopener noreferrer" target="_blank">
-        Alberto Porras
-      </a>
-<a data-i18n="footerLink8" href="https://www.linkedin.com/in/jorgeiparraguirre/" rel="noopener noreferrer" target="_blank">
-        Jorge Iparraguirre
-      </a>
-<a data-i18n="footerLink9" href="https://emprende360.club/privacidad" rel="noopener noreferrer" target="_blank">
-        Privacidad
-      </a>
-<a data-i18n="footerLink10" href="https://emprende360.club/aviso-legal" rel="noopener noreferrer" target="_blank">
-        Aviso legal
-      </a>
+<a data-i18n="footerLink1" href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank">Eventos</a>
+<a data-i18n="footerLink2" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Golden Partners</a>
+<a data-i18n="footerLink7" href="https://es.linkedin.com/in/albertoporrasmoreno" rel="noopener noreferrer" target="_blank">Alberto Porras</a>
+<a data-i18n="footerLink8" href="https://www.linkedin.com/in/jorgeiparraguirre/" rel="noopener noreferrer" target="_blank">Jorge Iparraguirre</a>
+<a data-i18n="footerLink9" href="https://emprende360.club/privacidad" rel="noopener noreferrer" target="_blank">Privacidad</a>
+<a data-i18n="footerLink10" href="https://emprende360.club/aviso-legal" rel="noopener noreferrer" target="_blank">Aviso legal</a>
 </div>
 <div class="footer-legal" data-i18n="footerLegalText">
       Emprende360 facilita contexto, selección, visibilidad, activaciones, conversaciones y posibles relaciones B2B. No garantiza clientes, leads, reuniones, ventas, facturación, inversión, financiación, colaboraciones ni resultados concretos. La participación como Golden Partner está sujeta a encaje, disponibilidad y condiciones específicas de cada edición.
@@ -3272,10 +3132,10 @@
 const HOME_TRANSLATIONS = {
   "es": {
     "nav1": "Eventos",
-    "nav2": "Activación B2B",
-    "nav3": "Fractional Pipeline",
-    "nav4": "Golden Partners",
-    "nav5": "Asia",
+    "nav2": "En acción",
+    "nav3": "Golden Partners",
+    "nav4": "Work with Emprende360",
+    "nav5": "Golden Partners",
     "navCta": "Ver próximos eventos",
     "heroPill": "Participación abierta",
     "heroTitle": "Conversaciones B2B que merece la pena tener.",
@@ -3331,10 +3191,10 @@ const HOME_TRANSLATIONS = {
     "side2Link": "Ver agenda →",
     "actionBtn1": "Ver próximos eventos →",
     "actionBtn2": "Recibir próximas conversaciones",
-    "goldenPill": "Golden Partners · Q4 2026",
-    "goldenTitle": "Ocho áreas estratégicas. Un Golden Partner principal por vertical.",
-    "goldenLead": "Los Golden Partners acompañan durante Q4 las conversaciones de Emprende360 alrededor de mercados donde existe un buyer, un problema y una razón real para estar presentes. Cuatro verticales ya cuentan con Golden Partner confirmado.",
-    "goldenSmall": "No compran autoridad editorial ni una base de contactos. Ocupan una posición recurrente y contextual dentro del ecosistema.",
+    "goldenPill": "Golden Partners",
+    "goldenTitle": "Una categoría. Un Golden Partner principal.",
+    "goldenLead": "Los Golden Partners combinan posicionamiento, conversaciones, contenido, radar de oportunidades y activación B2B alrededor de una categoría concreta. Seis posiciones ya están activas.",
+    "goldenSmall": "La posición principal se protege frente a competidores directos mientras el Golden está activo. La continuidad tiene prioridad antes de volver a abrir la categoría.",
     "golden1Slot": "Confirmado septiembre",
     "golden1Title": "IA & Tecnología",
     "golden1Text": "IA aplicada, automatización, agentes, software, datos y transformación tecnológica.",
@@ -3361,8 +3221,8 @@ const HOME_TRANSLATIONS = {
     "golden5CompanyLabel": "Golden Partner",
     "golden5Link": "Ver Golden Partner →",
     "golden6Slot": "Plaza Q4 abierta",
-    "golden6Title": "Branding & Marketing B2B",
-    "golden6Text": "Posicionamiento, comunicación, marca, contenido y generación de demanda B2B.",
+    "golden6Title": "Branding, Marketing & Estrategia",
+    "golden6Text": "Posicionamiento, estrategia, marketing, comunicación, IA aplicada y generación de demanda.",
     "golden6CompanyLabel": "Golden Partner",
     "golden6Link": "Valorar esta vertical →",
     "golden7Slot": "Plaza Q4 abierta",
@@ -3377,7 +3237,24 @@ const HOME_TRANSLATIONS = {
     "golden8Link": "Valorar esta vertical →",
     "goldenBtn1": "Conocer Golden Partners →",
     "goldenBtn2": "Quiero valorar una vertical",
-    "goldenNote": "Una empresa principal por vertical durante Q4. La participación y las condiciones están sujetas a encaje y disponibilidad.",
+    "goldenNote": "Cada posición está sujeta a encaje, disponibilidad y ausencia de conflictos relevantes con un Golden activo.",
+    "sliderTitle": "Golden Partners actuales",
+    "sliderNote": "Cada logo abre su landing o web en una nueva pestaña.",
+    "sliderCat1": "IA & Tecnología",
+    "sliderCat2": "Ventas, Revenue & GTM",
+    "sliderCat4": "Liderazgo",
+    "sliderCat5": "Estrategia, Marketing & IA",
+    "sliderCat6": "Asia · Sourcing & Market Access",
+    "sliderOpen": "Ver Golden Partner",
+    "sliderOpenWeb": "Ver web del Golden",
+    "goldenActive": "Golden activo",
+    "goldenOpen": "Categoría abierta",
+    "goldenAvailable": "Disponible",
+    "goldenView": "Ver Golden Partner →",
+    "goldenViewWeb": "Ver web del Golden →",
+    "goldenConsider": "Valorar esta categoría →",
+    "goldenAsiaTitle": "Asia · Sourcing & Market Access",
+    "goldenAsiaText": "Sourcing, fabricantes, desarrollo comercial y acceso entre Asia, España y mercados hispanohablantes.",
     "systemKicker": "Qué hay detrás",
     "systemTitle": "Red + selección + contexto + seguimiento.",
     "systemLead": "Tener contactos no significa tener relaciones activas. El valor aparece cuando existe una buena razón para iniciar la conversación.",
@@ -3390,9 +3267,9 @@ const HOME_TRANSLATIONS = {
     "flow3Text": "Ronda, Foro, entrevista, mesa o sesión privada: creamos una razón concreta para entrar en conversación.",
     "flow4Title": "Seguimiento",
     "flow4Text": "Cuando existe recorrido, la relación puede continuar hacia colaboración, partnership, oportunidad o negocio.",
-    "productsKicker": "¿Quieres ir más allá de participar?",
-    "productsTitle": "Cuatro formas de trabajar directamente con Emprende360.",
-    "productsLead": "Desde una activación corta hasta un sistema de 90 días para construir pipeline o una posición recurrente dentro del ecosistema. Elige según tu punto de partida, tu tipo de negocio y la profundidad de trabajo que necesitas.",
+    "productsKicker": "Trabaja directamente con Emprende360",
+    "productsTitle": "Golden Partners es nuestro sistema principal de activación B2B.",
+    "productsLead": "Una sola propuesta que combina posicionamiento, radar de oportunidades, señales de mercado, relaciones, contexto, eventos, contenido, activación y seguimiento alrededor de tu categoría.",
     "product1Label": "Formato corto · 30 días",
     "product1Title": "Impulso B2B",
     "product1Job": "Quiero activar un buyer, una oportunidad o un mercado concreto.",
@@ -3429,19 +3306,19 @@ const HOME_TRANSLATIONS = {
     "product3Item3": "Exploración de mercado externo y señales de oportunidad.",
     "product3Item4": "Priorización por fit, intención, trigger y relación.",
     "product3Item5": "Activación, seguimiento y aprendizaje durante 90 días.",
-    "product4Label": "Para empresas B2B",
+    "product4Label": "Sistema B2B · 30 días, 90 días o anual",
     "product4Title": "Golden Partners",
-    "product4Job": "Quiero posicionar mi empresa dentro de una vertical.",
-    "product4Text": "Una posición recurrente durante Q4 alrededor de una vertical concreta y de las\n    conversaciones donde tu solución tiene una razón real para estar presente.",
-    "product4Highlight": "1.490 € · Q4",
-    "product4HighlightText": "Edición Founding · una empresa principal por vertical · sujeto a encaje y disponibilidad.",
+    "product4Job": "Quiero que mi categoría se trabaje de forma activa, no aparecer una vez y desaparecer.",
+    "product4Text": "Cada periodo empieza definiendo buyer, problema, señales y situaciones donde tu solución puede tener sentido. A partir de ahí combinamos red, radar, contenido, Foros, Rondas y activación relacional para detectar y trabajar conversaciones relevantes.",
+    "product4Highlight": "590 € / 30 días · 1.690 € / 90 días · 5.900 € / año",
+    "product4HighlightText": "Puedes empezar un mes. Si continúa teniendo sentido, el Golden activo tiene prioridad para mantener su posición.",
     "product4Cta": "Explorar Golden Partners →",
-    "product4Item1": "Una empresa principal por vertical.",
-    "product4Item2": "Presencia recurrente durante octubre, noviembre y diciembre.",
-    "product4Item3": "Foros, conversación propia y presencia transversal acordada.",
-    "product4Item4": "Landing específica y presencia en activos de Emprende360.",
-    "product4Item5": "Contexto recurrente alrededor de mercados y conversaciones relevantes.",
-    "productsNote": "Participar en las Rondas, Foros, entrevistas y conversaciones abiertas de Emprende360 no requiere contratar ningún servicio ni ser Golden Partner.",
+    "product4Item1": "Posición principal y protegida dentro de una categoría.",
+    "product4Item2": "Radar continuo de empresas, señales y situaciones relevantes.",
+    "product4Item3": "Foros, Rondas, contenidos y conversaciones alrededor de tu mercado.",
+    "product4Item4": "Búsqueda de caminos de acceso y activación cuando existe una buena razón para hablar.",
+    "product4Item5": "Seguimiento, aprendizaje y prioridad para renovar antes de reabrir la categoría.",
+    "productsNote": "Participar en las Rondas, Foros, entrevistas y conversaciones abiertas de Emprende360 no requiere ser Golden Partner.",
     "asiaKicker": "Emprende360 Asia · Nueva línea",
     "asiaTitle": "¿Tu empresa compra, fabrica o busca proveedores en Asia?",
     "asiaText": "Desde nuestra base operativa en Vietnam identificamos, contactamos y evaluamos\n      fabricantes en Vietnam, China y otros mercados asiáticos. Partimos de una necesidad\n      real de compra y buscamos después la capacidad industrial adecuada.",
@@ -3464,11 +3341,11 @@ const HOME_TRANSLATIONS = {
     "finalLead": "Mira la agenda y entra en la sesión que realmente tenga sentido para ti. No necesitas pertenecer a una membresía ni contratar ningún servicio para participar en la parte abierta.",
     "finalBtn1": "Ver próximos eventos →",
     "finalBtn2": "Recibir próximos eventos",
-    "finalSecondaryIntro": "¿Quieres trabajar directamente con Emprende360? Elige la vía que encaje mejor:",
+    "finalSecondaryIntro": "¿Quieres trabajar directamente con Emprende360?",
     "finalService1": "Impulso B2B →",
     "finalService2": "Activación B2B →",
     "finalService3": "Fractional Pipeline →",
-    "finalService4": "Golden Partners →",
+    "finalService4": "Conocer Golden Partners →",
     "finalService5": "Emprende360 Asia →",
     "footerTagline": "Conversaciones · Contexto · Relaciones B2B",
     "footerLink1": "Eventos",
@@ -3485,10 +3362,10 @@ const HOME_TRANSLATIONS = {
   },
   "en": {
     "nav1": "Events",
-    "nav2": "B2B Activation",
-    "nav3": "Fractional Pipeline",
-    "nav4": "Golden Partners",
-    "nav5": "Asia",
+    "nav2": "In action",
+    "nav3": "Golden Partners",
+    "nav4": "Work with Emprende360",
+    "nav5": "Golden Partners",
     "navCta": "View upcoming events",
     "heroPill": "Open participation",
     "heroTitle": "B2B conversations worth having.",
@@ -3544,10 +3421,10 @@ const HOME_TRANSLATIONS = {
     "side2Link": "View agenda →",
     "actionBtn1": "View upcoming events →",
     "actionBtn2": "Receive upcoming conversations",
-    "goldenPill": "Golden Partners · Q4 2026",
-    "goldenTitle": "Eight strategic areas. One main Golden Partner per vertical.",
-    "goldenLead": "Golden Partners accompany Emprende360 conversations throughout Q4 in markets where there is a buyer, a problem and a real reason to be present. Four verticals already have a confirmed Golden Partner.",
-    "goldenSmall": "They do not buy editorial authority or a contact database. They hold a recurring, contextual position within the ecosystem.",
+    "goldenPill": "Golden Partners",
+    "goldenTitle": "One category. One main Golden Partner.",
+    "goldenLead": "Golden Partners combine positioning, conversations, content, opportunity radar and B2B activation around a specific category. Six positions are already active.",
+    "goldenSmall": "The main position is protected from direct competitors while the Golden is active. Active partners have priority before the category is reopened.",
     "golden1Slot": "Confirmed in September",
     "golden1Title": "AI & Technology",
     "golden1Text": "Applied AI, automation, agents, software, data and technology transformation.",
@@ -3574,8 +3451,8 @@ const HOME_TRANSLATIONS = {
     "golden5CompanyLabel": "Golden Partner",
     "golden5Link": "View Golden Partner →",
     "golden6Slot": "Q4 slot open",
-    "golden6Title": "Branding & B2B Marketing",
-    "golden6Text": "Positioning, communication, brand, content and B2B demand generation.",
+    "golden6Title": "Branding, Marketing & Strategy",
+    "golden6Text": "Positioning, strategy, marketing, communication, applied AI and demand generation.",
     "golden6CompanyLabel": "Golden Partner",
     "golden6Link": "Consider this vertical →",
     "golden7Slot": "Q4 slot open",
@@ -3590,7 +3467,24 @@ const HOME_TRANSLATIONS = {
     "golden8Link": "Consider this vertical →",
     "goldenBtn1": "Discover Golden Partners →",
     "goldenBtn2": "I want to consider a vertical",
-    "goldenNote": "One main company per vertical during Q4. Participation and terms are subject to fit and availability.",
+    "goldenNote": "Each position is subject to fit, availability and the absence of relevant conflicts with an active Golden Partner.",
+    "sliderTitle": "Current Golden Partners",
+    "sliderNote": "Each logo opens its landing page or website in a new tab.",
+    "sliderCat1": "AI & Technology",
+    "sliderCat2": "Sales, Revenue & GTM",
+    "sliderCat4": "Leadership",
+    "sliderCat5": "Strategy, Marketing & AI",
+    "sliderCat6": "Asia · Sourcing & Market Access",
+    "sliderOpen": "View Golden Partner",
+    "sliderOpenWeb": "Visit Golden website",
+    "goldenActive": "Active Golden",
+    "goldenOpen": "Open category",
+    "goldenAvailable": "Available",
+    "goldenView": "View Golden Partner →",
+    "goldenViewWeb": "Visit Golden website →",
+    "goldenConsider": "Consider this category →",
+    "goldenAsiaTitle": "Asia · Sourcing & Market Access",
+    "goldenAsiaText": "Sourcing, manufacturers, business development and market access between Asia, Spain and Spanish-speaking markets.",
     "systemKicker": "What is behind it",
     "systemTitle": "Network + selection + context + follow-up.",
     "systemLead": "Having contacts does not mean having active relationships. Value appears when there is a good reason to start the conversation.",
@@ -3603,9 +3497,9 @@ const HOME_TRANSLATIONS = {
     "flow3Text": "Round, Forum, interview, table or private session: we create a concrete reason to enter into conversation.",
     "flow4Title": "Follow-up",
     "flow4Text": "When there is potential, the relationship can continue towards collaboration, partnership, opportunity or business.",
-    "productsKicker": "Want to go beyond participating?",
-    "productsTitle": "Four ways to work directly with Emprende360.",
-    "productsLead": "From a short activation to a 90-day system to build pipeline, or a recurring position inside the ecosystem. Choose according to your starting point, your type of business and the depth of work you need.",
+    "productsKicker": "Work directly with Emprende360",
+    "productsTitle": "Golden Partners is our main B2B activation system.",
+    "productsLead": "One proposition combining positioning, opportunity radar, market signals, relationships, context, events, content, activation and follow-up around your category.",
     "product1Label": "Short format · 30 days",
     "product1Title": "Impulso B2B",
     "product1Job": "I want to activate a specific buyer, opportunity or market.",
@@ -3642,19 +3536,19 @@ const HOME_TRANSLATIONS = {
     "product3Item3": "External market exploration and opportunity signals.",
     "product3Item4": "Prioritisation by fit, intent, trigger and relationship.",
     "product3Item5": "Activation, follow-up and learning over 90 days.",
-    "product4Label": "For B2B companies",
+    "product4Label": "B2B system · 30 days, 90 days or annual",
     "product4Title": "Golden Partners",
-    "product4Job": "I want to position my company inside a vertical.",
-    "product4Text": "A recurring position during Q4 around a specific vertical and the conversations where your solution has a real reason to be present.",
-    "product4Highlight": "€1,490 · Q4",
-    "product4HighlightText": "Founding edition · one main company per vertical · subject to fit and availability.",
+    "product4Job": "I want my category to be worked actively, not appear once and disappear.",
+    "product4Text": "Each period starts by defining the buyer, problem, signals and situations where your solution may make sense. From there we combine network, radar, content, Forums, Rounds and relationship activation to identify and work relevant conversations.",
+    "product4Highlight": "€590 / 30 days · €1,690 / 90 days · €5,900 / year",
+    "product4HighlightText": "You can start with one month. If it continues to make sense, the active Golden has priority to keep its position.",
     "product4Cta": "Explore Golden Partners →",
-    "product4Item1": "One main company per vertical.",
-    "product4Item2": "Recurring presence throughout October, November and December.",
-    "product4Item3": "Forums, own conversation and agreed cross-platform presence.",
-    "product4Item4": "Dedicated landing page and presence in Emprende360 assets.",
-    "product4Item5": "Recurring context around relevant markets and conversations.",
-    "productsNote": "Participation in Emprende360 Alliance Rounds, Forums, interviews and open conversations does not require purchasing any service or becoming a Golden Partner.",
+    "product4Item1": "Main protected position within a category.",
+    "product4Item2": "Ongoing radar of companies, signals and relevant situations.",
+    "product4Item3": "Forums, Rounds, content and conversations around your market.",
+    "product4Item4": "Search for access paths and activation when there is a good reason to talk.",
+    "product4Item5": "Follow-up, learning and renewal priority before reopening the category.",
+    "productsNote": "Participation in Emprende360 Alliance Rounds, Forums, interviews and open conversations does not require becoming a Golden Partner.",
     "asiaKicker": "Emprende360 Asia · New line",
     "asiaTitle": "Does your company buy, manufacture or source suppliers in Asia?",
     "asiaText": "From our operational base in Vietnam, we identify, contact and evaluate manufacturers in Vietnam, China and other Asian markets. We start from a real purchasing need and then look for the right industrial capability.",
@@ -3677,11 +3571,11 @@ const HOME_TRANSLATIONS = {
     "finalLead": "See the agenda and join the session that actually makes sense for you. You do not need to belong to a membership or purchase any service to participate in the open part.",
     "finalBtn1": "View upcoming events →",
     "finalBtn2": "Receive upcoming events",
-    "finalSecondaryIntro": "Want to work directly with Emprende360? Choose the route that fits best:",
+    "finalSecondaryIntro": "Want to work directly with Emprende360?",
     "finalService1": "Impulso B2B →",
     "finalService2": "B2B Activation →",
     "finalService3": "Fractional Pipeline →",
-    "finalService4": "Golden Partners →",
+    "finalService4": "Discover Golden Partners →",
     "finalService5": "Emprende360 Asia →",
     "footerTagline": "Conversations · Context · B2B Relationships",
     "footerLink1": "Events",
@@ -3703,16 +3597,16 @@ const HOME_META_TRANSLATIONS = {
     "en": "Emprende360 · B2B conversations and commercial activation with context"
   },
   "description": {
-    "es": "Emprende360 crea conversaciones y activación B2B con contexto mediante Rondas de Alianzas, Foros Ejecutivos, Impulso B2B, Activación B2B, Fractional Pipeline, Golden Partners y Emprende360 Asia.",
-    "en": "Emprende360 creates B2B conversations and commercial activation with context through Alliance Rounds, Executive Forums, Impulso B2B, B2B Activation, Fractional Pipeline, Golden Partners and Emprende360 Asia."
+    "es": "Emprende360 crea conversaciones y relaciones B2B con contexto mediante Rondas de Alianzas, Foros Ejecutivos y Golden Partners: posicionamiento, radar de oportunidades y activación B2B alrededor de una categoría.",
+    "en": "Emprende360 creates B2B conversations and relationships with context through Alliance Rounds, Executive Forums and Golden Partners: positioning, opportunity radar and B2B activation around one category."
   },
   "ogTitle": {
     "es": "Emprende360 · Conversaciones B2B que merece la pena tener",
     "en": "Emprende360 · B2B conversations worth having"
   },
   "ogDescription": {
-    "es": "Rondas de Alianzas B2B, Foros Ejecutivos y servicios para activar mercados, pipeline, posicionamiento y oportunidades: Impulso B2B, Activación B2B, Fractional Pipeline, Golden Partners y Emprende360 Asia.",
-    "en": "Alliance Rounds, Executive Forums and services to activate markets, pipeline, positioning and opportunities: Impulso B2B, B2B Activation, Fractional Pipeline, Golden Partners and Emprende360 Asia."
+    "es": "Rondas de Alianzas B2B, Foros Ejecutivos y Golden Partners: una posición activa en tu mercado con posicionamiento, señales, relaciones, contexto y activación B2B.",
+    "en": "Alliance Rounds, Executive Forums and Golden Partners: an active position in your market combining positioning, signals, relationships, context and B2B activation."
   }
 };
 
@@ -3770,5 +3664,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setHomeLanguage(initialLang);
 });
-</script></body>
+</script>
+<script>
+/* GOLDEN SLIDER · móvil más rápido + swipe horizontal */
+(() => {
+  const marquee = document.querySelector('.logo-marquee');
+  const track = document.querySelector('.logo-track');
+  if (!marquee || !track) return;
+
+  const mq = window.matchMedia('(max-width: 760px)');
+  let last = null;
+  let paused = false;
+  let resumeTimer = null;
+  const SPEED = 46; // px/segundo en móvil
+
+  const halfWidth = () => track.scrollWidth / 2;
+  const normalize = () => {
+    const half = halfWidth();
+    if (!half) return;
+    if (marquee.scrollLeft >= half) marquee.scrollLeft -= half;
+    if (marquee.scrollLeft < 0) marquee.scrollLeft += half;
+  };
+
+  const tick = (ts) => {
+    if (!mq.matches) {
+      last = ts;
+      requestAnimationFrame(tick);
+      return;
+    }
+    if (last === null) last = ts;
+    const dt = Math.min((ts - last) / 1000, .05);
+    last = ts;
+    if (!paused) {
+      marquee.scrollLeft += SPEED * dt;
+      normalize();
+    }
+    requestAnimationFrame(tick);
+  };
+
+  const pause = () => {
+    paused = true;
+    clearTimeout(resumeTimer);
+    marquee.classList.add('dragging');
+  };
+
+  const resumeSoon = () => {
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(() => {
+      paused = false;
+      marquee.classList.remove('dragging');
+    }, 900);
+  };
+
+  marquee.addEventListener('touchstart', pause, { passive:true });
+  marquee.addEventListener('touchend', resumeSoon, { passive:true });
+  marquee.addEventListener('touchcancel', resumeSoon, { passive:true });
+  marquee.addEventListener('pointerdown', pause, { passive:true });
+  marquee.addEventListener('pointerup', resumeSoon, { passive:true });
+  marquee.addEventListener('pointercancel', resumeSoon, { passive:true });
+  marquee.addEventListener('scroll', () => { if (mq.matches && paused) normalize(); }, { passive:true });
+
+  mq.addEventListener?.('change', () => {
+    last = null;
+    if (!mq.matches) {
+      marquee.scrollLeft = 0;
+      paused = false;
+      marquee.classList.remove('dragging');
+    }
+  });
+
+  requestAnimationFrame(tick);
+})();
+</script>
+
+</body>
 </html>
