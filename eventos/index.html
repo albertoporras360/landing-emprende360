@@ -2785,6 +2785,96 @@
       color:#86efac;
       font-weight:900;
     }
+
+    /* =========================================================
+       ROUTING · NUEVOS SERVICIOS
+    ========================================================= */
+
+    .routing-grid{
+      grid-template-columns:repeat(2,1fr);
+    }
+
+    .route-label{
+      display:inline-flex;
+      align-self:flex-start;
+      margin-bottom:12px;
+      padding:6px 9px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:999px;
+      background:rgba(255,255,255,.035);
+      color:#94A3B8;
+      font-size:8px;
+      font-weight:950;
+      line-height:1.2;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+    }
+
+    .route-card.activation-route{
+      border-color:rgba(34,197,94,.26);
+      background:
+        radial-gradient(
+          circle at 100% 0,
+          rgba(34,197,94,.09),
+          transparent 38%
+        ),
+        rgba(255,255,255,.045);
+    }
+
+    .route-card.fractional-route{
+      border-color:rgba(167,139,250,.27);
+      background:
+        radial-gradient(
+          circle at 100% 0,
+          rgba(167,139,250,.10),
+          transparent 38%
+        ),
+        rgba(255,255,255,.045);
+    }
+
+    .activation-route .route-job{
+      color:#86EFAC;
+    }
+
+    .fractional-route .route-job{
+      color:#C4B5FD;
+    }
+
+    .btn-activation{
+      color:#04110A;
+      background:
+        linear-gradient(
+          90deg,
+          #86EFAC,
+          #22C55E
+        );
+      box-shadow:0 18px 55px rgba(34,197,94,.18);
+    }
+
+    .btn-activation:hover{
+      box-shadow:0 24px 70px rgba(34,197,94,.30);
+    }
+
+    .btn-fractional{
+      color:#0F0A1F;
+      background:
+        linear-gradient(
+          90deg,
+          #DDD6FE,
+          #A78BFA
+        );
+      box-shadow:0 18px 55px rgba(167,139,250,.18);
+    }
+
+    .btn-fractional:hover{
+      box-shadow:0 24px 70px rgba(167,139,250,.30);
+    }
+
+    @media(max-width:760px){
+      .routing-grid{
+        grid-template-columns:1fr;
+      }
+    }
 </style>
 </head>
 <body>
@@ -2819,7 +2909,7 @@
 <a href="#anteriores" rel="noopener noreferrer" target="_blank">
         Sesiones anteriores
       </a>
-</nav>
+<a href="#participar" rel="noopener noreferrer" target="_blank">Trabaja con Emprende360</a></nav>
 <a class="btn btn-primary" href="https://forms.gle/co89pCvzScuLtr6z5" rel="noopener noreferrer" target="_blank">
       Recibir próximos eventos
     </a>
@@ -2901,22 +2991,6 @@
 <span><b>Los eventos de España muestran hora peninsular española. Los eventos de México muestran hora de Ciudad de México.</b> Cuando corresponde, indicamos también la equivalencia entre ambos mercados.</span>
 </div>
 <div class="active-grid reveal">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="event-card" style="--event-image:url('/img/ronda-alianzas-6-partners.jpg');">
 <div class="event-media"></div>
 <div class="event-placeholder">6 PARTNERS B2B<br/>3 MATCHES<br/>OPORTUNIDADES REALES</div>
@@ -3745,58 +3819,78 @@
 <span class="kicker">
         ¿Quieres ir más allá de participar?
       </span>
-<h2>
-        Dos formas de trabajar directamente con Emprende360.
-      </h2>
-<p class="lead">
-        Los eventos están abiertos. Si además quieres trabajar de forma directa tu mercado o posicionar tu empresa dentro del ecosistema, existen estas dos vías.
-      </p>
+<h2>Cuatro formas de trabajar directamente con Emprende360.</h2>
+<p class="lead">Los eventos están abiertos. Si además quieres trabajar de forma directa tu mercado, construir pipeline o posicionar tu empresa dentro del ecosistema, puedes hacerlo a través de estas cuatro vías.</p>
 </div>
-<div class="routing-grid reveal">
-<!-- IMPULSO -->
-<article class="route-card impulso">
-<div class="route-icon">
-          ↗
-        </div>
-<h3>
-          Impulso B2B
-        </h3>
+<div class="routing-grid reveal"><!-- IMPULSO B2B --><article class="route-card impulso">
+<div class="route-icon">↗</div>
+<span class="route-label">Formato corto · 30 días</span>
+<h3>Impulso B2B</h3>
 <div class="route-job">
-          Quiero activar un buyer o mercado concreto.
-        </div>
+    Quiero activar un buyer, una oportunidad o un mercado concreto.
+  </div>
 <p>
-          Activación Comercial Relacional para profesionales y empresas B2B que quieren convertir experiencia, posicionamiento, red y contexto en mejores conversaciones.
-        </p>
+    Un formato de entrada para ordenar foco comercial, seleccionar perfiles relevantes
+    y activar conversaciones B2B con más contexto durante un periodo corto.
+  </p>
 <div class="route-actions">
 <a class="btn btn-primary" href="https://emprende360.club/impulsob2b" rel="noopener noreferrer" target="_blank">
-            Conocer Impulso B2B →
-          </a>
+      Conocer Impulso B2B →
+    </a>
 </div>
-</article>
-<!-- GOLDEN -->
-<article class="route-card golden-route">
-<div class="route-icon">
-          ★
-        </div>
-<h3>
-          Golden Partners
-        </h3>
+</article><!-- ACTIVACIÓN B2B --><article class="route-card activation-route">
+<div class="route-icon">◎</div>
+<span class="route-label">Empresas y servicios B2B · 90 días</span>
+<h3>Activación B2B</h3>
 <div class="route-job">
-          Quiero posicionar mi empresa dentro de una vertical.
-        </div>
+    Quiero construir un sistema de activación alrededor de un buyer prioritario.
+  </div>
 <p>
-          Una empresa principal por categoría durante Q4, con presencia recurrente alrededor de conversaciones, contenidos y mercados donde su buyer puede tener sentido.
-        </p>
+    Un trabajo de 90 días para pasar de contactos dispersos y acciones aisladas
+    a una activación más selectiva: buyer definido, señales, relaciones, contexto,
+    seguimiento y aprendizaje continuo.
+  </p>
+<div class="route-actions">
+<a class="btn btn-activation" href="https://emprende360.club/sprint-activation" rel="noopener noreferrer" target="_blank">
+      Conocer Activación B2B →
+    </a>
+</div>
+</article><!-- FRACTIONAL PIPELINE --><article class="route-card fractional-route">
+<div class="route-icon">◈</div>
+<span class="route-label">Fractional · Interim · Advisors</span>
+<h3>Fractional Pipeline</h3>
+<div class="route-job">
+    Quiero que mi siguiente cliente no dependa solo de una recomendación casual.
+  </div>
+<p>
+    Un sistema de 90 días para Fractional CxO, interim managers, advisors y consultores
+    senior que necesitan construir conversaciones con empresas donde exista fit,
+    necesidad, contexto y timing.
+  </p>
+<div class="route-actions">
+<a class="btn btn-fractional" href="https://emprende360.club/fractional-pipeline" rel="noopener noreferrer" target="_blank">
+      Conocer Fractional Pipeline →
+    </a>
+</div>
+</article><!-- GOLDEN PARTNERS --><article class="route-card golden-route">
+<div class="route-icon">★</div>
+<span class="route-label">Posicionamiento recurrente · Q4</span>
+<h3>Golden Partners</h3>
+<div class="route-job">
+    Quiero posicionar mi empresa dentro de una vertical.
+  </div>
+<p>
+    Una empresa principal por categoría durante Q4, con presencia recurrente
+    alrededor de conversaciones, contenidos y mercados donde su buyer puede
+    tener una razón real para estar presente.
+  </p>
 <div class="route-actions">
 <a class="btn btn-linkedin" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">
-            Explorar Golden Partners →
-          </a>
+      Explorar Golden Partners →
+    </a>
 </div>
-</article>
-</div>
-<p class="small center reveal" style="margin-top:18px;">
-      No necesitas contratar Impulso B2B ni ser Golden Partner para participar en la parte abierta de Emprende360.
-    </p>
+</article></div>
+<p class="small center reveal" style="margin-top:18px;">No necesitas contratar ningún servicio ni ser Golden Partner para participar en las Rondas, Foros, entrevistas y conversaciones abiertas de Emprende360.</p>
 </div>
 </section>
 </main>
@@ -3826,7 +3920,7 @@
       </a>
 <a href="https://emprende360.club/impulsob2b" rel="noopener noreferrer" target="_blank">
         Impulso B2B
-      </a>
+      </a><a href="https://emprende360.club/sprint-activation" rel="noopener noreferrer" target="_blank">Activación B2B</a><a href="https://emprende360.club/fractional-pipeline" rel="noopener noreferrer" target="_blank">Fractional Pipeline</a>
 <a href="https://emprende360.club/privacidad" rel="noopener noreferrer" target="_blank">
         Privacidad
       </a>
