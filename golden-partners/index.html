@@ -314,7 +314,7 @@
       display:flex;
       gap:16px;
       padding-left:16px;
-      animation:goldenScroll 28s linear infinite;
+      animation:goldenScroll 40s linear infinite;
     }
 
     .logo-marquee:hover .logo-track { animation-play-state:paused; }
@@ -389,6 +389,28 @@
       color:var(--muted);
       font-size:10px;
       line-height:1.4;
+    }
+
+    .golden-current {
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-top:15px;
+      padding:8px 11px;
+      border:1px solid rgba(244,197,66,.22);
+      border-radius:999px;
+      background:rgba(244,197,66,.07);
+      color:var(--gold-soft);
+      font-size:10px;
+      font-weight:900;
+      line-height:1.2;
+      transition:transform .2s ease,border-color .2s ease,background .2s ease;
+    }
+
+    .golden-current:hover {
+      transform:translateY(-2px);
+      border-color:rgba(244,197,66,.42);
+      background:rgba(244,197,66,.12);
     }
 
     /* HERO */
@@ -1182,7 +1204,7 @@
 <section class="golden-strip" aria-label="Golden Partners actuales">
   <div class="golden-strip-head">
     <strong>Golden Partners actuales</strong>
-    <span>Cada logo abre su landing individual en una nueva pestaña.</span>
+    <span>Cada logo abre su landing o web en una nueva pestaña.</span>
   </div>
 
   <div class="logo-marquee">
@@ -1232,6 +1254,28 @@
         </div>
       </a>
 
+      <a class="golden-logo-card" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer" aria-label="Abrir MIAU Consulting">
+        <div class="golden-logo-media">
+          <img src="https://emprende360.club/jorge.jpg" alt="MIAU Consulting">
+        </div>
+        <div class="golden-logo-copy">
+          <b>MIAU Consulting</b>
+          <span>Estrategia, Marketing & IA</span>
+          <small>Ver web del Golden</small>
+        </div>
+      </a>
+
+      <a class="golden-logo-card" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Emprende360 Asia">
+        <div class="golden-logo-media">
+          <img src="https://emprende360.club/asia.png" alt="Emprende360 Asia">
+        </div>
+        <div class="golden-logo-copy">
+          <b>Emprende360 Asia</b>
+          <span>Asia · Sourcing & Market Access</span>
+          <small>Ver landing</small>
+        </div>
+      </a>
+
       <!-- Duplicados para que el slider sea continuo -->
       <a class="golden-logo-card" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1">
         <div class="golden-logo-media"><img src="https://emprende360.club/enric.jpg" alt=""></div>
@@ -1251,6 +1295,16 @@
       <a class="golden-logo-card" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1">
         <div class="golden-logo-media"><img src="https://emprende360.club/maider.jpg" alt=""></div>
         <div class="golden-logo-copy"><b>L de Líder</b><span>Liderazgo</span><small>Ver landing Golden</small></div>
+      </a>
+
+      <a class="golden-logo-card" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1">
+        <div class="golden-logo-media"><img src="https://emprende360.club/jorge.jpg" alt=""></div>
+        <div class="golden-logo-copy"><b>MIAU Consulting</b><span>Estrategia, Marketing & IA</span><small>Ver web del Golden</small></div>
+      </a>
+
+      <a class="golden-logo-card" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1">
+        <div class="golden-logo-media"><img src="https://emprende360.club/asia.png" alt=""></div>
+        <div class="golden-logo-copy"><b>Emprende360 Asia</b><span>Asia · Sourcing & Market Access</span><small>Ver landing</small></div>
       </a>
 
     </div>
@@ -1478,7 +1532,7 @@
       <div class="center reveal">
         <span class="kicker">Categorías Golden</span>
         <h2>El mismo sistema cambia según tu mercado.</h2>
-        <p class="lead">Cada categoría tiene sus buyers, señales, problemas y contextos. Golden adapta el radar y la activación a esa realidad.</p>
+        <p class="lead">Cada categoría tiene sus buyers, señales, problemas y contextos. Golden adapta el radar y la activación a esa realidad. Las posiciones activas aparecen identificadas y enlazadas.</p>
       </div>
 
       <div class="vertical-grid reveal">
@@ -1486,18 +1540,21 @@
           <div class="vertical-top"><div class="vertical-icon">💰</div><span class="slot">Corporate Finance</span></div>
           <h3>Corporate Finance</h3>
           <p>Financiación, CFO, M&A, deuda, capital, valoración, crecimiento y preparación para operaciones corporativas.</p>
+          <a class="golden-current" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer">Golden actual · Nakama Kapital →</a>
         </article>
 
         <article class="vertical">
           <div class="vertical-top"><div class="vertical-icon">📈</div><span class="slot">Revenue</span></div>
           <h3>Ventas, Revenue & GTM</h3>
           <p>Expansión, contratación comercial, nuevos mercados, CRM, RevOps, desarrollo comercial y cambios de GTM.</p>
+          <a class="golden-current" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer">Golden actual · Salesnite →</a>
         </article>
 
         <article class="vertical">
           <div class="vertical-top"><div class="vertical-icon">🤖</div><span class="slot">Tecnología</span></div>
           <h3>IA & Tecnología</h3>
           <p>Automatización, agentes, datos, software, modernización, nuevos proyectos y transformación tecnológica.</p>
+          <a class="golden-current" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer">Golden actual · Uniasser Consulting →</a>
         </article>
 
         <article class="vertical">
@@ -1510,6 +1567,7 @@
           <div class="vertical-top"><div class="vertical-icon">◎</div><span class="slot">Marketing</span></div>
           <h3>Marketing B2B & Posicionamiento</h3>
           <p>Reposicionamiento, nuevos mercados, marca, contenido, autoridad, generación de demanda y cambio de percepción.</p>
+          <a class="golden-current" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer">Golden actual · MIAU Consulting →</a>
         </article>
 
         <article class="vertical">
@@ -1519,9 +1577,17 @@
         </article>
 
         <article class="vertical">
+          <div class="vertical-top"><div class="vertical-icon">🌏</div><span class="slot">Asia</span></div>
+          <h3>Asia, Sourcing & Market Access</h3>
+          <p>Fabricantes, sourcing, exportación, acceso a mercado y desarrollo de relaciones comerciales entre Asia y mercados hispanohablantes.</p>
+          <a class="golden-current" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer">Golden actual · Emprende360 Asia →</a>
+        </article>
+
+        <article class="vertical">
           <div class="vertical-top"><div class="vertical-icon">🧭</div><span class="slot">Liderazgo</span></div>
           <h3>Liderazgo</h3>
           <p>Crecimiento, nuevas capas directivas, delegación, cambio organizativo, cultura, equipos y ejecución.</p>
+          <a class="golden-current" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer">Golden actual · L de Líder →</a>
         </article>
 
         <article class="vertical">
