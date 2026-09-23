@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activadores Emprende360 | Activa relaciones, conversaciones y oportunidades</title>
+<meta name="description" content="Programa de Activadores Emprende360: participa, invita, conecta y ayuda a activar conversaciones B2B dentro del ecosistema. Acceso gratuito y 20% de comisión por referencias Golden Partner.">
+<style>
+:root{
+  --navy:#0B1930;
+  --navy2:#102746;
+  --gold:#D8AD4F;
+  --gold2:#F2D78A;
+  --ink:#152033;
+  --muted:#6B7684;
+  --bg:#F5F7FA;
+  --white:#FFFFFF;
+  --line:#E3E8EF;
+  --soft:#EEF2F6;
+  --green:#16825E;
+  --shadow:0 18px 50px rgba(11,25,48,.10);
+  --radius:24px;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.55;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button,input,textarea,select{font:inherit}
+.container{width:min(var(--max),calc(100% - 32px));margin:auto}
+
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(11,25,48,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.nav{
+  min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:900}
+.brandmark{
+  width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);font-weight:900;
+}
+.navlinks{display:flex;align-items:center;gap:20px;color:#D4DDE8;font-size:14px}
+.navlinks a:hover{color:#fff}
+.navcta{
+  background:var(--gold);color:var(--navy);font-weight:900;
+  padding:11px 16px;border-radius:999px;
+}
+
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 10% 0%,rgba(216,173,79,.17),transparent 27%),
+    radial-gradient(circle at 90% 10%,rgba(98,148,210,.16),transparent 30%),
+    linear-gradient(180deg,var(--navy),#0D213E);
+  color:#fff;padding:92px 0 82px;
+}
+.hero:after{
+  content:"";position:absolute;right:-160px;bottom:-190px;width:500px;height:500px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 0 0 60px rgba(255,255,255,.024),0 0 0 120px rgba(255,255,255,.015);
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
+  background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.12);
+  color:#F2D78A;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;
+}
+.hero h1{
+  max-width:980px;margin:22px 0 22px;font-size:clamp(44px,6vw,76px);
+  line-height:.98;letter-spacing:-.045em;
+}
+.hero p{max-width:780px;margin:0 0 30px;color:#D6E0EA;font-size:clamp(18px,2vw,22px)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:0;border-radius:999px;padding:14px 20px;font-weight:900;cursor:pointer;transition:.2s;
+}
+.btn-primary{background:var(--gold);color:var(--navy)}
+.btn-primary:hover{transform:translateY(-2px);background:var(--gold2)}
+.btn-secondary{background:rgba(255,255,255,.07);color:#fff;border:1px solid rgba(255,255,255,.14)}
+.btn-secondary:hover{background:rgba(255,255,255,.11)}
+
+.hero-proof{
+  margin-top:46px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px
+}
+.proof{
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);
+  border-radius:17px;padding:17px 18px
+}
+.proof strong{display:block;font-size:20px}
+.proof span{font-size:13px;color:#BFCBD8}
+
+section{padding:78px 0}
+.section-head{
+  display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:28px
+}
+.section-head h2{margin:0;font-size:clamp(31px,4vw,50px);line-height:1.03;letter-spacing:-.035em}
+.section-head p{margin:0;max-width:620px;color:var(--muted);font-size:17px}
+.label{
+  display:inline-flex;padding:7px 11px;border-radius:999px;background:#EFE7D2;color:#7B5D18;
+  border:1px solid #E8DAB0;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em
+}
+
+.intro-grid{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:18px
+}
+.intro-card{
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)
+}
+.intro-card h3{font-size:28px;margin:0 0 12px;letter-spacing:-.025em}
+.intro-card p{color:#566273;margin:0}
+.quote-card{
+  background:var(--navy);color:#fff;border-radius:24px;padding:28px;position:relative;overflow:hidden
+}
+.quote-card:after{
+  content:"“";position:absolute;right:20px;bottom:-40px;font-size:180px;line-height:1;color:rgba(255,255,255,.05)
+}
+.quote-card p{font-size:26px;line-height:1.25;letter-spacing:-.02em;margin:0 0 18px}
+.quote-card span{color:#C3CEDA;font-size:14px}
+
+.cards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px
+}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;transition:.22s
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,25,48,.08)}
+.icon{
+  width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
+  background:#F2E9D0;color:#7A5B18;font-size:20px;margin-bottom:18px
+}
+.card h3{margin:0 0 8px;font-size:21px}
+.card p{margin:0;color:var(--muted)}
+
+.dark{background:var(--navy);color:#fff}
+.dark .section-head p{color:#C3CFDC}
+.flow{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:12px
+}
+.flow-item{
+  padding:20px;border-radius:19px;background:linear-gradient(145deg,#102846,#133152);
+  border:1px solid rgba(255,255,255,.09);min-height:170px
+}
+.num{
+  width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--navy);
+  font-weight:900;margin-bottom:16px
+}
+.flow-item h3{margin:0 0 7px}
+.flow-item p{color:#C8D4E0;margin:0;font-size:14px}
+
+.benefits{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px
+}
+.benefit{
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:23px
+}
+.benefit strong{display:block;font-size:18px;margin:14px 0 7px}
+.benefit p{margin:0;color:var(--muted)}
+.benefit .ico{font-size:28px}
+
+.commission{
+  background:linear-gradient(135deg,#0B1930,#15375F);color:#fff;border-radius:28px;padding:36px;
+  display:grid;grid-template-columns:1fr .8fr;gap:30px;align-items:center
+}
+.commission h2{font-size:clamp(34px,4vw,54px);line-height:1.02;letter-spacing:-.04em;margin:0 0 15px}
+.commission p{color:#C6D2DF;font-size:17px}
+.commission-box{
+  background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;padding:26px
+}
+.commission-box .big{font-size:72px;line-height:.95;font-weight:950;color:var(--gold)}
+.commission-box span{display:block;margin-top:10px;color:#D3DCE6}
+.commission-box small{display:block;margin-top:15px;color:#AFC0D1}
+
+.examples{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px
+}
+.example{
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px
+}
+.example .tag{
+  display:inline-flex;padding:6px 9px;border-radius:999px;background:#EEF2F6;color:#556273;
+  font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em
+}
+.example h3{margin:15px 0 8px}
+.example p{margin:0;color:var(--muted)}
+
+.priority{
+  display:grid;grid-template-columns:1fr 1fr;gap:18px
+}
+.priority-box{
+  border-radius:24px;padding:28px
+}
+.priority-box.left{background:#fff;border:1px solid var(--line)}
+.priority-box.right{background:#F3EAD2;border:1px solid #E7D7A9}
+.priority-box h3{margin:0 0 10px;font-size:27px}
+.priority-box ul{margin:12px 0 0;padding-left:20px;color:#526070}
+.priority-box li+li{margin-top:7px}
+
+.form-section{
+  background:#EAF0F6
+}
+.form-wrap{
+  display:grid;grid-template-columns:.8fr 1.2fr;gap:20px
+}
+.form-copy{
+  background:var(--navy);color:#fff;border-radius:26px;padding:30px
+}
+.form-copy h2{margin:0 0 14px;font-size:42px;line-height:1.04;letter-spacing:-.035em}
+.form-copy p{color:#C8D3DF}
+.form-copy .mini{
+  margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.10);font-size:14px
+}
+.form-card{
+  background:#fff;border-radius:26px;padding:26px;border:1px solid var(--line);box-shadow:var(--shadow)
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.field{
+  width:100%;min-height:52px;border:1px solid var(--line);border-radius:14px;padding:0 14px;background:#fff;color:var(--ink);outline:none
+}
+textarea.field{min-height:118px;padding-top:13px;resize:vertical}
+.full{grid-column:1/-1}
+.field:focus{border-color:#B4C2D2;box-shadow:0 0 0 3px rgba(34,82,140,.08)}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px
+}
+summary{font-weight:850;cursor:pointer}
+details p{color:var(--muted);margin:12px 0 0}
+
+footer{background:#071326;color:#B9C5D1;padding:32px 0}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer-row strong{color:#fff}
+
+@media(max-width:1000px){
+  .hero-proof{grid-template-columns:repeat(2,1fr)}
+  .intro-grid,.commission,.form-wrap{grid-template-columns:1fr}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .benefits{grid-template-columns:repeat(2,1fr)}
+  .examples{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .navlinks a:not(.navcta){display:none}
+  .hero{padding:70px 0 62px}
+  .hero h1{font-size:47px}
+  .hero-proof{grid-template-columns:1fr}
+  section{padding:58px 0}
+  .section-head{display:block}
+  .section-head p{margin-top:12px}
+  .cards,.flow,.benefits,.examples,.priority,.faq{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  .commission-box .big{font-size:58px}
+  .footer-row{display:block}
+  .footer-row div+div{margin-top:10px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <a href="#" class="brand">
+      <div class="brandmark">E°</div>
+      <div>Emprende360 <span style="color:#D8AD4F">Activadores</span></div>
+    </a>
+    <nav class="navlinks">
+      <a href="#que-haces">Cómo participar</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#comision">Comisión</a>
+      <a class="navcta" href="#registro">Quiero ser Activador</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Programa Activadores · Emprende360</span>
+    <h1>Ayuda a activar el ecosistema. Y gana visibilidad, relaciones y oportunidades.</h1>
+    <p>Invita a tus contactos, participa en conversaciones, conecta perfiles, propone empresas o expertos y ayuda a que ocurran mejores conversaciones B2B dentro de Emprende360.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#registro">Quiero ser Activador</a>
+      <a class="btn btn-secondary" href="#que-haces">Ver cómo funciona</a>
+    </div>
+
+    <div class="hero-proof">
+      <div class="proof"><strong>Gratis</strong><span>no tiene coste participar como Activador</span></div>
+      <div class="proof"><strong>Prioridad</strong><span>en encuentros, mesas y oportunidades de participación</span></div>
+      <div class="proof"><strong>Visibilidad</strong><span>menciones y presencia cuando exista contribución real</span></div>
+      <div class="proof"><strong>20%</strong><span>comisión por referencias Golden Partner que contraten</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-card">
+        <span class="label">Qué es un Activador</span>
+        <h3 style="margin-top:16px">Una persona que ayuda a que pasen cosas.</h3>
+        <p>No buscamos embajadores de nombre ni personas que simplemente compartan publicaciones. Buscamos profesionales con ganas de activar relaciones: invitar a alguien adecuado, participar en una conversación, presentar un perfil, abrir una puerta o ayudar a dar movimiento a un encuentro.</p>
+      </div>
+      <div class="quote-card">
+        <p>“La red vale cuando alguien crea una razón real para que las personas adecuadas hablen.”</p>
+        <span>La lógica detrás de Emprende360 Activadores</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="que-haces">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="label">Cómo puedes activar</span>
+        <h2 style="margin-top:14px">No hay una única forma de participar.</h2>
+      </div>
+      <p>Puedes ayudar de forma puntual o recurrente. Lo importante es aportar contexto, relaciones o conversación, no volumen por volumen.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card"><div class="icon">↗</div><h3>Invitar contactos</h3><p>Recomienda o invita a profesionales de tu red a Foros, Mesas colaborativas y otros encuentros cuando realmente encajen.</p></div>
+      <div class="card"><div class="icon">💬</div><h3>Participar en conversaciones</h3><p>Comenta, pregunta, aporta experiencia y ayuda a que las conversaciones tengan más profundidad y utilidad.</p></div>
+      <div class="card"><div class="icon">◎</div><h3>Proponer perfiles</h3><p>Si conoces un experto, directivo, empresa, inversor o partner que debería estar en una conversación, puedes ponerlo sobre la mesa.</p></div>
+      <div class="card"><div class="icon">🤝</div><h3>Organizar conjuntamente</h3><p>Si tienes comunidad, red o acceso sectorial, podemos organizar juntos un encuentro o conversación alrededor de un tema concreto.</p></div>
+      <div class="card"><div class="icon">🏢</div><h3>Traer empresas</h3><p>Identifica compañías en crecimiento, expansión, financiación, transformación o búsqueda de talento que puedan beneficiarse de hablar con expertos adecuados.</p></div>
+      <div class="card"><div class="icon">★</div><h3>Activar comunidad</h3><p>Ayuda a mover conversaciones en LinkedIn, el grupo y otros espacios cuando tengas algo relevante que aportar o compartir.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">La lógica</span>
+        <h2 style="margin-top:14px">Así se genera valor.</h2>
+      </div>
+      <p>Un Activador no necesita vender nada. Su función es ayudar a que aparezcan mejores personas, mejores contextos y mejores cruces.</p>
+    </div>
+
+    <div class="flow">
+      <div class="flow-item"><div class="num">1</div><h3>Detectas</h3><p>Ves un perfil, empresa, necesidad o tema que puede tener sentido.</p></div>
+      <div class="flow-item"><div class="num">2</div><h3>Propones</h3><p>Nos dices por qué esa persona, empresa o conversación merece entrar.</p></div>
+      <div class="flow-item"><div class="num">3</div><h3>Conectamos</h3><p>Emprende360 valida encaje, contexto y formato.</p></div>
+      <div class="flow-item"><div class="num">4</div><h3>Activamos</h3><p>Puede convertirse en Foro, Mesa, conexión, invitación o conversación.</p></div>
+      <div class="flow-item"><div class="num">5</div><h3>Reconocemos</h3><p>La contribución real se traduce en visibilidad, prioridad y nuevas oportunidades.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="label">Qué recibes</span>
+        <h2 style="margin-top:14px">Beneficios por activar de verdad.</h2>
+      </div>
+      <p>No es un programa de puntos rígido. La prioridad y la visibilidad crecen en función de la calidad y la continuidad de la participación.</p>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit"><div class="ico">🎙️</div><strong>Prioridad en participación</strong><p>Acceso preferente a Foros, Mesas colaborativas y conversaciones donde tu experiencia encaje.</p></div>
+      <div class="benefit"><div class="ico">✨</div><strong>Visibilidad en comunidad</strong><p>Podemos destacarte, mencionarte o darte contexto en publicaciones y encuentros cuando exista una aportación clara.</p></div>
+      <div class="benefit"><div class="ico">🤝</div><strong>Más relaciones</strong><p>Estar activo te expone a otros expertos, empresas, partners y perfiles con los que puede existir complementariedad.</p></div>
+      <div class="benefit"><div class="ico">🧩</div><strong>Acceso a cruces</strong><p>Cuando detectemos una conversación o necesidad especialmente relevante para ti, tendrás más posibilidades de entrar en ella.</p></div>
+      <div class="benefit"><div class="ico">📣</div><strong>Mención como Activador</strong><p>En determinados encuentros podremos reconocer públicamente a quienes han contribuido a mover la conversación o traer perfiles.</p></div>
+      <div class="benefit"><div class="ico">🌍</div><strong>Activación por país o sector</strong><p>Si tienes red propia, podemos darte espacio para ayudar a construir conversaciones en tu mercado, ciudad o vertical.</p></div>
+      <div class="benefit"><div class="ico">🏢</div><strong>Acceso a empresas</strong><p>Los Activadores con mejor encaje pueden participar en encuentros donde reunimos empresas con expertos alrededor de una necesidad concreta.</p></div>
+      <div class="benefit"><div class="ico">💶</div><strong>Comisión por Golden</strong><p>Si recomiendas un Golden Partner y contrata, puedes recibir una comisión del 20% sobre la venta atribuida a tu referencia.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="comision">
+  <div class="container">
+    <div class="commission">
+      <div>
+        <span class="eyebrow">Referencias Golden Partner</span>
+        <h2 style="margin-top:16px">También puedes recomendar nuestro servicio premium.</h2>
+        <p>Si conoces a un profesional o empresa B2B que pueda encajar como Golden Partner, puedes presentarlo o recomendarnos. Si esa referencia termina contratando y la venta queda atribuida a tu introducción, recibirás una comisión.</p>
+        <p style="font-size:14px;margin-top:18px">La referencia debe identificarse antes del cierre para poder atribuir correctamente la comisión. La participación como Activador sigue siendo gratuita y no exige vender Golden.</p>
+      </div>
+      <div class="commission-box">
+        <div class="big">20%</div>
+        <span>de comisión sobre la venta Golden Partner atribuida a tu referencia.</span>
+        <small>Ejemplo: una contratación trimestral de 790 € genera 158 € de comisión.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="label">Ejemplos reales de activación</span>
+        <h2 style="margin-top:14px">Qué podría hacer un Activador.</h2>
+      </div>
+      <p>No necesitas hacer todo esto. Una buena aportación puntual también puede ser suficiente.</p>
+    </div>
+
+    <div class="examples">
+      <div class="example"><span class="tag">Caso 01</span><h3>“Conozco a una CFO que encajaría en este Foro.”</h3><p>La presentas, validamos el perfil y puede incorporarse a la conversación si existe complementariedad.</p></div>
+      <div class="example"><span class="tag">Caso 02</span><h3>“Tengo una comunidad en México y este tema interesa mucho.”</h3><p>Podemos organizar conjuntamente una conversación y activar perfiles de ambas redes.</p></div>
+      <div class="example"><span class="tag">Caso 03</span><h3>“Una empresa de mi red acaba de cerrar financiación.”</h3><p>Podemos valorar un encuentro con expertos relevantes para la siguiente etapa: talento, ventas, operaciones, tecnología o expansión.</p></div>
+      <div class="example"><span class="tag">Caso 04</span><h3>“Conozco un consultor excelente para esta necesidad.”</h3><p>Puede entrar en una Mesa colaborativa, una conversación temática o una conexión concreta si el contexto lo justifica.</p></div>
+      <div class="example"><span class="tag">Caso 05</span><h3>“Este post puede tener más conversación.”</h3><p>Participas con una pregunta, experiencia o perspectiva que ayude a que aparezcan mejores perfiles y conversaciones.</p></div>
+      <div class="example"><span class="tag">Caso 06</span><h3>“Este perfil puede ser un buen Golden.”</h3><p>Nos lo presentas, registramos la referencia y, si termina contratando, aplicamos la comisión del 20%.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="priority">
+      <div class="priority-box left">
+        <span class="label">Quién encaja especialmente bien</span>
+        <h3 style="margin-top:15px">Activadores que ya tienen acceso o contexto.</h3>
+        <ul>
+          <li>Founders, empresarios y directivos con red profesional.</li>
+          <li>Consultores y advisors con relaciones B2B.</li>
+          <li>Responsables de comunidades, asociaciones o ecosistemas.</li>
+          <li>Profesionales con conocimiento sectorial o acceso local.</li>
+          <li>Personas que disfrutan conectando perfiles con sentido.</li>
+        </ul>
+      </div>
+      <div class="priority-box right">
+        <span class="label">No buscamos</span>
+        <h3 style="margin-top:15px">Volumen sin criterio.</h3>
+        <ul>
+          <li>Invitaciones masivas sin relación con el evento.</li>
+          <li>Spam en grupos o contactos.</li>
+          <li>Presentaciones sin entender por qué hay encaje.</li>
+          <li>Participación puramente promocional.</li>
+          <li>Promesas de resultados o ventas en nombre de Emprende360.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="registro" class="form-section">
+  <div class="container">
+    <div class="form-wrap">
+      <div class="form-copy">
+        <span class="eyebrow">Únete como Activador</span>
+        <h2 style="margin-top:16px">¿Quieres ayudarnos a mover mejores conversaciones?</h2>
+        <p>Cuéntanos quién eres, qué red o contexto tienes y de qué forma te gustaría participar.</p>
+        <div class="mini">
+          <strong>Participar es gratuito.</strong><br><br>
+          Seleccionaremos y priorizaremos las oportunidades de colaboración según encaje, calidad y contexto.
+        </div>
+      </div>
+
+      <form id="activatorForm" class="form-card">
+        <div class="form-grid">
+          <input class="field" name="nombre" placeholder="Nombre y apellidos" required>
+          <input class="field" name="empresa" placeholder="Empresa / proyecto">
+          <input class="field" type="email" name="email" placeholder="Email" required>
+          <input class="field" name="whatsapp" placeholder="WhatsApp">
+          <input class="field full" name="linkedin" placeholder="LinkedIn">
+          <select class="field" name="pais" required>
+            <option value="">País</option>
+            <option>España</option><option>México</option><option>Colombia</option><option>Chile</option><option>Argentina</option><option>Vietnam</option><option>Otro</option>
+          </select>
+          <select class="field" name="participacion" required>
+            <option value="">¿Cómo te gustaría activar?</option>
+            <option>Invitar contactos</option>
+            <option>Participar en Foros / Mesas</option>
+            <option>Proponer expertos o empresas</option>
+            <option>Organizar eventos conjuntamente</option>
+            <option>Activar una comunidad / ecosistema</option>
+            <option>Referir Golden Partners</option>
+            <option>Varias de las anteriores</option>
+          </select>
+          <textarea class="field full" name="contexto" placeholder="Cuéntanos brevemente qué haces, qué tipo de red o contactos tienes y cómo crees que podrías aportar." required></textarea>
+          <textarea class="field full" name="temas" placeholder="¿Qué sectores, temáticas, países o tipos de empresas conoces especialmente bien?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:12px">Enviar solicitud como Activador</button>
+        <div class="note">Al enviar, se abrirá tu correo con la solicitud preparada para info@emprende360.club.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="label">Preguntas frecuentes</span>
+        <h2 style="margin-top:14px">Lo esencial.</h2>
+      </div>
+    </div>
+
+    <div class="faq">
+      <details><summary>¿Tiene algún coste ser Activador?</summary><p>No. La participación como Activador es gratuita.</p></details>
+      <details><summary>¿Tengo que invitar gente todas las semanas?</summary><p>No. No exigimos un volumen fijo. Valoramos mucho más una aportación relevante que muchas invitaciones sin criterio.</p></details>
+      <details><summary>¿Ser Activador garantiza que participaré en todos los eventos?</summary><p>No. La participación depende de cada conversación, la temática y el encaje de los perfiles.</p></details>
+      <details><summary>¿Cómo funciona la prioridad?</summary><p>Los Activadores que aporten valor de forma consistente podrán tener prioridad para determinadas conversaciones, mesas, invitaciones y oportunidades de colaboración.</p></details>
+      <details><summary>¿Puedo proponer un evento o conversación?</summary><p>Sí. Si tienes una temática, red, empresa o comunidad con la que exista una razón clara para organizar algo, podemos valorarlo conjuntamente.</p></details>
+      <details><summary>¿Cómo se atribuye la comisión del 20%?</summary><p>La referencia debe quedar identificada antes del cierre. Si el contacto recomendado contrata Golden Partner y la venta se atribuye a esa referencia, se aplica el 20% sobre la venta correspondiente.</p></details>
+      <details><summary>¿Necesito vender Golden para seguir como Activador?</summary><p>No. La recomendación de Golden es opcional. Puedes aportar valor únicamente invitando, conectando, participando o proponiendo perfiles y empresas.</p></details>
+      <details><summary>¿Puedo representar a Emprende360?</summary><p>Ser Activador no implica representación legal, comercial o institucional de Emprende360. Las colaboraciones específicas se acuerdan por separado cuando corresponda.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div><strong>Emprende360 Activadores</strong><br>Personas que ayudan a convertir red en conversaciones con contexto.</div>
+    <div>© 2026 Emprende360 · <a href="https://emprende360.club" target="_blank" rel="noopener">emprende360.club</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("activatorForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(this).entries());
+  const subject = encodeURIComponent("Solicitud Activador Emprende360");
+  const body = encodeURIComponent(
+`Nombre: ${data.nombre}
+Empresa / proyecto: ${data.empresa || ""}
+Email: ${data.email}
+WhatsApp: ${data.whatsapp || ""}
+LinkedIn: ${data.linkedin || ""}
+País: ${data.pais}
+Forma de participación: ${data.participacion}
+
+Contexto:
+${data.contexto}
+
+Sectores / temáticas / mercados:
+${data.temas || ""}`
+  );
+  window.location.href = `mailto:info@emprende360.club?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
