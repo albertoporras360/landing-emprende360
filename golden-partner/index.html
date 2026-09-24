@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Golden Partners · Emprende360</title>
-  <meta name="description" content="Golden Partners de Emprende360: posicionamiento, radar de oportunidades, señales de mercado, activación B2B, conversaciones, Marketplace, contenido y seguimiento en un único sistema.">
+  <meta name="description" content="Golden Partners de Emprende360: posicionamiento, Motor de Señales B2B, activación relacional, Foros, contenido, Marketplace y seguimiento en un único sistema.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://emprende360.club/golden-partners">
   <meta property="og:title" content="Golden Partners · Emprende360">
@@ -623,6 +623,149 @@
       line-height:1.45;
     }
 
+
+    /* SIGNAL ENGINE */
+    .signals-engine {
+      background:
+        radial-gradient(circle at 12% 18%,rgba(24,167,255,.12),transparent 31%),
+        radial-gradient(circle at 88% 15%,rgba(244,197,66,.09),transparent 30%),
+        var(--navy);
+    }
+
+    .signals-shell {
+      margin-top:38px;
+      padding:34px;
+      border:1px solid rgba(244,197,66,.28);
+      border-radius:32px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.09),transparent 36%),
+        rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+    }
+
+    .signals-top {
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      gap:30px;
+      align-items:start;
+    }
+
+    .signals-copy p {
+      color:#cbd5e1;
+      font-size:14px;
+      line-height:1.68;
+    }
+
+    .cadence-box {
+      margin-top:18px;
+      padding:16px 18px;
+      border:1px solid rgba(34,197,94,.24);
+      border-radius:18px;
+      background:rgba(34,197,94,.065);
+    }
+
+    .cadence-box strong {
+      display:block;
+      color:var(--green-soft);
+      font-size:14px;
+    }
+
+    .cadence-box span {
+      display:block;
+      margin-top:6px;
+      color:#cbd5e1;
+      font-size:11px;
+      line-height:1.5;
+    }
+
+    .brief-card {
+      padding:24px;
+      border:1px solid rgba(24,167,255,.24);
+      border-radius:24px;
+      background:rgba(2,6,23,.34);
+    }
+
+    .brief-head {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:16px;
+      margin-bottom:17px;
+    }
+
+    .brief-head b {
+      font-size:18px;
+    }
+
+    .brief-tag {
+      display:inline-flex;
+      flex:none;
+      padding:6px 9px;
+      border:1px solid rgba(244,197,66,.24);
+      border-radius:999px;
+      background:rgba(244,197,66,.07);
+      color:var(--gold-soft);
+      font-size:9px;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .brief-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+
+    .brief-item {
+      padding:14px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:16px;
+      background:rgba(255,255,255,.035);
+    }
+
+    .brief-item strong {
+      display:block;
+      color:#7dd3fc;
+      font-size:10px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .brief-item span {
+      display:block;
+      margin-top:6px;
+      color:#cbd5e1;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    .trigger-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .trigger-chip {
+      padding:13px 12px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:16px;
+      background:rgba(2,6,23,.24);
+      color:#cbd5e1;
+      font-size:10px;
+      line-height:1.4;
+      text-align:center;
+    }
+
+    .signals-note {
+      margin-top:18px;
+      color:#94a3b8;
+      font-size:10px;
+      line-height:1.55;
+      text-align:center;
+    }
+
     /* CYCLE */
     .cycle {
       background:
@@ -1140,7 +1283,7 @@
 
     @media(max-width:1080px) {
       .nav-links { display:none; }
-      .hero-grid,.example-shell,.map-shell,.fit-shell { grid-template-columns:1fr; }
+      .hero-grid,.example-shell,.map-shell,.fit-shell,.signals-top { grid-template-columns:1fr; }
       .value-grid { grid-template-columns:1fr 1fr; }
       .engine-grid,.infra-grid,.pricing-grid { grid-template-columns:1fr 1fr; }
       .cycle-grid { grid-template-columns:repeat(3,1fr); }
@@ -1177,8 +1320,8 @@
       .lead { font-size:15px; }
       .hero-actions,.final-actions { display:grid; grid-template-columns:1fr; }
       .hero-actions .btn,.final-actions .btn { width:100%; }
-      .value-grid,.engine-grid,.cycle-grid,.vertical-grid,.infra-grid,.pricing-grid,.metrics-grid,.signal-grid { grid-template-columns:1fr; }
-      .partner-card,.cycle-shell,.example-shell,.map-shell,.fit-shell,.final-box { padding:24px; }
+      .value-grid,.engine-grid,.cycle-grid,.vertical-grid,.infra-grid,.pricing-grid,.metrics-grid,.signal-grid,.brief-grid,.trigger-grid { grid-template-columns:1fr; }
+      .partner-card,.cycle-shell,.example-shell,.map-shell,.fit-shell,.final-box,.signals-shell { padding:24px; }
       .final-prices { display:grid; grid-template-columns:1fr; }
     }
 
@@ -1204,6 +1347,7 @@
 
     <nav class="nav-links">
       <button class="nav-link" onclick="document.getElementById('sistema').scrollIntoView({behavior:'smooth'})">Cómo funciona</button>
+      <button class="nav-link" onclick="document.getElementById('senales').scrollIntoView({behavior:'smooth'})">Señales</button>
       <button class="nav-link" onclick="document.getElementById('categorias').scrollIntoView({behavior:'smooth'})">Categorías</button>
       <button class="nav-link" onclick="document.getElementById('precios').scrollIntoView({behavior:'smooth'})">Precios</button>
       <button class="nav-link" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})">FAQ</button>
@@ -1334,9 +1478,9 @@
 
         <h1><span class="grad-text">Haz que tu empresa esté presente cuando tu mercado empieza a moverse.</span></h1>
 
-        <p><strong>Golden Partners</strong> combina posicionamiento, señales de mercado, eventos, contenido, relaciones y activación B2B alrededor de una categoría concreta.</p>
+        <p><strong>Golden Partners</strong> combina posicionamiento, un Motor de Señales B2B, eventos, contenido, relaciones y activación alrededor de una categoría concreta.</p>
 
-        <p>Cada mes trabajamos para entender <strong>qué empresas pueden necesitar lo que haces, qué está ocurriendo dentro de ellas, quién debería conocerte y qué contexto puede abrir una conversación.</strong></p>
+        <p>Durante cada semana buscamos <strong>qué empresas están entrando en situaciones donde tu solución puede ganar relevancia, quién decide y qué ángulo de entrada tiene más sentido.</strong> Después lo conectamos con Foros, Mesas, contenido, relaciones y seguimiento.</p>
 
         <div class="exclusivity">Una empresa principal por categoría. Mientras tu posición esté activa, no incorporamos como Golden principal a un competidor directo dentro de la misma categoría.</div>
 
@@ -1354,7 +1498,7 @@
 
         <ul class="partner-list">
           <li><span class="check">✓</span><span><strong>Golden Position</strong> · asociación de tu empresa a una categoría concreta.</span></li>
-          <li><span class="check">✓</span><span><strong>Opportunity Radar</strong> · empresas, situaciones y señales que pueden hacer relevante tu solución.</span></li>
+          <li><span class="check">✓</span><span><strong>Motor de Señales B2B</strong> · detección continua de empresas en movimiento, decisor, contexto y ángulo de entrada.</span></li>
           <li><span class="check">✓</span><span><strong>Intent + Fit</strong> · priorización antes de activar.</span></li>
           <li><span class="check">✓</span><span><strong>Relationship Map</strong> · búsqueda de caminos de acceso y relaciones existentes.</span></li>
           <li><span class="check">✓</span><span><strong>Activation Desk</strong> · conversación, evento, introducción o contexto cuando exista una razón real.</span></li>
@@ -1388,8 +1532,8 @@
 
         <article class="value-card">
           <div class="value-icon">◉</div>
-          <h3>Radar</h3>
-          <p>Buscamos movimientos de mercado que puedan convertir una cuenta en una conversación relevante.</p>
+          <h3>Señales</h3>
+          <p>Detectamos movimientos de mercado y los convertimos en Signal Briefs accionables: empresa, señal, decisor y ángulo de entrada.</p>
         </article>
 
         <article class="value-card">
@@ -1429,14 +1573,14 @@
         </article>
 
         <article class="engine-card">
-          <div class="engine-num">02 · Opportunity Radar</div>
-          <h3>Cada mes buscamos qué está cambiando.</h3>
-          <p>Definimos las situaciones que suelen aparecer antes de una posible compra y buscamos señales compatibles con esas situaciones.</p>
+          <div class="engine-num">02 · Signal Engine</div>
+          <h3>Buscamos señales cada semana.</h3>
+          <p>Monitorizamos situaciones que pueden anticipar una necesidad B2B y las convertimos en oportunidades priorizadas, no en una lista genérica de empresas.</p>
           <ul>
-            <li>✓ Cambios directivos</li>
-            <li>✓ Expansión y nuevas geografías</li>
-            <li>✓ Financiación, M&A o inversión</li>
-            <li>✓ Contrataciones y transformación</li>
+            <li>✓ Expansión, funding, M&A y nuevos mercados</li>
+            <li>✓ Contrataciones y cambios directivos</li>
+            <li>✓ Proyectos, compras o necesidades explícitas</li>
+            <li>✓ Decisor + contexto + ángulo de entrada</li>
           </ul>
         </article>
 
@@ -1491,17 +1635,76 @@
     </div>
   </section>
 
+
+  <section id="senales" class="section signals-engine">
+    <div class="wrap">
+      <div class="center reveal">
+        <span class="kicker">Motor de Señales B2B</span>
+        <h2>No esperamos a que una empresa diga “necesito proveedor”. Buscamos lo que ocurre antes.</h2>
+        <p class="lead">Cada semana detectamos movimientos que pueden convertir una cuenta normal en una conversación con contexto. No compartimos nombres por volumen: compartimos señales explicadas y priorizadas.</p>
+      </div>
+
+      <div class="signals-shell reveal">
+        <div class="signals-top">
+          <div class="signals-copy">
+            <span class="pill">Signal Briefs · Golden Partners</span>
+            <h3 style="margin-top:15px;font-size:31px;letter-spacing:-.04em;">De la señal a una posible conversación.</h3>
+            <p>Una empresa que acaba de levantar capital, entra en un nuevo mercado, incorpora determinados perfiles, cambia de dirección, anuncia una adquisición o está buscando una solución concreta no es automáticamente un cliente.</p>
+            <p>Pero sí existe una <strong>razón mejor para investigar ahora</strong>. Nosotros revisamos la situación, localizamos al decisor relevante y preparamos el ángulo de entrada antes de compartirla con el Golden Partner.</p>
+
+            <div class="cadence-box">
+              <strong>Cadencia habitual: 2 entregas por semana.</strong>
+              <span>En cada entrega compartimos varias señales priorizadas cuando existe suficiente calidad. Preferimos menos oportunidades con contexto que rellenar una cuota artificial de empresas.</span>
+            </div>
+          </div>
+
+          <div class="brief-card">
+            <div class="brief-head">
+              <div>
+                <b>Qué recibe el Golden</b>
+                <div class="small" style="margin-top:5px;">Formato orientativo de cada Signal Brief.</div>
+              </div>
+              <span class="brief-tag">Research accionable</span>
+            </div>
+
+            <div class="brief-grid">
+              <div class="brief-item"><strong>Empresa</strong><span>Cuenta, sector, mercado y contexto suficiente para entender el caso.</span></div>
+              <div class="brief-item"><strong>Señal detectada</strong><span>Qué ha ocurrido y por qué puede cambiar la prioridad de esa empresa.</span></div>
+              <div class="brief-item"><strong>Por qué encaja</strong><span>Hipótesis concreta de relación entre la señal y la solución del Golden.</span></div>
+              <div class="brief-item"><strong>Decisor</strong><span>Quién parece la persona más lógica para esa situación y por qué.</span></div>
+              <div class="brief-item"><strong>Ángulo de entrada</strong><span>Cómo abrir la conversación sin empezar por un pitch comercial genérico.</span></div>
+              <div class="brief-item"><strong>Camino de acceso</strong><span>Relación directa, contacto común, evento, partner o aproximación contextual cuando exista.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trigger-grid">
+          <div class="trigger-chip"><strong>Expansión</strong><br>Nuevos mercados, geografías o unidades.</div>
+          <div class="trigger-chip"><strong>Funding</strong><br>Ronda cerrada, nueva inversión o financiación.</div>
+          <div class="trigger-chip"><strong>Hiring</strong><br>Contratación de roles que revelan una nueva prioridad.</div>
+          <div class="trigger-chip"><strong>Demanda explícita</strong><br>Búsqueda pública de proveedor, servicio o solución B2B.</div>
+          <div class="trigger-chip"><strong>M&A</strong><br>Compra, venta, integración o movimientos corporativos.</div>
+          <div class="trigger-chip"><strong>Cambio directivo</strong><br>Nuevo CEO, CFO, CRO, CMO, CTO, CHRO u otro decisor.</div>
+          <div class="trigger-chip"><strong>Transformación</strong><br>Nuevos proyectos, tecnología, procesos o reorganización.</div>
+          <div class="trigger-chip"><strong>Presión / regulación</strong><br>Cambios externos que pueden crear una nueva necesidad.</div>
+        </div>
+
+        <p class="signals-note">Una señal es una hipótesis de oportunidad, no una intención de compra garantizada. La compartimos cuando existe suficiente encaje para que merezca investigación o activación.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section cycle">
     <div class="wrap">
       <div class="center reveal">
-        <span class="kicker">Ciclo mensual</span>
-        <h2>Esto es lo que ocurre cada mes.</h2>
+        <span class="kicker">Ritmo semanal + ciclo mensual</span>
+        <h2>Señales cada semana. Posicionamiento y activación durante todo el mes.</h2>
       </div>
 
       <div class="cycle-shell reveal">
         <div class="cycle-grid">
           <div class="cycle-step"><strong>1 · Prioridad</strong><span>Elegimos buyer, problema o situación principal.</span></div>
-          <div class="cycle-step"><strong>2 · Radar</strong><span>Buscamos señales, empresas y movimientos relevantes.</span></div>
+          <div class="cycle-step"><strong>2 · Señales</strong><span>Dos veces por semana compartimos Signal Briefs priorizados cuando hay suficiente calidad.</span></div>
           <div class="cycle-step"><strong>3 · Selección</strong><span>Revisamos encaje, momento y caminos de relación.</span></div>
           <div class="cycle-step"><strong>4 · Activación</strong><span>Ponemos en marcha los contextos que tengan sentido.</span></div>
           <div class="cycle-step"><strong>5 · Autoridad</strong><span>Integramos la vertical en Foros temáticos, Mesas colaborativas, Rondas y contenidos.</span></div>
@@ -1524,7 +1727,7 @@
           <span class="pill">Ejemplo · Corporate Finance</span>
           <h3 style="margin-top:14px;font-size:30px;letter-spacing:-.035em;">Buscamos movimientos que puedan preceder una necesidad financiera.</h3>
           <p>Después cruzamos esas situaciones con tamaño de empresa, sector, decisor, ticket, geografía, relaciones existentes y contextos disponibles dentro de Emprende360.</p>
-          <p>El resultado no es una base de datos. Es un mapa vivo de empresas y relaciones donde puede empezar a existir una razón real para hablar.</p>
+          <p>El resultado no es una base de datos. Es un mapa vivo que alimenta los Signal Briefs semanales: empresa, señal, hipótesis, decisor, relación disponible y ángulo de entrada.</p>
         </div>
 
         <div class="signal-grid">
@@ -1632,7 +1835,7 @@
         <article class="infra-card"><b>Marketplace Emprende360</b><span>Perfil comercial dentro del Marketplace con servicios, especialidad, ventaja para la comunidad y solicitudes de contacto.</span></article>
         <article class="infra-card"><b>Contenido y distribución</b><span>Las conversaciones generan activos que pueden seguir trabajando después del directo.</span></article>
         <article class="infra-card"><b>Invitación a perfiles</b><span>Activamos perfiles relevantes hacia aquellas conversaciones donde tenga sentido su participación.</span></article>
-        <article class="infra-card"><b>Radar de oportunidades</b><span>Búsqueda continua de empresas, situaciones y señales relacionadas con tu buyer.</span></article>
+        <article class="infra-card"><b>Motor de Señales B2B</b><span>Research continuo y dos entregas semanales habituales con oportunidades priorizadas, decisor y ángulo de entrada.</span></article>
         <article class="infra-card"><b>Activación relacional</b><span>Cuando existe encaje, trabajamos el mejor camino disponible para acercarnos.</span></article>
         <article class="infra-card"><b>Seguimiento</b><span>Revisamos respuestas, relaciones, próximos pasos y nuevas señales.</span></article>
       </div>
@@ -1675,7 +1878,7 @@
           <div class="price-sub">Un mes para activar tu posición y trabajar el sistema Golden sin permanencia posterior.</div>
           <ul>
             <li><span class="check">✓</span><span>Golden Activation Map</span></li>
-            <li><span class="check">✓</span><span>Radar de oportunidades y señales</span></li>
+            <li><span class="check">✓</span><span>Motor de Señales B2B · cadencia habitual de 2 entregas semanales</span></li>
             <li><span class="check">✓</span><span>Selección y activación B2B</span></li>
             <li><span class="check">✓</span><span>Presencia Golden durante octubre</span></li>
             <li><span class="check">✓</span><span>Perfil en Emprende360 Marketplace</span></li>
@@ -1692,7 +1895,7 @@
           <div class="price-sub">Octubre + noviembre + diciembre para dar continuidad a posición, radar, relaciones y activación.</div>
           <ul>
             <li><span class="check">✓</span><span>Todo lo incluido en Golden Octubre</span></li>
-            <li><span class="check">✓</span><span>Tres ciclos de radar y activación</span></li>
+            <li><span class="check">✓</span><span>Motor de Señales activo durante los 3 meses + seguimiento de señales anteriores</span></li>
             <li><span class="check">✓</span><span>Continuidad en Marketplace, contenido y conversaciones</span></li>
             <li><span class="check">✓</span><span>Seguimiento de relaciones abiertas</span></li>
             <li><span class="check">✓</span><span>Categoría protegida durante el trimestre</span></li>
@@ -1715,7 +1918,7 @@
       </div>
 
       <div class="metrics-grid reveal">
-        <article class="metric-card"><strong>Mercado</strong><span>Empresas revisadas, señales detectadas, cambios observados y situaciones relevantes.</span></article>
+        <article class="metric-card"><strong>Señales</strong><span>Empresas revisadas, Signal Briefs compartidos, triggers detectados, decisores y situaciones relevantes.</span></article>
         <article class="metric-card"><strong>Activación</strong><span>Perfiles activados, invitaciones, conversaciones iniciadas, respuestas e interés.</span></article>
         <article class="metric-card"><strong>Relaciones</strong><span>Cruces, introducciones, participación en Foros y Rondas, conversaciones posteriores.</span></article>
         <article class="metric-card"><strong>Autoridad</strong><span>Contenido creado, interacción, preguntas, participación y distribución.</span></article>
@@ -1766,8 +1969,13 @@
         </details>
 
         <details>
-          <summary>¿Cuántas empresas encontraréis cada mes?</summary>
-          <p>Depende de la vertical y de las señales disponibles. Preferimos trabajar una selección pequeña con razones reales antes que cumplir una cuota artificial de nombres.</p>
+          <summary>¿Cada cuánto recibiré señales?</summary>
+          <p>La cadencia habitual es de dos entregas por semana. En cada una compartimos varias oportunidades priorizadas cuando hay señales con suficiente calidad y encaje. No rellenamos una cuota artificial si esa semana el mercado no ofrece casos que merezcan atención.</p>
+        </details>
+
+        <details>
+          <summary>¿Qué incluye exactamente un Signal Brief?</summary>
+          <p>Empresa, señal detectada, por qué puede ser relevante para tu solución, decisor probable, ángulo recomendado de entrada y, cuando existe, el mejor camino de acceso desde la red o el ecosistema Emprende360.</p>
         </details>
 
         <details>
@@ -1813,7 +2021,7 @@
       <div class="final-box reveal">
         <span class="pill">Golden Partners · Emprende360</span>
         <h2>Tu mercado ya se está moviendo.</h2>
-        <p class="lead" style="max-width:800px;margin:17px auto 0;">Empresas creciendo. Equipos cambiando. Nuevos proyectos. Financiación. Expansión. Contrataciones. Tecnología. Operaciones. Decisiones. Nuestro trabajo consiste en detectar cuáles de esos movimientos pueden tener relación contigo y qué merece la pena hacer después.</p>
+        <p class="lead" style="max-width:800px;margin:17px auto 0;">Empresas creciendo. Equipos cambiando. Nuevos proyectos. Financiación. Expansión. Contrataciones. Tecnología. Operaciones. Decisiones. El Motor de Señales trabaja cada semana para detectar cuáles de esos movimientos pueden tener relación contigo, quién decide y qué merece la pena hacer después.</p>
 
         <div class="final-prices">
           <div class="final-price-pill">Golden Octubre · 390 €</div>
@@ -1836,7 +2044,7 @@
   <div class="wrap footer-inner">
     <div>
       <strong>Emprende360 · Golden Partners</strong>
-      <div style="margin-top:5px;">Posición · Radar · Relaciones · Activación · Autoridad.</div>
+      <div style="margin-top:5px;">Posición · Señales · Relaciones · Activación · Autoridad.</div>
     </div>
 
     <div class="footer-links">
