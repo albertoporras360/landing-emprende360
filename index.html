@@ -1696,9 +1696,9 @@
       display:flex;
       align-items:center;
 
-      gap:15px;
+      gap:18px;
 
-      padding:20px;
+      padding:22px;
 
       border:
         1px solid rgba(255,255,255,.10);
@@ -1710,27 +1710,41 @@
     }
 
     .person-avatar{
-      width:55px;
-      height:55px;
+      width:72px;
+      height:72px;
 
-      display:grid;
-      place-items:center;
-
+      display:block;
       flex-shrink:0;
 
-      border-radius:17px;
+      overflow:hidden;
 
-      background:
-        linear-gradient(
-          135deg,
-          #7DD3FC,
-          #FDE047
-        );
+      border-radius:20px;
 
-      color:#06111F;
+      border:1px solid rgba(255,255,255,.16);
 
-      font-size:17px;
-      font-weight:950;
+      background:#0B1728;
+
+      box-shadow:
+        0 14px 34px rgba(0,0,0,.22);
+
+      transition:
+        transform .22s ease,
+        border-color .22s ease,
+        box-shadow .22s ease;
+    }
+
+    .person-avatar:hover{
+      transform:translateY(-3px);
+      border-color:rgba(125,211,252,.38);
+      box-shadow:
+        0 20px 44px rgba(0,0,0,.30);
+    }
+
+    .person-avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
     }
 
     .person-card b{
@@ -2871,6 +2885,213 @@
       }
     }
 
+
+    /* =========================================================
+       PARTICIPA Y COLABORA
+    ========================================================= */
+
+    .collab-section{
+      background:
+        radial-gradient(circle at 12% 10%,rgba(24,167,255,.08),transparent 30%),
+        radial-gradient(circle at 88% 12%,rgba(244,197,66,.07),transparent 30%),
+        var(--navy);
+      border-top:1px solid rgba(255,255,255,.06);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .collab-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      max-width:980px;
+      margin:38px auto 0;
+    }
+
+    .collab-card{
+      position:relative;
+      min-height:360px;
+      display:flex;
+      flex-direction:column;
+      padding:29px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:29px;
+      background:rgba(255,255,255,.045);
+      box-shadow:0 22px 65px rgba(0,0,0,.17);
+      transition:transform .24s ease,border-color .24s ease,background .24s ease,box-shadow .24s ease;
+    }
+
+    .collab-card::before{
+      content:"";
+      position:absolute;
+      width:220px;
+      height:220px;
+      right:-80px;
+      top:-90px;
+      border-radius:50%;
+      filter:blur(2px);
+      pointer-events:none;
+    }
+
+    .collab-card.speaker{
+      border-color:rgba(24,167,255,.22);
+    }
+
+    .collab-card.speaker::before{
+      background:radial-gradient(circle,rgba(24,167,255,.18),transparent 68%);
+    }
+
+    .collab-card.partner{
+      border-color:rgba(244,197,66,.24);
+    }
+
+    .collab-card.partner::before{
+      background:radial-gradient(circle,rgba(244,197,66,.16),transparent 68%);
+    }
+
+    .collab-card:hover{
+      transform:translateY(-5px);
+      background:rgba(255,255,255,.06);
+      box-shadow:0 30px 80px rgba(0,0,0,.28);
+    }
+
+    .collab-card.speaker:hover{
+      border-color:rgba(24,167,255,.40);
+    }
+
+    .collab-card.partner:hover{
+      border-color:rgba(244,197,66,.42);
+    }
+
+    .collab-top{
+      position:relative;
+      z-index:2;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+    }
+
+    .collab-icon{
+      width:52px;
+      height:52px;
+      display:grid;
+      place-items:center;
+      border-radius:17px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.055);
+      font-size:22px;
+    }
+
+    .collab-label{
+      display:inline-flex;
+      padding:6px 9px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      color:#CBD5E1;
+      font-size:8px;
+      font-weight:950;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    .collab-card h3{
+      position:relative;
+      z-index:2;
+      margin-top:20px;
+      font-size:30px;
+      letter-spacing:-.04em;
+    }
+
+    .collab-card .collab-job{
+      position:relative;
+      z-index:2;
+      margin-top:8px;
+      font-size:15px;
+      font-weight:900;
+      line-height:1.45;
+    }
+
+    .collab-card.speaker .collab-job{
+      color:#7DD3FC;
+    }
+
+    .collab-card.partner .collab-job{
+      color:#FDE68A;
+    }
+
+    .collab-card p{
+      position:relative;
+      z-index:2;
+      margin:13px 0 0;
+      color:#CBD5E1;
+      font-size:12px;
+      line-height:1.62;
+    }
+
+    .collab-points{
+      position:relative;
+      z-index:2;
+      list-style:none;
+      margin:18px 0 0;
+      padding:0;
+      display:grid;
+      gap:9px;
+    }
+
+    .collab-points li{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:9px;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    .collab-card .btn{
+      position:relative;
+      z-index:2;
+      width:100%;
+      margin-top:auto;
+      padding-top:14px;
+      padding-bottom:14px;
+    }
+
+    .btn-speaker{
+      color:#06111F;
+      background:linear-gradient(90deg,#7DD3FC,#18A7FF);
+      box-shadow:0 18px 55px rgba(24,167,255,.17);
+    }
+
+    .btn-speaker:hover{
+      box-shadow:0 24px 70px rgba(24,167,255,.28);
+    }
+
+    .collab-note{
+      max-width:780px;
+      margin:18px auto 0;
+      color:#64748B;
+      text-align:center;
+      font-size:10px;
+      line-height:1.55;
+    }
+
+    @media(max-width:760px){
+      .collab-grid{
+        grid-template-columns:1fr;
+      }
+
+      .collab-card{
+        min-height:auto;
+        padding:24px;
+      }
+
+      .collab-card .btn{
+        margin-top:22px;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -2897,6 +3118,7 @@
 <a data-i18n="nav2" href="#accion">En acción</a>
 <a data-i18n="nav3" href="#golden">Golden Partners</a>
 <a data-i18n="nav4" href="#trabaja">Trabaja con Emprende360</a>
+<a data-i18n="navCollab" href="#colabora">Colabora</a>
 </nav>
 <div aria-label="Language selector" class="home-language-switcher">
 <button aria-label="Ver en español" class="home-lang-btn active" data-lang="es" type="button">🇪🇸 ES</button>
@@ -3350,6 +3572,57 @@
 </div>
 </section>
 <!-- =========================================================
+     PARTICIPA Y COLABORA
+========================================================= -->
+<section class="section collab-section" id="colabora">
+<div class="wrap">
+<div class="center reveal">
+<span class="kicker" data-i18n="collabKicker">Participa y colabora</span>
+<h2 data-i18n="collabTitle">Hay más de una forma de formar parte de Emprende360.</h2>
+<p class="lead" data-i18n="collabLead">Puedes aportar experiencia dentro de una conversación o construir una relación más activa con el ecosistema. Son dos vías distintas y las seleccionamos por encaje.</p>
+</div>
+
+<div class="collab-grid reveal">
+
+<article class="collab-card speaker">
+<div class="collab-top">
+<div class="collab-icon">🎙</div>
+<span class="collab-label" data-i18n="speakerLabel">Expertos · Foros · Rondas</span>
+</div>
+<h3 data-i18n="speakerTitle">Quiero ser ponente</h3>
+<div class="collab-job" data-i18n="speakerJob">Quiero aportar experiencia real a una conversación.</div>
+<p data-i18n="speakerText">Buscamos especialistas, founders y directivos que puedan aportar casos, criterio, preguntas y experiencia práctica. No buscamos ponencias comerciales ni presentaciones largas.</p>
+<ul class="collab-points">
+<li><span class="check">✓</span><span data-i18n="speakerPoint1">Foros Ejecutivos y conversaciones temáticas.</span></li>
+<li><span class="check">✓</span><span data-i18n="speakerPoint2">Casos, experiencia y contraste con otros perfiles.</span></li>
+<li><span class="check">✓</span><span data-i18n="speakerPoint3">Participación sujeta a temática, perfil y calendario.</span></li>
+</ul>
+<a class="btn btn-speaker" data-i18n="speakerCta" href="https://forms.gle/p264NwL1XPD3o7PZ6" target="_blank" rel="noopener noreferrer">Proponerme como ponente →</a>
+</article>
+
+<article class="collab-card partner">
+<div class="collab-top">
+<div class="collab-icon">🤝</div>
+<span class="collab-label" data-i18n="partnerLabel">Partnerships · Colaboración</span>
+</div>
+<h3 data-i18n="partnerTitle">Quiero colaborar con Emprende360</h3>
+<div class="collab-job" data-i18n="partnerJob">Quiero crear sinergias y activar oportunidades juntos.</div>
+<p data-i18n="partnerText">Esta vía es para profesionales, empresas, comunidades y conectores con los que tenga sentido construir iniciativas win-win: activar relaciones, sumar perfiles, coorganizar conversaciones o abrir nuevas oportunidades.</p>
+<ul class="collab-points">
+<li><span class="check">✓</span><span data-i18n="partnerPoint1">Partnerships y colaboraciones estratégicas.</span></li>
+<li><span class="check">✓</span><span data-i18n="partnerPoint2">Activación de red, perfiles y oportunidades.</span></li>
+<li><span class="check">✓</span><span data-i18n="partnerPoint3">Foros, Rondas o iniciativas construidas conjuntamente.</span></li>
+</ul>
+<a class="btn btn-primary" data-i18n="partnerCta" href="https://emprende360.club/activadores" target="_blank" rel="noopener noreferrer">Explorar Partnerships →</a>
+</article>
+
+</div>
+
+<p class="collab-note reveal" data-i18n="collabNote">Participar como ponente o colaborar con Emprende360 no implica convertirse en Golden Partner. Cada vía tiene un objetivo y un nivel de implicación diferente.</p>
+</div>
+</section>
+
+<!-- =========================================================
      PEOPLE
 ========================================================= -->
 <section class="people-strip">
@@ -3368,9 +3641,9 @@
 </div>
 <div class="people-grid reveal">
 <article class="person-card">
-<div class="person-avatar">
-          AP
-        </div>
+<a class="person-avatar" href="https://es.linkedin.com/in/albertoporrasmoreno" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn de Alberto Porras">
+<img src="https://emprende360.club/alberto.jpg" alt="Alberto Porras" loading="lazy"/>
+</a>
 <div>
 <b>
             Alberto Porras
@@ -3387,9 +3660,9 @@
 </div>
 </article>
 <article class="person-card">
-<div class="person-avatar">
-          JI
-        </div>
+<a class="person-avatar" href="https://www.linkedin.com/in/jorgeiparraguirre/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn de Jorge Iparraguirre">
+<img src="https://emprende360.club/jorge.jpg" alt="Jorge Iparraguirre" loading="lazy"/>
+</a>
 <div>
 <b>
             Jorge Iparraguirre
@@ -3434,7 +3707,14 @@
           Recibir próximos eventos
         </a>
 </div>
-<div class="final-secondary"><span data-i18n="finalSecondaryIntro">¿Quieres trabajar directamente con Emprende360?</span> <a data-i18n="finalService4" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Conocer Golden Partners →</a></div>
+<div class="final-secondary">
+<span data-i18n="finalSecondaryIntro">¿Quieres trabajar directamente con Emprende360?</span>
+<a data-i18n="finalService4" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Conocer Golden Partners →</a>
+&nbsp; · &nbsp;
+<a data-i18n="finalSpeaker" href="https://forms.gle/p264NwL1XPD3o7PZ6" rel="noopener noreferrer" target="_blank">Quiero ser ponente →</a>
+&nbsp; · &nbsp;
+<a data-i18n="finalPartner" href="https://emprende360.club/activadores" rel="noopener noreferrer" target="_blank">Partnerships →</a>
+</div>
 </div>
 </div>
 </section>
@@ -3452,6 +3732,8 @@
 <div class="footer-links">
 <a data-i18n="footerLink1" href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank">Eventos</a>
 <a data-i18n="footerLink2" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Golden Partners</a>
+<a data-i18n="footerSpeaker" href="https://forms.gle/p264NwL1XPD3o7PZ6" rel="noopener noreferrer" target="_blank">Quiero ser ponente</a>
+<a data-i18n="footerPartner" href="https://emprende360.club/activadores" rel="noopener noreferrer" target="_blank">Partnerships</a>
 <a data-i18n="footerLink7" href="https://es.linkedin.com/in/albertoporrasmoreno" rel="noopener noreferrer" target="_blank">Alberto Porras</a>
 <a data-i18n="footerLink8" href="https://www.linkedin.com/in/jorgeiparraguirre/" rel="noopener noreferrer" target="_blank">Jorge Iparraguirre</a>
 <a data-i18n="footerLink9" href="https://emprende360.club/privacidad" rel="noopener noreferrer" target="_blank">Privacidad</a>
@@ -3505,7 +3787,8 @@ const HOME_TRANSLATIONS = {
     "nav1": "Eventos",
     "nav2": "En acción",
     "nav3": "Golden Partners",
-    "nav4": "Work with Emprende360",
+    "nav4": "Trabaja con Emprende360",
+    "navCollab": "Colabora",
     "nav5": "Golden Partners",
     "navCta": "Ver próximos eventos",
     "heroPill": "Participación abierta",
@@ -3708,6 +3991,30 @@ const HOME_TRANSLATIONS = {
     "asiaTag3": "Vietnam",
     "asiaTag4": "China",
     "asiaTag5": "Desarrollo comercial",
+    "collabKicker": "Participa y colabora",
+    "collabTitle": "Hay más de una forma de formar parte de Emprende360.",
+    "collabLead": "Puedes aportar experiencia dentro de una conversación o construir una relación más activa con el ecosistema. Son dos vías distintas y las seleccionamos por encaje.",
+    "speakerLabel": "Expertos · Foros · Rondas",
+    "speakerTitle": "Quiero ser ponente",
+    "speakerJob": "Quiero aportar experiencia real a una conversación.",
+    "speakerText": "Buscamos especialistas, founders y directivos que puedan aportar casos, criterio, preguntas y experiencia práctica. No buscamos ponencias comerciales ni presentaciones largas.",
+    "speakerPoint1": "Foros Ejecutivos y conversaciones temáticas.",
+    "speakerPoint2": "Casos, experiencia y contraste con otros perfiles.",
+    "speakerPoint3": "Participación sujeta a temática, perfil y calendario.",
+    "speakerCta": "Proponerme como ponente →",
+    "partnerLabel": "Partnerships · Colaboración",
+    "partnerTitle": "Quiero colaborar con Emprende360",
+    "partnerJob": "Quiero crear sinergias y activar oportunidades juntos.",
+    "partnerText": "Esta vía es para profesionales, empresas, comunidades y conectores con los que tenga sentido construir iniciativas win-win: activar relaciones, sumar perfiles, coorganizar conversaciones o abrir nuevas oportunidades.",
+    "partnerPoint1": "Partnerships y colaboraciones estratégicas.",
+    "partnerPoint2": "Activación de red, perfiles y oportunidades.",
+    "partnerPoint3": "Foros, Rondas o iniciativas construidas conjuntamente.",
+    "partnerCta": "Explorar Partnerships →",
+    "collabNote": "Participar como ponente o colaborar con Emprende360 no implica convertirse en Golden Partner. Cada vía tiene un objetivo y un nivel de implicación diferente.",
+    "finalSpeaker": "Quiero ser ponente →",
+    "finalPartner": "Partnerships →",
+    "footerSpeaker": "Quiero ser ponente",
+    "footerPartner": "Partnerships",
     "peopleKicker": "Detrás de las conversaciones",
     "peopleTitle": "Red, criterio y dinamización.",
     "person1Role": "Fundador · Emprende360",
@@ -3745,6 +4052,7 @@ const HOME_TRANSLATIONS = {
     "nav2": "In action",
     "nav3": "Golden Partners",
     "nav4": "Work with Emprende360",
+    "navCollab": "Collaborate",
     "nav5": "Golden Partners",
     "navCta": "View upcoming events",
     "heroPill": "Open participation",
@@ -3947,6 +4255,30 @@ const HOME_TRANSLATIONS = {
     "asiaTag3": "Vietnam",
     "asiaTag4": "China",
     "asiaTag5": "Commercial development",
+    "collabKicker": "Take part and collaborate",
+    "collabTitle": "There is more than one way to be part of Emprende360.",
+    "collabLead": "You can contribute expertise to a conversation or build a more active relationship with the ecosystem. They are two different routes and both are selected for fit.",
+    "speakerLabel": "Experts · Forums · Rounds",
+    "speakerTitle": "I want to be a speaker",
+    "speakerJob": "I want to bring real experience into a conversation.",
+    "speakerText": "We look for specialists, founders and executives who can contribute cases, judgement, questions and practical experience. We are not looking for commercial talks or long presentations.",
+    "speakerPoint1": "Executive Forums and thematic conversations.",
+    "speakerPoint2": "Cases, experience and discussion with other profiles.",
+    "speakerPoint3": "Participation is subject to topic, profile and calendar.",
+    "speakerCta": "Apply as a speaker →",
+    "partnerLabel": "Partnerships · Collaboration",
+    "partnerTitle": "I want to collaborate with Emprende360",
+    "partnerJob": "I want to create synergies and activate opportunities together.",
+    "partnerText": "This route is for professionals, companies, communities and connectors where it makes sense to build win-win initiatives: activate relationships, bring relevant profiles, co-create conversations or open new opportunities.",
+    "partnerPoint1": "Partnerships and strategic collaborations.",
+    "partnerPoint2": "Activation of networks, profiles and opportunities.",
+    "partnerPoint3": "Forums, Rounds or initiatives built together.",
+    "partnerCta": "Explore Partnerships →",
+    "collabNote": "Being a speaker or collaborating with Emprende360 does not require becoming a Golden Partner. Each route has a different purpose and level of involvement.",
+    "finalSpeaker": "I want to be a speaker →",
+    "finalPartner": "Partnerships →",
+    "footerSpeaker": "I want to be a speaker",
+    "footerPartner": "Partnerships",
     "peopleKicker": "Behind the conversations",
     "peopleTitle": "Network, judgement and facilitation.",
     "person1Role": "Founder · Emprende360",
