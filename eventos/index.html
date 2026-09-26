@@ -3308,6 +3308,66 @@
   }
 }
 
+
+/* =========================================================
+   EVENTOS · MARKETPLACE DENTRO DE PARTICIPA / COLABORA
+========================================================= */
+
+.routing.participation-routing .routing-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  max-width:1050px;
+}
+
+.route-card.marketplace-route{
+  border-color:rgba(168,85,247,.24);
+  background:
+    radial-gradient(circle at 100% 0,rgba(168,85,247,.09),transparent 38%),
+    rgba(255,255,255,.045);
+}
+
+.route-card.marketplace-route::before{
+  background:radial-gradient(circle,rgba(168,85,247,.14),transparent 68%);
+}
+
+.route-card.marketplace-route:hover{
+  border-color:rgba(168,85,247,.43);
+}
+
+.routing.participation-routing .marketplace-route .route-icon{
+  background:linear-gradient(135deg,#DDD6FE,#A855F7);
+  color:#160522;
+}
+
+.routing.participation-routing .marketplace-route .route-job{
+  color:#DDD6FE;
+}
+
+.btn-marketplace{
+  color:#14051F;
+  background:linear-gradient(90deg,#DDD6FE,#A855F7);
+  box-shadow:0 18px 55px rgba(168,85,247,.18);
+}
+
+.btn-marketplace:hover{
+  box-shadow:0 24px 70px rgba(168,85,247,.29);
+}
+
+@media(max-width:1050px){
+  .routing.participation-routing .routing-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .routing.participation-routing .golden-route-v2{
+    grid-column:auto;
+  }
+}
+
+@media(max-width:760px){
+  .routing.participation-routing .routing-grid{
+    grid-template-columns:1fr;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -3367,8 +3427,8 @@
 <span class="frequency-pill">📅 Q4 · Nuevas conversaciones cada semana</span>
 </div>
 <div class="hero-actions">
-<a class="btn btn-primary" href="#eventos">Ver próximos eventos →</a>
-<a class="btn btn-secondary" href="#replays">Ver conversaciones anteriores →</a>
+<a class="btn btn-primary" href="#eventos" target="_blank" rel="noopener noreferrer">Ver próximos eventos →</a>
+<a class="btn btn-secondary" href="#replays" target="_blank" rel="noopener noreferrer">Ver conversaciones anteriores →</a>
 </div>
 <p class="hero-note">No necesitas asistir a todo. Elige los temas que tengan sentido para ti. <a href="https://forms.gle/co89pCvzScuLtr6z5" rel="noopener noreferrer" style="color:#FDE68A;font-weight:900;" target="_blank">Recibir próximos eventos →</a></p>
 </div>
@@ -4070,9 +4130,9 @@
 <div class="wrap">
 
 <div class="center reveal">
-<span class="kicker">Participa · Colabora · Activa</span>
+<span class="kicker">Participa · Colabora · Activa · Conecta</span>
 <h2>Elige cómo quieres formar parte de Emprende360.</h2>
-<p class="lead">Puedes aportar tu experiencia en una conversación, construir iniciativas con nosotros o trabajar tu categoría de forma activa como Golden Partner.</p>
+<p class="lead">Puedes aportar tu experiencia, construir iniciativas con nosotros, trabajar tu categoría como Golden Partner o utilizar el Marketplace para encontrar expertos y oportunidades B2B.</p>
 </div>
 
 <div class="routing-grid reveal">
@@ -4113,6 +4173,24 @@
 </div>
 </article>
 
+<article class="route-card marketplace-route">
+<div class="route-icon">◎</div>
+<span class="route-label">Marketplace · Expertos · Demanda B2B</span>
+<h3>Marketplace Emprende360</h3>
+<div class="route-job">Encuentra expertos, servicios y oportunidades B2B.</div>
+<p>Un espacio para descubrir perfiles seleccionados, ventajas para la comunidad y señales de demanda que puedan abrir conversaciones con sentido.</p>
+
+<ul class="route-points">
+<li><span class="route-mini-check">✓</span><span>Expertos y servicios B2B por categoría.</span></li>
+<li><span class="route-mini-check">✓</span><span>Ventajas y condiciones para la comunidad.</span></li>
+<li><span class="route-mini-check">✓</span><span>Muestras de pedidos y oportunidades detectadas por el Motor B2B.</span></li>
+</ul>
+
+<div class="route-actions">
+<a class="btn btn-marketplace" href="https://emprende360.club/marketplace" rel="noopener noreferrer" target="_blank">Explorar Marketplace →</a>
+</div>
+</article>
+
 <article class="route-card golden-route-v2">
 <div class="route-icon">★</div>
 <span class="route-label">Posicionamiento · Radar · Activación</span>
@@ -4138,7 +4216,7 @@
 
 </div>
 
-<p class="participation-note reveal">No necesitas ser Golden Partner para asistir a los eventos, participar como ponente o explorar una colaboración con Emprende360. Cada vía tiene un objetivo y un nivel de implicación diferente.</p>
+<p class="participation-note reveal">No necesitas ser Golden Partner para asistir a los eventos, participar como ponente, explorar una colaboración o utilizar el Marketplace. Cada vía tiene un objetivo y un nivel de implicación diferente.</p>
 
 </div>
 </section>
@@ -4166,6 +4244,9 @@
       </a>
 <a href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">
         Golden Partners
+      </a>
+<a href="https://emprende360.club/marketplace" rel="noopener noreferrer" target="_blank">
+        Marketplace
       </a>
 <a href="https://forms.gle/p264NwL1XPD3o7PZ6" rel="noopener noreferrer" target="_blank">
         Quiero ser ponente
