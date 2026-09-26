@@ -11,6 +11,9 @@
   <meta property="og:description" content="Haz que tu empresa esté presente cuando tu mercado empieza a moverse.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://emprende360.club/golden-partners">
+  <meta property="og:image" content="https://emprende360.club/eventos/rondas.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
   <meta name="theme-color" content="#020617">
 
   <style>
@@ -1330,14 +1333,544 @@
       .logo-track { animation:none; }
       .reveal { opacity:1; transform:none; transition:none; }
     }
-  </style>
+  
+    /* =========================================================
+       GOLDEN PARTNERS · PREMIUM VISUAL V2
+    ========================================================= */
+
+    .golden-strip{
+      padding-top:0 !important;
+      background:
+        radial-gradient(circle at 12% 20%,rgba(244,197,66,.07),transparent 30%),
+        radial-gradient(circle at 88% 20%,rgba(24,167,255,.06),transparent 30%),
+        #01040d;
+    }
+
+    .hero{
+      padding:112px 0 76px;
+    }
+
+    .hero-grid{
+      grid-template-columns:minmax(0,1.03fr) minmax(410px,.97fr);
+      align-items:center;
+      gap:54px;
+    }
+
+    .hero-copy{
+      max-width:720px;
+    }
+
+    .hero-copy h1{
+      max-width:760px;
+    }
+
+    .golden-dashboard{
+      position:relative;
+      padding:20px;
+      border:1px solid rgba(244,197,66,.28);
+      border-radius:32px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.12),transparent 35%),
+        radial-gradient(circle at 0 100%,rgba(24,167,255,.10),transparent 42%),
+        rgba(255,255,255,.05);
+      box-shadow:0 36px 100px rgba(0,0,0,.38);
+      overflow:hidden;
+    }
+
+    .golden-dashboard::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(135deg,rgba(255,255,255,.04),transparent 38%),
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+      background-size:auto,34px 34px,34px 34px;
+    }
+
+    .dashboard-top{
+      position:relative;
+      z-index:2;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:14px;
+    }
+
+    .dashboard-top b{
+      font-size:14px;
+      letter-spacing:-.01em;
+    }
+
+    .dashboard-live{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:6px 10px;
+      border:1px solid rgba(34,197,94,.24);
+      border-radius:999px;
+      background:rgba(34,197,94,.08);
+      color:#86EFAC;
+      font-size:9px;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .dashboard-live::before{
+      content:"";
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#22C55E;
+      box-shadow:0 0 0 5px rgba(34,197,94,.10);
+    }
+
+    .dashboard-category{
+      position:relative;
+      z-index:2;
+      padding:18px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:22px;
+      background:rgba(2,6,23,.42);
+    }
+
+    .dashboard-category-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .dashboard-category-head span{
+      color:#94A3B8;
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    .dashboard-category-head b{
+      color:#FDE68A;
+      font-size:12px;
+    }
+
+    .dashboard-category h3{
+      margin-top:9px;
+      font-size:25px;
+      letter-spacing:-.035em;
+    }
+
+    .dashboard-category p{
+      margin:8px 0 0;
+      color:#CBD5E1;
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .signal-timeline{
+      position:relative;
+      z-index:2;
+      display:grid;
+      gap:9px;
+      margin-top:12px;
+    }
+
+    .signal-row{
+      display:grid;
+      grid-template-columns:88px 1fr;
+      gap:11px;
+      align-items:center;
+      padding:12px 13px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:16px;
+      background:rgba(255,255,255,.035);
+    }
+
+    .signal-row strong{
+      color:#7DD3FC;
+      font-size:9px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .signal-row span{
+      color:#CBD5E1;
+      font-size:10px;
+      line-height:1.4;
+    }
+
+    .dashboard-metrics{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .dashboard-metric{
+      padding:14px;
+      border:1px solid rgba(244,197,66,.14);
+      border-radius:17px;
+      background:rgba(244,197,66,.045);
+    }
+
+    .dashboard-metric strong{
+      display:block;
+      color:#FDE68A;
+      font-size:17px;
+      line-height:1;
+      letter-spacing:-.03em;
+    }
+
+    .dashboard-metric span{
+      display:block;
+      margin-top:6px;
+      color:#94A3B8;
+      font-size:9px;
+      line-height:1.35;
+    }
+
+    .dashboard-price{
+      position:relative;
+      z-index:2;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-top:14px;
+      padding-top:15px;
+      border-top:1px solid rgba(255,255,255,.10);
+    }
+
+    .dashboard-price strong{
+      color:#FDE68A;
+      font-size:19px;
+      letter-spacing:-.025em;
+    }
+
+    .dashboard-price span{
+      color:#94A3B8;
+      font-size:9px;
+      text-align:right;
+      line-height:1.4;
+    }
+
+    .proof-strip{
+      padding:26px 0;
+      background:var(--navy);
+      border-top:1px solid rgba(255,255,255,.06);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .proof-strip-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:8px;
+    }
+
+    .proof-chip{
+      padding:12px 10px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;
+      background:rgba(255,255,255,.03);
+      text-align:center;
+      color:#CBD5E1;
+      font-size:10px;
+      font-weight:850;
+      letter-spacing:.02em;
+    }
+
+    .proof-chip b{
+      display:block;
+      margin-bottom:4px;
+      color:#FDE68A;
+      font-size:11px;
+    }
+
+    .authority-proof{
+      background:
+        radial-gradient(circle at 10% 10%,rgba(24,167,255,.09),transparent 28%),
+        radial-gradient(circle at 90% 10%,rgba(244,197,66,.08),transparent 28%),
+        var(--deep);
+    }
+
+    .authority-proof-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr .85fr;
+      gap:14px;
+      margin-top:36px;
+    }
+
+    .authority-proof-card{
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:25px;
+      background:rgba(255,255,255,.04);
+      transition:transform .23s ease,border-color .23s ease,box-shadow .23s ease;
+    }
+
+    .authority-proof-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(244,197,66,.28);
+      box-shadow:0 24px 70px rgba(0,0,0,.24);
+    }
+
+    .authority-proof-media{
+      width:100%;
+      aspect-ratio:16/9;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      background:#071522;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .authority-proof-media img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      background:#071522;
+    }
+
+    .authority-proof-card:first-child .authority-proof-media img{
+      object-fit:cover;
+    }
+
+    .authority-proof-body{
+      padding:19px;
+    }
+
+    .authority-proof-label{
+      display:inline-flex;
+      padding:5px 8px;
+      border:1px solid rgba(24,167,255,.18);
+      border-radius:999px;
+      background:rgba(24,167,255,.07);
+      color:#BAE6FD;
+      font-size:8px;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .authority-proof-body h3{
+      margin-top:10px;
+      font-size:18px;
+      letter-spacing:-.02em;
+    }
+
+    .authority-proof-body p{
+      margin:7px 0 0;
+      color:#94A3B8;
+      font-size:10px;
+      line-height:1.5;
+    }
+
+    .authority-proof-link{
+      display:inline-block;
+      margin-top:13px;
+      color:#FDE68A;
+      font-size:10px;
+      font-weight:900;
+    }
+
+    .vertical.active{
+      border-color:rgba(244,197,66,.20);
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.08),transparent 35%),
+        rgba(255,255,255,.045);
+    }
+
+    .vertical-brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      margin-top:17px;
+      padding-top:15px;
+      border-top:1px solid rgba(255,255,255,.09);
+    }
+
+    .vertical-brand-logo{
+      width:48px;
+      height:48px;
+      flex:none;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      padding:5px;
+      border:1px solid rgba(255,255,255,.13);
+      border-radius:14px;
+      background:#fff;
+    }
+
+    .vertical-brand-logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:9px;
+    }
+
+    .vertical-brand-copy b{
+      display:block;
+      color:#FDE68A;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+
+    .vertical-brand-copy span{
+      display:block;
+      margin-top:4px;
+      color:#CBD5E1;
+      font-size:11px;
+      font-weight:850;
+    }
+
+    .value-card,
+    .engine-card,
+    .infra-card,
+    .metric-card{
+      transition:transform .22s ease,border-color .22s ease,background .22s ease;
+    }
+
+    .value-card:hover,
+    .engine-card:hover,
+    .infra-card:hover,
+    .metric-card:hover{
+      transform:translateY(-3px);
+      border-color:rgba(24,167,255,.24);
+      background:rgba(255,255,255,.055);
+    }
+
+    .sticky-mobile-cta{
+      display:none;
+    }
+
+    @media(max-width:1080px){
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .golden-dashboard{
+        max-width:760px;
+      }
+
+      .proof-strip-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      .authority-proof-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .authority-proof-card:first-child{
+        grid-column:1 / -1;
+      }
+    }
+
+    @media(max-width:760px){
+      .golden-strip{
+        padding-top:0 !important;
+      }
+
+      .hero{
+        padding-top:98px;
+      }
+
+      .golden-dashboard{
+        padding:14px;
+        border-radius:25px;
+      }
+
+      .dashboard-top{
+        align-items:flex-start;
+      }
+
+      .signal-row{
+        grid-template-columns:1fr;
+        gap:5px;
+      }
+
+      .dashboard-metrics{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .dashboard-price{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .dashboard-price span{
+        text-align:left;
+      }
+
+      .proof-strip-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .authority-proof-grid{
+        grid-template-columns:1fr;
+      }
+
+      .authority-proof-card:first-child{
+        grid-column:auto;
+      }
+
+      .sticky-mobile-cta{
+        position:fixed;
+        left:12px;
+        right:12px;
+        bottom:12px;
+        z-index:120;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+        padding:10px 10px 10px 14px;
+        border:1px solid rgba(244,197,66,.28);
+        border-radius:20px;
+        background:rgba(2,6,23,.92);
+        backdrop-filter:blur(20px);
+        box-shadow:0 20px 60px rgba(0,0,0,.45);
+      }
+
+      .sticky-mobile-cta span{
+        color:#CBD5E1;
+        font-size:9px;
+        line-height:1.3;
+      }
+
+      .sticky-mobile-cta strong{
+        display:block;
+        color:#FDE68A;
+        font-size:12px;
+      }
+
+      .sticky-mobile-cta .btn{
+        flex:none;
+        padding:10px 13px;
+        font-size:10px;
+      }
+
+      footer{
+        padding-bottom:96px;
+      }
+    }
+
+</style>
 </head>
 
 <body>
 
 <header>
   <div class="nav">
-    <a class="brand" href="https://emprende360.club/" target="_blank" rel="noopener noreferrer">
+    <a class="brand" href="https://emprende360.club/">
       <div class="brand-mark">E</div>
       <div>
         <div class="brand-title">Emprende360</div>
@@ -1358,6 +1891,65 @@
   </div>
 </header>
 
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <span class="pill">Golden Partners · Sistema B2B de Emprende360</span>
+
+        <h1><span class="grad-text">Haz que tu empresa esté presente cuando tu mercado empieza a moverse.</span></h1>
+
+        <p><strong>Golden Partners</strong> combina posicionamiento, un Motor de Señales B2B, eventos, contenido, relaciones y activación alrededor de una categoría concreta.</p>
+
+        <p>Durante cada semana buscamos <strong>qué empresas están entrando en situaciones donde tu solución puede ganar relevancia, quién decide y qué ángulo de entrada tiene más sentido.</strong> Después lo conectamos con Foros, Mesas, contenido, relaciones y seguimiento.</p>
+
+        <div class="exclusivity">Una empresa principal por categoría. Mientras tu posición esté activa, no incorporamos como Golden principal a un competidor directo dentro de la misma categoría.</div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20Golden%20Partners.%0A%0AEmpresa%3A%0AWeb%20%2F%20LinkedIn%3A%0AQu%C3%A9%20vendemos%3A%0ABuyer%20principal%3A%0ATicket%20aproximado%3A%0AMercado%20que%20queremos%20activar%3A" target="_blank" rel="noopener noreferrer">Quiero revisar mi categoría →</a>
+          <button class="btn btn-secondary" onclick="document.getElementById('sistema').scrollIntoView({behavior:'smooth'})">Ver cómo funciona</button>
+        </div>
+
+        <div class="hero-note">Selección previa por encaje · renovación prioritaria para Partners activos · sin compra de bases · sin leads, reuniones, clientes o ROI garantizados.</div>
+      </div>
+
+      <aside class="golden-dashboard reveal" aria-label="Cómo funciona un Golden Partner activo">
+<div class="dashboard-top">
+<b>Así se ve un Golden activo por dentro.</b>
+<span class="dashboard-live">Sistema activo</span>
+</div>
+
+<div class="dashboard-category">
+<div class="dashboard-category-head">
+<span>Categoría de ejemplo</span>
+<b>Corporate Finance</b>
+</div>
+<h3>Señal → decisor → contexto → activación.</h3>
+<p>No empezamos con una lista. Empezamos con una situación empresarial que puede hacer que tu solución gane relevancia.</p>
+</div>
+
+<div class="signal-timeline">
+<div class="signal-row"><strong>Señal</strong><span>Empresa anuncia expansión y nueva financiación.</span></div>
+<div class="signal-row"><strong>Decisor</strong><span>CEO / CFO según la situación concreta.</span></div>
+<div class="signal-row"><strong>Ángulo</strong><span>Qué está cambiando y por qué ahora puede tener sentido hablar.</span></div>
+<div class="signal-row"><strong>Acceso</strong><span>Red directa, contacto común, Foro, Ronda o aproximación contextual.</span></div>
+</div>
+
+<div class="dashboard-metrics">
+<div class="dashboard-metric"><strong>2×/semana</strong><span>cadencia habitual de Signal Briefs cuando hay calidad suficiente</span></div>
+<div class="dashboard-metric"><strong>1 categoría</strong><span>posición principal protegida mientras el Golden está activo</span></div>
+<div class="dashboard-metric"><strong>Foros + Rondas</strong><span>contexto y autoridad alrededor de tu especialidad</span></div>
+<div class="dashboard-metric"><strong>Seguimiento</strong><span>relaciones abiertas, respuestas y siguientes pasos</span></div>
+</div>
+
+<div class="dashboard-price">
+<strong>390 € / 30 días · 790 € / 90 días</strong>
+<span>Selección previa por encaje.<br/>Sin leads, reuniones o ROI garantizados.</span>
+</div>
+</aside>
+    </div>
+  </section>
 <!-- SLIDER SUPERIOR DE GOLDEN PARTNERS -->
 <section class="golden-strip" aria-label="Golden Partners actuales">
   <div class="golden-strip-head">
@@ -1469,51 +2061,22 @@
   </div>
 </section>
 
-<main>
+<section class="proof-strip" aria-label="Componentes Golden Partners">
+<div class="wrap">
+<div class="proof-strip-grid reveal">
+<div class="proof-chip"><b>Posición</b>Categoría principal</div>
+<div class="proof-chip"><b>Señales</b>Research continuo</div>
+<div class="proof-chip"><b>Relaciones</b>Warm paths y contexto</div>
+<div class="proof-chip"><b>Activación</b>Cuando existe una razón</div>
+<div class="proof-chip"><b>Autoridad</b>Foros, Rondas y contenido</div>
+</div>
+</div>
+</section>
 
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy reveal">
-        <span class="pill">Golden Partners · Sistema B2B de Emprende360</span>
 
-        <h1><span class="grad-text">Haz que tu empresa esté presente cuando tu mercado empieza a moverse.</span></h1>
 
-        <p><strong>Golden Partners</strong> combina posicionamiento, un Motor de Señales B2B, eventos, contenido, relaciones y activación alrededor de una categoría concreta.</p>
 
-        <p>Durante cada semana buscamos <strong>qué empresas están entrando en situaciones donde tu solución puede ganar relevancia, quién decide y qué ángulo de entrada tiene más sentido.</strong> Después lo conectamos con Foros, Mesas, contenido, relaciones y seguimiento.</p>
 
-        <div class="exclusivity">Una empresa principal por categoría. Mientras tu posición esté activa, no incorporamos como Golden principal a un competidor directo dentro de la misma categoría.</div>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20Golden%20Partners.%0A%0AEmpresa%3A%0AWeb%20%2F%20LinkedIn%3A%0AQu%C3%A9%20vendemos%3A%0ABuyer%20principal%3A%0ATicket%20aproximado%3A%0AMercado%20que%20queremos%20activar%3A" target="_blank" rel="noopener noreferrer">Quiero revisar mi categoría →</a>
-          <button class="btn btn-secondary" onclick="document.getElementById('sistema').scrollIntoView({behavior:'smooth'})">Ver cómo funciona</button>
-        </div>
-
-        <div class="hero-note">Selección previa por encaje · renovación prioritaria para Partners activos · sin compra de bases · sin leads, reuniones, clientes o ROI garantizados.</div>
-      </div>
-
-      <aside class="partner-card reveal">
-        <span class="kicker">Una posición · todo el sistema detrás</span>
-        <h3>Golden trabaja tu mercado todos los meses.</h3>
-
-        <ul class="partner-list">
-          <li><span class="check">✓</span><span><strong>Golden Position</strong> · asociación de tu empresa a una categoría concreta.</span></li>
-          <li><span class="check">✓</span><span><strong>Motor de Señales B2B</strong> · detección continua de empresas en movimiento, decisor, contexto y ángulo de entrada.</span></li>
-          <li><span class="check">✓</span><span><strong>Intent + Fit</strong> · priorización antes de activar.</span></li>
-          <li><span class="check">✓</span><span><strong>Relationship Map</strong> · búsqueda de caminos de acceso y relaciones existentes.</span></li>
-          <li><span class="check">✓</span><span><strong>Activation Desk</strong> · conversación, evento, introducción o contexto cuando exista una razón real.</span></li>
-          <li><span class="check">✓</span><span><strong>Authority Engine</strong> · Foros temáticos, mesas colaborativas, rondas y contenido que construyen contexto alrededor de tu especialidad.</span></li>
-        </ul>
-
-        <div class="hero-price">
-          <strong>Desde 390 €</strong>
-          <span>Golden Octubre · 390 €. También disponible el trimestre completo por 790 €.</span>
-        </div>
-
-        <a class="btn btn-primary" href="#precios">Ver modalidades</a>
-      </aside>
-    </div>
-  </section>
 
   <section class="section value">
     <div class="wrap">
@@ -1550,6 +2113,50 @@
       </div>
     </div>
   </section>
+
+<section class="section authority-proof">
+<div class="wrap">
+<div class="center reveal">
+<span class="kicker">Authority Engine en acción</span>
+<h2>Golden no vive en una ficha. Vive dentro de conversaciones reales.</h2>
+<p class="lead">Foros, Rondas y contenidos crean contexto alrededor de una categoría y permiten que el Golden aparezca asociado a problemas y decisiones empresariales concretas.</p>
+</div>
+
+<div class="authority-proof-grid reveal">
+<a class="authority-proof-card" href="https://www.linkedin.com/events/7496395870095998976/" target="_blank" rel="noopener noreferrer">
+<div class="authority-proof-media"><img src="https://emprende360.club/eventos/rondas.png" alt="Ronda de Alianzas B2B de Emprende360" loading="lazy"></div>
+<div class="authority-proof-body">
+<span class="authority-proof-label">Ronda B2B real</span>
+<h3>Relaciones, complementariedad y siguientes pasos.</h3>
+<p>Una mesa pequeña permite detectar cruces que difícilmente aparecen en una base de datos.</p>
+<span class="authority-proof-link">Ver conversación →</span>
+</div>
+</a>
+
+<a class="authority-proof-card" href="https://www.linkedin.com/events/7496399111244529665/" target="_blank" rel="noopener noreferrer">
+<div class="authority-proof-media"><img src="https://emprende360.club/eventos/evento-corporate.png" alt="Foro Ejecutivo Corporate Finance" loading="lazy"></div>
+<div class="authority-proof-body">
+<span class="authority-proof-label">Foro Ejecutivo</span>
+<h3>Corporate Finance</h3>
+<p>Financiación, M&amp;A, valoración y decisiones alrededor del capital.</p>
+<span class="authority-proof-link">Ver evento →</span>
+</div>
+</a>
+
+<a class="authority-proof-card" href="https://www.linkedin.com/events/7496401159276941314/" target="_blank" rel="noopener noreferrer">
+<div class="authority-proof-media"><img src="https://emprende360.club/eventos/evento-ventas.png" alt="Foro Ejecutivo Ventas B2B" loading="lazy"></div>
+<div class="authority-proof-body">
+<span class="authority-proof-label">Foro Ejecutivo</span>
+<h3>Ventas B2B</h3>
+<p>Pipeline, prospección, Revenue, GTM y conversaciones comerciales que avanzan.</p>
+<span class="authority-proof-link">Ver evento →</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+
 
   <section id="sistema" class="section engine">
     <div class="wrap">
@@ -1753,62 +2360,68 @@
       </div>
 
       <div class="vertical-grid reveal">
-        <article class="vertical">
-          <div class="vertical-top"><div class="vertical-icon">💰</div><span class="slot">Corporate Finance</span></div>
+        <article class="vertical active">
+          <div class="vertical-top"><div class="vertical-icon">💰</div><span class="slot">Golden activo</span></div>
           <h3>Corporate Finance</h3>
-          <p>Financiación, CFO, M&A, deuda, capital, valoración, crecimiento y preparación para operaciones corporativas.</p>
-          <a class="golden-current" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer">Golden actual · Nakama Kapital →</a>
+          <p>Financiación, CFO, M&amp;A, deuda, capital, valoración, crecimiento y preparación para operaciones corporativas.</p>
+          <div class="vertical-brand"><a class="vertical-brand-logo" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer"><img src="https://emprende360.club/raul.jpg" alt="Nakama Kapital" loading="lazy"></a><div class="vertical-brand-copy"><b>Golden Partner actual</b><span>Nakama Kapital</span></div></div>
+          <a class="golden-current" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer">Ver Golden Partner →</a>
         </article>
 
-        <article class="vertical">
-          <div class="vertical-top"><div class="vertical-icon">📈</div><span class="slot">Revenue</span></div>
-          <h3>Ventas, Revenue & GTM</h3>
+        <article class="vertical active">
+          <div class="vertical-top"><div class="vertical-icon">📈</div><span class="slot">Golden activo</span></div>
+          <h3>Ventas, Revenue &amp; GTM</h3>
           <p>Expansión, contratación comercial, nuevos mercados, CRM, RevOps, desarrollo comercial y cambios de GTM.</p>
-          <a class="golden-current" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer">Golden actual · Salesnite →</a>
+          <div class="vertical-brand"><a class="vertical-brand-logo" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer"><img src="https://emprende360.club/jesus.jpg" alt="Salesnite" loading="lazy"></a><div class="vertical-brand-copy"><b>Golden Partner actual</b><span>Salesnite</span></div></div>
+          <a class="golden-current" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer">Ver Golden Partner →</a>
         </article>
 
-        <article class="vertical">
-          <div class="vertical-top"><div class="vertical-icon">🤖</div><span class="slot">Tecnología</span></div>
-          <h3>IA & Tecnología</h3>
+        <article class="vertical active">
+          <div class="vertical-top"><div class="vertical-icon">🤖</div><span class="slot">Golden activo</span></div>
+          <h3>IA &amp; Tecnología</h3>
           <p>Automatización, agentes, datos, software, modernización, nuevos proyectos y transformación tecnológica.</p>
-          <a class="golden-current" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer">Golden actual · Uniasser Consulting →</a>
+          <div class="vertical-brand"><a class="vertical-brand-logo" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer"><img src="https://emprende360.club/enric.jpg" alt="Uniasser Consulting" loading="lazy"></a><div class="vertical-brand-copy"><b>Golden Partner actual</b><span>Uniasser Consulting</span></div></div>
+          <a class="golden-current" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer">Ver Golden Partner →</a>
         </article>
 
         <article class="vertical">
-          <div class="vertical-top"><div class="vertical-icon">👥</div><span class="slot">Talento</span></div>
+          <div class="vertical-top"><div class="vertical-icon">👥</div><span class="slot">Categoría abierta</span></div>
           <h3>Talento & Organización</h3>
           <p>Contrataciones, crecimiento, cambios directivos, reorganización, Executive Search, People y capacidades.</p>
         </article>
 
-        <article class="vertical">
-          <div class="vertical-top"><div class="vertical-icon">◎</div><span class="slot">Marketing</span></div>
-          <h3>Marketing B2B & Posicionamiento</h3>
+        <article class="vertical active">
+          <div class="vertical-top"><div class="vertical-icon">◎</div><span class="slot">Golden activo</span></div>
+          <h3>Marketing B2B &amp; Posicionamiento</h3>
           <p>Reposicionamiento, nuevos mercados, marca, contenido, autoridad, generación de demanda y cambio de percepción.</p>
-          <a class="golden-current" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer">Golden actual · MIAU Consulting →</a>
+          <div class="vertical-brand"><a class="vertical-brand-logo" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer"><img src="https://emprende360.club/jorge.jpg" alt="MIAU Consulting" loading="lazy"></a><div class="vertical-brand-copy"><b>Golden Partner actual</b><span>MIAU Consulting</span></div></div>
+          <a class="golden-current" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer">Ver web del Golden →</a>
         </article>
 
         <article class="vertical">
-          <div class="vertical-top"><div class="vertical-icon">⚖</div><span class="slot">Legal</span></div>
+          <div class="vertical-top"><div class="vertical-icon">⚖</div><span class="slot">Categoría abierta</span></div>
           <h3>Legal & Internacionalización</h3>
           <p>Expansión, acuerdos, socios, governance, contratos, M&A, entrada en nuevos mercados y riesgos corporativos.</p>
         </article>
 
-        <article class="vertical">
-          <div class="vertical-top"><div class="vertical-icon">🌏</div><span class="slot">Asia</span></div>
-          <h3>Asia, Sourcing & Market Access</h3>
+        <article class="vertical active">
+          <div class="vertical-top"><div class="vertical-icon">🌏</div><span class="slot">Golden activo</span></div>
+          <h3>Asia, Sourcing &amp; Market Access</h3>
           <p>Fabricantes, sourcing, exportación, acceso a mercado y desarrollo de relaciones comerciales entre Asia y mercados hispanohablantes.</p>
-          <a class="golden-current" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer">Golden actual · Emprende360 Asia →</a>
+          <div class="vertical-brand"><a class="vertical-brand-logo" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer"><img src="https://emprende360.club/asia.png" alt="Emprende360 Asia" loading="lazy"></a><div class="vertical-brand-copy"><b>Golden Partner actual</b><span>Emprende360 Asia</span></div></div>
+          <a class="golden-current" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer">Ver Golden Partner →</a>
         </article>
 
-        <article class="vertical">
-          <div class="vertical-top"><div class="vertical-icon">🧭</div><span class="slot">Liderazgo</span></div>
+        <article class="vertical active">
+          <div class="vertical-top"><div class="vertical-icon">🧭</div><span class="slot">Golden activo</span></div>
           <h3>Liderazgo</h3>
           <p>Crecimiento, nuevas capas directivas, delegación, cambio organizativo, cultura, equipos y ejecución.</p>
-          <a class="golden-current" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer">Golden actual · L de Líder →</a>
+          <div class="vertical-brand"><a class="vertical-brand-logo" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer"><img src="https://emprende360.club/maider.jpg" alt="L de Líder" loading="lazy"></a><div class="vertical-brand-copy"><b>Golden Partner actual</b><span>L de Líder</span></div></div>
+          <a class="golden-current" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer">Ver Golden Partner →</a>
         </article>
 
         <article class="vertical">
-          <div class="vertical-top"><div class="vertical-icon">🚀</div><span class="slot">Founders</span></div>
+          <div class="vertical-top"><div class="vertical-icon">🚀</div><span class="slot">Categoría abierta</span></div>
           <h3>Founders, Funding & Inversión</h3>
           <p>Capital, crecimiento, profesionalización, inversión, governance, primeras ventas y nuevas etapas de empresa.</p>
         </article>
@@ -2150,6 +2763,12 @@
     requestAnimationFrame(tick);
   })();
 </script>
+
+
+<div class="sticky-mobile-cta" aria-label="Activar Golden Partners">
+<span><strong>Golden Partners</strong>390 € / 30 días · 790 € / 90 días</span>
+<a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20Golden%20Partners.%0A%0AEmpresa%3A%0AWeb%20%2F%20LinkedIn%3A%0AQu%C3%A9%20vendemos%3A%0ABuyer%20principal%3A%0ATicket%20aproximado%3A%0AMercado%20que%20queremos%20activar%3A" target="_blank" rel="noopener noreferrer">Valorar categoría</a>
+</div>
 
 </body>
 </html>
