@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Golden Partners · Emprende360</title>
-  <meta name="description" content="Golden Partners de Emprende360: posicionamiento, Motor de Señales B2B, activación relacional, Foros, contenido, Marketplace y seguimiento en un único sistema.">
+  <meta name="description" content="Golden Partners de Emprende360: posicionamiento, Motor de Señales B2B, Marketplace, eventos, relaciones, red Builder y activación alrededor de una categoría concreta.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://emprende360.club/golden-partners">
   <meta property="og:title" content="Golden Partners · Emprende360">
@@ -1863,6 +1863,518 @@
       }
     }
 
+
+    /* =========================================================
+       MUESTRA PÚBLICA · MOTOR DE SEÑALES
+    ========================================================= */
+
+    .signal-showcase{
+      margin-top:30px;
+      padding:30px;
+      border:1px solid rgba(24,167,255,.22);
+      border-radius:30px;
+      background:
+        radial-gradient(circle at 0 0,rgba(24,167,255,.08),transparent 34%),
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.07),transparent 34%),
+        rgba(2,6,23,.30);
+      box-shadow:0 24px 70px rgba(0,0,0,.20);
+    }
+
+    .signal-showcase-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:20px;
+    }
+
+    .signal-showcase-head-copy{
+      max-width:760px;
+    }
+
+    .signal-showcase-head h3{
+      margin-top:12px;
+      font-size:29px;
+      letter-spacing:-.035em;
+    }
+
+    .signal-showcase-head p{
+      margin:8px 0 0;
+      color:#94A3B8;
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .signal-showcase-stamp{
+      flex:none;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 11px;
+      border:1px solid rgba(34,197,94,.22);
+      border-radius:999px;
+      background:rgba(34,197,94,.07);
+      color:#86EFAC;
+      font-size:9px;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .signal-showcase-stamp::before{
+      content:"";
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#22C55E;
+      box-shadow:0 0 0 5px rgba(34,197,94,.09);
+    }
+
+    .signal-opportunity-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+    }
+
+    .signal-opportunity{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+      padding:20px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:23px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(24,167,255,.06),transparent 40%),
+        rgba(255,255,255,.035);
+      transition:transform .22s ease,border-color .22s ease,background .22s ease;
+    }
+
+    .signal-opportunity:hover{
+      transform:translateY(-4px);
+      border-color:rgba(244,197,66,.27);
+      background:
+        radial-gradient(circle at 100% 0,rgba(244,197,66,.07),transparent 40%),
+        rgba(255,255,255,.05);
+    }
+
+    .signal-opportunity-top{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:flex-start;
+    }
+
+    .signal-company{
+      min-width:0;
+    }
+
+    .signal-company small{
+      display:block;
+      color:#7DD3FC;
+      font-size:8px;
+      font-weight:950;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    .signal-company h4{
+      margin:5px 0 0;
+      color:#fff;
+      font-size:20px;
+      line-height:1.12;
+      letter-spacing:-.025em;
+    }
+
+    .signal-score{
+      flex:none;
+      min-width:68px;
+      padding:9px 8px;
+      border:1px solid rgba(244,197,66,.24);
+      border-radius:17px;
+      background:rgba(244,197,66,.07);
+      text-align:center;
+    }
+
+    .signal-score strong{
+      display:block;
+      color:#FDE68A;
+      font-size:19px;
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+
+    .signal-score span{
+      display:block;
+      margin-top:4px;
+      color:#94A3B8;
+      font-size:7px;
+      font-weight:900;
+      line-height:1.15;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+
+    .signal-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      margin-top:13px;
+    }
+
+    .signal-meta span{
+      display:inline-flex;
+      padding:5px 7px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      color:#94A3B8;
+      font-size:8px;
+      font-weight:850;
+    }
+
+    .signal-block{
+      margin-top:13px;
+      padding-top:12px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .signal-block b{
+      display:block;
+      color:#FDE68A;
+      font-size:9px;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+    }
+
+    .signal-block p{
+      margin:5px 0 0;
+      color:#CBD5E1;
+      font-size:10px;
+      line-height:1.48;
+    }
+
+    .signal-decision-maker{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-top:13px;
+      padding:11px 12px;
+      border:1px solid rgba(167,139,250,.18);
+      border-radius:15px;
+      background:rgba(167,139,250,.055);
+    }
+
+    .signal-decision-maker b{
+      color:#C4B5FD;
+      font-size:9px;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+    }
+
+    .signal-decision-maker span{
+      color:#DDD6FE;
+      font-size:10px;
+      font-weight:900;
+    }
+
+    .signal-score-detail{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:6px;
+      margin-top:12px;
+    }
+
+    .signal-score-detail span{
+      padding:7px 8px;
+      border:1px solid rgba(255,255,255,.07);
+      border-radius:11px;
+      background:rgba(2,6,23,.23);
+      color:#94A3B8;
+      font-size:8px;
+      line-height:1.3;
+    }
+
+    .signal-score-detail b{
+      color:#CBD5E1;
+      font-size:8px;
+    }
+
+    .signal-source{
+      display:inline-flex;
+      margin-top:auto;
+      padding-top:15px;
+      color:#7DD3FC;
+      font-size:9px;
+      font-weight:900;
+    }
+
+    .signal-method{
+      margin-top:18px;
+      padding:15px 17px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:17px;
+      background:rgba(255,255,255,.025);
+      color:#94A3B8;
+      font-size:9px;
+      line-height:1.55;
+      text-align:center;
+    }
+
+    .signal-method b{
+      color:#CBD5E1;
+    }
+
+    @media(max-width:1080px){
+      .signal-opportunity-grid{
+        grid-template-columns:1fr;
+      }
+
+      .signal-opportunity{
+        min-height:auto;
+      }
+    }
+
+    @media(max-width:760px){
+      .signal-showcase{
+        padding:20px;
+        border-radius:24px;
+      }
+
+      .signal-showcase-head{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .signal-opportunity-top{
+        gap:8px;
+      }
+    }
+
+
+    /* =========================================================
+       RED BUILDER · DISTRIBUCIÓN Y ECOSISTEMA DISTRIBUIDO
+    ========================================================= */
+
+    .builder-network{
+      background:
+        radial-gradient(circle at 10% 12%,rgba(24,167,255,.09),transparent 28%),
+        radial-gradient(circle at 88% 12%,rgba(34,197,94,.07),transparent 27%),
+        #06111f;
+      border-top:1px solid rgba(255,255,255,.06);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .builder-network .lead{
+      max-width:840px;
+    }
+
+    .builder-country-row{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:7px;
+      margin-top:24px;
+    }
+
+    .builder-country-row span{
+      padding:7px 9px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:999px;
+      background:rgba(255,255,255,.035);
+      color:#9dafbe;
+      font-size:8px;
+      font-weight:850;
+    }
+
+    .builder-network-grid{
+      display:grid;
+      grid-template-columns:1.04fr .96fr;
+      gap:18px;
+      margin-top:34px;
+    }
+
+    .builder-network-main{
+      position:relative;
+      overflow:hidden;
+      min-height:430px;
+      padding:28px;
+      border:1px solid rgba(125,211,252,.18);
+      border-radius:28px;
+      background:
+        radial-gradient(circle at 100% 0,rgba(24,167,255,.10),transparent 36%),
+        rgba(255,255,255,.04);
+      box-shadow:0 28px 75px rgba(0,0,0,.22);
+    }
+
+    .builder-network-main:before{
+      content:"";
+      position:absolute;
+      width:250px;
+      height:250px;
+      right:-115px;
+      bottom:-120px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(34,197,94,.12),transparent 68%);
+      pointer-events:none;
+    }
+
+    .builder-network-main h3{
+      position:relative;
+      z-index:2;
+      margin:15px 0 0;
+      font-size:31px;
+      letter-spacing:-.04em;
+      line-height:1.06;
+    }
+
+    .builder-network-main>p{
+      position:relative;
+      z-index:2;
+      margin:13px 0 0;
+      max-width:690px;
+      color:#aab9c6;
+      font-size:12px;
+      line-height:1.65;
+    }
+
+    .builder-flow{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin-top:24px;
+    }
+
+    .builder-flow-card{
+      min-height:145px;
+      padding:16px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:18px;
+      background:rgba(2,6,23,.28);
+    }
+
+    .builder-flow-card b{
+      display:block;
+      font-size:13px;
+      letter-spacing:-.02em;
+    }
+
+    .builder-flow-card:nth-child(1) b{color:#7dd3fc}
+    .builder-flow-card:nth-child(2) b{color:#86efac}
+    .builder-flow-card:nth-child(3) b{color:#ddd6fe}
+
+    .builder-flow-card span{
+      display:block;
+      margin-top:6px;
+      color:#8799a9;
+      font-size:9px;
+      line-height:1.45;
+    }
+
+    .builder-network-actions{
+      position:relative;
+      z-index:2;
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:22px;
+    }
+
+    .builder-side{
+      display:grid;
+      gap:12px;
+    }
+
+    .builder-side-card{
+      padding:22px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:22px;
+      background:rgba(255,255,255,.035);
+    }
+
+    .builder-side-card .mini-label{
+      display:inline-flex;
+      padding:5px 7px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:999px;
+      color:#9eafbd;
+      font-size:7px;
+      font-weight:950;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+    }
+
+    .builder-side-card h4{
+      margin:13px 0 0;
+      font-size:18px;
+      letter-spacing:-.025em;
+    }
+
+    .builder-side-card p{
+      margin:8px 0 0;
+      color:#8ea0af;
+      font-size:10px;
+      line-height:1.55;
+    }
+
+    .builder-side-card.gold{
+      border-color:rgba(217,174,81,.18);
+      background:
+        radial-gradient(circle at 100% 0,rgba(217,174,81,.08),transparent 40%),
+        rgba(255,255,255,.035);
+    }
+
+    .builder-side-card.gold h4{
+      color:#f3d883;
+    }
+
+    .network-note{
+      margin-top:16px;
+      padding:14px 16px;
+      border:1px solid rgba(217,174,81,.16);
+      border-radius:16px;
+      background:rgba(217,174,81,.045);
+      color:#9caebe;
+      font-size:9px;
+      line-height:1.55;
+      text-align:center;
+    }
+
+    @media(max-width:1000px){
+      .builder-network-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:760px){
+      .builder-network-main{
+        min-height:auto;
+        padding:23px;
+      }
+
+      .builder-flow{
+        grid-template-columns:1fr;
+      }
+
+      .builder-network-actions .btn{
+        width:100%;
+      }
+    }
+
+    .hero-builder-note{
+      padding:13px 15px;
+      border-left:2px solid rgba(125,211,252,.52);
+      border-radius:0 13px 13px 0;
+      background:rgba(24,167,255,.045);
+      color:#b8c6d2!important;
+      font-size:12px!important;
+    }
+
 </style>
 </head>
 
@@ -1870,7 +2382,7 @@
 
 <header>
   <div class="nav">
-    <a class="brand" href="https://emprende360.club/">
+    <a class="brand" href="https://emprende360.club/" target="_blank" rel="noopener noreferrer">
       <div class="brand-mark">E</div>
       <div>
         <div class="brand-title">Emprende360</div>
@@ -1880,8 +2392,9 @@
 
     <nav class="nav-links">
       <button class="nav-link" onclick="document.getElementById('sistema').scrollIntoView({behavior:'smooth'})">Cómo funciona</button>
-      <button class="nav-link" onclick="document.getElementById('senales').scrollIntoView({behavior:'smooth'})">Señales</button>
+      <button class="nav-link" onclick="document.getElementById('muestra-senales').scrollIntoView({behavior:'smooth'})">Muestra de señales</button>
       <button class="nav-link" onclick="document.getElementById('categorias').scrollIntoView({behavior:'smooth'})">Categorías</button>
+      <button class="nav-link" onclick="document.getElementById('red-builder').scrollIntoView({behavior:'smooth'})">Red Builder</button>
       <button class="nav-link" onclick="document.getElementById('precios').scrollIntoView({behavior:'smooth'})">Precios</button>
       <button class="nav-link" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})">FAQ</button>
       <a class="nav-link" href="https://emprende360.club/eventos" target="_blank" rel="noopener noreferrer">Eventos</a>
@@ -1900,7 +2413,9 @@
 
         <h1><span class="grad-text">Haz que tu empresa esté presente cuando tu mercado empieza a moverse.</span></h1>
 
-        <p><strong>Golden Partners</strong> combina posicionamiento, un Motor de Señales B2B, eventos, contenido, relaciones y activación alrededor de una categoría concreta.</p>
+        <p><strong>Golden Partners</strong> combina posicionamiento, un Motor de Señales B2B, Marketplace, eventos, relaciones y activación alrededor de una categoría concreta.</p>
+
+        <p class="hero-builder-note"><strong>Y Emprende360 ya no está creciendo únicamente desde una sola red:</strong> estamos construyendo una capa de Builder Partners en distintos mercados para ampliar conexiones, distribución y capacidad de activación cuando exista encaje.</p>
 
         <p>Durante cada semana buscamos <strong>qué empresas están entrando en situaciones donde tu solución puede ganar relevancia, quién decide y qué ángulo de entrada tiene más sentido.</strong> Después lo conectamos con Foros, Mesas, contenido, relaciones y seguimiento.</p>
 
@@ -1908,7 +2423,7 @@
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20Golden%20Partners.%0A%0AEmpresa%3A%0AWeb%20%2F%20LinkedIn%3A%0AQu%C3%A9%20vendemos%3A%0ABuyer%20principal%3A%0ATicket%20aproximado%3A%0AMercado%20que%20queremos%20activar%3A" target="_blank" rel="noopener noreferrer">Quiero revisar mi categoría →</a>
-          <button class="btn btn-secondary" onclick="document.getElementById('sistema').scrollIntoView({behavior:'smooth'})">Ver cómo funciona</button>
+          <button class="btn btn-secondary" onclick="document.getElementById('muestra-senales').scrollIntoView({behavior:'smooth'})">Ver 3 señales reales</button>
         </div>
 
         <div class="hero-note">Selección previa por encaje · renovación prioritaria para Partners activos · sin compra de bases · sin leads, reuniones, clientes o ROI garantizados.</div>
@@ -2248,7 +2763,7 @@
       <div class="center reveal">
         <span class="kicker">Motor de Señales B2B</span>
         <h2>No esperamos a que una empresa diga “necesito proveedor”. Buscamos lo que ocurre antes.</h2>
-        <p class="lead">Cada semana detectamos movimientos que pueden convertir una cuenta normal en una conversación con contexto. No compartimos nombres por volumen: compartimos señales explicadas y priorizadas.</p>
+        <p class="lead">Cada semana detectamos movimientos que pueden convertir una cuenta normal en una conversación con contexto. No compartimos nombres por volumen: compartimos señales explicadas y priorizadas. Más abajo puedes ver una muestra pública con tres casos reales.</p>
       </div>
 
       <div class="signals-shell reveal">
@@ -2298,6 +2813,171 @@
 
         <p class="signals-note">Una señal es una hipótesis de oportunidad, no una intención de compra garantizada. La compartimos cuando existe suficiente encaje para que merezca investigación o activación.</p>
       </div>
+
+<div class="signal-showcase reveal" id="muestra-senales">
+  <div class="signal-showcase-head">
+    <div class="signal-showcase-head-copy">
+      <span class="kicker">Muestra pública · Motor de Señales</span>
+      <h3>Tres señales reales detectadas en fuentes públicas.</h3>
+      <p>Esta es una muestra simplificada de lo que recibe un Golden Partner. El decisor concreto y el trabajo de acceso se reservan para el Partner. El scoring es una priorización interna de Emprende360, no una probabilidad de compra.</p>
+    </div>
+    <span class="signal-showcase-stamp">Actualizado · 26 sep 2026</span>
+  </div>
+
+  <div class="signal-opportunity-grid">
+
+    <article class="signal-opportunity">
+      <div class="signal-opportunity-top">
+        <div class="signal-company">
+          <small>Señal real · Funding + GTM</small>
+          <h4>Reply Next</h4>
+        </div>
+        <div class="signal-score">
+          <strong>82</strong>
+          <span>Score / 100</span>
+        </div>
+      </div>
+
+      <div class="signal-meta">
+        <span>España</span>
+        <span>IA · SaaS</span>
+        <span>24 sep 2026</span>
+      </div>
+
+      <div class="signal-block">
+        <b>Situación real</b>
+        <p>La compañía ha cerrado una ronda pre-seed de 400.000 € para una plataforma de IA orientada a marcas con múltiples ubicaciones.</p>
+      </div>
+
+      <div class="signal-block">
+        <b>Por qué entra en el radar</b>
+        <p>El capital recién levantado y una propuesta dirigida a empresas multi-location abren una fase donde pueden ganar relevancia GTM, posicionamiento, partnerships, estructura comercial y preparación para escalar.</p>
+      </div>
+
+      <div class="signal-block">
+        <b>Ángulo de entrada</b>
+        <p>No entrar con “te vendo servicios”. Entrar alrededor de la siguiente etapa: qué debe quedar preparado para convertir financiación inicial en distribución, clientes y crecimiento repetible.</p>
+      </div>
+
+      <div class="signal-decision-maker">
+        <b>Decisor</b>
+        <span>Reservado para Golden</span>
+      </div>
+
+      <div class="signal-score-detail">
+        <span><b>Intensidad:</b> Alta</span>
+        <span><b>Timing:</b> Ahora</span>
+        <span><b>Fit:</b> Medio–alto</span>
+        <span><b>Acceso:</b> Por validar</span>
+      </div>
+
+      <a class="signal-source" href="https://tech.eu/2026/09/24/ai-platform-reply-next-secures-eur400k-pre-seed-funding" target="_blank" rel="noopener noreferrer">Fuente pública →</a>
+    </article>
+
+    <article class="signal-opportunity">
+      <div class="signal-opportunity-top">
+        <div class="signal-company">
+          <small>Señal real · Seed + Escala</small>
+          <h4>Health Force</h4>
+        </div>
+        <div class="signal-score">
+          <strong>89</strong>
+          <span>Score / 100</span>
+        </div>
+      </div>
+
+      <div class="signal-meta">
+        <span>Barcelona</span>
+        <span>HealthTech · IA</span>
+        <span>17 sep 2026</span>
+      </div>
+
+      <div class="signal-block">
+        <b>Situación real</b>
+        <p>Health Force ha levantado 4,2 M€ Seed para escalar agentes de IA orientados a operaciones hospitalarias y avanzar en su siguiente fase de crecimiento.</p>
+      </div>
+
+      <div class="signal-block">
+        <b>Por qué entra en el radar</b>
+        <p>Funding, despliegues en hospitales europeos y una fase explícita de escala pueden activar necesidades en expansión comercial, partnerships, talento, estructura, finanzas y ejecución.</p>
+      </div>
+
+      <div class="signal-block">
+        <b>Ángulo de entrada</b>
+        <p>Partir de la transición de producto probado a escala: qué capacidades, relaciones y decisiones necesita reforzar una compañía que quiere ampliar despliegues sin perder velocidad ni control.</p>
+      </div>
+
+      <div class="signal-decision-maker">
+        <b>Decisor</b>
+        <span>Reservado para Golden</span>
+      </div>
+
+      <div class="signal-score-detail">
+        <span><b>Intensidad:</b> Muy alta</span>
+        <span><b>Timing:</b> Alto</span>
+        <span><b>Fit:</b> Alto</span>
+        <span><b>Acceso:</b> Por validar</span>
+      </div>
+
+      <a class="signal-source" href="https://www.eu-startups.com/2026/09/barcelona-based-health-force-raises-e4-2-million-to-streamline-hospital-operations-with-ai-agents" target="_blank" rel="noopener noreferrer">Fuente pública →</a>
+    </article>
+
+    <article class="signal-opportunity">
+      <div class="signal-opportunity-top">
+        <div class="signal-company">
+          <small>Señal real · Series B + Expansión</small>
+          <h4>iPronics</h4>
+        </div>
+        <div class="signal-score">
+          <strong>94</strong>
+          <span>Score / 100</span>
+        </div>
+      </div>
+
+      <div class="signal-meta">
+        <span>Valencia + EE. UU.</span>
+        <span>DeepTech · AI Infra</span>
+        <span>4 sep 2026</span>
+      </div>
+
+      <div class="signal-block">
+        <b>Situación real</b>
+        <p>iPronics ha cerrado 107,57 M€ en Series B con participación de NVIDIA para acelerar comercialización, escalar despliegues y reforzar su presencia en Estados Unidos.</p>
+      </div>
+
+      <div class="signal-block">
+        <b>Por qué entra en el radar</b>
+        <p>La empresa ha abierto oficina en Santa Clara y está contratando para producto, despliegues con clientes y partnerships de infraestructura de IA: varias señales simultáneas de expansión y ejecución.</p>
+      </div>
+
+      <div class="signal-block">
+        <b>Ángulo de entrada</b>
+        <p>Entrar por la complejidad de escalar internacionalmente después de una gran ronda: comercialización, talento, partnerships, operaciones, finanzas y estructura para acompañar crecimiento global.</p>
+      </div>
+
+      <div class="signal-decision-maker">
+        <b>Decisor</b>
+        <span>Reservado para Golden</span>
+      </div>
+
+      <div class="signal-score-detail">
+        <span><b>Intensidad:</b> Muy alta</span>
+        <span><b>Timing:</b> Muy alto</span>
+        <span><b>Fit:</b> Alto</span>
+        <span><b>Acceso:</b> Por validar</span>
+      </div>
+
+      <a class="signal-source" href="https://www.eu-startups.com/2026/09/spains-ipronics-raises-e107-6-million-with-nvidia-backing-to-scale-optical-networking-for-ai-data-centres/" target="_blank" rel="noopener noreferrer">Fuente pública →</a>
+    </article>
+
+  </div>
+
+  <div class="signal-method">
+    <b>Cómo leer esta muestra:</b> el score combina intensidad de la señal, timing, encaje potencial y posibilidad de construir un camino de acceso. No significa que la empresa esté comprando ni que exista una oportunidad comercial confirmada. Los Golden reciben más contexto, decisor, hipótesis de encaje y trabajo de activación cuando la señal merece avanzar.
+  </div>
+</div>
+
+
     </div>
   </section>
 
@@ -2445,9 +3125,9 @@
         <article class="infra-card"><b>Mesas colaborativas</b><span>Grupos reducidos de perfiles complementarios para detectar relaciones, cruces y oportunidades de colaboración.</span></article>
         <article class="infra-card"><b>Rondas de financiación y empresa</b><span>Encuentros puntuales alrededor de financiación, expansión, crecimiento u otras situaciones donde tenga sentido reunir empresas y expertos.</span></article>
         <article class="infra-card"><b>Conversación propia</b><span>Entrevista, caso, sesión o formato especializado adaptado al periodo contratado y al mercado.</span></article>
-        <article class="infra-card"><b>Marketplace Emprende360</b><span>Perfil comercial dentro del Marketplace con servicios, especialidad, ventaja para la comunidad y solicitudes de contacto.</span></article>
+        <article class="infra-card"><b>Marketplace Emprende360</b><span>Posición diferenciada como Golden Partner dentro del Marketplace, organizada por especialidad y mercado.</span></article>
         <article class="infra-card"><b>Contenido y distribución</b><span>Las conversaciones generan activos que pueden seguir trabajando después del directo.</span></article>
-        <article class="infra-card"><b>Invitación a perfiles</b><span>Activamos perfiles relevantes hacia aquellas conversaciones donde tenga sentido su participación.</span></article>
+        <article class="infra-card"><b>Distribución y red Builder</b><span>La red propia de Emprende360 se complementa progresivamente con Builder Partners capaces de conectar, construir o distribuir cuando exista encaje real.</span></article>
         <article class="infra-card"><b>Motor de Señales B2B</b><span>Research continuo y dos entregas semanales habituales con oportunidades priorizadas, decisor y ángulo de entrada.</span></article>
         <article class="infra-card"><b>Activación relacional</b><span>Cuando existe encaje, trabajamos el mejor camino disponible para acercarnos.</span></article>
         <article class="infra-card"><b>Seguimiento</b><span>Revisamos respuestas, relaciones, próximos pasos y nuevas señales.</span></article>
@@ -2455,7 +3135,86 @@
     </div>
   </section>
 
-  <section class="section map">
+  
+  <section id="red-builder" class="section builder-network">
+    <div class="wrap">
+
+      <div class="center reveal">
+        <span class="kicker">Red distribuida · Builder Partners</span>
+        <h2>Golden trabaja dentro de una red que empieza a multiplicarse por países y capacidades.</h2>
+        <p class="lead">Emprende360 está construyendo una red separada de Builder Partners: profesionales, comunidades y conectores que pueden ayudar a construir activos, acercar relaciones o ampliar la distribución de determinadas conversaciones. No sustituye a Golden. Lo rodea de más infraestructura.</p>
+      </div>
+
+      <div class="builder-country-row reveal">
+        <span>🇪🇸 España</span>
+        <span>🇲🇽 México</span>
+        <span>🇨🇴 Colombia</span>
+        <span>🇦🇷 Argentina</span>
+        <span>🇨🇱 Chile</span>
+        <span>🇵🇪 Perú</span>
+        <span>🇪🇨 Ecuador</span>
+        <span>🇺🇸 USA Hispano</span>
+      </div>
+
+      <div class="builder-network-grid reveal">
+
+        <article class="builder-network-main">
+          <span class="pill">Construye · Conecta · Distribuye</span>
+          <h3>Una red de redes alrededor de conversaciones B2B.</h3>
+          <p>Un Builder puede aportar tecnología, automatización, contenido, una comunidad, relaciones empresariales o capacidad de distribución. Cuando alguna de esas capacidades encaja con tu categoría, puede convertirse en una nueva vía de contexto o acceso.</p>
+
+          <div class="builder-flow">
+            <div class="builder-flow-card">
+              <b>Construye</b>
+              <span>IA, automatización, contenido, audiovisual, operaciones y activos que hacen más fuerte el ecosistema.</span>
+            </div>
+
+            <div class="builder-flow-card">
+              <b>Conecta</b>
+              <span>Founders, empresas, comunidades, expertos y otros ecosistemas que pueden generar cruces relevantes.</span>
+            </div>
+
+            <div class="builder-flow-card">
+              <b>Distribuye</b>
+              <span>Foros, Rondas y conversaciones que pueden llegar a nuevas redes cuando la temática aporta valor.</span>
+            </div>
+          </div>
+
+          <div class="builder-network-actions">
+            <a class="btn btn-primary" href="https://emprende360.club/builder-partners" target="_blank" rel="noopener noreferrer">Conocer Builder Partners →</a>
+            <a class="btn btn-secondary" href="https://emprende360.club/marketplace" target="_blank" rel="noopener noreferrer">Explorar Marketplace →</a>
+          </div>
+        </article>
+
+        <div class="builder-side">
+
+          <article class="builder-side-card">
+            <span class="mini-label">Qué cambia para Golden</span>
+            <h4>Más posibles caminos. No más ruido.</h4>
+            <p>El objetivo no es multiplicar invitaciones indiscriminadamente. Es disponer de más nodos que puedan aportar una conexión, una audiencia o una capacidad concreta cuando realmente tenga relación con tu categoría.</p>
+          </article>
+
+          <article class="builder-side-card">
+            <span class="mini-label">Por país</span>
+            <h4>La red puede crecer sin depender de un único perfil.</h4>
+            <p>España sigue siendo el mercado principal, mientras México y otros mercados hispanohablantes desarrollan progresivamente sus propios nodos de relación y distribución.</p>
+          </article>
+
+          <article class="builder-side-card gold">
+            <span class="mini-label">Separación importante</span>
+            <h4>Builder Partner ≠ Golden Partner.</h4>
+            <p>Builder es una figura de colaboración. Golden es una posición comercial de pago con categoría, Motor de Señales, Marketplace, activación y seguimiento propios.</p>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="network-note reveal">La existencia de Builder Partners no implica una audiencia, número de invitaciones, introducciones o reuniones garantizadas. La red se activa de forma selectiva según temática, país, relación y encaje.</div>
+
+    </div>
+  </section>
+
+<section class="section map">
     <div class="wrap">
       <div class="map-shell reveal">
         <div class="map-copy">
@@ -2496,6 +3255,7 @@
             <li><span class="check">✓</span><span>Presencia Golden durante octubre</span></li>
             <li><span class="check">✓</span><span>Perfil en Emprende360 Marketplace</span></li>
             <li><span class="check">✓</span><span>Foros, mesas, rondas, contenido y contexto cuando encaje</span></li>
+            <li><span class="check">✓</span><span>Acceso contextual a la red Builder cuando exista una vía relevante</span></li>
             <li><span class="check">✓</span><span>Seguimiento y prioridad para continuar</span></li>
           </ul>
           <a class="btn btn-secondary" href="https://wa.me/34603153268?text=Hola%20Alberto.%20Quiero%20valorar%20Golden%20Octubre.%0A%0AEmpresa%3A%0AWeb%20%2F%20LinkedIn%3A%0AQu%C3%A9%20vendemos%3A%0ABuyer%20principal%3A%0ATicket%20aproximado%3A%0AMercado%20que%20queremos%20activar%3A" target="_blank" rel="noopener noreferrer">Activar octubre</a>
@@ -2510,6 +3270,7 @@
             <li><span class="check">✓</span><span>Todo lo incluido en Golden Octubre</span></li>
             <li><span class="check">✓</span><span>Motor de Señales activo durante los 3 meses + seguimiento de señales anteriores</span></li>
             <li><span class="check">✓</span><span>Continuidad en Marketplace, contenido y conversaciones</span></li>
+            <li><span class="check">✓</span><span>Continuidad de posibles cruces con Builder Partners y otros nodos del ecosistema</span></li>
             <li><span class="check">✓</span><span>Seguimiento de relaciones abiertas</span></li>
             <li><span class="check">✓</span><span>Categoría protegida durante el trimestre</span></li>
             <li><span class="check">✓</span><span>Prioridad para renovación</span></li>
@@ -2625,7 +3386,17 @@
           <summary>¿Golden se confirma automáticamente al pagar?</summary>
           <p>No. Revisamos empresa, propuesta, buyer, categoría, posibles conflictos y si realmente creemos que podemos trabajar esa posición con sentido.</p>
         </details>
-      </div>
+      
+        <details>
+          <summary>¿Qué relación existe entre Golden y Builder Partners?</summary>
+          <p>Son figuras distintas. Builder Partners colaboran construyendo, conectando o distribuyendo Emprende360. Golden Partners ocupan una posición comercial dentro de una categoría y reciben Motor de Señales, Marketplace, activación y seguimiento. Cuando un Builder ofrece una vía de conexión o distribución relevante para un Golden, Emprende360 puede explorar ese cruce de forma contextual.</p>
+        </details>
+
+        <details>
+          <summary>¿Estar en Golden significa que todos los Builder Partners moverán mis contenidos o eventos?</summary>
+          <p>No. La red Builder no funciona como una red de difusión automática. Cada Builder decide dónde puede aportar y Emprende360 prioriza relevancia, país, temática y valor para su propia red antes que volumen.</p>
+        </details>
+</div>
     </div>
   </section>
 
@@ -2665,6 +3436,7 @@
       <a href="https://emprende360.club/eventos" target="_blank" rel="noopener noreferrer">Eventos</a>
       <a href="https://emprende360.club/golden-partners" target="_blank" rel="noopener noreferrer">Golden Partners</a>
       <a href="https://emprende360.club/marketplace" target="_blank" rel="noopener noreferrer">Marketplace</a>
+      <a href="https://emprende360.club/builder-partners" target="_blank" rel="noopener noreferrer">Builder Partners</a>
       <a href="https://emprende360.club/privacidad" target="_blank" rel="noopener noreferrer">Privacidad</a>
       <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer">Aviso legal</a>
     </div>
