@@ -5,11 +5,11 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Emprende360 · Conversaciones y relaciones B2B con contexto</title>
-<meta content="Emprende360 crea conversaciones y relaciones B2B con contexto mediante Rondas de Alianzas, Foros Ejecutivos y Golden Partners: posicionamiento, radar de oportunidades y activación B2B alrededor de una categoría." name="description"/>
+<meta content="Emprende360 crea conversaciones B2B con contexto mediante Foros, Rondas, Marketplace, Golden Partners y una red distribuida de Builder Partners." name="description"/>
 <meta content="index,follow" name="robots"/>
 <link href="https://emprende360.club/" rel="canonical"/>
 <meta content="Emprende360 · Conversaciones B2B que merece la pena tener" property="og:title"/>
-<meta content="Rondas de Alianzas B2B, Foros Ejecutivos y Golden Partners: una posición activa en tu mercado con posicionamiento, señales, relaciones, contexto y activación B2B." property="og:description"/>
+<meta content="Foros, Rondas, Marketplace, Golden Partners y Builder Partners: una infraestructura B2B para crear mejores conversaciones, relaciones y oportunidades." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://emprende360.club/" property="og:url"/>
 <meta content="https://emprende360.club/eventos/rondas.png" property="og:image"/>
@@ -3092,6 +3092,384 @@
       }
     }
 
+
+/* =========================================================
+   HOME · MARKETPLACE DESTACADO
+========================================================= */
+
+.home-marketplace{
+  background:
+    radial-gradient(circle at 8% 10%,rgba(24,167,255,.065),transparent 27%),
+    radial-gradient(circle at 88% 8%,rgba(217,174,81,.06),transparent 26%),
+    #f7f8fa;
+  color:#112033;
+}
+
+.home-marketplace .kicker{
+  color:#1b6693;
+  background:#ecf8ff;
+  border-color:#cceafb;
+}
+
+.home-marketplace .lead{
+  color:#687789;
+  max-width:820px;
+}
+
+.marketplace-home-grid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:18px;
+  margin-top:36px;
+}
+
+.marketplace-main{
+  position:relative;
+  overflow:hidden;
+  min-height:410px;
+  padding:27px;
+  border:1px solid #dfe5eb;
+  border-radius:27px;
+  background:#fff;
+  box-shadow:0 24px 60px rgba(15,23,42,.07);
+}
+
+.marketplace-main:before{
+  content:"";
+  position:absolute;
+  width:230px;
+  height:230px;
+  right:-105px;
+  top:-115px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(24,167,255,.12),transparent 68%);
+}
+
+.marketplace-main h3{
+  position:relative;
+  z-index:2;
+  margin:15px 0 0;
+  color:#122033;
+  font-size:30px;
+  letter-spacing:-.04em;
+  line-height:1.07;
+}
+
+.marketplace-main>p{
+  position:relative;
+  z-index:2;
+  margin:11px 0 0;
+  max-width:650px;
+  color:#667587;
+  font-size:11px;
+  line-height:1.62;
+}
+
+.marketplace-country-row{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:18px;
+}
+
+.marketplace-country-row span{
+  padding:6px 8px;
+  border:1px solid #e1e6eb;
+  border-radius:999px;
+  background:#f8fafc;
+  color:#647384;
+  font-size:8px;
+  font-weight:850;
+}
+
+.marketplace-preview-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin-top:20px;
+}
+
+.marketplace-preview-card{
+  min-height:145px;
+  padding:13px;
+  border:1px solid #e5e9ee;
+  border-radius:17px;
+  background:#f9fafb;
+}
+
+.marketplace-preview-card b{
+  display:block;
+  color:#132236;
+  font-size:11px;
+  line-height:1.25;
+}
+
+.marketplace-preview-card span{
+  display:block;
+  margin-top:5px;
+  color:#7a8795;
+  font-size:8px;
+  line-height:1.4;
+}
+
+.marketplace-preview-card small{
+  display:inline-block;
+  margin-top:10px;
+  color:#8a6c21;
+  font-size:7px;
+  font-weight:950;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.marketplace-home-actions{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:21px;
+}
+
+.marketplace-side{
+  display:grid;
+  gap:12px;
+}
+
+.marketplace-side-card{
+  padding:23px;
+  border:1px solid #e0e6ec;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 12px 35px rgba(15,23,42,.045);
+}
+
+.marketplace-side-card.opportunity{
+  border-color:#dfd3ef;
+  background:
+    radial-gradient(circle at 100% 0,rgba(168,85,247,.08),transparent 40%),
+    #fff;
+}
+
+.marketplace-side-card h4{
+  margin:12px 0 0;
+  color:#142337;
+  font-size:19px;
+  letter-spacing:-.03em;
+}
+
+.marketplace-side-card p{
+  margin:8px 0 0;
+  color:#6d7a89;
+  font-size:10px;
+  line-height:1.55;
+}
+
+.marketplace-mini-label{
+  display:inline-flex;
+  padding:5px 7px;
+  border:1px solid #e1e6eb;
+  border-radius:999px;
+  background:#f8fafc;
+  color:#7b8896;
+  font-size:7px;
+  font-weight:950;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+
+.marketplace-side-card.opportunity .marketplace-mini-label{
+  color:#75579b;
+  background:#faf7ff;
+  border-color:#e8dff4;
+}
+
+/* =========================================================
+   HOME · BUILDER PARTNERS
+========================================================= */
+
+.home-builders{
+  background:
+    radial-gradient(circle at 12% 14%,rgba(24,167,255,.09),transparent 29%),
+    radial-gradient(circle at 88% 12%,rgba(34,197,94,.07),transparent 27%),
+    #06111f;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.home-builders .lead{
+  max-width:820px;
+}
+
+.home-builder-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:34px;
+}
+
+.home-builder-main{
+  padding:27px;
+  border:1px solid rgba(125,211,252,.18);
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 100% 0,rgba(24,167,255,.10),transparent 38%),
+    rgba(255,255,255,.04);
+}
+
+.home-builder-main h3{
+  margin:15px 0 0;
+  font-size:29px;
+  letter-spacing:-.04em;
+  line-height:1.07;
+}
+
+.home-builder-main>p{
+  margin:11px 0 0;
+  color:#9eb0bf;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.home-builder-modes{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin-top:21px;
+}
+
+.home-builder-mode{
+  min-height:135px;
+  padding:15px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:17px;
+  background:rgba(2,6,23,.26);
+}
+
+.home-builder-mode b{
+  display:block;
+  font-size:12px;
+}
+
+.home-builder-mode:nth-child(1) b{color:#7dd3fc}
+.home-builder-mode:nth-child(2) b{color:#86efac}
+.home-builder-mode:nth-child(3) b{color:#ddd6fe}
+
+.home-builder-mode span{
+  display:block;
+  margin-top:6px;
+  color:#8296a8;
+  font-size:8px;
+  line-height:1.45;
+}
+
+.home-builder-countries{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:17px;
+}
+
+.home-builder-countries span{
+  padding:6px 8px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  color:#8fa2b4;
+  background:rgba(255,255,255,.025);
+  font-size:8px;
+  font-weight:800;
+}
+
+.home-builder-side{
+  display:grid;
+  gap:12px;
+}
+
+.home-builder-side-card{
+  padding:22px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:21px;
+  background:rgba(255,255,255,.035);
+}
+
+.home-builder-side-card h4{
+  margin:11px 0 0;
+  font-size:18px;
+  letter-spacing:-.025em;
+}
+
+.home-builder-side-card p{
+  margin:8px 0 0;
+  color:#8ea1b1;
+  font-size:10px;
+  line-height:1.55;
+}
+
+.home-builder-side-card.gold{
+  border-color:rgba(217,174,81,.17);
+  background:
+    radial-gradient(circle at 100% 0,rgba(217,174,81,.08),transparent 42%),
+    rgba(255,255,255,.035);
+}
+
+.home-builder-side-card.gold h4{
+  color:#f3d883;
+}
+
+.home-builder-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:19px;
+}
+
+/* Collab Builder treatment */
+.collab-card.partner{
+  border-color:rgba(24,167,255,.22);
+  background:
+    radial-gradient(circle at 100% 0,rgba(24,167,255,.08),transparent 38%),
+    rgba(255,255,255,.045);
+}
+
+.collab-card.partner .collab-icon{
+  background:linear-gradient(135deg,#bae6fd,#18a7ff);
+  color:#06111f;
+}
+
+.collab-card.partner .collab-job{
+  color:#7dd3fc;
+}
+
+@media(max-width:1000px){
+  .marketplace-home-grid,
+  .home-builder-grid{
+    grid-template-columns:1fr;
+  }
+
+  .marketplace-preview-grid{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+}
+
+@media(max-width:760px){
+  .marketplace-preview-grid{
+    grid-template-columns:1fr;
+  }
+
+  .home-builder-modes{
+    grid-template-columns:1fr;
+  }
+
+  .marketplace-home-actions .btn,
+  .home-builder-actions .btn{
+    width:100%;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -3116,9 +3494,9 @@
 <nav class="nav-links">
 <a data-i18n="nav1" href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank">Eventos</a>
 <a data-i18n="nav2" href="#accion">En acción</a>
+<a data-i18n="navMarketplace" href="#marketplace">Marketplace</a>
 <a data-i18n="nav3" href="#golden">Golden Partners</a>
-<a data-i18n="nav4" href="#trabaja">Trabaja con Emprende360</a>
-<a data-i18n="navCollab" href="#colabora">Colabora</a>
+<a data-i18n="navBuilder" href="#builders">Builder Partners</a>
 </nav>
 <div aria-label="Language selector" class="home-language-switcher">
 <button aria-label="Ver en español" class="home-lang-btn active" data-lang="es" type="button">🇪🇸 ES</button>
@@ -3200,49 +3578,7 @@
 <!-- =========================================================
      GOLDEN PARTNERS · SLIDER SUPERIOR
 ========================================================= -->
-<section class="golden-strip" aria-label="Golden Partners actuales">
-  <div class="golden-strip-head">
-    <strong data-i18n="sliderTitle">Golden Partners actuales</strong>
-    <span data-i18n="sliderNote">Cada logo abre su landing o web en una nueva pestaña.</span>
-  </div>
 
-  <div class="logo-marquee">
-    <div class="logo-track">
-      <a class="golden-logo-card" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer">
-        <div class="golden-logo-media"><img src="https://emprende360.club/enric.jpg" alt="Uniasser Consulting"></div>
-        <div class="golden-logo-copy"><b>Uniasser Consulting</b><span data-i18n="sliderCat1">IA &amp; Tecnología</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
-      </a>
-      <a class="golden-logo-card" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer">
-        <div class="golden-logo-media"><img src="https://emprende360.club/jesus.jpg" alt="Salesnite"></div>
-        <div class="golden-logo-copy"><b>Salesnite</b><span data-i18n="sliderCat2">Ventas, Revenue &amp; GTM</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
-      </a>
-      <a class="golden-logo-card" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer">
-        <div class="golden-logo-media"><img src="https://emprende360.club/raul.jpg" alt="Nakama Kapital"></div>
-        <div class="golden-logo-copy"><b>Nakama Kapital</b><span>Corporate Finance</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
-      </a>
-      <a class="golden-logo-card" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer">
-        <div class="golden-logo-media"><img src="https://emprende360.club/maider.jpg" alt="L de Líder"></div>
-        <div class="golden-logo-copy"><b>L de Líder</b><span data-i18n="sliderCat4">Liderazgo</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
-      </a>
-      <a class="golden-logo-card" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer">
-        <div class="golden-logo-media"><img src="https://emprende360.club/jorge.jpg" alt="MIAU Consulting"></div>
-        <div class="golden-logo-copy"><b>MIAU Consulting</b><span data-i18n="sliderCat5">Estrategia, Marketing &amp; IA</span><small data-i18n="sliderOpenWeb">Ver web del Golden</small></div>
-      </a>
-      <a class="golden-logo-card" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer">
-        <div class="golden-logo-media"><img src="https://emprende360.club/asia.png" alt="Emprende360 Asia"></div>
-        <div class="golden-logo-copy"><b>Emprende360 Asia</b><span data-i18n="sliderCat6">Asia · Sourcing &amp; Market Access</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
-      </a>
-
-      <!-- Duplicados para loop continuo -->
-      <a class="golden-logo-card" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/enric.jpg" alt=""></div><div class="golden-logo-copy"><b>Uniasser Consulting</b><span data-i18n="sliderCat1">IA &amp; Tecnología</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
-      <a class="golden-logo-card" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/jesus.jpg" alt=""></div><div class="golden-logo-copy"><b>Salesnite</b><span data-i18n="sliderCat2">Ventas, Revenue &amp; GTM</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
-      <a class="golden-logo-card" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/raul.jpg" alt=""></div><div class="golden-logo-copy"><b>Nakama Kapital</b><span>Corporate Finance</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
-      <a class="golden-logo-card" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/maider.jpg" alt=""></div><div class="golden-logo-copy"><b>L de Líder</b><span data-i18n="sliderCat4">Liderazgo</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
-      <a class="golden-logo-card" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/jorge.jpg" alt=""></div><div class="golden-logo-copy"><b>MIAU Consulting</b><span data-i18n="sliderCat5">Estrategia, Marketing &amp; IA</span><small data-i18n="sliderOpenWeb">Ver web del Golden</small></div></a>
-      <a class="golden-logo-card" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/asia.png" alt=""></div><div class="golden-logo-copy"><b>Emprende360 Asia</b><span data-i18n="sliderCat6">Asia · Sourcing &amp; Market Access</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
-    </div>
-  </div>
-</section>
 
 
 
@@ -3415,12 +3751,132 @@
 <!-- =========================================================
      GOLDEN PARTNERS
 ========================================================= -->
+
+<!-- =========================================================
+     MARKETPLACE · POSICIÓN DESTACADA
+========================================================= -->
+<section class="section home-marketplace" id="marketplace">
+<div class="wrap">
+
+<div class="center reveal">
+<span class="kicker" data-i18n="marketKicker">Marketplace Emprende360</span>
+<h2 data-i18n="marketTitle">El ecosistema, ahora navegable.</h2>
+<p class="lead" data-i18n="marketLead">Después de la conversación viene el contexto comercial. El Marketplace reúne Golden Partners por especialidad y mercado, junto a una muestra de oportunidades B2B que estamos detectando y priorizando.</p>
+</div>
+
+<div class="marketplace-home-grid reveal">
+
+<article class="marketplace-main">
+<span class="pill gold" data-i18n="marketMainPill">Golden Partners · País · Especialidad</span>
+<h3 data-i18n="marketMainTitle">Encuentra capacidad sin perderte en un directorio infinito.</h3>
+<p data-i18n="marketMainText">La idea no es acumular cientos de fichas. Queremos que puedas entender rápidamente quién ocupa una categoría, en qué mercado trabaja y cuándo puede tener sentido iniciar una conversación.</p>
+
+<div class="marketplace-country-row">
+<span>🇪🇸 España</span>
+<span>🇲🇽 México</span>
+<span>🇨🇴 Colombia</span>
+<span>🇦🇷 Argentina</span>
+<span>🇨🇱 Chile</span>
+<span>🇵🇪 Perú</span>
+<span>🇪🇨 Ecuador</span>
+<span>🇺🇸 USA Hispano</span>
+</div>
+
+<div class="marketplace-preview-grid">
+<div class="marketplace-preview-card">
+<b data-i18n="marketPreview1Title">IA & Tecnología</b>
+<span>Uniasser Consulting</span>
+<small data-i18n="marketPreviewGolden">Golden Partner</small>
+</div>
+
+<div class="marketplace-preview-card">
+<b data-i18n="marketPreview2Title">Ventas, Revenue & GTM</b>
+<span>Salesnite</span>
+<small data-i18n="marketPreviewGolden">Golden Partner</small>
+</div>
+
+<div class="marketplace-preview-card">
+<b>Corporate Finance</b>
+<span>Nakama Kapital</span>
+<small data-i18n="marketPreviewGolden">Golden Partner</small>
+</div>
+</div>
+
+<div class="marketplace-home-actions">
+<a class="btn btn-primary" data-i18n="marketCta1" href="https://emprende360.club/marketplace" target="_blank" rel="noopener noreferrer">Explorar Marketplace →</a>
+<a class="btn btn-secondary" data-i18n="marketCta2" href="https://emprende360.club/golden-partners" target="_blank" rel="noopener noreferrer">Conocer Golden Partners →</a>
+</div>
+</article>
+
+<div class="marketplace-side">
+
+<article class="marketplace-side-card opportunity">
+<span class="marketplace-mini-label" data-i18n="marketOppLabel">Originación B2B</span>
+<h4 data-i18n="marketOppTitle">Oportunidades que no siempre aparecen en una búsqueda pública.</h4>
+<p data-i18n="marketOppText">Situaciones, señales y necesidades detectadas en red, conversaciones, partners y mercado. Mostramos una muestra; el contexto sensible se trabaja de forma privada cuando existe encaje.</p>
+</article>
+
+<article class="marketplace-side-card">
+<span class="marketplace-mini-label" data-i18n="marketContextLabel">Por qué existe</span>
+<h4 data-i18n="marketContextTitle">El evento abre la conversación. El Marketplace ayuda a continuarla.</h4>
+<p data-i18n="marketContextText">Foros y Rondas siguen siendo la capa de valor y descubrimiento. Marketplace organiza la capacidad y las oportunidades que aparecen después.</p>
+</article>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="golden-strip" aria-label="Golden Partners actuales">
+  <div class="golden-strip-head">
+    <strong data-i18n="sliderTitle">Golden Partners actuales</strong>
+    <span data-i18n="sliderNote">Cada logo abre su landing o web en una nueva pestaña.</span>
+  </div>
+
+  <div class="logo-marquee">
+    <div class="logo-track">
+      <a class="golden-logo-card" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/enric.jpg" alt="Uniasser Consulting"></div>
+        <div class="golden-logo-copy"><b>Uniasser Consulting</b><span data-i18n="sliderCat1">IA &amp; Tecnología</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
+      </a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/jesus.jpg" alt="Salesnite"></div>
+        <div class="golden-logo-copy"><b>Salesnite</b><span data-i18n="sliderCat2">Ventas, Revenue &amp; GTM</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
+      </a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/raul.jpg" alt="Nakama Kapital"></div>
+        <div class="golden-logo-copy"><b>Nakama Kapital</b><span>Corporate Finance</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
+      </a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/maider.jpg" alt="L de Líder"></div>
+        <div class="golden-logo-copy"><b>L de Líder</b><span data-i18n="sliderCat4">Liderazgo</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
+      </a>
+      <a class="golden-logo-card" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/jorge.jpg" alt="MIAU Consulting"></div>
+        <div class="golden-logo-copy"><b>MIAU Consulting</b><span data-i18n="sliderCat5">Estrategia, Marketing &amp; IA</span><small data-i18n="sliderOpenWeb">Ver web del Golden</small></div>
+      </a>
+      <a class="golden-logo-card" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer">
+        <div class="golden-logo-media"><img src="https://emprende360.club/asia.png" alt="Emprende360 Asia"></div>
+        <div class="golden-logo-copy"><b>Emprende360 Asia</b><span data-i18n="sliderCat6">Asia · Sourcing &amp; Market Access</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div>
+      </a>
+
+      <!-- Duplicados para loop continuo -->
+      <a class="golden-logo-card" href="https://emprende360.club/golden/ia-tecnologia" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/enric.jpg" alt=""></div><div class="golden-logo-copy"><b>Uniasser Consulting</b><span data-i18n="sliderCat1">IA &amp; Tecnología</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/revenue-gtm" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/jesus.jpg" alt=""></div><div class="golden-logo-copy"><b>Salesnite</b><span data-i18n="sliderCat2">Ventas, Revenue &amp; GTM</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/corporate-finance" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/raul.jpg" alt=""></div><div class="golden-logo-copy"><b>Nakama Kapital</b><span>Corporate Finance</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
+      <a class="golden-logo-card" href="https://emprende360.club/golden/liderazgo" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/maider.jpg" alt=""></div><div class="golden-logo-copy"><b>L de Líder</b><span data-i18n="sliderCat4">Liderazgo</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
+      <a class="golden-logo-card" href="https://miauconsulting.es/" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/jorge.jpg" alt=""></div><div class="golden-logo-copy"><b>MIAU Consulting</b><span data-i18n="sliderCat5">Estrategia, Marketing &amp; IA</span><small data-i18n="sliderOpenWeb">Ver web del Golden</small></div></a>
+      <a class="golden-logo-card" href="https://emprende360.club/asia/" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><div class="golden-logo-media"><img src="https://emprende360.club/asia.png" alt=""></div><div class="golden-logo-copy"><b>Emprende360 Asia</b><span data-i18n="sliderCat6">Asia · Sourcing &amp; Market Access</span><small data-i18n="sliderOpen">Ver Golden Partner</small></div></a>
+    </div>
+  </div>
+</section>
 <section class="section golden-section" id="golden">
 <div class="wrap">
 <div class="golden-intro reveal">
 <span class="pill gold" data-i18n="goldenPill">Golden Partners</span>
 <h2 data-i18n="goldenTitle">Una categoría. Un Golden Partner principal.</h2>
-<p class="lead" data-i18n="goldenLead">Los Golden Partners combinan posicionamiento, conversaciones, contenido, radar de oportunidades y activación B2B alrededor de una categoría concreta. Seis posiciones ya están activas.</p>
+<p class="lead" data-i18n="goldenLead">Los Golden Partners combinan posición dentro del Marketplace, conversaciones, contenido, Motor de Señales y activación B2B alrededor de una categoría concreta. Seis posiciones ya están activas.</p>
 <p class="small" data-i18n="goldenSmall">La posición principal se protege frente a competidores directos mientras el Golden está activo. La continuidad tiene prioridad antes de volver a abrir la categoría.</p>
 </div>
 <div class="golden-grid reveal">
@@ -3542,6 +3998,83 @@
 <!-- =========================================================
      TRABAJA CON EMPRENDE360 · GOLDEN PARTNERS
 ========================================================= -->
+
+<!-- =========================================================
+     BUILDER PARTNERS · RED DISTRIBUIDA
+========================================================= -->
+<section class="section home-builders" id="builders">
+<div class="wrap">
+
+<div class="center reveal">
+<span class="kicker" data-i18n="builderKicker">Builder Partners · Red distribuida</span>
+<h2 data-i18n="builderTitle">Emprende360 empieza a crecer como una red de redes.</h2>
+<p class="lead" data-i18n="builderLead">Builder Partners son personas que ayudan a construir, conectar o distribuir el ecosistema desde distintos países y capacidades. No sustituyen a Golden ni son una membresía: son una capa de colaboración.</p>
+</div>
+
+<div class="home-builder-grid reveal">
+
+<article class="home-builder-main">
+<span class="pill free" data-i18n="builderPill">Construye · Conecta · Distribuye</span>
+<h3 data-i18n="builderMainTitle">Más nodos. Más caminos. Sin convertirlo en ruido.</h3>
+<p data-i18n="builderMainText">Un Builder puede aportar automatización, contenidos, una comunidad, relaciones empresariales o capacidad de distribución. La red se activa de forma selectiva cuando existe una buena razón para hacerlo.</p>
+
+<div class="home-builder-modes">
+<div class="home-builder-mode">
+<b data-i18n="builderMode1Title">Construye</b>
+<span data-i18n="builderMode1Text">IA, automatización, contenido, audiovisual, operaciones y activos.</span>
+</div>
+<div class="home-builder-mode">
+<b data-i18n="builderMode2Title">Conecta</b>
+<span data-i18n="builderMode2Text">Empresas, founders, comunidades, expertos y otros ecosistemas.</span>
+</div>
+<div class="home-builder-mode">
+<b data-i18n="builderMode3Title">Distribuye</b>
+<span data-i18n="builderMode3Text">Foros, Rondas y conversaciones hacia nuevas redes cuando existe encaje.</span>
+</div>
+</div>
+
+<div class="home-builder-countries">
+<span>🇪🇸 España</span>
+<span>🇲🇽 México</span>
+<span>🇨🇴 Colombia</span>
+<span>🇦🇷 Argentina</span>
+<span>🇨🇱 Chile</span>
+<span>🇵🇪 Perú</span>
+<span>🇪🇨 Ecuador</span>
+<span>🇺🇸 USA Hispano</span>
+</div>
+
+<div class="home-builder-actions">
+<a class="btn btn-primary" data-i18n="builderCta" href="https://emprende360.club/builder-partners" target="_blank" rel="noopener noreferrer">Conocer Builder Partners →</a>
+</div>
+</article>
+
+<div class="home-builder-side">
+
+<article class="home-builder-side-card">
+<span class="marketplace-mini-label" data-i18n="builderSide1Label">Para el ecosistema</span>
+<h4 data-i18n="builderSide1Title">No depender de una sola red.</h4>
+<p data-i18n="builderSide1Text">Cada nuevo Builder puede abrir un círculo distinto: un país, una comunidad, una especialidad o una capacidad que antes no existía dentro de Emprende360.</p>
+</article>
+
+<article class="home-builder-side-card">
+<span class="marketplace-mini-label" data-i18n="builderSide2Label">Para los eventos</span>
+<h4 data-i18n="builderSide2Title">Distribución más relevante, no invitaciones indiscriminadas.</h4>
+<p data-i18n="builderSide2Text">Los Builders pueden ayudar a mover conversaciones hacia sus contactos cuando la temática encaja y realmente puede aportarles valor.</p>
+</article>
+
+<article class="home-builder-side-card gold">
+<span class="marketplace-mini-label" data-i18n="builderSide3Label">Separación importante</span>
+<h4 data-i18n="builderSide3Title">Builder Partner ≠ Golden Partner.</h4>
+<p data-i18n="builderSide3Text">Builder colabora con el ecosistema. Golden ocupa una posición comercial dentro de una categoría y trabaja señales, presencia y activación específica.</p>
+</article>
+
+</div>
+
+</div>
+</div>
+</section>
+
 <section class="section products" id="trabaja">
 <div class="wrap">
 <div class="center reveal">
@@ -3577,9 +4110,9 @@
 <section class="section collab-section" id="colabora">
 <div class="wrap">
 <div class="center reveal">
-<span class="kicker" data-i18n="collabKicker">Participa y colabora</span>
+<span class="kicker" data-i18n="collabKicker">Participa y construye</span>
 <h2 data-i18n="collabTitle">Hay más de una forma de formar parte de Emprende360.</h2>
-<p class="lead" data-i18n="collabLead">Puedes aportar experiencia dentro de una conversación o construir una relación más activa con el ecosistema. Son dos vías distintas y las seleccionamos por encaje.</p>
+<p class="lead" data-i18n="collabLead">Puedes aportar experiencia dentro de una conversación o ayudar a construir, conectar y distribuir Emprende360 como Builder Partner. Son dos vías distintas y las seleccionamos por encaje.</p>
 </div>
 
 <div class="collab-grid reveal">
@@ -3602,23 +4135,23 @@
 
 <article class="collab-card partner">
 <div class="collab-top">
-<div class="collab-icon">🤝</div>
-<span class="collab-label" data-i18n="partnerLabel">Partnerships · Colaboración</span>
+<div class="collab-icon">B</div>
+<span class="collab-label" data-i18n="partnerLabel">Builder Partners · Colaboración</span>
 </div>
-<h3 data-i18n="partnerTitle">Quiero colaborar con Emprende360</h3>
-<div class="collab-job" data-i18n="partnerJob">Quiero crear sinergias y activar oportunidades juntos.</div>
-<p data-i18n="partnerText">Esta vía es para profesionales, empresas, comunidades y conectores con los que tenga sentido construir iniciativas win-win: activar relaciones, sumar perfiles, coorganizar conversaciones o abrir nuevas oportunidades.</p>
+<h3 data-i18n="partnerTitle">Quiero ser Builder Partner</h3>
+<div class="collab-job" data-i18n="partnerJob">Quiero ayudar a construir, conectar o distribuir Emprende360.</div>
+<p data-i18n="partnerText">Esta vía es para personas que pueden aportar una capacidad concreta al ecosistema: tecnología, automatización, contenidos, comunidad, relaciones, distribución u otras formas de colaboración.</p>
 <ul class="collab-points">
-<li><span class="check">✓</span><span data-i18n="partnerPoint1">Partnerships y colaboraciones estratégicas.</span></li>
-<li><span class="check">✓</span><span data-i18n="partnerPoint2">Activación de red, perfiles y oportunidades.</span></li>
-<li><span class="check">✓</span><span data-i18n="partnerPoint3">Foros, Rondas o iniciativas construidas conjuntamente.</span></li>
+<li><span class="check">✓</span><span data-i18n="partnerPoint1">Construye: IA, automatización, contenido, audiovisual u operaciones.</span></li>
+<li><span class="check">✓</span><span data-i18n="partnerPoint2">Conecta: empresas, founders, comunidades y ecosistemas.</span></li>
+<li><span class="check">✓</span><span data-i18n="partnerPoint3">Distribuye: eventos y conversaciones cuando encajan con tu red.</span></li>
 </ul>
-<a class="btn btn-primary" data-i18n="partnerCta" href="https://emprende360.club/activadores" target="_blank" rel="noopener noreferrer">Explorar Partnerships →</a>
+<a class="btn btn-primary" data-i18n="partnerCta" href="https://emprende360.club/builder-partners" target="_blank" rel="noopener noreferrer">Conocer Builder Partners →</a>
 </article>
 
 </div>
 
-<p class="collab-note reveal" data-i18n="collabNote">Participar como ponente o colaborar con Emprende360 no implica convertirse en Golden Partner. Cada vía tiene un objetivo y un nivel de implicación diferente.</p>
+<p class="collab-note reveal" data-i18n="collabNote">Participar como ponente o ser Builder Partner no implica convertirse en Golden Partner. Ponente, Builder y Golden cumplen funciones distintas dentro del ecosistema.</p>
 </div>
 </section>
 
@@ -3713,7 +4246,7 @@
 &nbsp; · &nbsp;
 <a data-i18n="finalSpeaker" href="https://forms.gle/p264NwL1XPD3o7PZ6" rel="noopener noreferrer" target="_blank">Quiero ser ponente →</a>
 &nbsp; · &nbsp;
-<a data-i18n="finalPartner" href="https://emprende360.club/activadores" rel="noopener noreferrer" target="_blank">Partnerships →</a>
+<a data-i18n="finalPartner" href="https://emprende360.club/builder-partners" rel="noopener noreferrer" target="_blank">Builder Partners →</a>
 </div>
 </div>
 </div>
@@ -3731,9 +4264,10 @@
 <br/><span data-i18n="footerTagline">Conversaciones · Contexto · Relaciones B2B</span></div>
 <div class="footer-links">
 <a data-i18n="footerLink1" href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank">Eventos</a>
+<a data-i18n="footerMarketplace" href="https://emprende360.club/marketplace" rel="noopener noreferrer" target="_blank">Marketplace</a>
 <a data-i18n="footerLink2" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Golden Partners</a>
 <a data-i18n="footerSpeaker" href="https://forms.gle/p264NwL1XPD3o7PZ6" rel="noopener noreferrer" target="_blank">Quiero ser ponente</a>
-<a data-i18n="footerPartner" href="https://emprende360.club/activadores" rel="noopener noreferrer" target="_blank">Partnerships</a>
+<a data-i18n="footerPartner" href="https://emprende360.club/builder-partners" rel="noopener noreferrer" target="_blank">Builder Partners</a>
 <a data-i18n="footerLink7" href="https://es.linkedin.com/in/albertoporrasmoreno" rel="noopener noreferrer" target="_blank">Alberto Porras</a>
 <a data-i18n="footerLink8" href="https://www.linkedin.com/in/jorgeiparraguirre/" rel="noopener noreferrer" target="_blank">Jorge Iparraguirre</a>
 <a data-i18n="footerLink9" href="https://emprende360.club/privacidad" rel="noopener noreferrer" target="_blank">Privacidad</a>
@@ -3789,6 +4323,8 @@ const HOME_TRANSLATIONS = {
     "nav3": "Golden Partners",
     "nav4": "Trabaja con Emprende360",
     "navCollab": "Colabora",
+    "navMarketplace": "Marketplace",
+    "navBuilder": "Builder Partners",
     "nav5": "Golden Partners",
     "navCta": "Ver próximos eventos",
     "heroPill": "Participación abierta",
@@ -3854,9 +4390,49 @@ const HOME_TRANSLATIONS = {
     "side2Link": "Ver conversación en LinkedIn →",
     "actionBtn1": "Ver próximos eventos →",
     "actionBtn2": "Recibir próximas conversaciones",
+
+    "marketKicker": "Marketplace Emprende360",
+    "marketTitle": "El ecosistema, ahora navegable.",
+    "marketLead": "Después de la conversación viene el contexto comercial. El Marketplace reúne Golden Partners por especialidad y mercado, junto a una muestra de oportunidades B2B que estamos detectando y priorizando.",
+    "marketMainPill": "Golden Partners · País · Especialidad",
+    "marketMainTitle": "Encuentra capacidad sin perderte en un directorio infinito.",
+    "marketMainText": "La idea no es acumular cientos de fichas. Queremos que puedas entender rápidamente quién ocupa una categoría, en qué mercado trabaja y cuándo puede tener sentido iniciar una conversación.",
+    "marketPreview1Title": "IA & Tecnología",
+    "marketPreview2Title": "Ventas, Revenue & GTM",
+    "marketPreviewGolden": "Golden Partner",
+    "marketCta1": "Explorar Marketplace →",
+    "marketCta2": "Conocer Golden Partners →",
+    "marketOppLabel": "Originación B2B",
+    "marketOppTitle": "Oportunidades que no siempre aparecen en una búsqueda pública.",
+    "marketOppText": "Situaciones, señales y necesidades detectadas en red, conversaciones, partners y mercado. Mostramos una muestra; el contexto sensible se trabaja de forma privada cuando existe encaje.",
+    "marketContextLabel": "Por qué existe",
+    "marketContextTitle": "El evento abre la conversación. El Marketplace ayuda a continuarla.",
+    "marketContextText": "Foros y Rondas siguen siendo la capa de valor y descubrimiento. Marketplace organiza la capacidad y las oportunidades que aparecen después.",
+    "builderKicker": "Builder Partners · Red distribuida",
+    "builderTitle": "Emprende360 empieza a crecer como una red de redes.",
+    "builderLead": "Builder Partners son personas que ayudan a construir, conectar o distribuir el ecosistema desde distintos países y capacidades. No sustituyen a Golden ni son una membresía: son una capa de colaboración.",
+    "builderPill": "Construye · Conecta · Distribuye",
+    "builderMainTitle": "Más nodos. Más caminos. Sin convertirlo en ruido.",
+    "builderMainText": "Un Builder puede aportar automatización, contenidos, una comunidad, relaciones empresariales o capacidad de distribución. La red se activa de forma selectiva cuando existe una buena razón para hacerlo.",
+    "builderMode1Title": "Construye",
+    "builderMode1Text": "IA, automatización, contenido, audiovisual, operaciones y activos.",
+    "builderMode2Title": "Conecta",
+    "builderMode2Text": "Empresas, founders, comunidades, expertos y otros ecosistemas.",
+    "builderMode3Title": "Distribuye",
+    "builderMode3Text": "Foros, Rondas y conversaciones hacia nuevas redes cuando existe encaje.",
+    "builderCta": "Conocer Builder Partners →",
+    "builderSide1Label": "Para el ecosistema",
+    "builderSide1Title": "No depender de una sola red.",
+    "builderSide1Text": "Cada nuevo Builder puede abrir un círculo distinto: un país, una comunidad, una especialidad o una capacidad que antes no existía dentro de Emprende360.",
+    "builderSide2Label": "Para los eventos",
+    "builderSide2Title": "Distribución más relevante, no invitaciones indiscriminadas.",
+    "builderSide2Text": "Los Builders pueden ayudar a mover conversaciones hacia sus contactos cuando la temática encaja y realmente puede aportarles valor.",
+    "builderSide3Label": "Separación importante",
+    "builderSide3Title": "Builder Partner ≠ Golden Partner.",
+    "builderSide3Text": "Builder colabora con el ecosistema. Golden ocupa una posición comercial dentro de una categoría y trabaja señales, presencia y activación específica.",
     "goldenPill": "Golden Partners",
     "goldenTitle": "Una categoría. Un Golden Partner principal.",
-    "goldenLead": "Los Golden Partners combinan posicionamiento, conversaciones, contenido, radar de oportunidades y activación B2B alrededor de una categoría concreta. Seis posiciones ya están activas.",
+    "goldenLead": "Los Golden Partners combinan posición dentro del Marketplace, conversaciones, contenido, Motor de Señales y activación B2B alrededor de una categoría concreta. Seis posiciones ya están activas.",
     "goldenSmall": "La posición principal se protege frente a competidores directos mientras el Golden está activo. La continuidad tiene prioridad antes de volver a abrir la categoría.",
     "golden1Slot": "Confirmado septiembre",
     "golden1Title": "IA & Tecnología",
@@ -3991,9 +4567,9 @@ const HOME_TRANSLATIONS = {
     "asiaTag3": "Vietnam",
     "asiaTag4": "China",
     "asiaTag5": "Desarrollo comercial",
-    "collabKicker": "Participa y colabora",
+    "collabKicker": "Participa y construye",
     "collabTitle": "Hay más de una forma de formar parte de Emprende360.",
-    "collabLead": "Puedes aportar experiencia dentro de una conversación o construir una relación más activa con el ecosistema. Son dos vías distintas y las seleccionamos por encaje.",
+    "collabLead": "Puedes aportar experiencia dentro de una conversación o ayudar a construir, conectar y distribuir Emprende360 como Builder Partner. Son dos vías distintas y las seleccionamos por encaje.",
     "speakerLabel": "Expertos · Foros · Rondas",
     "speakerTitle": "Quiero ser ponente",
     "speakerJob": "Quiero aportar experiencia real a una conversación.",
@@ -4002,19 +4578,19 @@ const HOME_TRANSLATIONS = {
     "speakerPoint2": "Casos, experiencia y contraste con otros perfiles.",
     "speakerPoint3": "Participación sujeta a temática, perfil y calendario.",
     "speakerCta": "Proponerme como ponente →",
-    "partnerLabel": "Partnerships · Colaboración",
-    "partnerTitle": "Quiero colaborar con Emprende360",
-    "partnerJob": "Quiero crear sinergias y activar oportunidades juntos.",
-    "partnerText": "Esta vía es para profesionales, empresas, comunidades y conectores con los que tenga sentido construir iniciativas win-win: activar relaciones, sumar perfiles, coorganizar conversaciones o abrir nuevas oportunidades.",
-    "partnerPoint1": "Partnerships y colaboraciones estratégicas.",
-    "partnerPoint2": "Activación de red, perfiles y oportunidades.",
-    "partnerPoint3": "Foros, Rondas o iniciativas construidas conjuntamente.",
-    "partnerCta": "Explorar Partnerships →",
-    "collabNote": "Participar como ponente o colaborar con Emprende360 no implica convertirse en Golden Partner. Cada vía tiene un objetivo y un nivel de implicación diferente.",
+    "partnerLabel": "Builder Partners · Colaboración",
+    "partnerTitle": "Quiero ser Builder Partner",
+    "partnerJob": "Quiero ayudar a construir, conectar o distribuir Emprende360.",
+    "partnerText": "Esta vía es para personas que pueden aportar una capacidad concreta al ecosistema: tecnología, automatización, contenidos, comunidad, relaciones, distribución u otras formas de colaboración.",
+    "partnerPoint1": "Construye: IA, automatización, contenido, audiovisual u operaciones.",
+    "partnerPoint2": "Conecta: empresas, founders, comunidades y ecosistemas.",
+    "partnerPoint3": "Distribuye: eventos y conversaciones cuando encajan con tu red.",
+    "partnerCta": "Conocer Builder Partners →",
+    "collabNote": "Participar como ponente o ser Builder Partner no implica convertirse en Golden Partner. Ponente, Builder y Golden cumplen funciones distintas dentro del ecosistema.",
     "finalSpeaker": "Quiero ser ponente →",
-    "finalPartner": "Partnerships →",
+    "finalPartner": "Builder Partners →",
     "footerSpeaker": "Quiero ser ponente",
-    "footerPartner": "Partnerships",
+    "footerPartner": "Builder Partners",
     "peopleKicker": "Detrás de las conversaciones",
     "peopleTitle": "Red, criterio y dinamización.",
     "person1Role": "Fundador · Emprende360",
@@ -4036,6 +4612,7 @@ const HOME_TRANSLATIONS = {
     "finalService5": "Emprende360 Asia →",
     "footerTagline": "Conversaciones · Contexto · Relaciones B2B",
     "footerLink1": "Eventos",
+    "footerMarketplace": "Marketplace",
     "footerLink2": "Golden Partners",
     "footerLink3": "Emprende360 Asia",
     "footerLink4": "Impulso B2B",
@@ -4053,6 +4630,8 @@ const HOME_TRANSLATIONS = {
     "nav3": "Golden Partners",
     "nav4": "Work with Emprende360",
     "navCollab": "Collaborate",
+    "navMarketplace": "Marketplace",
+    "navBuilder": "Builder Partners",
     "nav5": "Golden Partners",
     "navCta": "View upcoming events",
     "heroPill": "Open participation",
@@ -4118,9 +4697,49 @@ const HOME_TRANSLATIONS = {
     "side2Link": "View conversation on LinkedIn →",
     "actionBtn1": "View upcoming events →",
     "actionBtn2": "Receive upcoming conversations",
+
+    "marketKicker": "Emprende360 Marketplace",
+    "marketTitle": "The ecosystem, now navigable.",
+    "marketLead": "After the conversation comes commercial context. Marketplace brings together Golden Partners by specialty and market, along with a sample of B2B opportunities we are detecting and prioritising.",
+    "marketMainPill": "Golden Partners · Country · Specialty",
+    "marketMainTitle": "Find the right capability without getting lost in an endless directory.",
+    "marketMainText": "The goal is not to accumulate hundreds of listings. We want you to quickly understand who occupies a category, which market they work in and when a conversation may make sense.",
+    "marketPreview1Title": "AI & Technology",
+    "marketPreview2Title": "Sales, Revenue & GTM",
+    "marketPreviewGolden": "Golden Partner",
+    "marketCta1": "Explore Marketplace →",
+    "marketCta2": "Discover Golden Partners →",
+    "marketOppLabel": "B2B Origination",
+    "marketOppTitle": "Opportunities that do not always appear in a public search.",
+    "marketOppText": "Situations, signals and needs detected through the network, conversations, partners and the market. We show a sample; sensitive context is handled privately when there is a fit.",
+    "marketContextLabel": "Why it exists",
+    "marketContextTitle": "The event opens the conversation. Marketplace helps continue it.",
+    "marketContextText": "Forums and Rounds remain the value and discovery layer. Marketplace organises the capability and opportunities that appear afterwards.",
+    "builderKicker": "Builder Partners · Distributed network",
+    "builderTitle": "Emprende360 is starting to grow as a network of networks.",
+    "builderLead": "Builder Partners are people who help build, connect or distribute the ecosystem from different countries and capabilities. They do not replace Golden and are not a membership: they are a collaboration layer.",
+    "builderPill": "Build · Connect · Distribute",
+    "builderMainTitle": "More nodes. More paths. Without turning it into noise.",
+    "builderMainText": "A Builder can contribute automation, content, a community, business relationships or distribution capacity. The network is activated selectively when there is a good reason to do so.",
+    "builderMode1Title": "Build",
+    "builderMode1Text": "AI, automation, content, audiovisual, operations and assets.",
+    "builderMode2Title": "Connect",
+    "builderMode2Text": "Companies, founders, communities, experts and other ecosystems.",
+    "builderMode3Title": "Distribute",
+    "builderMode3Text": "Forums, Rounds and conversations into new networks when there is a fit.",
+    "builderCta": "Discover Builder Partners →",
+    "builderSide1Label": "For the ecosystem",
+    "builderSide1Title": "Do not depend on a single network.",
+    "builderSide1Text": "Each new Builder can open a different circle: a country, community, specialty or capability that did not previously exist inside Emprende360.",
+    "builderSide2Label": "For events",
+    "builderSide2Title": "More relevant distribution, not indiscriminate invitations.",
+    "builderSide2Text": "Builders can help move conversations into their networks when the topic fits and can genuinely add value.",
+    "builderSide3Label": "Important distinction",
+    "builderSide3Title": "Builder Partner ≠ Golden Partner.",
+    "builderSide3Text": "Builder collaborates with the ecosystem. Golden occupies a commercial position within a category and works specific signals, presence and activation.",
     "goldenPill": "Golden Partners",
     "goldenTitle": "One category. One main Golden Partner.",
-    "goldenLead": "Golden Partners combine positioning, conversations, content, opportunity radar and B2B activation around a specific category. Six positions are already active.",
+    "goldenLead": "Golden Partners combine a position inside the Marketplace, conversations, content, the Signal Engine and B2B activation around a specific category. Six positions are already active.",
     "goldenSmall": "The main position is protected from direct competitors while the Golden is active. Active partners have priority before the category is reopened.",
     "golden1Slot": "Confirmed in September",
     "golden1Title": "AI & Technology",
@@ -4255,9 +4874,9 @@ const HOME_TRANSLATIONS = {
     "asiaTag3": "Vietnam",
     "asiaTag4": "China",
     "asiaTag5": "Commercial development",
-    "collabKicker": "Take part and collaborate",
+    "collabKicker": "Take part and build",
     "collabTitle": "There is more than one way to be part of Emprende360.",
-    "collabLead": "You can contribute expertise to a conversation or build a more active relationship with the ecosystem. They are two different routes and both are selected for fit.",
+    "collabLead": "You can contribute expertise to a conversation or help build, connect and distribute Emprende360 as a Builder Partner. They are two different routes and both are selected for fit.",
     "speakerLabel": "Experts · Forums · Rounds",
     "speakerTitle": "I want to be a speaker",
     "speakerJob": "I want to bring real experience into a conversation.",
@@ -4266,19 +4885,19 @@ const HOME_TRANSLATIONS = {
     "speakerPoint2": "Cases, experience and discussion with other profiles.",
     "speakerPoint3": "Participation is subject to topic, profile and calendar.",
     "speakerCta": "Apply as a speaker →",
-    "partnerLabel": "Partnerships · Collaboration",
-    "partnerTitle": "I want to collaborate with Emprende360",
-    "partnerJob": "I want to create synergies and activate opportunities together.",
-    "partnerText": "This route is for professionals, companies, communities and connectors where it makes sense to build win-win initiatives: activate relationships, bring relevant profiles, co-create conversations or open new opportunities.",
-    "partnerPoint1": "Partnerships and strategic collaborations.",
-    "partnerPoint2": "Activation of networks, profiles and opportunities.",
-    "partnerPoint3": "Forums, Rounds or initiatives built together.",
-    "partnerCta": "Explore Partnerships →",
-    "collabNote": "Being a speaker or collaborating with Emprende360 does not require becoming a Golden Partner. Each route has a different purpose and level of involvement.",
+    "partnerLabel": "Builder Partners · Collaboration",
+    "partnerTitle": "I want to be a Builder Partner",
+    "partnerJob": "I want to help build, connect or distribute Emprende360.",
+    "partnerText": "This route is for people who can contribute a concrete capability to the ecosystem: technology, automation, content, community, relationships, distribution or other forms of collaboration.",
+    "partnerPoint1": "Build: AI, automation, content, audiovisual or operations.",
+    "partnerPoint2": "Connect: companies, founders, communities and ecosystems.",
+    "partnerPoint3": "Distribute: events and conversations when they fit your network.",
+    "partnerCta": "Discover Builder Partners →",
+    "collabNote": "Being a speaker or a Builder Partner does not require becoming a Golden Partner. Speaker, Builder and Golden have different roles within the ecosystem.",
     "finalSpeaker": "I want to be a speaker →",
-    "finalPartner": "Partnerships →",
+    "finalPartner": "Builder Partners →",
     "footerSpeaker": "I want to be a speaker",
-    "footerPartner": "Partnerships",
+    "footerPartner": "Builder Partners",
     "peopleKicker": "Behind the conversations",
     "peopleTitle": "Network, judgement and facilitation.",
     "person1Role": "Founder · Emprende360",
@@ -4300,6 +4919,7 @@ const HOME_TRANSLATIONS = {
     "finalService5": "Emprende360 Asia →",
     "footerTagline": "Conversations · Context · B2B Relationships",
     "footerLink1": "Events",
+    "footerMarketplace": "Marketplace",
     "footerLink2": "Golden Partners",
     "footerLink3": "Emprende360 Asia",
     "footerLink4": "Impulso B2B",
@@ -4318,16 +4938,16 @@ const HOME_META_TRANSLATIONS = {
     "en": "Emprende360 · B2B conversations and commercial activation with context"
   },
   "description": {
-    "es": "Emprende360 crea conversaciones y relaciones B2B con contexto mediante Rondas de Alianzas, Foros Ejecutivos y Golden Partners: posicionamiento, radar de oportunidades y activación B2B alrededor de una categoría.",
-    "en": "Emprende360 creates B2B conversations and relationships with context through Alliance Rounds, Executive Forums and Golden Partners: positioning, opportunity radar and B2B activation around one category."
+    "es": "Emprende360 crea conversaciones B2B con contexto mediante Foros, Rondas, Marketplace, Golden Partners y una red distribuida de Builder Partners.",
+    "en": "Emprende360 creates B2B conversations with context through Forums, Rounds, Marketplace, Golden Partners and a distributed network of Builder Partners."
   },
   "ogTitle": {
     "es": "Emprende360 · Conversaciones B2B que merece la pena tener",
     "en": "Emprende360 · B2B conversations worth having"
   },
   "ogDescription": {
-    "es": "Rondas de Alianzas B2B, Foros Ejecutivos y Golden Partners: una posición activa en tu mercado con posicionamiento, señales, relaciones, contexto y activación B2B.",
-    "en": "Alliance Rounds, Executive Forums and Golden Partners: an active position in your market combining positioning, signals, relationships, context and B2B activation."
+    "es": "Foros, Rondas, Marketplace, Golden Partners y Builder Partners: una infraestructura B2B para crear mejores conversaciones, relaciones y oportunidades.",
+    "en": "Forums, Rounds, Marketplace, Golden Partners and Builder Partners: B2B infrastructure for better conversations, relationships and opportunities."
   }
 };
 
