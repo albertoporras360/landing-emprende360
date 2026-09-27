@@ -3368,6 +3368,132 @@
   }
 }
 
+
+/* ===== EVENTOS · BUILDER PARTNERS POR PAÍS ===== */
+.events-builders{
+  background:
+    radial-gradient(circle at 10% 12%,rgba(24,167,255,.08),transparent 27%),
+    radial-gradient(circle at 90% 10%,rgba(34,197,94,.06),transparent 27%),
+    #06111f;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.events-builders .lead{max-width:830px}
+.builder-country-tabs{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:25px;
+}
+.builder-country-tab{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.035);color:#9eb0bf;
+  padding:8px 10px;border-radius:999px;cursor:pointer;
+  font-size:8px;font-weight:900;transition:.18s;
+}
+.builder-country-tab:hover{color:#fff;border-color:rgba(125,211,252,.28)}
+.builder-country-tab.active{
+  color:#06111f;border-color:#7dd3fc;
+  background:linear-gradient(90deg,#bae6fd,#7dd3fc);
+}
+.builder-events-shell{max-width:1040px;margin:22px auto 0}
+.builder-events-head{
+  display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:13px;
+}
+.builder-events-head h3{margin:0;font-size:22px;letter-spacing:-.03em}
+.builder-events-head p{
+  margin:0;max-width:560px;color:#879aaa;text-align:right;
+  font-size:9px;line-height:1.45;
+}
+.builder-events-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;
+}
+.builder-event-card{
+  position:relative;min-height:250px;display:flex;flex-direction:column;
+  overflow:hidden;padding:20px;border:1px solid rgba(255,255,255,.09);
+  border-radius:20px;background:rgba(255,255,255,.038);transition:.22s;
+}
+.builder-event-card:hover{
+  transform:translateY(-4px);border-color:rgba(125,211,252,.24);
+  background:rgba(255,255,255,.05);
+}
+.builder-event-card:before{
+  content:"";position:absolute;width:160px;height:160px;right:-75px;top:-85px;
+  border-radius:50%;background:radial-gradient(circle,rgba(24,167,255,.12),transparent 68%);
+  pointer-events:none;
+}
+.builder-event-top{
+  position:relative;z-index:2;display:flex;align-items:flex-start;
+  justify-content:space-between;gap:12px;
+}
+.builder-event-avatar{
+  width:48px;height:48px;display:grid;place-items:center;border-radius:15px;
+  background:linear-gradient(135deg,#dbeafe,#a7f3d0);color:#0b1930;
+  font-size:12px;font-weight:1000;
+}
+.builder-demo-badge{
+  padding:5px 7px;border:1px solid rgba(255,255,255,.10);
+  border-radius:999px;color:#7f94a7;font-size:7px;font-weight:950;
+  letter-spacing:.07em;text-transform:uppercase;
+}
+.builder-event-card h4{
+  position:relative;z-index:2;margin:15px 0 0;font-size:17px;letter-spacing:-.025em;
+}
+.builder-event-role{
+  position:relative;z-index:2;margin-top:4px;color:#7dd3fc;font-size:9px;font-weight:850;
+}
+.builder-event-card p{
+  position:relative;z-index:2;margin:10px 0 0;color:#95a7b6;
+  font-size:9px;line-height:1.5;
+}
+.builder-event-tags{
+  position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:5px;
+  margin-top:auto;padding-top:14px;
+}
+.builder-event-tags span{
+  padding:5px 7px;border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;color:#8296a7;font-size:7px;font-weight:850;
+}
+.builder-events-bottom{
+  display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;
+  max-width:1040px;margin:17px auto 0;padding:17px 19px;
+  border:1px solid rgba(125,211,252,.15);border-radius:18px;
+  background:rgba(24,167,255,.045);
+}
+.builder-events-bottom b{display:block;font-size:12px}
+.builder-events-bottom p{
+  margin:4px 0 0;color:#8498aa;font-size:9px;line-height:1.5;
+}
+.builder-events-note{
+  max-width:820px;margin:13px auto 0;text-align:center;
+  color:#6f8498;font-size:8px;line-height:1.55;
+}
+/* Reframe the old partnerships card as Builder Partners */
+.route-card.partner-route{
+  border-color:rgba(24,167,255,.24)!important;
+  background:
+    radial-gradient(circle at 100% 0,rgba(24,167,255,.09),transparent 38%),
+    rgba(255,255,255,.045)!important;
+}
+.route-card.partner-route::before{
+  background:radial-gradient(circle,rgba(24,167,255,.13),transparent 68%)!important;
+}
+.routing.participation-routing .partner-route .route-icon{
+  background:linear-gradient(135deg,#bae6fd,#18a7ff)!important;color:#06111f!important;
+}
+.routing.participation-routing .partner-route .route-job{color:#7dd3fc!important}
+.btn-partnership{
+  color:#06111f!important;background:linear-gradient(90deg,#bae6fd,#18a7ff)!important;
+  box-shadow:0 18px 55px rgba(24,167,255,.17)!important;
+}
+@media(max-width:900px){
+  .builder-events-grid{grid-template-columns:1fr 1fr}
+  .builder-events-bottom{grid-template-columns:1fr}
+}
+@media(max-width:660px){
+  .builder-events-grid{grid-template-columns:1fr}
+  .builder-events-head{align-items:flex-start;flex-direction:column}
+  .builder-events-head p{text-align:left}
+  .builder-events-bottom .btn{width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -3376,7 +3502,7 @@
 ========================================================= -->
 <header>
 <div class="nav">
-<a class="brand" href="#top">
+<a class="brand" href="#top" target="_blank" rel="noopener noreferrer">
 <div class="brand-mark">
         E
       </div>
@@ -3390,17 +3516,17 @@
 </div>
 </a>
 <nav class="nav-links">
-<a href="#eventos">
+<a href="#eventos" target="_blank" rel="noopener noreferrer">
         Agenda
       </a>
 <a href="https://www.linkedin.com/events/7496395870095998976/" rel="noopener noreferrer" target="_blank">
         En acción
       </a>
-<a href="#golden">
+<a href="#golden" target="_blank" rel="noopener noreferrer">
         Golden Partners
       </a>
-<a href="#replays">Anteriores</a>
-<a href="#participar">Participa y colabora</a></nav>
+<a href="#replays" target="_blank" rel="noopener noreferrer">Anteriores</a>
+<a href="#participar" target="_blank" rel="noopener noreferrer">Participa y colabora</a><a href="https://emprende360.club/builder-partners" target="_blank" rel="noopener noreferrer">Builder Partners</a></nav>
 <a class="btn btn-primary" href="https://forms.gle/co89pCvzScuLtr6z5" rel="noopener noreferrer" target="_blank">
       Recibir próximos eventos
     </a>
@@ -4049,6 +4175,51 @@
 <div class="golden-actions reveal"><a class="btn btn-primary" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Conocer Golden Partners →</a></div>
 </div>
 </section>
+
+<!-- =========================================================
+     BUILDER PARTNERS · RED DISTRIBUIDA
+========================================================= -->
+<section class="section events-builders" id="builders">
+<div class="wrap">
+
+<div class="center reveal">
+<span class="kicker">Builder Partners · Red distribuida</span>
+<h2>Personas que ayudan a que estas conversaciones lleguen más lejos.</h2>
+<p class="lead">Emprende360 está construyendo una red de Builder Partners por países: perfiles que pueden conectar comunidades, distribuir eventos o aportar capacidades concretas para que el ecosistema no dependa de una sola red.</p>
+</div>
+
+<div class="builder-country-tabs reveal" id="builderCountryTabs">
+<button class="builder-country-tab active" data-builder-country="espana">🇪🇸 España</button>
+<button class="builder-country-tab" data-builder-country="mexico">🇲🇽 México</button>
+<button class="builder-country-tab" data-builder-country="colombia">🇨🇴 Colombia</button>
+<button class="builder-country-tab" data-builder-country="argentina">🇦🇷 Argentina</button>
+<button class="builder-country-tab" data-builder-country="chile">🇨🇱 Chile</button>
+<button class="builder-country-tab" data-builder-country="peru">🇵🇪 Perú</button>
+<button class="builder-country-tab" data-builder-country="ecuador">🇪🇨 Ecuador</button>
+<button class="builder-country-tab" data-builder-country="usa-hispano">🇺🇸 USA Hispano</button>
+</div>
+
+<div class="builder-events-shell reveal">
+<div class="builder-events-head">
+<h3 id="builderCountryTitle">🇪🇸 Builder Partners · España</h3>
+<p>Ejemplos de cómo se organizarán los perfiles activos por país. Los perfiles demo se sustituirán por Builders confirmados.</p>
+</div>
+<div class="builder-events-grid" id="builderEventsGrid"></div>
+</div>
+
+<div class="builder-events-bottom reveal">
+<div>
+<b>Builder Partner no es una membresía ni un patrocinio.</b>
+<p>Es una relación de colaboración: construir, conectar o distribuir cuando existe una capacidad y un contexto real para hacerlo.</p>
+</div>
+<a class="btn btn-primary" href="https://emprende360.club/builder-partners" target="_blank" rel="noopener noreferrer">Conocer Builder Partners →</a>
+</div>
+
+<p class="builder-events-note reveal">La red Builder se activa de forma selectiva. No todos los perfiles participan en todos los eventos ni se realizan invitaciones indiscriminadas.</p>
+
+</div>
+</section>
+
 <!-- =========================================================
      CONVERSACIONES ANTERIORES
 ========================================================= -->
@@ -4130,9 +4301,9 @@
 <div class="wrap">
 
 <div class="center reveal">
-<span class="kicker">Participa · Colabora · Activa · Conecta</span>
+<span class="kicker">Participa · Construye · Activa · Conecta</span>
 <h2>Elige cómo quieres formar parte de Emprende360.</h2>
-<p class="lead">Puedes aportar tu experiencia, construir iniciativas con nosotros, trabajar tu categoría como Golden Partner o utilizar el Marketplace para encontrar expertos y oportunidades B2B.</p>
+<p class="lead">Puedes aportar tu experiencia como ponente, construir Emprende360 como Builder Partner, trabajar tu categoría como Golden Partner o utilizar el Marketplace para encontrar especialistas y oportunidades B2B.</p>
 </div>
 
 <div class="routing-grid reveal">
@@ -4156,34 +4327,34 @@
 </article>
 
 <article class="route-card partner-route">
-<div class="route-icon">🤝</div>
-<span class="route-label">Partnerships · Colaboración</span>
-<h3>Quiero colaborar con Emprende360</h3>
-<div class="route-job">Construyamos algo que tenga sentido para ambas partes.</div>
-<p>Para profesionales, empresas, comunidades y conectores con los que podamos crear iniciativas win-win, activar relaciones o desarrollar nuevas conversaciones juntos.</p>
+<div class="route-icon">B</div>
+<span class="route-label">Builder Partners · Construye · Conecta · Distribuye</span>
+<h3>Quiero ser Builder Partner</h3>
+<div class="route-job">Ayuda a construir y multiplicar Emprende360 desde lo que ya sabes hacer.</div>
+<p>Para personas con capacidad en tecnología, contenidos, comunidades, relaciones, distribución u otras áreas que quieran probar colaboraciones concretas y crecer junto al ecosistema.</p>
 
 <ul class="route-points">
-<li><span class="route-mini-check">✓</span><span>Partnerships y colaboraciones estratégicas.</span></li>
-<li><span class="route-mini-check">✓</span><span>Activación de red, perfiles y oportunidades.</span></li>
-<li><span class="route-mini-check">✓</span><span>Foros, Rondas o iniciativas construidas conjuntamente.</span></li>
+<li><span class="route-mini-check">✓</span><span>Construye: IA, automatización, contenido, audiovisual u operaciones.</span></li>
+<li><span class="route-mini-check">✓</span><span>Conecta: empresas, founders, comunidades y otros ecosistemas.</span></li>
+<li><span class="route-mini-check">✓</span><span>Distribuye: acerca conversaciones relevantes a nuevas redes.</span></li>
 </ul>
 
 <div class="route-actions">
-<a class="btn btn-partnership" href="https://emprende360.club/activadores" rel="noopener noreferrer" target="_blank">Explorar Partnerships →</a>
+<a class="btn btn-partnership" href="https://emprende360.club/builder-partners" rel="noopener noreferrer" target="_blank">Conocer Builder Partners →</a>
 </div>
 </article>
 
 <article class="route-card marketplace-route">
 <div class="route-icon">◎</div>
-<span class="route-label">Marketplace · Expertos · Demanda B2B</span>
+<span class="route-label">Marketplace · Golden Partners · Oportunidades B2B</span>
 <h3>Marketplace Emprende360</h3>
-<div class="route-job">Encuentra expertos, servicios y oportunidades B2B.</div>
-<p>Un espacio para descubrir perfiles seleccionados, ventajas para la comunidad y señales de demanda que puedan abrir conversaciones con sentido.</p>
+<div class="route-job">Explora Golden Partners y oportunidades B2B seleccionadas.</div>
+<p>Un espacio para encontrar Golden Partners por especialidad y mercado, junto a muestras de señales y oportunidades que pueden abrir conversaciones con contexto.</p>
 
 <ul class="route-points">
-<li><span class="route-mini-check">✓</span><span>Expertos y servicios B2B por categoría.</span></li>
-<li><span class="route-mini-check">✓</span><span>Ventajas y condiciones para la comunidad.</span></li>
-<li><span class="route-mini-check">✓</span><span>Muestras de pedidos y oportunidades detectadas por el Motor B2B.</span></li>
+<li><span class="route-mini-check">✓</span><span>Golden Partners organizados por especialidad y mercado.</span></li>
+<li><span class="route-mini-check">✓</span><span>Señales y oportunidades B2B seleccionadas.</span></li>
+<li><span class="route-mini-check">✓</span><span>Contexto para entender cuándo merece la pena hablar.</span></li>
 </ul>
 
 <div class="route-actions">
@@ -4216,7 +4387,7 @@
 
 </div>
 
-<p class="participation-note reveal">No necesitas ser Golden Partner para asistir a los eventos, participar como ponente, explorar una colaboración o utilizar el Marketplace. Cada vía tiene un objetivo y un nivel de implicación diferente.</p>
+<p class="participation-note reveal">No necesitas ser Golden Partner para asistir a los eventos, participar como ponente, ser Builder Partner o explorar el Marketplace. Cada vía cumple una función distinta dentro del ecosistema.</p>
 
 </div>
 </section>
@@ -4251,8 +4422,8 @@
 <a href="https://forms.gle/p264NwL1XPD3o7PZ6" rel="noopener noreferrer" target="_blank">
         Quiero ser ponente
       </a>
-<a href="https://emprende360.club/activadores" rel="noopener noreferrer" target="_blank">
-        Partnerships
+<a href="https://emprende360.club/builder-partners" rel="noopener noreferrer" target="_blank">
+        Builder Partners
       </a>
 <a href="https://emprende360.club/privacidad" rel="noopener noreferrer" target="_blank">
         Privacidad
@@ -4270,6 +4441,110 @@
      ANIMACIONES
 ========================================================= -->
 <script>
+
+
+/* BUILDER PARTNERS · SELECTOR POR PAÍS */
+const builderExamples = {
+  "espana":{
+    title:"🇪🇸 Builder Partners · España",
+    cards:[
+      {initials:"IA",title:"Builder · IA & Automatización",role:"Construye",text:"Ayuda a sistematizar procesos, automatizaciones y capacidades de IA aplicadas al ecosistema.",tags:["IA","Automatización","Procesos"]},
+      {initials:"SM",title:"Builder · Social & Contenido",role:"Construye · Distribuye",text:"Convierte conversaciones y eventos en contenido recurrente y ayuda a ampliar su distribución.",tags:["Social Media","Contenido","LinkedIn"]},
+      {initials:"EC",title:"Builder · Ecosistemas B2B",role:"Conecta",text:"Acerca comunidades, empresas y perfiles complementarios para generar nuevas conversaciones.",tags:["Partnerships","Comunidades","Founders"]}
+    ]
+  },
+  "mexico":{
+    title:"🇲🇽 Builder Partners · México",
+    cards:[
+      {initials:"MX",title:"Builder · Founders & Comunidad",role:"Conecta",text:"Conecta founders, empresarios y comunidades locales con conversaciones que puedan aportarles valor.",tags:["Founders","Comunidad","Partnerships"]},
+      {initials:"EV",title:"Builder · Eventos & Audiencia",role:"Distribuye",text:"Ayuda a que Foros y Rondas lleguen a nuevas redes profesionales cuando la temática encaja.",tags:["Eventos","Audiencia","LinkedIn"]},
+      {initials:"BD",title:"Builder · Business Development",role:"Conecta · Distribuye",text:"Abre relaciones y posibles colaboraciones con otros nodos empresariales del mercado mexicano.",tags:["BD","Alianzas","Red"]}
+    ]
+  },
+  "colombia":{
+    title:"🇨🇴 Builder Partners · Colombia",
+    cards:[
+      {initials:"PA",title:"Builder · Partnerships",role:"Conecta",text:"Detecta comunidades y relaciones empresariales con complementariedad para el ecosistema.",tags:["Partnerships","Empresas","Comunidades"]},
+      {initials:"AV",title:"Builder · Audiovisual",role:"Construye",text:"Da más vida a Rondas, entrevistas y Foros mediante contenido audiovisual reutilizable.",tags:["Vídeo","Edición","Contenido"]},
+      {initials:"CO",title:"Builder · Red Profesional",role:"Distribuye · Conecta",text:"Ayuda a incorporar nuevos círculos profesionales sin depender únicamente de la red central.",tags:["Red","Eventos","Relaciones"]}
+    ]
+  },
+  "argentina":{
+    title:"🇦🇷 Builder Partners · Argentina",
+    cards:[
+      {initials:"OP",title:"Builder · Operaciones & No-Code",role:"Construye",text:"Mejora flujos, bases de datos y automatizaciones recurrentes dentro de Emprende360.",tags:["No-Code","Operaciones","Automatización"]},
+      {initials:"AR",title:"Builder · Comunidad Profesional",role:"Conecta",text:"Acerca perfiles senior, founders y comunidades con capacidad para generar cruces útiles.",tags:["Comunidad","Founders","Senior"]},
+      {initials:"DI",title:"Builder · Distribución B2B",role:"Distribuye",text:"Ayuda a mover determinadas conversaciones entre audiencias profesionales relevantes.",tags:["Distribución","LinkedIn","Eventos"]}
+    ]
+  },
+  "chile":{
+    title:"🇨🇱 Builder Partners · Chile",
+    cards:[
+      {initials:"GR",title:"Builder · Growth & IA",role:"Construye",text:"Apoya experimentación, automatización y sistemas de crecimiento aplicados al ecosistema.",tags:["Growth","IA","Automatización"]},
+      {initials:"CL",title:"Builder · Red & Distribución",role:"Distribuye",text:"Amplía el alcance de conversaciones relevantes hacia nuevos contactos empresariales.",tags:["Red","Eventos","Audiencia"]},
+      {initials:"AL",title:"Builder · Alianzas",role:"Conecta",text:"Explora colaboraciones con empresas, comunidades y perfiles con intereses complementarios.",tags:["Alianzas","Empresas","Partnerships"]}
+    ]
+  },
+  "peru":{
+    title:"🇵🇪 Builder Partners · Perú",
+    cards:[
+      {initials:"PE",title:"Builder · Red Empresarial",role:"Conecta",text:"Acerca empresarios, asociaciones y comunidades cuando existe un motivo concreto para hablar.",tags:["Empresarios","Asociaciones","Relaciones"]},
+      {initials:"CT",title:"Builder · Contenido & Copy",role:"Construye",text:"Convierte conversaciones complejas en piezas claras y reutilizables para distintos canales.",tags:["Copy","Contenido","Social"]},
+      {initials:"EV",title:"Builder · Eventos",role:"Distribuye",text:"Ayuda a distribuir eventos hacia perfiles que puedan beneficiarse realmente del tema.",tags:["Eventos","Difusión","Audiencia"]}
+    ]
+  },
+  "ecuador":{
+    title:"🇪🇨 Builder Partners · Ecuador",
+    cards:[
+      {initials:"EC",title:"Builder · Ecosistema Empresarial",role:"Conecta",text:"Conecta empresarios, founders y comunidades con el resto del ecosistema Emprende360.",tags:["Ecosistema","Founders","Networking"]},
+      {initials:"DI",title:"Builder · Difusión B2B",role:"Distribuye",text:"Amplía la distribución de conversaciones entre contactos con interés real en la temática.",tags:["Difusión","Eventos","Audiencia"]},
+      {initials:"CO",title:"Builder · Comunidad",role:"Conecta · Distribuye",text:"Ayuda a desarrollar un nodo local con relaciones y conversaciones recurrentes.",tags:["Comunidad","Relaciones","Red"]}
+    ]
+  },
+  "usa-hispano":{
+    title:"🇺🇸 Builder Partners · USA Hispano",
+    cards:[
+      {initials:"US",title:"Builder · Hispanic Business Network",role:"Conecta",text:"Acerca founders, empresarios y profesionales hispanohablantes en Estados Unidos.",tags:["Hispanic Business","Founders","Connections"]},
+      {initials:"ME",title:"Builder · Media & Audiencia",role:"Distribuye",text:"Amplifica conversaciones hacia audiencias hispanohablantes y nuevos círculos profesionales.",tags:["Media","Audiencia","Eventos"]},
+      {initials:"BD",title:"Builder · Business Development",role:"Conecta · Distribuye",text:"Explora relaciones empresariales y colaboraciones entre USA Hispano y mercados de la red.",tags:["BD","Partnerships","Mercados"]}
+    ]
+  }
+};
+
+const builderGrid = document.getElementById("builderEventsGrid");
+const builderTitle = document.getElementById("builderCountryTitle");
+const builderTabs = document.querySelectorAll(".builder-country-tab");
+
+function renderBuilderCountry(country){
+  const data = builderExamples[country];
+  if(!data || !builderGrid || !builderTitle) return;
+  builderTitle.textContent = data.title;
+  builderGrid.innerHTML = data.cards.map(card => `
+    <article class="builder-event-card">
+      <div class="builder-event-top">
+        <div class="builder-event-avatar">${card.initials}</div>
+        <span class="builder-demo-badge">Perfil demo</span>
+      </div>
+      <h4>${card.title}</h4>
+      <div class="builder-event-role">${card.role}</div>
+      <p>${card.text}</p>
+      <div class="builder-event-tags">
+        ${card.tags.map(tag => `<span>${tag}</span>`).join("")}
+      </div>
+    </article>
+  `).join("");
+}
+
+builderTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    builderTabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+    renderBuilderCountry(tab.dataset.builderCountry);
+  });
+});
+
+renderBuilderCountry("espana");
+
 
   const observer =
     new IntersectionObserver(
