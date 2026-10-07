@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecosystem Exchange · Madrid | Emprende360</title>
+  <meta name="description" content="Encuentro presencial y selectivo en Madrid para líderes de ecosistemas, comunidades, asociaciones y personas con capacidad real de conectar empresas, talento y oportunidades." />
+  <meta name="theme-color" content="#081421" />
+  <meta property="og:title" content="Ecosystem Exchange · Madrid" />
+  <meta property="og:description" content="Tu red no necesita más contactos. Necesita estar conectada con las redes adecuadas." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy:#081421;
+      --navy-2:#0C1826;
+      --navy-3:#102236;
+      --ink:#0a1119;
+      --white:#F5F5F2;
+      --muted:#AAB6C3;
+      --muted-2:#7F8B97;
+      --amber:#E8A33D;
+      --amber-2:#F0BD68;
+      --line:rgba(255,255,255,.10);
+      --panel:rgba(255,255,255,.045);
+      --panel-2:rgba(255,255,255,.065);
+      --success:#87D9AE;
+      --danger:#FF8F8F;
+      --shadow:0 28px 70px rgba(0,0,0,.36);
+      --radius:24px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(232,163,61,.12), transparent 35%),
+        linear-gradient(180deg,var(--navy),#07111b 52%,#081421 100%);
+      color:var(--white);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.55;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(calc(100% - 36px),var(--max));
+      margin:0 auto;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin:0 0 16px;
+      color:var(--amber-2);
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.17em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      content:"";
+      width:28px;height:1px;
+      background:var(--amber);
+      box-shadow:0 0 16px rgba(232,163,61,.6);
+    }
+
+    h1,h2,h3{
+      font-family:Manrope,Inter,sans-serif;
+      margin:0;
+      line-height:1.02;
+      letter-spacing:-.035em;
+    }
+    h1{
+      font-size:clamp(3.25rem,8.4vw,7.6rem);
+      max-width:1000px;
+      text-wrap:balance;
+    }
+    h2{
+      font-size:clamp(2.35rem,5.4vw,5rem);
+      text-wrap:balance;
+    }
+    h3{
+      font-size:clamp(1.2rem,2.3vw,1.6rem);
+    }
+    p{margin:0}
+    .lead{
+      font-size:clamp(1.08rem,1.8vw,1.35rem);
+      color:#D8E0E8;
+      max-width:800px;
+    }
+
+    /* NAV */
+    .nav{
+      position:fixed;
+      inset:0 0 auto;
+      z-index:100;
+      background:linear-gradient(180deg,rgba(8,20,33,.94),rgba(8,20,33,.76) 72%,transparent);
+      backdrop-filter:blur(13px);
+    }
+    .nav-inner{
+      height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      font-family:Manrope,sans-serif;
+      font-weight:800;
+      letter-spacing:.28em;
+      font-size:.92rem;
+      white-space:nowrap;
+    }
+    .brand span{color:var(--amber)}
+    .nav-cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:0 18px;
+      border:1px solid rgba(232,163,61,.55);
+      border-radius:999px;
+      color:var(--white);
+      background:rgba(232,163,61,.10);
+      font-weight:800;
+      font-size:.88rem;
+      transition:.25s ease;
+    }
+    .nav-cta:hover{background:var(--amber);color:#09111a;transform:translateY(-1px)}
+
+    /* BUTTONS */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:54px;
+      padding:0 24px;
+      border-radius:999px;
+      border:1px solid transparent;
+      font-weight:800;
+      cursor:pointer;
+      transition:.25s ease;
+      text-align:center;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--amber),#F1C16E);
+      color:#0B121A;
+      box-shadow:0 16px 45px rgba(232,163,61,.22);
+    }
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 55px rgba(232,163,61,.30)}
+    .btn-ghost{
+      border-color:rgba(255,255,255,.16);
+      background:rgba(255,255,255,.04);
+      color:var(--white);
+    }
+    .btn-ghost:hover{border-color:rgba(232,163,61,.6);background:rgba(232,163,61,.08)}
+    .arrow{font-size:1.1rem;transform:translateY(-1px)}
+
+    /* HERO */
+    .hero{
+      position:relative;
+      min-height:100svh;
+      display:flex;
+      align-items:center;
+      padding:130px 0 74px;
+      isolation:isolate;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:700px;height:700px;
+      left:50%;top:8%;
+      transform:translateX(-50%);
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(232,163,61,.11),transparent 66%);
+      filter:blur(6px);
+      z-index:-2;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.06fr) minmax(360px,.94fr);
+      align-items:center;
+      gap:56px;
+    }
+    .hero-copy{position:relative;z-index:2}
+    .hero h1 .gold{
+      display:block;
+      background:linear-gradient(135deg,#FFDC96,#E8A33D 58%,#F5C777);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .hero-sub{
+      margin-top:28px;
+      max-width:760px;
+      font-size:clamp(1.12rem,2vw,1.45rem);
+      color:#DDE5ED;
+      text-wrap:balance;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:34px;
+    }
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:32px;
+    }
+    .meta-pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.035);
+      padding:10px 13px;
+      border-radius:999px;
+      color:#C9D2DB;
+      font-size:.86rem;
+      font-weight:700;
+    }
+    .selective-note{
+      margin-top:18px;
+      color:#8FA0B1;
+      font-size:.88rem;
+    }
+
+    /* Network visual */
+    .network-stage{
+      position:relative;
+      min-height:590px;
+      border-radius:36px;
+      background:
+        radial-gradient(circle at 50% 50%,rgba(232,163,61,.11),transparent 25%),
+        linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
+      border:1px solid var(--line);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .network-stage::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+      background-size:42px 42px;
+      mask-image:linear-gradient(to bottom,black,transparent 88%);
+    }
+    .orbit{
+      position:absolute;
+      border:1px solid rgba(232,163,61,.26);
+      border-radius:50%;
+      left:50%;top:49%;
+      transform:translate(-50%,-50%) rotate(-10deg);
+    }
+    .orbit.o1{width:73%;height:49%}
+    .orbit.o2{width:53%;height:73%;transform:translate(-50%,-50%) rotate(45deg);border-color:rgba(102,181,255,.18)}
+    .orbit.o3{width:88%;height:82%;transform:translate(-50%,-50%) rotate(8deg);border-color:rgba(255,255,255,.08)}
+    .hub{
+      position:absolute;
+      left:50%;top:51%;
+      transform:translate(-50%,-50%);
+      width:142px;height:142px;
+      border-radius:50%;
+      background:
+        radial-gradient(circle at 32% 28%,#FFF0C5 0 5%,#F5C56C 16%,#E8A33D 38%,#9A5E13 66%,#1C1A16 100%);
+      box-shadow:
+        0 0 22px rgba(232,163,61,.62),
+        0 0 85px rgba(232,163,61,.32),
+        inset -16px -18px 30px rgba(0,0,0,.22);
+      border:1px solid rgba(255,255,255,.45);
+    }
+    .hub::before{
+      content:"";
+      position:absolute;
+      inset:15px;
+      border-radius:50%;
+      background:
+        radial-gradient(circle at 20% 25%,#fff 0 1px,transparent 1.5px),
+        radial-gradient(circle at 70% 35%,#fff 0 1px,transparent 1.5px),
+        radial-gradient(circle at 40% 72%,#fff 0 1px,transparent 1.5px),
+        radial-gradient(circle at 75% 75%,#fff 0 1px,transparent 1.5px);
+      opacity:.85;
+    }
+    .hub-label{
+      position:absolute;
+      left:50%;top:51%;
+      transform:translate(-50%,100px);
+      width:max-content;
+      padding:7px 11px;
+      border-radius:999px;
+      background:rgba(8,20,33,.82);
+      border:1px solid rgba(232,163,61,.3);
+      color:#F2D49B;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .node{
+      position:absolute;
+      width:98px;height:98px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.14),rgba(17,38,59,.86));
+      border:1px solid rgba(135,194,255,.38);
+      box-shadow:0 0 32px rgba(75,154,223,.13);
+    }
+    .node.gold{
+      border-color:rgba(232,163,61,.46);
+      box-shadow:0 0 36px rgba(232,163,61,.14);
+    }
+    .node span{
+      display:block;
+      text-align:center;
+      font-size:.71rem;
+      line-height:1.15;
+      font-weight:800;
+      color:#E7EEF5;
+      padding:0 8px;
+    }
+    .node::before{
+      content:"";
+      position:absolute;
+      width:7px;height:7px;
+      border-radius:50%;
+      background:#9AD2FF;
+      box-shadow:0 0 13px #79BFFF;
+      top:11px;right:16px;
+    }
+    .node.gold::before{background:#FFC96C;box-shadow:0 0 13px #E8A33D}
+    .n1{left:6%;top:16%}
+    .n2{right:7%;top:12%}
+    .n3{left:5%;bottom:13%}
+    .n4{right:5%;bottom:17%}
+    .n5{left:50%;top:7%;transform:translateX(-50%);width:86px;height:86px}
+
+    .beam{
+      position:absolute;
+      height:1px;
+      transform-origin:left center;
+      background:linear-gradient(90deg,rgba(232,163,61,.0),rgba(232,163,61,.8),rgba(255,255,255,.2));
+      box-shadow:0 0 11px rgba(232,163,61,.55);
+      opacity:.78;
+    }
+    .b1{left:17%;top:31%;width:39%;transform:rotate(25deg)}
+    .b2{left:49%;top:50%;width:40%;transform:rotate(-29deg)}
+    .b3{left:16%;top:73%;width:41%;transform:rotate(-23deg)}
+    .b4{left:50%;top:52%;width:40%;transform:rotate(27deg)}
+    .b5{left:50%;top:20%;width:30%;transform:rotate(90deg)}
+
+    .cityline{
+      position:absolute;
+      left:0;right:0;bottom:0;
+      height:115px;
+      background:
+        linear-gradient(to top,rgba(7,13,19,.99),rgba(7,13,19,.84) 60%,transparent);
+    }
+    .skyline-svg{
+      position:absolute;left:4%;right:4%;bottom:24px;width:92%;height:105px;opacity:.72;
+    }
+
+    /* Sections */
+    section{padding:110px 0}
+    .section-head{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:40px;
+      align-items:end;
+      margin-bottom:54px;
+    }
+    .section-head .lead{justify-self:end}
+
+    .contrast{
+      background:#050C13;
+      border-top:1px solid rgba(255,255,255,.06);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .statement{
+      text-align:center;
+      max-width:1050px;
+      margin:auto;
+    }
+    .statement h2{
+      font-size:clamp(3.4rem,8vw,8rem);
+    }
+    .statement .gold{color:var(--amber)}
+    .statement p{
+      margin:28px auto 0;
+      max-width:760px;
+      color:#C8D2DC;
+      font-size:1.15rem;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px;
+    }
+    .card{
+      min-height:270px;
+      padding:28px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:
+        radial-gradient(circle at 90% 0,rgba(232,163,61,.08),transparent 34%),
+        var(--panel);
+      transition:.25s ease;
+    }
+    .card:hover{transform:translateY(-4px);border-color:rgba(232,163,61,.28);background-color:var(--panel-2)}
+    .card-num{
+      color:var(--amber);
+      font-family:Manrope,sans-serif;
+      font-weight:800;
+      margin-bottom:52px;
+      font-size:.82rem;
+      letter-spacing:.12em;
+    }
+    .card h3{margin-bottom:13px}
+    .card p{color:#AEBAC6;font-size:.95rem}
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:stretch;
+    }
+    .panel{
+      padding:40px;
+      border-radius:28px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.035);
+    }
+    .panel.gold{
+      background:
+        linear-gradient(145deg,rgba(232,163,61,.18),rgba(232,163,61,.045));
+      border-color:rgba(232,163,61,.25);
+    }
+    .panel h3{
+      font-size:clamp(1.7rem,3vw,2.5rem);
+      margin-bottom:18px;
+    }
+    .panel p{color:#C0CAD4}
+    .big-quote{
+      margin-top:34px;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(1.5rem,3.5vw,2.7rem);
+      font-weight:800;
+      letter-spacing:-.04em;
+      line-height:1.06;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      counter-reset:step;
+    }
+    .step{
+      position:relative;
+      min-height:250px;
+      padding:29px;
+      border-radius:24px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));
+    }
+    .step::before{
+      counter-increment:step;
+      content:"0" counter(step);
+      display:block;
+      color:var(--amber);
+      font-family:Manrope,sans-serif;
+      font-weight:800;
+      font-size:.8rem;
+      letter-spacing:.16em;
+      margin-bottom:48px;
+    }
+    .step h3{margin-bottom:12px}
+    .step p{color:#AAB6C2;font-size:.94rem}
+
+    .protect-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      margin-top:42px;
+    }
+    .protect{
+      padding:27px 28px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.09);
+      background:#0A1724;
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .icon{
+      width:40px;height:40px;
+      display:grid;place-items:center;
+      border-radius:13px;
+      background:rgba(232,163,61,.11);
+      color:var(--amber);
+      border:1px solid rgba(232,163,61,.19);
+      font-weight:800;
+    }
+    .protect h3{font-size:1.02rem;letter-spacing:-.015em;margin-bottom:7px}
+    .protect p{font-size:.92rem;color:#9FAEBC}
+
+    .agenda{
+      display:grid;
+      grid-template-columns:.72fr 1.28fr;
+      gap:42px;
+      align-items:start;
+    }
+    .agenda-sticky{position:sticky;top:108px}
+    .timeline{
+      border-left:1px solid rgba(232,163,61,.27);
+      padding-left:26px;
+    }
+    .time-row{
+      position:relative;
+      display:grid;
+      grid-template-columns:90px 1fr;
+      gap:24px;
+      padding:0 0 30px;
+    }
+    .time-row:last-child{padding-bottom:0}
+    .time-row::before{
+      content:"";
+      position:absolute;
+      left:-31px;top:8px;
+      width:9px;height:9px;border-radius:50%;
+      background:var(--amber);
+      box-shadow:0 0 16px rgba(232,163,61,.7);
+    }
+    .time{
+      color:var(--amber-2);
+      font-weight:800;
+      letter-spacing:.03em;
+    }
+    .time-row h3{font-size:1.08rem;margin-bottom:5px}
+    .time-row p{font-size:.92rem;color:#9EACBA}
+
+    .fit{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    .fit-item{
+      min-height:155px;
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:21px;
+      background:rgba(255,255,255,.028);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:28px;
+    }
+    .fit-item .tag{
+      color:#8293A4;
+      font-size:.72rem;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+    .fit-item strong{
+      font-family:Manrope,sans-serif;
+      font-size:1.08rem;
+      line-height:1.18;
+    }
+
+    .info-strip{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1px;
+      margin-top:42px;
+      overflow:hidden;
+      border-radius:24px;
+      border:1px solid var(--line);
+      background:var(--line);
+    }
+    .info{
+      padding:27px 23px;
+      background:#091623;
+    }
+    .info small{
+      display:block;
+      color:#8393A3;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-weight:800;
+      margin-bottom:11px;
+    }
+    .info strong{
+      display:block;
+      font-family:Manrope,sans-serif;
+      font-size:1.08rem;
+    }
+
+    /* Form */
+    .form-section{
+      background:
+        radial-gradient(circle at 20% 10%,rgba(232,163,61,.1),transparent 30%),
+        #050C13;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+    .form-wrap{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:56px;
+      align-items:start;
+    }
+    .form-copy{
+      position:sticky;
+      top:110px;
+    }
+    .form-copy h2{margin-bottom:22px}
+    .form-copy p{color:#B4C0CC;max-width:470px}
+    .form-proof{
+      margin-top:32px;
+      display:grid;
+      gap:11px;
+    }
+    .proof-line{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color:#C9D2DA;
+      font-size:.92rem;
+    }
+    .proof-line b{color:var(--amber)}
+    form{
+      padding:34px;
+      border-radius:30px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      box-shadow:var(--shadow);
+    }
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+    .field{display:grid;gap:8px}
+    .field.full{grid-column:1/-1}
+    label{
+      font-size:.82rem;
+      color:#C4CED8;
+      font-weight:700;
+    }
+    input,textarea,select{
+      width:100%;
+      color:var(--white);
+      background:#08131E;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:15px;
+      padding:14px 15px;
+      outline:none;
+      transition:.2s ease;
+    }
+    textarea{min-height:116px;resize:vertical}
+    input:focus,textarea:focus,select:focus{
+      border-color:rgba(232,163,61,.65);
+      box-shadow:0 0 0 4px rgba(232,163,61,.07);
+    }
+    ::placeholder{color:#657687}
+    .form-note{
+      margin:16px 0 20px;
+      color:#7E8E9F;
+      font-size:.78rem;
+    }
+    .submit-row{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .status{
+      font-size:.88rem;
+      color:#AAB6C2;
+    }
+    .status.success{color:var(--success)}
+    .status.error{color:var(--danger)}
+
+    /* FAQ */
+    .faq{max-width:900px;margin:0 auto}
+    .faq-item{border-bottom:1px solid var(--line)}
+    .faq-btn{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      color:var(--white);
+      background:none;
+      border:0;
+      padding:24px 0;
+      cursor:pointer;
+      text-align:left;
+      font-family:Manrope,sans-serif;
+      font-size:clamp(1.03rem,2vw,1.22rem);
+      font-weight:800;
+    }
+    .faq-btn span:last-child{
+      color:var(--amber);
+      font-size:1.5rem;
+      transition:.25s ease;
+    }
+    .faq-answer{
+      display:grid;
+      grid-template-rows:0fr;
+      transition:.3s ease;
+    }
+    .faq-answer>div{overflow:hidden}
+    .faq-answer p{padding:0 48px 0 0;color:#AAB6C2}
+    .faq-item.open .faq-answer{grid-template-rows:1fr}
+    .faq-item.open .faq-answer p{padding-bottom:24px}
+    .faq-item.open .faq-btn span:last-child{transform:rotate(45deg)}
+
+    .final-cta{
+      position:relative;
+      overflow:hidden;
+      padding:120px 0 130px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 50% 50%,rgba(232,163,61,.14),transparent 30%),
+        linear-gradient(180deg,#07111A,#050B11);
+    }
+    .final-cta::before,.final-cta::after{
+      content:"";
+      position:absolute;
+      width:420px;height:420px;
+      border:1px solid rgba(232,163,61,.12);
+      border-radius:50%;
+      top:50%;transform:translateY(-50%);
+    }
+    .final-cta::before{left:-250px}
+    .final-cta::after{right:-250px}
+    .final-cta h2{
+      max-width:980px;
+      margin:0 auto 24px;
+    }
+    .final-cta p{
+      color:#B9C4CF;
+      max-width:680px;
+      margin:0 auto 32px;
+      font-size:1.05rem;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:34px 0 90px;
+      color:#778899;
+      font-size:.82rem;
+    }
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .mobile-cta{display:none}
+
+    /* Reveal */
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .65s ease,transform .65s ease;
+    }
+    .reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:980px){
+      .hero-grid,.section-head,.agenda,.form-wrap,.split{grid-template-columns:1fr}
+      .hero{min-height:auto;padding-top:122px}
+      .network-stage{min-height:520px;margin-top:4px}
+      .cards,.steps{grid-template-columns:repeat(2,1fr)}
+      .fit{grid-template-columns:repeat(2,1fr)}
+      .info-strip{grid-template-columns:repeat(2,1fr)}
+      .section-head .lead{justify-self:start}
+      .agenda-sticky,.form-copy{position:static}
+      .form-wrap{gap:34px}
+    }
+
+    @media(max-width:640px){
+      .container{width:min(calc(100% - 28px),var(--max))}
+      .nav-inner{height:66px}
+      .nav-cta{display:none}
+      .brand{font-size:.8rem;letter-spacing:.21em}
+      .hero{padding:108px 0 56px}
+      h1{font-size:clamp(3rem,15vw,4.7rem)}
+      h2{font-size:clamp(2.25rem,10.5vw,3.5rem)}
+      .hero-sub{font-size:1rem}
+      .hero-actions .btn{width:100%}
+      .network-stage{min-height:430px;border-radius:25px}
+      .hub{width:108px;height:108px}
+      .node{width:72px;height:72px}
+      .node span{font-size:.56rem}
+      .n1{left:4%;top:17%}.n2{right:4%;top:15%}.n3{left:3%;bottom:12%}.n4{right:3%;bottom:15%}
+      .hub-label{transform:translate(-50%,77px);font-size:.6rem}
+      section{padding:78px 0}
+      .statement h2{font-size:clamp(3rem,16vw,4.8rem)}
+      .cards,.steps,.fit,.protect-grid,.form-grid{grid-template-columns:1fr}
+      .card{min-height:225px}
+      .card-num{margin-bottom:34px}
+      .panel{padding:28px}
+      .info-strip{grid-template-columns:1fr}
+      .time-row{grid-template-columns:72px 1fr;gap:15px}
+      form{padding:22px;border-radius:22px}
+      .field.full{grid-column:auto}
+      .faq-answer p{padding-right:0}
+      .mobile-cta{
+        position:fixed;
+        left:12px;right:12px;bottom:12px;
+        z-index:120;
+        display:block;
+      }
+      .mobile-cta .btn{
+        width:100%;
+        box-shadow:0 14px 45px rgba(0,0,0,.42);
+      }
+      footer{padding-bottom:92px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition:none!important;animation:none!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Emprende360">EMPRENDE<span>360</span></a>
+      <a class="nav-cta" href="#solicitud">Solicitar invitación</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Madrid · última semana de noviembre</div>
+          <h1>ECOSYSTEM <span class="gold">EXCHANGE</span> MADRID</h1>
+          <p class="hero-sub">
+            Tu red no necesita más contactos. Necesita estar conectada con las redes adecuadas.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#solicitud" class="btn btn-primary">Solicitar invitación <span class="arrow">→</span></a>
+            <a href="#como-funciona" class="btn btn-ghost">Ver cómo funciona</a>
+          </div>
+
+          <div class="hero-meta" aria-label="Datos principales">
+            <span class="meta-pill">35–45 perfiles seleccionados</span>
+            <span class="meta-pill">Presencial en Madrid</span>
+            <span class="meta-pill">Almuerzo privado</span>
+            <span class="meta-pill">Acceso por selección</span>
+          </div>
+          <p class="selective-note">No es un evento abierto. Queremos una sala pequeña, complementaria y útil.</p>
+        </div>
+
+        <div class="network-stage reveal" aria-label="Visualización de una red de redes conectadas">
+          <div class="orbit o1"></div>
+          <div class="orbit o2"></div>
+          <div class="orbit o3"></div>
+
+          <div class="beam b1"></div>
+          <div class="beam b2"></div>
+          <div class="beam b3"></div>
+          <div class="beam b4"></div>
+          <div class="beam b5"></div>
+
+          <div class="node n1"><span>REDES<br>DE CEOs</span></div>
+          <div class="node gold n2"><span>ECOSISTEMAS<br>EMPRESARIALES</span></div>
+          <div class="node gold n3"><span>COMUNIDADES<br>PROFESIONALES</span></div>
+          <div class="node n4"><span>ASOCIACIONES<br>Y HUBS</span></div>
+          <div class="node n5"><span>INVERSIÓN<br>& TALENTO</span></div>
+
+          <div class="hub"></div>
+          <div class="hub-label">Red de redes</div>
+
+          <svg class="skyline-svg" viewBox="0 0 900 160" aria-hidden="true">
+            <g fill="none" stroke="rgba(245,245,242,.50)" stroke-width="2">
+              <path d="M8 145V111h42V97h34v48m28 0V90h40v55m25 0V117h62v28m22 0V81h38v64m21 0V103h48v42m28 0V44h42v101m16 0V23h47v122m17 0V38h43v107m18 0V53h44v92m22 0V89h56v56m24 0V113h52v32m17 0V77h39v68m16 0V104h51v41" />
+            </g>
+            <g fill="rgba(232,163,61,.66)">
+              <circle cx="86" cy="97" r="3"/><circle cx="298" cy="81" r="3"/><circle cx="443" cy="23" r="3"/><circle cx="774" cy="77" r="3"/>
+            </g>
+          </svg>
+          <div class="cityline"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contrast">
+      <div class="container statement reveal">
+        <div class="eyebrow">La idea</div>
+        <h2>UNA <span class="gold">RED</span><br>DE REDES</h2>
+        <p>
+          No queremos crear otra comunidad donde todos terminen dentro de lo mismo.
+          Cada ecosistema mantiene su identidad. Conectamos lo que cada uno puede aportar.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Por qué existe</div>
+            <h2>No estamos preparando otro networking.</h2>
+          </div>
+          <p class="lead">
+            Hay muchos eventos donde conoces gente. Pocos donde sabes con quién deberías hablar,
+            por qué y qué podría ocurrir después.
+          </p>
+        </div>
+
+        <div class="split">
+          <article class="panel reveal">
+            <h3>Lo habitual</h3>
+            <p>
+              Una sala llena. Presentaciones. Tarjetas. Conversaciones aleatorias.
+              Muchas personas interesantes, pero poco contexto para saber a quién priorizar.
+            </p>
+            <div class="big-quote">“Encantado. Estamos en contacto.”</div>
+          </article>
+
+          <article class="panel gold reveal">
+            <h3>Lo que buscamos</h3>
+            <p>
+              Llegar sabiendo qué red representa cada persona, qué puede abrir, qué necesita
+              y con quién existe una razón real para hablar.
+            </p>
+            <div class="big-quote">“Me han dicho que tenemos que hablar.”</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Cómo funciona</div>
+            <h2>La experiencia empieza antes de Madrid.</h2>
+          </div>
+          <p class="lead">
+            Antes del encuentro conoceremos qué representa cada participante, qué puede aportar,
+            qué está buscando y qué conexiones pueden merecer la pena.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step reveal">
+            <h3>Ecosystem Map</h3>
+            <p>Qué redes, mercados, capacidades y perfiles existen dentro de la sala.</p>
+          </article>
+          <article class="step reveal">
+            <h3>Selected Connections</h3>
+            <p>Conversaciones recomendadas porque existe una razón concreta para conectar.</p>
+          </article>
+          <article class="step reveal">
+            <h3>Mission Rooms</h3>
+            <p>Necesidades y oportunidades reales sobre las que varias redes pueden colaborar.</p>
+          </article>
+          <article class="step reveal">
+            <h3>Opportunity Exchange</h3>
+            <p>Puedo ayudar. Conozco a alguien. Mi ecosistema puede abrir esa puerta.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contrast">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Confianza</div>
+            <h2>Sin perder tu identidad. Sin entregar tu comunidad.</h2>
+          </div>
+          <p class="lead">
+            Conectar ecosistemas solo funciona si nadie siente que tiene que protegerse del resto.
+            Por eso la colaboración parte de reglas sencillas.
+          </p>
+        </div>
+
+        <div class="protect-grid">
+          <article class="protect reveal">
+            <div class="icon">01</div>
+            <div>
+              <h3>Tu red sigue siendo tu red</h3>
+              <p>Cada organización conserva su identidad, miembros, relaciones y posicionamiento.</p>
+            </div>
+          </article>
+          <article class="protect reveal">
+            <div class="icon">02</div>
+            <div>
+              <h3>No compartimos bases de datos</h3>
+              <p>Las relaciones se activan mediante contexto e introducciones, no entregando listados.</p>
+            </div>
+          </article>
+          <article class="protect reveal">
+            <div class="icon">03</div>
+            <div>
+              <h3>No venimos a captar la comunidad de otro</h3>
+              <p>Buscamos complementar capacidades, no competir por las mismas personas.</p>
+            </div>
+          </article>
+          <article class="protect reveal">
+            <div class="icon">04</div>
+            <div>
+              <h3>Lo importante empieza después</h3>
+              <p>Las conexiones prioritarias deben salir con siguiente paso, responsable y continuidad.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container agenda">
+        <div class="agenda-sticky reveal">
+          <div class="eyebrow">Madrid</div>
+          <h2>Una mesa de trabajo. No un escenario.</h2>
+          <p class="lead" style="margin-top:22px">
+            No habrá una sucesión interminable de ponencias. El protagonista será lo que ocurra
+            entre las personas de la sala.
+          </p>
+        </div>
+
+        <div class="timeline reveal" aria-label="Agenda orientativa">
+          <div class="time-row">
+            <div class="time">12:30</div>
+            <div><h3>Llegada</h3><p>Primeras conexiones sugeridas.</p></div>
+          </div>
+          <div class="time-row">
+            <div class="time">13:00</div>
+            <div><h3>Apertura + mapa de ecosistemas</h3><p>Qué hay en la sala y qué capacidades están representadas.</p></div>
+          </div>
+          <div class="time-row">
+            <div class="time">13:30</div>
+            <div><h3>Conversaciones seleccionadas</h3><p>Primer bloque de relaciones con contexto.</p></div>
+          </div>
+          <div class="time-row">
+            <div class="time">14:00</div>
+            <div><h3>Almuerzo por mesas diseñadas</h3><p>No te sientas al azar. La composición de cada mesa importa.</p></div>
+          </div>
+          <div class="time-row">
+            <div class="time">15:15</div>
+            <div><h3>Mission Rooms</h3><p>Necesidades, proyectos y oportunidades reales.</p></div>
+          </div>
+          <div class="time-row">
+            <div class="time">16:15</div>
+            <div><h3>Opportunity Exchange</h3><p>Introducciones, capacidades y puertas que pueden abrirse.</p></div>
+          </div>
+          <div class="time-row">
+            <div class="time">17:00</div>
+            <div><h3>Siguientes pasos</h3><p>Conexiones pendientes, responsables y continuidad.</p></div>
+          </div>
+          <div class="time-row">
+            <div class="time">17:30</div>
+            <div><h3>Cierre</h3><p>El encuentro termina. Las relaciones no.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contrast">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Quién debería estar</div>
+            <h2>Personas capaces de multiplicar relaciones.</h2>
+          </div>
+          <p class="lead">
+            No buscamos únicamente personas que quieran presentar su servicio.
+            Buscamos acceso, capacidad, conocimiento y redes que puedan complementarse.
+          </p>
+        </div>
+
+        <div class="fit">
+          <div class="fit-item reveal"><span class="tag">01</span><strong>Ecosistemas empresariales</strong></div>
+          <div class="fit-item reveal"><span class="tag">02</span><strong>Comunidades de founders, CEOs y directivos</strong></div>
+          <div class="fit-item reveal"><span class="tag">03</span><strong>Asociaciones y redes profesionales</strong></div>
+          <div class="fit-item reveal"><span class="tag">04</span><strong>Cámaras y organizaciones empresariales</strong></div>
+          <div class="fit-item reveal"><span class="tag">05</span><strong>Aceleradoras, venture studios y hubs</strong></div>
+          <div class="fit-item reveal"><span class="tag">06</span><strong>Universidades y escuelas de negocio</strong></div>
+          <div class="fit-item reveal"><span class="tag">07</span><strong>Redes de inversión, talento y especialistas</strong></div>
+          <div class="fit-item reveal"><span class="tag">08</span><strong>Colectivos sectoriales y tecnológicos</strong></div>
+          <div class="fit-item reveal"><span class="tag">09</span><strong>Personas con redes profesionales relevantes</strong></div>
+        </div>
+
+        <div class="panel gold reveal" style="margin-top:22px">
+          <h3>No buscamos a todo el mundo.</h3>
+          <p>
+            Probablemente no sea para ti si tu único objetivo es entrar en una sala para vender
+            tu servicio a todos los presentes. Sí puede serlo si puedes aportar acceso, relaciones,
+            conocimiento, territorio, capacidad u oportunidades.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Información</div>
+            <h2>Una primera edición pequeña y deliberada.</h2>
+          </div>
+          <p class="lead">
+            Preferimos una sala compacta donde cada persona tenga una razón para estar
+            antes que un evento abierto con cientos de asistentes.
+          </p>
+        </div>
+
+        <div class="info-strip reveal">
+          <div class="info">
+            <small>Ciudad</small>
+            <strong>Madrid</strong>
+          </div>
+          <div class="info">
+            <small>Fecha</small>
+            <strong>Última semana de noviembre</strong>
+          </div>
+          <div class="info">
+            <small>Formato</small>
+            <strong>35–45 participantes</strong>
+          </div>
+          <div class="info">
+            <small>Acceso</small>
+            <strong>Invitación / solicitud aprobada</strong>
+          </div>
+        </div>
+
+        <div class="split" style="margin-top:22px">
+          <article class="panel reveal">
+            <h3>Almuerzo</h3>
+            <p>
+              No planteamos una entrada tradicional. Cada participante cubrirá únicamente
+              su propio almuerzo. El importe y menú se comunicarán antes de confirmar definitivamente la plaza.
+            </p>
+          </article>
+          <article class="panel reveal">
+            <h3>Duración</h3>
+            <p>
+              Aproximadamente de 12:30 a 17:30. La fecha definitiva y ubicación se comunicarán
+              a los participantes confirmados.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="solicitud" class="form-section">
+      <div class="container form-wrap">
+        <div class="form-copy reveal">
+          <div class="eyebrow">Solicitud</div>
+          <h2>¿Deberías estar en esta primera edición?</h2>
+          <p>
+            Cuéntanos qué red tienes detrás, qué puedes abrir y qué te gustaría encontrar al otro lado.
+            Revisaremos personalmente las solicitudes para mantener una composición equilibrada.
+          </p>
+
+          <div class="form-proof">
+            <div class="proof-line"><b>✓</b><span>Plazas limitadas y nominativas.</span></div>
+            <div class="proof-line"><b>✓</b><span>La solicitud no implica confirmación automática.</span></div>
+            <div class="proof-line"><b>✓</b><span>No compartimos tu base de contactos.</span></div>
+            <div class="proof-line"><b>✓</b><span>Buscamos complementariedad, no volumen.</span></div>
+          </div>
+        </div>
+
+        <!--
+          INTEGRACIÓN DEL FORMULARIO:
+          Sustituye FORM_ENDPOINT por tu endpoint real.
+          Opciones sencillas:
+          - Formspree
+          - Netlify Forms
+          - Google Apps Script
+          - Brevo / CRM propio
+          - endpoint propio en Cloudflare Worker
+
+          Si dejas FORM_ENDPOINT vacío, la demo valida el formulario
+          y muestra una confirmación local sin enviar datos.
+        -->
+        <form id="applicationForm" class="reveal" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Nombre y apellidos *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Tu nombre" />
+            </div>
+
+            <div class="field">
+              <label for="role">Cargo *</label>
+              <input id="role" name="role" type="text" required placeholder="CEO, fundador, director..." />
+            </div>
+
+            <div class="field">
+              <label for="organization">Organización / ecosistema *</label>
+              <input id="organization" name="organization" type="text" required placeholder="Nombre de la organización" />
+            </div>
+
+            <div class="field">
+              <label for="linkedin">LinkedIn *</label>
+              <input id="linkedin" name="linkedin" type="url" required placeholder="https://linkedin.com/in/..." />
+            </div>
+
+            <div class="field">
+              <label for="location">Ciudad / país *</label>
+              <input id="location" name="location" type="text" required placeholder="Madrid, España" />
+            </div>
+
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="nombre@empresa.com" />
+            </div>
+
+            <div class="field full">
+              <label for="network">¿Qué tipo de red representas o tienes a tu alrededor? *</label>
+              <textarea id="network" name="network" required placeholder="Describe brevemente la comunidad, red o ecosistema..."></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="access">¿A qué tipo de personas, empresas o territorios tienes acceso? *</label>
+              <textarea id="access" name="access" required placeholder="CEOs, industria, inversión, un país concreto, sector..."></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="contribution">¿Qué podrías aportar a otros participantes? *</label>
+              <textarea id="contribution" name="contribution" required placeholder="Relaciones, conocimiento, distribución, capacidad, mercado..."></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="searching">¿Qué relación, capacidad u oportunidad te interesa encontrar actualmente? *</label>
+              <textarea id="searching" name="searching" required placeholder="Qué te gustaría activar a través del encuentro..."></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="need">¿Hay alguna necesidad concreta que te gustaría poner sobre la mesa en Madrid?</label>
+              <textarea id="need" name="need" placeholder="Opcional. Un reto, proyecto, mercado, partner, acceso..."></textarea>
+            </div>
+          </div>
+
+          <p class="form-note">
+            Al enviar tu solicitud aceptas que Emprende360 utilice estos datos únicamente
+            para valorar tu participación y contactar contigo sobre este encuentro.
+          </p>
+
+          <div class="submit-row">
+            <button class="btn btn-primary" type="submit">Enviar solicitud <span class="arrow">→</span></button>
+            <span id="formStatus" class="status" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="statement reveal" style="margin-bottom:42px">
+          <div class="eyebrow">FAQ</div>
+          <h2 style="font-size:clamp(2.5rem,6vw,5.2rem)">Antes de solicitar plaza.</h2>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span>¿Es un evento abierto?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><div><p>No. El acceso será mediante invitación o solicitud aprobada. Queremos mantener un grupo reducido y una mezcla útil de perfiles.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span>¿Tengo que pagar entrada?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><div><p>No planteamos una entrada tradicional. Cada participante cubrirá únicamente su almuerzo. El importe se comunicará antes de confirmar la asistencia.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span>¿Puedo venir simplemente a presentar mi empresa?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><div><p>No es el objetivo. Naturalmente pueden surgir oportunidades comerciales, pero el formato está diseñado alrededor de complementariedad, introducciones y colaboración entre redes.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span>¿Tengo que dirigir una comunidad formal?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><div><p>No necesariamente. También seleccionaremos perfiles con redes profesionales relevantes y capacidad real para conectar empresas, directivos, especialistas o mercados.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span>¿Compartiréis mis contactos con otros participantes?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><div><p>No. No necesitamos intercambiar bases de datos. Las conexiones se realizan de manera contextual y cuando existe una razón para introducir a las partes.</p></div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-btn" aria-expanded="false">
+              <span>¿Qué ocurre después del encuentro?</span><span>+</span>
+            </button>
+            <div class="faq-answer"><div><p>Las conexiones, introducciones y posibles proyectos que tengan recorrido podrán continuar después de Madrid. Precisamente queremos evitar que todo termine al salir del encuentro.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container reveal">
+        <div class="eyebrow">Ecosystem Exchange · Madrid</div>
+        <h2>Las redes más valiosas no tienen que competir. Tienen que saber conectarse.</h2>
+        <p>Presencial · Madrid · última semana de noviembre · acceso por selección.</p>
+        <a href="#solicitud" class="btn btn-primary">Solicitar invitación <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="brand">EMPRENDE<span>360</span></div>
+      <div>Conversaciones B2B que merece la pena tener.</div>
+      <div>© 2026 Emprende360</div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="btn btn-primary" href="#solicitud">Solicitar invitación</a>
+  </div>
+
+  <script>
+    // Configura aquí el endpoint real de recepción del formulario.
+    // Ejemplo: "https://formspree.io/f/XXXXXX"
+    const FORM_ENDPOINT = "";
+
+    // FAQ
+    document.querySelectorAll(".faq-item").forEach(item => {
+      const button = item.querySelector(".faq-btn");
+      button.addEventListener("click", () => {
+        const open = item.classList.toggle("open");
+        button.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.11 });
+      revealEls.forEach(el => observer.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add("visible"));
+    }
+
+    // Form
+    const form = document.getElementById("applicationForm");
+    const statusEl = document.getElementById("formStatus");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      statusEl.className = "status";
+      statusEl.textContent = "";
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        statusEl.classList.add("error");
+        statusEl.textContent = "Revisa los campos obligatorios.";
+        return;
+      }
+
+      const button = form.querySelector('button[type="submit"]');
+      const original = button.innerHTML;
+      button.disabled = true;
+      button.textContent = "Enviando…";
+
+      const payload = Object.fromEntries(new FormData(form).entries());
+
+      try {
+        if (FORM_ENDPOINT) {
+          const response = await fetch(FORM_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(payload)
+          });
+
+          if (!response.ok) throw new Error("No se pudo enviar la solicitud.");
+        } else {
+          // Modo demo para poder probar la landing sin backend.
+          await new Promise(resolve => setTimeout(resolve, 650));
+          console.log("Solicitud demo:", payload);
+        }
+
+        form.reset();
+        statusEl.classList.add("success");
+        statusEl.textContent = "Solicitud enviada. La revisaremos antes de confirmar la plaza.";
+      } catch (error) {
+        statusEl.classList.add("error");
+        statusEl.textContent = "No se ha podido enviar. Inténtalo de nuevo en unos minutos.";
+      } finally {
+        button.disabled = false;
+        button.innerHTML = original;
+      }
+    });
+  </script>
+</body>
+</html>
