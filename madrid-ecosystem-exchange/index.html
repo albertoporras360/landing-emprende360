@@ -1531,7 +1531,9 @@
         Puede ser Formspree, Google Apps Script, Cloudflare Worker, Make/Zapier o un endpoint propio.
         Si queda vacío, la landing valida el formulario en modo demo, pero no transmite datos.
       -->
-      <form id="applicationForm" class="reveal" novalidate>
+      <form id="applicationForm" class="reveal" action="https://formspree.io/f/mrpepzla" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Nueva solicitud · Ecosystem Exchange Madrid · 23 noviembre 2026" />
+        <input type="hidden" name="event" value="Ecosystem Exchange Madrid · 23 noviembre 2026" />
         <div class="form-grid">
           <div class="field">
             <label for="name">Nombre y apellidos *</label>
@@ -1678,7 +1680,7 @@
     También puedes conectar Google Apps Script, Cloudflare Worker, Make,
     Zapier, Brevo o tu propio backend.
   */
-  const FORM_ENDPOINT = "";
+  const FORM_ENDPOINT = "https://formspree.io/f/mrpepzla";
 
   // FAQ
   document.querySelectorAll(".faq-item").forEach(item => {
@@ -1751,38 +1753,33 @@
     submit.disabled = true;
     submit.textContent = "Enviando…";
 
-    const payload = Object.fromEntries(new FormData(form).entries());
-    payload.event = "Ecosystem Exchange Madrid · 23 noviembre 2026";
+    const formData = new FormData(form);
 
     try {
-      if (FORM_ENDPOINT) {
-        const res = await fetch(FORM_ENDPOINT, {
-          method: "POST",
-          headers: {
-            "Content-Type":"application/json",
-            "Accept":"application/json"
-          },
-          body: JSON.stringify(payload)
-        });
-
-        if (!res.ok) {
-          throw new Error("Error de envío");
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept":"application/json"
         }
+      });
 
-        form.reset();
-        statusEl.classList.add("success");
-        statusEl.textContent = "Solicitud enviada. La revisaremos antes de confirmar la plaza.";
-      } else {
-        await new Promise(resolve => setTimeout(resolve, 550));
-        console.log("Modo demo · solicitud:", payload);
-
-        statusEl.classList.add("error");
-        statusEl.textContent = "Formulario listo. Falta conectar el endpoint para recibir solicitudes.";
+      if (!res.ok) {
+        let detail = "";
+        try {
+          const data = await res.json();
+          detail = data?.errors?.map(e => e.message).join(" · ") || "";
+        } catch (_) {}
+        throw new Error(detail || "Error de envío");
       }
+
+      form.reset();
+      statusEl.classList.add("success");
+      statusEl.textContent = "Solicitud enviada. La revisaremos antes de confirmar la plaza.";
 
     } catch (err) {
       statusEl.classList.add("error");
-      statusEl.textContent = "No se ha podido enviar. Inténtalo de nuevo.";
+      statusEl.textContent = "No se ha podido enviar. Comprueba la conexión o inténtalo de nuevo.";
     } finally {
       submit.disabled = false;
       submit.innerHTML = original;
