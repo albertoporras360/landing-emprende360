@@ -1015,6 +1015,9 @@
     .partner-portrait img{width:104px;height:104px;border-radius:50%;object-fit:cover;background:#fff}
     .partner-logo .logo-fallback{display:none;color:#0b1d37;font-size:18px;font-weight:900;overflow-wrap:anywhere}
     .partner-portrait .logo-fallback{color:#fff}
+    .partner-logo.partner-photo{background:rgba(255,255,255,.07);padding:9px}
+    .partner-photo img{width:100%;height:100%;object-fit:contain;border-radius:11px}
+    .partner-photo .logo-fallback{color:#fff}
     .partner-card h3{margin-top:17px;font-size:19px;letter-spacing:-.035em;line-height:1.2}
     .partner-card p{margin-top:8px;color:#a9bbcd;font-size:13px;line-height:1.55;flex:1}
     .partner-link{margin-top:14px;color:#7dd3fc;font-weight:850;font-size:13px}
@@ -1242,13 +1245,13 @@
           <a class="partner-link" href="https://www.iberocreaconecta.com/" target="_blank" rel="noopener noreferrer">Conocer ecosistema ↗</a>
         </article>
         <article class="partner-card reveal">
-          <a class="partner-logo partner-portrait" href="https://www.linkedin.com/in/berdiel0ne/" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de Antonio Berdiel en otra pestaña">
-            <img src="https://emprende360.club/antonio-berdiel.jpg" alt="Antonio Berdiel" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-            <span class="logo-fallback" aria-hidden="true">ANTONIO BERDIEL</span>
+          <a class="partner-logo partner-photo" href="https://emprende360.club/tih" target="_blank" rel="noopener noreferrer" aria-label="Conocer el ecosistema TIH en otra pestaña">
+            <img src="https://emprende360.club/antonioywulfran.jpeg" alt="TIH · Ecosistema colaborador" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="logo-fallback" aria-hidden="true">TIH</span>
           </a>
-          <h3>Antonio Berdiel</h3>
-          <p>Colaboración en relaciones y conexiones empresariales.</p>
-          <a class="partner-link" href="https://www.linkedin.com/in/berdiel0ne/" target="_blank" rel="noopener noreferrer">Ver perfil profesional ↗</a>
+          <h3>TIH</h3>
+          <p>Ecosistema colaborador en convocatoria y conexiones empresariales.</p>
+          <a class="partner-link" href="https://emprende360.club/tih" target="_blank" rel="noopener noreferrer">Conocer ecosistema ↗</a>
         </article>
       </div>
       <p class="partners-note reveal">Colaboraciones de convocatoria y conexión · Distintas de la coorganización y del patrocinio comercial.</p>
@@ -2075,7 +2078,7 @@
   // Prefill facultativo "quién te ha invitado" desde enlaces de colaboradores,
   // sin bloquear el campo ni sustituir la declaración del participante.
   const collaboratorRef = new URLSearchParams(window.location.search).get("ref");
-  const collaboratorNames = { canasyventas:"Cañas y Ventas", iberocrea:"IberoCrea Conecta", antonioberdiel:"Antonio Berdiel", cac:"CAC · Enrique Peña" };
+  const collaboratorNames = { canasyventas:"Cañas y Ventas", iberocrea:"IberoCrea Conecta", tih:"TIH", cac:"CAC · Enrique Peña" };
   const invitationField = document.getElementById("invitedBy");
   if(invitationField && collaboratorRef && collaboratorNames[collaboratorRef] && !invitationField.value){
     invitationField.value = collaboratorNames[collaboratorRef];
