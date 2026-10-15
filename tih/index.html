@@ -2,1882 +2,912 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#020617">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#020617">
 
-  <title>TIH × Emprende360 | Innovación, talento e impacto social</title>
+<title>TIH × Emprende360 | Innovación con impacto</title>
+<meta name="description" content="TIH y Emprende360 conectan innovación inclusiva, tecnología, talento y relaciones empresariales. Descubre el proyecto y explora una colaboración.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://emprende360.club/tih/">
 
-  <meta name="description" content="TIH y Emprende360 conectan tecnología, accesibilidad, talento y empresa para desarrollar iniciativas de innovación e impacto social. Descubre cómo colaborar.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Emprende360">
+<meta property="og:title" content="TIH × Emprende360 | Talento, tecnología e innovación con propósito">
+<meta property="og:description" content="Una nueva etapa de colaboración para conectar innovación inclusiva, talento, tecnología y empresas.">
+<meta property="og:url" content="https://emprende360.club/tih/">
+<meta property="og:image" content="https://emprende360.club/antonioywulfran.jpeg">
+<meta property="og:image:alt" content="Antonio Berdiel y Wulfran, equipo de TIH">
+<meta name="twitter:card" content="summary_large_image">
 
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://emprende360.club/tih/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_ES">
-  <meta property="og:site_name" content="Emprende360">
-  <meta property="og:title" content="TIH × Emprende360 | El talento no debería encontrar barreras">
-  <meta property="og:description" content="Un ecosistema que conecta innovación inclusiva, tecnología, talento y oportunidades empresariales.">
-  <meta property="og:url" content="https://emprende360.club/tih/">
-  <meta property="og:image" content="https://emprende360.club/emprende360.png">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TIH × Emprende360">
-  <meta name="twitter:description" content="Tecnología, talento e impacto social. Una nueva etapa de colaboración estratégica.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "TIH × Emprende360",
-    "url": "https://emprende360.club/tih/",
-    "description": "Presentación de la colaboración estratégica entre TIH y Emprende360 para impulsar innovación inclusiva, accesibilidad y oportunidades empresariales.",
-    "inLanguage": "es",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Emprende360",
-      "url": "https://emprende360.club/"
-    }
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"TIH × Emprende360",
+  "url":"https://emprende360.club/tih/",
+  "description":"TIH y Emprende360 desarrollan una colaboración estratégica alrededor de la innovación inclusiva, la accesibilidad y las oportunidades empresariales.",
+  "inLanguage":"es",
+  "publisher":{
+    "@type":"Organization",
+    "name":"Emprende360",
+    "url":"https://emprende360.club/"
   }
-  </script>
+}
+</script>
 
 <style>
-/* ========================================================
+/* ==============================================
    TIH × EMPRENDE360
-   LANDING INSTITUCIONAL Y COMERCIAL
-   ======================================================== */
+   MINIMAL CORPORATE LANDING · 2026
+   ============================================== */
 
-:root {
-  color-scheme: dark;
-
-  --deep: #020617;
-  --deep2: #040b16;
-  --navy: #071522;
-  --navy2: #0b1b2a;
-
-  --blue: #18a7ff;
-  --blue-soft: #7dd3fc;
-  --gold: #f4c542;
-  --gold-soft: #fde68a;
-  --green: #22c55e;
-
-  --white: #f8fafc;
-  --soft: #cbd5e1;
-  --muted: #94a3b8;
-  --muted2: #64748b;
-
-  --line: rgba(255,255,255,.12);
-  --glass: rgba(255,255,255,.045);
-
-  --max: 1180px;
-  --shadow: 0 25px 80px rgba(0,0,0,.28);
+:root{
+  color-scheme:dark;
+  --deep:#020617;
+  --deep2:#040b16;
+  --navy:#071522;
+  --navy2:#0b1b2a;
+  --blue:#18a7ff;
+  --blue-soft:#7dd3fc;
+  --gold:#f4c542;
+  --gold-soft:#fde68a;
+  --text:#f8fafc;
+  --soft:#cbd5e1;
+  --muted:#94a3b8;
+  --line:rgba(255,255,255,.12);
+  --glass:rgba(255,255,255,.035);
+  --max:1120px;
 }
 
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  margin:0;
+  background:var(--deep);
+  color:var(--text);
+  font-family:Inter,system-ui,sans-serif;
+  line-height:1.65;
+  overflow-x:hidden;
 }
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+img{display:block;max-width:100%}
+h1,h2,h3{
+  font-family:Manrope,Inter,sans-serif;
+  line-height:1.12;
+  letter-spacing:-.045em;
+  margin:0;
+}
+h1{font-size:clamp(42px,6.2vw,76px)}
+h2{font-size:clamp(30px,4.3vw,49px)}
+h3{font-size:22px}
+p{margin:0}
+::selection{background:var(--gold);color:var(--deep)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 95px;
+.wrap{
+  width:100%;
+  max-width:var(--max);
+  margin:auto;
+  padding:0 22px;
 }
+.section{padding:92px 0}
+.section-dark{background:var(--deep)}
+.section-navy{background:var(--navy)}
+.gold{color:var(--gold-soft)}
+.blue{color:var(--blue-soft)}
+.lead{font-size:clamp(16px,1.55vw,19px);color:var(--soft);line-height:1.75}
+.body-copy{font-size:15px;color:var(--soft);line-height:1.8}
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 12px;
+  border-radius:999px;
+  border:1px solid rgba(24,167,255,.25);
+  background:rgba(24,167,255,.07);
+  color:#cfefff;
+  text-transform:uppercase;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.09em;
+}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.035);
+  border-radius:999px;
+  color:var(--soft);
+  font-size:12px;
+  font-weight:750;
+}
+.section-head{
+  max-width:770px;
+  margin:0 auto 40px;
+  text-align:center;
+}
+.section-head h2{margin-top:17px}
+.section-head .lead{margin-top:18px}
 
-body {
-  margin: 0;
-  background: var(--deep);
-  color: var(--white);
-  font-family: Inter, system-ui, sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:48px;
+  padding:13px 22px;
+  border-radius:999px;
+  font-weight:850;
+  font-size:14px;
+  text-align:center;
+  border:1px solid transparent;
+  transition:transform .2s,background .2s,box-shadow .2s;
 }
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{
+  color:#06111f;
+  background:linear-gradient(100deg,#ffe078,#f4c542);
+  box-shadow:0 14px 40px rgba(244,197,66,.15);
+}
+.btn-primary:hover{box-shadow:0 18px 50px rgba(244,197,66,.28)}
+.btn-outline{
+  color:#fff;
+  background:rgba(255,255,255,.04);
+  border-color:rgba(255,255,255,.17);
+}
+.btn-outline:hover{background:rgba(255,255,255,.09)}
+.btn:disabled{opacity:.65;cursor:not-allowed;transform:none}
 
-body, input, textarea, select, button {
-  font-family: Inter, system-ui, sans-serif;
+.skip{
+  position:fixed;
+  left:12px;
+  top:-100px;
+  background:var(--gold);
+  color:var(--deep);
+  font-weight:800;
+  padding:12px 17px;
+  z-index:1000;
+  border-radius:8px;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button, input, textarea, select {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-svg {
-  display: block;
-}
-
-h1, h2, h3 {
-  font-family: Manrope, Inter, sans-serif;
-  letter-spacing: -.045em;
-  line-height: 1.13;
-  margin: 0;
-}
-
-h1 {
-  font-size: clamp(43px, 6.2vw, 78px);
-}
-
-h2 {
-  font-size: clamp(31px, 4.3vw, 52px);
-}
-
-h3 {
-  font-size: 22px;
-}
-
-p {
-  margin: 0;
-}
-
-strong {
-  font-weight: 800;
-}
-
-::selection {
-  background: var(--gold);
-  color: var(--deep);
-}
-
-:focus-visible {
-  outline: 3px solid var(--gold);
-  outline-offset: 4px;
-}
-
-.wrap {
-  width: 100%;
-  max-width: var(--max);
-  margin: auto;
-  padding: 0 22px;
-}
-
-.section {
-  position: relative;
-  padding: 94px 0;
-}
-
-.section-dark {
-  background: var(--deep);
-}
-
-.section-navy {
-  background: var(--navy);
-}
-
-.center {
-  text-align: center;
-}
-
-.section-heading {
-  max-width: 790px;
-  margin: 0 auto 43px;
-  text-align: center;
-}
-
-.section-heading h2 {
-  margin-top: 16px;
-}
-
-.section-heading p {
-  margin-top: 17px;
-}
-
-.lead {
-  font-size: clamp(16px, 1.6vw, 19px);
-  color: var(--soft);
-  line-height: 1.72;
-}
-
-.body-copy {
-  font-size: 15px;
-  color: var(--soft);
-  line-height: 1.78;
-}
-
-.gold-text {
-  color: var(--gold-soft);
-}
-
-.blue-text {
-  color: var(--blue-soft);
-}
-
-.kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 13px;
-  border: 1px solid rgba(24,167,255,.25);
-  border-radius: 999px;
-  background: rgba(24,167,255,.08);
-  color: #d6f1ff;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: .105em;
-  text-transform: uppercase;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 8px 12px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--glass);
-  color: var(--soft);
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.pill-gold {
-  background: rgba(244,197,66,.08);
-  border-color: rgba(244,197,66,.30);
-  color: var(--gold-soft);
-}
-
-.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  min-height: 50px;
-  padding: 14px 23px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  font-size: 14px;
-  font-weight: 850;
-  line-height: 1.2;
-  text-align: center;
-  transition: transform .2s, background .2s, box-shadow .2s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn-primary {
-  background: linear-gradient(110deg,#ffe075,#f4c542);
-  color: #07111e;
-  box-shadow: 0 15px 45px rgba(244,197,66,.15);
-}
-
-.btn-primary:hover {
-  box-shadow: 0 20px 55px rgba(244,197,66,.28);
-}
-
-.btn-secondary {
-  background: rgba(255,255,255,.06);
-  border-color: rgba(255,255,255,.18);
-  color: white;
-}
-
-.btn-secondary:hover {
-  background: rgba(255,255,255,.10);
-}
-
-.btn-blue {
-  background: linear-gradient(100deg,#0a66c2,#18a7ff);
-  color: white;
-}
-
-.btn:disabled {
-  opacity: .65;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.grid-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: .05;
-  background-image:
-    linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);
-  background-size: 54px 54px;
-  mask-image: linear-gradient(180deg,#000,transparent 95%);
-}
-
-.skip-link {
-  position: fixed;
-  top: -100px;
-  left: 14px;
-  z-index: 1000;
-  padding: 13px 18px;
-  background: var(--gold);
-  color: var(--deep);
-  border-radius: 9px;
-  font-weight: 800;
-}
-
-.skip-link:focus {
-  top: 12px;
-}
+.skip:focus{top:12px}
 
 /* HEADER */
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  min-height: 78px;
-  background: rgba(2,6,23,.95);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,.09);
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(2,6,23,.95);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
-
-.nav {
-  min-height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.nav{
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  flex-shrink: 0;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
 }
-
-.brand-icon {
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg,var(--gold),var(--blue));
-  border-radius: 13px;
-  color: #06111f;
-  font-family: Manrope,sans-serif;
-  font-size: 19px;
-  font-weight: 900;
+.brand-mark{
+  width:43px;
+  height:43px;
+  flex:none;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--gold),var(--blue));
+  color:#06111f;
+  font-size:17px;
+  font-weight:900;
 }
-
-.brand-title {
-  display: block;
-  font-size: 17px;
-  font-weight: 900;
-  line-height: 1.1;
+.brand-title{
+  display:block;
+  font-size:16px;
+  font-weight:900;
+  line-height:1.2;
 }
-
-.brand-sub {
-  display: block;
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+.brand-sub{
+  display:block;
+  margin-top:4px;
+  font-size:10px;
+  color:var(--muted);
+  font-weight:750;
+  text-transform:uppercase;
+  letter-spacing:.08em;
 }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 23px;
+.nav-right{display:flex;align-items:center;gap:22px}
+.nav-right>a:not(.btn){
+  font-size:13px;
+  color:var(--soft);
+  font-weight:700;
 }
-
-.nav-links > a:not(.btn) {
-  font-size: 13px;
-  color: var(--soft);
-  font-weight: 750;
-}
-
-.nav-links > a:not(.btn):hover {
-  color: var(--gold-soft);
-}
+.nav-right>a:not(.btn):hover{color:var(--gold-soft)}
 
 /* HERO */
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  padding: 90px 0 95px;
+.hero{
+  position:relative;
+  overflow:hidden;
   background:
-    radial-gradient(circle at 8% 12%,rgba(24,167,255,.16),transparent 30%),
-    radial-gradient(circle at 90% 10%,rgba(244,197,66,.12),transparent 30%),
+    radial-gradient(circle at 10% 10%,rgba(24,167,255,.14),transparent 30%),
+    radial-gradient(circle at 90% 15%,rgba(244,197,66,.09),transparent 29%),
     var(--deep);
+  padding:100px 0 100px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:58px;
+  align-items:center;
+}
+.hero h1{margin-top:21px}
+.hero h1 span{display:block}
+.hero .lead{margin-top:24px;max-width:650px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:29px}
+.hero-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}
+.hero-note{
+  margin-top:18px;
+  color:var(--muted);
+  font-size:12px;
+  max-width:600px;
 }
 
-.hero-grid {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: minmax(0,1.07fr) minmax(0,.93fr);
-  align-items: center;
-  gap: 55px;
-}
+/* MINIMAL CORE VISUAL */
 
-.hero h1 {
-  margin-top: 22px;
-}
-
-.hero h1 span {
-  display: block;
-}
-
-.hero .lead {
-  margin-top: 23px;
-  max-width: 660px;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 29px;
-}
-
-.hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 27px;
-}
-
-.hero-note {
-  margin-top: 22px;
-  max-width: 580px;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-/* ECOSYSTEM VISUAL */
-
-.ecosystem-visual {
-  position: relative;
-  min-height: 510px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 31px;
+.core-panel{
+  position:relative;
+  min-height:460px;
+  padding:29px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:29px;
   background:
-    radial-gradient(circle at 50% 48%,rgba(24,167,255,.13),transparent 40%),
-    radial-gradient(circle at 90% 10%,rgba(244,197,66,.09),transparent 34%),
-    rgba(255,255,255,.03);
-  box-shadow: var(--shadow);
+    radial-gradient(circle at 100% 0,rgba(244,197,66,.08),transparent 44%),
+    radial-gradient(circle at 0 100%,rgba(24,167,255,.10),transparent 42%),
+    rgba(255,255,255,.035);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
-
-.visual-label {
-  position: absolute;
-  top: 23px;
-  left: 25px;
-  font-size: 12px;
-  font-weight: 900;
-  color: var(--gold-soft);
-  letter-spacing: .07em;
-  text-transform: uppercase;
+.core-label{
+  font-size:11px;
+  font-weight:900;
+  color:var(--gold-soft);
+  letter-spacing:.1em;
+  text-transform:uppercase;
 }
-
-.visual-ring {
-  position: absolute;
-  left: 50%;
-  top: 49%;
-  border-radius: 50%;
-  transform: translate(-50%,-50%);
-  border: 1px solid rgba(125,211,252,.15);
+.core-main{
+  padding:29px;
+  background:rgba(2,6,23,.45);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:22px;
 }
-
-.visual-ring.r1 {
-  width: 350px;
-  height: 350px;
+.core-symbol{
+  font-family:Manrope,sans-serif;
+  font-size:clamp(56px,7vw,82px);
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.08em;
+  color:#fff;
 }
-
-.visual-ring.r2 {
-  width: 435px;
-  height: 435px;
-  border-color: rgba(244,197,66,.12);
+.core-main h2{
+  font-size:clamp(23px,2.6vw,33px);
+  margin-top:18px;
 }
-
-.visual-core {
-  position: absolute;
-  left: 50%;
-  top: 49%;
-  transform: translate(-50%,-50%);
-  width: 185px;
-  height: 185px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  background:
-    radial-gradient(circle,rgba(244,197,66,.23),rgba(24,167,255,.10) 46%,#06111f 83%);
-  border: 1px solid rgba(244,197,66,.38);
-  box-shadow: 0 0 70px rgba(244,197,66,.12);
+.core-main p{
+  margin-top:13px;
+  font-size:14px;
+  color:var(--soft);
+  line-height:1.75;
 }
-
-.visual-core strong {
-  display: block;
-  font-family: Manrope,sans-serif;
-  font-size: 47px;
-  letter-spacing: -.07em;
-  line-height: 1;
+.core-tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:23px;
 }
-
-.visual-core span {
-  display: block;
-  margin-top: 9px;
-  font-size: 10px;
-  font-weight: 900;
-  color: var(--gold-soft);
-  letter-spacing: .08em;
-}
-
-.orbit-node {
-  position: absolute;
-  min-width: 130px;
-  max-width: 150px;
-  padding: 13px;
-  border: 1px solid rgba(255,255,255,.13);
-  border-radius: 15px;
-  background: rgba(7,21,34,.94);
-  font-size: 12px;
-  font-weight: 900;
-  line-height: 1.3;
-  text-align: center;
-  box-shadow: 0 12px 35px rgba(0,0,0,.2);
-}
-
-.orbit-node:before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  margin: 0 auto 8px;
-  border-radius: 50%;
-  background: var(--blue);
-}
-
-.orbit-node:nth-of-type(even):before {
-  background: var(--gold);
-}
-
-.node1 {left: 8%;top: 19%}
-.node2 {right: 8%;top: 19%}
-.node3 {left: 2%;top: 45%}
-.node4 {right: 2%;top: 45%}
-.node5 {left: 12%;bottom: 12%}
-.node6 {right: 12%;bottom: 12%}
-
-.visual-caption {
-  position: absolute;
-  bottom: 13px;
-  left: 20px;
-  right: 20px;
-  text-align: center;
-  font-size: 12px;
-  color: var(--muted);
+.core-tool{
+  padding:9px 13px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.13);
+  background:rgba(255,255,255,.045);
+  font-size:12px;
+  color:var(--soft);
+  font-weight:750;
 }
 
 /* MISSION */
 
-.mission-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 45px;
-  align-items: center;
+.mission-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
 }
-
-.mission-copy h2 {
-  margin: 16px 0 19px;
+.mission-copy h2{margin:19px 0}
+.mission-copy p+p{margin-top:14px}
+.principles{display:grid;gap:13px}
+.principle{
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:19px;
+  background:var(--glass);
 }
-
-.mission-copy p + p {
-  margin-top: 15px;
+.principle-index{
+  color:var(--gold-soft);
+  font-size:11px;
+  letter-spacing:.1em;
+  font-weight:900;
 }
+.principle h3{font-size:19px;margin-top:8px}
+.principle p{font-size:14px;color:var(--muted);margin-top:6px}
 
-.mission-cards {
-  display: grid;
-  gap: 13px;
+/* COLLABORATION MODEL */
+
+.model-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
 }
-
-.mission-card {
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 17px;
-  align-items: start;
-  padding: 22px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid var(--line);
-  border-radius: 20px;
+.model-card{
+  padding:29px;
+  border-radius:24px;
+  background:var(--glass);
+  border:1px solid var(--line);
 }
-
-.icon-box {
-  width: 51px;
-  height: 51px;
-  display: grid;
-  place-items: center;
-  border-radius: 15px;
-  background: rgba(24,167,255,.09);
-  border: 1px solid rgba(24,167,255,.20);
-  color: var(--blue-soft);
-  font-size: 24px;
-  font-weight: 850;
+.model-card.tih{border-color:rgba(244,197,66,.25)}
+.model-card.emprende{border-color:rgba(24,167,255,.25)}
+.model-label{
+  text-transform:uppercase;
+  font-size:11px;
+  color:var(--muted);
+  font-weight:900;
+  letter-spacing:.09em;
 }
-
-.mission-card:nth-child(even) .icon-box {
-  color: var(--gold-soft);
-  border-color: rgba(244,197,66,.22);
-  background: rgba(244,197,66,.08);
+.model-card h3{font-size:30px;margin-top:14px}
+.model-card p{margin-top:13px;color:var(--soft);font-size:15px}
+.model-result{
+  margin-top:17px;
+  border:1px solid rgba(244,197,66,.20);
+  border-radius:20px;
+  padding:24px;
+  text-align:center;
+  background:rgba(244,197,66,.045);
 }
+.model-result strong{color:var(--gold-soft);font-size:19px}
+.model-result p{color:var(--soft);font-size:14px;margin-top:6px}
 
-.mission-card h3 {
-  font-size: 19px;
-}
+/* CORE + INSTRUMENTS */
 
-.mission-card p {
-  margin-top: 7px;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-/* ECOSYSTEM */
-
-.ecosystem-intro {
-  max-width: 850px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.ecosystem-intro h2 {
-  margin-top: 17px;
-}
-
-.ecosystem-intro p {
-  margin-top: 21px;
-}
-
-.structure-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-top: 43px;
-}
-
-.structure-card {
-  min-height: 250px;
-  padding: 29px;
-  border: 1px solid var(--line);
-  border-radius: 25px;
-  background: var(--glass);
-}
-
-.structure-card.tih {
-  border-color: rgba(244,197,66,.24);
-}
-
-.structure-card.emprende {
-  border-color: rgba(24,167,255,.24);
-}
-
-.structure-card h3 {
-  margin-top: 19px;
-  font-size: 29px;
-}
-
-.structure-card p {
-  margin-top: 14px;
-  font-size: 15px;
-  color: var(--soft);
-}
-
-.structure-label {
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-.structure-result {
-  margin-top: 17px;
-  padding: 25px;
-  text-align: center;
-  border: 1px solid rgba(244,197,66,.22);
-  border-radius: 22px;
+.instrument-feature{
+  padding:32px;
+  border:1px solid rgba(244,197,66,.25);
+  border-radius:26px;
   background:
-    radial-gradient(circle at 50% 0,rgba(244,197,66,.09),transparent 60%),
+    radial-gradient(circle at 95% 0,rgba(244,197,66,.09),transparent 37%),
     rgba(255,255,255,.035);
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:30px;
+  align-items:center;
 }
-
-.structure-result strong {
-  font-size: 20px;
-  color: var(--gold-soft);
+.instrument-feature h3{
+  font-size:clamp(27px,3vw,36px);
+  margin-top:14px;
 }
-
-.structure-result p {
-  margin-top: 8px;
-  color: var(--soft);
-  font-size: 14px;
+.instrument-feature p{max-width:730px;margin-top:13px;color:var(--soft);font-size:15px}
+.instrument-feature .btn{white-space:nowrap}
+.instrument-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:16px;
 }
-
-/* PROGRAMS */
-
-.program-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+.instrument{
+  padding:26px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:var(--glass);
 }
-
-.program-card {
-  position: relative;
-  min-height: 325px;
-  padding: 29px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 25px;
-  background:
-    radial-gradient(circle at 100% 0,rgba(24,167,255,.07),transparent 45%),
-    rgba(255,255,255,.035);
+.instrument .num{
+  font-size:11px;
+  font-weight:900;
+  color:var(--blue-soft);
+  letter-spacing:.09em;
 }
-
-.program-card.featured {
-  border-color: rgba(244,197,66,.31);
-  background:
-    radial-gradient(circle at 100% 0,rgba(244,197,66,.11),transparent 50%),
-    rgba(255,255,255,.045);
-}
-
-.program-icon {
-  display: inline-grid;
-  place-items: center;
-  width: 62px;
-  height: 62px;
-  border-radius: 18px;
-  color: var(--gold-soft);
-  background: rgba(244,197,66,.08);
-  border: 1px solid rgba(244,197,66,.18);
-  font-size: 26px;
-}
-
-.program-number {
-  display: block;
-  margin-top: 20px;
-  color: var(--blue-soft);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: .09em;
-}
-
-.program-card h3 {
-  margin-top: 10px;
-  font-size: 26px;
-}
-
-.program-card p {
-  margin-top: 13px;
-  font-size: 15px;
-  color: var(--soft);
-}
-
-.program-status {
-  display: inline-flex;
-  margin-top: 22px;
-  padding: 7px 11px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.035);
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 850;
-}
-
-/* FEATURE */
-
-.feature-section {
-  background:
-    radial-gradient(circle at 90% 10%,rgba(244,197,66,.09),transparent 35%),
-    var(--navy);
-}
-
-.feature-layout {
-  display: grid;
-  grid-template-columns: 1.08fr .92fr;
-  align-items: center;
-  gap: 55px;
-}
-
-.feature-copy h2 {
-  margin-top: 20px;
-}
-
-.feature-copy .lead {
-  margin-top: 22px;
-}
-
-.feature-points {
-  display: grid;
-  gap: 15px;
-  margin: 27px 0;
-}
-
-.feature-point {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: var(--soft);
-  font-size: 14px;
-}
-
-.check {
-  color: var(--gold);
-  font-size: 19px;
-  font-weight: 900;
-}
-
-.feature-visual {
-  padding: 24px;
-  border: 1px solid rgba(244,197,66,.20);
-  border-radius: 28px;
-  background: rgba(255,255,255,.04);
-}
-
-.feature-top {
-  padding: 29px;
-  text-align: center;
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 50% 20%,rgba(244,197,66,.15),transparent 60%),
-    #071522;
-  border: 1px solid rgba(244,197,66,.16);
-}
-
-.feature-top strong {
-  display: block;
-  font-family: Manrope,sans-serif;
-  font-size: clamp(30px, 3.8vw, 43px);
-  letter-spacing: -.06em;
-}
-
-.feature-top span {
-  color: var(--gold-soft);
-  font-size: 12px;
-  font-weight: 900;
-}
-
-.feature-step {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-top: 11px;
-  padding: 17px;
-  border-radius: 15px;
-  border: 1px solid var(--line);
-  background: rgba(2,6,23,.32);
-}
-
-.feature-step b {
-  display: grid;
-  place-items: center;
-  min-width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: rgba(24,167,255,.12);
-  color: var(--blue-soft);
-  font-size: 12px;
-}
-
-.feature-step span {
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.feature-note {
-  margin-top: 15px;
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-/* BUSINESS */
-
-.opportunity-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 16px;
-}
-
-.opportunity-card {
-  display: flex;
-  flex-direction: column;
-  min-height: 300px;
-  padding: 28px;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: var(--glass);
-  transition: border-color .2s,transform .2s;
-}
-
-.opportunity-card:hover {
-  border-color: rgba(244,197,66,.32);
-  transform: translateY(-3px);
-}
-
-.opportunity-card .icon-box {
-  margin-bottom: 23px;
-}
-
-.opportunity-card h3 {
-  font-size: 22px;
-}
-
-.opportunity-card p {
-  margin-top: 13px;
-  color: var(--soft);
-  font-size: 14px;
-  flex: 1;
-}
-
-.opportunity-card a {
-  display: inline-flex;
-  margin-top: 21px;
-  font-size: 13px;
-  font-weight: 900;
-  color: var(--blue-soft);
+.instrument h3{font-size:21px;margin-top:15px}
+.instrument p{font-size:14px;color:var(--soft);margin-top:11px}
+.instrument small{
+  display:block;
+  color:var(--muted);
+  margin-top:16px;
+  font-size:11px;
+  font-weight:750;
 }
 
 /* PEOPLE */
 
-.people-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.team-grid{
+  display:grid;
+  grid-template-columns:1.12fr .88fr;
+  gap:19px;
+  align-items:stretch;
 }
-
-.person-card {
-  overflow: hidden;
-  border-radius: 25px;
-  border: 1px solid var(--line);
-  background: var(--glass);
+.team-photo-card,
+.team-partner{
+  border-radius:25px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:var(--glass);
 }
-
-.person-top {
-  min-height: 175px;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  padding: 30px;
+.team-photo-wrap{
+  background:#0b1728;
+  min-height:290px;
+}
+.team-photo-wrap img{
+  width:100%;
+  height:auto;
+  max-height:440px;
+  object-fit:contain;
+}
+.team-body{padding:27px}
+.team-body h3{font-size:25px}
+.team-role{display:block;color:var(--gold-soft);font-size:12px;font-weight:800;margin-top:5px}
+.team-body p{margin-top:13px;color:var(--soft);font-size:14px}
+.team-body a{display:inline-flex;margin-top:17px;color:var(--blue-soft);font-size:13px;font-weight:850}
+.team-partner{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:34px;
   background:
-    radial-gradient(circle at 85% 10%,rgba(24,167,255,.14),transparent 55%),
-    rgba(255,255,255,.02);
+    radial-gradient(circle at 100% 0,rgba(24,167,255,.09),transparent 45%),
+    var(--glass);
 }
-
-.person-card:nth-child(2) .person-top {
-  background:
-    radial-gradient(circle at 85% 10%,rgba(244,197,66,.12),transparent 55%),
-    rgba(255,255,255,.02);
+.team-partner-logo{
+  width:100%;
+  max-width:210px;
+  min-height:80px;
+  padding:14px 18px;
+  display:grid;
+  place-items:center;
+  background:#fff;
+  border-radius:14px;
 }
+.team-partner-logo img{max-width:100%;max-height:60px;object-fit:contain}
+.team-partner h3{margin-top:23px;font-size:26px}
+.team-partner p{margin-top:14px;color:var(--soft);font-size:14px}
+.team-partner a{display:inline-flex;margin-top:22px;color:var(--blue-soft);font-weight:850;font-size:13px}
 
-.person-photo,
-.person-placeholder {
-  flex: 0 0 auto;
-  width: 105px;
-  height: 105px;
-  border-radius: 25px;
-  object-fit: cover;
-  object-position: center top;
-  border: 2px solid rgba(255,255,255,.17);
-  background: #12263a;
+/* OPPORTUNITY */
+
+.opportunities{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
 }
-
-.person-placeholder {
-  display: grid;
-  place-items: center;
-  font-size: 29px;
-  font-weight: 900;
-  color: var(--gold-soft);
+.opportunity{
+  padding:28px;
+  min-height:255px;
+  border:1px solid var(--line);
+  border-radius:23px;
+  background:var(--glass);
+  display:flex;
+  flex-direction:column;
 }
-
-.person-top h3 {
-  font-size: 24px;
+.opportunity-label{
+  color:var(--gold-soft);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
 }
-
-.person-top span {
-  display: block;
-  margin-top: 7px;
-  font-size: 12px;
-  color: var(--gold-soft);
-  font-weight: 800;
-}
-
-.person-body {
-  padding: 25px 29px 29px;
-}
-
-.person-body p {
-  color: var(--soft);
-  font-size: 14px;
-  line-height: 1.75;
-}
-
-.person-body a {
-  display: inline-flex;
-  margin-top: 18px;
-  color: var(--blue-soft);
-  font-size: 13px;
-  font-weight: 900;
-}
-
-/* ROADMAP */
-
-.roadmap {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  gap: 15px;
-}
-
-.roadmap-item {
-  display: grid;
-  grid-template-columns: 135px 1fr;
-  gap: 25px;
-  padding: 24px;
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  background: var(--glass);
-}
-
-.roadmap-period {
-  color: var(--gold-soft);
-  font-weight: 900;
-  font-size: 13px;
-}
-
-.roadmap-item h3 {
-  font-size: 19px;
-}
-
-.roadmap-item p {
-  margin-top: 8px;
-  color: var(--soft);
-  font-size: 14px;
-}
+.opportunity h3{font-size:21px;margin-top:19px}
+.opportunity p{margin-top:12px;font-size:14px;color:var(--soft);flex:1}
+.opportunity a{color:var(--blue-soft);font-size:13px;font-weight:850;margin-top:19px}
 
 /* MADRID */
 
-.madrid-banner {
-  padding: 41px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 25px;
-  align-items: center;
-  border: 1px solid rgba(244,197,66,.25);
-  border-radius: 28px;
+.madrid-banner{
+  padding:35px;
   background:
-    radial-gradient(circle at 100% 0,rgba(244,197,66,.13),transparent 40%),
-    rgba(255,255,255,.045);
+    radial-gradient(circle at 100% 0,rgba(244,197,66,.09),transparent 40%),
+    rgba(255,255,255,.035);
+  border-radius:25px;
+  border:1px solid rgba(244,197,66,.23);
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:30px;
 }
+.madrid-banner h2{font-size:clamp(26px,3.2vw,37px);margin-top:13px}
+.madrid-banner p{font-size:14px;color:var(--soft);margin-top:12px;max-width:760px}
 
-.madrid-banner h2 {
-  margin-top: 13px;
-  font-size: clamp(27px,3.2vw,39px);
-}
+/* FORM */
 
-.madrid-banner p {
-  margin-top: 13px;
-  max-width: 770px;
-  color: var(--soft);
-  font-size: 14px;
-}
-
-/* CONTACT */
-
-.contact {
+.contact{
   background:
-    radial-gradient(circle at 5% 8%,rgba(24,167,255,.10),transparent 33%),
-    radial-gradient(circle at 90% 20%,rgba(244,197,66,.08),transparent 30%),
+    radial-gradient(circle at 12% 12%,rgba(24,167,255,.08),transparent 32%),
     var(--deep2);
 }
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 55px;
-  align-items: start;
+.contact-grid{
+  display:grid;
+  grid-template-columns:.84fr 1.16fr;
+  gap:55px;
+  align-items:start;
 }
-
-.contact-copy {
-  position: sticky;
-  top: 112px;
+.contact-copy h2{margin-top:19px}
+.contact-copy p{margin-top:21px}
+.contact-notes{display:grid;gap:14px;margin-top:28px}
+.contact-note{display:flex;gap:10px;color:var(--soft);font-size:14px}
+.contact-note b{color:var(--gold)}
+form{
+  padding:29px;
+  border-radius:26px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.12);
 }
-
-.contact-copy h2 {
-  margin-top: 18px;
-}
-
-.contact-copy p {
-  margin-top: 20px;
-}
-
-.contact-benefits {
-  display: grid;
-  gap: 16px;
-  margin-top: 30px;
-}
-
-.contact-benefit {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  font-size: 14px;
-  color: var(--soft);
-}
-
-.contact-benefit b {
-  color: var(--gold);
-}
-
-.contact-form {
-  padding: 30px;
-  background: rgba(255,255,255,.048);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 28px;
-  box-shadow: var(--shadow);
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 17px;
-}
-
-.field {
-  display: grid;
-  gap: 8px;
-}
-
-.field.full {
-  grid-column: 1 / -1;
-}
-
-.field label {
-  font-size: 12px;
-  font-weight: 850;
-  color: var(--soft);
-}
-
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:grid;gap:7px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;font-weight:850;color:var(--soft)}
 .field input,
-.field select,
-.field textarea {
-  width: 100%;
-  min-width: 0;
-  padding: 14px 15px;
-  background: #071522;
-  color: var(--white);
-  border: 1px solid rgba(255,255,255,.19);
-  border-radius: 13px;
-  outline: none;
-  font-size: 14px;
-  line-height: 1.45;
+.field textarea,
+.field select{
+  width:100%;
+  min-width:0;
+  padding:13px 14px;
+  background:#071522;
+  color:var(--text);
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:12px;
+  font-size:14px;
+  line-height:1.5;
 }
-
 .field input:focus,
-.field select:focus,
-.field textarea:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(244,197,66,.14);
+.field textarea:focus,
+.field select:focus{
+  outline:2px solid var(--gold);
+  outline-offset:1px;
 }
-
-.field textarea {
-  min-height: 125px;
-  resize: vertical;
-}
-
-.field select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23cbd5e1' stroke-width='2' d='m5 7 5 5 5-5'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: 17px;
-  background-position: right 13px center;
-  padding-right: 40px;
-}
-
-.field option {
-  background: #071522;
-  color: #ffffff;
-}
-
-::placeholder {
-  color: #8192a5;
-  opacity: 1;
-}
-
-.form-privacy {
-  display: flex;
-  gap: 11px;
-  align-items: flex-start;
-  margin-top: 22px;
-}
-
-.form-privacy input {
-  margin-top: 5px;
-  accent-color: var(--gold);
-}
-
-.form-privacy label {
-  font-size: 12px;
-  color: var(--soft);
-  line-height: 1.65;
-}
-
-.form-privacy a,
-.form-note a {
-  color: var(--blue-soft);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.form-note {
-  margin: 16px 0 20px;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.6;
-}
-
-.form-status {
-  margin-top: 14px;
-  font-size: 13px;
-  font-weight: 750;
-}
-
-.form-status.success {
-  color: #86efac;
-}
-
-.form-status.error {
-  color: #ffb4b4;
-}
-
-.honeypot {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  pointer-events: none;
+.field textarea{min-height:115px;resize:vertical}
+.field option{background:#071522;color:#fff}
+input::placeholder,textarea::placeholder{color:#94a3b8;opacity:1}
+.privacy-check{display:flex;gap:11px;align-items:flex-start;margin-top:21px}
+.privacy-check input{margin-top:5px;accent-color:var(--gold)}
+.privacy-check label{font-size:12px;color:var(--soft)}
+.privacy-check a{color:var(--blue-soft);text-decoration:underline}
+.form-note{font-size:11px;color:var(--muted);margin:15px 0 18px}
+.form-status{margin-top:13px;font-size:13px;font-weight:750}
+.form-status.success{color:#86efac}
+.form-status.error{color:#ffb4b4}
+.hp{
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip-path:inset(50%);
+  pointer-events:none;
 }
 
 /* FAQ */
 
-.faq {
-  max-width: 900px;
-  margin: 0 auto;
+.faq{max-width:850px;margin:auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item summary{
+  padding:21px 0;
+  font-weight:800;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  list-style:none;
 }
-
-.faq-item {
-  border-bottom: 1px solid var(--line);
-}
-
-.faq-item summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  padding: 23px 0;
-  list-style: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 850;
-}
-
-.faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item summary:after {
-  content: "+";
-  color: var(--gold);
-  font-size: 23px;
-  font-weight: 500;
-  flex-shrink: 0;
-}
-
-.faq-item[open] summary:after {
-  content: "−";
-}
-
-.faq-answer {
-  padding: 0 40px 23px 0;
-  color: var(--soft);
-  font-size: 14px;
-  line-height: 1.75;
-}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{content:"+";color:var(--gold);font-size:23px;font-weight:500}
+.faq-item[open] summary:after{content:"−"}
+.faq-answer{padding:0 35px 22px 0;color:var(--soft);font-size:14px}
 
 /* FINAL */
 
-.final-section {
-  position: relative;
-  overflow: hidden;
-  padding: 105px 0;
-  text-align: center;
+.final{
+  text-align:center;
+  padding:94px 0;
   background:
-    radial-gradient(circle at 50% 35%,rgba(244,197,66,.11),transparent 32%),
-    linear-gradient(180deg,#071522,#020617);
+    radial-gradient(circle at 50% 15%,rgba(244,197,66,.10),transparent 34%),
+    var(--navy);
 }
-
-.final-section h2 {
-  max-width: 940px;
-  margin: 19px auto 0;
-}
-
-.final-section p {
-  max-width: 710px;
-  margin: 21px auto 27px;
-  color: var(--soft);
-}
+.final h2{max-width:860px;margin:18px auto 0}
+.final p{max-width:660px;margin:20px auto 25px;color:var(--soft)}
 
 /* FOOTER */
 
-.footer {
-  padding: 38px 0 80px;
-  border-top: 1px solid var(--line);
-  background: #01040d;
+footer{
+  padding:34px 0 85px;
+  background:#01040d;
+  border-top:1px solid var(--line);
 }
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 30px;
+.footer-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:30px;
 }
-
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+.footer-title{font-weight:900;font-size:17px}
+.footer-copy{margin-top:12px;max-width:570px;font-size:13px;color:var(--muted)}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end;align-content:start}
+.footer-links a{font-size:12px;color:var(--soft)}
+.footer-links a:hover{color:var(--gold-soft)}
+.footer-bottom{
+  margin-top:28px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:12px;
 }
+.mobile-cta{display:none}
 
-.footer-brand strong {
-  font-size: 17px;
+/* ANIMATIONS - PROGRESSIVE ENHANCEMENT */
+
+.reveal{
+  transition:opacity .45s ease,transform .45s ease;
 }
-
-.footer-logo {
-  width: 49px;
-  height: 49px;
-  border-radius: 13px;
-  background: linear-gradient(135deg,var(--gold),var(--blue));
-  color: var(--deep);
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-}
-
-.footer-description {
-  margin-top: 15px;
-  max-width: 530px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-content: flex-start;
-  gap: 12px 19px;
-}
-
-.footer-links a {
-  font-size: 12px;
-  color: var(--soft);
-}
-
-.footer-links a:hover {
-  color: var(--gold-soft);
-}
-
-.footer-bottom {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  font-size: 12px;
-  color: var(--muted2);
-}
-
-.mobile-cta {
-  display: none;
-}
-
-/* REVEAL - PROGRESSIVE ENHANCEMENT */
-
-.js .reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity .55s ease,transform .55s ease;
-}
-
-.js .reveal.visible {
-  opacity: 1;
-  transform: none;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1050px) {
-  .hero-grid,
-  .mission-grid,
-  .feature-layout,
-  .contact-grid {
-    grid-template-columns: 1fr;
+@media(prefers-reduced-motion:no-preference){
+  .reveal.pending{
+    opacity:0;
+    transform:translateY(12px);
   }
-
-  .hero-grid {
-    gap: 42px;
-  }
-
-  .ecosystem-visual {
-    max-width: 710px;
-    width: 100%;
-    margin: auto;
-  }
-
-  .opportunity-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .contact-copy {
-    position: static;
-  }
-
-  .nav-links {
-    gap: 14px;
+  .reveal.pending.visible{
+    opacity:1;
+    transform:none;
   }
 }
 
-@media(max-width:760px) {
-  .wrap {
-    padding: 0 16px;
-  }
+/* TABLET */
 
-  .section {
-    padding: 65px 0;
-  }
-
-  .section-heading {
-    margin-bottom: 32px;
-  }
-
-  .site-header,
-  .nav {
-    min-height: 66px;
-  }
-
-  .brand-icon {
-    width: 38px;
-    height: 38px;
-    font-size: 16px;
-  }
-
-  .brand-title {
-    font-size: 14px;
-  }
-
-  .brand-sub {
-    font-size: 9px;
-  }
-
-  .nav-links > a:not(.btn) {
-    display: none;
-  }
-
-  .nav-links .btn {
-    min-height: 39px;
-    padding: 10px 12px;
-    font-size: 11px;
-  }
-
-  .hero {
-    padding: 68px 0 67px;
-  }
-
-  h1 {
-    font-size: clamp(40px,12vw,59px);
-  }
-
-  .hero-actions {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-  }
-
-  .ecosystem-visual {
-    min-height: 445px;
-    border-radius: 23px;
-  }
-
-  .visual-ring.r1 {
-    width: 265px;
-    height: 265px;
-  }
-
-  .visual-ring.r2 {
-    width: 345px;
-    height: 345px;
-  }
-
-  .visual-core {
-    width: 135px;
-    height: 135px;
-  }
-
-  .visual-core strong {
-    font-size: 35px;
-  }
-
-  .visual-core span {
-    font-size: 8px;
-  }
-
-  .orbit-node {
-    min-width: 96px;
-    max-width: 112px;
-    padding: 10px 7px;
-    font-size: 10px;
-  }
-
-  .node1 {left:3%;top:18%}
-  .node2 {right:3%;top:18%}
-  .node3 {left:1%;top:44%}
-  .node4 {right:1%;top:44%}
-  .node5 {left:8%;bottom:12%}
-  .node6 {right:8%;bottom:12%}
-
-  .mission-grid,
-  .structure-grid,
-  .program-grid,
-  .people-grid,
-  .opportunity-grid,
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .program-card {
-    min-height: auto;
-  }
-
-  .structure-card {
-    min-height: auto;
-  }
-
-  .madrid-banner {
-    grid-template-columns: 1fr;
-    padding: 27px;
-  }
-
-  .madrid-banner .btn {
-    width: 100%;
-  }
-
-  .roadmap-item {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .person-top {
-    padding: 24px;
-  }
-
-  .person-photo,
-  .person-placeholder {
-    width: 88px;
-    height: 88px;
-  }
-
-  .person-top h3 {
-    font-size: 20px;
-  }
-
-  .contact-form {
-    padding: 22px;
-  }
-
-  .field.full {
-    grid-column: auto;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-links {
-    justify-content: flex-start;
-  }
-
-  .mobile-cta {
-    display: block;
-    position: fixed;
-    left: 12px;
-    right: 12px;
-    bottom: max(12px,env(safe-area-inset-bottom));
-    z-index: 101;
-  }
-
-  .mobile-cta .btn {
-    width: 100%;
-    box-shadow: 0 12px 38px rgba(0,0,0,.55);
-  }
-
-  .footer {
-    padding-bottom: 110px;
-  }
-
-  .final-section {
-    padding: 72px 0;
-  }
+@media(max-width:1020px){
+  .hero-grid,.mission-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-grid{gap:40px}
+  .core-panel{max-width:700px;width:100%;margin:auto}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .nav-right>a:not(.btn){display:none}
+  .instrument-feature{grid-template-columns:1fr}
+  .instrument-feature .btn{justify-self:start}
 }
 
-@media(max-width:380px) {
-  .brand-title {
-    font-size: 12px;
-  }
+/* MOBILE */
 
-  .brand-sub {
-    font-size: 8px;
+@media(max-width:760px){
+  .wrap{padding:0 16px}
+  .section{padding:65px 0}
+  header .nav{min-height:66px}
+  .brand-mark{width:37px;height:37px;font-size:15px}
+  .brand-title{font-size:14px}
+  .brand-sub{font-size:9px}
+  .nav-right .btn{font-size:11px;padding:10px 13px;min-height:39px}
+  .hero{padding:70px 0 65px}
+  h1{font-size:clamp(39px,11.3vw,59px)}
+  .hero-actions{display:grid;grid-template-columns:1fr}
+  .hero-actions .btn{width:100%}
+  .core-panel{min-height:auto;padding:18px;gap:21px}
+  .core-main{padding:22px}
+  .core-symbol{font-size:63px}
+  .core-main h2{font-size:26px}
+  .core-main p{font-size:14px}
+  .model-grid,.instrument-grid,.team-grid,.opportunities,.form-grid{grid-template-columns:1fr}
+  .instrument-feature{padding:25px}
+  .instrument-feature .btn{width:100%}
+  .instrument{padding:23px}
+  .team-photo-wrap{min-height:0}
+  .team-partner{padding:27px}
+  .madrid-banner{grid-template-columns:1fr;padding:26px}
+  .madrid-banner .btn{width:100%}
+  form{padding:21px}
+  .field.full{grid-column:auto}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-links{justify-content:flex-start}
+  .mobile-cta{
+    display:block;
+    position:fixed;
+    bottom:max(11px,env(safe-area-inset-bottom));
+    left:11px;
+    right:11px;
+    z-index:110;
   }
-
-  .nav-links .btn {
-    padding: 9px;
-    font-size: 10px;
-  }
-
-  .ecosystem-visual {
-    min-height: 408px;
-  }
-
-  .visual-core {
-    width: 115px;
-    height: 115px;
-  }
-
-  .visual-core strong {
-    font-size: 29px;
-  }
-
-  .orbit-node {
-    min-width: 85px;
-    max-width: 91px;
-    font-size: 9px;
-    padding: 8px 5px;
-  }
+  .mobile-cta .btn{width:100%;box-shadow:0 14px 45px rgba(0,0,0,.55)}
+  footer{padding-bottom:110px}
+  .final{padding:78px 0}
 }
 
-@media(prefers-reduced-motion:reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+@media(max-width:380px){
+  .brand-title{font-size:12px}
+  .brand-sub{font-size:8px}
+  .nav-right .btn{font-size:10px;padding:9px}
+}
 
-  *, *:before, *:after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
-
-  .js .reveal {
-    opacity: 1;
-    transform: none;
-  }
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{transition:none!important;animation:none!important}
+  .reveal.pending{opacity:1;transform:none}
 }
 </style>
 </head>
 
 <body>
 
-<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<a href="#contenido" class="skip">Saltar al contenido</a>
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<!-- HEADER -->
 
-<header class="site-header">
-  <nav class="nav wrap" aria-label="Navegación principal">
-
-    <a class="brand" href="https://emprende360.club/" aria-label="Volver a Emprende360">
-      <span class="brand-icon" aria-hidden="true">TIH</span>
+<header>
+  <nav class="wrap nav" aria-label="Navegación principal">
+    <a href="https://emprende360.club/" class="brand" aria-label="Volver a Emprende360">
+      <span class="brand-mark" aria-hidden="true">TIH</span>
       <span>
         <span class="brand-title">TIH × Emprende360</span>
         <span class="brand-sub">Innovación con impacto</span>
       </span>
     </a>
 
-    <div class="nav-links">
-      <a href="#ecosistema">Ecosistema</a>
-      <a href="#iniciativas">Iniciativas</a>
-      <a href="#alianzas">Colaboraciones</a>
-      <a class="btn btn-primary" href="#colaborar">Colaborar ↗</a>
+    <div class="nav-right">
+      <a href="#core">El core</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#alianzas">Colaboración</a>
+      <a href="#contacto" class="btn btn-primary">Colaborar ↗</a>
     </div>
-
   </nav>
 </header>
 
 <main id="contenido">
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero" aria-labelledby="hero-title">
-  <div class="grid-bg"></div>
-
   <div class="wrap hero-grid">
 
-    <div class="hero-copy reveal">
-
-      <span class="kicker">
-        Tecnología · Talento · Impacto social
-      </span>
+    <div class="reveal">
+      <span class="kicker">TIH × Emprende360</span>
 
       <h1 id="hero-title">
-        <span>EL TALENTO</span>
-        <span>NO DEBERÍA</span>
-        <span class="gold-text">ENCONTRAR</span>
-        <span class="blue-text">BARRERAS.</span>
+        <span>TALENTO.</span>
+        <span>TECNOLOGÍA.</span>
+        <span class="gold">INNOVACIÓN</span>
+        <span class="blue">CON PROPÓSITO.</span>
       </h1>
 
       <p class="lead">
-        Conectamos tecnología, accesibilidad, talento y empresa
-        para impulsar proyectos que abren nuevas oportunidades
-        de participación, desarrollo y crecimiento.
+        Construimos nuevas oportunidades a través
+        de la innovación inclusiva, la accesibilidad
+        y la colaboración entre personas, tecnología
+        y empresas.
       </p>
 
       <div class="hero-actions">
-        <a href="#colaborar" class="btn btn-primary">
+        <a class="btn btn-primary" href="#contacto">
           Explorar una colaboración →
         </a>
-
-        <a href="#ecosistema" class="btn btn-secondary">
-          Descubrir el ecosistema
+        <a class="btn btn-outline" href="#core">
+          Descubrir TIH
         </a>
       </div>
 
       <div class="hero-meta">
-        <span class="pill pill-gold">TIH × Emprende360</span>
         <span class="pill">Innovación inclusiva</span>
+        <span class="pill">Tecnología</span>
         <span class="pill">Alianzas empresariales</span>
       </div>
 
       <p class="hero-note">
-        Una nueva etapa de colaboración estratégica impulsada
-        por Antonio Berdiel y Emprende360.
+        Una nueva etapa de colaboración estratégica
+        entre TIH y Emprende360.
       </p>
-
     </div>
 
-    <div class="ecosystem-visual reveal" role="img"
-         aria-label="Representación del ecosistema TIH conectando tecnología, accesibilidad, talento, empresas, innovación y comunidad">
+    <aside class="core-panel reveal" aria-label="Núcleo TIH">
+      <span class="core-label">El núcleo del proyecto</span>
 
-      <div class="visual-label" aria-hidden="true">Un ecosistema conectado</div>
+      <div class="core-main">
+        <div class="core-symbol">TIH<span class="gold">.</span></div>
 
-      <div class="visual-ring r1" aria-hidden="true"></div>
-      <div class="visual-ring r2" aria-hidden="true"></div>
+        <h2>
+          Una visión.<br>
+          <span class="gold">Oportunidades reales.</span>
+        </h2>
 
-      <div class="orbit-node node1" aria-hidden="true">TECNOLOGÍA</div>
-      <div class="orbit-node node2" aria-hidden="true">ACCESIBILIDAD</div>
-      <div class="orbit-node node3" aria-hidden="true">TALENTO</div>
-      <div class="orbit-node node4" aria-hidden="true">EMPRESAS</div>
-      <div class="orbit-node node5" aria-hidden="true">INNOVACIÓN</div>
-      <div class="orbit-node node6" aria-hidden="true">COMUNIDAD</div>
-
-      <div class="visual-core" aria-hidden="true">
-        <div>
-          <strong>TIH</strong>
-          <span>IMPACTO REAL</span>
-        </div>
+        <p>
+          Tecnología, accesibilidad y talento conectados
+          con una estructura de colaboración que permita
+          desarrollar soluciones, validarlas y llevarlas
+          a nuevos entornos.
+        </p>
       </div>
 
-      <div class="visual-caption" aria-hidden="true">
-        Diferentes capacidades. Un propósito compartido.
+      <div class="core-tools" aria-label="Instrumentos y líneas de trabajo">
+        <span class="core-tool">Core TIH</span>
+        <span class="core-tool">33eGames</span>
+        <span class="core-tool">ESDISO</span>
+        <span class="core-tool">Accesibilidad</span>
       </div>
-    </div>
+    </aside>
 
   </div>
 </section>
 
-<!-- =====================================================
-     THE CHALLENGE
-===================================================== -->
+<!-- WHY TIH -->
 
-<section class="section section-navy" id="reto">
+<section class="section section-navy" id="proposito">
   <div class="wrap mission-grid">
 
     <div class="mission-copy reveal">
-
-      <span class="kicker">El reto</span>
+      <span class="kicker">Nuestro propósito</span>
 
       <h2>
         El talento está en todas partes.
-        <span class="gold-text">Las oportunidades, no.</span>
+        <span class="gold">Las oportunidades, no.</span>
       </h2>
 
       <p class="body-copy">
-        Muchas personas encuentran barreras en la tecnología,
-        la formación, el empleo y los espacios de participación.
+        Muchas personas siguen encontrando barreras
+        en los entornos digitales, la formación,
+        la tecnología y los espacios de participación.
       </p>
 
       <p class="body-copy">
-        A menudo el problema no está en sus capacidades,
-        sino en cómo se diseñan los entornos, los servicios
-        y las oportunidades.
+        TIH trabaja alrededor de una idea sencilla:
+        crear condiciones que permitan que más personas
+        puedan participar, desarrollar sus capacidades
+        y encontrar nuevas oportunidades.
       </p>
 
       <p class="body-copy">
-        TIH trabaja para desarrollar iniciativas que ayuden
-        a reducir esas barreras, conectando conocimiento,
-        innovación y organizaciones capaces de contribuir
-        a soluciones reales.
+        Queremos transformar esta visión en proyectos
+        concretos, con participación real,
+        colaboración empresarial y resultados medibles.
       </p>
-
     </div>
 
-    <div class="mission-cards">
+    <div class="principles">
 
-      <article class="mission-card reveal">
-        <div class="icon-box" aria-hidden="true">↗</div>
-        <div>
-          <h3>Acceso</h3>
-          <p>
-            Tecnología y experiencias diseñadas para diferentes
-            necesidades de accesibilidad.
-          </p>
-        </div>
+      <article class="principle reveal">
+        <span class="principle-index">01 · PROPÓSITO</span>
+        <h3>Reducir barreras</h3>
+        <p>
+          Pensar la accesibilidad desde el diseño
+          de las experiencias y los entornos.
+        </p>
       </article>
 
-      <article class="mission-card reveal">
-        <div class="icon-box" aria-hidden="true">◎</div>
-        <div>
-          <h3>Participación</h3>
-          <p>
-            Más posibilidades de aprender, competir, colaborar
-            y demostrar capacidades.
-          </p>
-        </div>
+      <article class="principle reveal">
+        <span class="principle-index">02 · INNOVACIÓN</span>
+        <h3>Desarrollar soluciones</h3>
+        <p>
+          Conectar conocimiento, metodología y tecnología
+          con problemas y necesidades reales.
+        </p>
       </article>
 
-      <article class="mission-card reveal">
-        <div class="icon-box" aria-hidden="true">✦</div>
-        <div>
-          <h3>Oportunidades</h3>
-          <p>
-            Proyectos que combinen propósito, ejecución
-            y sostenibilidad económica.
-          </p>
-        </div>
+      <article class="principle reveal">
+        <span class="principle-index">03 · SOSTENIBILIDAD</span>
+        <h3>Crear continuidad</h3>
+        <p>
+          Construir proyectos capaces de mantenerse
+          y evolucionar mediante alianzas y actividad.
+        </p>
       </article>
 
     </div>
@@ -1885,368 +915,135 @@ strong {
   </div>
 </section>
 
-<!-- =====================================================
-     ECOSYSTEM
-===================================================== -->
+<!-- TIH + EMPRENDE360 -->
 
 <section class="section section-dark" id="ecosistema">
   <div class="wrap">
 
-    <div class="ecosystem-intro reveal">
-
+    <div class="section-head reveal">
       <span class="kicker">Una nueva etapa</span>
-
       <h2>
-        Unimos <span class="blue-text">innovación inclusiva</span>
-        y <span class="gold-text">capacidad empresarial.</span>
+        Dos capacidades.
+        <span class="gold">Una dirección compartida.</span>
       </h2>
-
       <p class="lead">
-        TIH reúne iniciativas de tecnología, accesibilidad,
-        talento y participación. Su colaboración estratégica
-        con Emprende360 busca acercar esos proyectos a empresas,
-        especialistas y organizaciones que puedan contribuir
-        a desarrollarlos y hacerlos sostenibles.
+        TIH y Emprende360 están construyendo una colaboración
+        para conectar innovación inclusiva con desarrollo
+        empresarial, relaciones estratégicas y oportunidades.
       </p>
-
     </div>
 
-    <div class="structure-grid">
+    <div class="model-grid">
 
-      <article class="structure-card tih reveal">
-        <span class="structure-label">El origen y la visión</span>
-
+      <article class="model-card tih reveal">
+        <span class="model-label">Visión y desarrollo</span>
         <h3>TIH</h3>
-
         <p>
           Una iniciativa impulsada por Antonio Berdiel
-          que desarrolla propuestas de innovación inclusiva,
-          herramientas, metodologías y programas orientados
-          a crear nuevas posibilidades de participación.
+          y su equipo, con propuestas alrededor
+          de la tecnología, accesibilidad,
+          clasificación funcional, talento
+          e innovación social.
         </p>
       </article>
 
-      <article class="structure-card emprende reveal">
-        <span class="structure-label">Relaciones y crecimiento</span>
-
+      <article class="model-card emprende reveal">
+        <span class="model-label">Relaciones y crecimiento</span>
         <h3>Emprende360</h3>
-
         <p>
-          Un ecosistema de relaciones empresariales y activación B2B
-          que conecta founders, CEOs, profesionales, organizaciones
-          y empresas para abrir conversaciones y oportunidades
-          de colaboración.
+          Un ecosistema de desarrollo y relaciones B2B
+          que conecta empresarios, directivos,
+          profesionales y organizaciones para impulsar
+          colaboraciones y oportunidades empresariales.
         </p>
       </article>
 
     </div>
 
-    <div class="structure-result reveal">
-
-      <strong>Una colaboración para llevar las ideas a la acción.</strong>
-
+    <div class="model-result reveal">
+      <strong>Más capacidad para convertir ideas en proyectos.</strong>
       <p>
-        Conectando proyectos, capacidades, empresas y recursos
-        alrededor de objetivos concretos y resultados verificables.
+        Una colaboración orientada a identificar,
+        desarrollar y conectar iniciativas
+        con las personas y organizaciones adecuadas.
       </p>
-
     </div>
 
   </div>
 </section>
 
-<!-- =====================================================
-     PROGRAMS
-===================================================== -->
+<!-- CORE -->
 
-<section class="section section-navy" id="iniciativas">
+<section class="section section-navy" id="core">
   <div class="wrap">
 
-    <div class="section-heading reveal">
-
-      <span class="kicker">Ámbitos de desarrollo</span>
-
+    <div class="section-head reveal">
+      <span class="kicker">Core TIH</span>
       <h2>
-        Diferentes iniciativas.
-        <span class="gold-text">Una misma dirección.</span>
+        Un núcleo claro.
+        <span class="gold">Instrumentos que amplían sus posibilidades.</span>
       </h2>
-
       <p class="lead">
-        TIH contempla varias líneas de trabajo.
-        Las desarrollaremos por etapas, empezando
-        por las que permitan demostrar resultados
-        y construir alianzas sostenibles.
+        No buscamos lanzar todas las iniciativas a la vez.
+        Partimos de una base de innovación inclusiva
+        y desarrollamos progresivamente los instrumentos
+        que puedan demostrar mayor utilidad e impacto.
       </p>
-
     </div>
 
-    <div class="program-grid">
-
-      <article class="program-card featured reveal">
-
-        <div class="program-icon" aria-hidden="true">01</div>
-        <span class="program-number">INICIATIVA PRIORITARIA</span>
-
-        <h3>Gaming competitivo inclusivo</h3>
-
+    <div class="instrument-feature reveal">
+      <div>
+        <span class="kicker">El núcleo estratégico</span>
+        <h3>Core TIH</h3>
         <p>
-          33eGames y ESDISO: una propuesta para desarrollar
-          experiencias de competición digital más accesibles
-          y estudiar modelos de clasificación funcional
-          adaptados al entorno de los videojuegos.
+          Un marco de trabajo que reúne visión,
+          metodologías, proyectos y colaboraciones
+          alrededor de accesibilidad, participación
+          y desarrollo de oportunidades.
         </p>
-
-        <span class="program-status">
-          Preparación y validación
-        </span>
-
-      </article>
-
-      <article class="program-card reveal">
-
-        <div class="program-icon" aria-hidden="true">02</div>
-        <span class="program-number">TECNOLOGÍA</span>
-
-        <h3>Accesibilidad digital</h3>
-
-        <p>
-          Exploramos herramientas, proyectos y colaboraciones
-          tecnológicas que puedan mejorar la experiencia
-          de las personas y reducir barreras digitales.
-        </p>
-
-        <span class="program-status">
-          Desarrollo mediante colaboraciones
-        </span>
-
-      </article>
-
-      <article class="program-card reveal">
-
-        <div class="program-icon" aria-hidden="true">03</div>
-        <span class="program-number">DESARROLLO HUMANO</span>
-
-        <h3>Talento y formación</h3>
-
-        <p>
-          Programas de aprendizaje, acompañamiento,
-          becas y experiencias que contribuyan
-          a desarrollar capacidades y conectar
-          talento con oportunidades profesionales.
-        </p>
-
-        <span class="program-status">
-          Iniciativas en evaluación
-        </span>
-
-      </article>
-
-      <article class="program-card reveal">
-
-        <div class="program-icon" aria-hidden="true">04</div>
-        <span class="program-number">SOSTENIBILIDAD</span>
-
-        <h3>Empresa e impacto</h3>
-
-        <p>
-          Patrocinios, alianzas corporativas,
-          innovación colaborativa y modelos
-          que permitan movilizar recursos
-          para desarrollar proyectos de impacto.
-        </p>
-
-        <span class="program-status">
-          Activación de relaciones empresariales
-        </span>
-
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- =====================================================
-     FLAGSHIP PROJECT
-===================================================== -->
-
-<section class="section feature-section" id="33egames">
-  <div class="wrap feature-layout">
-
-    <div class="feature-copy reveal">
-
-      <span class="kicker">
-        Primera iniciativa destacada
-      </span>
-
-      <h2>
-        Estamos trabajando para
-        <span class="gold-text">cambiar las reglas</span>
-        de la competición digital.
-      </h2>
-
-      <p class="lead">
-        33eGames y ESDISO forman parte de una propuesta
-        que combina clasificación funcional,
-        diseño de competiciones y herramientas
-        para avanzar hacia experiencias digitales
-        más accesibles, inclusivas y justas.
-      </p>
-
-      <div class="feature-points">
-
-        <div class="feature-point">
-          <span class="check" aria-hidden="true">✓</span>
-          <span>
-            Desarrollar y revisar la metodología
-            con especialistas independientes.
-          </span>
-        </div>
-
-        <div class="feature-point">
-          <span class="check" aria-hidden="true">✓</span>
-          <span>
-            Diseñar experiencias adaptadas
-            a diferentes necesidades de participación.
-          </span>
-        </div>
-
-        <div class="feature-point">
-          <span class="check" aria-hidden="true">✓</span>
-          <span>
-            Contrastar la propuesta mediante pilotos
-            y resultados medibles.
-          </span>
-        </div>
-
       </div>
 
-      <a href="#colaborar" class="btn btn-primary">
-        Participar en el desarrollo →
+      <a href="#contacto" class="btn btn-primary">
+        Conectar con TIH →
       </a>
-
     </div>
 
-    <div class="feature-visual reveal">
+    <div class="instrument-grid">
 
-      <div class="feature-top">
-        <strong>33eGames</strong>
-        <span>COMPETIR SIN BARRERAS</span>
-      </div>
-
-      <div class="feature-step">
-        <b>01</b>
-        <span>ESDISO · Metodología de clasificación</span>
-      </div>
-
-      <div class="feature-step">
-        <b>02</b>
-        <span>Experiencias competitivas accesibles</span>
-      </div>
-
-      <div class="feature-step">
-        <b>03</b>
-        <span>Pilotos y participación de usuarios</span>
-      </div>
-
-      <div class="feature-step">
-        <b>04</b>
-        <span>Evaluación y mejora continua</span>
-      </div>
-
-      <p class="feature-note">
-        Modelo en fase de desarrollo y validación.
-        No se presenta como una clasificación
-        científicamente validada o reconocida oficialmente.
-      </p>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- =====================================================
-     BUSINESS OPPORTUNITIES
-===================================================== -->
-
-<section class="section section-dark" id="alianzas">
-  <div class="wrap">
-
-    <div class="section-heading reveal">
-
-      <span class="kicker">Colaboraciones empresariales</span>
-
-      <h2>
-        La inclusión necesita aliados.
-        <span class="gold-text">Las empresas pueden ser parte de la solución.</span>
-      </h2>
-
-      <p class="lead">
-        Buscamos organizaciones que quieran aportar
-        tecnología, conocimiento, recursos, experiencia
-        o capacidad de ejecución para desarrollar
-        proyectos con objetivos concretos.
-      </p>
-
-    </div>
-
-    <div class="opportunity-grid">
-
-      <article class="opportunity-card reveal">
-
-        <div class="icon-box" aria-hidden="true">↗</div>
-
-        <h3>Partner corporativo</h3>
-
+      <article class="instrument reveal">
+        <span class="num">01 · PLATAFORMA</span>
+        <h3>33eGames</h3>
         <p>
-          Participa en programas, iniciativas
-          o pilotos de innovación inclusiva
-          con compromisos y resultados
-          definidos conjuntamente.
+          Una propuesta para desarrollar competiciones
+          digitales más inclusivas y accesibles,
+          con formatos que contemplen diferentes
+          necesidades de participación.
         </p>
-
-        <a href="#colaborar">
-          Explorar colaboración ↗
-        </a>
-
+        <small>Desarrollo y validación progresiva</small>
       </article>
 
-      <article class="opportunity-card reveal">
-
-        <div class="icon-box" aria-hidden="true">✦</div>
-
-        <h3>Partner tecnológico</h3>
-
+      <article class="instrument reveal">
+        <span class="num">02 · METODOLOGÍA</span>
+        <h3>ESDISO</h3>
         <p>
-          Aporta tecnología, metodología,
-          investigación, especialistas o
-          conocimiento para desarrollar
-          y evaluar nuevas soluciones.
+          Una propuesta de clasificación funcional
+          aplicada al entorno competitivo digital,
+          destinada a evolucionar mediante pruebas,
+          revisión especializada y validación.
         </p>
-
-        <a href="#colaborar">
-          Explorar colaboración ↗
-        </a>
-
+        <small>Metodología en desarrollo</small>
       </article>
 
-      <article class="opportunity-card reveal">
-
-        <div class="icon-box" aria-hidden="true">◎</div>
-
-        <h3>Financiación y desarrollo</h3>
-
+      <article class="instrument reveal">
+        <span class="num">03 · COLABORACIÓN</span>
+        <h3>Accesibilidad y alianzas</h3>
         <p>
-          Explora oportunidades de financiación,
-          patrocinio o inversión en proyectos
-          concretos, según su fase y
-          estructura jurídica.
+          Herramientas, especialistas y entidades
+          que puedan contribuir al desarrollo
+          de soluciones y proyectos
+          relacionados con inclusión y tecnología.
         </p>
-
-        <a href="#colaborar">
-          Abrir conversación ↗
-        </a>
-
+        <small>Colaboraciones según proyecto</small>
       </article>
 
     </div>
@@ -2254,198 +1051,154 @@ strong {
   </div>
 </section>
 
-<!-- =====================================================
-     PEOPLE
-===================================================== -->
+<!-- TEAM -->
 
-<section class="section section-navy" id="equipo">
+<section class="section section-dark" id="equipo">
   <div class="wrap">
 
-    <div class="section-heading reveal">
-
+    <div class="section-head reveal">
       <span class="kicker">Las personas detrás</span>
-
       <h2>
-        Dos trayectorias diferentes.
-        <span class="gold-text">Un propósito compartido.</span>
+        Una visión impulsada por personas.
+        <span class="gold">Y abierta a nuevas capacidades.</span>
       </h2>
-
       <p class="lead">
-        La visión social y tecnológica necesita
-        capacidad de ejecución, relaciones empresariales
-        y equipos que conviertan las ideas en proyectos reales.
+        TIH cuenta con Antonio Berdiel y Wulfran
+        en su núcleo impulsor, y está desarrollando
+        una nueva etapa de colaboración estratégica
+        con Emprende360.
       </p>
-
     </div>
 
-    <div class="people-grid">
+    <div class="team-grid">
 
-      <article class="person-card reveal">
+      <article class="team-photo-card reveal">
 
-        <div class="person-top">
-
+        <div class="team-photo-wrap">
           <img
-            class="person-photo"
-            src="https://emprende360.club/antonio-berdiel.jpg"
-            alt="Fotografía de Antonio Berdiel"
+            src="https://emprende360.club/antonioywulfran.jpeg"
+            alt="Antonio Berdiel y Wulfran, integrantes del núcleo de TIH"
             loading="lazy"
-            width="105"
-            height="105"
-          >
-
-          <div>
-            <h3>Antonio Berdiel</h3>
-            <span>Fundador e impulsor de TIH</span>
-          </div>
-
+            decoding="async">
         </div>
 
-        <div class="person-body">
+        <div class="team-body">
+          <h3>Antonio Berdiel y Wulfran</h3>
+          <span class="team-role">Núcleo impulsor de TIH</span>
 
           <p>
-            Impulsa la visión y el desarrollo
-            de las iniciativas de TIH,
-            trabajando en proyectos de tecnología,
-            accesibilidad e innovación inclusiva.
+            Trabajan en el desarrollo de la visión
+            y las iniciativas de TIH,
+            alrededor de tecnología, accesibilidad
+            e innovación inclusiva.
           </p>
 
           <a href="https://www.linkedin.com/in/berdiel0ne/"
              target="_blank"
              rel="noopener noreferrer">
-            Perfil profesional ↗
+            Conocer a Antonio Berdiel ↗
           </a>
-
         </div>
 
       </article>
 
-      <article class="person-card reveal">
+      <article class="team-partner reveal">
 
-        <div class="person-top">
-
-          <div class="person-placeholder" aria-hidden="true">AP</div>
-
-          <div>
-            <h3>Alberto Porras</h3>
-            <span>Fundador de Emprende360</span>
-          </div>
-
+        <div class="team-partner-logo">
+          <img
+            src="https://emprende360.club/emprende360.png"
+            alt="Logotipo oficial de Emprende360"
+            loading="lazy"
+            decoding="async">
         </div>
 
-        <div class="person-body">
+        <h3>Emprende360</h3>
 
-          <p>
-            Aporta experiencia en desarrollo empresarial,
-            relaciones B2B, alianzas, posicionamiento
-            y conexión de proyectos con empresas
-            y oportunidades de crecimiento.
-          </p>
+        <span class="team-role">
+          Desarrollo estratégico y empresarial
+        </span>
 
-          <a href="https://emprende360.club/"
-             target="_blank"
-             rel="noopener noreferrer">
-            Conocer Emprende360 ↗
-          </a>
+        <p>
+          Fundado por Alberto Porras,
+          Emprende360 aporta capacidad de activación B2B,
+          relaciones empresariales, posicionamiento
+          y desarrollo de alianzas.
+        </p>
 
-        </div>
+        <p>
+          La colaboración con TIH busca conectar
+          sus iniciativas con empresas, profesionales
+          y organizaciones capaces de ayudar
+          a desarrollarlas y hacerlas crecer.
+        </p>
+
+        <a href="https://emprende360.club/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Conocer Emprende360 ↗
+        </a>
 
       </article>
 
     </div>
 
-    <p class="body-copy center" style="margin-top:25px">
-      El ecosistema podrá incorporar colaboradores
-      y especialistas adicionales conforme
-      se formalicen sus funciones y responsabilidades.
-    </p>
-
   </div>
 </section>
 
-<!-- =====================================================
-     ROADMAP
-===================================================== -->
+<!-- OPPORTUNITIES -->
 
-<section class="section section-dark" id="hoja-de-ruta">
+<section class="section section-navy" id="alianzas">
   <div class="wrap">
 
-    <div class="section-heading reveal">
-
-      <span class="kicker">Nuestra hoja de ruta</span>
+    <div class="section-head reveal">
+      <span class="kicker">Oportunidades de colaboración</span>
 
       <h2>
-        Una visión a largo plazo.
-        <span class="gold-text">Pasos concretos desde hoy.</span>
+        Los proyectos avanzan cuando
+        <span class="gold">las capacidades se conectan.</span>
       </h2>
 
       <p class="lead">
-        Queremos crecer de manera sostenible:
-        ordenar, validar, demostrar resultados
-        y ampliar únicamente aquello que funcione.
+        Buscamos empresas y organizaciones
+        que quieran explorar colaboraciones
+        con objetivos concretos.
+        No todo consiste en aportar financiación.
       </p>
-
     </div>
 
-    <div class="roadmap">
+    <div class="opportunities">
 
-      <article class="roadmap-item reveal">
-
-        <div class="roadmap-period">OCTUBRE 2026</div>
-
-        <div>
-          <h3>Organización y primeras bases</h3>
-          <p>
-            Definición de responsabilidades, acuerdos,
-            estructura operativa y preparación
-            de las primeras propuestas empresariales.
-          </p>
-        </div>
-
+      <article class="opportunity reveal">
+        <span class="opportunity-label">Empresas</span>
+        <h3>Alianzas corporativas</h3>
+        <p>
+          Participar en el desarrollo de proyectos,
+          experiencias o programas de innovación
+          inclusiva con compromisos definidos.
+        </p>
+        <a href="#contacto">Explorar colaboración ↗</a>
       </article>
 
-      <article class="roadmap-item reveal">
-
-        <div class="roadmap-period">NOVIEMBRE 2026</div>
-
-        <div>
-          <h3>Presentación y relaciones empresariales</h3>
-          <p>
-            Presentación de la colaboración en Madrid
-            y apertura de conversaciones con empresas,
-            colaboradores y posibles financiadores.
-          </p>
-        </div>
-
+      <article class="opportunity reveal">
+        <span class="opportunity-label">Conocimiento</span>
+        <h3>Tecnología y especialistas</h3>
+        <p>
+          Aportar soluciones, experiencia,
+          capacidades técnicas o conocimiento
+          para desarrollar y validar iniciativas.
+        </p>
+        <a href="#contacto">Explorar colaboración ↗</a>
       </article>
 
-      <article class="roadmap-item reveal">
-
-        <div class="roadmap-period">2027 · PRIMERA ETAPA</div>
-
-        <div>
-          <h3>Pilotos, aprendizaje y validación</h3>
-          <p>
-            Desarrollo de experiencias controladas,
-            revisión especializada y recopilación
-            de resultados para mejorar los programas.
-          </p>
-        </div>
-
-      </article>
-
-      <article class="roadmap-item reveal">
-
-        <div class="roadmap-period">SIGUIENTES ETAPAS</div>
-
-        <div>
-          <h3>Replicación y crecimiento</h3>
-          <p>
-            Ampliación de las iniciativas que demuestren
-            viabilidad, impacto y capacidad de
-            mantenerse económicamente.
-          </p>
-        </div>
-
+      <article class="opportunity reveal">
+        <span class="opportunity-label">Crecimiento</span>
+        <h3>Financiación y desarrollo</h3>
+        <p>
+          Conocer proyectos concretos y explorar
+          posibles fórmulas de patrocinio,
+          financiación o inversión según su fase.
+        </p>
+        <a href="#contacto">Abrir conversación ↗</a>
       </article>
 
     </div>
@@ -2453,269 +1206,165 @@ strong {
   </div>
 </section>
 
-<!-- =====================================================
-     MADRID EVENT
-===================================================== -->
+<!-- MADRID -->
 
-<section class="section section-navy" id="madrid">
+<section class="section section-dark" id="madrid">
   <div class="wrap">
 
     <div class="madrid-banner reveal">
 
       <div>
-        <span class="kicker">
-          Ecosystem Exchange · Madrid
-        </span>
+        <span class="kicker">Madrid · 23 noviembre 2026</span>
 
         <h2>
-          Nos vemos el
-          <span class="gold-text">23 de noviembre.</span>
+          Una oportunidad para
+          <span class="gold">conectar en persona.</span>
         </h2>
 
         <p>
-          Emprende360 impulsa un encuentro empresarial
-          entre founders, CEOs, directivos y ecosistemas.
-          Una oportunidad para conectar capacidades,
-          compartir iniciativas y explorar nuevas
-          colaboraciones, incluida esta nueva etapa
-          de TIH × Emprende360.
+          Ecosystem Exchange Madrid reúne
+          empresarios, directivos y responsables
+          de distintos ecosistemas.
+          La nueva colaboración TIH × Emprende360
+          también busca abrir relaciones
+          que puedan dar lugar a proyectos reales.
         </p>
       </div>
 
-      <div>
-        <a
-          class="btn btn-primary"
-          href="https://emprende360.club/madrid-ecosystem-exchange/"
-          target="_blank"
-          rel="noopener noreferrer">
-          Conocer el evento ↗
-        </a>
-      </div>
+      <a href="https://emprende360.club/madrid-ecosystem-exchange/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-primary">
+        Conocer el evento ↗
+      </a>
 
     </div>
 
   </div>
 </section>
 
-<!-- =====================================================
-     CONTACT FORM
-===================================================== -->
+<!-- FORM -->
 
-<section class="section contact" id="colaborar">
+<section class="section contact" id="contacto">
   <div class="wrap contact-grid">
 
     <div class="contact-copy reveal">
-
-      <span class="kicker">
-        Construyamos oportunidades
-      </span>
+      <span class="kicker">Colaborar con TIH</span>
 
       <h2>
         ¿Qué podríamos
-        <span class="gold-text">construir juntos?</span>
+        <span class="gold">construir juntos?</span>
       </h2>
 
       <p class="lead">
-        Si representas a una empresa, entidad,
-        proyecto o red profesional y ves
-        posibilidades de colaboración,
-        queremos conocer tu propuesta.
+        Si representas a una empresa,
+        organización, proyecto o red profesional
+        y ves posibilidades de colaboración,
+        cuéntanos qué te gustaría explorar.
       </p>
 
-      <div class="contact-benefits">
-
-        <div class="contact-benefit">
+      <div class="contact-notes">
+        <div class="contact-note">
           <b aria-hidden="true">✓</b>
-          <span>
-            Revisamos las propuestas para identificar
-            colaboraciones con encaje real.
-          </span>
+          <span>Relaciones empresariales con contexto.</span>
         </div>
-
-        <div class="contact-benefit">
+        <div class="contact-note">
           <b aria-hidden="true">✓</b>
-          <span>
-            Buscamos conocimiento, tecnología,
-            financiación y capacidad de ejecución.
-          </span>
+          <span>Colaboraciones adaptadas a proyectos concretos.</span>
         </div>
-
-        <div class="contact-benefit">
+        <div class="contact-note">
           <b aria-hidden="true">✓</b>
-          <span>
-            Cada colaboración se define
-            según objetivos y compromisos concretos.
-          </span>
+          <span>Participación según capacidades y encaje.</span>
         </div>
-
       </div>
-
     </div>
 
     <form
       id="tihForm"
-      class="contact-form reveal"
       action="https://formspree.io/f/xdeazajn"
-      method="POST">
+      method="POST"
+      class="reveal">
 
       <input type="hidden" name="_subject"
-        value="Nueva propuesta de colaboración · TIH × Emprende360">
-
+        value="Nueva colaboración · TIH × Emprende360">
       <input type="hidden" name="project"
         value="TIH × Emprende360">
-
       <input type="hidden" name="source"
         value="tih-emprende360">
+      <input type="hidden" name="campaign_ref" id="campaignRef">
 
-      <input type="hidden" name="referrer_page" id="referrerPage">
-
-      <div class="honeypot" aria-hidden="true">
-        <label for="websiteCheck">No rellenar este campo</label>
-        <input
-          id="websiteCheck"
-          type="text"
-          name="_gotcha"
-          tabindex="-1"
+      <div class="hp" aria-hidden="true">
+        <label for="hpField">No completar</label>
+        <input id="hpField" name="_gotcha"
+          type="text" tabindex="-1"
           autocomplete="off">
       </div>
 
       <div class="form-grid">
 
         <div class="field">
-          <label for="fullName">Nombre y apellidos *</label>
-          <input
-            id="fullName"
-            type="text"
-            name="name"
-            autocomplete="name"
-            maxlength="120"
-            required
-            placeholder="Tu nombre">
+          <label for="name">Nombre y apellidos *</label>
+          <input id="name" name="name" type="text"
+            autocomplete="name" maxlength="120"
+            required placeholder="Tu nombre">
         </div>
 
         <div class="field">
           <label for="email">Email profesional *</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            autocomplete="email"
-            maxlength="200"
-            required
-            placeholder="nombre@empresa.com">
+          <input id="email" name="email" type="email"
+            autocomplete="email" maxlength="200"
+            required placeholder="nombre@empresa.com">
         </div>
 
         <div class="field full">
-          <label for="organization">Empresa u organización *</label>
-          <input
-            id="organization"
-            type="text"
-            name="organization"
-            maxlength="160"
-            required
+          <label for="company">Empresa u organización *</label>
+          <input id="company" name="company" type="text"
+            maxlength="160" required
             placeholder="Nombre de tu organización">
         </div>
 
         <div class="field">
-          <label for="role">Cargo o responsabilidad</label>
-          <input
-            id="role"
-            type="text"
-            name="role"
-            maxlength="120"
-            placeholder="CEO, director, fundador...">
+          <label for="role">Cargo</label>
+          <input id="role" name="role" type="text"
+            maxlength="100"
+            placeholder="CEO, Founder, Director...">
         </div>
 
         <div class="field">
-          <label for="linkedin">LinkedIn o sitio web</label>
-          <input
-            id="linkedin"
-            type="url"
-            name="website"
+          <label for="website">LinkedIn o web</label>
+          <input id="website" name="website" type="url"
             maxlength="500"
             placeholder="https://...">
         </div>
 
         <div class="field full">
-          <label for="organizationType">
-            Tipo de organización *
-          </label>
-
-          <select
-            id="organizationType"
-            name="organization_type"
-            required>
-
-            <option value="" selected disabled>
-              Selecciona una opción
-            </option>
-
-            <option value="Empresa o marca">
-              Empresa o marca
-            </option>
-
-            <option value="Inversor o entidad financiera">
-              Inversor o entidad financiera
-            </option>
-
-            <option value="Universidad o centro de investigación">
-              Universidad o centro de investigación
-            </option>
-
-            <option value="Asociación o entidad social">
-              Asociación o entidad social
-            </option>
-
-            <option value="Profesional o especialista">
-              Profesional o especialista
-            </option>
-
-            <option value="Otra organización">
-              Otra organización
-            </option>
-
-          </select>
-        </div>
-
-        <div class="field full">
-          <label for="interest">
-            ¿Qué te gustaría explorar? *
-          </label>
+          <label for="interest">¿Qué te gustaría explorar? *</label>
 
           <select id="interest" name="interest" required>
-
             <option value="" selected disabled>
-              Selecciona tu interés principal
+              Selecciona tu interés
             </option>
-
-            <option value="Patrocinio o financiación de proyecto">
-              Patrocinio o financiación de proyecto
-            </option>
-
-            <option value="Colaboración tecnológica">
-              Colaboración tecnológica
-            </option>
-
             <option value="Alianza empresarial">
               Alianza empresarial
             </option>
-
+            <option value="Patrocinio o financiación">
+              Patrocinio o financiación
+            </option>
+            <option value="Colaboración tecnológica">
+              Colaboración tecnológica
+            </option>
             <option value="Investigación o conocimiento">
               Investigación o conocimiento
             </option>
-
             <option value="Colaboración social">
               Colaboración social
             </option>
-
-            <option value="Oportunidades de inversión">
-              Oportunidades de inversión
+            <option value="Inversión">
+              Explorar inversión
             </option>
-
-            <option value="Otra propuesta">
-              Otra propuesta
+            <option value="Otra colaboración">
+              Otra colaboración
             </option>
-
           </select>
         </div>
 
@@ -2727,22 +1376,17 @@ strong {
           <textarea
             id="message"
             name="message"
-            required
             minlength="15"
             maxlength="2000"
-            placeholder="Qué haces, qué puedes aportar o qué tipo de colaboración te gustaría explorar..."></textarea>
+            required
+            placeholder="Qué haces, qué puedes aportar o qué colaboración te gustaría explorar..."></textarea>
         </div>
 
       </div>
 
-      <div class="form-privacy">
-
-        <input
-          id="privacy"
-          type="checkbox"
-          name="privacy_acknowledged"
-          value="yes"
-          required>
+      <div class="privacy-check">
+        <input id="privacy" type="checkbox"
+          name="privacy_acknowledged" value="yes" required>
 
         <label for="privacy">
           He leído la
@@ -2751,48 +1395,41 @@ strong {
              rel="noopener noreferrer">
             política de privacidad
           </a>
-          y entiendo que mis datos se utilizarán
-          para gestionar esta solicitud de colaboración. *
+          y entiendo el uso de mis datos
+          para gestionar esta solicitud. *
         </label>
-
       </div>
 
       <p class="form-note">
         No incluyas información médica, diagnósticos
-        ni otros datos especialmente sensibles.
-        La solicitud no implica aceptación automática
-        ni compromiso comercial.
+        ni otros datos sensibles.
+        El envío de la solicitud no implica
+        ningún compromiso comercial.
       </p>
 
-      <button
-        id="submitBtn"
-        class="btn btn-primary"
+      <button id="submitBtn" class="btn btn-primary"
         type="submit">
-        Enviar propuesta de colaboración →
+        Enviar propuesta →
       </button>
 
-      <div
-        id="formStatus"
+      <div id="formStatus"
         class="form-status"
         role="status"
-        aria-live="polite">
-      </div>
+        aria-live="polite"></div>
 
     </form>
 
   </div>
 </section>
 
-<!-- =====================================================
-     FAQ
-===================================================== -->
+<!-- FAQ -->
 
 <section class="section section-navy" id="preguntas">
   <div class="wrap">
 
-    <div class="section-heading reveal">
+    <div class="section-head reveal">
       <span class="kicker">Preguntas frecuentes</span>
-      <h2>Antes de <span class="gold-text">colaborar.</span></h2>
+      <h2>Lo esencial sobre <span class="gold">TIH.</span></h2>
     </div>
 
     <div class="faq">
@@ -2800,52 +1437,55 @@ strong {
       <details class="faq-item">
         <summary>¿Qué es TIH?</summary>
         <div class="faq-answer">
-          TIH es una iniciativa impulsada por Antonio Berdiel
-          que desarrolla propuestas relacionadas con tecnología,
-          accesibilidad, innovación inclusiva, talento
-          y participación digital.
+          TIH es una iniciativa de innovación inclusiva
+          que desarrolla propuestas relacionadas
+          con tecnología, accesibilidad,
+          participación y talento.
         </div>
       </details>
 
       <details class="faq-item">
         <summary>¿Qué relación tiene con Emprende360?</summary>
         <div class="faq-answer">
-          TIH y Emprende360 están desarrollando una colaboración
-          estratégica para conectar iniciativas de impacto
-          con empresas, especialistas, relaciones empresariales
-          y oportunidades de crecimiento. Cada parte mantiene
-          su identidad mientras se formaliza la estructura
-          definitiva de colaboración.
+          TIH y Emprende360 están construyendo
+          una colaboración estratégica
+          para conectar las iniciativas
+          de TIH con relaciones empresariales,
+          colaboradores y oportunidades
+          de crecimiento.
         </div>
       </details>
 
       <details class="faq-item">
         <summary>¿Se puede colaborar sin aportar financiación?</summary>
         <div class="faq-answer">
-          Sí. También buscamos entidades, especialistas
-          y empresas que puedan aportar tecnología,
-          conocimiento, experiencia, capacidad operativa
-          o colaboración en programas concretos.
+          Sí. También buscamos empresas,
+          organizaciones y especialistas
+          que puedan aportar tecnología,
+          conocimiento, contactos o capacidad
+          para desarrollar proyectos.
         </div>
       </details>
 
       <details class="faq-item">
-        <summary>¿Están disponibles todos los programas?</summary>
+        <summary>¿Están disponibles todas las plataformas?</summary>
         <div class="faq-answer">
-          No. TIH dispone de distintas propuestas e iniciativas
-          en diferentes fases de desarrollo. Su ejecución,
-          validación y disponibilidad avanzarán progresivamente
-          según los recursos y acuerdos alcanzados.
+          No. TIH contempla distintas propuestas
+          que se encuentran en diferentes fases.
+          Su desarrollo y validación avanzarán
+          de manera progresiva según los recursos
+          y las colaboraciones disponibles.
         </div>
       </details>
 
       <details class="faq-item">
         <summary>¿Qué ocurre después de enviar una propuesta?</summary>
         <div class="faq-answer">
-          Revisaremos la información facilitada
-          para identificar un posible encaje.
-          Si existe una oportunidad concreta de colaboración,
-          podremos contactar para ampliar la conversación.
+          Revisaremos la información para valorar
+          si existe una posibilidad concreta
+          de colaboración. Si vemos encaje,
+          podremos contactar para ampliar
+          la conversación.
         </div>
       </details>
 
@@ -2854,30 +1494,24 @@ strong {
   </div>
 </section>
 
-<!-- =====================================================
-     FINAL CTA
-===================================================== -->
+<!-- FINAL -->
 
-<section class="final-section">
+<section class="final">
   <div class="wrap reveal">
 
-    <span class="pill pill-gold">
-      TIH × Emprende360
-    </span>
+    <span class="kicker">TIH × Emprende360</span>
 
     <h2>
       EL IMPACTO COMIENZA CUANDO
-      <span class="gold-text">
-        ALGUIEN DECIDE IMPLICARSE.
-      </span>
+      <span class="gold">ALGUIEN DECIDE IMPLICARSE.</span>
     </h2>
 
     <p class="lead">
-      Empresas, tecnología, talento y organizaciones
-      trabajando para abrir nuevas oportunidades.
+      Tecnología, talento y relaciones empresariales
+      conectados para abrir nuevas oportunidades.
     </p>
 
-    <a href="#colaborar" class="btn btn-primary">
+    <a href="#contacto" class="btn btn-primary">
       Explorar una colaboración →
     </a>
 
@@ -2886,242 +1520,162 @@ strong {
 
 </main>
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
-<footer class="footer">
-
+<footer>
   <div class="wrap">
 
     <div class="footer-grid">
 
       <div>
-
-        <div class="footer-brand">
-
-          <div class="footer-logo" aria-hidden="true">TIH</div>
-
-          <strong>TIH × Emprende360</strong>
-
-        </div>
-
-        <p class="footer-description">
-          Innovación inclusiva, tecnología,
+        <div class="footer-title">TIH × Emprende360</div>
+        <p class="footer-copy">
+          Innovación inclusiva, accesibilidad,
           talento y desarrollo empresarial.
-          Una colaboración estratégica orientada
-          a crear oportunidades reales.
+          Una nueva etapa de colaboración estratégica.
         </p>
-
       </div>
 
       <div class="footer-links">
-
-        <a href="https://emprende360.club/">
-          Emprende360
-        </a>
-
-        <a href="https://emprende360.club/eventos/">
-          Eventos
-        </a>
-
-        <a href="https://emprende360.club/madrid-ecosystem-exchange/">
-          Madrid 2026
-        </a>
-
-        <a href="https://emprende360.club/privacidad">
-          Privacidad
-        </a>
-
-        <a href="https://emprende360.club/aviso-legal">
-          Aviso legal
-        </a>
-
+        <a href="https://emprende360.club/">Emprende360</a>
+        <a href="https://emprende360.club/eventos/">Eventos</a>
+        <a href="https://emprende360.club/madrid-ecosystem-exchange/">Madrid 2026</a>
+        <a href="https://emprende360.club/privacidad">Privacidad</a>
+        <a href="https://emprende360.club/aviso-legal">Aviso legal</a>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      © <span id="currentYear">2026</span>
+      © <span id="year">2026</span>
       Emprende360 · TIH × Emprende360.
       Todos los derechos reservados.
     </div>
 
   </div>
-
 </footer>
 
 <!-- MOBILE CTA -->
 
 <div class="mobile-cta">
-  <a class="btn btn-primary" href="#colaborar">
+  <a href="#contacto" class="btn btn-primary">
     Explorar una colaboración →
   </a>
 </div>
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<!-- JAVASCRIPT -->
 
 <script>
-(function () {
+(function(){
   "use strict";
 
-  /* ----------------------------------------------------
-     CONFIGURACIÓN DEL FORMULARIO
-
-     Actualmente usa el endpoint proporcionado
-     en la landing del evento de Madrid.
-
-     Recomendación:
-     Crear un formulario Formspree exclusivo para TIH
-     y sustituir esta URL.
-  ---------------------------------------------------- */
-
+  // Cambiar por un endpoint exclusivo para TIH
+  // cuando esté disponible.
   const FORM_ENDPOINT = "https://formspree.io/f/xdeazajn";
 
-  /* ----------------------------------------------------
-     AÑO
-  ---------------------------------------------------- */
-
-  const year = document.getElementById("currentYear");
-
-  if (year) {
+  // Año dinámico
+  const year = document.getElementById("year");
+  if(year){
     year.textContent = new Date().getFullYear();
   }
 
-  /* ----------------------------------------------------
-     ORIGEN DE LA VISITA
-
-     Se guarda el parámetro ref o source
-     para identificar colaboraciones y campañas.
-  ---------------------------------------------------- */
-
+  // Origen de campañas
   const params = new URLSearchParams(window.location.search);
+  const campaign =
+    params.get("ref") ||
+    params.get("source") ||
+    "";
 
-  const source = params.get("ref") || params.get("source") || "";
+  const campaignField = document.getElementById("campaignRef");
 
-  const referrerField = document.getElementById("referrerPage");
-
-  if (referrerField) {
-    referrerField.value = source.slice(0, 120);
+  if(campaignField){
+    campaignField.value = campaign.slice(0,120);
   }
 
-  /* ----------------------------------------------------
-     REVEAL PROGRESIVO
-
-     El contenido permanece visible si no hay soporte
-     o si el usuario prefiere movimiento reducido.
-  ---------------------------------------------------- */
-
+  // Animaciones progresivas:
+  // si JS falla, los contenidos permanecen visibles.
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
-  if (!reduceMotion && "IntersectionObserver" in window) {
+  if(!reduceMotion && "IntersectionObserver" in window){
+    const elements = document.querySelectorAll(".reveal");
 
-    document.documentElement.classList.add("js");
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          entry.target.classList.remove("pending");
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:.08});
 
-    const items = document.querySelectorAll(".reveal");
-
-    const observer = new IntersectionObserver(
-      function (entries) {
-
-        entries.forEach(function (entry) {
-
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-
-        });
-
-      },
-      { threshold: 0.08 }
-    );
-
-    items.forEach(function (item) {
-      observer.observe(item);
+    elements.forEach(el=>{
+      el.classList.add("pending");
+      observer.observe(el);
     });
-
   }
 
-  /* ----------------------------------------------------
-     FORMULARIO
-  ---------------------------------------------------- */
-
+  // Formulario
   const form = document.getElementById("tihForm");
   const status = document.getElementById("formStatus");
-  const submit = document.getElementById("submitBtn");
+  const submitBtn = document.getElementById("submitBtn");
 
-  if (form && status && submit) {
+  if(form && status && submitBtn){
 
-    form.addEventListener("submit", async function (event) {
-
+    form.addEventListener("submit",async function(event){
       event.preventDefault();
 
       status.textContent = "";
       status.className = "form-status";
 
-      if (!form.checkValidity()) {
+      if(!form.checkValidity()){
         form.reportValidity();
         return;
       }
 
-      const honeypot = document.getElementById("websiteCheck");
-
-      if (honeypot && honeypot.value.trim() !== "") {
+      // Honeypot antispam
+      const hp = document.getElementById("hpField");
+      if(hp && hp.value.trim() !== ""){
+        status.classList.add("success");
+        status.textContent = "Solicitud recibida.";
         return;
       }
 
-      submit.disabled = true;
-      submit.textContent = "Enviando propuesta…";
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Enviando…";
 
-      const formData = new FormData(form);
-
-      try {
-
-        const response = await fetch(FORM_ENDPOINT, {
-          method: "POST",
-          body: formData,
-          headers: {
-            "Accept": "application/json"
-          }
+      try{
+        const response = await fetch(FORM_ENDPOINT,{
+          method:"POST",
+          body:new FormData(form),
+          headers:{"Accept":"application/json"}
         });
 
-        if (!response.ok) {
-          throw new Error("No se ha podido completar el envío.");
+        if(!response.ok){
+          throw new Error("Error de envío");
         }
 
         form.reset();
 
-        if (referrerField) {
-          referrerField.value = source.slice(0, 120);
+        if(campaignField){
+          campaignField.value = campaign.slice(0,120);
         }
 
         status.classList.add("success");
-
         status.textContent =
-          "Propuesta enviada correctamente. Gracias por tu interés. Revisaremos la información y contactaremos si identificamos una posibilidad de colaboración.";
+          "Propuesta enviada correctamente. Gracias por tu interés. Revisaremos la información y contactaremos si encontramos una posibilidad de colaboración.";
 
-      } catch (error) {
-
+      }catch(error){
         status.classList.add("error");
-
         status.textContent =
           "No se ha podido enviar la propuesta. Comprueba tu conexión e inténtalo de nuevo.";
-
-      } finally {
-
-        submit.disabled = false;
-
-        submit.textContent =
-          "Enviar propuesta de colaboración →";
-
+      }finally{
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Enviar propuesta →";
       }
-
     });
-
   }
 
 })();
