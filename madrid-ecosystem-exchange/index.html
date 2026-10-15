@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Ecosystem Exchange Madrid · 23 noviembre 2026 | Emprende360 + CAC</title>
-  <meta name="description" content="Encuentro empresarial selectivo en Madrid coorganizado por Emprende360 y CAC · Consultoría Ahorro de Costes. Lunes 23 de noviembre de 2026." />
+  <meta name="description" content="Ecosystem Exchange Madrid · 23 de noviembre de 2026. CEOs, founders, directivos y ecosistemas conectados mediante conversaciones B2B preparadas." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://emprende360.club/madrid-ecosystem-exchange/" />
   <meta name="theme-color" content="#020617" />
@@ -13,7 +13,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ecosystem Exchange · Madrid · 23 noviembre 2026" />
   <meta property="og:description" content="Emprende360 y CAC coorganizan un encuentro empresarial selectivo en Madrid: conexiones preparadas entre ecosistemas y oportunidades que continúan después del 23 de noviembre." />
-  <meta property="og:image" content="https://emprende360.club/eventos/rondas.png" />
+  <meta property="og:image" content="https://emprende360.club/madrid.jpeg" />
+  <meta property="og:image:alt" content="Ecosystem Exchange Madrid · Encuentro empresarial 23 de noviembre de 2026" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ecosystem Exchange Madrid · 23 noviembre 2026" />
+  <meta name="twitter:description" content="Empresarios, CEOs y ecosistemas conectados mediante conversaciones preparadas y relaciones que continúan." />
+  <meta name="twitter:image" content="https://emprende360.club/madrid.jpeg" />
 
   <script type="application/ld+json">
   {
@@ -994,7 +999,47 @@
       .nav-sponsor-link{display:none}
     }
 
-</style>
+
+    /* COLABORADORES DE CONVOCATORIA: NO CONFUNDIR CON COORGANIZADORES */
+    .partners-section{background:linear-gradient(180deg,#071522,#081c2a)}
+    .partners-head,.registered-head{max-width:930px;margin:0 auto 30px;text-align:center}
+    .partners-head h2,.registered-head h2{margin-top:14px}
+    .partners-head .lead,.registered-head .lead{margin-top:13px}
+    .partners-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .partner-card{min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;padding:23px;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:rgba(255,255,255,.045);transition:transform .2s,border-color .2s}
+    .partner-card:hover{transform:translateY(-3px);border-color:rgba(244,197,66,.34)}
+    .partner-logo{display:flex;align-items:center;justify-content:center;width:100%;min-height:122px;height:122px;max-width:305px;border-radius:17px;background:#fff;padding:18px;overflow:hidden;transition:transform .2s}
+    .partner-logo:hover{transform:scale(1.015)}
+    .partner-logo img{width:100%;height:100%;object-fit:contain}
+    .partner-logo.partner-portrait{background:rgba(255,255,255,.07)}
+    .partner-portrait img{width:104px;height:104px;border-radius:50%;object-fit:cover;background:#fff}
+    .partner-logo .logo-fallback{display:none;color:#0b1d37;font-size:18px;font-weight:900;overflow-wrap:anywhere}
+    .partner-portrait .logo-fallback{color:#fff}
+    .partner-card h3{margin-top:17px;font-size:19px;letter-spacing:-.035em;line-height:1.2}
+    .partner-card p{margin-top:8px;color:#a9bbcd;font-size:13px;line-height:1.55;flex:1}
+    .partner-link{margin-top:14px;color:#7dd3fc;font-weight:850;font-size:13px}
+    .partner-link:hover{color:#fde68a}
+    .partners-note{margin-top:19px;text-align:center;color:#8999ac;font-size:12px}
+    .registered-section{background:radial-gradient(circle at 95% 5%,rgba(24,167,255,.09),transparent 30%),#040b16}
+    .registered-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .registered-item{display:flex;flex-direction:column;justify-content:center;gap:15px;min-height:137px;padding:19px;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.04);border-radius:19px}
+    .registered-icon{font-size:11px;font-weight:900;color:#f4c542;letter-spacing:.1em}
+    .registered-item h3{font-size:16px;letter-spacing:-.025em;line-height:1.3}
+    .registered-note{margin:19px auto 0;color:#8796a9;max-width:900px;text-align:center;font-size:12px;line-height:1.55}
+    .registered-action{text-align:center;margin-top:24px}
+    a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #f4c542;outline-offset:3px}
+    @media(max-width:1000px){.registered-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){
+      .partners-grid{grid-template-columns:1fr;gap:12px}
+      .partner-card{padding:19px}
+      .partner-logo{height:115px;min-height:115px}
+      .registered-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+      .registered-item{padding:14px;min-height:115px}
+      .registered-item h3{font-size:14px}
+    }
+    @media(max-width:390px){.registered-grid{grid-template-columns:1fr}.registered-item{min-height:90px}}
+
+  </style>
 </head>
 
 <body>
@@ -1042,13 +1087,13 @@
         </h1>
 
         <p class="lead">
-          Un encuentro selectivo para <strong>líderes de ecosistemas, comunidades, asociaciones
-          y personas con redes relevantes</strong>. No para intercambiar tarjetas, sino para conectar
-          capacidades, abrir introducciones y construir oportunidades entre redes independientes.
+          Un encuentro empresarial selectivo que conecta <strong>CEOs, founders, directivos, empresas
+          y responsables de diferentes ecosistemas</strong>. Conversaciones preparadas, relaciones
+          complementarias y oportunidades que pueden continuar después de Madrid.
         </p>
 
         <div class="hero-claim">
-          Cada ecosistema mantiene su identidad. Conectamos el acceso, las capacidades y las oportunidades.
+          Ecosistemas independientes. Relaciones empresariales con contexto. Oportunidades conectadas.
         </div>
 
         <div class="hero-actions">
@@ -1062,7 +1107,7 @@
         </div>
 
         <div class="hero-meta">
-          <span class="pill">35–45 perfiles</span>
+          <span class="pill">Objetivo · 45–65 perfiles</span>
           <span class="pill">12:30–17:30</span>
           <span class="pill">Almuerzo privado</span>
           <span class="pill">Matching previo</span>
@@ -1070,7 +1115,7 @@
         </div>
 
         <p class="hero-note">
-          No es un evento abierto. Queremos una composición pequeña, complementaria y con capacidad real de activar relaciones.
+          Participación por invitación o solicitud evaluada. Las plazas se confirman individualmente cuando estén definidas las condiciones del almuerzo.
         </p>
         <div class="hero-organizers" aria-label="Organizaciones coorganizadoras">
           <span class="hero-organizers-label">Un encuentro coorganizado por</span>
@@ -1122,8 +1167,8 @@
 
           <div class="visual-footer">
             <div>
-              <b>Antes de llegar sabrás con quién merece la pena hablar.</b>
-              <span>Después sabremos qué conversaciones deberían continuar.</span>
+              <b>Preparamos conexiones entre perfiles complementarios.</b>
+              <span>Y facilitamos que las conversaciones valiosas puedan continuar.</span>
             </div>
             <strong id="countdown">23 NOVIEMBRE</strong>
           </div>
@@ -1169,6 +1214,70 @@
     </div>
   </section>
 
+  <!-- COLABORADORES DE CONVOCATORIA · NO COORGANIZADORES -->
+  <section class="section partners-section" id="colaboradores" aria-labelledby="partners-title">
+    <div class="wrap">
+      <div class="partners-head reveal">
+        <span class="kicker">Ecosistemas y colaboradores que conectan</span>
+        <h2 id="partners-title">Más redes. <span class="gold-text">Más posibilidades de conectar.</span></h2>
+        <p class="lead">Organizaciones y profesionales que colaboran en la convocatoria y en acercar perfiles empresariales complementarios. Cada uno mantiene su propia identidad y sus relaciones.</p>
+      </div>
+      <div class="partners-grid">
+        <article class="partner-card reveal">
+          <a class="partner-logo" href="http://www.cañasyventas.es/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Cañas y Ventas en otra pestaña">
+            <img src="https://emprende360.club/canasyventas.jpeg" alt="Cañas y Ventas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="logo-fallback" aria-hidden="true">CAÑAS Y VENTAS</span>
+          </a>
+          <h3>Cañas y Ventas</h3>
+          <p>Colaboración en convocatoria y conexiones empresariales.</p>
+          <a class="partner-link" href="http://www.cañasyventas.es/" target="_blank" rel="noopener noreferrer">Conocer colaborador ↗</a>
+        </article>
+        <article class="partner-card reveal">
+          <a class="partner-logo" href="https://www.iberocreaconecta.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar IberoCrea Conecta en otra pestaña">
+            <img src="https://emprende360.club/iberocrea.jpeg" alt="IberoCrea Conecta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="logo-fallback" aria-hidden="true">IBEROCREA CONECTA</span>
+          </a>
+          <h3>IberoCrea Conecta</h3>
+          <p>Conexiones entre empresarios, organizaciones y redes profesionales.</p>
+          <a class="partner-link" href="https://www.iberocreaconecta.com/" target="_blank" rel="noopener noreferrer">Conocer ecosistema ↗</a>
+        </article>
+        <article class="partner-card reveal">
+          <a class="partner-logo partner-portrait" href="https://www.linkedin.com/in/berdiel0ne/" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de Antonio Berdiel en otra pestaña">
+            <img src="https://emprende360.club/antonio-berdiel.jpg" alt="Antonio Berdiel" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="logo-fallback" aria-hidden="true">ANTONIO BERDIEL</span>
+          </a>
+          <h3>Antonio Berdiel</h3>
+          <p>Colaboración en relaciones y conexiones empresariales.</p>
+          <a class="partner-link" href="https://www.linkedin.com/in/berdiel0ne/" target="_blank" rel="noopener noreferrer">Ver perfil profesional ↗</a>
+        </article>
+      </div>
+      <p class="partners-note reveal">Colaboraciones de convocatoria y conexión · Distintas de la coorganización y del patrocinio comercial.</p>
+    </div>
+  </section>
+
+  <!-- PERFILES REGISTRADOS · CATEGORÍAS ANÓNIMAS, SIN PROMESA DE ASISTENCIA -->
+  <section class="section registered-section" id="perfiles" aria-labelledby="registered-title">
+    <div class="wrap">
+      <div class="registered-head reveal">
+        <span class="kicker">Perfiles y ámbitos en los registros</span>
+        <h2 id="registered-title">Distintas perspectivas.<br /><span class="blue-text">Conversaciones que se complementan.</span></h2>
+        <p class="lead">Entre las solicitudes y registros del encuentro encontramos perfiles vinculados a la dirección empresarial, el crecimiento, la innovación y las redes profesionales.</p>
+      </div>
+      <div class="registered-grid">
+        <article class="registered-item reveal"><span class="registered-icon">01</span><h3>CEOs, founders y dirección general</h3></article>
+        <article class="registered-item reveal"><span class="registered-icon">02</span><h3>Ecosistemas y redes empresariales</h3></article>
+        <article class="registered-item reveal"><span class="registered-icon">03</span><h3>Tecnología, software e inteligencia artificial</h3></article>
+        <article class="registered-item reveal"><span class="registered-icon">04</span><h3>Ventas, crecimiento y desarrollo B2B</h3></article>
+        <article class="registered-item reveal"><span class="registered-icon">05</span><h3>Finanzas, inversión y asesoramiento</h3></article>
+        <article class="registered-item reveal"><span class="registered-icon">06</span><h3>Marketing y posicionamiento</h3></article>
+        <article class="registered-item reveal"><span class="registered-icon">07</span><h3>Talento, liderazgo y consultoría</h3></article>
+        <article class="registered-item reveal"><span class="registered-icon">08</span><h3>Industria, operaciones y expansión</h3></article>
+      </div>
+      <p class="registered-note reveal">Estas áreas proceden de los registros disponibles. No representan una relación de asistentes confirmados ni implican que cada categoría vaya a estar presente finalmente.</p>
+      <div class="registered-action reveal"><a class="btn btn-primary" href="#solicitud">Solicitar invitación →</a></div>
+    </div>
+  </section>
+
   <!-- AUTHORITY -->
   <section class="authority">
     <div class="wrap">
@@ -1180,9 +1289,9 @@
         </article>
 
         <article class="authority-card blue">
-          <strong>12.487</strong>
-          <b>decisores B2B identificados</b>
-          <p>CEO, Founder, Socio, Owner y C-Level.</p>
+          <strong>B2B</strong>
+          <b>relaciones entre empresas</b>
+          <p>Founders, CEOs, socios y directivos.</p>
         </article>
 
         <article class="authority-card gold">
@@ -1199,7 +1308,7 @@
       </div>
 
       <p class="authority-note reveal">
-        La red directa y la comunidad son activos distintos y pueden solaparse. No se presentan como una audiencia única.
+        Emprende360 combina comunidad profesional, relaciones empresariales y encuentros. La participación en Madrid se valida de forma independiente.
       </p>
     </div>
   </section>
@@ -1210,7 +1319,7 @@
       <div class="section-head reveal">
         <div>
           <span class="kicker">Por qué Madrid</span>
-          <h2>No necesitamos otro networking.</h2>
+          <h2>Los contactos no bastan. Importa lo que hacemos con ellos.</h2>
         </div>
 
         <p class="lead">
@@ -1565,8 +1674,8 @@
 
         <article class="trust-card reveal">
           <div class="trust-num">03</div>
-          <h3>No captación</h3>
-          <p>No utilizamos la colaboración para prospectar comunidades ajenas.</p>
+          <h3>Respeto comercial</h3>
+          <p>Las relaciones se desarrollan con contexto y autorización, sin utilizar comunidades ajenas como bases de prospectos.</p>
         </article>
 
         <article class="trust-card reveal">
@@ -1602,8 +1711,8 @@
 
       <div class="agenda-stats reveal">
         <div class="agenda-stat"><strong>5 h</strong><span>de experiencia</span></div>
-        <div class="agenda-stat"><strong>35–45</strong><span>personas</span></div>
-        <div class="agenda-stat"><strong>1</strong><span>sala</span></div>
+        <div class="agenda-stat"><strong>45–65</strong><span>objetivo de perfiles</span></div>
+        <div class="agenda-stat"><strong>1</strong><span>encuentro</span></div>
         <div class="agenda-stat"><strong>Muchas</strong><span>redes detrás</span></div>
       </div>
     </div>
@@ -1616,7 +1725,7 @@
         <span class="kicker">Quién debería estar</span>
         <h2>Personas capaces de multiplicar relaciones.</h2>
         <p class="lead">
-          No buscamos llenar plazas. Buscamos personas capaces de conectar personas, empresas, capacidades y territorios.
+          Buscamos empresarios y profesionales capaces de aportar experiencia, necesidades concretas y relaciones valiosas. La diversidad de sectores hace más útiles las conversaciones.
         </p>
       </div>
 
@@ -1729,14 +1838,14 @@
         <span class="kicker">Información práctica</span>
         <h2 style="margin-top:12px">Madrid · 23 de noviembre de 2026.</h2>
         <p class="lead" style="margin-top:13px">
-          Primera edición presencial, reducida y diseñada alrededor de la calidad de la sala.
+          Primera edición presencial, selectiva y diseñada alrededor de la complementariedad entre participantes.
         </p>
       </div>
 
       <div class="info-strip reveal">
         <div class="info-item"><small>Fecha</small><strong>Lunes 23 noviembre</strong></div>
         <div class="info-item"><small>Horario</small><strong>12:30–17:30</strong></div>
-        <div class="info-item"><small>Participantes</small><strong>35–45 perfiles</strong></div>
+        <div class="info-item"><small>Objetivo</small><strong>45–65 perfiles seleccionados</strong></div>
         <div class="info-item"><small>Acceso</small><strong>Invitación / solicitud aprobada</strong></div>
       </div>
 
@@ -1857,6 +1966,14 @@
         </div>
 
         <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false"><span>¿Es un club de negocios con membresía?</span><span>+</span></button>
+          <div class="faq-answer"><div><p>No. Ecosystem Exchange no requiere contratar una membresía. Es un encuentro empresarial de participación seleccionada, pensado para conectar empresas y ecosistemas con intereses complementarios.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false"><span>¿Cómo se confirma definitivamente una plaza?</span><span>+</span></button>
+          <div class="faq-answer"><div><p>Revisamos las solicitudes individualmente. Una vez acordados el establecimiento, el precio del almuerzo y las condiciones de participación, comunicaremos los pasos para confirmar cada plaza. Enviar la solicitud no equivale a tener una plaza confirmada.</p></div></div>
+        </div>
+        <div class="faq-item">
           <button class="faq-btn" aria-expanded="false"><span>¿Tengo que pagar entrada?</span><span>+</span></button>
           <div class="faq-answer"><div><p>No planteamos una entrada tradicional. Cada participante cubrirá únicamente su propio almuerzo. El importe se comunicará antes de confirmar definitivamente la plaza.</p></div></div>
         </div>
@@ -1898,7 +2015,7 @@
         <span class="gold-text">NECESITAN SABER CONECTARSE.</span>
       </h2>
 
-      <p>35–45 perfiles · una sala · muchas redes detrás.</p>
+      <p>Objetivo: 45–65 perfiles seleccionados · distintas empresas y ecosistemas · conexiones preparadas.</p>
 
       <a class="btn btn-primary" href="#solicitud">Solicitar invitación →</a>
       <div><a class="final-sponsor-cta" href="https://emprende360.club/patrocinio" target="_blank" rel="noopener noreferrer">¿Tu empresa quiere patrocinarlo? Ver propuesta ↗</a></div>
@@ -1953,6 +2070,16 @@
     Zapier, Brevo o tu propio backend.
   */
   const FORM_ENDPOINT = "https://formspree.io/f/xdeazajn";
+
+
+  // Prefill facultativo "quién te ha invitado" desde enlaces de colaboradores,
+  // sin bloquear el campo ni sustituir la declaración del participante.
+  const collaboratorRef = new URLSearchParams(window.location.search).get("ref");
+  const collaboratorNames = { canasyventas:"Cañas y Ventas", iberocrea:"IberoCrea Conecta", antonioberdiel:"Antonio Berdiel", cac:"CAC · Enrique Peña" };
+  const invitationField = document.getElementById("invitedBy");
+  if(invitationField && collaboratorRef && collaboratorNames[collaboratorRef] && !invitationField.value){
+    invitationField.value = collaboratorNames[collaboratorRef];
+  }
 
   // FAQ
   document.querySelectorAll(".faq-item").forEach(item => {
