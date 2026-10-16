@@ -4,15 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Ecosystem Exchange Madrid · 23 noviembre 2026 | Emprende360 + CAC</title>
-  <meta name="description" content="Ecosystem Exchange Madrid · 23 de noviembre de 2026. CEOs, founders, directivos y ecosistemas conectados mediante conversaciones B2B preparadas." />
+  <title>Ecosystem Exchange Madrid · 23 noviembre 2026 | Emprende360, CAC e IberoCrea Conecta</title>
+  <meta name="description" content="Ecosystem Exchange Madrid · 23 de noviembre de 2026. CEOs, founders, directivos, ecosistemas y representantes de fondos de inversión conectados mediante conversaciones B2B preparadas." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://emprende360.club/madrid-ecosystem-exchange/" />
   <meta name="theme-color" content="#020617" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ecosystem Exchange · Madrid · 23 noviembre 2026" />
-  <meta property="og:description" content="Emprende360 y CAC coorganizan un encuentro empresarial selectivo en Madrid: conexiones preparadas entre ecosistemas y oportunidades que continúan después del 23 de noviembre." />
+  <meta property="og:description" content="Emprende360, CAC e IberoCrea Conecta coorganizan un encuentro empresarial selectivo en Madrid: conexiones preparadas entre ecosistemas y oportunidades que continúan después del 23 de noviembre." />
   <meta property="og:image" content="https://emprende360.club/madrid.jpeg" />
   <meta property="og:image:alt" content="Ecosystem Exchange Madrid · Encuentro empresarial 23 de noviembre de 2026" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -50,6 +50,12 @@
         "name":"CAC · Consultoría Ahorro de Costes",
         "url":"https://consultoriaahorrodecostes.com/",
         "logo":"https://emprende360.club/cac.jpeg"
+      },
+      {
+        "@type":"Organization",
+        "name":"IberoCrea Conecta",
+        "url":"https://www.iberocreaconecta.com/",
+        "logo":"https://emprende360.club/iberocrea.jpeg"
       }
     ]
   }
@@ -862,7 +868,7 @@
       .reveal{opacity:1;transform:none}
     }
 
-    /* COORGANIZACIÓN INSTITUCIONAL · EMPRENDE360 Y CAC */
+    /* COORGANIZACIÓN INSTITUCIONAL · EMPRENDE360, CAC E IBEROCREA CONECTA */
     .coorg-nav{display:flex;align-items:center;gap:11px;min-width:0}
     .coorg-nav-label{color:#94a3b8;font-size:10px;letter-spacing:.10em;text-transform:uppercase;font-weight:900;white-space:nowrap}
     .coorg-nav-line{width:1px;height:34px;background:rgba(255,255,255,.13);flex:none}
@@ -922,7 +928,7 @@
       .nav .btn{padding:8px 9px;font-size:9px}
     }
 
-    /* LOGOTIPOS OFICIALES DE AMBOS COORGANIZADORES · IGUALDAD VISUAL */
+    /* LOGOTIPOS OFICIALES DE LOS TRES COORGANIZADORES · IGUALDAD VISUAL */
     .coorg-emprende-nav,
     .coorg-cac-nav{
       display:flex;align-items:center;justify-content:center;flex:none;
@@ -1042,6 +1048,58 @@
     }
     @media(max-width:390px){.registered-grid{grid-template-columns:1fr}.registered-item{min-height:90px}}
 
+
+    /* COORGANIZACIÓN TRIPLE · logos equitativos y responsive */
+    .coorg-emprende-nav,.coorg-cac-nav,.coorg-ibero-nav{
+      display:flex;align-items:center;justify-content:center;flex:none;
+      width:127px;height:45px;padding:7px 9px;
+      background:#fff;border:1px solid rgba(255,255,255,.25);
+      border-radius:11px;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .coorg-ibero-nav:hover{transform:translateY(-2px);box-shadow:0 9px 27px rgba(255,255,255,.12)}
+    .coorg-ibero-nav img{max-width:100%;width:auto;height:100%;max-height:32px;object-fit:contain}
+    /* Legibilidad si alguno de los logos remotos no se carga */
+    .coorg-emprende-nav .logo-fallback,.coorg-cac-nav .logo-fallback,.coorg-ibero-nav .logo-fallback{max-width:100%;font-size:11px;overflow-wrap:anywhere;line-height:1.05}
+    .hero-organizer-logo .logo-fallback{max-width:100%;font-size:11px;overflow-wrap:anywhere;line-height:1.15}
+    .coorganizers-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .coorganizer-card{min-height:312px}
+    .hero-organizers{max-width:640px}
+    .hero-organizers-logos{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr)}
+    .partners-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:810px;margin:0 auto}
+    .nav-invite-mobile{display:none}
+    @media(max-width:1050px){
+      .coorganizers-grid{gap:11px}
+      .coorganizer-card{padding:22px 17px;min-height:300px}
+    }
+    @media(max-width:760px){
+      .coorg-nav{gap:4px}
+      .coorg-emprende-nav,.coorg-cac-nav,.coorg-ibero-nav{width:69px;height:34px;padding:5px;border-radius:8px;min-width:0;min-height:0}
+      .coorg-emprende-nav img,.coorg-cac-nav img,.coorg-ibero-nav img{max-height:25px}
+      .coorg-emprende-nav .logo-fallback,.coorg-cac-nav .logo-fallback,.coorg-ibero-nav .logo-fallback{font-size:8px}
+      .hero-organizer-logo .logo-fallback{font-size:9px}
+      .coorg-nav-line{height:24px}
+      .nav-invite-full{display:none}
+      .nav-invite-mobile{display:inline}
+      .nav .nav-invite{padding:9px 10px;white-space:nowrap}
+      .coorganizers-grid,.partners-grid{grid-template-columns:1fr}
+      .coorganizer-card{min-height:0}
+      .hero-organizers{max-width:100%}
+      .hero-organizer-logo{height:55px;padding:7px}
+      .hero-organizer-logo img{max-height:39px}
+      .hero-organizers-logos{gap:6px}
+      .hero-organizers-logos .separator{font-size:16px}
+      .footer-org-logo{width:89px;height:41px;padding:5px}
+    }
+    @media(max-width:390px){
+      .coorg-emprende-nav,.coorg-cac-nav,.coorg-ibero-nav{width:58px;height:30px;padding:3px}
+      .coorg-emprende-nav img,.coorg-cac-nav img,.coorg-ibero-nav img{max-height:23px}
+      .coorg-emprende-nav .logo-fallback,.coorg-cac-nav .logo-fallback,.coorg-ibero-nav .logo-fallback{font-size:7px}
+      .coorg-nav{gap:3px}
+      .nav .nav-invite{padding:8px 8px;font-size:10px}
+      .nav{gap:7px}
+      .hero-organizer-logo{height:50px;padding:6px}
+      .hero-organizer-logo img{max-height:34px}
+    }
   </style>
 </head>
 
@@ -1049,7 +1107,7 @@
 
 <header>
   <div class="nav">
-    <div class="coorg-nav" aria-label="Coorganizan Emprende360 y CAC">
+    <div class="coorg-nav" aria-label="Coorganizan Emprende360, CAC e IberoCrea Conecta">
       <span class="coorg-nav-label">Coorganizan</span>
       <a class="coorg-emprende-nav" href="https://emprende360.club/" target="_blank" rel="noopener noreferrer" aria-label="Emprende360 · sitio web (abre en nueva pestaña)">
         <img src="https://emprende360.club/emprende360.png" alt="Logotipo oficial de Emprende360" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
@@ -1060,12 +1118,17 @@
         <img src="https://emprende360.club/cac.jpeg" alt="Logotipo de CAC Consultoría Ahorro de Costes" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
         <span class="logo-fallback" aria-hidden="true">CAC</span>
       </a>
+      <span class="coorg-nav-line" aria-hidden="true"></span>
+      <a class="coorg-ibero-nav" href="https://www.iberocreaconecta.com/" target="_blank" rel="noopener noreferrer" aria-label="IberoCrea Conecta, coorganizador (abre en nueva pestaña)">
+        <img src="https://emprende360.club/iberocrea.jpeg" alt="Logotipo de IberoCrea Conecta" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="logo-fallback" aria-hidden="true">IBEROCREA</span>
+      </a>
     </div>
 
     <div class="nav-right">
       <span class="nav-date">23 NOV 2026 · MADRID</span>
       <a class="nav-sponsor-link" href="https://emprende360.club/patrocinio/" target="_blank" rel="noopener noreferrer" aria-label="Conocer el patrocinio del evento, se abre en otra pestaña">Patrocinar ↗</a>
-      <a class="btn btn-primary" href="#solicitud">Solicitar invitación →</a>
+      <a class="btn btn-primary nav-invite" href="#solicitud"><span class="nav-invite-full">Solicitar invitación →</span><span class="nav-invite-mobile">Solicitar →</span></a>
     </div>
   </div>
 </header>
@@ -1090,7 +1153,7 @@
         </h1>
 
         <p class="lead">
-          Un encuentro empresarial selectivo que conecta <strong>CEOs, founders, directivos, empresas
+          Un encuentro empresarial selectivo que conecta <strong>CEOs, founders, directivos, empresas, representantes de fondos de inversión
           y responsables de diferentes ecosistemas</strong>. Conversaciones preparadas, relaciones
           complementarias y oportunidades que pueden continuar después de Madrid.
         </p>
@@ -1131,6 +1194,11 @@
             <a class="hero-organizer-logo" href="https://consultoriaahorrodecostes.com/" target="_blank" rel="noopener noreferrer" aria-label="CAC Consultoría, coorganizador (abre en nueva pestaña)">
               <img src="https://emprende360.club/cac.jpeg" alt="CAC Consultoría Ahorro de Costes" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
               <span class="logo-fallback" aria-hidden="true">CAC</span>
+            </a>
+            <span class="separator" aria-hidden="true">+</span>
+            <a class="hero-organizer-logo" href="https://www.iberocreaconecta.com/" target="_blank" rel="noopener noreferrer" aria-label="IberoCrea Conecta, coorganizador (abre en nueva pestaña)">
+              <img src="https://emprende360.club/iberocrea.jpeg" alt="IberoCrea Conecta" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+              <span class="logo-fallback" aria-hidden="true">IBEROCREA CONECTA</span>
             </a>
           </div>
         </div>
@@ -1181,13 +1249,13 @@
   </section>
 
 
-  <!-- COORGANIZADORES · AMBAS ORGANIZACIONES CON EL MISMO PROTAGONISMO -->
+  <!-- COORGANIZADORES · TRES ORGANIZACIONES CON EL MISMO PROTAGONISMO -->
   <section class="coorganizers" id="coorganizacion" aria-labelledby="coorganizers-title">
     <div class="wrap">
       <div class="coorganizers-head reveal">
         <span class="kicker">Coorganización confirmada</span>
-        <h2 id="coorganizers-title">Dos organizaciones. <span class="gold-text">Un mismo propósito.</span></h2>
-        <p class="lead">Emprende360 y CAC · Consultoría Ahorro de Costes coorganizan Ecosystem Exchange Madrid 2026 para acercar empresarios, conectar capacidades y facilitar relaciones empresariales con continuidad.</p>
+        <h2 id="coorganizers-title">Tres organizaciones. <span class="gold-text">Un mismo propósito.</span></h2>
+        <p class="lead">Emprende360, CAC · Consultoría Ahorro de Costes e IberoCrea Conecta coorganizan Ecosystem Exchange Madrid 2026 para acercar empresarios, conectar capacidades y facilitar relaciones empresariales con continuidad.</p>
       </div>
       <div class="coorganizers-grid">
         <article class="coorganizer-card reveal">
@@ -1212,12 +1280,23 @@
           <p>CAC · Consultoría Ahorro de Costes ayuda a empresas a mejorar su rentabilidad mediante la optimización de gastos, la negociación y la conexión con soluciones y proveedores empresariales.</p>
           <a class="coorganizer-link" href="https://consultoriaahorrodecostes.com/" target="_blank" rel="noopener noreferrer">Conocer CAC Consultoría ↗</a>
         </article>
+        <article class="coorganizer-card reveal">
+          <span class="coorganizer-label">Coorganizador</span>
+          <div class="coorganizer-brand">
+            <span class="coorganizer-logo">
+              <img src="https://emprende360.club/iberocrea.jpeg" alt="Logotipo de IberoCrea Conecta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+              <span class="logo-fallback" aria-hidden="true">IBEROCREA CONECTA</span>
+            </span>
+          </div>
+          <p>IberoCrea Conecta acerca empresarios, organizaciones y redes profesionales para impulsar conexiones, colaboración y oportunidades entre ecosistemas.</p>
+          <a class="coorganizer-link" href="https://www.iberocreaconecta.com/" target="_blank" rel="noopener noreferrer">Conocer IberoCrea Conecta ↗</a>
+        </article>
       </div>
-      <p class="coorganizers-note reveal">Ambas entidades participan como coorganizadoras del encuentro. Cada organización conserva su identidad y sus relaciones profesionales.</p>
+      <p class="coorganizers-note reveal">Las tres entidades participan como coorganizadoras del encuentro. Cada organización conserva su identidad y sus relaciones profesionales.</p>
     </div>
   </section>
 
-  <!-- COLABORADORES DE CONVOCATORIA · NO COORGANIZADORES -->
+  <!-- COLABORADORES DE CONVOCATORIA · CAÑAS Y VENTAS Y TIH -->
   <section class="section partners-section" id="colaboradores" aria-labelledby="partners-title">
     <div class="wrap">
       <div class="partners-head reveal">
@@ -1235,16 +1314,7 @@
           <p>Colaboración en convocatoria y conexiones empresariales.</p>
           <a class="partner-link" href="http://www.cañasyventas.es/" target="_blank" rel="noopener noreferrer">Conocer colaborador ↗</a>
         </article>
-        <article class="partner-card reveal">
-          <a class="partner-logo" href="https://www.iberocreaconecta.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar IberoCrea Conecta en otra pestaña">
-            <img src="https://emprende360.club/iberocrea.jpeg" alt="IberoCrea Conecta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-            <span class="logo-fallback" aria-hidden="true">IBEROCREA CONECTA</span>
-          </a>
-          <h3>IberoCrea Conecta</h3>
-          <p>Conexiones entre empresarios, organizaciones y redes profesionales.</p>
-          <a class="partner-link" href="https://www.iberocreaconecta.com/" target="_blank" rel="noopener noreferrer">Conocer ecosistema ↗</a>
-        </article>
-        <article class="partner-card reveal">
+<article class="partner-card reveal">
           <a class="partner-logo partner-photo" href="https://emprende360.club/tih" target="_blank" rel="noopener noreferrer" aria-label="Conocer el ecosistema TIH en otra pestaña">
             <img src="https://emprende360.club/antonioywulfran.jpeg" alt="TIH · Ecosistema colaborador" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="logo-fallback" aria-hidden="true">TIH</span>
@@ -1264,19 +1334,19 @@
       <div class="registered-head reveal">
         <span class="kicker">Perfiles y ámbitos en los registros</span>
         <h2 id="registered-title">Distintas perspectivas.<br /><span class="blue-text">Conversaciones que se complementan.</span></h2>
-        <p class="lead">Entre las solicitudes y registros del encuentro encontramos perfiles vinculados a la dirección empresarial, el crecimiento, la innovación y las redes profesionales.</p>
+        <p class="lead">Entre las solicitudes y registros del encuentro encontramos perfiles vinculados a la dirección empresarial, el crecimiento, la innovación, los fondos de inversión y las redes profesionales.</p>
       </div>
       <div class="registered-grid">
         <article class="registered-item reveal"><span class="registered-icon">01</span><h3>CEOs, founders y dirección general</h3></article>
         <article class="registered-item reveal"><span class="registered-icon">02</span><h3>Ecosistemas y redes empresariales</h3></article>
         <article class="registered-item reveal"><span class="registered-icon">03</span><h3>Tecnología, software e inteligencia artificial</h3></article>
         <article class="registered-item reveal"><span class="registered-icon">04</span><h3>Ventas, crecimiento y desarrollo B2B</h3></article>
-        <article class="registered-item reveal"><span class="registered-icon">05</span><h3>Finanzas, inversión y asesoramiento</h3></article>
+        <article class="registered-item reveal"><span class="registered-icon">05</span><h3>Fondos de inversión, financiación y corporate finance</h3></article>
         <article class="registered-item reveal"><span class="registered-icon">06</span><h3>Marketing y posicionamiento</h3></article>
         <article class="registered-item reveal"><span class="registered-icon">07</span><h3>Talento, liderazgo y consultoría</h3></article>
         <article class="registered-item reveal"><span class="registered-icon">08</span><h3>Industria, operaciones y expansión</h3></article>
       </div>
-      <p class="registered-note reveal">Estas áreas proceden de los registros disponibles. No representan una relación de asistentes confirmados ni implican que cada categoría vaya a estar presente finalmente.</p>
+      <p class="registered-note reveal">Además de empresarios y especialistas, está prevista la participación de perfiles vinculados a fondos de inversión. La composición definitiva, incluida la representación de estos fondos, dependerá de las confirmaciones individuales.</p>
       <div class="registered-action reveal"><a class="btn btn-primary" href="#solicitud">Solicitar invitación →</a></div>
     </div>
   </section>
@@ -1772,7 +1842,7 @@
           <div class="who-icon">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M8 12h8M12 8v8"></path></svg>
           </div>
-          <div><b>Inversores y redes de inversión</b><span>Capital y oportunidades.</span></div>
+          <div><b>Fondos de inversión e inversores</b><span>Venture capital, capital privado y oportunidades.</span></div>
         </article>
 
         <article class="who-card reveal">
@@ -2043,6 +2113,11 @@
           <img src="https://emprende360.club/cac.jpeg" alt="CAC Consultoría Ahorro de Costes" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
           <span class="logo-fallback" aria-hidden="true">CAC</span>
         </a>
+        <span aria-hidden="true">+</span>
+        <a class="footer-org-logo" href="https://www.iberocreaconecta.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar IberoCrea Conecta en pestaña nueva">
+          <img src="https://emprende360.club/iberocrea.jpeg" alt="IberoCrea Conecta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+          <span class="logo-fallback" aria-hidden="true">IBEROCREA</span>
+        </a>
       </div>
     </div>
 
@@ -2055,7 +2130,7 @@
       <a href="https://emprende360.club/aviso-legal" target="_blank" rel="noopener noreferrer">Aviso legal</a>
     </div>
 
-    <div>© 2026 Ecosystem Exchange Madrid · Emprende360 + CAC</div>
+    <div>© 2026 Ecosystem Exchange Madrid · Emprende360 + CAC + IberoCrea Conecta</div>
   </div>
 </footer>
 
