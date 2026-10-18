@@ -13,7 +13,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Golden Partner · 30 días | Emprende360</title>
-  <meta name="description" content="Golden Partner de Emprende360: 30 días para definir tu ICP, posicionarte en tres contextos, activar hasta 500 invitaciones dirigidas y dar seguimiento a las señales que aparezcan.">
+  <meta name="description" content="Golden Partner de Emprende360: 30 días para definir tu ICP, posicionarte en tres contextos, activar hasta 300 invitaciones dirigidas y dar seguimiento a las señales que aparezcan.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#020617">
   <link rel="canonical" href="https://emprende360.club/golden-partners/">
@@ -474,6 +474,55 @@
       html{scroll-behavior:auto}
       .reveal{opacity:1;transform:none;transition:none}
     }
+  
+    /* Ajustes de identidad corporativa: coherente con home y landings de soluciones */
+    .brand{display:inline-flex;align-items:center;flex:0 0 auto;min-width:0;gap:0}
+    .brand-logo{display:none;width:clamp(154px,15vw,190px);height:52px;object-fit:contain;object-position:left center}
+    .brand-fallback{display:inline-flex;align-items:center;color:#fff;font-size:19px;font-weight:950;letter-spacing:-.055em;white-space:nowrap}
+    .brand-fallback span{color:var(--sky-soft)}
+    .mobile-toggle{display:none;width:43px;height:43px;align-items:center;justify-content:center;flex:none;border-radius:13px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.06);color:#fff;font-size:23px;cursor:pointer}
+    .nav-details{position:relative;border:0}
+    .nav-details[open]{border:0}
+    .nav-details>summary{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:850;padding:0 3px;color:#CBD5E1;list-style:none;cursor:pointer}
+    .nav-details>summary::-webkit-details-marker{display:none}
+    .nav-details>summary:after{content:"⌄";font-size:15px;color:#7DD3FC;line-height:1;position:static;top:auto;right:auto;font-weight:800}
+    .nav-dropdown{position:absolute;top:calc(100% + 17px);left:-14px;min-width:258px;display:none;gap:0;padding:10px;border:1px solid rgba(255,255,255,.13);border-radius:18px;background:#0b1c2d;box-shadow:0 24px 65px rgba(0,0,0,.48);z-index:125}
+    .nav-dropdown:before{content:"";position:absolute;top:-19px;left:0;right:0;height:20px}
+    .nav-dropdown a{display:block;padding:11px 12px;border-radius:10px;color:#d3e3f2;font-size:12px;white-space:nowrap}
+    .nav-dropdown a:hover{background:rgba(24,167,255,.10);color:#fff}
+    .nav-details[open]>.nav-dropdown{display:grid}
+    @media(hover:hover) and (min-width:1001px){
+      .nav-details:hover>.nav-dropdown,.nav-details:focus-within>.nav-dropdown{display:grid}
+      .nav-details:hover>summary{color:#fff}
+    }
+    .nav-links a,.nav-links summary{transition:color .2s ease}
+    .nav-links>a:focus-visible,.nav-dropdown>a:focus-visible,.nav-details>summary:focus-visible,.mobile-toggle:focus-visible,.btn:focus-visible{outline:3px solid #F4C542;outline-offset:4px}
+    .footer-brand{display:flex;align-items:center;gap:18px}
+    .footer-brand .brand-logo{height:47px;width:168px}
+    .footer-brand-copy{max-width:280px;font-size:11px;line-height:1.45;color:#9aafc0}
+    .footer-inner{align-items:center}
+    .skip-link{position:fixed;left:16px;top:-90px;z-index:200;background:#F4C542;color:#06111F;padding:12px 17px;border-radius:10px;font-weight:900}
+    .skip-link:focus{top:9px}
+    @media(max-width:1140px) and (min-width:1001px){.nav-links{gap:12px}.nav-links>a,.nav-details>summary{font-size:11px}.brand-logo{width:157px}.nav .btn{font-size:12px}}
+    @media(max-width:1000px){
+      .mobile-toggle{display:inline-flex;margin-left:auto}
+      .nav{position:relative}
+      .nav-links{display:none;position:absolute;top:100%;left:16px;right:16px;margin:0;padding:16px;background:#071522;border:1px solid rgba(255,255,255,.16);border-radius:0 0 20px 20px;box-shadow:0 27px 55px rgba(0,0,0,.4);z-index:110;align-items:stretch;flex-direction:column;gap:4px;max-height:calc(100dvh - 76px);overflow-y:auto}
+      .nav-links.is-open{display:flex}
+      .nav-links>a,.nav-details>summary{padding:12px 10px;font-size:14px;font-weight:820}
+      .nav-dropdown,.nav-details[open]>.nav-dropdown{position:static;display:none;min-width:0;margin:2px 0 9px;padding:7px 8px;box-shadow:none;border-radius:13px;background:#0d2338}
+      .nav-details[open]>.nav-dropdown{display:grid}
+      .nav-dropdown:before{display:none}
+      .nav-dropdown a{white-space:normal;font-size:13px;padding:10px}
+    }
+    @media(max-width:760px){
+      .brand-logo{width:155px;height:45px}
+      .mobile-toggle{width:40px;height:40px}
+      .nav>.btn{white-space:nowrap}
+      .footer-brand{flex-direction:column;align-items:flex-start;gap:7px}
+    }
+    @media(max-width:380px){.brand-logo{width:135px}.nav>.btn{font-size:9px;padding:9px 10px}.mobile-toggle{width:37px;height:37px}}
+
   </style>
 
   <script type="application/ld+json">
@@ -488,25 +537,33 @@
 </head>
 <body>
 
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header>
   <div class="nav">
-    <a class="brand" href="https://emprende360.club/" target="_blank" rel="noopener">
-      <div class="brand-mark">E</div>
-      <div class="brand-title">Emprende<span>360</span></div>
+    <a class="brand" href="https://emprende360.club/" target="_blank" rel="noopener noreferrer" aria-label="Emprende360 · página principal">
+      <img class="brand-logo" src="https://emprende360.club/emprende360.png" alt="Emprende360" width="190" height="52" decoding="async" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';">
+      <span class="brand-fallback" aria-hidden="true">EMPRENDE<span>360</span></span>
     </a>
-
-    <nav class="nav-links">
+    <button class="mobile-toggle" id="mobileToggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">☰</button>
+    <nav class="nav-links" id="mainNav" aria-label="Navegación principal">
+      <details class="nav-details" id="solutionsMenu"><summary>Soluciones</summary><div class="nav-dropdown">
+        <a href="https://emprende360.club/activacionb2b" target="_blank" rel="noopener noreferrer">Activación Comercial B2B</a>
+        <a href="https://emprende360.club/marketing-digital" target="_blank" rel="noopener noreferrer">Marketing Digital · SEO y GEO</a>
+        <a href="https://emprende360.club/automatizacion-ia" target="_blank" rel="noopener noreferrer">IA y Automatización</a>
+        <a href="https://emprende360.club/desarrollo-web" target="_blank" rel="noopener noreferrer">Desarrollo Web y Aplicaciones</a>
+        <a href="https://emprende360.club/asia" target="_blank" rel="noopener noreferrer">Emprende360 Asia</a>
+      </div></details>
       <a href="#prueba">En acción</a>
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#incluye">Qué incluye</a>
+      <a href="https://emprende360.club/marketplace" target="_blank" rel="noopener noreferrer">Marketplace</a>
       <a href="#faq">Preguntas</a>
     </nav>
-
-    <a class="btn btn-primary" href="https://calendar.app.google/xDDFFGbUoJXmHGp78" target="_blank" rel="noopener">Activar Golden</a>
+    <a class="btn btn-primary" href="https://calendar.app.google/xDDFFGbUoJXmHGp78" target="_blank" rel="noopener noreferrer">Activar Golden</a>
   </div>
 </header>
 
-<main>
+<main id="contenido">
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy reveal">
@@ -518,7 +575,7 @@
         <div class="hero-principle">Golden no es comprar una entrevista, un Foro o un Taller por separado. Es activar durante 30 días tu posicionamiento y tu mercado con una secuencia clara.</div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://calendar.app.google/xDDFFGbUoJXmHGp78" target="_blank" rel="noopener">Quiero activar Golden</a>
+          <a class="btn btn-primary" href="https://calendar.app.google/xDDFFGbUoJXmHGp78" target="_blank" rel="noopener noreferrer">Quiero activar Golden</a>
           <a class="btn btn-secondary" href="#como-funciona">Ver cómo funcionan los 30 días →</a>
         </div>
 
@@ -547,7 +604,7 @@
 
             <div class="cycle-step">
               <div class="cycle-num">03</div>
-              <div><b>Invitamos</b><span>Movemos hasta 500 invitaciones dirigidas a perfiles que encajen con tu ICP.</span></div>
+              <div><b>Invitamos</b><span>Movemos hasta 300 invitaciones dirigidas a perfiles que encajen con tu ICP.</span></div>
             </div>
 
             <div class="cycle-step">
@@ -622,10 +679,10 @@
           </div>
           <div class="round-secondary">46 reacciones · 120 comentarios · 19 republicaciones · 74% de la red / 26% fuera de la red.</div>
 
-          <a class="btn btn-secondary" style="margin-top:18px" href="https://www.linkedin.com/events/7496395870095998976/" target="_blank" rel="noopener">Ver Ronda real en LinkedIn →</a>
+          <a class="btn btn-secondary" style="margin-top:18px" href="https://www.linkedin.com/events/7496395870095998976/" target="_blank" rel="noopener noreferrer">Ver Ronda real en LinkedIn →</a>
         </div>
 
-        <a class="video-frame" href="https://www.linkedin.com/events/7496395870095998976/" target="_blank" rel="noopener" aria-label="Ver Ronda de Alianzas B2B en LinkedIn">
+        <a class="video-frame" href="https://www.linkedin.com/events/7496395870095998976/" target="_blank" rel="noopener noreferrer" aria-label="Ver Ronda de Alianzas B2B en LinkedIn">
           <img src="https://emprende360.club/eventos/rondas.png" alt="Ronda de Alianzas B2B · Emprende360">
           <div class="video-play">▶</div>
           <div class="video-label">Ronda de Alianzas B2B · Ver conversación completa</div>
@@ -641,7 +698,7 @@
           <div class="format-body">
             <h3>Liderazgo · Decidir, delegar y ejecutar</h3>
             <p>Dirección, equipos, cambio y ejecución con perfiles senior alrededor de problemas reales.</p>
-            <a class="format-link" href="https://www.linkedin.com/events/7498264223278379008/" target="_blank" rel="noopener">Ver evento →</a>
+            <a class="format-link" href="https://www.linkedin.com/events/7498264223278379008/" target="_blank" rel="noopener noreferrer">Ver evento →</a>
           </div>
         </article>
 
@@ -653,7 +710,7 @@
           <div class="format-body">
             <h3>Ventas B2B · Pipeline, Revenue y GTM</h3>
             <p>Prospección, conversión, Revenue, GTM y conversaciones comerciales que realmente avanzan.</p>
-            <a class="format-link" href="https://www.linkedin.com/events/7496401159276941314/" target="_blank" rel="noopener">Ver evento →</a>
+            <a class="format-link" href="https://www.linkedin.com/events/7496401159276941314/" target="_blank" rel="noopener noreferrer">Ver evento →</a>
           </div>
         </article>
 
@@ -665,7 +722,7 @@
           <div class="format-body">
             <h3>Corporate Finance para CEOs</h3>
             <p>Financiación, M&A, valoración, estructura financiera y decisiones alrededor del capital.</p>
-            <a class="format-link" href="https://www.linkedin.com/events/7496399111244529665/" target="_blank" rel="noopener">Ver evento →</a>
+            <a class="format-link" href="https://www.linkedin.com/events/7496399111244529665/" target="_blank" rel="noopener noreferrer">Ver evento →</a>
           </div>
         </article>
       </div>
@@ -786,7 +843,7 @@
       <div class="invite-shell reveal">
         <div>
           <span class="kicker">Distribución dirigida</span>
-          <div class="big500">500<small>HASTA 500 INVITACIONES DURANTE LOS 30 DÍAS</small></div>
+          <div class="big500">300<small>HASTA 300 INVITACIONES DURANTE LOS 30 DÍAS</small></div>
         </div>
 
         <div>
@@ -839,14 +896,14 @@
           <span class="pill gold">Marketplace</span>
           <h3 style="margin-top:15px">Tu especialidad dentro de un espacio B2B seleccionado.</h3>
           <p>Foto, posicionamiento, especialidad y acceso a tu perfil o empresa durante la activación.</p>
-          <a class="presence-link" href="https://emprende360.club/marketplace" target="_blank" rel="noopener">Ver Marketplace →</a>
+          <a class="presence-link" href="https://emprende360.club/marketplace" target="_blank" rel="noopener noreferrer">Ver Marketplace →</a>
         </article>
 
         <article class="presence-card reveal">
           <span class="pill">Web principal</span>
           <h3 style="margin-top:15px">Más contexto para quien te descubre.</h3>
           <p>Presencia vinculada a los activos y conversaciones donde tu especialidad tenga sentido durante los 30 días.</p>
-          <a class="presence-link" href="https://emprende360.club/" target="_blank" rel="noopener">Ver Emprende360 →</a>
+          <a class="presence-link" href="https://emprende360.club/" target="_blank" rel="noopener noreferrer">Ver Emprende360 →</a>
         </article>
       </div>
 
@@ -876,14 +933,14 @@
           <div>1 entrevista</div>
           <div>1 Foro o Ronda</div>
           <div>1 Taller o 30 días de Señales</div>
-          <div>Hasta 500 invitaciones dirigidas</div>
+          <div>Hasta 300 invitaciones dirigidas</div>
           <div>Seguimiento a asistentes</div>
           <div>Distribución adicional vía partners cuando encaje</div>
           <div>Marketplace durante 30 días</div>
           <div>Presencia web durante 30 días</div>
         </div>
 
-        <a class="btn btn-primary" href="https://calendar.app.google/xDDFFGbUoJXmHGp78" target="_blank" rel="noopener">Quiero activar Golden · 390 €</a>
+        <a class="btn btn-primary" href="https://calendar.app.google/xDDFFGbUoJXmHGp78" target="_blank" rel="noopener noreferrer">Quiero activar Golden · 390 €</a>
         <p class="price-foot">Activación sujeta a encaje y capacidad operativa. No garantizamos asistentes, reuniones, clientes, ventas, facturación o ROI.</p>
       </div>
     </div>
@@ -898,12 +955,12 @@
 
       <div class="faq">
         <details class="reveal">
-          <summary>¿Las 500 invitaciones son 500 asistentes?</summary>
-          <p>No. Son hasta 500 invitaciones dirigidas durante los 30 días. La asistencia depende del interés, disponibilidad y encaje de cada persona.</p>
+          <summary>¿Las 300 invitaciones son 300 asistentes?</summary>
+          <p>No. Son hasta 300 invitaciones dirigidas durante los 30 días. La asistencia depende del interés, disponibilidad y encaje de cada persona.</p>
         </details>
 
         <details class="reveal">
-          <summary>¿Son necesariamente 500 personas diferentes?</summary>
+          <summary>¿Son necesariamente 300 personas diferentes?</summary>
           <p>No necesariamente. Cuando tiene sentido, un mismo perfil puede recibir más de un impacto durante el mes. Preferimos reforzar relaciones bien seleccionadas antes que completar una cifra con perfiles que no encajan.</p>
         </details>
 
@@ -936,7 +993,7 @@
         <span class="pill gold">Golden Partner · Emprende360</span>
         <h2>Treinta días. Un mercado concreto. Varias razones para que te conozcan.</h2>
         <p class="lead">No necesitas estar delante de todo el mundo. Necesitas aparecer de forma útil delante de las personas adecuadas y darles una razón para hablar contigo.</p>
-        <a class="btn btn-primary" href="https://calendar.app.google/xDDFFGbUoJXmHGp78" target="_blank" rel="noopener">Activar Golden Partner · 390 €</a>
+        <a class="btn btn-primary" href="https://calendar.app.google/xDDFFGbUoJXmHGp78" target="_blank" rel="noopener noreferrer">Activar Golden Partner · 390 €</a>
       </div>
     </div>
   </section>
@@ -944,7 +1001,13 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <div>© 2026 Emprende360 · Relaciones y activación B2B</div>
+    <div class="footer-brand">
+      <a class="brand" href="https://emprende360.club/" target="_blank" rel="noopener noreferrer" aria-label="Emprende360 · página principal">
+        <img class="brand-logo" src="https://emprende360.club/emprende360.png" alt="Emprende360" width="168" height="47" loading="lazy" decoding="async" onload="this.style.display='block';this.nextElementSibling.style.display='none';" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';">
+        <span class="brand-fallback" aria-hidden="true">EMPRENDE<span>360</span></span>
+      </a>
+      <div class="footer-brand-copy">© 2026 Emprende360 · Relaciones y activación B2B</div>
+    </div>
     <div class="footer-links">
       <a href="https://emprende360.club/" target="_blank" rel="noopener noreferrer">Inicio</a>
       <a href="https://emprende360.club/eventos" target="_blank" rel="noopener noreferrer">Eventos</a>
@@ -956,10 +1019,49 @@
 </footer>
 
 <div class="mobile-cta">
-  <a class="btn btn-primary" href="https://calendar.app.google/xDDFFGbUoJXmHGp78" target="_blank" rel="noopener">Activar Golden</a>
+  <a class="btn btn-primary" href="https://calendar.app.google/xDDFFGbUoJXmHGp78" target="_blank" rel="noopener noreferrer">Activar Golden</a>
 </div>
 
 <script>
+
+  // Menú accesible en móvil y desplegable al pasar el ratón en escritorio.
+  const mobileToggle = document.getElementById('mobileToggle');
+  const mainNav = document.getElementById('mainNav');
+  const solutionsMenu = document.getElementById('solutionsMenu');
+  if (solutionsMenu){
+    const hoverDesktop=()=>window.matchMedia('(hover:hover) and (min-width:1001px)').matches;
+    solutionsMenu.addEventListener('mouseenter',()=>{if(hoverDesktop()) solutionsMenu.open=true;});
+    solutionsMenu.addEventListener('mouseleave',()=>{if(hoverDesktop()) solutionsMenu.open=false;});
+    const summary=solutionsMenu.querySelector('summary');
+    if (summary) summary.addEventListener('click',e=>{
+      if(hoverDesktop()){e.preventDefault();solutionsMenu.open=true;}
+    });
+  }
+  function closeMobileMenu(){
+    if (!mobileToggle || !mainNav) return;
+    mainNav.classList.remove('is-open');
+    mobileToggle.setAttribute('aria-expanded','false');
+    mobileToggle.setAttribute('aria-label','Abrir menú');
+    mobileToggle.textContent='☰';
+  }
+  if (mobileToggle && mainNav){
+    mobileToggle.addEventListener('click',()=>{
+      const open=!mainNav.classList.contains('is-open');
+      mainNav.classList.toggle('is-open',open);
+      mobileToggle.setAttribute('aria-expanded',String(open));
+      mobileToggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+      mobileToggle.textContent=open?'✕':'☰';
+    });
+    mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMobileMenu));
+    document.addEventListener('click',e=>{
+      if (window.innerWidth<=1000 && !e.target.closest('header .nav')) closeMobileMenu();
+    });
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape'){closeMobileMenu();if(solutionsMenu)solutionsMenu.open=false;}
+    });
+    window.addEventListener('resize',()=>{if(window.innerWidth>1000)closeMobileMenu();});
+  }
+
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
