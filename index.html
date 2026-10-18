@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#020617" name="theme-color"/>
+<meta content="dark" name="color-scheme"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<title>Emprende360 | Desarrollo Comercial B2B, Marketing, IA y Webs para Empresas</title>
+<meta content="Emprende360 ayuda a empresas a desarrollar nuevas cuentas B2B, atraer demanda con marketing digital y ejecutar proyectos de IA, automatización, webs y aplicaciones. Explora nuestros servicios y ecosistema empresarial." name="description"/>
+<link href="https://emprende360.club/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="Emprende360" property="og:site_name"/>
+<meta content="Emprende360 · Desarrollo de negocio, marketing y tecnología para empresas" property="og:title"/>
+<meta content="Desarrollo comercial B2B, publicidad digital, SEO y GEO, inteligencia artificial, automatización, webs y aplicaciones. Servicios empresariales con un objetivo y un alcance claros." property="og:description"/>
+<meta content="https://emprende360.club/" property="og:url"/>
+<meta content="https://emprende360.club/emprende360.png" property="og:image"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Emprende360 · Soluciones de negocio, marketing e IA" name="twitter:title"/>
+<meta content="Trabajo comercial, marketing y tecnología para empresas. También eventos, profesionales seleccionados y negocio internacional." name="twitter:description"/>
+<meta content="https://emprende360.club/emprende360.png" name="twitter:image"/>
+<link crossorigin="" href="https://emprende360.club" rel="preconnect"/>
+<link crossorigin="" href="https://formspree.io" rel="preconnect"/>
+<script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Emprende360",
+    "url":"https://emprende360.club/",
+    "description":"Servicios de desarrollo comercial B2B, marketing digital, inteligencia artificial, automatización, desarrollo web y aplicaciones. Ecosistema de eventos y profesionales empresariales.",
+    "logo":"https://emprende360.club/emprende360.png",
+    "sameAs":["https://es.linkedin.com/in/albertoporrasmoreno"],
+    "hasOfferCatalog":{
+      "@type":"OfferCatalog",
+      "name":"Soluciones para empresas",
+      "itemListElement":[
+        {"@type":"OfferCatalog","name":"Activación Comercial B2B","url":"https://emprende360.club/activacionb2b"},
+        {"@type":"OfferCatalog","name":"Marketing Digital","url":"https://emprende360.club/marketing-digital"},
+        {"@type":"OfferCatalog","name":"IA y Automatización","url":"https://emprende360.club/automatizacion-ia"},
+        {"@type":"OfferCatalog","name":"Desarrollo Web y Aplicaciones","url":"https://emprende360.club/desarrollo-web"}
+      ]
+    }
+  }
+  </script>
+<style>
+    :root {
+      --deep:#020617; --deep2:#040b16; --navy:#071522; --navy2:#0b1a2c;
+      --sky:#18a7ff; --skysoft:#7dd3fc; --gold:#f4c542; --goldsoft:#fde68a;
+      --green:#65d6a5; --white:#f8fafc; --soft:#cbd5e1; --muted:#94a3b8;
+      --line:rgba(255,255,255,.12); --glass:rgba(255,255,255,.045);
+      --max:1192px; --shadow:0 26px 85px rgba(0,0,0,.30);
+    }
+    *,*:before,*:after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:94px}
+    body{margin:0;background:var(--deep);color:var(--white);font:400 16px/1.64 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    h1,h2,h3,h4,p{margin:0} h1,h2,h3,h4{line-height:1.12;letter-spacing:-.044em;text-wrap:balance}
+    h1{font-size:clamp(43px,5.1vw,72px);font-weight:850;letter-spacing:-.065em;line-height:1.035}
+    h2{font-size:clamp(31px,3.9vw,52px);font-weight:820} h3{font-size:clamp(21px,2.3vw,28px)}
+    a{text-decoration:none;color:inherit} button,input,select,textarea{font:inherit} button{cursor:pointer}
+    img{display:block;max-width:100%} svg{display:block} ul{list-style:none;padding:0;margin:0}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    ::selection{background:#f4c542;color:#061321}
+    .wrap{width:min(var(--max),calc(100% - 46px));margin-inline:auto}
+    .section{padding:94px 0;position:relative} .section-tight{padding:69px 0}
+    .night{background:var(--navy)}.darker{background:var(--deep2)}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:870;color:var(--goldsoft)}
+    .eyebrow:before{content:"";height:7px;width:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px rgba(244,197,66,.09)}
+    .lead{font-size:clamp(16px,1.56vw,19px);color:var(--soft);line-height:1.72}
+    .muted{color:var(--muted)}.small{font-size:13px;line-height:1.65}.mini{font-size:11px;line-height:1.55}
+    .grad{background:linear-gradient(96deg,#fff 0%,#b7eaff 45%,#ffe9a5 95%);color:transparent;-webkit-background-clip:text;background-clip:text}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:33px}
+    .section-head .head-copy{max-width:820px}.section-head h2{margin-top:15px}.section-head p{max-width:680px;margin-top:17px}
+    .arrowlink{display:inline-flex;align-items:center;gap:7px;color:var(--skysoft);font-size:13px;font-weight:800;white-space:nowrap}
+    .arrowlink:hover{color:#fff}.arrowlink svg{width:16px;height:16px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:51px;padding:13px 21px;border-radius:12px;border:1px solid transparent;font-weight:800;font-size:14px;line-height:1.35;text-align:center;transition:background .2s,transform .2s,box-shadow .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:linear-gradient(95deg,#ffe073,var(--gold),#ffd45d);color:#081525;box-shadow:0 12px 37px rgba(244,197,66,.15)}
+    .btn-gold:hover{box-shadow:0 17px 42px rgba(244,197,66,.27)}
+    .btn-blue{background:#087fcb;color:white}.btn-blue:hover{background:#0a92e7}
+    .btn-outline{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.23);color:white}
+    .btn-outline:hover{background:rgba(255,255,255,.11)}
+    .icon{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+    .skip{position:fixed;left:15px;top:-80px;z-index:200;background:var(--gold);color:#091322;padding:11px 16px;border-radius:8px;font-weight:850}.skip:focus{top:12px}
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(2,6,23,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
+    .header-inner{height:80px;display:flex;align-items:center;gap:22px}
+    .brand{display:inline-flex;align-items:center;gap:10px;flex:none}
+    .brand-mark{height:42px;width:42px;border-radius:13px;background:linear-gradient(135deg,#7dd3fc,#0a66c2);display:grid;place-items:center;color:#fff;font-size:20px;font-weight:900;box-shadow:0 11px 32px rgba(24,167,255,.22)}
+    .brand-name{font-size:19px;font-weight:880;line-height:1;letter-spacing:-.055em}.brand-name b{color:var(--skysoft)}
+    .brand-sub{display:block;margin-top:4px;color:#8ca8bc;font-size:9px;text-transform:uppercase;letter-spacing:.115em;font-weight:790}
+    .nav-links{margin-left:auto;display:flex;align-items:center;gap:21px}
+    .nav-links>a,.nav-details>summary{font-size:12px;font-weight:750;color:#d8e6ef;white-space:nowrap}
+    .nav-links>a:hover,.nav-details>summary:hover{color:var(--goldsoft)}
+    .nav-details{position:relative}.nav-details>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px}.nav-details>summary::-webkit-details-marker{display:none}
+    .nav-details>summary:after{content:"⌄";font-size:17px;line-height:0;transform:translateY(-2px)}
+    .nav-dropdown{position:absolute;top:32px;left:-18px;min-width:260px;padding:9px;border-radius:15px;background:#102437;border:1px solid #37516b;box-shadow:var(--shadow);display:grid;gap:2px}
+    .nav-dropdown a{padding:12px 13px;border-radius:8px;color:#e2edf5;font-size:13px;font-weight:650}
+    .nav-dropdown a:hover{background:#24405a;color:#fff}
+    .nav-action{min-height:44px;padding:10px 14px;font-size:12px;white-space:nowrap}
+    .mobile-toggle{display:none;border:1px solid rgba(255,255,255,.2);background:#13293f;border-radius:10px;color:white;height:45px;width:45px;align-items:center;justify-content:center;margin-left:auto}
+    /* Hero */
+    .hero{overflow:hidden;position:relative;background:radial-gradient(ellipse at 84% 8%,rgba(244,197,66,.09),transparent 32%),radial-gradient(ellipse at 23% 13%,rgba(24,167,255,.16),transparent 36%),linear-gradient(125deg,#020617 7%,#071522 65%,#0b1f32);padding:98px 0 77px}
+    .hero:before{content:"";position:absolute;inset:0;opacity:.09;pointer-events:none;background-image:linear-gradient(rgba(125,211,252,.34) 1px,transparent 1px),linear-gradient(90deg,rgba(125,211,252,.34) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(180deg,#000,transparent 93%)}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:53px;align-items:center}
+    .hero h1{margin:20px 0 20px}.hero p{max-width:680px}.hero .lead{font-size:clamp(17px,1.65vw,20px)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin:28px 0 0}
+    .hero-labels{display:flex;flex-wrap:wrap;gap:8px;margin-top:29px}
+    .hero-labels span{font-size:11px;color:#d9e9f4;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11);padding:6px 11px;border-radius:99px;font-weight:730}
+    .hero-foot{margin-top:19px;color:#8499ac;font-size:12px;line-height:1.6}
+    .hero-board{min-height:470px;position:relative;padding:23px;border:1px solid rgba(125,211,252,.22);border-radius:30px;background:radial-gradient(circle at 85% 8%,rgba(244,197,66,.10),transparent 36%),linear-gradient(155deg,rgba(11,38,62,.94),rgba(4,14,27,.98));box-shadow:var(--shadow);overflow:hidden}
+    .hero-board:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.07;background:linear-gradient(90deg,transparent 50%,#7dd3fc 51%,transparent 52%);background-size:50px}
+    .board-top{display:flex;justify-content:space-between;align-items:center;gap:12px;position:relative;z-index:1}
+    .board-top b{font-size:13px}.board-top span{color:#9fc3d9;border:1px solid #31506d;border-radius:99px;padding:5px 9px;font-size:10px;font-weight:750}
+    .board-title{position:relative;margin-top:22px;font-size:25px;font-weight:830;letter-spacing:-.045em}
+    .board-main{position:relative;margin-top:20px;display:grid;gap:12px}
+    .board-row{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:13px;padding:16px;border:1px solid rgba(255,255,255,.12);border-radius:17px;background:rgba(255,255,255,.045)}
+    .board-icon{display:grid;place-items:center;border-radius:12px;background:rgba(24,167,255,.14);border:1px solid rgba(24,167,255,.18);width:44px;height:44px;color:var(--skysoft)}
+    .board-row:nth-child(2) .board-icon{color:var(--goldsoft);background:rgba(244,197,66,.09)}
+    .board-row:nth-child(3) .board-icon{color:#9decc7;background:rgba(101,214,165,.09)}
+    .board-row b{display:block;font-size:13px;line-height:1.3}.board-row small{display:block;margin-top:4px;color:#93acbf;font-size:11px;line-height:1.45}
+    .board-row .icon-tail{width:16px;color:#8fbcd9}
+    .board-bottom{position:relative;display:flex;align-items:center;gap:9px;margin-top:23px;padding:16px 0 0;border-top:1px solid var(--line);font-size:12px;color:#b8cfdd}
+    .board-bottom strong{color:var(--goldsoft)}
+    /* Evidence */
+    .cred{background:#071522;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+    .cred-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .cred-item{display:flex;align-items:center;gap:12px;padding:25px 20px;border-right:1px solid rgba(255,255,255,.09)}
+    .cred-item:first-child{padding-left:0}.cred-item:last-child{border:0}.cred .icon{width:24px;height:24px;color:var(--goldsoft)}
+    .cred-item b{display:block;font-size:12px;line-height:1.3}.cred-item span{display:block;color:#8da5b9;font-size:11px;margin-top:4px;line-height:1.5}
+    /* Clickable service visuals */
+    .solutions{background:radial-gradient(ellipse at 4% 10%,rgba(24,167,255,.06),transparent 32%),var(--deep)}
+    .service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}
+    .service{display:block;position:relative;border:1px solid rgba(255,255,255,.13);border-radius:24px;overflow:hidden;background:#0a1a2c;transition:transform .25s,border-color .25s,box-shadow .25s;min-width:0}
+    .service:hover{transform:translateY(-5px);border-color:rgba(125,211,252,.53);box-shadow:0 22px 65px rgba(0,0,0,.3)}
+    .art{height:235px;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 40%,rgba(24,167,255,.24),transparent 43%),linear-gradient(145deg,#0d2944,#071322)}
+    .service:nth-child(2) .art{background:radial-gradient(circle at 70% 40%,rgba(244,197,66,.13),transparent 45%),linear-gradient(145deg,#16334d,#081524)}
+    .service:nth-child(3) .art{background:radial-gradient(circle at 73% 37%,rgba(115,118,246,.23),transparent 45%),linear-gradient(145deg,#141c43,#071524)}
+    .service:nth-child(4) .art{background:radial-gradient(circle at 79% 44%,rgba(101,214,165,.13),transparent 47%),linear-gradient(145deg,#103143,#071524)}
+    .art:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 72%,rgba(2,6,23,.13))}
+    .art-svg{width:100%;height:100%}
+    .art-svg text{font-family:Inter,system-ui,sans-serif}
+    .card-number{position:absolute;left:18px;top:16px;background:rgba(2,6,23,.69);color:#ddedfa;border:1px solid rgba(255,255,255,.16);border-radius:7px;padding:5px 9px;font-size:10px;font-weight:850;letter-spacing:.11em;z-index:2}
+    .service-body{padding:26px}.service-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .service-title .icon{color:var(--skysoft)}.service-body h3{font-size:25px}.service-body p{color:#a9bed0;font-size:14px;line-height:1.65;margin-top:12px;min-height:47px}
+    .service-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.service-tags span{border:1px solid rgba(255,255,255,.12);border-radius:7px;padding:4px 8px;font-size:10px;font-weight:750;color:#99b5c8}
+    .service-foot{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:23px;padding-top:16px;border-top:1px solid rgba(255,255,255,.09)}
+    .service-foot b{color:var(--goldsoft);font-size:12px}.service-foot .icon{color:var(--goldsoft)}
+    /* Flagship */
+    .flagship{position:relative;background:radial-gradient(ellipse at 100% 0%,rgba(24,167,255,.10),transparent 47%),var(--navy)}
+    .flag-grid{display:grid;grid-template-columns:.94fr 1.06fr;align-items:center;gap:60px}
+    .flag-grid h2{margin:15px 0 17px}.flag-grid .lead{margin-bottom:21px}
+    .ticks{display:grid;gap:12px;margin:24px 0}.ticks li{display:flex;gap:10px;align-items:start;font-size:14px;color:#d3e1ea}
+    .ticks li:before{content:"✓";color:var(--green);font-weight:950;flex:none}
+    .flag-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:29px}
+    .flag-card{padding:30px;border-radius:27px;border:1px solid rgba(244,197,66,.30);background:linear-gradient(150deg,#0c2943,#061523);box-shadow:var(--shadow)}
+    .flag-card .eyebrow{font-size:10px}.flag-card h3{font-size:30px;margin:13px 0 20px}
+    .flag-flow{display:grid;gap:9px}.flag-step{display:grid;grid-template-columns:40px 1fr;gap:11px;align-items:center;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);padding:13px;border-radius:13px}
+    .flag-step>span{width:34px;height:34px;display:grid;place-items:center;color:#a3dbff;background:#123a58;border-radius:10px;font-size:12px;font-weight:850}
+    .flag-step strong{display:block;font-size:13px}.flag-step small{display:block;color:#a7bece;font-size:11px;margin-top:3px}
+    .flag-price{padding-top:18px;margin-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:13px}
+    .flag-price strong{font-size:28px;color:var(--goldsoft);letter-spacing:-.06em}.flag-price span{font-size:11px;color:#afc3d2;text-align:right}
+    .flag-fine{font-size:11px;color:#8ea6b9;margin-top:14px;line-height:1.5}
+    /* connected strategy */
+    .approach{background:var(--deep2)}.approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+    .approach-note{border-left:3px solid var(--gold);padding:13px 17px;background:rgba(244,197,66,.045);border-radius:0 13px 13px 0;margin-top:22px;color:#dfebf3;font-size:14px}
+    .steps{display:grid;gap:12px}.step{display:grid;grid-template-columns:47px 1fr;gap:15px;align-items:center;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.035);padding:17px;border-radius:16px}
+    .step-num{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(24,167,255,.13);color:var(--skysoft);font-size:13px;font-weight:900}
+    .step strong{font-size:15px}.step p{color:#a8bdcd;font-size:12px;margin-top:4px;line-height:1.55}
+    /* Ecosystem */
+    .ecosystem{background:var(--deep)}
+    .eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:19px}.eco-card{display:block;overflow:hidden;border:1px solid rgba(255,255,255,.13);border-radius:22px;background:#0b1b2d;transition:transform .25s,border-color .25s}
+    .eco-card:hover{transform:translateY(-4px);border-color:rgba(244,197,66,.40)}
+    .eco-media{height:190px;position:relative;overflow:hidden;background:radial-gradient(circle at 40% 70%,#204768,#071522)}
+    .eco-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .eco-card:hover img{transform:scale(1.05)}
+    .eco-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,6,23,.35),transparent 64%);pointer-events:none}
+    .eco-card-body{padding:25px}.eco-card-body h3{font-size:24px}.eco-card-body p{font-size:13px;color:#aabfd0;margin-top:11px;line-height:1.65}
+    .eco-card-body .arrowlink{margin-top:19px}
+    .golden-visual{display:grid;place-items:center;height:100%;background:radial-gradient(circle at 50% 65%,rgba(244,197,66,.22),transparent 47%),linear-gradient(120deg,#163047,#071523)}
+    .golden-circle{height:113px;width:113px;display:grid;place-items:center;border:1px solid rgba(244,197,66,.45);border-radius:50%;background:radial-gradient(circle,rgba(244,197,66,.26),rgba(244,197,66,.05));box-shadow:0 0 0 22px rgba(244,197,66,.025),0 0 0 46px rgba(244,197,66,.016);font-size:45px;color:var(--goldsoft)}
+    .eco-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:19px}
+    .eco-mini{padding:23px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.035)}
+    .eco-mini .icon{color:var(--skysoft);width:28px;height:28px}.eco-mini b{display:block;margin-top:17px;font-size:15px}.eco-mini p{font-size:12px;color:#a7bac9;margin:7px 0 15px;line-height:1.55}
+    .eco-mini .arrowlink{font-size:11px;white-space:normal}
+
+    /* Real activity and founder credibility */
+    .proof-section{background:radial-gradient(ellipse at 85% 8%,rgba(244,197,66,.055),transparent 43%),var(--deep2)}
+    .proof-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
+    .proof-panel{overflow:hidden;border-radius:23px;background:#0a1e32;border:1px solid rgba(255,255,255,.13)}
+    .proof-img{position:relative;display:block;height:225px;overflow:hidden;background:radial-gradient(circle at 50% 48%,#184060,#071522)}
+    .proof-img img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+    .proof-img:hover img{transform:scale(1.04)}
+    .proof-img .play-icon{position:absolute;left:23px;bottom:18px;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;font-size:22px;background:var(--gold);color:#091a2e;box-shadow:0 8px 28px #0008}
+    .proof-body{padding:25px}.proof-body h3{font-size:23px}.proof-body p{font-size:13px;color:#aebfd0;margin:10px 0 17px;line-height:1.7}
+    .founder-row{display:grid;grid-template-columns:97px 1fr;gap:18px;align-items:start}
+    .founder-photo{width:97px;height:109px;object-fit:cover;border:1px solid rgba(244,197,66,.27);border-radius:14px;background:#1b3c58}
+    .founder-intro{display:block;color:#f4c542;font-size:10px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}
+    .founder-stats{margin-top:22px;padding:17px;border:1px solid rgba(244,197,66,.20);border-radius:13px;background:rgba(244,197,66,.045)}
+    .founder-stats strong{font-size:20px;color:var(--goldsoft)}.founder-stats span{display:block;color:#aec2d1;font-size:11px;line-height:1.6;margin-top:4px}
+    @media(max-width:900px){.proof-grid{grid-template-columns:1fr}.proof-img{height:250px}}
+    @media(max-width:420px){.founder-row{grid-template-columns:75px 1fr;gap:13px}.founder-photo{width:75px;height:89px}.proof-body{padding:20px}}
+    /* International */
+    .asia{background:radial-gradient(ellipse at 85% 45%,rgba(24,167,255,.08),transparent 48%),var(--navy)}
+    .asia-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+    .asia h2{margin:14px 0 17px}.asia p{max-width:650px}.asia-tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 29px}.asia-tags span{font-size:11px;border:1px solid rgba(255,255,255,.13);border-radius:99px;padding:7px 12px;color:#c7dbe6}
+    .asia-visual{height:290px;position:relative;overflow:hidden;border:1px solid rgba(24,167,255,.26);border-radius:24px;background:radial-gradient(circle at 30% 35%,#1b4568,#071525 65%);display:grid;place-items:center}
+    .asia-visual svg{width:100%;height:100%}.asia-visual .tag{position:absolute;left:19px;bottom:17px;font-size:10px;font-weight:850;letter-spacing:.12em;color:#dbeefe;background:rgba(2,6,23,.65);border:1px solid #38546a;padding:7px 10px;border-radius:8px}
+    .asia-click:hover .asia-visual{border-color:var(--gold)}
+    /* Event */
+    .event-band{background:var(--deep2)}
+    .event-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
+    .event-photo{display:block;border:1px solid rgba(244,197,66,.24);border-radius:22px;overflow:hidden;min-height:278px;background:radial-gradient(circle at 60% 30%,#284a70,#091726);position:relative}
+    .event-photo img{width:100%;height:278px;object-fit:cover}.event-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,6,23,.7),transparent 60%);pointer-events:none}
+    .event-photo .photo-tag{position:absolute;z-index:1;bottom:20px;left:19px;font-size:12px;font-weight:850;color:white}
+    .event-grid h2{margin:15px 0}.event-date{display:inline-flex;gap:9px;align-items:center;margin:23px 0;padding:9px 12px;border:1px solid rgba(244,197,66,.28);border-radius:9px;color:#ffe8a0;font-size:12px;font-weight:820}
+    .event-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    /* Low-ticket */
+    .entry{padding:42px 0;background:linear-gradient(95deg,#092741,#0b2135)}
+    .entry-inner{display:grid;grid-template-columns:auto 1fr auto;gap:25px;align-items:center}
+    .entry-price{display:grid;place-items:center;width:105px;height:105px;border-radius:21px;background:rgba(244,197,66,.10);border:1px solid rgba(244,197,66,.32);font-size:32px;font-weight:880;color:var(--goldsoft)}
+    .entry b{font-size:19px}.entry p{color:#bfcedb;font-size:13px;margin-top:7px;max-width:680px}
+    /* Contact */
+    .contact{background:radial-gradient(ellipse at 17% 16%,rgba(24,167,255,.1),transparent 38%),var(--navy)}
+    .contact-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:62px;align-items:start}
+    .contact h2{margin:15px 0 19px}.contact .lead{margin-bottom:22px}
+    .contact-cues{display:grid;gap:14px;margin-top:28px}.contact-cue{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start}.contact-cue .icon{color:var(--goldsoft)}.contact-cue b{display:block;font-size:13px}.contact-cue span{display:block;font-size:12px;color:#a9bdce;margin-top:3px}
+    .form-card{border:1px solid #31516b;border-radius:24px;background:#fff;color:#132c42;padding:30px;box-shadow:var(--shadow)}
+    .form-card h3{font-size:26px}.form-sub{color:#5c7182;font-size:13px;margin:8px 0 24px;line-height:1.6}
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}
+    .field label{font-size:12px;font-weight:780;color:#203b50}.field input,.field select,.field textarea{width:100%;border:1px solid #c6d8e3;background:#fbfdff;color:#132c42;padding:11px 13px;border-radius:9px;min-height:46px;font-size:15px;outline:none}
+    .field textarea{min-height:111px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:#0b86c7;box-shadow:0 0 0 3px rgba(24,167,255,.14)}
+    .consent{display:grid;grid-template-columns:17px 1fr;gap:10px;margin:19px 0 20px;align-items:start;font-size:11px;color:#506879;line-height:1.55}.consent input{margin:3px 0}.consent a{color:#087dbb;text-decoration:underline}
+    .submit-btn{border:0;width:100%;min-height:51px}.submit-btn:disabled{cursor:wait;opacity:.65}
+    .form-feedback{display:none;margin-top:14px;border-radius:9px;padding:12px 13px;font-size:12px;line-height:1.5;background:#eff8fc;border:1px solid #b9d9e9;color:#1b4a64}
+    .form-feedback[data-state="success"]{display:block;color:#176549;background:#f0fbf5;border-color:#b9e9ce}
+    .form-feedback[data-state="error"]{display:block;color:#a63d36;background:#fff4f3;border-color:#edc5bf}
+    .form-fine{margin-top:11px;color:#688092;font-size:10px;line-height:1.5}
+    .honeypot{position:absolute!important;left:-9999px!important;opacity:0!important;pointer-events:none!important}
+    /* FAQ */
+    .faq{background:var(--deep)}.faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:start}
+    .faq h2{margin-top:16px}.faqs{display:grid;gap:10px}
+    .faqs details{background:#0b1a2c;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:0 18px}
+    .faqs summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:15px;align-items:center;padding:18px 0;font-size:13px;font-weight:780}
+    .faqs summary::-webkit-details-marker{display:none}.faqs summary:after{content:"+";font-size:23px;font-weight:400;color:var(--skysoft)}
+    .faqs details[open] summary:after{content:"–"}.faqs details p{font-size:12px;color:#acbece;margin:0 0 20px;line-height:1.7}
+    /* Footer */
+    .footer{padding:55px 0 28px;border-top:1px solid var(--line);background:#02040d}
+    .footer-main{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:38px}
+    .footer-about p{font-size:12px;color:#91a5b8;margin-top:16px;line-height:1.8;max-width:290px}
+    .foot-col b{font-size:12px;display:block;margin-bottom:14px}.foot-col a{font-size:12px;color:#9baebf;display:block;margin:9px 0}.foot-col a:hover{color:var(--goldsoft)}
+    .foot-bottom{margin-top:45px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;color:#718499;font-size:11px}
+    .foot-bottom a:hover{color:#fff}
+    @media(max-width:1080px){
+      .nav-links{gap:13px}.nav-links>a,.nav-details>summary{font-size:11px}.nav-action{padding:10px;font-size:11px}
+      .hero-grid{gap:28px}.hero-board{min-height:450px}.cred-item{padding:22px 13px}.cred-item b{font-size:11px}
+    }
+    @media(max-width:900px){
+      .mobile-toggle{display:flex}.header-inner{height:72px}.header-inner>.nav-action{display:none}
+      .nav-links{display:none;position:absolute;top:72px;left:0;right:0;max-height:calc(100vh - 72px);overflow-y:auto;padding:18px 23px 24px;background:#061424;border-bottom:1px solid #345068;box-shadow:var(--shadow);margin:0;align-items:stretch;gap:0}
+      .nav-links.is-open{display:flex;flex-direction:column}.nav-links>a,.nav-details>summary{display:flex;padding:13px 4px;font-size:14px;border-bottom:1px solid rgba(255,255,255,.08)}
+      .nav-details>summary{justify-content:space-between}.nav-dropdown{position:static;box-shadow:none;min-width:0;margin:7px 0 13px}.nav-dropdown a{font-size:12px}
+      .hero{padding:74px 0 65px}.hero-grid{grid-template-columns:1fr}.hero-board{min-height:0;max-width:690px}
+      .cred-grid{grid-template-columns:repeat(2,1fr)}.cred-item:nth-child(2){border-right:0}.cred-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.cred-item:first-child{padding-left:13px}
+      .flag-grid,.approach-grid,.asia-grid,.event-grid,.contact-grid,.faq-grid{grid-template-columns:1fr;gap:32px}
+      .flag-card{max-width:720px}.section{padding:72px 0}.event-grid .event-photo{max-width:680px}
+      .footer-main{grid-template-columns:repeat(2,1fr)}.entry-inner{grid-template-columns:auto 1fr}.entry-inner>.btn{grid-column:2;justify-self:start}
+    }
+    @media(max-width:660px){
+      .wrap{width:min(var(--max),calc(100% - 34px))}.hero h1{font-size:clamp(38px,9vw,53px)}
+      .hero-board{padding:17px;border-radius:21px}.board-title{font-size:22px}.board-row{padding:12px;grid-template-columns:40px 1fr 17px}
+      .section-head{display:block}.section-head .arrowlink{margin-top:18px}.service-grid,.eco-grid,.eco-bottom{grid-template-columns:1fr}
+      .art{height:220px}.eco-media{height:200px}.service-body{padding:22px}.service-body p{min-height:0}
+      .entry-inner{grid-template-columns:1fr;gap:14px}.entry-inner>.btn{grid-column:auto}.entry-price{height:72px;width:110px;font-size:28px}
+      .form-card{padding:20px}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}
+      .footer-main{grid-template-columns:1fr 1fr;gap:25px}.footer-about{grid-column:1/-1}.faq-grid{gap:25px}
+      .event-photo img{height:245px}.flag-card{padding:21px}
+    }
+    @media(max-width:420px){.brand-name{font-size:17px}.brand-sub{font-size:8px}.hero-actions .btn{width:100%}.cred-item{align-items:flex-start;padding:17px 8px}.cred-item .icon{width:20px;height:20px}.cred-item span{font-size:10px}.service-body h3{font-size:23px}.flag-price{flex-direction:column;align-items:flex-start}.flag-price span{text-align:left}.footer-main{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+    /* Identidad visual: logotipo oficial de Emprende360 */
+    .brand-logo{display:block;width:clamp(150px,13.5vw,193px);height:55px;object-fit:contain;object-position:left center;flex:none}
+    .footer .brand-logo{height:58px;width:195px}
+    .brand-fallback{display:none;align-items:center;color:#fff;font-size:18px;font-weight:900;letter-spacing:-.05em}.brand-fallback span{color:#7dd3fc}
+    /* Las opciones aparecen al pasar el cursor por encima del menú, sin clic (escritorio).
+       En dispositivos táctiles permanecen accesibles mediante toque. */
+    .nav-details>summary:after{transition:transform .18s ease}
+    .nav-details[open]>summary:after{transform:rotate(180deg) translateY(2px)}
+    .nav-dropdown{top:100%;margin-top:0;z-index:110}
+    
+    .art,.eco-media,.golden-visual,.asia-visual,.event-photo,.proof-img{isolation:isolate}
+    .visual-img{width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;z-index:1;transition:transform .35s ease}
+    a:hover .visual-img{transform:scale(1.035)}
+    .photo-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center;padding:24px;background:linear-gradient(145deg,#0b2840,#091928);color:#f2f6ff}
+    .photo-placeholder b{color:#f4c542;letter-spacing:.12em;font-size:15px}
+    .photo-placeholder small{color:#c7dbe9;font-size:13px}
+    .eco-media .visual-img,.asia-visual .visual-img,.event-photo .visual-img,.proof-img .visual-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .art .visual-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .golden-visual{position:relative}.golden-visual .visual-img{z-index:1}
+    .asia-visual .tag,.event-photo .photo-tag,.proof-img .play-icon{z-index:3}
+    .eco-bottom{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .flag-summary{border-top:1px solid var(--line);padding-top:18px;margin-top:18px;color:#c5d6e3;font-size:12px;font-weight:720}
+    .entry-symbol{width:105px;height:105px;border-radius:21px;border:1px solid rgba(244,197,66,.25);background:rgba(244,197,66,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fce39e}
+    .entry-symbol .icon{width:33px;height:33px}.entry-symbol span{font-size:10px;font-weight:840;letter-spacing:.09em}
+    @media(max-width:900px){.nav-dropdown{position:static}.brand-logo{height:48px;width:171px}}
+    @media(max-width:660px){.eco-bottom{grid-template-columns:1fr}.entry-symbol{width:99px;height:80px}}
+  
+
+/* HOME SIN FOTOGRAFIAS DECORATIVAS · 18-10-2026
+   Graficos HTML/CSS accesibles y legibles. El unico <img> es el logotipo oficial. */
+.board-row:nth-child(4) .board-icon{color:#c6c3ff;background:rgba(146,126,244,.09)}
+.hero-board{min-height:0}
+.hero-grid{align-items:center}
+.art{height:222px;display:flex;align-items:stretch;padding:0}
+.art:after{display:none}
+.svc-visual{padding:56px 18px 14px;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:19px;width:100%;height:100%;position:relative;z-index:1;overflow:hidden}
+.svc-visual:before{position:absolute;content:"";width:210px;height:210px;border:1px solid rgba(125,211,252,.12);border-radius:50%;left:-75px;bottom:-120px;pointer-events:none}
+.svc-mini-label{font-size:10px;color:#d4e4f3;font-weight:800;letter-spacing:.10em;text-align:center;line-height:1.3}
+.svc-process{display:grid;grid-template-columns:minmax(0,1fr) 13px minmax(0,1fr) 13px minmax(0,1fr);align-items:center;gap:7px;width:100%}
+.svc-process>span{border:1px solid rgba(255,255,255,.17);background:rgba(6,20,35,.66);border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;min-height:92px;padding:8px 5px;gap:5px;text-align:center}
+.svc-process em{width:27px;height:27px;display:grid;place-items:center;color:#b6e0fd;background:rgba(24,167,255,.09);border-radius:8px;font-style:normal}
+.svc-process em .icon{width:17px;height:17px}
+.svc-process b{font-size:11px;font-weight:850;line-height:1.2}
+.svc-process small{font-size:9px;color:#aec3d3;line-height:1.25;max-width:100%}
+.svc-process i{font-style:normal;color:var(--goldsoft);font-size:19px;font-weight:850;text-align:center}
+.svc-outcome{font-size:10px;line-height:1.3;color:#b4cada;text-align:center;letter-spacing:.025em}
+.svc-visual.marketing .svc-process em{color:var(--goldsoft);background:rgba(244,197,66,.11)}
+.svc-visual.ia .svc-process em{color:#b6b8ff;background:rgba(153,140,245,.09)}
+.svc-visual.web .svc-process em{color:#9decc7;background:rgba(101,214,165,.08)}
+.eco-media:after{display:none}
+.eco-diagram{height:100%;width:100%;display:flex;align-items:center;justify-content:center;gap:11px;position:relative;padding:18px 20px;background:radial-gradient(circle at 52% 60%,rgba(24,167,255,.17),transparent 63%),#091f32}
+.eco-central{border:1px solid rgba(125,211,252,.30);padding:12px 16px;min-width:155px;border-radius:17px;background:#102f49;text-align:center;display:flex;flex-direction:column;gap:4px;align-items:center;box-shadow:0 8px 28px #0002}
+.eco-central .icon{color:var(--skysoft);width:29px;height:29px}
+.eco-central strong{font-size:15px}
+.eco-central small{font-size:10px;color:#bbd2e5}
+.eco-chip{max-width:110px;text-align:center;border:1px solid rgba(255,255,255,.20);border-radius:30px;padding:6px 9px;background:#0b263a;color:#d2e7f3}
+.eco-chip.small-chip{font-size:10px;font-weight:650;line-height:1.25}
+.eco-diagram:has(.eco-central){display:grid;grid-template-columns:1fr 1.42fr 1fr;gap:6px;justify-items:center}
+.eco-diagram:has(.eco-central)>.eco-central{grid-row:1/3;grid-column:2}
+.eco-diagram:has(.eco-central)>.eco-chip:nth-child(1){grid-column:1;grid-row:1}
+.eco-diagram:has(.eco-central)>.eco-chip:nth-child(2){grid-column:3;grid-row:1}
+.eco-diagram:has(.eco-central)>.eco-chip:nth-child(4){grid-column:1;grid-row:2}
+.eco-diagram:has(.eco-central)>.eco-chip:nth-child(5){grid-column:3;grid-row:2}
+.gold-diagram{flex-direction:column;background:radial-gradient(circle at 50% 60%,rgba(244,197,66,.18),transparent 55%),linear-gradient(130deg,#112d45,#071827)}
+.gold-symbol{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:rgba(244,197,66,.09);border:1px solid rgba(244,197,66,.38);color:var(--gold)}
+.gold-symbol .icon{width:27px;height:27px}
+.gold-diagram-title{letter-spacing:.15em;font-size:12px;font-weight:900;color:#fff}
+.gold-bits{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}
+.gold-bits span{background:rgba(244,197,66,.055);border:1px solid rgba(244,197,66,.25);color:#f2deb0;padding:7px 10px;font-size:10px;border-radius:99px;font-weight:700}
+.proof-img{height:225px;background:radial-gradient(circle at 73% 21%,rgba(24,167,255,.18),transparent 50%),linear-gradient(155deg,#13314a,#061526)}
+.proof-visual{height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px;padding:25px 30px}
+.proof-topline,.diagram-caption{font-size:10px;letter-spacing:.13em;color:#9abdd5;font-weight:850}
+.proof-feature{display:flex;gap:14px;align-items:center}
+.proof-feature .icon{width:41px;height:41px;color:var(--skysoft)}
+.proof-feature strong{font-size:clamp(17px,2vw,25px);line-height:1.2;letter-spacing:-.02em}
+.proof-message{font-size:12px;color:#c2d7e7;line-height:1.55;max-width:420px}
+.proof-watch{color:#f8d584;font-size:12px;font-weight:850;display:flex;align-items:center;gap:9px;margin-top:1px}
+.proof-play{display:grid;place-items:center;width:31px;height:31px;background:var(--gold);border-radius:50%;color:#061626;font-size:13px}
+.founder-initials{width:97px;height:109px;display:grid;place-items:center;border:1px solid rgba(244,197,66,.35);border-radius:14px;background:linear-gradient(135deg,rgba(244,197,66,.10),#112d45);color:var(--goldsoft);font-size:31px;letter-spacing:-.04em;font-weight:900}
+.asia-visual{height:290px;display:block;padding:22px}
+.asia-process{display:flex;height:100%;width:100%;flex-direction:column;justify-content:center;gap:28px;text-align:center}
+.asia-locations{display:grid;grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr);gap:7px;align-items:center}
+.asia-locations div{border:1px solid rgba(255,255,255,.18);background:rgba(3,19,35,.72);padding:16px 11px;display:flex;flex-direction:column;gap:7px;min-height:120px;justify-content:center;border-radius:14px}
+.asia-locations small{font-size:9px;font-weight:800;letter-spacing:.08em;color:#a8bacb}
+.asia-locations strong{font-size:23px;color:#fff;line-height:1.05}
+.asia-locations div:last-child strong{color:var(--goldsoft)}
+.asia-locations div>span{font-size:10px;color:#b0cadd}
+.route-arrows{font-size:26px;color:var(--goldsoft)}
+.asia-route-bottom{font-size:11px;line-height:1.6;color:#d1e1ec}
+.event-photo:after{display:none}
+.event-diagram{min-height:278px;display:flex;flex-direction:column;justify-content:center;gap:29px;padding:29px 21px;text-align:center;background:radial-gradient(circle at 50% 42%,rgba(244,197,66,.10),transparent 55%)}
+.event-types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.event-types>span{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid rgba(244,197,66,.24);background:rgba(3,19,35,.55);border-radius:15px;gap:7px;min-height:117px;padding:12px 8px}
+.event-types .icon{width:24px;height:24px;color:var(--goldsoft)}
+.event-types b{font-size:13px;color:#fff}
+.event-types small{font-size:10px;color:#b8d1df}
+.event-diagram-foot{font-size:11px;font-weight:700;color:#edd79e}
+/* Eliminación definitiva de la lógica visual antigua que dependía de fotos remotas */
+.photo-placeholder,.visual-img{display:none!important}
+@media(max-width:660px){
+  .art{height:203px}
+  .svc-visual{padding:54px 13px 12px;gap:15px}
+  .svc-process{gap:5px;grid-template-columns:minmax(0,1fr) 12px minmax(0,1fr) 12px minmax(0,1fr)}
+  .svc-process>span{padding:7px 3px;min-height:85px}
+  .svc-process small{font-size:9px}
+  .svc-mini-label{font-size:9px}
+  .eco-diagram{padding:16px 11px}
+  .eco-central{min-width:100px;padding:10px 5px}
+  .eco-chip.small-chip{font-size:9px;padding:5px 6px}
+  .asia-visual{height:auto;min-height:264px;padding:15px}
+  .asia-locations strong{font-size:19px}
+  .event-diagram{padding:22px 12px}
+  .event-types{gap:5px}
+  .event-types>span{padding:9px 4px}
+  .event-types b{font-size:11px}
+  .event-types small{font-size:9px}
+  .proof-visual{padding:23px 19px}
+  .proof-feature strong{font-size:18px}
+}
+@media(max-width:375px){
+  .svc-process small{font-size:8px}
+  .svc-process b{font-size:10px}
+  .eco-diagram:has(.eco-central){gap:2px}
+  .eco-central strong{font-size:12px}
+  .eco-chip.small-chip{font-size:8px}
+}
+</style>
+</head>
+<body>
+<!-- Iconos vectoriales incluidos: este archivo funciona sin bibliotecas JavaScript ni CSS externas. -->
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-arrow" viewbox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"></path></symbol>
+<symbol id="i-briefcase" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="7"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"></path></symbol>
+<symbol id="i-target" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></symbol>
+<symbol id="i-graph" viewbox="0 0 24 24"><path d="M3 3v18h18M7 16l4-5 3 2 5-7"></path></symbol>
+<symbol id="i-robot" viewbox="0 0 24 24"><rect height="14" rx="3" width="16" x="4" y="7"></rect><path d="M12 3v4M9 3h6M8 13h.01M16 13h.01M9 17h6"></path></symbol>
+<symbol id="i-code" viewbox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-3 18"></path></symbol>
+<symbol id="i-globe" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></symbol>
+<symbol id="i-users" viewbox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 2 4v1"></path></symbol>
+<symbol id="i-calendar" viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M7 3v4M17 3v4M3 10h18"></path></symbol>
+<symbol id="i-shield" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><path d="m9 12 2 2 4-4"></path></symbol>
+<symbol id="i-rocket" viewbox="0 0 24 24"><path d="M4 14c-1 3-1 5-1 5s2 0 5-1l2-3-3-3-3 2ZM10 15c7-2 10-8 11-12-4 1-10 4-12 11M14 10l-4 4"></path><circle cx="15.5" cy="8.5" r="1.5"></circle></symbol>
+<symbol id="i-mail" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="m3 7 9 7 9-7"></path></symbol>
+<symbol id="i-check" viewbox="0 0 24 24"><path d="m4 12 5 5L20 6"></path></symbol>
+<symbol id="i-spark" viewbox="0 0 24 24"><path d="m12 3 2.2 6.8L21 12l-6.8 2.2L12 21l-2.2-6.8L3 12l6.8-2.2L12 3Z"></path></symbol>
+<symbol id="i-menu" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></symbol>
+</svg>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header" id="inicio">
+<div class="wrap header-inner">
+<a aria-label="Emprende360 · Ir al inicio" class="brand" href="https://emprende360.club/" rel="noopener noreferrer" target="_blank">
+<img alt="Emprende360" class="brand-logo" decoding="async" height="54" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';" src="https://emprende360.club/emprende360.png" width="190"/><span aria-hidden="true" class="brand-fallback">EMPRENDE<span>360</span></span>
+</a>
+<button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú" class="mobile-toggle" id="mobileToggle" type="button"><svg class="icon"><use href="#i-menu"></use></svg></button>
+<nav aria-label="Navegación principal" class="nav-links" id="mainNav">
+<details class="nav-details" id="solutionsMenu"><summary>Soluciones</summary><div class="nav-dropdown">
+<a href="https://emprende360.club/activacionb2b" rel="noopener noreferrer" target="_blank">Activación Comercial B2B</a>
+<a href="https://emprende360.club/marketing-digital" rel="noopener noreferrer" target="_blank">Marketing Digital · SEO y GEO</a>
+<a href="https://emprende360.club/automatizacion-ia" rel="noopener noreferrer" target="_blank">IA y Automatización</a>
+<a href="https://emprende360.club/desarrollo-web" rel="noopener noreferrer" target="_blank">Desarrollo Web y Aplicaciones</a>
+<a href="https://emprende360.club/asia" rel="noopener noreferrer" target="_blank">Emprende360 Asia</a>
+</div></details>
+<a href="https://emprende360.club/marketplace" rel="noopener noreferrer" target="_blank">Marketplace</a>
+<a href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank">Eventos</a>
+<a href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Golden Partners</a>
+<a href="#nosotros">Nosotros</a>
+<a class="nav-mobile-contact" href="#contacto">Contacto</a>
+</nav>
+<a class="btn btn-gold nav-action" href="#contacto">Hablemos de tu empresa <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"></use></svg></a>
+</div>
+</header>
+<main id="contenido">
+<section aria-labelledby="hero-title" class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="eyebrow">Emprende360 · Soluciones empresariales</span>
+<h1 id="hero-title">Más oportunidades comerciales. Mejor marketing. <span class="grad">Procesos más inteligentes.</span></h1>
+<p class="lead">Ayudamos a empresas a abrir nuevas cuentas B2B, atraer demanda, automatizar trabajo y desarrollar herramientas digitales. Empezamos por el objetivo, definimos el alcance y trabajamos con seguimiento.</p>
+<div class="hero-actions">
+<a class="btn btn-gold" href="#soluciones">Explorar soluciones <svg class="icon" style="width:18px;height:18px"><use href="#i-arrow"></use></svg></a>
+<a class="btn btn-outline" href="#contacto">Cuéntanos qué necesitas</a>
+</div>
+<div aria-label="Principales capacidades" class="hero-labels">
+<span>Desarrollo Comercial B2B</span><span>Google Ads · SEO · GEO</span><span>IA y Automatización</span><span>Webs y Aplicaciones</span>
+</div>
+<p class="hero-foot">También conectamos empresas con especialistas seleccionados y organizamos encuentros empresariales en diferentes mercados.</p>
+</div>
+<div aria-label="Cuatro soluciones que se complementan" class="hero-board">
+<div class="board-top"><b>De la necesidad a la ejecución</b><span>EMPRENDE360</span></div>
+<div class="board-title">Cuatro soluciones. Un punto de partida: tu negocio.</div>
+<div class="board-main">
+<a class="board-row" href="https://emprende360.club/activacionb2b" rel="noopener noreferrer" target="_blank"><span class="board-icon"><svg class="icon"><use href="#i-target"></use></svg></span><span><b>Desarrollamos nuevas cuentas</b><small>Decisores, aproximaciones y seguimiento comercial</small></span><svg class="icon icon-tail"><use href="#i-arrow"></use></svg></a>
+<a class="board-row" href="https://emprende360.club/marketing-digital" rel="noopener noreferrer" target="_blank"><span class="board-icon"><svg class="icon"><use href="#i-graph"></use></svg></span><span><b>Atraemos demanda digital</b><small>Publicidad, SEO, visibilidad y conversión</small></span><svg class="icon icon-tail"><use href="#i-arrow"></use></svg></a>
+<a class="board-row" href="https://emprende360.club/automatizacion-ia" rel="noopener noreferrer" target="_blank"><span class="board-icon"><svg class="icon"><use href="#i-robot"></use></svg></span><span><b>Conectamos procesos y tecnología</b><small>IA, automatización, sistemas y aplicaciones</small></span><svg class="icon icon-tail"><use href="#i-arrow"></use></svg></a>
+<a class="board-row" href="https://emprende360.club/desarrollo-web" rel="noopener noreferrer" target="_blank">
+<span class="board-icon"><svg aria-hidden="true" class="icon"><use href="#i-code"></use></svg></span>
+<span><b>Construimos herramientas digitales</b><small>Webs, aplicaciones, portales e integraciones</small></span>
+<svg aria-hidden="true" class="icon icon-tail"><use href="#i-arrow"></use></svg>
+</a></div>
+<div class="board-bottom"><svg class="icon" style="color:var(--goldsoft)"><use href="#i-spark"></use></svg><span><strong>Una propuesta concreta</strong> para cada objetivo. Sin venderte servicios que no necesitas.</span></div>
+</div>
+</div>
+</section>
+<div class="cred" id="nosotros">
+<div class="wrap cred-grid">
+<div class="cred-item"><svg class="icon"><use href="#i-users"></use></svg><div><b>Red empresarial activa</b><span>Relaciones entre profesionales y empresas</span></div></div>
+<div class="cred-item"><svg class="icon"><use href="#i-target"></use></svg><div><b>Especialización B2B</b><span>Decisores, cuentas y necesidades reales</span></div></div>
+<div class="cred-item"><svg class="icon"><use href="#i-calendar"></use></svg><div><b>Eventos y conversaciones</b><span>Foros, rondas y encuentros empresariales</span></div></div>
+<div class="cred-item"><svg class="icon"><use href="#i-globe"></use></svg><div><b>Conexión internacional</b><span>España, Latinoamérica y Vietnam</span></div></div>
+</div>
+</div>
+<section aria-labelledby="soluciones-title" class="section solutions" id="soluciones">
+<div class="wrap">
+<div class="section-head"><div class="head-copy"><span class="eyebrow">Servicios para empresas</span><h2 id="soluciones-title">¿Qué necesita resolver <span class="grad">tu empresa?</span></h2><p class="lead">Cuatro áreas de trabajo, cuatro formas de resolver necesidades reales. Entra en cada servicio para conocer el enfoque, los entregables y cómo solicitar una propuesta.</p></div></div>
+<div class="service-grid">
+<a aria-label="Conocer Activación Comercial B2B · 90 días" class="service" href="https://emprende360.club/activacionb2b" rel="noopener noreferrer" target="_blank">
+<div class="art"><span class="card-number">01 / VENTAS B2B</span><div class="svc-visual b2b">
+<div class="svc-mini-label">DE LA CUENTA OBJETIVO A LA CONVERSACIÓN</div>
+<div class="svc-process">
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-target"></use></svg></em><b>Identificar</b><small>Empresas y decisores</small></span>
+<i aria-hidden="true">→</i>
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-users"></use></svg></em><b>Conectar</b><small>Acceso con contexto</small></span>
+<i aria-hidden="true">→</i>
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-check"></use></svg></em><b>Seguir</b><small>Trabajo documentado</small></span>
+</div>
+<div class="svc-outcome">Prospección selectiva · 90 días</div>
+</div></div>
+<div class="service-body"><div class="service-title"><h3>Activación Comercial B2B</h3><svg class="icon"><use href="#i-arrow"></use></svg></div><p>Trabajamos una misión comercial: nuevas cuentas, acceso a decisores, aproximaciones y seguimiento durante 90 días.</p><div class="service-tags"><span>Desarrollo de cuentas</span><span>Prospección selectiva</span><span>Seguimiento</span></div><div class="service-foot"><b>Conocer la misión de 90 días</b><svg class="icon"><use href="#i-arrow"></use></svg></div></div>
+</a>
+<a aria-label="Conocer Marketing Digital, Google Ads, SEO y GEO" class="service" href="https://emprende360.club/marketing-digital" rel="noopener noreferrer" target="_blank">
+<div class="art"><span class="card-number">02 / MARKETING</span><div class="svc-visual marketing">
+<div class="svc-mini-label">VISIBILIDAD QUE BUSCA GENERAR DEMANDA</div>
+<div class="svc-process">
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-graph"></use></svg></em><b>Atraer</b><small>Ads, SEO y GEO</small></span>
+<i aria-hidden="true">→</i>
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-target"></use></svg></em><b>Convertir</b><small>Mensaje y landing</small></span>
+<i aria-hidden="true">→</i>
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-mail"></use></svg></em><b>Medir</b><small>Consultas y calidad</small></span>
+</div>
+<div class="svc-outcome">Canales conectados con objetivos comerciales</div>
+</div></div>
+<div class="service-body"><div class="service-title"><h3>Marketing Digital</h3><svg class="icon"><use href="#i-arrow"></use></svg></div><p>Publicidad online, Google Ads, Meta Ads, SEO, GEO, contenidos y optimización para atraer demanda relevante.</p><div class="service-tags"><span>Google Ads</span><span>SEO y GEO</span><span>Analítica y conversión</span></div><div class="service-foot"><b>Explorar marketing digital</b><svg class="icon"><use href="#i-arrow"></use></svg></div></div>
+</a>
+<a aria-label="Conocer Inteligencia Artificial y Automatización" class="service" href="https://emprende360.club/automatizacion-ia" rel="noopener noreferrer" target="_blank">
+<div class="art"><span class="card-number">03 / AUTOMATIZACIÓN E IA</span><div class="svc-visual ia">
+<div class="svc-mini-label">MENOS COPIAR Y PEGAR. MÁS CONTINUIDAD.</div>
+<div class="svc-process">
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-mail"></use></svg></em><b>Recibir</b><small>Datos y solicitudes</small></span>
+<i aria-hidden="true">→</i>
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-robot"></use></svg></em><b>Organizar</b><small>Reglas, CRM e IA</small></span>
+<i aria-hidden="true">→</i>
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-check"></use></svg></em><b>Revisar</b><small>Control humano</small></span>
+</div>
+<div class="svc-outcome">Automatización con supervisión</div>
+</div></div>
+<div class="service-body"><div class="service-title"><h3>IA y Automatización</h3><svg class="icon"><use href="#i-arrow"></use></svg></div><p>Conectamos herramientas y automatizamos procesos comerciales y operativos con inteligencia artificial y supervisión.</p><div class="service-tags"><span>Make y n8n</span><span>CRM</span><span>Asistentes de IA</span></div><div class="service-foot"><b>Descubrir automatizaciones</b><svg class="icon"><use href="#i-arrow"></use></svg></div></div>
+</a>
+<a aria-label="Conocer Desarrollo Web y Aplicaciones" class="service" href="https://emprende360.club/desarrollo-web" rel="noopener noreferrer" target="_blank">
+<div class="art"><span class="card-number">04 / PRODUCTOS DIGITALES</span><div class="svc-visual web">
+<div class="svc-mini-label">UNA WEB QUE AYUDA A TRABAJAR</div>
+<div class="svc-process">
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-code"></use></svg></em><b>Presentar</b><small>Web o aplicación</small></span>
+<i aria-hidden="true">→</i>
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-mail"></use></svg></em><b>Captar</b><small>Consulta o registro</small></span>
+<i aria-hidden="true">→</i>
+<span><em><svg aria-hidden="true" class="icon"><use href="#i-graph"></use></svg></em><b>Conectar</b><small>CRM y seguimiento</small></span>
+</div>
+<div class="svc-outcome">Diseño, desarrollo y utilidad real</div>
+</div></div>
+<div class="service-body"><div class="service-title"><h3>Desarrollo Web y Apps</h3><svg class="icon"><use href="#i-arrow"></use></svg></div><p>Webs profesionales, landings de conversión, aplicaciones, portales y herramientas digitales adaptadas a cada negocio.</p><div class="service-tags"><span>Webs y landings</span><span>Apps empresariales</span><span>Integraciones</span></div><div class="service-foot"><b>Ver soluciones web y apps</b><svg class="icon"><use href="#i-arrow"></use></svg></div></div>
+</a>
+</div>
+</div>
+</section>
+<section aria-labelledby="flag-title" class="section flagship" id="activacion">
+<div class="wrap flag-grid">
+<div><span class="eyebrow">Nuestra oferta comercial prioritaria</span><h2 id="flag-title">Tu empresa tiene algo que vender. <span class="grad">Nosotros hacemos el trabajo comercial.</span></h2><p class="lead">Desarrollamos una misión B2B concreta durante 90 días. No entregamos simplemente una lista: investigamos, seleccionamos empresas, preparamos aproximaciones, trabajamos respuestas y documentamos el seguimiento.</p>
+<ul class="ticks"><li>Nuevas cuentas B2B o canales comerciales definidos</li><li>Identificación de empresas y decisores adecuados</li><li>Aproximaciones acordadas y seguimiento real</li><li>Registro del trabajo, avances y próximos pasos</li></ul>
+<div class="flag-actions"><a class="btn btn-gold" href="https://emprende360.club/activacionb2b" rel="noopener noreferrer" target="_blank">Ver Activación B2B <svg class="icon" style="width:18px"><use href="#i-arrow"></use></svg></a><a class="btn btn-outline" data-interes="Activación Comercial B2B" href="#contacto">Hablar de una misión</a></div>
+</div>
+<aside class="flag-card"><span class="eyebrow">Así es una misión</span><h3>Una prioridad. Un plan. Ejecución y seguimiento.</h3><div class="flag-flow">
+<div class="flag-step"><span>01</span><div><strong>Definimos</strong><small>Objetivo, mercado, comprador y alcance viable</small></div></div>
+<div class="flag-step"><span>02</span><div><strong>Seleccionamos</strong><small>Cuentas, contactos, señales y vías de acceso</small></div></div>
+<div class="flag-step"><span>03</span><div><strong>Actuamos</strong><small>Aproximaciones, respuestas y seguimiento acordados</small></div></div>
+<div class="flag-step"><span>04</span><div><strong>Documentamos</strong><small>Trabajo realizado, oportunidades y próximos pasos</small></div></div>
+</div><div class="flag-summary">Misión comercial de 90 días · Alcance y condiciones detallados en la landing del servicio.</div><p class="flag-fine">Una misión principal con alcance acordado. Sin renovación automática. No se garantizan reuniones, clientes ni ventas.</p></aside>
+</div>
+</section>
+<section aria-labelledby="metodo-title" class="section approach">
+<div class="wrap approach-grid"><div><span class="eyebrow">Criterio antes que herramientas</span><h2 id="metodo-title" style="margin:15px 0 17px">La solución adecuada empieza por <span class="grad">entender tu negocio.</span></h2><p class="lead">No todas las empresas necesitan anuncios. Ni todas necesitan una aplicación. Algunas necesitan cuentas nuevas, otras convertir mejor su tráfico y otras dejar de perder tiempo en tareas manuales.</p><p class="approach-note">Trabajamos con una necesidad definida, un responsable, un presupuesto y entregables concretos. Cuando un proyecto exige capacidades adicionales, se acuerdan antes de comenzar.</p></div><div class="steps">
+<div class="step"><div class="step-num">01</div><div><strong>Entendemos la necesidad</strong><p>Qué vendes, a quién, qué quieres conseguir y qué está frenando el avance.</p></div></div>
+<div class="step"><div class="step-num">02</div><div><strong>Elegimos el enfoque</strong><p>Desarrollo comercial, marketing, tecnología o una combinación justificada.</p></div></div>
+<div class="step"><div class="step-num">03</div><div><strong>Definimos alcance y condiciones</strong><p>Qué haremos, con qué recursos, cuándo y cómo se revisará.</p></div></div>
+<div class="step"><div class="step-num">04</div><div><strong>Ejecutamos y damos seguimiento</strong><p>Trabajo documentado y comunicación sobre avances, dificultades y siguientes pasos.</p></div></div>
+</div></div>
+</section>
+<section aria-labelledby="ecosistema-title" class="section ecosystem" id="ecosistema">
+<div class="wrap"><div class="section-head"><div class="head-copy"><span class="eyebrow">Más capacidades a través del ecosistema</span><h2 id="ecosistema-title">Cuando el proyecto necesita <span class="grad">otros especialistas.</span></h2><p class="lead">Nuestra red empresarial permite acercarte a profesionales de distintas especialidades y crear contextos de relación mediante eventos, foros y talleres. Son rutas diferentes de contratar nuestros servicios propios.</p></div></div>
+<div class="eco-grid">
+<a aria-label="Explorar Marketplace de especialistas" class="eco-card" href="https://emprende360.club/marketplace" rel="noopener noreferrer" target="_blank"><div class="eco-media"><div aria-hidden="true" class="eco-diagram">
+<span class="eco-chip small-chip">CFO externo</span>
+<span class="eco-chip small-chip">Legal y fiscal</span>
+<div class="eco-central"><svg aria-hidden="true" class="icon"><use href="#i-users"></use></svg><strong>Especialistas</strong><small>según tu necesidad</small></div>
+<span class="eco-chip small-chip">Talento</span>
+<span class="eco-chip small-chip">Corporate Finance</span>
+</div></div><div class="eco-card-body"><h3>Marketplace de Especialistas</h3><p>Corporate Finance, CFO externo, talento, asesoría legal, estrategia y otras capacidades de profesionales seleccionados.</p><span class="arrowlink">Explorar el Marketplace <svg class="icon"><use href="#i-arrow"></use></svg></span></div></a>
+<a aria-label="Conocer Golden Partners" class="eco-card" href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank"><div class="eco-media"><div aria-hidden="true" class="eco-diagram gold-diagram">
+<div class="gold-symbol"><svg aria-hidden="true" class="icon"><use href="#i-spark"></use></svg></div>
+<div class="gold-diagram-title">GOLDEN PARTNERS</div>
+<div class="gold-bits"><span>Conversaciones</span><span>Presencia</span><span>Participación</span></div>
+</div></div><div class="eco-card-body"><h3>Golden Partners</h3><p>Un programa específico de posicionamiento, participación y visibilidad profesional dentro de actividades seleccionadas de Emprende360.</p><span class="arrowlink">Conocer Golden Partners <svg class="icon"><use href="#i-arrow"></use></svg></span></div></a>
+</div>
+<div class="eco-bottom">
+<a class="eco-mini" href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank"><svg class="icon"><use href="#i-calendar"></use></svg><b>Foros, Rondas y Talleres</b><p>Conversaciones empresariales y encuentros con especialistas, directivos y emprendedores.</p><span class="arrowlink">Ver agenda <svg class="icon"><use href="#i-arrow"></use></svg></span></a>
+<a class="eco-mini" href="https://emprende360.club/patrocinio" rel="noopener noreferrer" target="_blank"><svg class="icon"><use href="#i-spark"></use></svg><b>Patrocinio Madrid</b><p>Opciones de presencia de marca vinculadas al encuentro Ecosystem Exchange Madrid.</p><span class="arrowlink">Ver patrocinio <svg class="icon"><use href="#i-arrow"></use></svg></span></a>
+</div>
+</div>
+</section>
+<section aria-labelledby="proof-title" class="section proof-section" id="en-accion"><div class="wrap">
+<div class="section-head"><div class="head-copy"><span class="eyebrow">Personas y actividad detrás de la marca</span><h2 id="proof-title">No hablamos solo de contactos. <span class="grad">Creamos conversaciones reales.</span></h2><p class="lead">Los foros, rondas y encuentros de Emprende360 muestran cómo trabajamos las relaciones empresariales. Son una prueba de actividad, no una garantía de clientes o ventas.</p></div></div>
+<div class="proof-grid">
+<article class="proof-panel"><a aria-label="Ver una ronda empresarial de Emprende360 en LinkedIn" class="proof-img" href="https://www.linkedin.com/events/7496395870095998976/" rel="noopener noreferrer" target="_blank"><div class="proof-visual">
+<span class="proof-topline">ENCUENTROS REALES · EMPRENDE360</span>
+<div class="proof-feature"><svg aria-hidden="true" class="icon"><use href="#i-users"></use></svg><strong>Una ronda empresarial por dentro</strong></div>
+<span class="proof-message">Conoce el formato, la conversación y cómo participan los profesionales.</span>
+<span class="proof-watch"><span class="proof-play">▶</span> Ver ronda en LinkedIn ↗</span>
+</div></a><div class="proof-body"><h3>Emprende360 en acción</h3><p>Conoce el formato de nuestras conversaciones empresariales y cómo facilitamos la participación de diferentes perfiles profesionales.</p><a class="arrowlink" href="https://www.linkedin.com/events/7496395870095998976/" rel="noopener noreferrer" target="_blank">Ver ronda y contenido en LinkedIn ↗</a></div></article>
+<article class="proof-panel"><div class="proof-body"><div class="founder-row"><span aria-hidden="true" class="founder-initials">AP</span><div><span class="founder-intro">Fundador de Emprende360</span><h3>Alberto Porras</h3><p>Experiencia en desarrollo de relaciones empresariales, ecosistemas profesionales y actividad comercial B2B.</p></div></div><div class="founder-stats"><strong>~70.000</strong><span>Referencia histórica aproximada de miembros de la comunidad profesional de LinkedIn. No implica contactos directos disponibles ni resultados garantizados.</span></div><a class="arrowlink" href="https://es.linkedin.com/in/albertoporrasmoreno" rel="noopener noreferrer" style="margin-top:20px" target="_blank">Conocer el perfil del fundador ↗</a></div></article>
+</div>
+</div></section>
+<section aria-labelledby="asia-title" class="section asia" id="asia">
+<div class="wrap asia-grid"><div><span class="eyebrow">Emprende360 Asia</span><h2 id="asia-title">Nuevas oportunidades entre <span class="grad">Vietnam y mercados hispanohablantes.</span></h2><p class="lead">Ayudamos a empresas con necesidades concretas de fabricantes, proveedores, sourcing y desarrollo de relaciones comerciales entre Vietnam, España y Latinoamérica. Trabajamos cada misión según el producto, mercado y viabilidad.</p><div class="asia-tags"><span>Fabricantes y proveedores</span><span>Sourcing B2B</span><span>Vietnam ↔ España / LatAm</span></div><a class="btn btn-gold" href="https://emprende360.club/asia" rel="noopener noreferrer" target="_blank">Explorar Emprende360 Asia <svg class="icon" style="width:18px"><use href="#i-arrow"></use></svg></a></div>
+<a aria-label="Conocer el servicio de Emprende360 Asia" class="asia-click" href="https://emprende360.club/asia" rel="noopener noreferrer" target="_blank"><div class="asia-visual"><div aria-hidden="true" class="asia-process">
+<span class="diagram-caption">CONEXIÓN COMERCIAL B2B</span>
+<div class="asia-locations">
+<div><small>ORIGEN Y CAPACIDADES</small><strong>Vietnam</strong><span>Fabricantes · proveedores</span></div>
+<span class="route-arrows">⇄</span>
+<div><small>MERCADOS OBJETIVO</small><strong>España y LatAm</strong><span>Compradores · empresas</span></div>
+</div>
+<span class="asia-route-bottom">Necesidad concreta → búsqueda y validación → conversaciones comerciales</span>
+</div></div></a>
+</div>
+</section>
+<section aria-labelledby="event-title" class="section event-band">
+<div class="wrap event-grid">
+<a aria-label="Ver agenda de eventos de Emprende360" class="event-photo" href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank"><div aria-hidden="true" class="event-diagram">
+<span class="diagram-caption">ESPACIOS PARA CONVERSACIONES B2B</span>
+<div class="event-types">
+<span><svg aria-hidden="true" class="icon"><use href="#i-users"></use></svg><b>Foros</b><small>Debate experto</small></span>
+<span><svg aria-hidden="true" class="icon"><use href="#i-target"></use></svg><b>Rondas</b><small>Presentaciones</small></span>
+<span><svg aria-hidden="true" class="icon"><use href="#i-calendar"></use></svg><b>Encuentros</b><small>Relación presencial</small></span>
+</div>
+<span class="event-diagram-foot">Próxima cita destacada: Madrid · 23 noviembre 2026</span>
+</div></a>
+<div><span class="eyebrow">Eventos y experiencias empresariales</span><h2 id="event-title">Las mejores relaciones empiezan con <span class="grad">una buena conversación.</span></h2><p class="lead">Creamos contextos para que empresarios, fundadores, directivos y especialistas puedan participar en encuentros temáticos y desarrollar relaciones con sentido.</p><div class="event-date"><svg class="icon" style="width:17px;height:17px"><use href="#i-calendar"></use></svg>Ecosystem Exchange Madrid · 23 de noviembre de 2026</div><div class="event-buttons"><a class="btn btn-gold" href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank">Ver próximos eventos</a><a class="btn btn-outline" href="https://emprende360.club/madrid-ecosystem-exchange" rel="noopener noreferrer" target="_blank">Encuentro de Madrid</a></div><p class="mini muted" style="margin-top:14px">Las plazas, sedes y condiciones dependen de las confirmaciones de cada evento.</p></div>
+</div>
+</section>
+<aside aria-label="Servicio de entrada Plan Clientes LinkedIn" class="entry"><div class="wrap entry-inner"><div aria-hidden="true" class="entry-symbol"><svg class="icon"><use href="#i-target"></use></svg><span>PLAN B2B</span></div><div><b>¿Necesitas empezar por LinkedIn?</b><p>Recibe un plan personalizado de captación B2B para ordenar tu posicionamiento, mensajes y próximos pasos. Un servicio de análisis y orientación, no de ejecución comercial.</p></div><a class="btn btn-outline" href="https://emprende360.club/plan-clientes-linkedin" rel="noopener noreferrer" target="_blank">Conocer Plan Clientes LinkedIn <svg class="icon" style="width:17px"><use href="#i-arrow"></use></svg></a></div></aside>
+<section aria-labelledby="contact-title" class="section contact" id="contacto">
+<div class="wrap contact-grid"><div><span class="eyebrow">Cuéntanos tu proyecto</span><h2 id="contact-title">¿Qué quieres conseguir con <span class="grad">tu empresa?</span></h2><p class="lead">Cuéntanos qué haces, qué necesitas y qué estás pensando poner en marcha. Revisaremos si podemos ayudarte directamente o si encaja mejor un especialista del ecosistema.</p><div class="contact-cues">
+<div class="contact-cue"><svg class="icon"><use href="#i-target"></use></svg><div><b>Una conversación con contexto</b><span>No hace falta que elijas una herramienta si todavía no tienes clara la solución.</span></div></div>
+<div class="contact-cue"><svg class="icon"><use href="#i-shield"></use></svg><div><b>Alcance y condiciones claros</b><span>Antes de contratar, definimos el trabajo, el presupuesto y las responsabilidades.</span></div></div>
+<div class="contact-cue"><svg class="icon"><use href="#i-check"></use></svg><div><b>Respuesta según encaje y disponibilidad</b><span>Las solicitudes comerciales se estudian individualmente.</span></div></div>
+</div><p class="small muted" style="margin-top:25px">Para inscribirte en un foro o evento, utiliza su <a href="https://emprende360.club/eventos" rel="noopener noreferrer" style="text-decoration:underline;color:var(--skysoft)" target="_blank">página específica</a>. Este formulario es solo para consultas comerciales.</p></div>
+<div class="form-card"><h3>Solicitar una conversación comercial</h3><p class="form-sub">Indica en qué podemos ayudarte. Los campos marcados con * son obligatorios.</p>
+<!-- El endpoint corresponde al formulario comercial existente de Activación B2B. Verificar en Formspree que el destinatario es el buzón general antes de publicar. -->
+<form accept-charset="UTF-8" action="https://formspree.io/f/xwlvbvpg" id="homeLeadForm" method="POST">
+<input name="_subject" type="hidden" value="Nueva solicitud comercial · Home Emprende360"/>
+<input name="origen" type="hidden" value="Home Emprende360 · versión sin fotografías"/>
+<div aria-hidden="true" class="honeypot"><label>Deja este campo vacío <input autocomplete="off" name="_gotcha" tabindex="-1" type="text"/></label></div>
+<div class="fields">
+<div class="field"><label for="leadName">Nombre y apellidos *</label><input autocomplete="name" id="leadName" maxlength="120" name="nombre" placeholder="Tu nombre" required="" type="text"/></div>
+<div class="field"><label for="leadEmail">Email profesional *</label><input autocomplete="email" id="leadEmail" maxlength="180" name="email" placeholder="nombre@empresa.com" required="" type="email"/></div>
+<div class="field"><label for="leadCompany">Empresa</label><input autocomplete="organization" id="leadCompany" maxlength="150" name="empresa" placeholder="Nombre de la empresa" type="text"/></div>
+<div class="field"><label for="leadService">¿Qué necesitas? *</label><select id="leadService" name="servicio_de_interes" required=""><option disabled="" selected="" value="">Selecciona una opción</option><option value="Activación Comercial B2B">Activación Comercial B2B</option><option value="Marketing Digital">Marketing Digital · SEO / GEO / Ads</option><option value="IA y Automatización">IA y Automatización</option><option value="Desarrollo Web y Aplicaciones">Webs y Aplicaciones</option><option value="Emprende360 Asia">Emprende360 Asia</option><option value="Marketplace de especialistas">Especialista del Marketplace</option><option value="Otro / No lo tengo claro">Otro / No lo tengo claro</option></select></div>
+<div class="field full"><label for="leadNeed">Cuéntanos brevemente tu objetivo *</label><textarea id="leadNeed" maxlength="3000" minlength="20" name="objetivo" placeholder="Qué vende tu empresa, qué quieres conseguir y dónde necesitas apoyo..." required=""></textarea></div>
+</div>
+<label class="consent" for="privacyAccept"><input id="privacyAccept" name="privacidad_aceptada" required="" type="checkbox" value="Sí"/><span>He leído la <a href="https://emprende360.club/privacidad" rel="noopener noreferrer" target="_blank">política de privacidad</a> y acepto el tratamiento de mis datos para gestionar esta solicitud. *</span></label>
+<button class="btn btn-gold submit-btn" id="leadSubmit" type="submit">Enviar solicitud comercial <svg class="icon" style="width:18px"><use href="#i-arrow"></use></svg></button>
+<div aria-live="polite" class="form-feedback" id="formFeedback" role="status"></div>
+<p class="form-fine">No suscribimos automáticamente tu email a comunicaciones generales. La solicitud no garantiza la aceptación de un proyecto ni una reunión.</p>
+</form>
+</div></div>
+</section>
+<section aria-labelledby="faq-title" class="section faq"><div class="wrap faq-grid"><div><span class="eyebrow">Preguntas habituales</span><h2 id="faq-title">Lo importante, <span class="grad">sin rodeos.</span></h2><p class="lead" style="margin-top:16px">Cada línea tiene una finalidad y un alcance propios. Te ayudamos a encontrar la adecuada.</p></div><div class="faqs">
+<details><summary>¿Emprende360 es una agencia de marketing o de ventas?</summary><p>Somos una organización de desarrollo de negocio con servicios propios de activación comercial, marketing digital y soluciones tecnológicas. También organizamos encuentros y facilitamos relaciones con especialistas externos. Cada servicio se contrata por separado, según la necesidad.</p></details>
+<details><summary>¿Puedo contratar solo Google Ads, SEO o una web?</summary><p>Sí, siempre que exista encaje y capacidad disponible. No es obligatorio contratar Activación Comercial B2B para solicitar un proyecto de marketing, web o automatización.</p></details>
+<details><summary>¿Garantizáis clientes, ventas o posiciones en Google y buscadores de IA?</summary><p>No. El trabajo, los entregables y el seguimiento se acuerdan con claridad, pero las respuestas de terceros, las ventas, las posiciones orgánicas y las menciones en motores de IA no pueden garantizarse.</p></details>
+<details><summary>¿Qué diferencia hay entre Activación B2B y Golden Partners?</summary><p>Activación B2B es una misión de desarrollo comercial ejecutada durante 90 días. Golden Partners es un programa diferente de posicionamiento y participación dentro del ecosistema. Sus condiciones no son intercambiables.</p></details>
+<details><summary>¿Qué ocurre si necesitáis un especialista externo?</summary><p>Podemos estudiar una posible derivación a un profesional del Marketplace con experiencia relevante, siempre que exista disponibilidad, encaje y aceptación de las partes. La contratación y las responsabilidades se aclaran antes de empezar.</p></details>
+</div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-main">
+<div class="footer-about"><a class="brand" href="https://emprende360.club/" rel="noopener noreferrer" target="_blank"><img alt="Emprende360" class="brand-logo" decoding="async" height="54" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';" src="https://emprende360.club/emprende360.png" width="190"/><span aria-hidden="true" class="brand-fallback">EMPRENDE<span>360</span></span></a><p>Servicios comerciales, digitales y tecnológicos, junto a un ecosistema de profesionales y encuentros empresariales. Cada proyecto se valora según su objetivo y viabilidad.</p><a class="arrowlink" href="https://es.linkedin.com/in/albertoporrasmoreno" rel="noopener noreferrer" style="margin-top:15px" target="_blank">Conocer al fundador ↗</a></div>
+<div class="foot-col"><b>Soluciones</b><a href="https://emprende360.club/activacionb2b" rel="noopener noreferrer" target="_blank">Activación Comercial B2B</a><a href="https://emprende360.club/marketing-digital" rel="noopener noreferrer" target="_blank">Marketing Digital y GEO</a><a href="https://emprende360.club/automatizacion-ia" rel="noopener noreferrer" target="_blank">IA y Automatización</a><a href="https://emprende360.club/desarrollo-web" rel="noopener noreferrer" target="_blank">Desarrollo Web y Apps</a><a href="https://emprende360.club/plan-clientes-linkedin" rel="noopener noreferrer" target="_blank">Plan Clientes LinkedIn</a></div>
+<div class="foot-col"><b>Ecosistema</b><a href="https://emprende360.club/eventos" rel="noopener noreferrer" target="_blank">Eventos</a><a href="https://emprende360.club/marketplace" rel="noopener noreferrer" target="_blank">Marketplace</a><a href="https://emprende360.club/golden-partners" rel="noopener noreferrer" target="_blank">Golden Partners</a><a href="https://emprende360.club/madrid-ecosystem-exchange" rel="noopener noreferrer" target="_blank">Ecosystem Exchange Madrid</a><a href="https://emprende360.club/patrocinio" rel="noopener noreferrer" target="_blank">Patrocinio Madrid</a></div>
+<div class="foot-col"><b>Empresa</b><a href="https://emprende360.club/asia" rel="noopener noreferrer" target="_blank">Emprende360 Asia</a><a href="#nosotros">Sobre Emprende360</a><a href="#contacto">Contacto comercial</a><a href="https://emprende360.club/privacidad" rel="noopener noreferrer" target="_blank">Privacidad</a><a href="https://emprende360.club/aviso-legal" rel="noopener noreferrer" target="_blank">Aviso legal</a></div>
+</div><div class="foot-bottom"><span>© <span id="year">2026</span> Emprende360. Todos los derechos reservados.</span><span>Relaciones empresariales con contexto. Trabajo con responsabilidad.</span></div></div></footer>
+<script>
+  (function () {
+    'use strict';
+    var year = document.getElementById('year');
+    if (year) year.textContent = String(new Date().getFullYear());
+
+    var toggle = document.getElementById('mobileToggle');
+    var nav = document.getElementById('mainNav');
+    var details = document.getElementById('solutionsMenu');
+    function closeMenu() {
+      if (nav) nav.classList.remove('is-open');
+      if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Abrir menú'); }
+      if (details) details.open = false;
+    }
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+        if (!open && details) details.open = false;
+      });
+      nav.addEventListener('click', function (e) {
+        var a = e.target.closest('a');
+        if (a && !a.closest('.nav-dropdown')) closeMenu();
+        if (a && a.closest('.nav-dropdown')) closeMenu();
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.site-header')) closeMenu();
+      });
+    }
+    if (details) {
+      // Hover real en ordenadores; el resumen sigue siendo táctil en móviles/tabletas.
+      var desktopHover = window.matchMedia('(min-width: 901px) and (hover: hover) and (pointer: fine)');
+      details.addEventListener('pointerenter', function (e) {
+        if (desktopHover.matches && e.pointerType === 'mouse') details.open = true;
+      });
+      details.addEventListener('pointerleave', function (e) {
+        if (desktopHover.matches && e.pointerType === 'mouse' && !details.contains(document.activeElement)) details.open = false;
+      });
+      details.addEventListener('focusin', function () { if (desktopHover.matches) details.open = true; });
+      details.addEventListener('focusout', function (e) {
+        if (desktopHover.matches && !details.contains(e.relatedTarget)) details.open = false;
+      });
+      details.querySelector('summary').addEventListener('click', function (e) {
+        if (desktopHover.matches) e.preventDefault();
+      });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('#solutionsMenu')) details.open = false;
+      });
+    }
+
+    var leadForm = document.getElementById('homeLeadForm');
+    var interest = document.getElementById('leadService');
+    document.querySelectorAll('[data-interes]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        if (interest) interest.value = el.getAttribute('data-interes');
+      });
+    });
+    if (leadForm) {
+      leadForm.addEventListener('submit', async function (e) {
+        if (typeof window.fetch !== 'function') return; // El POST HTML nativo es el respaldo.
+        e.preventDefault();
+        if (!leadForm.reportValidity()) return;
+        var btn = document.getElementById('leadSubmit');
+        var feedback = document.getElementById('formFeedback');
+        var original = btn.innerHTML;
+        btn.disabled = true;
+        btn.textContent = 'Enviando solicitud…';
+        feedback.removeAttribute('data-state');
+        feedback.style.display = 'none';
+        try {
+          var response = await fetch(leadForm.action, {
+            method: 'POST',
+            body: new FormData(leadForm),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (!response.ok) throw new Error('No se pudo confirmar el envío');
+          leadForm.reset();
+          feedback.textContent = 'Solicitud recibida. Gracias por contarnos tu proyecto. Revisaremos tu mensaje y te responderemos si existe encaje y disponibilidad.';
+          feedback.setAttribute('data-state', 'success');
+        } catch (error) {
+          feedback.textContent = 'No hemos podido confirmar el envío. Prueba de nuevo o contacta con info@emprende360.club. No consideres enviada la solicitud.';
+          feedback.setAttribute('data-state', 'error');
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = original;
+          feedback.style.display = 'block';
+        }
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
